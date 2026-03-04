@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommended Products & Affiliates | Digital Revenue Studio</title>
+  <meta name="description" content="Honest product recommendations from Digital Revenue Studio. Everything listed here is something we have used, tested or genuinely rate. Affiliate disclosure included." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.75;}
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);position:sticky;top:0;z-index:100;}
+    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:24px;}
+    .topbar-nav{display:flex;gap:24px;}
+    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;}
+    .hero{background:var(--dark);padding:64px 40px;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .hero-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);color:var(--white);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
+    .hero h1 em{font-family:'Lora',serif;font-style:italic;color:var(--gold);}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.45);max-width:560px;line-height:1.75;}
+    .disclosure{background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);border-left:3px solid var(--gold);padding:12px 20px;max-width:1100px;margin:0 auto;}
+    .disclosure p{font-size:0.8rem;color:var(--text-muted);margin:0;}
+    .disclosure strong{color:var(--text-dark);}
+    .page-inner{max-width:1100px;margin:0 auto;padding:56px 40px;}
+    .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;}
+    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.01em;line-height:1.15;margin-bottom:36px;}
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+    .cat-card{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;display:block;}
+    .cat-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(10,31,20,0.1);}
+    .cat-card-top{padding:28px 24px 22px;position:relative;overflow:hidden;}
+    .cat-card-top.teal{background:linear-gradient(135deg,#0D3B38,#1A6B64);}
+    .cat-card-top.amber{background:linear-gradient(135deg,#2D1A00,#5C3600);}
+    .cat-card-top.green{background:linear-gradient(135deg,var(--dark),var(--mid));}
+    .cat-card-top.blue{background:linear-gradient(135deg,#0A1A2F,#1A3A5C);}
+    .cat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.5rem;color:rgba(255,255,255,0.06);position:absolute;top:12px;right:16px;line-height:1;}
+    .cat-icon{font-size:2rem;margin-bottom:12px;display:block;}
+    .cat-card-top h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);line-height:1.25;margin-bottom:6px;}
+    .cat-card-top p{font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.6;margin:0;}
+    .cat-card-body{padding:18px 24px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);}
+    .cat-count{font-size:0.78rem;color:var(--text-muted);}
+    .cat-count strong{color:var(--text-dark);font-family:'Syne',sans-serif;}
+    .cat-arrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);}
+    .cat-card:hover .cat-arrow{color:var(--gold);}
+    .footer{background:var(--dark);padding:40px 40px 24px;text-align:center;margin-top:64px;}
+    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;margin-bottom:6px;}
+    .footer p{color:rgba(255,255,255,0.25);font-size:0.76rem;margin-top:6px;}
+    .footer-tag{font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,0.35)!important;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  
+    .topbar-logo{height:36px;width:auto;display:block;}
+    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .topbar-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap"><img src="https://drive.google.com/uc?export=view&id=1D8FtHJ7o8hPzsj0u7hG9wB3ATZAWhCAM" alt="Digital Revenue Studio" class="topbar-logo" /></a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="#">Experiments</a>
+        <a href="https://digitalrevenuestudios.blogspot.com/?m=1">Blog</a>
+        <a href="https://payhip.com/DigitalRevenueStudio">Shop</a>
+        <a href="#">About</a>
+      </div>
+      <a href="https://stats.sender.net/forms/e1wv33/view" class="topbar-cta">Free Guide</a>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-label">Recommended Products</div>
+      <h1>Things we <em>actually use</em><br />and genuinely recommend</h1>
+      <p class="hero-sub">Every product listed here is something we have bought, tested or used ourselves. No paid placements, no uninvited recommendations. Affiliate disclosure below.</p>
+    </div>
+  </header>
+  <div class="disclosure" style="padding:14px 40px;">
+    <p><strong>Affiliate disclosure:</strong> Some links on these pages are affiliate links. If you purchase through them we may earn a small commission at no extra cost to you. We only list products we have genuinely used and rate. This is Test 03 in the DRS experiment log.</p>
+  </div>
+  <div class="page-inner">
+    <div class="section-label">Browse by Category</div>
+    <div class="section-title">Four categories. All honest recommendations.</div>
+    <div class="cat-grid">
+      <a href="[MAVERICK-PAGE-URL]" class="cat-card">
+        <div class="cat-card-top teal">
+          <span class="cat-num">01</span>
+          <span class="cat-icon">🐾</span>
+          <h3>Mavericks Adventures</h3>
+          <p>The book, the brand and everything connected to our cockapoo's adventures.</p>
+        </div>
+        <div class="cat-card-body">
+          <span class="cat-count"><strong>1</strong> product</span>
+          <span class="cat-arrow">Browse →</span>
+        </div>
+      </a>
+      <a href="[BOOKS-PAGE-URL]" class="cat-card">
+        <div class="cat-card-top amber">
+          <span class="cat-num">02</span>
+          <span class="cat-icon">📚</span>
+          <h3>Recommended Books</h3>
+          <p>Children's books we genuinely love — tested by the children and dog-owners in our lives.</p>
+        </div>
+        <div class="cat-card-body">
+          <span class="cat-count"><strong>5</strong> products</span>
+          <span class="cat-arrow">Browse →</span>
+        </div>
+      </a>
+      <a href="[PETCARE-PAGE-URL]" class="cat-card">
+        <div class="cat-card-top green">
+          <span class="cat-num">03</span>
+          <span class="cat-icon">🦮</span>
+          <h3>Pet Care</h3>
+          <p>Products we use for Maverick day to day — food, health and essentials.</p>
+        </div>
+        <div class="cat-card-body">
+          <span class="cat-count"><strong>3</strong> products</span>
+          <span class="cat-arrow">Browse →</span>
+        </div>
+      </a>
+      <a href="[HEALTH-PAGE-URL]" class="cat-card">
+        <div class="cat-card-top blue">
+          <span class="cat-num">04</span>
+          <span class="cat-icon">💪</span>
+          <h3>Health &amp; Wellbeing</h3>
+          <p>Supplements and health products worth knowing about.</p>
+        </div>
+        <div class="cat-card-body">
+          <span class="cat-count"><strong>1</strong> product</span>
+          <span class="cat-arrow">Browse →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+    <p class="footer-tag">Real experiments. Real numbers. No hype.</p>
+    <p>&copy; 2026 Digital Revenue Studio. All rights reserved.</p>
+  </footer>
+</body>
+</html>

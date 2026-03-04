@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Experiments | Digital Revenue Studio</title>
+  <meta name="description" content="Eight income stream experiments documented honestly with real numbers. KDP publishing, digital products, affiliate marketing, cashback, gaming apps and more. Updated as results develop." />
+  <meta name="keywords" content="side hustle experiments UK, passive income testing, make money online honest, KDP UK results, affiliate marketing UK results, cashback experiment, earn playing games UK" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;
+      --gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;
+      --white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;
+      --text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.75;}
+
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
+    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:24px;}
+    .topbar-nav{display:flex;gap:24px;}
+    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;}
+
+    .hero{background:var(--dark);padding:64px 40px 72px;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .hero-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3.2rem);color:var(--white);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
+    .hero h1 em{font-style:italic;font-family:'Lora',serif;color:var(--gold);}
+    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.45);max-width:580px;line-height:1.7;}
+
+    .summary-bar{background:var(--dark-2);border-top:3px solid var(--gold);padding:28px 40px;}
+    .summary-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+    .summary-item{text-align:center;padding:8px 20px;border-right:1px solid rgba(255,255,255,0.06);}
+    .summary-item:last-child{border-right:none;}
+    .summary-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.9rem;color:var(--white);display:block;line-height:1;}
+    .summary-num.g{color:var(--gold);}
+    .summary-label{font-size:0.68rem;color:rgba(255,255,255,0.3);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;display:block;}
+    @media(max-width:600px){.summary-inner{grid-template-columns:repeat(2,1fr);}.summary-item{border-bottom:1px solid rgba(255,255,255,0.05);padding:14px;}}
+
+    .page-inner{max-width:1100px;margin:0 auto;padding:64px 40px;}
+
+    .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--text-dark);letter-spacing:-0.01em;line-height:1.15;margin-bottom:32px;}
+
+    /* Big experiment cards */
+    .exp-full{background:var(--white);border:1px solid var(--border);border-radius:3px;margin-bottom:24px;overflow:hidden;transition:box-shadow 0.2s;}
+    .exp-full:hover{box-shadow:0 8px 28px rgba(10,31,20,0.08);}
+    .exp-full-top{display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:24px;padding:28px 32px;border-bottom:1px solid var(--border);}
+    @media(max-width:700px){.exp-full-top{grid-template-columns:1fr;gap:16px;}}
+    .exp-num-block{flex-shrink:0;}
+    .exp-number{font-family:'Syne',sans-serif;font-weight:800;font-size:2.8rem;color:var(--border);line-height:1;letter-spacing:-0.02em;}
+    .exp-full-mid{}
+    .exp-full-top-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;}
+    .exp-badge{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+    .badge-live{background:rgba(46,139,74,0.1);color:var(--bright);}
+    .badge-soon{background:rgba(245,166,35,0.1);color:var(--gold-dark);}
+    .exp-category{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
+    .exp-full h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--text-dark);margin-bottom:8px;line-height:1.2;}
+    .exp-full-desc{font-size:0.92rem;color:var(--text-muted);line-height:1.7;max-width:600px;}
+    .exp-full-stats{display:flex;gap:0;flex-direction:column;min-width:160px;}
+    @media(max-width:700px){.exp-full-stats{flex-direction:row;gap:12px;flex-wrap:wrap;}}
+    .exp-stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border);}
+    .exp-stat-row:last-child{border-bottom:none;}
+    .exp-stat-key{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
+    .exp-stat-val{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:var(--text-dark);}
+    .exp-full-bottom{padding:20px 32px;background:var(--paper);display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+    @media(max-width:700px){.exp-full-bottom{grid-template-columns:1fr;gap:12px;}}
+    .exp-detail-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:5px;}
+    .exp-detail-text{font-size:0.85rem;color:var(--text-body);line-height:1.6;}
+
+    /* Pending card */
+    .exp-pending{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:0 3px 3px 0;padding:22px 26px;margin-bottom:14px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;}
+    @media(max-width:600px){.exp-pending{grid-template-columns:1fr;gap:12px;}}
+    .exp-pending-num{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;color:var(--border);line-height:1;letter-spacing:-0.02em;}
+    .exp-pending h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text-dark);margin-bottom:5px;}
+    .exp-pending p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;}
+    .soon-pill{background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);color:var(--gold-dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:2px;white-space:nowrap;}
+
+    /* Principles */
+    .rules{background:var(--dark-2);padding:56px 40px;margin-top:0;}
+    .rules-inner{max-width:1100px;margin:0 auto;}
+    .rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px;}
+    .rule-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:22px 20px;border-radius:3px;border-top:3px solid var(--gold);}
+    .rule-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:rgba(245,166,35,0.2);line-height:1;margin-bottom:10px;}
+    .rule-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:var(--white);margin-bottom:6px;}
+    .rule-card p{font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.65;margin:0;}
+
+    /* CTA */
+    .page-cta{background:var(--gold);padding:56px 40px;text-align:center;}
+    .page-cta h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--dark);margin-bottom:10px;letter-spacing:-0.01em;}
+    .page-cta p{font-size:0.95rem;color:rgba(10,31,20,0.65);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto;}
+    .btn-dark{display:inline-block;background:var(--dark);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;padding:13px 28px;border-radius:2px;text-decoration:none;}
+    .btn-dark:hover{background:var(--mid);}
+
+    .footer{background:var(--dark);padding:40px 40px 24px;text-align:center;}
+    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--gold);letter-spacing:0.04em;margin-bottom:6px;}
+    .footer p{color:rgba(255,255,255,0.25);font-size:0.76rem;margin-top:6px;}
+    .footer-tag{font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,0.35)!important;}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  
+    .topbar-logo{height:36px;width:auto;display:block;}
+    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .topbar-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap"><img src="https://drive.google.com/uc?export=view&id=1D8FtHJ7o8hPzsj0u7hG9wB3ATZAWhCAM" alt="Digital Revenue Studio" class="topbar-logo" /></a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="#">Experiments</a>
+        <a href="https://digitalrevenuestudios.blogspot.com/?m=1">Blog</a>
+        <a href="https://payhip.com/DigitalRevenueStudio">Shop</a>
+        <a href="#">About</a>
+      </div>
+      <a href="https://stats.sender.net/forms/e1wv33/view" class="topbar-cta">Free Guide</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-label">The Side Hustle Lab</div>
+      <h1>Documenting what works<br />and <em>what doesn&rsquo;t</em></h1>
+      <p class="hero-sub">Eight income stream experiments running in parallel. Real numbers published honestly &mdash; including the zeros, the slow starts and the experiments that are taking longer than expected.</p>
+    </div>
+  </header>
+
+  <div class="summary-bar">
+    <div class="summary-inner">
+      <div class="summary-item"><span class="summary-num">3</span><span class="summary-label">Live Now</span></div>
+      <div class="summary-item"><span class="summary-num">5</span><span class="summary-label">Coming Soon</span></div>
+      <div class="summary-item"><span class="summary-num g">&pound;18.94</span><span class="summary-label">Total Revenue</span></div>
+      <div class="summary-item"><span class="summary-num">8</span><span class="summary-label">Experiments Total</span></div>
+    </div>
+  </div>
+
+  <div class="page-inner">
+
+    <div class="section-label">Currently Running</div>
+    <div class="section-title">Live Experiments</div>
+
+    <!-- TEST 01 -->
+    <div class="exp-full">
+      <div class="exp-full-top">
+        <div class="exp-num-block"><div class="exp-number">01</div></div>
+        <div class="exp-full-mid">
+          <div class="exp-full-top-row">
+            <span class="exp-badge badge-live">Live</span>
+            <span class="exp-category">KDP Self-Publishing</span>
+          </div>
+          <h2>Amazon KDP &mdash; Children&rsquo;s Book</h2>
+          <p class="exp-full-desc">Publishing a children&rsquo;s paperback and Kindle book on Amazon KDP UK with zero upfront cost. The book is built around a real character &mdash; Maverick, our cockapoo &mdash; with a dedicated Instagram account, website and email list built alongside it. The hypothesis: a character-first approach builds a compounding audience that a product-first approach cannot.</p>
+        </div>
+        <div class="exp-full-stats">
+          <div class="exp-stat-row"><span class="exp-stat-key">Copies sold</span><span class="exp-stat-val">7</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Total royalties</span><span class="exp-stat-val">&pound;18.82</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Per paperback</span><span class="exp-stat-val">&pound;2.80</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Per Kindle</span><span class="exp-stat-val">&pound;2.31</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Reviews</span><span class="exp-stat-val">3</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Instagram</span><span class="exp-stat-val">2,158</span></div>
+        </div>
+      </div>
+      <div class="exp-full-bottom">
+        <div>
+          <div class="exp-detail-label">Hypothesis</div>
+          <div class="exp-detail-text">A children&rsquo;s picture book built around a real character can generate both direct sales and a community audience that compounds over time.</div>
+        </div>
+        <div>
+          <div class="exp-detail-label">Current Verdict</div>
+          <div class="exp-detail-text">Proof of concept confirmed. Seven real sales. Three reviews. Platform works. Traffic and reviews are the next constraints to solve.</div>
+        </div>
+        <div>
+          <div class="exp-detail-label">Next Actions</div>
+          <div class="exp-detail-text">Book 2 in development. Colouring and activity book in development. Review count is the priority milestone: target ten reviews.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEST 02 -->
+    <div class="exp-full">
+      <div class="exp-full-top">
+        <div class="exp-num-block"><div class="exp-number">02</div></div>
+        <div class="exp-full-mid">
+          <div class="exp-full-top-row">
+            <span class="exp-badge badge-live">Live</span>
+            <span class="exp-category">Selling Digital Content</span>
+          </div>
+          <h2>Digital Products &mdash; Payhip &amp; Gumroad</h2>
+          <p class="exp-full-desc">Digital products listed on Payhip and Gumroad: a 150+ prompt workbook, an 800+ AI tools directory and a 9-chapter Whiteout Survival strategy guide. Products compiled from genuine research. The hypothesis: a well-organised digital reference generates passive sales through organic discovery. The constraint so far: traffic, not product quality.</p>
+        </div>
+        <div class="exp-full-stats">
+          <div class="exp-stat-row"><span class="exp-stat-key">Platforms</span><span class="exp-stat-val">Payhip, Gumroad</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Products live</span><span class="exp-stat-val">3</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Product views</span><span class="exp-stat-val">48</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Sales</span><span class="exp-stat-val">0</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Revenue</span><span class="exp-stat-val">&pound;0</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Reddit reach</span><span class="exp-stat-val">16k</span></div>
+        </div>
+      </div>
+      <div class="exp-full-bottom">
+        <div>
+          <div class="exp-detail-label">Hypothesis</div>
+          <div class="exp-detail-text">Curated digital products generate passive sales through organic platform discovery and targeted community participation.</div>
+        </div>
+        <div>
+          <div class="exp-detail-label">Current Verdict</div>
+          <div class="exp-detail-text">Traffic is the constraint, not the product. 48 views at a standard conversion rate was never going to produce a sale. Focus shifts entirely to traffic.</div>
+        </div>
+        <div>
+          <div class="exp-detail-label">Next Actions</div>
+          <div class="exp-detail-text">SEO blog content targeting specific search queries. Reddit community participation. Pinterest as a long-tail traffic source. Email list building.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEST 03 -->
+    <div class="exp-full">
+      <div class="exp-full-top">
+        <div class="exp-num-block"><div class="exp-number">03</div></div>
+        <div class="exp-full-mid">
+          <div class="exp-full-top-row">
+            <span class="exp-badge badge-live">Live</span>
+            <span class="exp-category">Affiliate Marketing</span>
+          </div>
+          <h2>Affiliate Marketing &mdash; Amazon &amp; Direct Programmes</h2>
+          <p class="exp-full-desc">Embedding genuine affiliate links naturally within honest product reviews across both the DRS and Mavericks Adventures blogs. Amazon Associates for book and product recommendations. Direct affiliate programmes for higher commission rates. The rule: only recommend products we have actually used and genuinely rate.</p>
+        </div>
+        <div class="exp-full-stats">
+          <div class="exp-stat-row"><span class="exp-stat-key">Platforms</span><span class="exp-stat-val">Amazon, Direct</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Posts live</span><span class="exp-stat-val">2</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Revenue</span><span class="exp-stat-val">&pound;0.12</span></div>
+          <div class="exp-stat-row"><span class="exp-stat-key">Stage</span><span class="exp-stat-val">Early</span></div>
+        </div>
+      </div>
+      <div class="exp-full-bottom">
+        <div>
+          <div class="exp-detail-label">Hypothesis</div>
+          <div class="exp-detail-text">Affiliate links embedded naturally in genuine reviews generate a secondary revenue layer without additional product creation.</div>
+        </div>
+        <div>
+          <div class="exp-detail-label">Current Verdict</div>
+          <div class="exp-detail-text">Too early for meaningful data. &pound;0.12 is the starting point every affiliate marketer recognises. A compounding model &mdash; requires traffic before it produces consistent returns.</div>
+        </div>
+        <div>
+          <div class="exp-detail-label">Next Actions</div>
+          <div class="exp-detail-text">More review posts across both blogs. Build the content library before expecting returns. Affiliate income compounds with traffic, not time alone.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:56px;">
+      <div class="section-label">In Preparation</div>
+      <div class="section-title">Coming Soon</div>
+
+      <div class="exp-pending">
+        <div class="exp-pending-num">04</div>
+        <div>
+          <h3>Earn by Playing Games</h3>
+          <p>Testing Inbox Pounds, Earnlabs, Prograd and Freecash with one week per platform and identical time investment. Real hourly rate calculations published. Launching once all platform flows are tested and verified end-to-end.</p>
+        </div>
+        <div class="soon-pill">Coming Soon</div>
+      </div>
+
+      <div class="exp-pending">
+        <div class="exp-pending-num">05</div>
+        <div>
+          <h3>Cashback</h3>
+          <p>Two weeks on Quidco, two weeks on TopCashback. Same spending behaviour, same time period. Direct head-to-head comparison with real earnings figures. Launching alongside Test 04.</p>
+        </div>
+        <div class="soon-pill">Coming Soon</div>
+      </div>
+
+      <div class="exp-pending">
+        <div class="exp-pending-num">06</div>
+        <div>
+          <h3>Surveys</h3>
+          <p>Survey platforms tested with identical time investment. Multiple platforms including those that overlap with the gaming apps in Test 04. Real hourly rate calculated and published.</p>
+        </div>
+        <div class="soon-pill">Coming Soon</div>
+      </div>
+
+      <div class="exp-pending">
+        <div class="exp-pending-num">07</div>
+        <div>
+          <h3>Remote Working &amp; Freelancing</h3>
+          <p>Fiverr CV and document rewriting service. AI-assisted workflow, fast delivery, transparent pricing. No paid promotion to start &mdash; organic discovery only for the first 90 days.</p>
+        </div>
+        <div class="soon-pill">Coming Soon</div>
+      </div>
+
+      <div class="exp-pending">
+        <div class="exp-pending-num">08</div>
+        <div>
+          <h3>Earn While You Spend</h3>
+          <p>Cashback on purchases, matched offers and platform-specific purchase deals that generate a return on things you would buy anyway. Testing the profit margins on specific offers with full transparency on what was spent and what was returned.</p>
+        </div>
+        <div class="soon-pill">Coming Soon</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RULES -->
+  <section class="rules">
+    <div class="rules-inner">
+      <div class="section-label" style="color:var(--gold);">How This Works</div>
+      <div class="section-title" style="color:var(--white);">The rules every experiment follows</div>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-num">01</div>
+          <h4>Documented Structure</h4>
+          <p>Every test gets the same format: hypothesis, what was done, numbers, verdict. No exceptions.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">02</div>
+          <h4>Honest Numbers</h4>
+          <p>Results published as they are &mdash; including zeros, failures and slow starts. Nothing edited out.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">03</div>
+          <h4>No Abandoned Tests</h4>
+          <p>No experiment gets quietly dropped. If something is stopped, the reason is published.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">04</div>
+          <h4>Free First</h4>
+          <p>Every experiment starts on free tools. Paid tools only if they demonstrably improve results &mdash; disclosed when used.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">05</div>
+          <h4>Living Document</h4>
+          <p>Numbers update as experiments develop. This page reflects the current state, not the launch state.</p>
+        </div>
+        <div class="rule-card">
+          <div class="rule-num">06</div>
+          <h4>Sequence Not Scatter</h4>
+          <p>Fewer experiments done properly rather than many experiments done poorly. Quality of data matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-cta">
+    <h2>Follow the experiments as they develop</h2>
+    <p>Get the free guide covering every active test, the full toolkit and the honest numbers. Updated when things change.</p>
+    <a href="https://stats.sender.net/forms/e1wv33/view" class="btn-dark">Get the Free Guide</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+    <p class="footer-tag">Real experiments. Real numbers. No hype.</p>
+    <p>digitalrevenuestudio.co.uk</p>
+    <p style="margin-top:6px;">&copy; 2026 Digital Revenue Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

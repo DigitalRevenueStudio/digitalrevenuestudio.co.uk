@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health & Wellbeing | Digital Revenue Studio</title>
+  <meta name="description" content="Health and wellbeing products we have used and genuinely rate. Honest recommendations with full affiliate disclosure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--accent:#4a9eda;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.75;}
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);position:sticky;top:0;z-index:100;}
+    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:24px;}
+    .topbar-nav{display:flex;gap:24px;}
+    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;}
+    .hero{background:var(--dark);padding:56px 40px;border-bottom:3px solid var(--accent);position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(74,158,218,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(74,158,218,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.6s ease both;}
+    .breadcrumb{display:flex;gap:8px;align-items:center;margin-bottom:16px;}
+    .breadcrumb a{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--gold);}
+    .breadcrumb-sep{color:rgba(255,255,255,0.15);}
+    .breadcrumb-current{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);letter-spacing:-0.02em;line-height:1.1;margin-bottom:12px;}
+    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:0.95rem;color:rgba(255,255,255,0.4);max-width:520px;line-height:1.7;}
+    .disclosure{background:rgba(245,166,35,0.06);border-left:3px solid var(--gold);padding:10px 40px;}
+    .disclosure p{font-size:0.78rem;color:var(--text-muted);margin:0;max-width:1100px;margin-left:auto;margin-right:auto;}
+    .disclosure strong{color:var(--text-dark);}
+    .page-inner{max-width:1100px;margin:0 auto;padding:52px 40px;}
+    .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;margin-bottom:32px;}
+    .back-link::before{content:'←';}
+    .back-link:hover{color:var(--gold);}
+    .product-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:3px;padding:28px;max-width:560px;}
+    .product-tag{display:inline-block;background:rgba(74,158,218,0.08);border:1px solid rgba(74,158,218,0.2);color:var(--accent);font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:12px;}
+    .product-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--text-dark);margin-bottom:10px;}
+    .product-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.7;margin-bottom:20px;}
+    .health-disclaimer{background:var(--warm);border:1px solid var(--border);border-radius:2px;padding:12px 16px;margin-bottom:20px;font-size:0.78rem;color:var(--text-muted);line-height:1.6;}
+    .health-disclaimer strong{color:var(--text-dark);}
+    .btn-buy{display:inline-block;background:var(--dark);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:11px 24px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+    .btn-buy:hover{background:var(--mid);}
+    .coming-note{margin-top:40px;background:var(--dark-2);border-radius:3px;padding:22px 24px;border-left:3px solid var(--gold);}
+    .coming-note p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin:0;line-height:1.7;}
+    .coming-note strong{color:rgba(255,255,255,0.8);}
+    .footer{background:var(--dark);padding:36px 40px 22px;text-align:center;margin-top:64px;}
+    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;margin-bottom:5px;}
+    .footer p{color:rgba(255,255,255,0.2);font-size:0.74rem;margin-top:5px;}
+    .footer-tag{font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,0.3)!important;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  
+    .topbar-logo{height:36px;width:auto;display:block;}
+    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .topbar-logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap"><img src="https://drive.google.com/uc?export=view&id=1D8FtHJ7o8hPzsj0u7hG9wB3ATZAWhCAM" alt="Digital Revenue Studio" class="topbar-logo" /></a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="#">Experiments</a>
+        <a href="https://digitalrevenuestudios.blogspot.com/?m=1">Blog</a>
+        <a href="https://payhip.com/DigitalRevenueStudio">Shop</a>
+        <a href="#">About</a>
+      </div>
+      <a href="https://stats.sender.net/forms/e1wv33/view" class="topbar-cta">Free Guide</a>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="[AFFILIATES-HUB-URL]">Recommended Products</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Health &amp; Wellbeing</span>
+      </div>
+      <h1>Health &amp; Wellbeing</h1>
+      <p class="hero-sub">Supplements and health products worth knowing about. Honest recommendations with full disclosure.</p>
+    </div>
+  </header>
+  <div class="disclosure">
+    <p><strong>Affiliate disclosure:</strong> Links on this page are affiliate links via Digistore24. We earn a commission at no extra cost to you. Always consult a healthcare professional before starting any supplement.</p>
+  </div>
+  <div class="page-inner">
+    <a href="[AFFILIATES-HUB-URL]" class="back-link">All Categories</a>
+    <div class="product-card">
+      <div class="product-tag">Supplement</div>
+      <h3>Circ02 Nitric Oxide Lozenges</h3>
+      <p>A nitric oxide supplement in lozenge form. Nitric oxide supports healthy circulation and cardiovascular function. Circ02 uses a beet-based formula and is one of the more widely referenced products in this category.</p>
+      <div class="health-disclaimer"><strong>Important:</strong> This is not medical advice. Always consult your GP or a qualified healthcare professional before starting any supplement, particularly if you have an existing health condition or take medication.</div>
+      <a href="https://www.digistore24.com/redir/538695/DigitalRevenueStudio/" class="btn-buy" target="_blank" rel="nofollow">Learn More</a>
+    </div>
+    <div class="coming-note">
+      <p><strong>More products coming soon.</strong> We only list products we have personally used or thoroughly researched. This category will grow as we test more products worth recommending.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+    <p class="footer-tag">Real experiments. Real numbers. No hype.</p>
+    <p>&copy; 2026 Digital Revenue Studio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
