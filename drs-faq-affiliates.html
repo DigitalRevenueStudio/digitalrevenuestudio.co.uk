@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate Marketing — Questions Answered | Digital Revenue Studio</title>
+  <meta name="description" content="Real answers about affiliate marketing from someone actually doing it. How to apply, what commissions look like, and why we got rejected by Sender." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{--dark:#0A1F14;--mid:#1A3324;--gold:#F5A623;--white:#FFFFFF;--muted:rgba(255,255,255,0.45);--border:rgba(255,255,255,0.08);--text:rgba(255,255,255,0.82);}
+    body{background:var(--dark);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:400;line-height:1.7;}
+    .topbar{position:sticky;top:0;z-index:100;background:rgba(10,31,20,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px;height:58px;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-logo{height:32px;width:auto;display:block;}
+    .topbar-logo-wrap{display:flex;align-items:center;}
+    .topbar-right{display:flex;align-items:center;gap:28px;}
+    .topbar-nav{display:flex;align-items:center;gap:28px;}
+    .topbar-nav a{color:var(--muted);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+    .topbar-cta:hover{background:#fdc84d;}
+    .page-hero{padding:80px 40px 60px;max-width:860px;margin:0 auto;text-align:center;}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.3);color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:24px;}
+    .page-hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;}
+    .page-hero h1 span{color:var(--gold);}
+    .page-hero .intro{font-size:1.05rem;color:var(--text);max-width:620px;margin:0 auto 16px;}
+    .hero-note{font-size:0.82rem;color:var(--muted);font-style:italic;}
+    .content{max-width:800px;margin:0 auto;padding:20px 40px 80px;}
+    .faq-section{margin-bottom:60px;}
+    .faq-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;padding-bottom:10px;border-bottom:1px solid rgba(245,166,35,0.2);}
+    .faq-item{border:1px solid var(--border);border-radius:4px;margin-bottom:12px;overflow:hidden;transition:border-color 0.2s;}
+    .faq-item:hover{border-color:rgba(245,166,35,0.2);}
+    .faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;user-select:none;}
+    .faq-q-text{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;line-height:1.4;color:var(--white);}
+    .faq-toggle{color:var(--gold);font-size:1.4rem;font-weight:300;flex-shrink:0;transition:transform 0.2s;line-height:1;}
+    .faq-item.open .faq-toggle{transform:rotate(45deg);}
+    .faq-a{display:none;padding:0 24px 24px;color:var(--text);font-size:0.92rem;line-height:1.75;border-top:1px solid var(--border);}
+    .faq-item.open .faq-a{display:block;padding-top:20px;}
+    .faq-a strong{color:var(--white);}
+    .faq-a .highlight{background:rgba(245,166,35,0.08);border-left:3px solid var(--gold);padding:12px 16px;border-radius:0 3px 3px 0;margin:16px 0;font-size:0.88rem;}
+    .faq-a ul{margin:12px 0 12px 20px;}
+    .faq-a ul li{margin-bottom:6px;}
+    .back-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+    .btn-back{display:inline-block;background:transparent;color:var(--muted);border:1px solid var(--border);font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px 20px;border-radius:2px;text-decoration:none;transition:all 0.2s;}
+    .btn-back:hover{color:var(--white);border-color:rgba(255,255,255,0.3);}
+    .btn-affiliates{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px 20px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+    .btn-affiliates:hover{background:#fdc84d;}
+    footer{border-top:1px solid var(--border);padding:32px 40px;text-align:center;}
+    footer p{font-size:0.78rem;color:var(--muted);}
+    @media(max-width:640px){.topbar{padding:0 20px;}.topbar-nav{display:none;}.page-hero{padding:50px 20px 40px;}.content{padding:20px 20px 60px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="https://digitalrevenuestudio.co.uk" class="topbar-logo-wrap"><img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" /></a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://digitalrevenuestudio.co.uk/drs-experiments.html">Experiments</a>
+        <a href="https://digitalrevenuestudios.blogspot.com/?m=1">Blog</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-about.html">About</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+      </div>
+      <a href="https://digitalrevenuestudio.co.uk/drs-free-guide-landing.html" class="topbar-cta">Free Guide</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="hero-tag">Test 03 — Affiliate Marketing</div>
+    <h1>Questions Answered.<br /><span>Including the Rejections.</span></h1>
+    <p class="intro">Affiliate marketing sounds straightforward. Apply for programmes, get links, earn commissions. The reality involves rejections, approval queues, and the uncomfortable truth that most programmes want traffic you don't have yet.</p>
+    <p class="hero-note">Based on our live experiment. We include the rejections as well as the approvals.</p>
+  </div>
+
+  <div class="content">
+
+    <div class="faq-section">
+      <div class="faq-section-title">How It Works</div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What is affiliate marketing in plain terms?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>You recommend a product or service using a special tracking link. When someone clicks your link and makes a purchase, you earn a commission — typically a percentage of the sale. You do not need to create, stock or fulfil anything. Your job is recommendation and trust.</p>
+          <div class="highlight">The key word is trust. Recommending products you have not used, or recommending anything purely for commission, destroys trust quickly. Our rule: we only list products we actively use and genuinely rate.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">How do you join affiliate programmes?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>Most programmes require an application. Some (like Amazon Associates) approve quickly with basic requirements. Others (particularly SaaS tools) want evidence of an established audience before approving you.</p>
+          <p style="margin-top:10px;">Common application routes:</p>
+          <ul>
+            <li><strong>In-platform</strong> — Payhip, Gumroad have affiliate schemes within their dashboards</li>
+            <li><strong>Affiliate networks</strong> — Awin, Impact, ShareASale host multiple programmes</li>
+            <li><strong>Direct</strong> — Many companies run their own programmes you apply to directly</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What commissions can you realistically expect?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>It varies enormously by category:</p>
+          <ul>
+            <li><strong>Amazon Associates</strong> — 1–5% depending on category. Low rate but high conversion due to Amazon trust</li>
+            <li><strong>SaaS tools</strong> — 20–40% recurring commission. Higher rates but harder to get approved as a new affiliate</li>
+            <li><strong>Physical products direct</strong> — 5–15% typically</li>
+            <li><strong>Digital products</strong> — up to 50% as the margin is higher</li>
+          </ul>
+          <div class="highlight">Our total affiliate revenue to date: £0.12 from Pure Pet Food. All other programmes are active but have not converted yet — we do not have enough traffic.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="faq-section">
+      <div class="faq-section-title">Getting Approved</div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Why do affiliate programmes reject you?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>The most common reason: insufficient traffic or audience. Programmes want to know you can actually drive conversions. A brand new website with no traffic data is a harder application regardless of how good your content is.</p>
+          <div class="highlight">We were rejected by Sender's affiliate programme. Our honest assessment: we applied too early, before the website had traffic data to back the application. We plan to reapply in 60–90 days with a live site, published review post and real subscriber numbers.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What makes a stronger affiliate application?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>Based on our experience and research:</p>
+          <ul>
+            <li>A live website with real content — not a placeholder</li>
+            <li>A specific description of how you will promote the product</li>
+            <li>Mention every traffic channel you have — website, blog, email list, social, YouTube, Reddit</li>
+            <li>Evidence you already use the product</li>
+            <li>A published review or mention of the product if you have one</li>
+          </ul>
+          <p style="margin-top:10px;">Vague applications ("I will share it on social media") get rejected. Specific applications ("I have a live review post at this URL, an email list of X subscribers and promote to UK adults building side hustles") get approved.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Does Amazon Associates need a big audience?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>Amazon Associates is more accessible than most programmes. They approve most applications but require you to make 3 qualifying sales within your first 180 days — otherwise your account is closed. You can reapply after closure.</p>
+          <p style="margin-top:10px;">The 180-day window means you need some traffic before applying, or you need to drive enough to your Amazon links quickly after approval.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="faq-section">
+      <div class="faq-section-title">Disclosure & Compliance</div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Do you have to disclose affiliate links?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>Yes. In the UK the ASA (Advertising Standards Authority) and the CMA (Competition and Markets Authority) require clear disclosure when you have a financial relationship with a brand or product you are recommending. This applies to blogs, social media posts and website pages.</p>
+          <div class="highlight">We include an affiliate disclosure on every page containing affiliate links. Beyond compliance, it is also the right thing to do — readers who know you earn a commission can decide how to weight your recommendation.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">What is the difference between an affiliate link and a sponsored post?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>An affiliate link earns commission only on sales or actions — you only get paid if someone buys. A sponsored post is a fixed payment from a brand in exchange for a mention or review, regardless of sales. Both require disclosure. Our Services page has a paid listing option — that is a sponsored placement, not affiliate.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="faq-section">
+      <div class="faq-section-title">Our Current Affiliate Links</div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-q-text">Which affiliate programmes are you currently active in?</span><span class="faq-toggle">+</span></div>
+        <div class="faq-a">
+          <p>Active and earning (or trying to earn) commission from:</p>
+          <ul>
+            <li>Amazon Associates — books and pet products</li>
+            <li>Pure Pet Food — direct programme</li>
+            <li>Digistore24 — health supplement</li>
+            <li>Gumroad — platform affiliate</li>
+            <li>iD Mobile — via Awin network</li>
+            <li>PayPal — via Impact network</li>
+          </ul>
+          <p style="margin-top:10px;">Pending approval: Payhip, Microsoft 365. Rejected and reapplying later: Sender.</p>
+          <div class="highlight">All products listed on our Recommended Products page are things we genuinely use. We do not list anything purely because it has an affiliate programme.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="back-row">
+      <a href="https://digitalrevenuestudio.co.uk/drs-experiments.html" class="btn-back">← Back to Experiments</a>
+      <a href="https://digitalrevenuestudio.co.uk/drs-affiliates-hub.html" class="btn-affiliates">See Our Recommended Products</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Digital Revenue Studio &mdash; Real Experiments. Real Numbers. No Hype. &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://digitalrevenuestudio.co.uk" style="color:var(--gold);text-decoration:none;">Home</a></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
