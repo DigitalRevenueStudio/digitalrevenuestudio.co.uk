@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Starter Guide — Whiteout Survival | WOS Guide</title>
+  <meta name="description" content="Download the free Whiteout Survival Starter Guide. Your first 7 days, hero priorities, daily routine and the three rules that change everything. F2P friendly." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ice-dark:#050D1A;--ice-mid:#091628;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#fff;--orange:#E8832A;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%);pointer-events:none;z-index:0;}
+
+    .topbar{background:rgba(5,13,26,0.97);border-bottom:1px solid var(--ice-border);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .brand-badge{font-size:0.58rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.1);border:1px solid rgba(77,168,218,0.25);padding:2px 6px;border-radius:2px;font-weight:700;}
+    .brand-main{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:var(--ice-glow);letter-spacing:0.1em;text-transform:uppercase;}
+    .nav-back{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;}
+    .nav-back:hover{color:var(--ice-glow);}
+    .nav-back::before{content:'← ';}
+
+    .hero{padding:72px 40px 56px;text-align:center;position:relative;z-index:1;}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-glow);border:1px solid rgba(125,212,248,0.25);background:rgba(125,212,248,0.05);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.0;text-transform:uppercase;color:var(--white);margin-bottom:14px;}
+    .hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .hero-sub{font-size:1.05rem;color:var(--text);max-width:520px;margin:0 auto 36px;line-height:1.75;}
+    .hero-stats{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-bottom:40px;}
+    .stat{text-align:center;}
+    .stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;color:var(--ice-glow);display:block;line-height:1;}
+    .stat-label{font-size:0.62rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-top:3px;}
+    .btn-hero{display:inline-block;background:var(--ice-bright);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;padding:16px 36px;border-radius:2px;text-decoration:none;margin-bottom:12px;transition:background 0.2s;}
+    .btn-hero:hover{background:var(--ice-glow);}
+    .btn-note{font-size:0.7rem;color:var(--text-muted);display:block;}
+
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 30%,var(--ice-bright) 50%,var(--ice-border) 70%,transparent);margin:0 40px;position:relative;z-index:1;}
+
+    /* WHAT'S INSIDE */
+    .inside{background:rgba(13,31,56,0.5);padding:64px 40px;position:relative;z-index:1;}
+    .inside-inner{max-width:800px;margin:0 auto;}
+    .eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:10px;}
+    .section-h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.6rem);text-transform:uppercase;color:var(--white);line-height:1.05;margin-bottom:12px;}
+    .section-h2 em{font-style:normal;color:var(--ice-glow);}
+    .section-intro{font-size:0.95rem;color:var(--text);margin-bottom:32px;max-width:580px;line-height:1.8;}
+    .chapters{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px;}
+    .chapter{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 3px 3px 0;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;}
+    .ch-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;color:var(--ice-bright);background:rgba(77,168,218,0.1);border:1px solid rgba(77,168,218,0.2);padding:3px 8px;border-radius:2px;flex-shrink:0;letter-spacing:0.06em;margin-top:2px;}
+    .ch-text strong{display:block;font-size:0.9rem;color:var(--white);margin-bottom:3px;}
+    .ch-text span{font-size:0.78rem;color:var(--text-muted);line-height:1.5;}
+
+    /* HERO TABLE */
+    .hero-table-section{padding:64px 40px;position:relative;z-index:1;}
+    .hero-table-inner{max-width:800px;margin:0 auto;}
+    .table-wrap{border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;margin-top:24px;}
+    .table-head{display:grid;grid-template-columns:1fr 80px 100px 60px 1fr;background:rgba(77,168,218,0.08);border-bottom:1px solid var(--ice-border);}
+    .table-head span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);padding:10px 14px;}
+    .table-row{display:grid;grid-template-columns:1fr 80px 100px 60px 1fr;border-bottom:1px solid var(--ice-border);}
+    .table-row:last-child{border-bottom:none;}
+    .table-row:nth-child(odd){background:rgba(255,255,255,0.01);}
+    .table-row span{font-size:0.85rem;color:var(--text);padding:11px 14px;display:flex;align-items:center;}
+    .table-row .hero-name{color:var(--white);font-weight:600;}
+    .tier-s{color:var(--green);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;}
+    .tier-a{color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;}
+    .tier-b{color:var(--text-muted);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;}
+
+    /* DAILY ROUTINE */
+    .routine-section{background:rgba(13,31,56,0.5);padding:64px 40px;position:relative;z-index:1;}
+    .routine-inner{max-width:800px;margin:0 auto;}
+    .routine-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;}
+    .routine-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:3px;padding:12px 16px;font-size:0.85rem;color:var(--text);display:flex;align-items:flex-start;gap:10px;}
+    .routine-item::before{content:'›';color:var(--ice-bright);font-weight:700;flex-shrink:0;margin-top:1px;}
+
+    /* FULL GUIDE CTA */
+    .full-guide{padding:64px 40px;position:relative;z-index:1;}
+    .full-guide-inner{max-width:800px;margin:0 auto;}
+    .full-guide-card{background:linear-gradient(135deg,var(--ice-panel),var(--ice-mid));border:1px solid var(--ice-border);border-top:2px solid var(--ice-glow);border-radius:4px;padding:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;}
+    .fg-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;color:var(--white);margin-bottom:8px;}
+    .fg-title em{font-style:normal;color:var(--ice-glow);}
+    .fg-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:14px;}
+    .fg-chapters{display:flex;flex-wrap:wrap;gap:6px;}
+    .fg-ch{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(77,168,218,0.08);border:1px solid rgba(77,168,218,0.15);color:var(--ice-bright);padding:3px 9px;border-radius:2px;}
+    .fg-price{text-align:center;flex-shrink:0;}
+    .fg-price-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;color:var(--white);display:block;line-height:1;}
+    .fg-price-label{font-size:0.65rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;display:block;}
+    .btn-guide{display:block;background:var(--ice-bright);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;border-radius:2px;text-decoration:none;text-align:center;transition:background 0.2s;}
+    .btn-guide:hover{background:var(--ice-glow);}
+
+    /* DOWNLOAD CTA */
+    .cta-section{background:rgba(13,31,56,0.8);border-top:1px solid var(--ice-border);padding:64px 40px;text-align:center;position:relative;z-index:1;}
+    .cta-inner{max-width:520px;margin:0 auto;}
+    .cta-inner h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.4rem);text-transform:uppercase;color:var(--white);margin-bottom:10px;line-height:1.05;}
+    .cta-inner h2 em{font-style:normal;color:var(--ice-glow);}
+    .cta-inner p{font-size:0.88rem;color:var(--text-muted);margin-bottom:28px;line-height:1.75;}
+    .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{display:inline-block;background:var(--ice-bright);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:15px 32px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+    .btn-primary:hover{background:var(--ice-glow);}
+    .btn-secondary{display:inline-block;background:transparent;color:var(--text-muted);border:1px solid var(--ice-border);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 26px;border-radius:2px;text-decoration:none;transition:all 0.2s;}
+    .btn-secondary:hover{border-color:var(--ice-bright);color:var(--ice-bright);}
+
+    .footer{border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;position:relative;z-index:1;}
+    .footer p{font-size:0.7rem;color:var(--text-muted);}
+    .footer a{color:var(--text-muted);text-decoration:none;}
+    .footer a:hover{color:var(--ice-glow);}
+
+    @media(max-width:680px){
+      .topbar,.hero,.inside,.hero-table-section,.routine-section,.full-guide,.cta-section,.footer{padding-left:20px;padding-right:20px;}
+      .divider{margin:0 20px;}
+      .table-head,.table-row{grid-template-columns:1fr 60px 80px 50px;}
+      .table-head span:last-child,.table-row span:last-child{display:none;}
+      .routine-grid{grid-template-columns:1fr;}
+      .full-guide-card{grid-template-columns:1fr;}
+      .fg-price{display:flex;align-items:center;gap:16px;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="https://whiteoutsurvivalguide.blogspot.com" class="brand">
+      <span class="brand-badge">WOS</span>
+      <span class="brand-main">Guide</span>
+    </a>
+    <a href="https://whiteoutsurvivalguide.blogspot.com" class="nav-back">Back to Wiki</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-tag">&#x1F9CA; Free Download &mdash; No Sign Up Required</div>
+    <h1>Whiteout Survival<br /><em>Starter Guide</em></h1>
+    <p class="hero-sub">Your first 7 days. Your first heroes. Your daily 15-minute routine. Everything a new F2P player needs to start strong — in one free guide.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">7</span><span class="stat-label">Day Plan</span></div>
+      <div class="stat"><span class="stat-num">15</span><span class="stat-label">Min Daily Routine</span></div>
+      <div class="stat"><span class="stat-num">9</span><span class="stat-label">Chapter Full Guide</span></div>
+      <div class="stat"><span class="stat-num">F2P</span><span class="stat-label">Friendly</span></div>
+    </div>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-lite-guide.pdf" class="btn-hero" download>&#x2193; Download Free Guide (PDF)</a>
+    <span class="btn-note">PDF &bull; 5 pages &bull; Completely free &bull; No email required</span>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="inside">
+    <div class="inside-inner">
+      <div class="eyebrow">What's Inside</div>
+      <h2 class="section-h2">Five Pages. <em>Everything You Need to Start.</em></h2>
+      <p class="section-intro">This free guide covers the foundations — what to do in your first week, which heroes to prioritise and the daily routine that separates fast progressors from slow ones.</p>
+      <div class="chapters">
+        <div class="chapter"><span class="ch-num">01</span><div class="ch-text"><strong>Your First 7 Days</strong><span>Day-by-day actions for your first week. What to build first, when to join an alliance and how to avoid the most costly early mistakes.</span></div></div>
+        <div class="chapter"><span class="ch-num">02</span><div class="ch-text"><strong>Hero Priority</strong><span>Which Generation 1 heroes to invest in, which to ignore, and the single rule that changes how fast you progress.</span></div></div>
+        <div class="chapter"><span class="ch-num">03</span><div class="ch-text"><strong>Daily 15-Minute Routine</strong><span>The exact daily checklist that keeps your account progressing every single day with minimal time investment.</span></div></div>
+        <div class="chapter"><span class="ch-num">04</span><div class="ch-text"><strong>The Three Core Rules</strong><span>Speed-up timing, alliance value and troop shielding — the three principles that compound across the entire game.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-table-section">
+    <div class="hero-table-inner">
+      <div class="eyebrow">Hero Priority Reference</div>
+      <h2 class="section-h2">Gen 1 <em>Tier List</em></h2>
+      <p style="font-size:0.9rem;color:var(--text);margin-bottom:0;max-width:580px;">From the guide — concentrate resources on Jeronimo and Alonso first. A 5-star hero dominates a roster of 3-star heroes in every game mode.</p>
+      <div class="table-wrap">
+        <div class="table-head"><span>Hero</span><span>Gen</span><span>Type</span><span>Tier</span><span>Why</span></div>
+        <div class="table-row"><span class="hero-name">Jeronimo</span><span>1</span><span>Marksman</span><span class="tier-s">S</span><span>Best all-round Gen 1. Priority above all others.</span></div>
+        <div class="table-row"><span class="hero-name">Alonso</span><span>1</span><span>Infantry</span><span class="tier-s">S</span><span>Essential for PvP. Pairs perfectly with Jeronimo.</span></div>
+        <div class="table-row"><span class="hero-name">Mia</span><span>1</span><span>Lancer</span><span class="tier-a">A</span><span>Strong Exploration hero. Good F2P resource farming.</span></div>
+        <div class="table-row"><span class="hero-name">Philly</span><span>2</span><span>Lancer</span><span class="tier-a">A</span><span>Best healer in the game. Essential later on.</span></div>
+        <div class="table-row"><span class="hero-name">Zinman</span><span>1</span><span>Marksman</span><span class="tier-b">B</span><span>Growth hero only. No PvP value. Do not invest heavily.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="routine-section">
+    <div class="routine-inner">
+      <div class="eyebrow">Daily Routine — From the Guide</div>
+      <h2 class="section-h2">Your <em>15-Minute Daily Checklist</em></h2>
+      <p style="font-size:0.9rem;color:var(--text);margin-bottom:0;max-width:580px;">Consistency beats intensity. Fifteen minutes every day outperforms two hours once a week.</p>
+      <div class="routine-grid">
+        <div class="routine-item">Collect all resource production</div>
+        <div class="routine-item">Send heroes on gathering missions</div>
+        <div class="routine-item">Check Coal levels — top up if needed</div>
+        <div class="routine-item">Contribute to Alliance Tech (3–5 daily)</div>
+        <div class="routine-item">Start a Construction upgrade immediately</div>
+        <div class="routine-item">Use Alliance Help on all ally requests</div>
+        <div class="routine-item">Queue next Research tech</div>
+        <div class="routine-item">Check Event Calendar — complete daily tasks</div>
+        <div class="routine-item">Check training queues — always be training</div>
+        <div class="routine-item">Scout world map — Shield up if threatened</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="full-guide">
+    <div class="full-guide-inner">
+      <div class="eyebrow">Want More?</div>
+      <div class="full-guide-card">
+        <div>
+          <div class="fg-title">The Complete <em>9-Chapter Guide</em></div>
+          <p class="fg-desc">Everything in this free guide plus 8 more chapters — advanced hero builds, SvS preparation, Bear Hunt strategy, F2P gem spending, Foundry Battle and more.</p>
+          <div class="fg-chapters">
+            <span class="fg-ch">Hero Tier Lists Gen 1–3</span>
+            <span class="fg-ch">Bear Hunt Strategy</span>
+            <span class="fg-ch">SvS Preparation</span>
+            <span class="fg-ch">F2P Gem Guide</span>
+            <span class="fg-ch">Foundry Battle</span>
+            <span class="fg-ch">Alliance Mastery</span>
+            <span class="fg-ch">Expert Systems</span>
+            <span class="fg-ch">Chief Gear</span>
+            <span class="fg-ch">30-Day Checklist</span>
+          </div>
+        </div>
+        <div class="fg-price">
+          <span class="fg-price-num">£9.99</span>
+          <span class="fg-price-label">One-time purchase</span>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" class="btn-guide">Get the Full Guide &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Get the <em>Free Guide Now</em></h2>
+      <p>Download instantly — no email required. Or sign up to the WOS newsletter to get every new guide, event breakdown and F2P strategy update delivered to your inbox.</p>
+      <div class="btn-row">
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-lite-guide.pdf" class="btn-primary" download>&#x2193; Download Free Guide</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="btn-secondary">Get WOS Updates &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><a href="https://whiteoutsurvivalguide.blogspot.com">WOS Guide</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; Independent fan guide. Not affiliated with Century Games. &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html">Newsletter</a></p>
+  </footer>
+
+</body>
+</html>
