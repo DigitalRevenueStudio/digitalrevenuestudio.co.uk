@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whiteout Survival Guide — Every Guide in One Place</title>
+  <meta name="description" content="The complete Whiteout Survival wiki and guide hub. Beginner guides, event walkthroughs and F2P strategy — all in one place. Updated regularly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ice:#C8E8FF;--ice-glow:#7BC8F5;--ice-mid:#3A8CC7;--arctic:#0A1628;--arctic-2:#0D1F3C;--arctic-3:#102445;--white:#FFFFFF;--muted:rgba(255,255,255,0.5);--border:rgba(255,255,255,0.08);--gold:#F5C842;--green:#2ECC71;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--arctic);color:var(--white);line-height:1.7;}
+
+    /* HERO */
+    .hero{background:linear-gradient(160deg,var(--arctic) 0%,var(--arctic-2) 60%,var(--arctic-3) 100%);padding:56px 24px 44px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+    .hero-frost{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(123,200,245,0.09) 0%,transparent 65%);pointer-events:none;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(123,200,245,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(123,200,245,0.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;}
+    .hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1;}
+    .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap;}
+    .hero-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-glow);border:1px solid rgba(123,200,245,0.3);padding:4px 12px;border-radius:2px;}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);text-transform:uppercase;line-height:0.95;margin-bottom:16px;letter-spacing:0.02em;}
+    .hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.55);max-width:520px;margin-bottom:24px;}
+    .hero-stats{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:28px;}
+    .stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--ice-glow);line-height:1;}
+    .stat-label{font-size:0.68rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn-primary{background:var(--ice-mid);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 24px;border-radius:3px;text-decoration:none;}
+    .btn-secondary{background:rgba(255,255,255,0.06);border:1px solid var(--border);color:rgba(255,255,255,0.7);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 24px;border-radius:3px;text-decoration:none;}
+
+    /* CATEGORY NAV */
+    .cat-nav{background:var(--arctic-2);border-bottom:1px solid var(--border);padding:16px 24px;}
+    .cat-nav-inner{max-width:860px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+    .cat-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-right:4px;}
+    .cat-tag{background:rgba(123,200,245,0.07);border:1px solid rgba(123,200,245,0.15);color:rgba(255,255,255,0.65);font-size:0.78rem;font-weight:600;padding:5px 14px;border-radius:20px;text-decoration:none;transition:all 0.2s;}
+    .cat-tag:hover{background:var(--ice-mid);border-color:var(--ice-mid);color:var(--white);}
+
+    /* MAIN */
+    .main{max-width:860px;margin:0 auto;padding:40px 24px;}
+
+    /* SECTION */
+    .section{margin-bottom:48px;}
+    .section-hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+    .section-icon{font-size:1rem;}
+    .section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.15rem;text-transform:uppercase;letter-spacing:0.06em;}
+    .section-meta{font-size:0.72rem;color:var(--muted);margin-left:auto;letter-spacing:0.04em;}
+
+    /* CARDS */
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+    .card{background:var(--arctic-2);border:1px solid var(--border);border-radius:4px;padding:18px;text-decoration:none;display:flex;flex-direction:column;gap:8px;transition:all 0.2s;position:relative;}
+    .card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--ice-mid);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+    .card.live:hover{border-color:rgba(123,200,245,0.3);transform:translateY(-2px);}
+    .card.live:hover::after{transform:scaleX(1);}
+    .card.soon{opacity:0.55;cursor:default;}
+    .card-cat{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ice-glow);}
+    .card-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.03em;color:var(--white);line-height:1.2;}
+    .card-desc{font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.55;}
+    .card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px;border-top:1px solid var(--border);}
+    .status-live{font-size:0.68rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.06em;}
+    .status-soon{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+    .card-arr{font-size:0.78rem;color:var(--muted);}
+    .card.live:hover .card-arr{color:var(--ice-glow);}
+
+    /* FEATURED */
+    .card.featured{grid-column:1/-1;background:linear-gradient(120deg,var(--arctic-2),var(--arctic-3));border-color:rgba(123,200,245,0.18);display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;}
+    .card.featured::after{background:var(--gold);}
+    .feat-badge{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,200,66,0.3);padding:4px 10px;border-radius:2px;white-space:nowrap;}
+
+    /* GUIDE PROMO */
+    .guide-promo{background:linear-gradient(135deg,var(--arctic-3),var(--arctic-2));border:1px solid rgba(123,200,245,0.18);border-radius:6px;padding:32px;margin:40px 0;text-align:center;}
+    .guide-promo h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;}
+    .guide-promo h3 em{font-style:normal;color:var(--ice-glow);}
+    .guide-promo p{font-size:0.88rem;color:rgba(255,255,255,0.5);max-width:440px;margin:0 auto 20px;}
+    .guide-btn{display:inline-block;background:var(--ice-mid);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
+    .guide-note{display:block;font-size:0.7rem;color:var(--muted);margin-top:10px;}
+
+    /* REDDIT NOTICE */
+    .reddit-notice{background:rgba(255,69,0,0.07);border:1px solid rgba(255,69,0,0.18);border-radius:4px;padding:16px 20px;margin-bottom:32px;display:flex;gap:12px;align-items:flex-start;}
+    .reddit-notice p{font-size:0.85rem;color:rgba(255,255,255,0.65);margin:0;}
+    .reddit-notice a{color:var(--ice-glow);text-decoration:none;}
+
+    @media(max-width:600px){.card.featured{grid-template-columns:1fr;}.feat-badge{display:none;}.hero{padding:40px 20px 32px;}}
+    /* SIGNUP */
+    .signup{background:rgba(13,31,56,0.8);border:1px solid rgba(123,200,245,0.15);border-radius:6px;padding:36px;margin:40px 0;text-align:center;}
+    .signup-eye{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#7DD4F8;margin-bottom:12px;}
+    .signup h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;text-transform:uppercase;color:#FFFFFF;margin-bottom:10px;}
+    .signup h3 em{font-style:normal;color:#7DD4F8;}
+    .signup p{font-size:0.88rem;color:rgba(255,255,255,0.5);max-width:420px;margin:0 auto 22px;line-height:1.7;}
+  </style>
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('84286577fb8740')
+  </script>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-frost"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="hero-tag">Wiki &amp; Guide Hub</span>
+        <span class="hero-tag" style="color:var(--muted);border-color:rgba(255,255,255,0.1);">F2P Perspective</span>
+      </div>
+      <h1>Whiteout Survival<br /><em>Complete Guide Wiki</em></h1>
+      <p class="hero-sub">Every beginner guide, event walkthrough and strategy tip in one place. Written by a daily F2P player. All wiki content is free.</p>
+      <div class="hero-stats">
+        <div><div class="stat-num">4</div><div class="stat-label">Guides Live</div></div>
+        <div><div class="stat-num">8+</div><div class="stat-label">Coming Soon</div></div>
+        <div><div class="stat-num">Free</div><div class="stat-label">Wiki Content</div></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#beginner" class="btn-primary">Start Here &darr;</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="btn-secondary" target="_blank">Full Wiki on DRS &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cat-nav">
+    <div class="cat-nav-inner">
+      <span class="cat-label">Jump to:</span>
+      <a href="#beginner" class="cat-tag">&#x1F9CA; Beginner</a>
+      <a href="#events" class="cat-tag">&#x1F43B; Events</a>
+      <a href="#f2p" class="cat-tag">&#x1F4B0; F2P Strategy</a>
+      <a href="#economy" class="cat-tag">&#x26A1; Economy</a>
+    </div>
+  </div>
+
+  <main class="main">
+
+    <div class="reddit-notice">
+      <span>&#x1F4AC;</span>
+      <p>&#x1F4AC; Building this wiki based on what the community actually needs. The r/whiteoutsurvival community has already shaped what's coming — event token redemption is on the list because someone asked. Got another topic? <a href="https://www.reddit.com/r/whiteoutsurvival/" target="_blank">Let me know on Reddit</a> and I'll add it.</p>
+    </div>
+
+    <!-- BEGINNER -->
+    <section class="section" id="beginner">
+      <div class="section-hdr">
+        <span class="section-icon">&#x1F9CA;</span>
+        <span class="section-title">Beginner Guides</span>
+        <span class="section-meta">3 live &bull; 3 coming</span>
+      </div>
+      <div class="card-grid">
+
+        <a href="https://whiteoutsurvivalguide.blogspot.com" class="card featured live" target="_blank">
+          <div>
+            <div class="card-cat">Start Here</div>
+            <div class="card-title">The Mistakes I Made in My First 30 Days</div>
+            <div class="card-desc">The most common early game mistakes — hero upgrades, resource spending, alliance timing and what to do instead.</div>
+            <div class="card-foot">
+              <span class="status-live">&#x2713; Live</span>
+              <span class="card-arr">Read &rarr;</span>
+            </div>
+          </div>
+          <div class="feat-badge">Start Here</div>
+        </a>
+
+        <a href="https://whiteoutsurvivalguide.blogspot.com" class="card live" target="_blank">
+          <div class="card-cat">Beginner</div>
+          <div class="card-title">F2P vs Spender — What the Gap Actually Means</div>
+          <div class="card-desc">How much does spending actually matter and how do you compete without paying?</div>
+          <div class="card-foot"><span class="status-live">&#x2713; Live</span><span class="card-arr">Read &rarr;</span></div>
+        </a>
+
+        <a href="https://whiteoutsurvivalguide.blogspot.com" class="card live" target="_blank">
+          <div class="card-cat">Beginner</div>
+          <div class="card-title">The Complete Beginner Guide Is Here</div>
+          <div class="card-desc">The full 9-chapter guide covering everything a new player needs to know is now available.</div>
+          <div class="card-foot"><span class="status-live">&#x2713; Live</span><span class="card-arr">Read &rarr;</span></div>
+        </a>
+
+        <div class="card soon">
+          <div class="card-cat">Beginner</div>
+          <div class="card-title">First 7 Days Strategy</div>
+          <div class="card-desc">The decisions in your first week that set your whole progression up correctly.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+
+        <div class="card soon">
+          <div class="card-cat">Beginner</div>
+          <div class="card-title">Hero Upgrade Priority Guide</div>
+          <div class="card-desc">Which heroes to upgrade first — the order most beginners get completely wrong.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+
+        <div class="card soon">
+          <div class="card-cat">Beginner</div>
+          <div class="card-title">Alliance Tips for New Players</div>
+          <div class="card-desc">How alliances work, what to contribute and how to pick the right one early on.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section" id="events">
+      <div class="section-hdr">
+        <span class="section-icon">&#x1F43B;</span>
+        <span class="section-title">Events</span>
+        <span class="section-meta">1 live &bull; 3 coming</span>
+      </div>
+      <div class="card-grid">
+
+        <a href="https://whiteoutsurvivalguide.blogspot.com" class="card featured live" target="_blank">
+          <div>
+            <div class="card-cat">Events</div>
+            <div class="card-title">Bear Hunt — The Beginner's Complete Guide</div>
+            <div class="card-desc">Everything you need — how Bear Hunt works, what to prioritise and how to maximise rewards as a beginner F2P player.</div>
+            <div class="card-foot"><span class="status-live">&#x2713; Live</span><span class="card-arr">Read &rarr;</span></div>
+          </div>
+          <div class="feat-badge">New</div>
+        </a>
+
+        <div class="card soon">
+          <div class="card-cat">Events</div>
+          <div class="card-title">Event Token Redemption — When to Spend vs When to Save</div>
+          <div class="card-desc">One of the most requested guides — how to get the most value from your event tokens and avoid wasting them on the wrong rewards.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+
+        <div class="card soon">
+          <div class="card-cat">Events</div>
+          <div class="card-title">Polar Terror — Full Walkthrough</div>
+          <div class="card-desc">How to approach Polar Terror as a beginner and what rewards are worth chasing.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+
+        <div class="card soon">
+          <div class="card-cat">Events</div>
+          <div class="card-title">State vs State — Beginner Preparation</div>
+          <div class="card-desc">What SvS means for your progression and how to prepare without getting wiped.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GUIDE PROMO -->
+    <div class="guide-promo">
+      <h3>The Complete <em>9-Chapter Guide</em></h3>
+      <p>The wiki is free. The full guide goes deeper — covering hero builds, troop composition, event strategy and long-term F2P progression.</p>
+      <a href="https://whiteoutsurvivalguide.blogspot.com" class="guide-btn" target="_blank">Get the Complete Guide</a>
+      <span class="guide-note">Written by a daily F2P player &mdash; no filler.</span>
+    </div>
+
+    <!-- ECONOMY -->
+    <section class="section" id="economy">
+      <div class="section-hdr">
+        <span class="section-icon">&#x26A1;</span>
+        <span class="section-title">Economy &amp; Resources</span>
+        <span class="section-meta">Coming Soon</span>
+      </div>
+      <div class="card-grid">
+        <div class="card soon">
+          <div class="card-cat">Economy</div>
+          <div class="card-title">How to Spend Gems Without Wasting Them</div>
+          <div class="card-desc">The gem priorities that actually move your progression forward.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+        <div class="card soon">
+          <div class="card-cat">Economy</div>
+          <div class="card-title">Resource Management for F2P</div>
+          <div class="card-desc">Keep your resources balanced and avoid the common F2P bottlenecks.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+        <div class="card soon">
+          <div class="card-cat">Economy</div>
+          <div class="card-title">Speed Ups — When to Use Them</div>
+          <div class="card-desc">Speed up management is one of the highest-impact skills in the game.</div>
+          <div class="card-foot"><span class="status-soon">Coming Soon</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMAIL SIGNUP -->
+    <div class="signup">
+      <div class="signup-eye">Free Updates</div>
+      <h3>New Guides <em>Straight to Your Inbox</em></h3>
+      <p>Get notified every time a new WOS guide drops &mdash; wiki updates, event breakdowns and F2P strategy tips. Free. No spam.</p>
+      <div style="text-align: left" class="sender-form-field" data-sender-form-id="e1wv33"></div>
+    </div>
+
+  </main>
+
+</body>
+</html>
