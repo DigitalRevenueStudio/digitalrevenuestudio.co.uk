@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Digital Revenue Studio</title>
+  <meta name="description" content="Honest experiment updates, tool reviews and income reports from Digital Revenue Studio. Real numbers, no hype." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EWFNWGYHH9');
+  </script>
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('84286577fb8740')
+  </script>
+  <style>
+    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.75;}
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);position:sticky;top:0;z-index:100;}
+    .topbar-logo{height:36px;width:auto;display:block;}
+    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:24px;}
+    .topbar-nav{display:flex;gap:24px;}
+    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;}
+    .hero{background:var(--dark);padding:64px 40px;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .hero-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3rem);color:var(--white);letter-spacing:-0.02em;line-height:1.08;margin-bottom:14px;}
+    .hero h1 em{font-family:'Lora',serif;font-style:italic;color:var(--gold);}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.45);max-width:540px;line-height:1.75;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,var(--gold),var(--bright));}
+    .page-inner{max-width:1100px;margin:0 auto;padding:56px 40px;}
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
+    .filter-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;border:1px solid var(--border);color:var(--text-muted);cursor:pointer;text-decoration:none;transition:all 0.2s;}
+    .filter-tag:hover,.filter-tag.active{background:var(--dark);color:var(--gold);border-color:var(--dark);}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;}
+    .blog-card{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform 0.2s,box-shadow 0.2s;}
+    .blog-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(10,31,20,0.1);}
+    .blog-card-top{padding:24px 24px 0;}
+    .blog-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+    .blog-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;padding:3px 8px;border-radius:2px;}
+    .tag-experiment{background:rgba(245,166,35,0.1);color:var(--gold-dark);border:1px solid rgba(245,166,35,0.2);}
+    .tag-review{background:rgba(26,92,58,0.08);color:var(--mid);border:1px solid rgba(26,92,58,0.18);}
+    .tag-tool{background:rgba(74,158,218,0.08);color:#2a7ab0;border:1px solid rgba(74,158,218,0.2);}
+    .tag-income{background:rgba(46,139,74,0.08);color:var(--bright);border:1px solid rgba(46,139,74,0.18);}
+    .blog-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text-dark);line-height:1.3;margin-bottom:8px;}
+    .blog-card p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;}
+    .blog-card-footer{padding:16px 24px;border-top:1px solid var(--border);margin-top:16px;display:flex;align-items:center;justify-content:space-between;}
+    .blog-date{font-size:0.72rem;color:var(--text-muted);}
+    .blog-read{font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);}
+    .blog-card:hover .blog-read{color:var(--gold);}
+    .section-divider{display:flex;align-items:center;gap:16px;margin:48px 0 32px;}
+    .section-divider-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;}
+    .section-divider-line{flex:1;height:1px;background:var(--border);}
+    .coming-card{background:var(--warm);border:1px solid var(--border);border-radius:3px;padding:22px 24px;opacity:0.6;}
+    .coming-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text-dark);margin-bottom:6px;}
+    .coming-card p{font-size:0.85rem;color:var(--text-muted);}
+    .coming-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
+    .footer{background:var(--dark);padding:40px 40px 24px;text-align:center;margin-top:64px;}
+    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;margin-bottom:6px;}
+    .footer p{color:rgba(255,255,255,0.25);font-size:0.76rem;margin-top:6px;}
+    .footer-tag{font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,0.35)!important;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:640px){.topbar,.page-inner,.hero{padding-left:20px;padding-right:20px;}.topbar-nav{display:none;}}
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
+      <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
+    </a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://digitalrevenuestudio.co.uk/drs-about.html">About</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-experiments.html">Experiments</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-affiliates-hub.html">Recommended</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+        <a href="https://digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Free Guide</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-label">The Blog</div>
+      <h1>Honest updates from <em>the experiments</em></h1>
+      <p class="hero-sub">Experiment reports, tool reviews, income breakdowns and everything in between. Real numbers every time.</p>
+    </div>
+  </header>
+  <div class="gold-bar"></div>
+
+  <div class="page-inner">
+
+    <div class="filter-bar">
+      <a href="#" class="filter-tag active">All Posts</a>
+      <a href="#" class="filter-tag">Experiment Log</a>
+      <a href="#" class="filter-tag">Tool Reviews</a>
+      <a href="#" class="filter-tag">Income Reports</a>
+    </div>
+
+    <div class="blog-grid">
+
+      <!-- BLOG 6 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-6-payhip-review.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-tags"><span class="blog-tag tag-review">Platform Review</span><span class="blog-tag tag-experiment">Test 02</span></div>
+          <h3>Payhip Review 2026 — An Honest Look From Someone Actually Using It</h3>
+          <p>Is Payhip the best platform for selling digital products in the UK? We've been using it as our primary storefront — here's what we actually think.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">5 Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 5 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-5-sender-review-blogger.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-tags"><span class="blog-tag tag-tool">Tools</span><span class="blog-tag tag-experiment">Test 03</span></div>
+          <h3>Sender Review 2026: The Email Tool Behind All Three DRS Brands</h3>
+          <p>We run three brands off one Sender account. Here's an honest review of the platform, the free tier and whether it's worth it for small creators.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">4 Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 4 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-4-overview-blogger.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-tags"><span class="blog-tag tag-experiment">Experiment Log</span><span class="blog-tag tag-income">Income Report</span></div>
+          <h3>I'm Testing 8 Online Income Streams in 2026 — Here's the Honest Picture So Far</h3>
+          <p>Three experiments live, real numbers on the table. Here's where everything stands and what comes next.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">4 Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 3 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-3-pure-pet-food-review.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-tags"><span class="blog-tag tag-review">Review</span><span class="blog-tag tag-experiment">Test 03</span></div>
+          <h3>We Tried Pure Pet Food for Our Cockapoo — Honest Review</h3>
+          <p>We switched Maverick to Pure Pet Food and documented what actually happened. The results surprised us — and the wife was a convert before the first bag was finished.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">3 Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 2 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-2-ai-prompts-income.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-tags"><span class="blog-tag tag-experiment">Test 02</span><span class="blog-tag tag-income">Side Hustle</span></div>
+          <h3>How Much Can You Realistically Make Selling AI Prompts in the UK in 2026?</h3>
+          <p>AI prompt packs are everywhere. But how much can you actually make selling them? We tested it honestly — here are the real numbers.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">3 Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 1 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-1-kdp-blogger.html" class="blog-card">
+        <div class="blog-card-top">
+          <div class="blog-tags"><span class="blog-tag tag-experiment">Test 01</span><span class="blog-tag tag-income">KDP</span></div>
+          <h3>Is Amazon KDP Worth It in the UK in 2026? Our Real Numbers.</h3>
+          <p>We self-published a children's book on Amazon KDP and documented everything — the process, the costs, the sales and whether it was actually worth it.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">3 Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- COMING SOON -->
+    <div class="section-divider">
+      <span class="section-divider-label">Coming Soon</span>
+      <div class="section-divider-line"></div>
+    </div>
+
+    <div class="blog-grid">
+      <div class="coming-card">
+        <div class="coming-label">Coming Soon</div>
+        <h3>How I Got a £1,500 Council Tax Refund — and How to Check Yours</h3>
+        <p>A step-by-step guide to checking your council tax band and making a challenge if you've been overcharged.</p>
+      </div>
+      <div class="coming-card">
+        <div class="coming-label">Coming Soon</div>
+        <h3>Car Finance DCA — How to Check if Yours Was Mis-sold</h3>
+        <p>The FCA is reviewing discretionary commission arrangements on car finance. Here's how to check your agreements and what to do next.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- KO-FI -->
+  <div style="text-align:center;padding:28px 40px;background:var(--paper);border-top:1px solid var(--border);">
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">If the free content here has been useful, you can support Digital Revenue Studio directly.</p>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+    <p class="footer-tag">Real experiments. Real numbers. No hype.</p>
+    <p>&copy; 2026 Digital Revenue Studio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

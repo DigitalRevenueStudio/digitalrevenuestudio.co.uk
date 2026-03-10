@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Asked for a WOS Wiki. We Built One. | WOS Guide</title>
+  <meta name="description" content="The r/whiteoutsurvival community asked for a single place to find F2P guides. We listened — the WOS Wiki is now live and growing." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--purple:#8A4FD4;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);border:1px solid rgba(138,79,212,0.3);background:rgba(138,79,212,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--purple);padding-left:20px;margin-bottom:28px;}
+    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
+    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--purple);flex-shrink:0;}
+    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--purple) 50%,var(--ice-border) 80%,transparent);}
+    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;}
+    .post-body p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
+    .post-body h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);text-transform:uppercase;line-height:1.05;margin:44px 0 14px;}
+    .post-body h2 em{font-style:normal;color:var(--ice-glow);}
+    .post-body strong{color:var(--white);}
+    .post-body a{color:var(--ice-bright);text-decoration:none;}
+    .post-body a:hover{color:var(--white);}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(138,79,212,0.3),transparent);}
+    .callout{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--purple);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
+    .callout.green{border-left-color:var(--green);}
+    .callout.gold{border-left-color:var(--gold);}
+    .callout p{font-size:0.92rem;margin:0;line-height:1.75;color:var(--text);}
+    .callout strong{color:var(--white);}
+    .reddit-quote{background:rgba(255,69,0,0.06);border:1px solid rgba(255,69,0,0.15);border-left:3px solid #FF4500;border-radius:0 4px 4px 0;padding:18px 22px;margin:24px 0;}
+    .reddit-quote-meta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:#FF6634;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+    .reddit-quote-meta::before{content:'\2B06';font-size:0.8rem;}
+    .reddit-quote p{font-size:0.95rem;color:var(--frost);line-height:1.75;margin:0;font-style:italic;}
+    .wiki-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:24px 0;}
+    .wiki-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:18px 20px;}
+    .wiki-card-icon{font-size:1.4rem;margin-bottom:10px;display:block;}
+    .wiki-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:6px;}
+    .wiki-card-status{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-bottom:8px;}
+    .status-live{background:rgba(46,204,113,0.12);color:var(--green);border:1px solid rgba(46,204,113,0.2);}
+    .status-soon{background:rgba(212,168,42,0.12);color:var(--gold);border:1px solid rgba(212,168,42,0.2);}
+    .wiki-card-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.55;}
+    .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0;}
+    .diff-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .diff-header{padding:11px 18px;border-bottom:1px solid var(--ice-border);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;}
+    .diff-header.them{background:rgba(90,122,148,0.1);color:var(--text-muted);}
+    .diff-header.us{background:rgba(138,79,212,0.08);color:var(--purple);}
+    .diff-body{padding:14px 18px;font-size:0.88rem;color:var(--text);line-height:1.7;}
+    .diff-body li{list-style:none;display:flex;gap:8px;margin-bottom:6px;}
+    .diff-body li::before{content:'\203A';flex-shrink:0;font-weight:700;}
+    .diff-body.them li::before{color:var(--text-muted);}
+    .diff-body.us li::before{color:var(--purple);}
+    .wiki-cta-block{background:linear-gradient(135deg,var(--ice-panel),#091628);border:1px solid var(--ice-border);border-top:2px solid var(--purple);border-radius:4px;padding:28px 32px;margin:40px 0;}
+    .wiki-cta-block h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .wiki-cta-block h3 em{font-style:normal;color:var(--ice-glow);}
+    .wiki-cta-block p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
+    .cta-buttons{display:flex;flex-direction:column;align-items:center;gap:10px;}
+    .cta-btn{display:inline-block;width:100%;max-width:320px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-btn.primary{background:var(--purple);color:var(--white) !important;}
+    .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text) !important;}
+    .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
+    .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
+    .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
+    .sign-off{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:32px 0 8px;}
+    .kofi-wrap{text-align:center;padding:24px 0 8px;border-top:1px solid var(--ice-border);margin-top:32px;}
+    .kofi-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;}
+    .wos-wrapper{background:#050D1A;min-height:100vh;margin:-20px -20px 0;padding:0;position:relative;}
+    body{background:#050D1A !important;}
+    @media(max-width:600px){
+      .site-header{padding:12px 20px;}
+      .post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
+      .diff-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<div class="wos-wrapper">
+
+<header class="site-header">
+  <a href="https://whiteoutsurvivalguide.blogspot.com" class="site-brand">Guide</a>
+  <span class="header-tag">Community &bull; WOS Wiki</span>
+</header>
+
+<div class="post-hero">
+  <div class="post-category">&#128172; Community</div>
+  <h1>You Asked<br />for a <em>Wiki.</em><br />We Built One.</h1>
+  <p class="post-intro">A comment on Reddit stopped me in my tracks. It was blunt, accurate, and turned into the next thing I built. This is the story of how the community shaped what comes next — and what the WOS Wiki actually is.</p>
+  <div class="post-meta">
+    <span class="meta-item"><span class="dot"></span>WOS Guide</span>
+    <span class="meta-item"><span class="dot"></span>Community</span>
+    <span class="meta-item"><span class="dot"></span>WOS Wiki</span>
+    <span class="meta-item"><span class="dot"></span>March 2026</span>
+  </div>
+</div>
+
+<div class="frost-divider"></div>
+
+<div class="post-body">
+
+  <p>A few weeks ago I posted on r/whiteoutsurvival asking what beginner guides would actually be useful. My early mistakes post had done well and I wanted to know where to focus next — hero upgrade priority, Bear Hunt tips, first 7 days, alliance strategy. The usual suspects.</p>
+
+  <p>The thread got 1.7K views and 14 comments. Most were helpful. One stopped me mid-scroll.</p>
+
+  <div class="section-label">The Comment That Started It</div>
+
+  <div class="reddit-quote">
+    <div class="reddit-quote-meta">ChandlerOG &bull; r/whiteoutsurvival</div>
+    <p>"There's hundreds of guides like this online. Just not put into a single wiki."</p>
+  </div>
+
+  <p>Three upvotes. One sentence. Completely right.</p>
+
+  <p>I replied "On it. Challenge accepted." and meant it. That comment crystallised exactly what was missing — not more guides scattered across YouTube videos, Reddit threads and half-finished blog posts, but one place, organised, consistent, written from a F2P player's perspective. So that's what I started building.</p>
+
+  <div class="section-label">What We Built</div>
+  <h2>The WOS Wiki Is <em>Now Live</em></h2>
+
+  <p>The WOS Wiki is a growing F2P strategy reference — one place for everything this guide series covers, laid out so you can find what you need without digging through posts. It sits alongside the blog, not instead of it.</p>
+
+  <div class="wiki-cards">
+    <div class="wiki-card">
+      <span class="wiki-card-icon">&#127873;</span>
+      <div class="wiki-card-title">Gift Code Tracker</div>
+      <span class="wiki-card-status status-live">Live</span>
+      <div class="wiki-card-desc">Active and expired codes updated regularly. Full redemption instructions for all device types.</div>
+    </div>
+    <div class="wiki-card">
+      <span class="wiki-card-icon">&#9876;</span>
+      <div class="wiki-card-title">Event Guides</div>
+      <span class="wiki-card-status status-live">Live</span>
+      <div class="wiki-card-desc">Bear Hunt, Frostfire Mine, SvS prep — F2P strategy for the events that matter most.</div>
+    </div>
+    <div class="wiki-card">
+      <span class="wiki-card-icon">&#127775;</span>
+      <div class="wiki-card-title">Hero Priority</div>
+      <span class="wiki-card-status status-soon">Coming Soon</span>
+      <div class="wiki-card-desc">Which heroes to build first as F2P, upgrade order, and what to avoid wasting shards on.</div>
+    </div>
+    <div class="wiki-card">
+      <span class="wiki-card-icon">&#127963;</span>
+      <div class="wiki-card-title">Research &amp; Building Priority</div>
+      <span class="wiki-card-status status-soon">Coming Soon</span>
+      <div class="wiki-card-desc">Facility upgrade order, research tree priorities, and how to sequence your early progression.</div>
+    </div>
+    <div class="wiki-card">
+      <span class="wiki-card-icon">&#129309;</span>
+      <div class="wiki-card-title">Alliance Guide</div>
+      <span class="wiki-card-status status-soon">Coming Soon</span>
+      <div class="wiki-card-desc">How to find the right alliance, what to contribute, and how alliance events work for F2P.</div>
+    </div>
+    <div class="wiki-card">
+      <span class="wiki-card-icon">&#128197;</span>
+      <div class="wiki-card-title">30-Day F2P Checklist</div>
+      <span class="wiki-card-status status-soon">Coming Soon</span>
+      <div class="wiki-card-desc">Day-by-day priorities for your first month — what to build, research, and focus on in order.</div>
+    </div>
+  </div>
+
+  <div class="section-label">But There's Already a Wiki?</div>
+  <h2>How This Is <em>Different</em></h2>
+
+  <p>Someone in the thread linked whiteoutsurvival.wiki — a community-edited wiki in the Wikipedia mould. It's a solid reference for game mechanics, but it's not what this is.</p>
+
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="diff-header them">Community Wiki</div>
+      <ul class="diff-body them">
+        <li>Crowdsourced, multiple contributors</li>
+        <li>Covers game mechanics broadly</li>
+        <li>No consistent voice or perspective</li>
+        <li>Not written specifically for F2P</li>
+        <li>No progression strategy focus</li>
+      </ul>
+    </div>
+    <div class="diff-card">
+      <div class="diff-header us">WOS F2P Wiki</div>
+      <ul class="diff-body us">
+        <li>Single author, consistent perspective</li>
+        <li>Written specifically for F2P players</li>
+        <li>Opinionated — tells you what to actually do</li>
+        <li>Built around the guide series</li>
+        <li>Updated as I learn and play</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>The community wiki answers "what is this thing?" Our wiki answers "what should I actually do, as a F2P player, right now?" Different question, different resource.</p>
+
+  <div class="section-label">How It Works</div>
+  <h2>The Community Loop — <em>How This Happens</em></h2>
+
+  <p>This is the part I want to be transparent about, because it shapes everything I build here.</p>
+
+  <div class="callout gold">
+    <p><strong>The loop:</strong> I post on Reddit asking what would help. The community tells me. I build it. I come back and credit the people who suggested it. Then I ask again. That's it. Everything on this blog and the wiki exists because someone in the WOS community said it would be useful.</p>
+  </div>
+
+  <p>ChandlerOG's comment about a wiki sat in my head for days. It was the most efficient summary of the gap I was already trying to fill. So rather than just note it and move on, I built the thing. That's how this works.</p>
+
+  <p>There were other great comments in the thread too. HarketSavoy pointed out that most guides only cover up to Furnace Level 30 — a real gap that's now on the build list. Informal_Version7389 offered perspective from 210+ days of F2P play. pauleblubb offered to host guides on their platform. The community showed up.</p>
+
+  <div class="section-label">What's Next</div>
+  <h2>The Wiki Is <em>Growing</em></h2>
+
+  <p>The wiki index is live now. The gift code tracker is live. Event guides are live. The rest of the sections listed above are in the build queue — hero priority, research order, alliance tips, and the 30-day checklist are all coming.</p>
+
+  <div class="callout green">
+    <p><strong>Want to shape what gets built next?</strong> Drop a comment below or find the thread on r/whiteoutsurvival. If there's a gap you keep running into as a F2P player — something the game doesn't explain and you couldn't find a straight answer for — that's exactly the kind of thing that ends up in the wiki.</p>
+  </div>
+
+  <div class="wiki-cta-block">
+    <h3>Visit the <em>WOS Wiki</em></h3>
+    <p>The full F2P strategy reference — gift codes, event guides, and more sections being added regularly.</p>
+    <div class="cta-buttons">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn primary">Go to the WOS Wiki</a>
+      <a href="https://payhip.com/DigitalRevenueStudio" class="cta-btn secondary">Full 9-Chapter Guide &mdash; &pound;9.99</a>
+    </div>
+  </div>
+
+  <p class="sign-off">— Digit</p>
+
+  <div class="kofi-wrap">
+    <p class="kofi-note">All guides and the wiki are free. If they've helped your game, you can support the project here — completely optional, always appreciated.</p>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

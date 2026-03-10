@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WOS Guide Blog — Whiteout Survival Strategy & Guides</title>
+  <meta name="description" content="Whiteout Survival guides, event walkthroughs and F2P strategy from a daily player. Honest, tested, no filler." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EWFNWGYHH9');
+  </script>
+  <script>
+    (function (s, e, n, d, er) {
+      s['Sender'] = er;
+      s[er] = s[er] || function () {
+        (s[er].q = s[er].q || []).push(arguments)
+      }, s[er].l = 1 * new Date();
+      var a = e.createElement(n),
+          m = e.getElementsByTagName(n)[0];
+      a.async = 1;
+      a.src = d;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+    sender('84286577fb8740')
+  </script>
+  <style>
+    :root{--ice:#C8E8FF;--ice-glow:#7BC8F5;--ice-mid:#3A8CC7;--ice-deep:#1B4F72;--arctic:#0A1628;--arctic-2:#0D1F3C;--arctic-3:#102445;--white:#FFFFFF;--muted:rgba(255,255,255,0.5);--border:rgba(255,255,255,0.08);--gold:#F5C842;--green:#2ECC71;--orange:#E8832A;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--arctic);color:var(--white);line-height:1.7;min-height:100vh;}
+    .nav{background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;}
+    .nav-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;}
+    .nav-links{display:flex;gap:24px;list-style:none;}
+    .nav-links a{font-size:0.82rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--white);}
+    .nav-cta{background:var(--ice-mid);color:var(--white)!important;padding:7px 16px;border-radius:3px;font-weight:600!important;}
+    .hero{background:linear-gradient(160deg,var(--arctic) 0%,var(--arctic-2) 50%,var(--arctic-3) 100%);padding:72px 32px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+    .hero-frost{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(123,200,245,0.08) 0%,transparent 60%);pointer-events:none;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(123,200,245,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(123,200,245,0.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;}
+    .hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+    .hero-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-glow);border:1px solid rgba(123,200,245,0.3);padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:20px;}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);text-transform:uppercase;line-height:0.95;margin-bottom:16px;letter-spacing:0.02em;}
+    .hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.7;}
+    .main{max-width:900px;margin:0 auto;padding:48px 32px;}
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
+    .filter-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;padding:6px 16px;border-radius:20px;border:1px solid rgba(123,200,245,0.2);color:var(--ice-glow);text-decoration:none;transition:all 0.2s;}
+    .filter-tag:hover,.filter-tag.active{background:var(--ice-mid);border-color:var(--ice-mid);color:var(--white);}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+    .blog-card{background:var(--arctic-2);border:1px solid var(--border);border-radius:4px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:all 0.2s;position:relative;}
+    .blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--ice-mid);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+    .blog-card:hover{border-color:rgba(123,200,245,0.3);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+    .blog-card:hover::before{transform:scaleX(1);}
+    .blog-card.featured{border-color:rgba(245,200,66,0.2);}
+    .blog-card.featured::before{background:var(--gold);}
+    .blog-card-body{padding:20px 20px 0;flex:1;}
+    .blog-cat{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ice-glow);margin-bottom:8px;}
+    .blog-cat.events{color:var(--gold);}
+    .blog-cat.strategy{color:var(--green);}
+    .blog-cat.tools{color:var(--orange);}
+    .blog-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);line-height:1.2;margin-bottom:8px;}
+    .blog-card p{font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.6;}
+    .blog-card-footer{padding:14px 20px;border-top:1px solid var(--border);margin-top:14px;display:flex;align-items:center;justify-content:space-between;}
+    .blog-date{font-size:0.72rem;color:var(--muted);letter-spacing:0.04em;}
+    .blog-read{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ice-glow);}
+    .section-header{display:flex;align-items:center;gap:14px;margin:48px 0 24px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+    .section-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);}
+    .section-count{font-size:0.72rem;color:var(--muted);margin-left:auto;letter-spacing:0.06em;text-transform:uppercase;}
+    .coming-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:4px;padding:20px;opacity:0.55;}
+    .coming-card .blog-cat{color:var(--muted);}
+    .coming-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:0.04em;color:rgba(255,255,255,0.5);line-height:1.2;margin-bottom:8px;}
+    .coming-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
+    .guide-cta{background:linear-gradient(135deg,var(--arctic-3),var(--arctic-2));border:1px solid rgba(123,200,245,0.2);border-radius:6px;padding:36px;margin:48px 0;text-align:center;}
+    .guide-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;}
+    .guide-cta h3 em{font-style:normal;color:var(--ice-glow);}
+    .guide-cta p{font-size:0.9rem;color:rgba(255,255,255,0.5);max-width:460px;margin:0 auto 22px;line-height:1.7;}
+    .cta-btn{display:inline-block;background:var(--ice-mid);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 30px;border-radius:3px;text-decoration:none;transition:background 0.2s;}
+    .cta-btn:hover{background:var(--ice-deep);}
+    .footer{background:var(--arctic-2);border-top:1px solid var(--border);padding:32px;text-align:center;}
+    .footer p{font-size:0.78rem;color:var(--muted);}
+    .footer a{color:var(--ice-glow);text-decoration:none;}
+    @media(max-width:640px){.nav-links{display:none;}.hero,.main{padding-left:20px;padding-right:20px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="nav-brand">WOS Guide</a>
+    <ul class="nav-links">
+      <li><a href="https://www.digitalrevenuestudio.co.uk">DRS Home</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">Wiki</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+      <li><a href="https://payhip.com/DigitalRevenueStudio" class="nav-cta">Full Guide — £9.99</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-frost"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <span class="hero-tag">WOS Guide Blog</span>
+      <h1>Whiteout Survival<br /><em>Guides & Strategy</em></h1>
+      <p class="hero-sub">F2P strategy, event guides and honest game analysis from a daily player. No recycled tips. No pay-to-win bias.</p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="filter-bar">
+      <a href="#" class="filter-tag active">All Posts</a>
+      <a href="#" class="filter-tag">Beginner</a>
+      <a href="#" class="filter-tag">Events</a>
+      <a href="#" class="filter-tag">Strategy</a>
+      <a href="#" class="filter-tag">Tools</a>
+    </div>
+
+    <!-- LIVE POSTS -->
+    <div class="section-header">
+      <span class="section-title">Live Posts</span>
+      <span class="section-count">7 published</span>
+    </div>
+
+    <div class="blog-grid">
+
+      <!-- BLOG 7 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-7-wiki-announcement.html" class="blog-card featured">
+        <div class="blog-card-body">
+          <div class="blog-cat">Wiki</div>
+          <h3>You Asked for a Wiki. We Built One.</h3>
+          <p>The WOS Guide Wiki is live — every beginner guide, event walkthrough and strategy tip in one place. Here's what's in it and what's coming.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 6 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-6-auto-redemption.html" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-cat tools">Tools</div>
+          <h3>WOS Rewards Auto Redemption — An Honest Review</h3>
+          <p>Stop entering gift codes manually. WOS Rewards claims to redeem all active codes in one click. We tested it — here's whether it actually works.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Mar 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 5 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-5-event-token-redemption-blogger.html" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-cat events">Events</div>
+          <h3>Event Token Redemption — When to Spend vs When to Save</h3>
+          <p>One of the most common mistakes in WOS. Here's how to get the most value from your event tokens and avoid wasting them on the wrong rewards.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Feb 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 4 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-4-bear-hunt.html" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-cat events">Events</div>
+          <h3>Bear Hunt — The Beginner's Complete Guide</h3>
+          <p>Everything you need to know about Bear Hunt — how it works, what to prioritise and how to maximise your rewards as a beginner.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Feb 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 3 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-3-guide-launch.html" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-cat">Beginner</div>
+          <h3>The Whiteout Survival Beginner Guide Is Here</h3>
+          <p>The complete 9-chapter guide to Whiteout Survival is live. Here's what's in it and why we wrote it the way we did.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Jan 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 2 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-2-f2p-vs-spender.html" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-cat strategy">Strategy</div>
+          <h3>F2P vs Spender — What the Difference Actually Means</h3>
+          <p>An honest look at how much spending matters in WOS and how to compete effectively without spending money.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Jan 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+      <!-- BLOG 1 -->
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-blog-1-early-mistakes.html" class="blog-card">
+        <div class="blog-card-body">
+          <div class="blog-cat">Beginner</div>
+          <h3>The Mistakes I Made in My First 30 Days of Whiteout Survival</h3>
+          <p>Hero upgrades, resource spending, alliance timing — the early decisions that set your whole progression back. What to avoid from day one.</p>
+        </div>
+        <div class="blog-card-footer">
+          <span class="blog-date">Jan 2026</span>
+          <span class="blog-read">Read →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- COMING SOON -->
+    <div class="section-header">
+      <span class="section-title">Coming Soon</span>
+      <span class="section-count">2 in progress</span>
+    </div>
+
+    <div class="blog-grid">
+      <div class="coming-card">
+        <div class="blog-cat">Strategy</div>
+        <h3>Frostfire Mine — The Strategy Most Players Miss</h3>
+        <div class="coming-label" style="margin-top:8px;">Coming Soon</div>
+      </div>
+      <div class="coming-card">
+        <div class="blog-cat events">Events</div>
+        <h3>SvS Prep Phase — The 5-Day F2P Playbook</h3>
+        <div class="coming-label" style="margin-top:8px;">Coming Soon</div>
+      </div>
+    </div>
+
+    <!-- GUIDE CTA -->
+    <div class="guide-cta">
+      <h3>Want the Full <em>Strategy Guide?</em></h3>
+      <p>The blog covers the free content. The complete 9-chapter guide goes deeper — hero builds, troop composition, event strategy and long-term F2P progression.</p>
+      <a href="https://payhip.com/DigitalRevenueStudio" class="cta-btn">Get the Full Guide — £9.99</a>
+    </div>
+
+    <!-- KO-FI -->
+    <div style="text-align:center;padding:28px 0;">
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-bottom:12px;">All guides are free. If they've helped your game, you can support the project here.</p>
+      <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+      <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>WOS Guide Blog &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a>. Written by a daily F2P player. Not affiliated with Century Games.</p>
+  </footer>
+
+</body>
+</html>

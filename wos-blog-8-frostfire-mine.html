@@ -1,0 +1,230 @@
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--accent:#1ABC9C;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(26,188,156,0.3);background:rgba(26,188,156,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--accent);padding-left:20px;margin-bottom:28px;}
+    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
+    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--accent) 50%,var(--ice-border) 80%,transparent);}
+    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;}
+    .post-body p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
+    .post-body h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);text-transform:uppercase;line-height:1.05;margin:44px 0 14px;}
+    .post-body h2 em{font-style:normal;color:var(--ice-glow);}
+    .post-body strong{color:var(--white);}
+    .post-body a{color:var(--ice-bright);text-decoration:none;}
+    .post-body a:hover{color:var(--white);}
+    .post-body ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin:14px 0 20px;}
+    .post-body ul li{font-size:0.97rem;color:var(--text);display:flex;gap:10px;line-height:1.7;}
+    .post-body ul li::before{content:'\203A';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(26,188,156,0.3),transparent);}
+    .callout{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
+    .callout.gold{border-left-color:var(--gold);}
+    .callout.red{border-left-color:var(--red);}
+    .callout.green{border-left-color:var(--green);}
+    .callout p{font-size:0.92rem;margin:0;line-height:1.75;color:var(--text);}
+    .callout strong{color:var(--white);}
+    .skill-grid{display:flex;flex-direction:column;gap:8px;margin:20px 0;}
+    .skill-row{display:flex;gap:14px;align-items:flex-start;background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 18px;}
+    .skill-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;line-height:1;min-width:28px;flex-shrink:0;}
+    .skill-num.right{color:var(--ice-bright);}
+    .skill-num.left{color:var(--accent);}
+    .skill-info{}
+    .skill-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;color:var(--white);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+    .skill-branch{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;padding:2px 8px;border-radius:2px;}
+    .branch-right{background:rgba(77,168,218,0.12);color:var(--ice-bright);border:1px solid rgba(77,168,218,0.2);}
+    .branch-left{background:rgba(26,188,156,0.12);color:var(--accent);border:1px solid rgba(26,188,156,0.2);}
+    .skill-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6;}
+    .phase-block{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:18px 22px;margin:12px 0;}
+    .phase-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+    .phase-block p{font-size:0.92rem;color:var(--text);margin:0;line-height:1.7;}
+    .phase-block strong{color:var(--white);}
+    .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
+    .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
+    .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
+    .cta-buttons{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:4px;}
+    .cta-btn{display:inline-block;width:100%;max-width:320px;background:var(--ice-bright);color:var(--white) !important;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text) !important;}
+    .appendix-note{font-size:0.78rem;color:var(--text-muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--ice-border);line-height:1.6;}
+    .sign-off{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:32px 0 8px;}
+    .kofi-wrap{text-align:center;padding:24px 0 8px;border-top:1px solid var(--ice-border);margin-top:32px;}
+    .kofi-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;}
+    @media(max-width:600px){
+      .site-header{padding:12px 20px;}.post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
+    }
+  
+  .wos-wrapper {
+    background: #050D1A;
+    min-height: 100vh;
+    margin: -20px -20px 0;
+    padding: 0;
+    position: relative;
+  }
+  body { background: #050D1A !important; }
+</style>
+
+<div class="wos-wrapper">
+<header class="site-header">
+  <a href="https://whiteoutsurvivalguide.blogspot.com" class="site-brand">Guide</a>
+  <span class="header-tag">Events &bull; Frostfire Mine</span>
+</header>
+
+<div class="post-hero">
+  <div class="post-category">&#9889; Events Guide</div>
+  <h1>Frostfire Mine<br /><em>The Strategy</em><br />Most Players Miss</h1>
+  <p class="post-intro">Most players head straight for the veins and the Smelter. There is a better approach — one that turns patrol guards into your primary orichalcum engine without ever needing to contest the most crowded part of the map.</p>
+  <div class="post-meta">
+    <span class="meta-item"><span class="dot"></span>WOS Guide</span>
+    <span class="meta-item"><span class="dot"></span>Frostfire Mine</span>
+    <span class="meta-item"><span class="dot"></span>F2P Strategy</span>
+    <span class="meta-item"><span class="dot"></span>March 2026</span>
+  </div>
+</div>
+
+<div class="frost-divider"></div>
+
+<div class="post-body">
+
+  <p>Most players approach Frostfire Mine the same way — rush to the highest-level veins, fight over the Smelter, gather until time runs out. It works, but it is not the highest-scoring approach available to you. There is a better strategy, and it does not require contesting the Smelter at all.</p>
+
+  <div class="section-label">The Core Idea</div>
+  <h2>Patrol Guards Are Your <em>Orichalcum Engine</em></h2>
+
+  <p>The stated goal is to collect the highest amount of orichalcum. The two obvious methods are gathering veins and occupying the Smelter. But there is a third lever most players ignore entirely: <strong>patrol guard kills</strong>.</p>
+
+  <p>Defeating guards earns HP, which fills a progress bar at the bottom left of your screen. That bar unlocks skills — and the right skills transform every subsequent guard kill and vein occupation into a direct orichalcum payout. The entire strategy is built around unlocking those skills as fast as possible.</p>
+
+  <div class="section-label">Where to Play</div>
+  <h2>Stay in the <em>Outskirts</em></h2>
+
+  <p>Resist the instinct to head for the centre. The outskirts — lower player density, steady patrol guard supply — are where this strategy operates. More guards available, less competition for veins, lower risk of disruption.</p>
+
+  <div class="callout gold">
+    <p><strong>Use the free Advanced Teleport.</strong> Frostfire Mine provides them inside the battlefield. If your area runs dry of patrol guards, teleport to a fresh outskirt zone immediately. Time spent waiting is orichalcum lost.</p>
+  </div>
+
+  <div class="section-label">Priority Rule</div>
+  <h2>Kill Guards First — <em>No Veins Yet</em></h2>
+
+  <p>When the event starts, send <strong>all your marches to patrol guards</strong>. Do not gather any veins. This feels counterintuitive but it is critical — early vein gathering yields almost nothing compared to what your skills will unlock. Focus entirely on guard kills until Skill 3 is active.</p>
+
+  <div class="section-label">Skill Order</div>
+  <h2>The Correct <em>Skill Sequence</em></h2>
+
+  <p>This is where most players go wrong. Follow this exact order — choosing incorrectly can cost you your ranking.</p>
+
+  <div class="skill-grid">
+    <div class="skill-row">
+      <div class="skill-num right">1</div>
+      <div class="skill-info">
+        <div class="skill-name">1,500 Orichalcum per Guard Kill <span class="skill-branch branch-right">Right Branch</span></div>
+        <div class="skill-desc">Every patrol guard you defeat now pays out directly. The most important skill in the event — unlock this first, every time.</div>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-num right">2</div>
+      <div class="skill-info">
+        <div class="skill-name">March Speed +25% <span class="skill-branch branch-right">Right Branch</span></div>
+        <div class="skill-desc">Faster marches = more guards killed per hour. Compounds Skill 1 immediately. Unlock second.</div>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-num left">3</div>
+      <div class="skill-info">
+        <div class="skill-name">5,000 Orichalcum per Vein Occupation <span class="skill-branch branch-left">Left Branch</span></div>
+        <div class="skill-desc">Triggers once per minute when you occupy a vein. This activates the vein cycling loop — occupy, collect, recall, repeat. Unlock third.</div>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-num left">4</div>
+      <div class="skill-info">
+        <div class="skill-name">Gathering Speed +15% <span class="skill-branch branch-left">Left Branch</span></div>
+        <div class="skill-desc">Boosts orichalcum yield from any vein your marches hold. Unlock fourth.</div>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-num left">5</div>
+      <div class="skill-info">
+        <div class="skill-name">Gathering Speed +66% <span class="skill-branch branch-left">Left Branch — Take This One</span></div>
+        <div class="skill-desc">Always take the left branch Skill 5. The right branch version requires holding veins for 5 continuous minutes — it cancels your Skill 3 vein loop entirely.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout red">
+    <p><strong>Never take Right Branch Skill 5.</strong> It conflicts with your Skill 3 vein cycle and reduces your total orichalcum. Left branch only.</p>
+  </div>
+
+  <div class="section-label">Running the Event</div>
+  <h2>The Event <em>Phase by Phase</em></h2>
+
+  <div class="phase-block">
+    <div class="phase-tag">Phase 1 — Start to Skill 3</div>
+    <p><strong>All marches on patrol guards. No veins.</strong> Watch the HP bar at the bottom left. Unlock Skills 1, 2, then 3 in order.</p>
+  </div>
+  <div class="phase-block">
+    <div class="phase-tag">Phase 2 — Skill 3 Active</div>
+    <p>Add the vein loop: <strong>one march occupies a vein every 60 seconds</strong>, collects the 5,000 orichalcum trigger, recalls, repeats. No visual notification — track your 60-second cycle using the event timer at the top of the screen. All other marches stay on guards. Unlock Skill 4.</p>
+  </div>
+  <div class="phase-block">
+    <div class="phase-tag">Phase 3 — Skill 5 Active</div>
+    <p>Same rhythm. The +66% gathering boost now compounds your vein yield. Teleport to fresh outskirt zones when guards thin out.</p>
+  </div>
+  <div class="phase-block">
+    <div class="phase-tag">Vein Outburst Windows</div>
+    <p><strong>Stop guards immediately. All marches to vein outburst nodes.</strong> Hold for the full 5 minutes — do not recall early. Then return to patrol guards.</p>
+  </div>
+  <div class="phase-block">
+    <div class="phase-tag">Final Minutes</div>
+    <p><strong>Back to guard kills until the last second.</strong> Every kill is 1,500 orichalcum. Do not stop early.</p>
+  </div>
+
+  <div class="section-label">Quick Tips</div>
+  <h2>Things to <em>Remember</em></h2>
+
+  <ul>
+    <li>Teleport freely between outskirt zones — do not wait for guards to respawn</li>
+    <li>Reserve exactly one march for the vein loop at all times — no more</li>
+    <li>Watch nearby occupied veins — claim them the moment they are vacated</li>
+    <li>During outbursts: activate Skill 5 trigger before sending your troops, not after</li>
+    <li>Kill guards until the absolute final second — the clock is still paying out</li>
+  </ul>
+
+  <div class="callout">
+    <p>The full Frostfire Mine appendix in the paid guide goes deeper — advanced outburst timing, patrol guard respawn patterns, and tips that compound your yield significantly beyond what is covered here.</p>
+  </div>
+
+  <div class="post-cta">
+    <h3>Want the <em>Full Appendix?</em></h3>
+    <p>The complete Frostfire Mine strategy — plus SvS, Bear Hunt, hero builds, research priority and a 30-day F2P checklist — is in the 9-chapter guide.</p>
+    <div class="cta-buttons">
+      <a href="https://payhip.com/DigitalRevenueStudio" class="cta-btn">Get the Full Guide &mdash; &pound;9.99</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-free-guide-landing.html" class="cta-btn secondary">Free Starter Guide</a>
+    </div>
+    <p class="appendix-note">The starter guide covers the core F2P foundations. Comprehensive appendices &mdash; covering events like this one in full detail &mdash; are coming soon as standalone companions to complete the series. Watch out for the blog post when they go live.</p>
+  </div>
+
+  <p class="sign-off">— Digit</p>
+
+  <div class="kofi-wrap">
+    <p class="kofi-note">All guides are free. If this one helped your game, you can support the project here — completely optional, always appreciated.</p>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+  </div>
+
+</div>
+</div>

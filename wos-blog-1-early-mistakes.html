@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mistakes I Made in My First 30 Days of Whiteout Survival | WOS Guide</title>
+  <meta name="description" content="7 early game mistakes that cost me weeks in Whiteout Survival — and how to avoid every one of them." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ice-dark:    #050D1A;
+      --ice-mid:     #091628;
+      --ice-panel:   #0D1F38;
+      --ice-border:  #1A3A5C;
+      --ice-bright:  #4DA8DA;
+      --ice-glow:    #7DD4F8;
+      --frost:       #C8E8F8;
+      --white:       #FFFFFF;
+      --orange:      #E8832A;
+      --orange-hot:  #F5A23C;
+      --red:         #C0392B;
+      --text:        #B8D4E8;
+      --text-muted:  #5A7A94;
+      --gold:        #D4A82A;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--ice-dark);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(77,168,218,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 30% at 20% 100%, rgba(77,168,218,0.04) 0%, transparent 60%),
+        repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(77,168,218,0.012) 80px, rgba(77,168,218,0.012) 81px),
+        repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(77,168,218,0.012) 80px, rgba(77,168,218,0.012) 81px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .site-header {
+      background: rgba(9,22,40,0.95);
+      border-bottom: 1px solid var(--ice-border);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    .site-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ice-glow);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .site-brand::before { content: '*'; font-size: 1rem; color: var(--ice-bright); }
+    .header-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+    .post-hero {
+      position: relative;
+      z-index: 1;
+      padding: 72px 40px 48px;
+      max-width: 860px;
+      margin: 0 auto;
+      animation: fadeUp 0.7s ease both;
+    }
+    .post-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid rgba(232,131,42,0.3);
+      background: rgba(232,131,42,0.08);
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .post-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      color: var(--white);
+      line-height: 1.0;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .post-hero h1 em { font-style: normal; color: var(--ice-glow); }
+    .post-intro {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 680px;
+      border-left: 3px solid var(--ice-bright);
+      padding-left: 20px;
+      margin-bottom: 28px;
+    }
+    .post-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .meta-item { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+    .meta-item .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ice-bright); flex-shrink: 0; }
+    .frost-divider { max-width: 860px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+    .frost-divider::after { content: ''; display: block; height: 1px; background: linear-gradient(90deg, transparent, var(--ice-border) 20%, var(--ice-bright) 50%, var(--ice-border) 80%, transparent); }
+    .post-body { max-width: 860px; margin: 0 auto; padding: 40px 40px 80px; position: relative; z-index: 1; animation: fadeUp 0.7s 0.15s ease both; }
+    .post-body > p { font-size: 1rem; color: var(--text); line-height: 1.85; margin-bottom: 20px; }
+    .reddit-bar {
+      background: rgba(232,131,42,0.06);
+      border: 1px solid rgba(232,131,42,0.2);
+      border-radius: 4px;
+      padding: 16px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .reddit-bar-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); }
+    .reddit-stat { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; color: var(--white); }
+    .reddit-stat span { font-size: 0.72rem; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ice-bright);
+      margin: 48px 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--ice-border); }
+    .mistake {
+      background: var(--ice-panel);
+      border: 1px solid var(--ice-border);
+      border-radius: 4px;
+      padding: 32px 36px;
+      margin: 28px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .mistake::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--red), var(--orange)); }
+    .mistake-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .mistake-num::after { content: ''; flex: 1; height: 1px; background: rgba(192,57,43,0.2); max-width: 80px; }
+    .mistake h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.35rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.2; margin-bottom: 14px; }
+    .mistake p { font-size: 0.96rem; color: var(--text); line-height: 1.8; margin-bottom: 12px; }
+    .mistake p:last-child { margin-bottom: 0; }
+    .fix-box { background: rgba(77,168,218,0.06); border: 1px solid rgba(77,168,218,0.2); border-radius: 3px; padding: 16px 20px; margin-top: 16px; }
+    .fix-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ice-bright); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .fix-label::before { content: '&check;'; color: var(--ice-glow); }
+    .fix-box p { font-size: 0.92rem; color: var(--frost); margin: 0; line-height: 1.75; }
+    .callout {
+      background: rgba(212,168,42,0.06);
+      border: 1px solid rgba(212,168,42,0.25);
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 36px 0;
+      position: relative;
+    }
+    .callout::before { content: '!'; position: absolute; top: -14px; left: 28px; background: var(--ice-dark); padding: 0 8px; font-size: 1.1rem; }
+    .callout p { font-size: 0.97rem; color: var(--frost); line-height: 1.8; margin: 0; }
+    .callout strong { color: var(--gold); }
+    .post-cta {
+      background: var(--ice-panel);
+      border: 1px solid var(--ice-border);
+      border-top: 3px solid var(--ice-bright);
+      border-radius: 4px;
+      padding: 32px 36px;
+      margin-top: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cta-text h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+    .cta-text p { font-size: 0.86rem; color: var(--text-muted); margin: 0; }
+    .btn-ice { background: var(--ice-bright); color: var(--ice-dark); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: all 0.2s; white-space: nowrap; display: inline-block; }
+    .btn-ice:hover { background: var(--ice-glow); transform: translateY(-2px); }
+    .site-footer { background: var(--ice-mid); border-top: 1px solid var(--ice-border); padding: 32px 40px; text-align: center; position: relative; z-index: 1; }
+    .site-footer p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
+    .site-footer a { color: var(--ice-bright); text-decoration: none; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @media(max-width:640px) {
+      .post-hero, .post-body, .frost-divider { padding-left: 20px; padding-right: 20px; }
+      .site-header { padding: 14px 20px; }
+      .mistake { padding: 22px 18px; }
+      .post-cta { padding: 24px 20px; }
+      .header-tag { display: none; }
+    }
+  
+    /* Blogger override — force dark theme */
+    .wos-wrapper {
+      background: #050D1A;
+      min-height: 100vh;
+      margin: -20px -20px 0;
+      padding: 0;
+      position: relative;
+    }
+    body { background: #050D1A !important; }
+    </style>
+</head>
+<body><div class="wos-wrapper">
+  <header class="site-header">
+    <a href="https://whiteoutsurvivalguide.blogspot.com" class="site-brand">Whiteout Survival Guide</a>
+    <span class="header-tag">Beginner Guides · Strategy · F2P Tips</span>
+  </header>
+
+  <article>
+    <div class="post-hero">
+      <div class="post-category">! Beginner Guide</div>
+      <h1>The Mistakes I Made in My<br /><em>First 30 Days</em> of Whiteout Survival</h1>
+      <p class="post-intro">I'm not a veteran or a top spender. I'm someone who got into this game, made a lot of avoidable mistakes and spent a significant amount of time figuring out what I did wrong. These are those mistakes — in full.</p>
+      <div class="post-meta">
+        <span class="meta-item"><span class="dot"></span>WOS Guide</span>
+        <span class="meta-item"><span class="dot"></span>Beginner Series</span>
+        <span class="meta-item"><span class="dot"></span>7 Mistakes Covered</span>
+      </div>
+    </div>
+
+    <div class="frost-divider"></div>
+
+    <div class="post-body">
+
+      <div class="reddit-bar">
+        <span class="reddit-bar-label">> From the community</span>
+        <span class="reddit-stat">17k <span>views</span></span>
+        <span class="reddit-stat">58 <span>upvotes</span></span>
+        <span class="reddit-stat">63 <span>comments</span></span>
+        <span class="reddit-stat">2 <span>awards</span></span>
+      </div>
+
+      <p>That Reddit post I wrote about early mistakes got more engagement than I expected — the comments made it clear a lot of people had been through the same things. This is the longer version. More detail, more context, and hopefully more useful to anyone still in the early stages.</p>
+      <p>Every single mistake below is something I personally did, usually more than once, before figuring out a better approach.</p>
+
+      <div class="section-label">The 7 Mistakes</div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 01</div>
+        <h3>Upgrading troops before your furnace was ready</h3>
+        <p>This one cost me weeks. I was obsessed with getting my troop count up and kept training and upgrading as fast as I could — without understanding that troop strength is gated by your furnace level, not just your troop tier.</p>
+        <p>The result: a huge army of mid-tier troops that consistently lost fights they should not have lost, because I had not invested in the furnace upgrades that unlock the actual combat bonuses. Training troops without the furnace to support them is one of the most common early traps in the game.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Treat your furnace level as the foundation everything else builds on. Before committing resources to a major troop upgrade push, check whether your furnace level unlocks the research and gear that makes those troops worth having. Troops without proper buffs are significantly weaker than the tier number suggests.</p>
+        </div>
+      </div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 02</div>
+        <h3>Spreading hero XP across too many heroes</h3>
+        <p>The hero collection side of the game looks like it rewards variety. I spread my XP, gear and development resources across five or six heroes trying to level them all evenly. It was a mistake.</p>
+        <p>In Whiteout Survival, a handful of well-developed heroes significantly outperform a roster of half-developed ones. The power gap is not linear — it is dramatic.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Pick your core combat and development heroes early and go deep. The standard recommendation for beginners: prioritise Gina and Jasser for development, with a strong combat hero to match your playstyle. Depth beats breadth at every stage of this game.</p>
+        </div>
+      </div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 03</div>
+        <h3>Ignoring research until it was embarrassingly late</h3>
+        <p>I treated research as a background activity — something ticking along while I focused on what felt like the real game. Buildings, troops, events. Research is not background. It is one of the primary drivers of long-term power, and falling behind on it early is genuinely hard to recover from.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Always have something in the research queue. Always. Prioritise development and combat research trees before economic ones — the combat buffs pay off faster in the early game, and the compounding value of early research cannot be overstated.</p>
+        </div>
+      </div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 04</div>
+        <h3>Using speed-ups at the wrong time</h3>
+        <p>Speed-ups feel like free time so I used them freely — whenever something felt slow, whenever I was impatient. This is one of the most expensive habits a new player can develop. Speed-ups are among the scarcest F2P resources in the game. Burning them casually early on means you will not have them when it actually matters — state wars, rallies, competitive event pushes.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Set a personal rule and stick to it. A solid starting rule: only use speed-ups on builds or research over 8 hours, and only when there is a specific competitive reason to complete something faster. Bank aggressively in the early game — you will thank yourself later.</p>
+        </div>
+      </div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 05</div>
+        <h3>Not joining the right alliance early enough</h3>
+        <p>I played solo for too long. Joined a low-activity alliance just to get the buffs, treated it as a checkbox. The alliance you join shapes almost every aspect of your early game — rally participation, help requests, alliance tech, territory, protection during events. A good active alliance accelerates everything. A dead one is barely better than solo.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Be willing to apply to alliances slightly above your level. Ask about rally schedules, state war activity and help culture. Those signals matter more than ranking. Most decent alliances want active communicators — not just high-power players.</p>
+        </div>
+      </div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 06</div>
+        <h3>Treating Bear Hunt as optional</h3>
+        <p>I participated when I remembered and skipped it when I was busy. Bear Hunt is one of the best early-game resource events in Whiteout Survival. The rewards scale with how well your alliance coordinates — and consistent participation signals your reliability to the people around you. Missing it repeatedly is leaving meaningful resources on the table.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Show up for Bear Hunt. Set a reminder if you need to. Coordinate with your alliance on boss kill timing. The time investment is low relative to the reward, and the trust signal it builds is worth as much as the resources themselves.</p>
+        </div>
+      </div>
+
+      <div class="mistake">
+        <div class="mistake-num">Mistake 07</div>
+        <h3>Building for power score instead of actual strength</h3>
+        <p>Power score is visible and feels like progress, so I optimised for it — built whatever moved the number fastest. Power score and actual combat strength are not the same thing. A city with inflated power from low-efficiency builds will consistently underperform a lower-power city built with strategic intent. I learned this the hard way in my first state confrontations.</p>
+        <div class="fix-box">
+          <div class="fix-label">The Fix</div>
+          <p>Build for actual strength — furnace level, hero depth, research completion, gear quality — and let the power score follow. Players who understand the game will not be fooled by an inflated number. Focus on the things that actually win fights.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>The one thing that actually helped most:</strong> Finding two or three players in my alliance who were 30–60 days ahead of me and asking specific questions. Not "what should I do" — but targeted questions like "I'm about to upgrade X, should I do Y first?" Players slightly ahead of you have just solved the exact problems you are facing. That knowledge is more directly useful than any guide written by someone 500 days in who barely remembers the early game. That is the gap I am trying to fill here.</p>
+      </div>
+
+      <div class="post-cta">
+        <div class="cta-text">
+          <h3>Something I missed?</h3>
+          <p>Drop your early mistakes in the comments — I'm building guides based on what people actually struggle with.</p>
+        </div>
+        <a href="https://whiteoutsurvivalguide.blogspot.com" class="btn-ice">More Guides &rarr;</a>
+      </div>
+
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p><a href="https://whiteoutsurvivalguide.blogspot.com">Whiteout Survival Guide</a> — Real strategies from a real player.</p>
+    <p>Not affiliated with Whiteout Survival or Century Games.</p>
+  </footer>
+</div></body>
+</html>

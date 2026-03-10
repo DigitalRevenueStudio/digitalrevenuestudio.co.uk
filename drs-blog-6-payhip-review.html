@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payhip Review 2026 — An Honest Look From Someone Actually Using It | Digital Revenue Studio</title>
+  <meta name="description" content="We use Payhip to sell digital products as part of Test 02. An honest review of the platform — costs, pros, cons and whether it is worth it for beginners." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;--payhip:#6F4EF2;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+    .hero{background:var(--dark);padding:56px 24px 48px;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(46,139,74,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(46,139,74,0.06) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
+    .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(245,166,35,0.12) 0%,transparent 65%);pointer-events:none;}
+    .hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1;}
+    .blogger-logo{height:28px;width:auto;margin-bottom:16px;display:block;opacity:0.85;}
+    .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+    .exp-tag{background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.3);color:#E74C3C;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:3px;}
+    .test-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.25);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:3px;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,2.8rem);color:var(--white);line-height:1.1;margin-bottom:18px;}
+    .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.75;max-width:620px;margin-bottom:24px;}
+    .hero-meta{display:flex;gap:20px;flex-wrap:wrap;}
+    .hero-meta span{font-size:0.78rem;color:rgba(255,255,255,0.4);}
+    .hero-meta strong{color:rgba(255,255,255,0.7);}
+    .payhip-bar{background:var(--payhip);height:4px;}
+    .layout{max-width:1040px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:start;}
+    .article{min-width:0;}
+    .article p{margin-bottom:20px;font-size:0.97rem;color:var(--text-body);line-height:1.85;}
+    .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.35rem;color:var(--text-dark);margin:40px 0 14px;padding-top:8px;border-top:2px solid var(--border);}
+    .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
+    .article h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text-dark);margin:28px 0 10px;}
+    .article strong{color:var(--text-dark);font-weight:600;}
+    .pullquote{border-left:3px solid var(--gold);background:var(--gold-pale);padding:20px 24px;margin:28px 0;border-radius:0 4px 4px 0;}
+    .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:var(--text-dark);margin:0;line-height:1.7;}
+    .highlight{background:var(--warm);border:1px solid var(--border);border-left:3px solid var(--gold-dark);padding:18px 22px;border-radius:0 4px 4px 0;margin:24px 0;}
+    .highlight p{margin:0;font-size:0.9rem;color:var(--text-body);}
+    .cost-table{border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:24px 0;}
+    .cost-row{display:grid;grid-template-columns:1fr 1fr 2fr;border-bottom:1px solid var(--border);}
+    .cost-row:last-child{border-bottom:none;}
+    .cost-row span{padding:12px 16px;font-size:0.88rem;}
+    .cost-row.header{background:var(--warm);}
+    .cost-row.header span{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);}
+    .plan{font-weight:600;color:var(--text-dark);}
+    .fee{font-weight:700;}
+    .tag-free{color:var(--bright);}
+    .tag-paid{color:var(--gold-dark);}
+    .pro-con{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:24px 0;}
+    .pro-col-header,.con-col-header{padding:12px 18px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid var(--border);}
+    .pro-col-header{background:rgba(46,139,74,0.06);color:var(--bright);}
+    .con-col-header{background:rgba(231,76,60,0.06);color:#E74C3C;border-left:1px solid var(--border);}
+    .pro-item,.con-item{display:flex;align-items:flex-start;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--text-body);}
+    .pro-item:last-child,.con-item:last-child{border-bottom:none;}
+    .con-item{border-left:1px solid var(--border);}
+    .pro-item::before{content:'✓';color:var(--bright);flex-shrink:0;font-weight:700;}
+    .con-item::before{content:'✗';color:#E74C3C;flex-shrink:0;font-weight:700;}
+    .verdict-box{background:var(--dark);border-radius:8px;padding:32px;margin:32px 0;}
+    .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
+    .cta-box{background:var(--dark-2);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
+    .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:8px;}
+    .cta-box h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+    .cta-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+    .cta-btn{display:inline-block;background:var(--payhip);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:12px 28px;border-radius:4px;text-decoration:none;}
+    .cta-note{display:block;font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:10px;}
+    .exp-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:28px 0;text-decoration:none;}
+    .exp-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:3px;}
+    .exp-title{font-size:0.85rem;color:var(--text-dark);font-weight:500;}
+    .sidebar{position:sticky;top:24px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
+    .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:4px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;}
+    .sidebar-btn:last-child{margin-bottom:0;}
+    .amber-btn{background:var(--gold-dark);color:var(--white);}
+    .dark-btn{background:var(--dark);color:var(--white);}
+    .quick-facts{list-style:none;}
+    .qf-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+    .qf-item:last-child{border-bottom:none;}
+    .qf-label{color:var(--text-muted);}
+    .qf-val{font-family:'Syne',sans-serif;font-weight:700;color:var(--text-dark);}
+    .qf-val.green{color:var(--bright);}
+    .disclosure{background:var(--warm);border-top:1px solid var(--border);padding:20px 24px;}
+    .disclosure p{font-size:0.75rem;color:var(--text-muted);max-width:780px;margin:0 auto;text-align:center;}
+    @media(max-width:760px){.layout{grid-template-columns:1fr;}.sidebar{position:static;}.pro-con{grid-template-columns:1fr;}.con-col-header,.con-item{border-left:none;border-top:1px solid var(--border);}.cost-row{grid-template-columns:1fr 1fr;}.cost-row span:last-child{display:none;}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <img src="https://digitalrevenuestudio.co.uk/logo-white.png" alt="Digital Revenue Studio" class="blogger-logo" />
+      <div class="hero-eyebrow">
+        <span class="exp-tag">Platform Review</span>
+        <span class="test-tag">Test 02 — Digital Products</span>
+      </div>
+      <h1>Payhip Review 2026 — An <em>Honest Look</em><br />From Someone Actually Using It</h1>
+      <p class="hero-sub">We use Payhip to sell our own digital products as part of Test 02. This is not a sponsored post. It is what we found after setting it up, listing products and using it day to day.</p>
+      <div class="hero-meta">
+        <span><strong>7 min read</strong></span>
+        <span><strong>Digital Revenue Studio</strong></span>
+        <span><strong>March 2026</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="payhip-bar"></div>
+
+  <div class="layout">
+    <article class="article">
+
+      <p>One of the questions we get most at Digital Revenue Studio is which platform to use for selling digital products. There are a lot of options — Gumroad, Etsy, Shopify, your own site — and the honest answer is that the right one depends entirely on where you are starting from.</p>
+
+      <p>We chose Payhip for Test 02 because it has a free tier, it is simple to set up and it does not require any technical knowledge. We have now been using it long enough to give a genuine account of what it is like — not from a promotional angle but from the perspective of someone building a small digital product business from scratch.</p>
+
+      <a href="https://digitalrevenuestudio.co.uk/drs-experiments.html" class="exp-link">
+        <div>
+          <div class="exp-label">Part of our experiment series</div>
+          <div class="exp-title">Test 02 — Can we generate income from digital products? Read the full experiment &rarr;</div>
+        </div>
+      </a>
+
+      <h2>What is <em>Payhip?</em></h2>
+
+      <p>Payhip is an e-commerce platform built specifically for digital products — ebooks, guides, templates, courses, memberships and software. You create a storefront, upload your files and Payhip handles the checkout, payment processing and file delivery. The customer pays, Payhip processes it, and the file is sent to them automatically. You do not need to touch anything.</p>
+
+      <p>It is designed to be the simplest possible route from "I have something to sell" to "someone can buy it." And for the most part, it delivers on that.</p>
+
+      <h2>How Much Does <em>It Cost?</em></h2>
+
+      <div class="cost-table">
+        <div class="cost-row header"><span>Plan</span><span>Monthly Cost</span><span>Transaction Fee</span></div>
+        <div class="cost-row"><span class="plan">Free</span><span class="fee tag-free">&pound;0</span><span>5% per sale</span></div>
+        <div class="cost-row"><span class="plan">Plus</span><span class="fee tag-paid">&pound;29/mo</span><span>2% per sale</span></div>
+        <div class="cost-row"><span class="plan">Pro</span><span class="fee tag-paid">&pound;79/mo</span><span>0% — no transaction fee</span></div>
+      </div>
+
+      <p>We are on the free plan. For a brand new digital product business with no proven sales volume yet, paying &pound;29 or &pound;79 a month before you know the concept works makes no sense. The 5% fee on the free plan is completely reasonable — it only costs you anything when you are actually making money.</p>
+
+      <div class="highlight">
+        <p><strong>Our take on the pricing:</strong> The free plan is genuinely good. The fee structure means Payhip only earns when you earn. We would consider upgrading to Plus only once monthly revenue justified the saving — at 5%, the crossover point is around &pound;580/month in sales.</p>
+      </div>
+
+      <h2>What We Actually <em>Like</em> About It</h2>
+
+      <div class="pro-con">
+        <div class="pro-col">
+          <div class="pro-col-header">What Works Well</div>
+          <div class="pro-item">Zero technical setup &mdash; live in under an hour</div>
+          <div class="pro-item">Instant automated file delivery to buyers</div>
+          <div class="pro-item">Clean, professional checkout experience</div>
+          <div class="pro-item">Discount codes and pay-what-you-want pricing built in</div>
+          <div class="pro-item">Affiliate programme &mdash; refer other sellers and earn commission</div>
+          <div class="pro-item">Basic email list capture at checkout</div>
+          <div class="pro-item">No monthly fee until you are ready to scale</div>
+        </div>
+        <div class="con-col">
+          <div class="con-col-header">What Could Be Better</div>
+          <div class="con-item">Storefront design is limited &mdash; hard to make it feel truly branded</div>
+          <div class="con-item">No built-in traffic or marketplace discovery</div>
+          <div class="con-item">Analytics are basic on the free plan</div>
+          <div class="con-item">Email marketing features are limited compared to a dedicated tool</div>
+        </div>
+      </div>
+
+      <h2>The Honest Reality &mdash; <em>Payhip Does Not Sell For You</em></h2>
+
+      <p>This is the thing most Payhip reviews gloss over. The platform is excellent at processing a transaction once someone has decided to buy. What it cannot do is bring that person to you in the first place.</p>
+
+      <p>This is the central challenge of Test 02 for us. We have created three digital products &mdash; a ChatGPT prompt workbook, an AI tools directory and a Whiteout Survival strategy guide &mdash; listed them on Payhip and priced them reasonably. The products are live. The checkout works. But without traffic, nothing sells.</p>
+
+      <p>That is not a criticism of Payhip specifically &mdash; it is true of every digital product platform that is not a marketplace like Etsy or Amazon. You are responsible for driving the audience. Payhip handles everything once they arrive.</p>
+
+      <div class="pullquote">
+        <p>&ldquo;The platform works. The work is building the audience that uses it. That is the honest reality of selling digital products in 2026.&rdquo;</p>
+      </div>
+
+      <p>For us, the traffic strategy is content &mdash; this blog, the DRS experiments page, the WOS Blogger, Reddit community posts. We are building the audience that will eventually drive consistent sales. Payhip is the right tool for the job. Getting people to the checkout is the challenge, not the tool itself.</p>
+
+      <h2>The <em>Affiliate Programme</em> &mdash; A Useful Bonus</h2>
+
+      <p>Payhip also runs an affiliate programme for referring new sellers to the platform. We have recently been accepted &mdash; if you sign up to Payhip through our link and start selling, we earn a small commission at no cost to you.</p>
+
+      <p>We want to be straightforward about this: the affiliate link is a bonus, not the reason we wrote this post. We were using Payhip before we applied for the programme and our view of the platform would be the same either way. If you are thinking about selling digital products and Payhip sounds like a fit, using our link is a simple way to support what we are building here.</p>
+
+      <div class="verdict-box">
+        <div class="verdict-label">Our Verdict</div>
+        <p>Payhip is the right starting point if you want to sell digital products without technical overhead and without committing to a monthly fee before you have proven demand. The free plan is genuinely usable, the checkout is clean and the setup is fast. The limitation is the same as any non-marketplace platform &mdash; you need to bring your own traffic. If you have an audience or a content strategy to build one, Payhip is a solid foundation to sell from.</p>
+      </div>
+
+      <div class="cta-box">
+        <h3>Try <em>Payhip</em> Free</h3>
+        <p>Start selling digital products with no monthly fee. Set up your storefront in under an hour &mdash; no technical knowledge needed.</p>
+        <a href="https://payhip.com?fp_ref=rick17" target="_blank" rel="nofollow" class="cta-btn">Start for Free on Payhip</a>
+        <span class="cta-note">Affiliate link &mdash; we earn a small commission if you sign up. No cost to you.</span>
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h4>Quick Facts</h4>
+        <ul class="quick-facts">
+          <li class="qf-item"><span class="qf-label">Free plan</span><span class="qf-val green">Yes</span></li>
+          <li class="qf-item"><span class="qf-label">Free fee</span><span class="qf-val">5% per sale</span></li>
+          <li class="qf-item"><span class="qf-label">Setup time</span><span class="qf-val">&lt; 1 hour</span></li>
+          <li class="qf-item"><span class="qf-label">Marketplace?</span><span class="qf-val">No</span></li>
+          <li class="qf-item"><span class="qf-label">File delivery</span><span class="qf-val green">Automatic</span></li>
+          <li class="qf-item"><span class="qf-label">DRS rating</span><span class="qf-val green">Recommended</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Try Payhip</h4>
+        <p style="font-size:0.82rem;color:#777;margin-bottom:14px;">Start on the free plan &mdash; no monthly fee until you are ready to scale.</p>
+        <a href="https://payhip.com?fp_ref=rick17" target="_blank" rel="nofollow" class="sidebar-btn amber-btn">Start Free on Payhip</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related</h4>
+        <a href="https://digitalrevenuestudio.co.uk/drs-experiments.html" class="sidebar-btn dark-btn">Test 02 &mdash; Full Experiment</a>
+      </div>
+    </aside>
+  </div>
+
+  <div class="disclosure">
+    <p>This post contains affiliate links. If you sign up to Payhip through our link we earn a small commission at no extra cost to you. We use Payhip ourselves and our opinion of the platform is our own.</p>
+  </div>
+
+</body>
+</html>

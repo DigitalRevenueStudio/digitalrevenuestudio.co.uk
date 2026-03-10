@@ -1,0 +1,281 @@
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--purple:#8A4FD4;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(232,131,42,0.06) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(232,131,42,0.3);background:rgba(232,131,42,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--orange);padding-left:20px;margin-bottom:28px;}
+    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
+    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--orange);flex-shrink:0;}
+    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--orange) 50%,var(--ice-border) 80%,transparent);}
+    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;}
+    .post-body p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
+    .post-body h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);text-transform:uppercase;line-height:1.05;margin:44px 0 14px;}
+    .post-body h2 em{font-style:normal;color:var(--ice-glow);}
+    .post-body strong{color:var(--white);}
+    .post-body a{color:var(--ice-bright);text-decoration:none;}
+    .post-body a:hover{color:var(--white);}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(232,131,42,0.3),transparent);}
+    .callout{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--orange);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
+    .callout.gold{border-left-color:var(--gold);}
+    .callout.red{border-left-color:var(--red);}
+    .callout.green{border-left-color:var(--green);}
+    .callout.purple{border-left-color:var(--purple);}
+    .callout p{font-size:0.92rem;margin:0;line-height:1.75;color:var(--text);}
+    .callout strong{color:var(--white);}
+    .day-cards{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+    .day-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .day-header{display:flex;align-items:center;gap:14px;padding:13px 20px;border-bottom:1px solid var(--ice-border);}
+    .day-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;line-height:1;min-width:32px;}
+    .d1 .day-num{color:#4DA8DA;} .d1 .day-header{background:rgba(77,168,218,0.05);}
+    .d2 .day-num{color:#1ABC9C;} .d2 .day-header{background:rgba(26,188,156,0.05);}
+    .d3 .day-num{color:#C0392B;} .d3 .day-header{background:rgba(192,57,43,0.06);}
+    .d4 .day-num{color:#8A4FD4;} .d4 .day-header{background:rgba(138,79,212,0.05);}
+    .d5 .day-num{color:#D4A82A;} .d5 .day-header{background:rgba(212,168,42,0.06);}
+    .day-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);}
+    .day-sub{font-size:0.78rem;color:var(--text-muted);margin-top:2px;}
+    .day-body{padding:14px 20px;display:flex;flex-direction:column;gap:10px;}
+    .task-group-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:4px;}
+    .label-do{color:var(--green);}
+    .label-save{color:var(--red);}
+    .label-note{color:var(--ice-glow);}
+    .task-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
+    .task-list li{font-size:0.9rem;color:var(--text);display:flex;gap:8px;line-height:1.6;}
+    .task-list li.do::before{content:'\2713';color:var(--green);flex-shrink:0;font-weight:700;}
+    .task-list li.save::before{content:'\2193';color:var(--red);flex-shrink:0;font-weight:700;}
+    .task-list li.note::before{content:'\203A';color:var(--ice-glow);flex-shrink:0;font-weight:700;}
+    .task-list li strong{color:var(--white);}
+    .president-bar{background:rgba(138,79,212,0.08);border:1px solid rgba(138,79,212,0.2);border-radius:3px;padding:9px 14px;font-size:0.8rem;color:var(--text-muted);display:flex;gap:8px;align-items:center;margin-top:4px;}
+    .president-bar::before{content:'\1F451';flex-shrink:0;}
+    .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
+    .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
+    .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
+    .cta-buttons{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:4px;}
+    .cta-btn{display:inline-block;width:100%;max-width:320px;background:var(--orange);color:var(--white) !important;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text) !important;}
+    .appendix-note{font-size:0.78rem;color:var(--text-muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--ice-border);line-height:1.6;}
+    .sign-off{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:32px 0 8px;}
+    .kofi-wrap{text-align:center;padding:24px 0 8px;border-top:1px solid var(--ice-border);margin-top:32px;}
+    .kofi-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;}
+    @media(max-width:600px){
+      .site-header{padding:12px 20px;}.post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
+    }
+  
+  .wos-wrapper {
+    background: #050D1A;
+    min-height: 100vh;
+    margin: -20px -20px 0;
+    padding: 0;
+    position: relative;
+  }
+  body { background: #050D1A !important; }
+</style>
+
+<div class="wos-wrapper">
+<header class="site-header">
+  <a href="https://whiteoutsurvivalguide.blogspot.com" class="site-brand">Guide</a>
+  <span class="header-tag">Events &bull; State vs State</span>
+</header>
+
+<div class="post-hero">
+  <div class="post-category">&#9876; State vs State</div>
+  <h1>SvS Prep Phase<br /><em>The 5-Day</em><br />F2P Playbook</h1>
+  <p class="post-intro">State vs State is the biggest event in Whiteout Survival. Most players treat the prep phase as a warm-up. The players who rank consistently well treat it as the event itself — because prep phase scoring is where a large portion of your individual rank is decided before battle even starts.</p>
+  <div class="post-meta">
+    <span class="meta-item"><span class="dot"></span>WOS Guide</span>
+    <span class="meta-item"><span class="dot"></span>State vs State</span>
+    <span class="meta-item"><span class="dot"></span>F2P Strategy</span>
+    <span class="meta-item"><span class="dot"></span>March 2026</span>
+  </div>
+</div>
+
+<div class="frost-divider"></div>
+
+<div class="post-body">
+
+  <div class="callout gold">
+    <p><strong>The core rule:</strong> The prep phase has daily scoring events that reward specific actions on specific days. Using your research speedups on Day 1 instead of Day 5 scores you nothing — it just wastes them in the wrong window. Hold resources. Use them on the right day.</p>
+  </div>
+
+  <div class="section-label">Before It Starts</div>
+  <h2>Matchmaking — <em>Before Prep Phase Opens</em></h2>
+
+  <p>Before the prep phase even opens, there is an opportunity to influence which state you face. Matchmaking occurs on <strong>Saturday and Sunday UTC</strong>. If the top players in your state coordinate a power reduction during this window — removing hero gear, resetting hero levels through Drill Camp — you can influence the match in your favour.</p>
+
+  <p>Individual actions have minimal effect. It only works as a coordinated effort across your state's top 100–150 players. Speak to your state leaders about organising this before the window opens. The full matchmaking guide — including exactly what the system weighs — is in the SvS appendix of the paid guide.</p>
+
+  <div class="section-label">The 5-Day Schedule</div>
+  <h2>Day by Day — <em>What to Do When</em></h2>
+
+  <div class="day-cards">
+
+    <div class="day-card d1">
+      <div class="day-header">
+        <div class="day-num">1</div>
+        <div><div class="day-title">Construction &amp; Chief Charms</div><div class="day-sub">Building scoring event active</div></div>
+      </div>
+      <div class="day-body">
+        <div>
+          <div class="task-group-label label-do">Do Today</div>
+          <ul class="task-list">
+            <li class="do"><strong>Fire Crystals</strong> — primary use window</li>
+            <li class="do"><strong>Construction Speedups</strong> — push building upgrades</li>
+            <li class="do"><strong>Chief Charm Upgrades</strong> — contribute to construction scoring</li>
+          </ul>
+        </div>
+        <div>
+          <div class="task-group-label label-save">Save for Later</div>
+          <ul class="task-list">
+            <li class="save"><strong>Training Speedups</strong> — Day 4</li>
+            <li class="save"><strong>Research Speedups</strong> — Day 5</li>
+          </ul>
+        </div>
+        <div class="president-bar">Wait for President skills before spending speedups or fire crystals.</div>
+      </div>
+    </div>
+
+    <div class="day-card d2">
+      <div class="day-header">
+        <div class="day-num">2</div>
+        <div><div class="day-title">Wheel, Shards &amp; Gathering</div><div class="day-sub">Hero upgrade &amp; gathering scoring active</div></div>
+      </div>
+      <div class="day-body">
+        <div>
+          <div class="task-group-label label-do">Do Today</div>
+          <ul class="task-list">
+            <li class="do"><strong>Spin Lucky Wheel</strong> — scoring window open</li>
+            <li class="do"><strong>Use Hero Shards</strong> — hero upgrade scoring active</li>
+            <li class="do"><strong>Gather Resources</strong> — gathering scoring event</li>
+          </ul>
+        </div>
+        <div>
+          <div class="task-group-label label-save">Critical — Do Not Do</div>
+          <ul class="task-list">
+            <li class="save"><strong>Do NOT start beast rallies today.</strong> The 48-hour event means starting Day 2 loses you a reward window. Start Day 3, collect both payouts together.</li>
+            <li class="save"><strong>Save all Stamina</strong> for Day 3 beast hunting</li>
+            <li class="save"><strong>Save Pet Upgrades</strong> — Day 5 only</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card d3">
+      <div class="day-header">
+        <div class="day-num">3</div>
+        <div><div class="day-title">Beast Hunt Day</div><div class="day-sub">Highest points-per-action day of the entire prep phase</div></div>
+      </div>
+      <div class="day-body">
+        <div>
+          <div class="task-group-label label-do">Do Today — All Stamina Here</div>
+          <ul class="task-list">
+            <li class="do"><strong>Kill Level 26+ Beasts</strong> — 10 stamina = 12,000 points</li>
+            <li class="do"><strong>Call Polar Terror Rallies</strong> — 25 stamina = 30,000 points</li>
+          </ul>
+        </div>
+        <div>
+          <div class="task-group-label label-save">Important Rules</div>
+          <ul class="task-list">
+            <li class="save"><strong>Do not kill lower-level beasts</strong> — fewer points per stamina</li>
+            <li class="save"><strong>Lead rallies, don't just join them</strong> — joining does not score points</li>
+            <li class="save"><strong>Save Pet Upgrades</strong> — Day 5 only</li>
+          </ul>
+        </div>
+        <div>
+          <div class="task-group-label label-note">Also OK Today</div>
+          <ul class="task-list">
+            <li class="note">Lucky Wheel — scoring still active</li>
+            <li class="note">Hero Shards — still open</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card d4">
+      <div class="day-header">
+        <div class="day-num">4</div>
+        <div><div class="day-title">Troops &amp; Hero Gear</div><div class="day-sub">Troop training scoring event active</div></div>
+      </div>
+      <div class="day-body">
+        <div>
+          <div class="task-group-label label-do">Do Today</div>
+          <ul class="task-list">
+            <li class="do"><strong>Training Speedups</strong> — train and promote troops</li>
+            <li class="do"><strong>Chief Charm Upgrades</strong> — secondary window</li>
+          </ul>
+        </div>
+        <div>
+          <div class="task-group-label label-save">Save for Day 5</div>
+          <ul class="task-list">
+            <li class="save"><strong>Pet Upgrades, Essence Stones, Hero Widgets</strong></li>
+            <li class="save"><strong>Chief Gear upgrades</strong></li>
+            <li class="save"><strong>Research &amp; remaining Construction Speedups</strong></li>
+          </ul>
+        </div>
+        <div class="president-bar">Wait for President skills before using training speedups.</div>
+      </div>
+    </div>
+
+    <div class="day-card d5">
+      <div class="day-header">
+        <div class="day-num">5</div>
+        <div><div class="day-title">Final Push — Everything Goes</div><div class="day-sub">Widest scoring window of the prep phase</div></div>
+      </div>
+      <div class="day-body">
+        <div>
+          <div class="task-group-label label-do">Use Everything Saved</div>
+          <ul class="task-list">
+            <li class="do"><strong>Chief Gear Upgrades</strong></li>
+            <li class="do"><strong>Research Speedups</strong></li>
+            <li class="do"><strong>Essence Stones &amp; Hero Widgets</strong></li>
+            <li class="do"><strong>Remaining Construction Speedups</strong></li>
+            <li class="do"><strong>Pet Upgrades</strong> — everything held from Days 1–4</li>
+          </ul>
+        </div>
+        <div class="president-bar">Wait for President skills before spending — the Day 5 volume makes this the most impactful buff of the entire prep phase.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-label">Battle Phase</div>
+  <h2>What About <em>The Battle?</em></h2>
+
+  <p>This post covers the prep phase. The battle phase playbook — structure priorities, rally strategy, how to contribute as an F2P player in a competitive cross-state fight, and the scoring windows the highest-ranking players exploit — is covered in the full SvS appendix in the paid guide.</p>
+
+  <div class="callout purple">
+    <p>There is a rally technique for Day 3 that significantly multiplies the number of rallies you can lead in a single session — and it applies in the battle phase too. It is in the appendix, and if beast hunting and rallies are a meaningful part of your SvS prep, it is worth knowing.</p>
+  </div>
+
+  <div class="post-cta">
+    <h3>Want the Full <em>SvS Appendix?</em></h3>
+    <p>The complete SvS guide — matchmaking tactics, battle phase strategy, rally techniques, scoring priorities, and the full 5-day prep breakdown — is in the 9-chapter guide.</p>
+    <div class="cta-buttons">
+      <a href="https://payhip.com/DigitalRevenueStudio" class="cta-btn">Get the Full Guide &mdash; &pound;9.99</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-free-guide-landing.html" class="cta-btn secondary">Free Starter Guide</a>
+    </div>
+    <p class="appendix-note">The starter guide covers the core F2P foundations. Comprehensive appendices &mdash; covering events like this one in full detail &mdash; are coming soon as standalone companions to complete the series. Watch out for the blog post when they go live.</p>
+  </div>
+
+  <p class="sign-off">— Digit</p>
+
+  <div class="kofi-wrap">
+    <p class="kofi-note">All guides are free. If this one helped your game, you can support the project here — completely optional, always appreciated.</p>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+  </div>
+
+</div>
+</div>

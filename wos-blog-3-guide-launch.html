@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Whiteout Survival Beginner Guide Is Here | WOS Guide</title>
+  <meta name="description" content="After 17k Reddit views and hundreds of questions — the complete beginner strategy guide for Whiteout Survival is now available." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ice-dark:#050D1A;--ice-mid:#091628;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--orange-hot:#F5A23C;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%),radial-gradient(ellipse 60% 30% at 20% 100%,rgba(77,168,218,0.04) 0%,transparent 60%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,168,42,0.3);background:rgba(212,168,42,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--gold);padding-left:20px;margin-bottom:28px;}
+    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
+    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--ice-bright);flex-shrink:0;}
+    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--ice-bright) 50%,var(--ice-border) 80%,transparent);}
+    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;animation:fadeUp 0.7s 0.15s ease both;}
+    .post-body>p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:48px 0 24px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--ice-border);}
+
+    /* MOMENTUM BOX */
+    .momentum-box{background:rgba(212,168,42,0.06);border:1px solid rgba(212,168,42,0.25);border-radius:4px;padding:28px 32px;margin:32px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+    .momentum-stat{text-align:center;}
+    .momentum-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;color:var(--gold);display:block;line-height:1;}
+    .momentum-label{font-size:0.72rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;display:block;}
+
+    /* WHAT'S INSIDE */
+    .guide-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;margin:28px 0;}
+    .guide-card-header{background:linear-gradient(135deg,var(--ice-panel),rgba(77,168,218,0.1));border-bottom:1px solid var(--ice-border);padding:20px 28px;display:flex;align-items:center;gap:16px;}
+    .guide-card-icon{font-size:1.8rem;flex-shrink:0;}
+    .guide-card-header h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;}
+    .guide-card-header p{font-size:0.82rem;color:var(--text-muted);margin-top:3px;}
+    .guide-chapters{padding:20px 28px;}
+    .chapter-item{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.04);}
+    .chapter-item:last-child{border-bottom:none;padding-bottom:0;}
+    .chapter-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.75rem;color:var(--ice-bright);background:rgba(77,168,218,0.1);border:1px solid rgba(77,168,218,0.2);padding:3px 9px;border-radius:2px;flex-shrink:0;letter-spacing:0.08em;}
+    .chapter-text strong{display:block;font-size:0.95rem;color:var(--frost);margin-bottom:3px;}
+    .chapter-text span{font-size:0.82rem;color:var(--text-muted);line-height:1.5;}
+
+    /* FREE vs PAID */
+    .split-box{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0;}
+    .split-col{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .split-col-header{padding:14px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;}
+    .split-col-header.free{background:rgba(46,204,113,0.1);color:var(--green);border-bottom:1px solid rgba(46,204,113,0.2);}
+    .split-col-header.paid{background:rgba(212,168,42,0.1);color:var(--gold);border-bottom:1px solid rgba(212,168,42,0.2);}
+    .split-item{padding:11px 20px;font-size:0.88rem;color:var(--text);border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
+    .split-item:last-child{border-bottom:none;}
+    .split-item .si{flex-shrink:0;font-size:0.8rem;margin-top:1px;}
+
+    /* CTA PANEL */
+    .guide-cta{background:linear-gradient(135deg,var(--ice-panel),rgba(77,168,218,0.08));border:1px solid var(--ice-border);border-top:3px solid var(--gold);border-radius:4px;padding:40px;margin:40px 0;text-align:center;}
+    .guide-cta h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;}
+    .guide-cta h2 em{font-style:normal;color:var(--gold);}
+    .guide-cta p{font-size:0.95rem;color:var(--text-muted);max-width:520px;margin:0 auto 28px;line-height:1.75;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    .btn-gold{background:var(--gold);color:var(--ice-dark);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:14px 36px;border-radius:2px;text-decoration:none;transition:all 0.2s;display:inline-block;}
+    .btn-gold:hover{background:var(--orange-hot);transform:translateY(-2px);}
+    .btn-ice-outline{background:transparent;color:var(--ice-bright);border:1px solid var(--ice-border);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;letter-spacing:0.12em;text-transform:uppercase;padding:13px 32px;border-radius:2px;text-decoration:none;transition:all 0.2s;display:inline-block;}
+    .btn-ice-outline:hover{border-color:var(--ice-bright);color:var(--ice-glow);}
+    .price-tag{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--gold);margin-bottom:20px;}
+    .price-tag span{font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-left:6px;}
+
+    .callout{background:rgba(77,168,218,0.06);border:1px solid rgba(77,168,218,0.2);border-radius:4px;padding:24px 28px;margin:28px 0;}
+    .callout p{font-size:0.97rem;color:var(--frost);line-height:1.8;margin:0;}
+    .callout strong{color:var(--ice-glow);}
+
+    .site-footer{background:var(--ice-mid);border-top:1px solid var(--ice-border);padding:32px 40px;text-align:center;position:relative;z-index:1;}
+    .site-footer p{font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;}
+    .site-footer a{color:var(--ice-bright);text-decoration:none;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:640px){
+      .post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
+      .site-header{padding:14px 20px;}
+      .momentum-box{grid-template-columns:repeat(2,1fr);}
+      .split-box{grid-template-columns:1fr;}
+      .guide-cta{padding:28px 20px;}
+      .header-tag{display:none;}
+    }
+  
+    /* Blogger override — force dark theme */
+    .wos-wrapper {
+      background: #050D1A;
+      min-height: 100vh;
+      margin: -20px -20px 0;
+      padding: 0;
+      position: relative;
+    }
+    body { background: #050D1A !important; }
+    </style>
+</head>
+<body><div class="wos-wrapper">
+  <header class="site-header">
+    <a href="https://whiteoutsurvivalguide.blogspot.com" class="site-brand">Whiteout Survival Guide</a>
+    <span class="header-tag">Beginner Guides · Strategy · F2P Tips</span>
+  </header>
+
+  <article>
+    <div class="post-hero">
+      <div class="post-category">* Guide Release</div>
+      <h1>The Complete Beginner Guide<br />to <em>Whiteout Survival</em><br />Is Here</h1>
+      <p class="post-intro">After 17,000 Reddit views and more questions than I could answer in comments — I have put everything I know into one place. Here is what is available and why I built it.</p>
+      <div class="post-meta">
+        <span class="meta-item"><span class="dot"></span>WOS Guide</span>
+        <span class="meta-item"><span class="dot"></span>Guide Release</span>
+        <span class="meta-item"><span class="dot"></span>Free + Paid Options</span>
+      </div>
+    </div>
+
+    <div class="frost-divider"></div>
+
+    <div class="post-body">
+
+      <p>A few weeks ago I posted about the mistakes I made in my first 30 days of Whiteout Survival. The response was bigger than I expected — thousands of views, dozens of comments, and a lot of the same questions coming up again and again.</p>
+
+      <p>The honest answer to most of those questions was: there is no single resource that covers all of this clearly for beginners. So I decided to build one.</p>
+
+      <div class="momentum-box">
+        <div class="momentum-stat"><span class="momentum-num">17k</span><span class="momentum-label">Reddit Views</span></div>
+        <div class="momentum-stat"><span class="momentum-num">63</span><span class="momentum-label">Comments</span></div>
+        <div class="momentum-stat"><span class="momentum-num">58</span><span class="momentum-label">Upvotes</span></div>
+        <div class="momentum-stat"><span class="momentum-num">2</span><span class="momentum-label">Awards</span></div>
+      </div>
+
+      <p>The questions that came up most in those comments shaped exactly what I wrote. This is not a generic guide padded out to look impressive. It is the answer to what real beginners were actually asking.</p>
+
+      <div class="section-label">What is available</div>
+
+      <div class="split-box">
+        <div class="split-col">
+          <div class="split-col-header free"> Free — Sign Up</div>
+          <div class="split-item"><span class="si">*</span><span>Quick-start priority checklist — what to do first, in order</span></div>
+          <div class="split-item"><span class="si">*</span><span>The 7 most common early mistakes and how to avoid them</span></div>
+          <div class="split-item"><span class="si">*</span><span>Speed-up banking rules that actually make a difference</span></div>
+          <div class="split-item"><span class="si">*</span><span>Alliance selection framework — what to look for and why</span></div>
+          <div class="split-item"><span class="si">*</span><span>Email updates as new guides are added</span></div>
+        </div>
+        <div class="split-col">
+          <div class="split-col-header paid">* Full Guide — Payhip</div>
+          <div class="split-item"><span class="si">*</span><span>Complete hero levelling priority guide by stage</span></div>
+          <div class="split-item"><span class="si">*</span><span>Bear Hunt deep dive — hero selection, rally mechanics and F2P strategy</span></div>
+          <div class="split-item"><span class="si">*</span><span>Research tree priority — what to unlock first and why</span></div>
+          <div class="split-item"><span class="si">*</span><span>F2P vs spender — where the gap is real and how to compete</span></div>
+          <div class="split-item"><span class="si">*</span><span>State war preparation — troop composition and timing</span></div>
+          <div class="split-item"><span class="si">*</span><span>Speed-up strategy — when to burn, when to bank, what to target</span></div>
+        </div>
+      </div>
+
+      <div class="section-label">What is in the full guide</div>
+
+      <div class="guide-card">
+        <div class="guide-card-header">
+          <span class="guide-card-icon"></span>
+          <div>
+            <h3>Whiteout Survival — Complete Beginner Strategy Guide</h3>
+            <p>9 chapters. Built from real experience. No padding.</p>
+          </div>
+        </div>
+        <div class="guide-chapters">
+          <div class="chapter-item"><span class="chapter-num">CH 1</span><div class="chapter-text"><strong>First 7 Days — What to Prioritise</strong><span>The exact build order and focus areas that separate strong early foundations from weak ones.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 2</span><div class="chapter-text"><strong>Hero Development — Who to Build and When</strong><span>Which heroes to invest in first, why depth beats breadth, and the biggest hero levelling mistakes.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 3</span><div class="chapter-text"><strong>Research Priority — The Right Order</strong><span>Combat vs development vs economic research — which trees to unlock first at each furnace level.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 4</span><div class="chapter-text"><strong>Bear Hunt — Full Strategy Guide</strong><span>Hero selection, rally mechanics, F2P optimisation and how to maximise your alliance's score.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 5</span><div class="chapter-text"><strong>Speed-Up Strategy — When to Burn and When to Bank</strong><span>The rules I use to decide when speed-ups are worth using and when patience is the better play.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 6</span><div class="chapter-text"><strong>Alliance Selection and Culture</strong><span>What makes an alliance worth joining, what questions to ask, and how to evaluate fit.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 7</span><div class="chapter-text"><strong>F2P vs Spender — Honest Breakdown</strong><span>Where spending creates a real gap, where it does not, and how to compete regardless of budget.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 8</span><div class="chapter-text"><strong>State War Preparation</strong><span>Troop composition, resource management and timing for competitive state events.</span></div></div>
+          <div class="chapter-item"><span class="chapter-num">CH 9</span><div class="chapter-text"><strong>The 30-Day Checklist</strong><span>A complete progress tracker for your first month — what you should have done by each milestone.</span></div></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Why I wrote this rather than just answering comments:</strong> The same questions kept coming up, and a comment reply is not enough to actually help someone. A guide you can reference at any point — at your own pace, alongside your own gameplay — is more useful than a thread. That is what I tried to build.</p>
+      </div>
+
+      <div class="guide-cta">
+        <h2>Get the <em>Full Guide</em></h2>
+        <div class="price-tag">£9.99 <span>one-time — instant PDF download</span></div>
+        <p>Everything I know about the early and mid game, organised into one clear resource. If it saves you the weeks I lost to avoidable mistakes, it is worth it.</p>
+        <div class="cta-btns">
+          <a href="https://payhip.com/b/jJMgz?fp_ref=rick17" target="_blank" class="btn-gold">* Get the Full Guide — £9.99</a>
+          <a href="https://whiteoutsurvivalguide.blogspot.com" class="btn-ice-outline">Free Tips First</a>
+        </div>
+      </div>
+
+      <p style="font-size:0.88rem;color:var(--text-muted);text-align:center;margin-top:-12px;">Instant PDF download via Payhip. No subscription. No upsells.</p>
+
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p><a href="https://whiteoutsurvivalguide.blogspot.com">Whiteout Survival Guide</a> — Real strategies from a real player.</p>
+    <p>Not affiliated with Whiteout Survival or Century Games.</p>
+  </footer>
+</div></body>
+</html>
