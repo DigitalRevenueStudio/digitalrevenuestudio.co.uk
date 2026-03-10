@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SvS Prep Week Cheat Sheet — Whiteout Survival</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EWFNWGYHH9');
+</script>
+<style>
+  :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--white:#FFFFFF;--orange:#E8832A;--green:#2ECC71;--gold:#D4A82A;--text:#B8D4E8;--text-muted:#5A7A94;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--ice-dark);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;}
+
+  .sheet{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:8px;overflow:hidden;width:100%;max-width:560px;}
+
+  .sheet-header{background:linear-gradient(135deg,#0a1628,#0f2040);padding:18px 22px;border-bottom:1px solid var(--ice-border);}
+  .sheet-eyebrow{font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+  .sheet-title{font-size:1.3rem;font-weight:900;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);line-height:1.1;}
+  .sheet-subtitle{font-size:0.75rem;color:var(--text-muted);margin-top:4px;}
+
+  .legend{display:flex;gap:16px;padding:10px 22px;background:rgba(0,0,0,0.2);border-bottom:1px solid var(--ice-border);flex-wrap:wrap;}
+  .legend-item{display:flex;align-items:center;gap:5px;font-size:0.72rem;color:var(--text-muted);}
+
+  .prep-table{width:100%;border-collapse:collapse;}
+
+  /* HEADER ROW */
+  .prep-table th{font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:10px 0;text-align:center;border-bottom:2px solid var(--ice-border);}
+  .th-task{text-align:left !important;padding-left:18px !important;color:var(--text-muted);width:40%;}
+  .th-day{width:12%;}
+  .th-day.d1{color:#4DA8DA;}
+  .th-day.d2{color:#1ABC9C;}
+  .th-day.d3{color:#C0392B;}
+  .th-day.d4{color:#8A4FD4;}
+  .th-day.d5{color:#D4A82A;}
+
+  /* ALL CELLS default centre */
+  .prep-table td{padding:9px 0;text-align:center;border-bottom:1px solid rgba(26,58,92,0.4);font-size:1rem;line-height:1;vertical-align:top;padding-top:11px;padding-bottom:11px;}
+  .prep-table tr:last-child td{border-bottom:none;}
+  .prep-table tr:nth-child(even){background:rgba(255,255,255,0.02);}
+  .prep-table tr:hover{background:rgba(77,168,218,0.04);}
+
+  /* TASK CELL — force left regardless of table default */
+  .prep-table td.td-task{
+    text-align:left !important;
+    padding-left:18px !important;
+    padding-right:8px;
+    font-size:0.85rem;
+    color:var(--text);
+    font-weight:500;
+    vertical-align:top;
+    padding-top:11px;
+    padding-bottom:11px;
+  }
+  .task-inner{display:flex;align-items:flex-start;gap:8px;}
+  .task-icon{flex-shrink:0;width:18px;text-align:center;font-size:0.9rem;line-height:1.35;}
+  .task-label{line-height:1.35;}
+
+  .cell-best{font-size:1.05rem;}
+  .cell-ok{font-size:1.0rem;opacity:0.65;}
+  .cell-no{font-size:0.85rem;opacity:0.2;color:var(--text-muted);}
+
+  .sheet-footer{padding:12px 22px;background:rgba(0,0,0,0.15);border-top:1px solid var(--ice-border);display:flex;flex-direction:column;gap:4px;}
+  .footer-note{font-size:0.7rem;color:var(--text-muted);}
+  .footer-note strong{color:var(--orange);}
+</style>
+</head>
+<body>
+
+<div style="text-align:center;padding:10px 20px;background:#050D1A;border-bottom:1px solid #1A3A5C;">
+  <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5A7A94;text-decoration:none;">← Back to WOS Wiki</a>
+</div>
+
+<div class="sheet">
+  <div class="sheet-header">
+    <div class="sheet-eyebrow">&#9876; State vs State</div>
+    <div class="sheet-title">SvS Prep Week</div>
+    <div class="sheet-subtitle">&#128081; SvS Prep &nbsp;&#8212;&nbsp; ✅ Best Day &nbsp;&#8212;&nbsp; 🆗 Also OK &nbsp;&#8212;&nbsp; &#x2014; Hold</div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span>✅</span><span>Best day — do this now</span></div>
+    <div class="legend-item"><span>🆗</span><span>Also OK / secondary window</span></div>
+    <div class="legend-item"><span>&#x2014;</span><span>Hold — wrong day</span></div>
+  </div>
+
+  <table class="prep-table">
+    <thead>
+      <tr>
+        <th class="th-task">Task</th>
+        <th class="th-day d1">D1</th>
+        <th class="th-day d2">D2</th>
+        <th class="th-day d3">D3</th>
+        <th class="th-day d4">D4</th>
+        <th class="th-day d5">D5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1FA84;</span><span class="task-label">Chief Charms</span></div></td>
+        <td class="cell-ok">🆗</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F525;</span><span class="task-label">Fire Crystals</span></div></td>
+        <td class="cell-best">✅</td>
+        <td class="cell-ok">🆗</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F6E0;</span><span class="task-label">Building / Speedup</span></div></td>
+        <td class="cell-best">✅</td>
+        <td class="cell-ok">🆗</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-ok">🆗</td>
+        <td class="cell-ok">🆗</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F3B2;</span><span class="task-label">Lucky Wheel</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F48E;</span><span class="task-label">Hero Shards</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x26B0;</span><span class="task-label">Gathering</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F43A;</span><span class="task-label">Pet Upgrades</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F9CA;</span><span class="task-label">Beast Hunting</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x2694;</span><span class="task-label">Hero Gear / Essence</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-ok">🆗</td>
+        <td class="cell-best">✅</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F6E1;</span><span class="task-label">Training Troops</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+        <td class="cell-no">&#x2014;</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F396;</span><span class="task-label">Chief Gear</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+      </tr>
+      <tr>
+        <td class="td-task"><div class="task-inner"><span class="task-icon">&#x1F9EC;</span><span class="task-label">Research</span></div></td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-no">&#x2014;</td>
+        <td class="cell-best">✅</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sheet-footer">
+    <span class="footer-note">&#128081; <strong>All days:</strong> Wait for President skills before spending speedups or crystals.</span>
+    <span class="footer-note">&#10052; <strong>Day 3 only:</strong> Level 26+ beasts &amp; Polar Terror rallies only. Do not start Day 2.</span>
+  </div>
+</div>
+
+</body>
+</html>
