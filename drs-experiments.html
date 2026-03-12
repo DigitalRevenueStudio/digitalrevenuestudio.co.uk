@@ -81,6 +81,10 @@
     .exp-pending h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text-dark);margin-bottom:5px;}
     .exp-pending p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;margin:0;}
     .soon-pill{background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.2);color:var(--gold-dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:2px;white-space:nowrap;}
+    .active-pill{background:rgba(46,139,74,0.1);border:1px solid rgba(46,139,74,0.3);color:var(--bright);font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:2px;white-space:nowrap;}
+    .imminent-pill{background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.4);color:var(--gold-dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:2px;white-space:nowrap;}
+    .exp-pending.exp-active{border-left-color:var(--bright);}
+    .exp-pending.exp-active .exp-pending-num{color:var(--bright);}
 
     /* Principles */
     .rules{background:var(--dark-2);padding:56px 40px;margin-top:0;}
@@ -298,25 +302,25 @@
     </div>
 
     <div style="margin-top:56px;">
-      <div class="section-label">In Preparation</div>
-      <div class="section-title">Coming Soon</div>
+      <div class="section-label">Up Next</div>
+      <div class="section-title">In Progress &amp; Coming Soon</div>
 
       <div class="exp-pending">
         <div class="exp-pending-num">04</div>
         <div>
           <h3>Earn by Playing Games</h3>
-          <p>Testing Inbox Pounds, Earnlabs, Prograd and Freecash with one week per platform and identical time investment. Real hourly rate calculations published. Launching once all platform flows are tested and verified end-to-end.</p>
+          <p>Testing InboxPounds, EarnLabs, Prograd and Freecash. Each platform has been proven end-to-end before the clock starts &mdash; payouts confirmed on InboxPounds, EarnLabs and Prograd. Freecash final offer in progress. Experiment starts imminently.</p>
         </div>
-        <div class="soon-pill">Coming Soon</div>
+        <div class="imminent-pill">Starting Soon</div>
       </div>
 
-      <div class="exp-pending">
+      <div class="exp-pending exp-active">
         <div class="exp-pending-num">05</div>
         <div>
           <h3>Cashback</h3>
-          <p>Two weeks on Quidco, two weeks on TopCashback. Same spending behaviour, same time period. Direct head-to-head comparison with real earnings figures. Launching alongside Test 04.</p>
+          <p>Quidco and TopCashback running simultaneously from March 2026. Both platforms checked before every purchase &mdash; whichever offers the higher rate wins. Cashback only generates when there is something to buy, so this runs as an ongoing tracker rather than a fixed-window experiment. Monthly results reported as they happen.</p>
         </div>
-        <div class="soon-pill">Coming Soon</div>
+        <div class="active-pill">Active &mdash; Monthly</div>
       </div>
 
       <div class="exp-pending">
