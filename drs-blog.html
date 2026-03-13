@@ -90,6 +90,7 @@
     </a>
     <div class="topbar-right">
       <div class="topbar-nav">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
         <a href="https://digitalrevenuestudio.co.uk/drs-about.html">About</a>
         <a href="https://digitalrevenuestudio.co.uk/drs-experiments.html">Experiments</a>
         <a href="https://digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
@@ -114,16 +115,16 @@
   <div class="page-inner">
 
     <div class="filter-bar">
-      <a href="#" class="filter-tag active">All Posts</a>
-      <a href="#" class="filter-tag">Experiment Log</a>
-      <a href="#" class="filter-tag">Tool Reviews</a>
-      <a href="#" class="filter-tag">Income Reports</a>
+      <a href="#" class="filter-tag active" data-filter="all">All Posts</a>
+      <a href="#" class="filter-tag" data-filter="experiment">Experiment Log</a>
+      <a href="#" class="filter-tag" data-filter="review">Tool Reviews</a>
+      <a href="#" class="filter-tag" data-filter="income">Income Reports</a>
     </div>
 
     <div class="blog-grid">
 
       <!-- BLOG 7 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-7-council-tax.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-7-council-tax.html" class="blog-card" data-category="income experiment">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-income">Money Back</span><span class="blog-tag tag-experiment">Test 08</span></div>
           <h3>How I Got a &#163;1,500 Council Tax Refund &#8212; and How to Check if You&#8217;re Owed One Too</h3>
@@ -136,7 +137,7 @@
       </a>
 
       <!-- BLOG 6 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-6-payhip-review.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-6-payhip-review.html" class="blog-card" data-category="review experiment">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-review">Platform Review</span><span class="blog-tag tag-experiment">Test 02</span></div>
           <h3>Payhip Review 2026 — An Honest Look From Someone Actually Using It</h3>
@@ -149,7 +150,7 @@
       </a>
 
       <!-- BLOG 5 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-5-sender-review-blogger.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-5-sender-review-blogger.html" class="blog-card" data-category="review experiment">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-tool">Tools</span><span class="blog-tag tag-experiment">Test 03</span></div>
           <h3>Sender Review 2026: The Email Tool Behind All Three DRS Brands</h3>
@@ -162,7 +163,7 @@
       </a>
 
       <!-- BLOG 4 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-4-overview-blogger.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-4-overview-blogger.html" class="blog-card" data-category="experiment income">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-experiment">Experiment Log</span><span class="blog-tag tag-income">Income Report</span></div>
           <h3>I'm Testing 8 Online Income Streams in 2026 — Here's the Honest Picture So Far</h3>
@@ -175,7 +176,7 @@
       </a>
 
       <!-- BLOG 3 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-3-pure-pet-food-review.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-3-pure-pet-food-review.html" class="blog-card" data-category="review experiment">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-review">Review</span><span class="blog-tag tag-experiment">Test 03</span></div>
           <h3>We Tried Pure Pet Food for Our Cockapoo — Honest Review</h3>
@@ -188,7 +189,7 @@
       </a>
 
       <!-- BLOG 2 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-2-ai-prompts-income.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-2-ai-prompts-income.html" class="blog-card" data-category="income experiment">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-experiment">Test 02</span><span class="blog-tag tag-income">Side Hustle</span></div>
           <h3>How Much Can You Realistically Make Selling AI Prompts in the UK in 2026?</h3>
@@ -201,7 +202,7 @@
       </a>
 
       <!-- BLOG 1 -->
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-1-kdp-blogger.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-1-kdp-blogger.html" class="blog-card" data-category="income experiment">
         <div class="blog-card-top">
           <div class="blog-tags"><span class="blog-tag tag-experiment">Test 01</span><span class="blog-tag tag-income">KDP</span></div>
           <h3>Is Amazon KDP Worth It in the UK in 2026? Our Real Numbers.</h3>
@@ -251,5 +252,25 @@
     <p>&copy; 2026 Digital Revenue Studio. All rights reserved.</p>
   </footer>
 
+
+  <script>
+    const filterTags = document.querySelectorAll('.filter-tag');
+    const blogCards = document.querySelectorAll('.blog-card');
+    filterTags.forEach(tag => {
+      tag.addEventListener('click', function(e) {
+        e.preventDefault();
+        filterTags.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        blogCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
