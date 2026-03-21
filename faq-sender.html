@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sender FAQ — Email Marketing Questions Answered | Digital Revenue Studio</title>
+  <meta name="description" content="Common questions about Sender.net — free plan limits, automation, deliverability, forms and how we use it to run email across Digital Revenue Studio and WOS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;--sender:#1B5E96;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
+    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:28px;}
+    .topbar-nav{display:flex;gap:24px;}
+    .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
+    .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-glow{position:absolute;top:-80px;left:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(27,94,150,0.15) 0%,transparent 65%);pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
+    .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+    .faq-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+    .topic-tag{background:rgba(27,94,150,0.15);border:1px solid rgba(27,94,150,0.3);color:#6aabde;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
+    .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;}
+    .layout{max-width:1040px;margin:0 auto;padding:52px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
+    @media(max-width:820px){.layout{grid-template-columns:1fr;padding:40px 24px;}.sidebar{position:static!important;}}
+    .article p{font-size:0.97rem;margin-bottom:20px;color:var(--text-body);line-height:1.85;}
+    .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin:40px 0 14px;padding-top:16px;border-top:2px solid var(--border);}
+    .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
+    .article h2:first-child{margin-top:0;border-top:none;padding-top:0;}
+    .article strong{color:var(--text-dark);font-weight:600;}
+    .faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden;}
+    .faq-q{background:var(--white);padding:18px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;gap:16px;}
+    .faq-q::after{content:'↓';color:var(--gold);font-size:1rem;flex-shrink:0;}
+    .faq-a{background:var(--warm);padding:16px 22px;border-top:1px solid var(--border);font-size:0.92rem;color:var(--text-body);line-height:1.8;}
+    .faq-a p{margin:0 0 10px;} .faq-a p:last-child{margin-bottom:0;}
+    .faq-a strong{color:var(--text-dark);}
+    .data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.88rem;}
+    .data-table th{background:var(--warm);padding:10px 14px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);}
+    .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-body);}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table .green{color:var(--bright);font-weight:600;}
+    .highlight{background:var(--gold-pale);border:1px solid rgba(245,166,35,0.3);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 6px 6px 0;margin:24px 0;}
+    .highlight p{margin:0;font-size:0.92rem;color:var(--text-dark);}
+    .verdict-box{background:var(--dark);border-radius:8px;padding:28px 32px;margin:32px 0;}
+    .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
+    .cta-box{background:var(--dark-2);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
+    .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);margin-bottom:8px;}
+    .cta-box h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+    .cta-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+    .cta-btn{display:inline-block;background:var(--sender);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
+    .cta-note{display:block;font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:10px;}
+    .related-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:24px 0;text-decoration:none;}
+    .related-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:3px;}
+    .related-title{font-size:0.88rem;color:var(--text-dark);font-weight:500;}
+    .sidebar{position:sticky;top:24px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
+    .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .sidebar-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px;}
+    .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:3px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;transition:opacity 0.2s;}
+    .sidebar-btn:last-child{margin-bottom:0;}
+    .sidebar-btn:hover{opacity:0.85;}
+    .amber-btn{background:var(--gold-dark);color:var(--white);}
+    .dark-btn{background:var(--dark);color:var(--white);}
+    .sender-btn{background:var(--sender);color:var(--white);}
+    .toc-list{list-style:none;}
+    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+    .toc-list li:last-child{border-bottom:none;}
+    .toc-list a{color:var(--mid);text-decoration:none;font-weight:500;}
+    .toc-list a:hover{color:var(--gold-dark);}
+    .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
+    .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--gold);}
+    .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
+    .disclosure{background:var(--warm);border-top:1px solid var(--border);padding:18px 40px;text-align:center;}
+    .disclosure p{font-size:0.75rem;color:var(--text-muted);max-width:700px;margin:0 auto;}
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="faq-tag">FAQ</span>
+        <span class="topic-tag">Sender &mdash; Email Marketing</span>
+      </div>
+      <h1>Sender — <em>Your Questions</em><br />Answered</h1>
+      <p class="hero-sub">Free plan limits, automation, deliverability, forms and how we actually use Sender across Digital Revenue Studio and WOS.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <article class="article">
+
+      <h2 id="basics">What Is <em>Sender?</em></h2>
+
+      <p>Sender (sender.net) is an email marketing platform with a generous free tier. It handles subscriber management, email campaigns, automation sequences and embedded signup forms. We use it as the email backbone for Digital Revenue Studio and Whiteout Survival Guide — two entirely separate audiences managed through separate accounts.</p>
+
+      <p>We reviewed it formally as part of our platform testing work. The short version: it does what it promises at the free tier, it is well-designed for beginners, and the free plan limits are among the most competitive available.</p>
+
+      <h2 id="free-plan">Free Plan — <em>What Do You Actually Get?</em></h2>
+
+      <table class="data-table">
+        <tr><th>Feature</th><th>Free Plan Limit</th></tr>
+        <tr><td><strong>Subscribers</strong></td><td>2,500</td></tr>
+        <tr><td><strong>Emails per month</strong></td><td>15,000</td></tr>
+        <tr><td><strong>Automation</strong></td><td class="green">Included</td></tr>
+        <tr><td><strong>Signup forms</strong></td><td class="green">Included</td></tr>
+        <tr><td><strong>Sender branding</strong></td><td>Present in emails</td></tr>
+        <tr><td><strong>Custom domain sending</strong></td><td>Paid plans only</td></tr>
+        <tr><td><strong>Analytics</strong></td><td class="green">Opens, clicks, unsubscribes</td></tr>
+      </table>
+
+      <div class="highlight">
+        <p><strong>Our take:</strong> 2,500 subscribers and 15,000 emails per month is meaningful headroom for a new or growing list. For context, you could send six emails per month to your entire free-plan list and still have 300 emails to spare. That is genuinely useful for anyone starting out.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does Sender put its branding on my emails?</div>
+        <div class="faq-a"><p>Yes, on the free plan there is a small "Sent with Sender" footer badge on outgoing emails. It is unobtrusive but visible. If you want to remove it, you need to upgrade to a paid plan. For most new list builders this is an acceptable trade-off given the generous limits elsewhere.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I run automation on the free plan?</div>
+        <div class="faq-a"><p>Yes. This is one of Sender's strongest points. Automation — including welcome sequences, drip campaigns and trigger-based emails — is available on the free plan. Most competing platforms restrict automation to paid tiers. We use Sender's automation for the welcome email sequence on both DRS and WOS.</p></div>
+      </div>
+
+      <h2 id="forms">Signup <em>Forms</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I embed a Sender form on an external website?</div>
+        <div class="faq-a"><p>In the Sender dashboard, go to Forms, create or select a form, then use the embed code provided. This is a snippet of HTML/JavaScript that you paste into your website's HTML where you want the form to appear. For GitHub Pages or any static HTML site, paste the snippet directly into the relevant section of your page. For Blogger, use an HTML/JavaScript widget. The form submits directly to Sender and adds the subscriber to your chosen list automatically.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I redirect subscribers to a custom thank you page after signup?</div>
+        <div class="faq-a"><p>Yes. In the form settings within Sender, there is an option to specify a redirect URL after successful submission. We use this to send DRS subscribers to a branded thank you page on the main site, and WOS subscribers to a separate WOS-specific thank you page. It improves the post-signup experience and gives you a clean page to track conversions in Google Analytics.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does Sender support double opt-in?</div>
+        <div class="faq-a"><p>Yes. Double opt-in (where subscribers receive a confirmation email before being added to your list) can be enabled per form. For UK audiences and GDPR compliance, double opt-in is generally recommended — it confirms genuine consent and keeps your list clean. The confirmation email is customisable within the platform.</p></div>
+      </div>
+
+      <h2 id="deliverability">Deliverability and <em>Practical Use</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How good is Sender's deliverability?</div>
+        <div class="faq-a"><p>Sender has solid deliverability for a free-tier platform. Emails reliably reach the inbox in our testing rather than defaulting to spam folders. For best results, avoid spam trigger words in subject lines, keep your list clean by removing bounces, and ensure you are sending from a verified sender address. On the free plan you send from a Sender-managed domain, which is generally trustworthy.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I manage multiple brands on one Sender account?</div>
+        <div class="faq-a"><p>Within a single account you can create multiple separate subscriber lists and use different sender names and reply-to addresses per campaign. However, for fully separate brands we chose to use separate Sender accounts — one for DRS and one for WOS — to keep audience data, automation flows and branding completely clean between projects. There is no cost implication for having multiple free accounts provided each stays within the free limits.</p></div>
+      </div>
+
+      <a href="https://www.digitalrevenuestudio.co.uk/blog/sender-review.html" class="related-link">
+        <div>
+          <div class="related-label">Platform Review</div>
+          <div class="related-title">Our Sender Review — What We Found After Using It Across Two Brands &rarr;</div>
+        </div>
+      </a>
+
+      <div class="verdict-box">
+        <div class="verdict-label">Our Assessment</div>
+        <p>Sender is the right starting point for anyone building an email list from zero. The free plan is genuinely functional — automation, forms, analytics and 2,500 subscribers without paying anything. The branding badge is the main trade-off. If you are building a list alongside a content strategy and need an email tool that works without a monthly commitment, Sender is a strong choice.</p>
+      </div>
+
+      <div class="cta-box">
+        <h3>Try <em>Sender</em> Free</h3>
+        <p>2,500 subscribers, 15,000 emails per month, automation included. No credit card required.</p>
+        <a href="https://www.sender.net/?ref=digitalrevenuestudio" target="_blank" rel="nofollow" class="cta-btn">Start Free on Sender</a>
+        <span class="cta-note">Affiliate link — we may earn a small commission if you upgrade. No cost to you on the free plan.</span>
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h4>On This Page</h4>
+        <ul class="toc-list">
+          <li><a href="#basics">What is Sender?</a></li>
+          <li><a href="#free-plan">Free plan limits</a></li>
+          <li><a href="#forms">Signup forms</a></li>
+          <li><a href="#deliverability">Deliverability &amp; use</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Try Sender</h4>
+        <p>Free plan: 2,500 subscribers, 15,000 emails/month, automation included.</p>
+        <a href="https://www.sender.net/?ref=digitalrevenuestudio" target="_blank" rel="nofollow" class="sidebar-btn sender-btn">Start Free on Sender</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related</h4>
+        <a href="https://www.digitalrevenuestudio.co.uk/blog/sender-review.html" class="sidebar-btn dark-btn">Sender Review &rarr;</a>
+      </div>
+    </aside>
+  </div>
+
+  <div class="disclosure">
+    <p>This page contains affiliate links. If you sign up to Sender through our link and upgrade to a paid plan, we may earn a small commission at no cost to you. We use Sender ourselves across multiple brands.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+      <div class="footer-links">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-experiments.html">Experiments</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
+    </div>
+  </footer>
+
+</body>
+</html>
