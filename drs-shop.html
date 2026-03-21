@@ -80,9 +80,6 @@
     .partner-desc{font-size:0.78rem;color:var(--text-muted);line-height:1.55;}
     .partner-link{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-dark);text-decoration:none;margin-top:4px;}
     .partner-link:hover{color:var(--mid);}
-    .partner-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;align-items:center;}
-    .partner-link-faq{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;}
-    .partner-link-faq:hover{color:var(--mid);}
     /* COMING SOON */
     .coming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:56px;}
     .coming-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:20px;}
@@ -96,7 +93,28 @@
     .guarantee p{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
     @media(max-width:860px){.product-grid{grid-template-columns:1fr 1fr;}.partner-grid{grid-template-columns:1fr 1fr;}.coming-grid{grid-template-columns:1fr 1fr;}.featured{grid-template-columns:1fr;}}
-    @media(max-width:600px){.topbar-nav{display:none;}.topbar,.page-inner,.hero{padding-left:20px;padding-right:20px;}.product-grid,.partner-grid,.coming-grid{grid-template-columns:1fr;}}
+    .product-grid,.partner-grid,.coming-grid{grid-template-columns:1fr;}}
+  
+    /* MOBILE NAV */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:20px 28px 40px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+    .mobile-menu-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.5rem;line-height:1;}
+    .mobile-links{display:flex;flex-direction:column;gap:6px;flex:1;}
+    .mobile-links a{color:rgba(255,255,255,0.7);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.04em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-links a:hover{color:var(--gold);}
+    .mobile-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:28px;}
+    @media(max-width:860px){
+      .hamburger{display:flex;}
+      .topbar-nav{display:none!important;}
+      .topbar-cta{display:none!important;}
+    }
   </style>
 </head>
 <body>
@@ -221,18 +239,12 @@
       <div class="partner-card">
         <div class="partner-name">Sender</div>
         <div class="partner-desc">Email marketing free up to 2,500 subscribers. Full automation included. No card required. What we use across all DRS brands.</div>
-        <div class="partner-links">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-affiliates-hub.html" class="partner-link">Learn more &rarr;</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/faq-sender.html" class="partner-link-faq">FAQ &rarr;</a>
-        </div>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-affiliates-hub.html" class="partner-link">Learn more &rarr;</a>
       </div>
       <div class="partner-card">
         <div class="partner-name">Payhip</div>
         <div class="partner-desc">Free digital product storefront. 5% transaction fee on free plan. Instant delivery, no monthly cost. What we use for all digital products.</div>
-        <div class="partner-links">
-          <a href="https://payhip.com/?fp_ref=rick17" class="partner-link" target="_blank">Visit Payhip &rarr;</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/faq-payhip.html" class="partner-link-faq">FAQ &rarr;</a>
-        </div>
+        <a href="https://payhip.com/?fp_ref=rick17" class="partner-link" target="_blank">Visit Payhip &rarr;</a>
       </div>
       <div class="partner-card">
         <div class="partner-name">Pure Pet Food</div>
@@ -244,10 +256,7 @@
         <div class="partner-desc">VPN service we use and recommend. Referral programme available.</div>
         <a href="https://refer-nordvpn.com/pyHdUqvaiaX" class="partner-link" target="_blank">Learn more &rarr;</a>
       </div>
-      <div class="partner-card">
-        <div class="partner-name">Quidco</div>
-        <div class="partner-desc">Cashback platform — run simultaneously with TopCashback and take whichever gives the better rate. Reviewed on the blog.</div>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-affiliates-hub.html" class="partner-link">All partners &rarr;</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-affiliates-hub.html" class="partner-link">All partners &rarr;</a>
       </div>
       <div class="partner-card">
         <div class="partner-name">All Brand Partners</div>
@@ -321,7 +330,7 @@
       <div>
         <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="/cdn-cgi/l/email-protection#b6dfd8d0d9f6d2dfd1dfc2d7dac4d3c0d3d8c3d3c5c2c3d2dfd998d5d998c3dd" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="d7beb9b1b897b3beb0bea3b6bba5b2a1b2b9a2b2a4a3a2b3beb8f9b4b8f9a2bc">[email&#160;protected]</span></a>
+          <a href="/cdn-cgi/l/email-protection#335a5d555c73575a545a47525f415645565d4656404746575a5c1d505c1d4658" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="20494e464f604449474954414c524556454e554553545544494f0e434f0e554b">[email&#160;protected]</span></a>
           <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
           <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
         </div>

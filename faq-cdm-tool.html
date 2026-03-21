@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDM Digital Audit Tool FAQ — CDM 2015 Compliance Questions Answered | Digital Revenue Studio</title>
+  <meta name="description" content="Common questions about the CDM Digital Audit Tool — what CDM 2015 requires, what the tool covers, how it works offline and who it is for. Built by Atker Consultancy Services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;--ac:#e5630b;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);position:sticky;top:0;z-index:100;}
+    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:28px;}
+    .topbar-nav{display:flex;gap:24px;}
+    .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:20px 28px 40px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+    .mobile-menu-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.5rem;line-height:1;}
+    .mobile-links{display:flex;flex-direction:column;gap:6px;flex:1;}
+    .mobile-links a{color:rgba(255,255,255,0.7);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.04em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-links a:hover{color:var(--gold);}
+    .mobile-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:28px;}
+    @media(max-width:860px){.hamburger{display:flex;}.topbar-nav{display:none!important;}.topbar-cta{display:none!important;}}
+    .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;border-top:3px solid var(--ac);}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(229,99,11,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(229,99,11,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-glow{position:absolute;top:-80px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(229,99,11,0.1) 0%,transparent 65%);pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
+    .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+    .faq-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+    .topic-tag{background:rgba(229,99,11,0.12);border:1px solid rgba(229,99,11,0.28);color:#f0935a;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
+    .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;}
+    .layout{max-width:1040px;margin:0 auto;padding:52px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
+    @media(max-width:820px){.layout{grid-template-columns:1fr;padding:40px 24px;}.sidebar{position:static!important;}}
+    .article p{font-size:0.97rem;margin-bottom:20px;color:var(--text-body);line-height:1.85;}
+    .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin:40px 0 14px;padding-top:16px;border-top:2px solid var(--border);}
+    .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
+    .article h2:first-child{margin-top:0;border-top:none;padding-top:0;}
+    .article strong{color:var(--text-dark);font-weight:600;}
+    .article ul{margin:0 0 20px 20px;}
+    .article ul li{margin-bottom:8px;font-size:0.96rem;}
+    .faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden;}
+    .faq-q{background:var(--white);padding:18px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+    .faq-q::after{content:'↓';color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:2px;}
+    .faq-a{background:var(--warm);padding:16px 22px;border-top:1px solid var(--border);font-size:0.92rem;color:var(--text-body);line-height:1.8;}
+    .faq-a p{margin:0 0 10px;}.faq-a p:last-child{margin-bottom:0;}
+    .faq-a strong{color:var(--text-dark);}
+    .faq-a ul{margin:8px 0 0 18px;}
+    .faq-a ul li{margin-bottom:6px;}
+    .highlight{background:var(--gold-pale);border:1px solid rgba(245,166,35,0.3);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 6px 6px 0;margin:24px 0;}
+    .highlight p{margin:0;font-size:0.92rem;color:var(--text-dark);}
+    .phase-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;}
+    @media(max-width:600px){.phase-grid{grid-template-columns:1fr;}}
+    .phase-card{border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+    .phase-header{padding:12px 16px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);}
+    .phase-pre .phase-header{background:rgba(229,99,11,0.08);color:var(--ac);}
+    .phase-con .phase-header{background:rgba(46,139,74,0.08);color:var(--bright);}
+    .phase-items{padding:12px 16px;list-style:none;}
+    .phase-items li{font-size:0.82rem;color:var(--text-body);margin-bottom:6px;padding-left:14px;position:relative;}
+    .phase-items li::before{content:'›';position:absolute;left:0;color:var(--text-muted);}
+    .verdict-box{background:var(--dark);border-radius:8px;padding:28px 32px;margin:32px 0;}
+    .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
+    .cta-box{background:rgba(229,99,11,0.06);border:1px solid rgba(229,99,11,0.18);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
+    .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text-dark);margin-bottom:8px;}
+    .cta-box p{font-size:0.88rem;color:var(--text-muted);margin-bottom:18px;}
+    .cta-btn{display:inline-block;background:var(--ac);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
+    .related-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:24px 0;text-decoration:none;}
+    .related-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ac);margin-bottom:3px;}
+    .related-title{font-size:0.88rem;color:var(--text-dark);font-weight:500;}
+    .sidebar{position:sticky;top:24px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
+    .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .sidebar-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px;}
+    .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:3px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;transition:opacity 0.2s;}
+    .sidebar-btn:last-child{margin-bottom:0;}
+    .sidebar-btn:hover{opacity:0.85;}
+    .ac-btn{background:var(--ac);color:var(--white);}
+    .dark-btn{background:var(--dark);color:var(--white);}
+    .toc-list{list-style:none;}
+    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+    .toc-list li:last-child{border-bottom:none;}
+    .toc-list a{color:var(--mid);text-decoration:none;font-weight:500;}
+    .toc-list a:hover{color:var(--gold-dark);}
+    .qf-list{list-style:none;}
+    .qf-item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+    .qf-item:last-child{border-bottom:none;}
+    .qf-val.green{color:var(--bright);font-weight:600;}
+    .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
+    .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;}
+    .footer-links a:hover{color:var(--gold);}
+    .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-brand">DIGITAL REVENUE STUDIO</span>
+      <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+    </div>
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-cta">Follow the Studio</a>
+  </div>
+  <script>document.getElementById('hamburger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');});</script>
+
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="faq-tag">FAQ</span>
+        <span class="topic-tag">CDM 2015 &mdash; Atker Consultancy</span>
+      </div>
+      <h1>CDM Digital Audit Tool —<br /><em>Questions Answered</em></h1>
+      <p class="hero-sub">What CDM 2015 requires on a construction project, what the audit tool covers, how it works offline, and who it is built for.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <article class="article">
+
+      <h2 id="what">What Is <em>CDM 2015?</em></h2>
+
+      <p>CDM stands for the Construction (Design and Management) Regulations 2015. It is the UK's principal health and safety legislation governing construction projects. CDM 2015 places legal duties on clients, principal designers, principal contractors, contractors and workers to plan, manage and monitor construction work so that risks to health and safety are properly controlled throughout the project lifecycle.</p>
+
+      <p>The regulations apply to virtually all construction work in the UK — from small domestic extensions to major commercial builds. Non-compliance can result in enforcement action by the HSE, project delays, and in serious cases, prosecution.</p>
+
+      <div class="highlight">
+        <p><strong>The two main phases under CDM 2015:</strong> The Pre-Construction phase covers planning, design and pre-start activities. The Construction phase covers on-site works through to practical completion. Each phase has distinct legal requirements that must be documented and evidenced.</p>
+      </div>
+
+      <h2 id="tool">What Does the <em>CDM Digital Audit Tool Do?</em></h2>
+
+      <p>The CDM Digital Audit Tool is a browser-based compliance checklist built for construction professionals. It digitises the CDM 2015 audit process — replacing paper-based checklists with a structured, interactive tool that works on any device, offline, with no software installation or subscription required.</p>
+
+      <p>It was built by Atker Consultancy Services, a project management consultancy, for use on live construction projects. It reflects CDM 2015 requirements as applied in practice.</p>
+
+      <div class="phase-grid">
+        <div class="phase-card phase-pre">
+          <div class="phase-header">Pre-Start Phase</div>
+          <ul class="phase-items">
+            <li>F10 notification &amp; key personnel</li>
+            <li>SHE Plan &amp; Construction Phase Plan</li>
+            <li>Pre-Construction SHE information issued</li>
+            <li>Meetings &amp; site visit schedule</li>
+            <li>Programme &amp; enabling works confirmation</li>
+            <li>Design freeze &amp; contractor approvals</li>
+          </ul>
+        </div>
+        <div class="phase-card phase-con">
+          <div class="phase-header">Construction Phase</div>
+          <ul class="phase-items">
+            <li>Site establishment &amp; access</li>
+            <li>Site supervision &amp; documentation</li>
+            <li>Management &amp; risk register</li>
+            <li>Welfare facilities compliance</li>
+            <li>Subcontractor competency checks</li>
+            <li>Photo evidence &amp; action log</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="faq">Common <em>Questions</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Does the tool work without an internet connection?</div>
+        <div class="faq-a"><p>Yes. The CDM Digital Audit Tool is fully offline-capable. Once loaded in a browser it does not require a network connection to operate. This is particularly useful on construction sites where connectivity is unreliable. Completed audits can be exported to PDF at any point.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What devices does it work on?</div>
+        <div class="faq-a"><p>Any device with a modern web browser — desktop, laptop, tablet or mobile. No app download, no installation, no platform dependency. It has been tested on Chrome, Safari, Firefox and Edge. The layout is responsive and usable on a smartphone screen on-site.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How many checklist items does it cover?</div>
+        <div class="faq-a"><p>45 items across the Pre-Start and Construction Phase checklists, organised into logical sections. Each item is mapped to the relevant CDM 2015 requirement and includes timing guidance — either pre-start/mobilisation or a construction phase check point.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I attach photo evidence?</div>
+        <div class="faq-a"><p>Yes. The tool includes embedded photo evidence functionality allowing you to capture or upload images against specific checklist items. Photos are stored locally within the session and included in the PDF export, producing a single audit document containing both checklist status and supporting visual evidence.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the action log?</div>
+        <div class="faq-a"><p>The action log is a dedicated section for recording outstanding items, remedial actions and follow-up notes that arise during an audit. It sits alongside the Pre-Start and Construction Phase checklists as a third tab in the tool. Action log entries are included in the PDF export alongside the checklist results.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Who is the tool designed for?</div>
+        <div class="faq-a">
+          <p>The tool is built for professionals with CDM 2015 duties on a construction project, including:</p>
+          <ul>
+            <li>Principal Contractors conducting site audits</li>
+            <li>Principal Designers reviewing pre-construction compliance</li>
+            <li>Project Managers carrying out CDM health checks</li>
+            <li>Client Representatives monitoring contractor compliance</li>
+            <li>CDM Coordinators and SHE Advisors</li>
+          </ul>
+          <p>It assumes familiarity with CDM 2015 and construction project structures. It is a professional audit tool, not an introductory guide to the regulations.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does the tool replace a CDM Coordinator or SHE Advisor?</div>
+        <div class="faq-a"><p>No. The tool is an audit and documentation aid — it structures and evidences the compliance checking process. It does not provide legal advice, substitute for professional CDM expertise, or replace the judgement of a qualified SHE professional. It makes the audit process faster and more consistent, not automatic.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is this a one-off purchase or a subscription?</div>
+        <div class="faq-a"><p>One-off purchase at £14.99 via Payhip — a single-user licence with no subscription, no renewal and no recurring fees. Once purchased it is yours to use on your own projects. It is not licensed for redistribution or resale.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How does the PDF export work?</div>
+        <div class="faq-a"><p>At any point during or after completing an audit, you can generate a PDF report from within the tool. The export includes the project title, checklist results for both phases, any photo evidence attached, and the action log. The PDF is generated locally in the browser — no data is sent to any server.</p></div>
+      </div>
+
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" class="related-link">
+        <div>
+          <div class="related-label">Atker Consultancy &mdash; Case Study</div>
+          <div class="related-title">How DRS built the CDM Digital Audit Tool — from brief to first sale &rarr;</div>
+        </div>
+      </a>
+
+      <div class="verdict-box">
+        <div class="verdict-label">Who This Is For</div>
+        <p>Construction professionals who conduct CDM 2015 audits and want to replace paper checklists with a structured, evidence-ready digital tool that works on any device, offline, and exports to a clean PDF report. Built by practitioners at Atker Consultancy Services. Priced for independent use.</p>
+      </div>
+
+      <div class="cta-box">
+        <h3>Buy the CDM Digital Audit Tool</h3>
+        <p>£14.99 &mdash; single-user licence. No subscription. Works offline on any device. Instant download via Payhip.</p>
+        <a href="https://payhip.com/DigitalRevenueStudio" target="_blank" rel="noopener" class="cta-btn">Buy on Payhip &mdash; £14.99 &rarr;</a>
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h4>On This Page</h4>
+        <ul class="toc-list">
+          <li><a href="#what">What is CDM 2015?</a></li>
+          <li><a href="#tool">What the tool covers</a></li>
+          <li><a href="#faq">Common questions</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Tool at a Glance</h4>
+        <ul class="qf-list">
+          <li class="qf-item"><span>Price</span><span class="qf-val">£14.99</span></li>
+          <li class="qf-item"><span>Licence</span><span class="qf-val">Single-user</span></li>
+          <li class="qf-item"><span>Subscription</span><span class="qf-val green">None</span></li>
+          <li class="qf-item"><span>Works offline</span><span class="qf-val green">Yes</span></li>
+          <li class="qf-item"><span>Checklist items</span><span class="qf-val">45</span></li>
+          <li class="qf-item"><span>PDF export</span><span class="qf-val green">Included</span></li>
+          <li class="qf-item"><span>Photo evidence</span><span class="qf-val green">Included</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h4>Get the Tool</h4>
+        <a href="https://payhip.com/DigitalRevenueStudio" target="_blank" rel="noopener" class="sidebar-btn ac-btn">Buy on Payhip &mdash; £14.99</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" class="sidebar-btn dark-btn">Atker Case Study &rarr;</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+      <div class="footer-links">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html">Follow the Studio</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
+    </div>
+  </footer>
+
+</body>
+</html>

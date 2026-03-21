@@ -26,7 +26,7 @@
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
     
-    @media(max-width:860px){.topbar-nav{display:none;}.topbar{padding:12px 20px;}}
+    @media(max-width:860px){.topbar{padding:12px 20px;}}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
@@ -67,6 +67,27 @@
     .principle-card h4{{font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);margin-bottom:6px;}}
     .principle-card p{{font-size:0.82rem;color:var(--text-muted);line-height:1.7;margin:0;}}
     @media(max-width:720px){{.two-col{{grid-template-columns:1fr;}}.brand-strip{{grid-template-columns:1fr 1fr;}}.principle-grid{{grid-template-columns:1fr;}}}}
+  
+    /* MOBILE NAV */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:20px 28px 40px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+    .mobile-menu-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.5rem;line-height:1;}
+    .mobile-links{display:flex;flex-direction:column;gap:6px;flex:1;}
+    .mobile-links a{color:rgba(255,255,255,0.7);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.04em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-links a:hover{color:var(--gold);}
+    .mobile-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:28px;}
+    @media(max-width:860px){
+      .hamburger{display:flex;}
+      .topbar-nav{display:none!important;}
+      .topbar-cta{display:none!important;}
+    }
   </style>
 </head>
 <body>
@@ -150,9 +171,9 @@
     <div class="section-label">How we work</div>
     <h2 class="section-title">Three principles</h2>
     <div class="principle-grid">
-      <div class="principle-card"><h4>Build in the open</h4><p>Everything we build is documented — the process, the tools, the numbers. Not after we have succeeded but while it is happening.</p></div>
-      <div class="principle-card"><h4>Free tools first</h4><p>Every brand starts with zero paid tools. GitHub Pages, website, Sender free tier. The budget is not the barrier. The work is.</p></div>
-      <div class="principle-card"><h4>Audience before revenue</h4><p>We do not monetise before there is an audience worth monetising. Build trust first. Revenue follows when the audience trusts what you are doing.</p></div>
+      <div class="principle-card"><h4>Build in the open</h4><p>We document the process, the tools and the numbers as they happen — not after the fact. That applies from day one, whether a brand is one week old or one year old.</p></div>
+      <div class="principle-card"><h4>Free tools first</h4><p>Every brand starts with zero paid tools. GitHub Pages, Sender free tier, Payhip free plan. A small budget is not the barrier to starting — the work is. We prove it with every build.</p></div>
+      <div class="principle-card"><h4>Audience before revenue</h4><p>We do not push for revenue before there is an audience worth serving. This is true whether you are three months in or three years in. Trust is the asset. Revenue follows it.</p></div>
     </div>
   </div>
 

@@ -26,7 +26,7 @@
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
     
-    @media(max-width:860px){.topbar-nav{display:none;}.topbar{padding:12px 20px;}}
+    @media(max-width:860px){.topbar{padding:12px 20px;}}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
@@ -79,6 +79,27 @@
     .cta-band h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--dark);margin-bottom:4px;}
     .cta-band p{font-size:0.9rem;color:rgba(10,31,20,0.65);margin:0;}
     @media(max-width:720px){{.services-grid{{grid-template-columns:1fr;}}.process-grid{{grid-template-columns:1fr 1fr;}}.cta-band{{flex-direction:column;text-align:center;}}}}
+  
+    /* MOBILE NAV */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:20px 28px 40px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+    .mobile-menu-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.5rem;line-height:1;}
+    .mobile-links{display:flex;flex-direction:column;gap:6px;flex:1;}
+    .mobile-links a{color:rgba(255,255,255,0.7);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.04em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-links a:hover{color:var(--gold);}
+    .mobile-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:28px;}
+    @media(max-width:860px){
+      .hamburger{display:flex;}
+      .topbar-nav{display:none!important;}
+      .topbar-cta{display:none!important;}
+    }
   </style>
 </head>
 <body>
@@ -113,7 +134,7 @@
   <div style="margin-bottom:48px;">
     <div class="section-label">What we do</div>
     <h2 class="section-title">Content creation services for <em>brands that mean business</em></h2>
-    <p class="section-sub">We are not a traditional agency. We are a studio that builds, tests and documents real digital brands. Every service we offer we have delivered for our own brands first — which means we know what works, what does not and why.</p>
+    <p class="section-sub">We are not a traditional agency. We are a studio that builds and documents real digital brands. We have four active clients — each at a different stage of their digital build. Here is what we have delivered so far.</p>
   </div>
 
   <div class="services-grid">
@@ -197,9 +218,9 @@
   </div>
 
   <div style="margin-bottom:48px;">
-    <div class="section-label">Proof of work</div>
+    <div class="section-label">What we have delivered</div>
     <h2 class="section-title">We built it for ourselves <em>first</em></h2>
-    <p class="section-sub">Every service we offer has been applied to our own brands. The case studies below are not hypothetical — they are live brands with real audiences, real content and real results.</p>
+    <p class="section-sub">Four clients. Four different briefs. All built from zero using the same honest approach — no inflated claims, no overpromising, no brand names shared without permission.</p>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:0;">
       <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 3px 3px 0;padding:16px 18px;text-decoration:none;transition:transform 0.15s,box-shadow 0.15s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(10,31,20,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <div><div style="font-family:'Syne',sans-serif;font-weight:800;font-size:0.92rem;color:var(--text-dark);margin-bottom:3px;">Mavericks Adventures</div><div style="font-size:0.78rem;color:var(--text-muted);">Logo &bull; Website &bull; Social &bull; Blogs &bull; KDP publishing</div></div>

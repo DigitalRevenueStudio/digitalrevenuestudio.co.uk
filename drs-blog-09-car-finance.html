@@ -107,6 +107,27 @@
     .footer-tag{font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,0.35)!important;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
     @media(max-width:640px){.topbar,.layout,.hero{padding-left:20px;padding-right:20px;}.topbar-nav{display:none;}}
+  
+    /* MOBILE NAV */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:20px 28px 40px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+    .mobile-menu-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.5rem;line-height:1;}
+    .mobile-links{display:flex;flex-direction:column;gap:6px;flex:1;}
+    .mobile-links a{color:rgba(255,255,255,0.7);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.04em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-links a:hover{color:var(--gold);}
+    .mobile-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:28px;}
+    @media(max-width:860px){
+      .hamburger{display:flex;}
+      .topbar-nav{display:none!important;}
+      .topbar-cta{display:none!important;}
+    }
   </style>
 </head>
 <body>
@@ -275,7 +296,7 @@
 
       <p>I will update this post when the FCA confirms the redress scheme and when I have actual numbers from my own three agreements. The honest answer right now is that nobody knows what the payouts will look like until the scheme is finalised &mdash; expected around end of May 2026.</p>
 
-      <p>Both the council tax refund and this car finance process sit under Test 08 &mdash; Earn While You Spend. The principle is the same: before chasing new income, make sure you are not already losing money you do not need to lose.</p>
+      <p>Both the council tax refund and this car finance process sit under . The principle is the same: before chasing new income, make sure you are not already losing money you do not need to lose.</p>
 
       <p>For further detail on the background and latest FCA developments, MoneySavingExpert.com is the most comprehensive resource available.</p>
 
@@ -309,7 +330,7 @@
       <div class="sidebar-card">
         <div class="sidebar-head"><h4>Related</h4></div>
         <div class="sidebar-body">
-          <p>Also in Test 08 &mdash; how I got a £1,500 council tax refund.</p>
+          <p>Also in £1,500 council tax refund.</p>
           <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-7-council-tax.html" class="sidebar-btn">Council Tax Refund &rarr;</a>
         </div>
       </div>

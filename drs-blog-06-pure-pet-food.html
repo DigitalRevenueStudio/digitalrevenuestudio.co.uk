@@ -106,6 +106,27 @@
     .footer p { color: rgba(255,255,255,0.3); font-size: 0.78rem; margin-top: 6px; }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  
+    /* MOBILE NAV */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:20px 28px 40px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;}
+    .mobile-menu-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.5);font-size:1.5rem;line-height:1;}
+    .mobile-links{display:flex;flex-direction:column;gap:6px;flex:1;}
+    .mobile-links a{color:rgba(255,255,255,0.7);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.04em;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mobile-links a:hover{color:var(--gold);}
+    .mobile-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:28px;}
+    @media(max-width:860px){
+      .hamburger{display:flex;}
+      .topbar-nav{display:none!important;}
+      .topbar-cta{display:none!important;}
+    }
   </style>
 </head>
 <body>
@@ -129,7 +150,7 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">Affiliate Review &mdash; Test 04</div>
+      <div class="hero-eyebrow">Affiliate Review</div>
       <h1>We Tried Pure Pet Food for Our Cockapoo &mdash; <em>Honest Review</em></h1>
       <p class="hero-sub">My wife was impressed before the first bag was empty. Here is what happened, what we noticed and what this has to do with building an affiliate income stream.</p>
       <div class="hero-meta">
@@ -150,10 +171,10 @@
 
       <div class="experiment-tag">
         <span class="experiment-tag-dot"></span>
-        <span>Test 04 &mdash; Affiliate Marketing &mdash; Live</span>
+        <span>&mdash; Live</span>
       </div>
 
-      <p>Part of documenting these side hustle experiments honestly means including the affiliate posts alongside the bigger experiment updates. Test 04 is affiliate marketing &mdash; embedding genuine product recommendations naturally within content. This is the first one.</p>
+      <p>Honest documentation means including genuine affiliate recommendations alongside studio work. This is how DRS embeds product recommendations naturally within content — real products, real experience, full disclosure.</p>
 
       <p>We have a cockapoo called Maverick. He is energetic, curious, and has been on standard dry kibble since we got him. My wife had been reading about fresh dog food for a while and after some research we decided to try Pure Pet Food. This is what happened.</p>
 
@@ -208,14 +229,14 @@
 
       <h2 id="affiliate">The Affiliate Angle &mdash; Why This Post Exists</h2>
 
-      <p>Test 04 in the DRS experiment log is affiliate marketing. The premise is simple: recommend products we have genuinely used and rate, embed affiliate links naturally within honest reviews, and document whether this generates any income over time.</p>
+      <p>part of the DRS studio work is affiliate marketing. The premise is simple: recommend products we have genuinely used and rate, embed affiliate links naturally within honest reviews, and document whether this generates any income over time.</p>
 
       <p>Pure Pet Food is the first product in this test because it is the first product we have tried, been genuinely impressed by and felt comfortable recommending. The affiliate relationship came after the purchase, not before it. We would have ordered this regardless.</p>
 
       <p>The disclosure at the top of this post is not a legal formality. It is the whole point of how DRS operates. If we recommend something and earn from it, you know about it. If we do not rate it, we do not write about it.</p>
 
       <div class="exp-data">
-        <div class="exp-data-label">Test 04 &mdash; Affiliate Marketing &mdash; Current Data</div>
+        <div class="exp-data-label">&mdash; Current Data</div>
         <div class="exp-data-row"><span>Platforms live</span><span>Amazon Associates, Digistore24, Pure Pet Food (pending)</span></div>
         <div class="exp-data-row"><span>Products reviewed</span><span>1 (this post)</span></div>
         <div class="exp-data-row"><span>Revenue to date</span><span>&pound;0 &mdash; updating as data comes in</span></div>
@@ -229,7 +250,7 @@
         <a href="https://www.purepetfood.com/s/RICK73288/w" class="affiliate-btn">Get 50% Off First Box</a>
       </div>
 
-      <p style="font-family:'Lora',serif;font-style:italic;color:var(--text-muted);font-size:0.92rem;">Affiliate income data from this post will be updated in future experiment reports. If you are curious how the test develops, the free guide covers the full experiment setup and you will receive updates as they are published.</p>
+      <p style="font-family:'Lora',serif;font-style:italic;color:var(--text-muted);font-size:0.92rem;">Affiliate income data from this post is tracked and updated as results develop. Sign up for studio updates to follow along.</p>
 
     </article>
 
@@ -256,7 +277,7 @@
       <div class="sidebar-card">
         <div class="sidebar-head"><h4>The Experiment Log</h4></div>
         <div class="sidebar-body">
-          <p>This post is part of Test 04. Read the full experiment overview for all active tests and current numbers.</p>
+          <p>This post is part of the DRS studio documentation. Read the case studies for full context.</p>
           <a href="https://www.digitalrevenuestudio.co.uk" class="sidebar-btn">Read the Experiments</a>
         </div>
       </div>
