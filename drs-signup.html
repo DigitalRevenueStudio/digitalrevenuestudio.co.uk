@@ -26,7 +26,7 @@
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
     
-    @media(max-width:860px){.topbar{padding:12px 20px;}}}
+    @media(max-width:860px){.topbar{padding:12px 20px;}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
@@ -45,17 +45,17 @@
     .btn-primary:hover{background:#fdc84d;}
     .pullquote{border-left:3px solid var(--gold);padding:16px 24px;margin:28px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
     .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:var(--dark);margin:0;line-height:1.65;}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}
+    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}
     
-    .signup-center{{max-width:580px;margin:0 auto;text-align:center;padding:64px 40px;}}
-    .signup-center h2{{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);letter-spacing:-0.02em;margin-bottom:12px;}}
-    .signup-center p{{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.4);line-height:1.8;margin-bottom:28px;}}
-    .signup-benefits{{display:flex;flex-direction:column;gap:8px;text-align:left;margin-bottom:28px;}}
-    .signup-benefit{{display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:3px;padding:10px 14px;font-size:0.85rem;color:rgba(255,255,255,0.6);}}
-    .signup-benefit::before{{content:"›";color:var(--gold);font-weight:700;flex-shrink:0;}}
-    .die-note{{margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.2);}}
-    .die-note a{{color:rgba(255,255,255,0.35);}}
+    .signup-center{max-width:580px;margin:0 auto;text-align:center;padding:64px 40px;}
+    .signup-center h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);letter-spacing:-0.02em;margin-bottom:12px;}
+    .signup-center p{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.4);line-height:1.8;margin-bottom:28px;}
+    .signup-benefits{display:flex;flex-direction:column;gap:8px;text-align:left;margin-bottom:28px;}
+    .signup-benefit{display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:3px;padding:10px 14px;font-size:0.85rem;color:rgba(255,255,255,0.6);}
+    .signup-benefit::before{content:"›";color:var(--gold);font-weight:700;flex-shrink:0;}
+    .die-note{margin-top:20px;font-size:0.78rem;color:rgba(255,255,255,0.2);}
+    .die-note a{color:rgba(255,255,255,0.35);}
   
     /* MOBILE NAV */
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
@@ -94,6 +94,7 @@
         <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
       </div>
       <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 <section class="hero">

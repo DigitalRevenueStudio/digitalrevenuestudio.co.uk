@@ -26,7 +26,7 @@
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
     
-    @media(max-width:860px){.topbar{padding:12px 20px;}}}
+    @media(max-width:860px){.topbar{padding:12px 20px;}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
@@ -47,8 +47,8 @@
     .btn-dark:hover{background:var(--mid);}
     .pullquote{border-left:3px solid var(--gold);padding:16px 24px;margin:28px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
     .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:var(--dark);margin:0;line-height:1.65;}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}
+    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}
     
     .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:56px;}
     .service-card{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;}
@@ -78,7 +78,7 @@
     .cta-band{background:var(--gold);padding:40px;border-radius:3px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
     .cta-band h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--dark);margin-bottom:4px;}
     .cta-band p{font-size:0.9rem;color:rgba(10,31,20,0.65);margin:0;}
-    @media(max-width:720px){{.services-grid{{grid-template-columns:1fr;}}.process-grid{{grid-template-columns:1fr 1fr;}}.cta-band{{flex-direction:column;text-align:center;}}}}
+    @media(max-width:720px){.services-grid{grid-template-columns:1fr;}.process-grid{grid-template-columns:1fr 1fr;}.cta-band{flex-direction:column;text-align:center;}}
   
     /* MOBILE NAV */
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
@@ -117,6 +117,7 @@
         <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
       </div>
       <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 <section class="hero">

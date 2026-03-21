@@ -26,7 +26,7 @@
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
     
-    @media(max-width:860px){.topbar{padding:12px 20px;}}}
+    @media(max-width:860px){.topbar{padding:12px 20px;}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
     .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
@@ -45,28 +45,28 @@
     .btn-primary:hover{background:#fdc84d;}
     .pullquote{border-left:3px solid var(--gold);padding:16px 24px;margin:28px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
     .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:var(--dark);margin:0;line-height:1.65;}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}
+    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}
     
-    .two-col{{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:56px;}}
-    .about-body p{{font-size:0.95rem;color:var(--text-body);line-height:1.85;margin-bottom:18px;}}
-    .tl-item{{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}}
-    .tl-item:last-child{{border-bottom:none;}}
-    .tl-dot{{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px;}}
-    .tl-date{{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);min-width:64px;margin-top:2px;}}
-    .tl-text{{font-size:0.88rem;color:var(--text-body);line-height:1.65;}}
-    .tl-text strong{{color:var(--text-dark);}}
-    .brand-strip{{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0;}}
-    .brand-strip-card{{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:18px;text-align:center;text-decoration:none;transition:transform 0.2s;}}
-    .brand-strip-card:hover{{transform:translateY(-2px);}}
-    .brand-strip-dot{{width:10px;height:10px;border-radius:50%;margin:0 auto 10px;}}
-    .brand-strip-name{{font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text-dark);margin-bottom:4px;}}
-    .brand-strip-desc{{font-size:0.72rem;color:var(--text-muted);}}
-    .principle-grid{{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:0;}}
-    .principle-card{{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:20px;}}
-    .principle-card h4{{font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);margin-bottom:6px;}}
-    .principle-card p{{font-size:0.82rem;color:var(--text-muted);line-height:1.7;margin:0;}}
-    @media(max-width:720px){{.two-col{{grid-template-columns:1fr;}}.brand-strip{{grid-template-columns:1fr 1fr;}}.principle-grid{{grid-template-columns:1fr;}}}}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:56px;}
+    .about-body p{font-size:0.95rem;color:var(--text-body);line-height:1.85;margin-bottom:18px;}
+    .tl-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}
+    .tl-item:last-child{border-bottom:none;}
+    .tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+    .tl-date{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);min-width:64px;margin-top:2px;}
+    .tl-text{font-size:0.88rem;color:var(--text-body);line-height:1.65;}
+    .tl-text strong{color:var(--text-dark);}
+    .brand-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0;}
+    .brand-strip-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:18px;text-align:center;text-decoration:none;transition:transform 0.2s;}
+    .brand-strip-card:hover{transform:translateY(-2px);}
+    .brand-strip-dot{width:10px;height:10px;border-radius:50%;margin:0 auto 10px;}
+    .brand-strip-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text-dark);margin-bottom:4px;}
+    .brand-strip-desc{font-size:0.72rem;color:var(--text-muted);}
+    .principle-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:0;}
+    .principle-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:20px;}
+    .principle-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);margin-bottom:6px;}
+    .principle-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.7;margin:0;}
+    @media(max-width:720px){.two-col{grid-template-columns:1fr;}.brand-strip{grid-template-columns:1fr 1fr;}.principle-grid{grid-template-columns:1fr;}}
   
     /* MOBILE NAV */
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
@@ -105,6 +105,7 @@
         <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
       </div>
       <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 <section class="hero">
@@ -173,7 +174,7 @@
     <div class="principle-grid">
       <div class="principle-card"><h4>Build in the open</h4><p>We document the process, the tools and the numbers as they happen — not after the fact. That applies from day one, whether a brand is one week old or one year old.</p></div>
       <div class="principle-card"><h4>Free tools first</h4><p>Every brand starts with zero paid tools. GitHub Pages, Sender free tier, Payhip free plan. A small budget is not the barrier to starting — the work is. We prove it with every build.</p></div>
-      <div class="principle-card"><h4>Audience before revenue</h4><p>We do not push for revenue before there is an audience worth serving. This is true whether you are three months in or three years in. Trust is the asset. Revenue follows it.</p></div>
+      <div class="principle-card"><h4>Audience drives revenue</h4><p>We build the audience first because that is what makes revenue sustainable. Our job is to help you build an audience that trusts what you do — the commercial return follows from that foundation.</p></div>
     </div>
   </div>
 
