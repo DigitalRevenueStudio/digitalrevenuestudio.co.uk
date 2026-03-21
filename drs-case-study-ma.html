@@ -1,286 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" />
-  <title>Case Study — Mavericks Adventures | Digital Revenue Studio</title>
-  <meta name="description" content="How Digital Revenue Studio built Mavericks Adventures from scratch — logo, website, KDP publishing, blog content and social media for a children's book brand." />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
-  <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
-        :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
-    
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
-    .topbar-logo{height:34px;width:auto;display:block;}
-    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .topbar-right{display:flex;align-items:center;gap:24px;}
-    .topbar-nav{display:flex;gap:24px;align-items:center;}
-    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
-    .topbar-cta:hover{background:#fdc84d;}
-    
-    
-    .gold-bar{height:3px;background:var(--gold);width:100%;}
-    .hero{padding:72px 40px 80px;position:relative;overflow:hidden;}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
-    .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-    .hero-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:99px;}
-    .hero-back{font-size:0.78rem;text-decoration:none;display:flex;align-items:center;gap:5px;}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
-    .hero h1 em{font-family:'Lora',serif;font-style:italic;}
-    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;max-width:580px;line-height:1.75;}
-    .page-inner{max-width:1100px;margin:0 auto;padding:64px 40px;}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-    .one-col{max-width:720px;}
-    .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;}
-    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.015em;line-height:1.15;margin-bottom:10px;}
-    .section-title em{font-family:'Lora',serif;font-style:italic;color:var(--mid);}
-    .section-sub{font-size:0.95rem;color:var(--text-muted);margin-bottom:28px;line-height:1.75;}
-    p{font-size:0.95rem;color:var(--text-body);line-height:1.8;margin-bottom:16px;}
-    p:last-child{margin-bottom:0;}
-    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;}
-    .stat-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:18px;text-align:center;}
-    .stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;display:block;line-height:1;margin-bottom:4px;}
-    .stat-label{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
-    .deliverables{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:28px;}
-    .del-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);font-size:0.88rem;}
-    .del-row:last-child{border-bottom:none;}
-    .del-check{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;}
-    .del-label{color:var(--text-body);font-weight:500;}
-    .del-desc{color:var(--text-muted);font-size:0.82rem;margin-left:auto;}
-    .pullquote{border-left:3px solid var(--gold);padding:14px 20px;margin:24px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
-    .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:var(--dark);margin:0;line-height:1.65;}
-    .timeline{display:flex;flex-direction:column;gap:0;}
-    .tl-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}
-    .tl-item:last-child{border-bottom:none;}
-    .tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px;}
-    .tl-date{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);min-width:64px;margin-top:2px;}
-    .tl-text{font-size:0.88rem;color:var(--text-body);line-height:1.6;}
-    .tl-text strong{color:var(--text-dark);}
-    .next-cs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px;}
-    .next-cs a{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:3px;padding:14px 16px;text-decoration:none;font-size:0.82rem;font-weight:600;transition:border-color 0.15s;}
-    .next-cs a:hover{border-color:var(--gold);}
-    .btn-primary{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 26px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
-    .btn-primary:hover{background:#fdc84d;}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:720px){.two-col{grid-template-columns:1fr;}.stat-grid{grid-template-columns:1fr 1fr;}.next-cs{grid-template-columns:1fr;}.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
-    
-  
-    /* MOBILE NAV */
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
-    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
-    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-    .hamburger.open span:nth-child(2){opacity:0;}
-    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
-    .mobile-overlay.open{display:flex;}
-    .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-    .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
-    .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
-    .mobile-overlay-links{display:flex;flex-direction:column;}
-    .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
-    .mobile-overlay-links a:last-child{border-bottom:none;}
-    .mobile-overlay-links a:hover{color:var(--gold);}
-    .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
-    @media(max-width:860px){
-      .hamburger{display:flex;}
-      .topbar-nav{display:none!important;}
-      .topbar-cta{display:none!important;}
-    }
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" />
+ <title>Case Study — Mavericks Adventures | Digital Revenue Studio</title>
+ <meta name="description" content="How Digital Revenue Studio built Mavericks Adventures from scratch — logo, website, KDP publishing, blog content and social media for a children's book brand." />
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+ <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+ <style>
+ *{margin:0;padding:0;box-sizing:border-box;}
+ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+ :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+ 
+ .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
+ .topbar-logo{height:34px;width:auto;display:block;}
+ .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+ .topbar-right{display:flex;align-items:center;gap:24px;}
+ .topbar-nav{display:flex;gap:24px;align-items:center;}
+ .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+ .topbar-nav a:hover{color:var(--gold);}
+ .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+ .topbar-cta:hover{background:#fdc84d;}
+ 
+ 
+ .gold-bar{height:3px;background:var(--gold);width:100%;}
+ .hero{padding:72px 40px 80px;position:relative;overflow:hidden;}
+ .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+ .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;pointer-events:none;}
+ .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+ .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+ .hero-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:99px;}
+ .hero-back{font-size:0.78rem;text-decoration:none;display:flex;align-items:center;gap:5px;}
+ .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
+ .hero h1 em{font-family:'Lora',serif;font-style:italic;}
+ .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;max-width:580px;line-height:1.75;}
+ .page-inner{max-width:1100px;margin:0 auto;padding:64px 40px;}
+ .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+ .one-col{max-width:720px;}
+ .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;}
+ .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.015em;line-height:1.15;margin-bottom:10px;}
+ .section-title em{font-family:'Lora',serif;font-style:italic;color:var(--mid);}
+ .section-sub{font-size:0.95rem;color:var(--text-muted);margin-bottom:28px;line-height:1.75;}
+ p{font-size:0.95rem;color:var(--text-body);line-height:1.8;margin-bottom:16px;}
+ p:last-child{margin-bottom:0;}
+ .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;}
+ .stat-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:18px;text-align:center;}
+ .stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;display:block;line-height:1;margin-bottom:4px;}
+ .stat-label{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
+ .deliverables{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:28px;}
+ .del-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);font-size:0.88rem;}
+ .del-row:last-child{border-bottom:none;}
+ .del-check{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;}
+ .del-label{color:var(--text-body);font-weight:500;}
+ .del-desc{color:var(--text-muted);font-size:0.82rem;margin-left:auto;}
+ .pullquote{border-left:3px solid var(--gold);padding:14px 20px;margin:24px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
+ .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:var(--dark);margin:0;line-height:1.65;}
+ .timeline{display:flex;flex-direction:column;gap:0;}
+ .tl-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}
+ .tl-item:last-child{border-bottom:none;}
+ .tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+ .tl-date{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);min-width:64px;margin-top:2px;}
+ .tl-text{font-size:0.88rem;color:var(--text-body);line-height:1.6;}
+ .tl-text strong{color:var(--text-dark);}
+ .next-cs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px;}
+ .next-cs a{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:3px;padding:14px 16px;text-decoration:none;font-size:0.82rem;font-weight:600;transition:border-color 0.15s;}
+ .next-cs a:hover{border-color:var(--gold);}
+ .btn-primary{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 26px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+ .btn-primary:hover{background:#fdc84d;}
+ @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+ @media(max-width:720px){.two-col{grid-template-columns:1fr;}.stat-grid{grid-template-columns:1fr 1fr;}.next-cs{grid-template-columns:1fr;}.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
+ 
+ 
+ /* MOBILE NAV */
+ .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+ .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+ .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+ .hamburger.open span:nth-child(2){opacity:0;}
+ .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+ .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
+ .mobile-overlay.open{display:flex;}
+ .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
+ .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+ .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
+ .mobile-overlay-links{display:flex;flex-direction:column;}
+ .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+ .mobile-overlay-links a:last-child{border-bottom:none;}
+ .mobile-overlay-links a:hover{color:var(--gold);}
+ .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
+ @media(max-width:860px){
+ .hamburger{display:flex;}
+ .topbar-nav{display:none!important;}
+ .topbar-cta{display:none!important;}
+ }
+ </style>
 </head>
 <body>
-    <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
-      <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
-    </a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
+ <nav class="topbar">
+ <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
+ <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
+ </a>
+ <div class="topbar-right">
+ <div class="topbar-nav">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+ </div>
+ <button class="hamburger" id="hamburger" aria-label="Open menu"></button>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+ </div>
+ </nav>
 
-  <!-- MOBILE OVERLAY -->
-  <div class="mobile-overlay" id="mobileOverlay">
-    <div class="mobile-overlay-top">
-      <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
-      <button class="mobile-overlay-close" id="mobileClose">&times;</button>
-    </div>
-    <div class="mobile-overlay-links">
-      <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-    </div>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
-  </div>
-  <script>
-    (function(){
-      var btn = document.getElementById('hamburger');
-      var overlay = document.getElementById('mobileOverlay');
-      var close = document.getElementById('mobileClose');
-      if(btn && overlay && close){
-        btn.addEventListener('click', function(){ overlay.classList.add('open'); btn.classList.add('open'); });
-        close.addEventListener('click', function(){ overlay.classList.remove('open'); btn.classList.remove('open'); });
-      }
-    })();
-  </script>
+ <!-- MOBILE OVERLAY -->
+ <div class="mobile-overlay" id="mobileOverlay">
+ <div class="mobile-overlay-top">
+ <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
+ <button class="mobile-overlay-close" id="mobileClose">&times;</button>
+ </div>
+ <div class="mobile-overlay-links">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+ </div>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
+ </div>
+ <script>
+ (function(){
+ var btn = document.getElementById('hamburger');
+ var overlay = document.getElementById('mobileOverlay');
+ var close = document.getElementById('mobileClose');
+ if(btn && overlay && close){
+ btn.addEventListener('click', function(){ overlay.classList.add('open'); btn.classList.add('open'); });
+ close.addEventListener('click', function(){ overlay.classList.remove('open'); btn.classList.remove('open'); });
+ }
+ })();
+ </script>
 <section class="hero" style="background:var(--dark);">
-  <div class="hero-grid"></div>
-  <div class="hero-glow" style="background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 65%);"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="hero-tag" style="background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.3);color:var(--gold);">Case Study</span>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" class="hero-back" style="color:rgba(255,255,255,0.3);">&larr; All case studies</a>
-    </div>
-    <h1 style="color:var(--white);">Mavericks Adventures &mdash;<br />Building a children&rsquo;s book brand <em>from zero</em></h1>
-    <p class="hero-sub" style="color:rgba(255,255,255,0.45);">From dinner table idea to published book on Amazon KDP. Logo, website, social media, blog content and a growing character-led brand — all documented from day one.</p>
-  </div>
+ <div class="hero-grid"></div>
+ <div class="hero-glow" style="background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 65%);"></div>
+ <div class="hero-inner">
+ <div class="hero-eyebrow">
+ <span class="hero-tag" style="background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.3);color:var(--gold);">Case Study</span>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" class="hero-back" style="color:rgba(255,255,255,0.3);">&larr; All case studies</a>
+ </div>
+ <h1 style="color:var(--white);">Mavericks Adventures &mdash;<br />Building a children&rsquo;s book brand <em>from zero</em></h1>
+ <p class="hero-sub" style="color:rgba(255,255,255,0.45);">From dinner table idea to published book on Amazon KDP. Logo, website, social media, blog content and a growing character-led brand — all documented from day one.</p>
+ </div>
 </section>
 <div class="gold-bar"></div>
 
 <div class="page-inner">
-  <div style="display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start;margin-bottom:48px;">
-    <div class="stat-grid" style="margin-bottom:0;grid-template-columns:repeat(3,1fr);">
-      <div class="stat-card"><span class="stat-num" style="color:var(--gold);">Jan 2026</span><span class="stat-label">Brand launched</span></div>
-      <div class="stat-card"><span class="stat-num" style="color:var(--bright);">7</span><span class="stat-label">Blog posts live</span></div>
-      <div class="stat-card"><span class="stat-num" style="color:var(--gold);">Live</span><span class="stat-label">Google indexed</span></div>
-    </div>
-    <div style="text-align:center;">
-      <img src="where-is-maverick-cover.png" alt="Where Is Maverick? — children's book cover" 
-           style="max-width:200px;width:100%;border-radius:4px;box-shadow:0 8px 24px rgba(10,31,20,0.15);"
-           onerror="this.parentElement.innerHTML='<div style='background:var(--gold-pale);border:2px dashed var(--gold);border-radius:4px;padding:28px 16px;text-align:center;'><div style='font-family:Syne,sans-serif;font-weight:700;font-size:0.72rem;color:var(--gold-dark);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;'>Book Cover</div><div style='font-size:0.78rem;color:var(--text-muted);'>Upload where-is-maverick-cover.png to add book cover</div></div>'" />
-      <div style="font-size:0.75rem;color:var(--text-muted);margin-top:8px;font-style:italic;">Where Is Maverick? — Amazon KDP</div>
-    </div>
-  </div>
+ <div style="display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start;margin-bottom:48px;">
+ <div class="stat-grid" style="margin-bottom:0;grid-template-columns:repeat(3,1fr);">
+ <div class="stat-card"><span class="stat-num" style="color:var(--gold);">Jan 2026</span><span class="stat-label">Brand launched</span></div>
+ <div class="stat-card"><span class="stat-num" style="color:var(--bright);">7</span><span class="stat-label">Blog posts live</span></div>
+ <div class="stat-card"><span class="stat-num" style="color:var(--gold);">Live</span><span class="stat-label">Google indexed</span></div>
+ </div>
+ <div style="text-align:center;">
+ <img src="where-is-maverick-cover.png" alt="Where Is Maverick? — children's book cover" 
+ style="max-width:200px;width:100%;border-radius:4px;box-shadow:0 8px 24px rgba(10,31,20,0.15);"
+ onerror="this.parentElement.innerHTML='<div style='background:var(--gold-pale);border:2px dashed var(--gold);border-radius:4px;padding:28px 16px;text-align:center;'><div style='font-family:Syne,sans-serif;font-weight:700;font-size:0.72rem;color:var(--gold-dark);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;'>Book Cover</div><div style='font-size:0.78rem;color:var(--text-muted);'>Upload where-is-maverick-cover.png to add book cover</div></div>'" />
+ <div style="font-size:0.75rem;color:var(--text-muted);margin-top:8px;font-style:italic;">Where Is Maverick? — Amazon KDP</div>
+ </div>
+ </div>
 
-  <div class="two-col">
-    <div>
-      <div class="section-label" style="color:var(--gold-dark);">The brief</div>
-      <h2 class="section-title">A character before a brand</h2>
-      <p>Mavericks Adventures started as a question at the dinner table: could a real dog — Maverick, our cockapoo — become the central character of a children's book series? The answer was yes. The challenge was building a brand around a character rather than a product.</p>
-      <p>Most KDP publishing content treats the platform as a mechanism — upload, price, wait. The DRS approach was different: build the character as the primary asset, treat the book as the entry point to something larger, and document everything honestly.</p>
-      <div class="pullquote"><p>&ldquo;The character is the brand. The book is just the first thing you can buy.&rdquo;</p></div>
-      <p>We built the brand infrastructure first — logo, website, social identity — then published the book. Audience building and book publishing happened in parallel from week one.</p>
+ <div class="two-col">
+ <div>
+ <div class="section-label" style="color:var(--gold-dark);">The brief</div>
+ <h2 class="section-title">A character before a brand</h2>
+ <p>Mavericks Adventures started as a question at the dinner table: could a real dog — Maverick, our cockapoo — become the central character of a children's book series? The answer was yes. The challenge was building a brand around a character rather than a product.</p>
+ <p>Most KDP publishing content treats the platform as a mechanism — upload, price, wait. The DRS approach was different: build the character as the primary asset, treat the book as the entry point to something larger, and document everything honestly.</p>
+ <div class="pullquote"><p>&ldquo;The character is the brand. The book is just the first thing you can buy.&rdquo;</p></div>
+ <p>We built the brand infrastructure first — logo, website, social identity — then published the book. Audience building and book publishing happened in parallel from week one.</p>
 
-      <div style="margin-top:32px;">
-        <div class="section-label" style="color:var(--gold-dark);">What we built</div>
-        <h3 class="section-title" style="font-size:1.2rem;">Deliverables</h3>
-      </div>
-      <div class="deliverables">
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Brand identity &amp; logo</span><span class="del-desc">Character-led visual system</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Website — mavericksadventures.co.uk</span><span class="del-desc">GitHub Pages, Google indexed</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Amazon KDP publishing</span><span class="del-desc">Paperback + Kindle, UK &amp; US</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">7 blog posts live</span><span class="del-desc">SEO-targeted, GA4 tracked</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Email marketing via Sender</span><span class="del-desc">Separate MA Sender account</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Activity pack — hosted on GitHub</span><span class="del-desc">Free download, direct link</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Pinterest &amp; social content</span><span class="del-desc">Active, driving traffic</span></div>
-        <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">KDP CTA buttons throughout site</span><span class="del-desc">All four Amazon links live</span></div>
-      </div>
-    </div>
+ <div style="margin-top:32px;">
+ <div class="section-label" style="color:var(--gold-dark);">What we built</div>
+ <h3 class="section-title" style="font-size:1.2rem;">Deliverables</h3>
+ </div>
+ <div class="deliverables">
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Brand identity &amp; logo</span><span class="del-desc">Character-led visual system</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Website — mavericksadventures.co.uk</span><span class="del-desc">GitHub Pages, Google indexed</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Amazon KDP publishing</span><span class="del-desc">Paperback + Kindle, UK &amp; US</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">7 blog posts live</span><span class="del-desc">SEO-targeted, GA4 tracked</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Email marketing via Sender</span><span class="del-desc">Separate MA Sender account</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Activity pack — hosted on GitHub</span><span class="del-desc">Free download, direct link</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">Pinterest &amp; social content</span><span class="del-desc">Active, driving traffic</span></div>
+ <div class="del-row"><div class="del-check" style="background:var(--gold-pale);color:var(--gold-dark);">&#10003;</div><span class="del-label">KDP CTA buttons throughout site</span><span class="del-desc">All four Amazon links live</span></div>
+ </div>
+ </div>
 
-    <div>
-      <div class="section-label" style="color:var(--gold-dark);">How it developed</div>
-      <h3 class="section-title" style="font-size:1.2rem;">Timeline</h3>
-      <div class="timeline">
-        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Jan 2026</span><span class="tl-text"><strong>Brand concept and logo developed.</strong> Character identity established. Maverick confirmed as the lead character across all future titles.</span></div>
-        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Jan 2026</span><span class="tl-text"><strong>Where Is Maverick? published on Amazon KDP.</strong> Paperback and Kindle. Available UK, US and international from day one.</span></div>
-        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Feb 2026</span><span class="tl-text"><strong>Website live at mavericksadventures.co.uk.</strong> IONOS DNS connected to GitHub Pages. GA4 and Google Search Console active.</span></div>
-        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Feb 2026</span><span class="tl-text"><strong>Sender email account set up.</strong> Separate from DRS account. Landing page and thank you page live.</span></div>
-        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Mar 2026</span><span class="tl-text"><strong>7 blog posts published.</strong> Activity pack hosted on GitHub with direct download. Pinterest active.</span></div>
-        <div class="tl-item"><div class="tl-dot" style="background:var(--bright);"></div><span class="tl-date">Ongoing</span><span class="tl-text"><strong>Book 2 in development.</strong> Series expansion planned. Character IP building continues.</span></div>
-      </div>
+ <div>
+ <div class="section-label" style="color:var(--gold-dark);">How it developed</div>
+ <h3 class="section-title" style="font-size:1.2rem;">Timeline</h3>
+ <div class="timeline">
+ <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Jan 2026</span><span class="tl-text"><strong>Brand concept and logo developed.</strong> Character identity established. Maverick confirmed as the lead character across all future titles.</span></div>
+ <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Jan 2026</span><span class="tl-text"><strong>Where Is Maverick? published on Amazon KDP.</strong> Paperback and Kindle. Available UK, US and international from day one.</span></div>
+ <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Feb 2026</span><span class="tl-text"><strong>Website live at mavericksadventures.co.uk.</strong> IONOS DNS connected to GitHub Pages. GA4 and Google Search Console active.</span></div>
+ <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Feb 2026</span><span class="tl-text"><strong>Sender email account set up.</strong> Separate from DRS account. Landing page and thank you page live.</span></div>
+ <div class="tl-item"><div class="tl-dot" style="background:var(--gold);"></div><span class="tl-date">Mar 2026</span><span class="tl-text"><strong>7 blog posts published.</strong> Activity pack hosted on GitHub with direct download. Pinterest active.</span></div>
+ <div class="tl-item"><div class="tl-dot" style="background:var(--bright);"></div><span class="tl-date">Ongoing</span><span class="tl-text"><strong>Book 2 in development.</strong> Series expansion planned. Character IP building continues.</span></div>
+ </div>
 
-      <div style="margin-top:32px;background:var(--dark-2);border-radius:3px;padding:24px;">
-        <div class="section-label" style="color:var(--gold);margin-bottom:12px;">Tools used — all free</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Amazon KDP</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">GitHub Pages</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">IONOS (domain)</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Sender (free tier)</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Analytics 4</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Search Console</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Pinterest</span>
-          <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Payhip (affiliate)</span>
-        </div>
-      </div>
+ <div style="margin-top:32px;background:var(--dark-2);border-radius:3px;padding:24px;">
+ <div class="section-label" style="color:var(--gold);margin-bottom:12px;">Tools used — all free</div>
+ <div style="display:flex;flex-wrap:wrap;gap:8px;">
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Amazon KDP</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">GitHub Pages</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">IONOS (domain)</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Sender (free tier)</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Analytics 4</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Search Console</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Pinterest</span>
+ <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Payhip (affiliate)</span>
+ </div>
+ </div>
 
-      <div style="margin-top:20px;">
-        <a href="https://www.mavericksadventures.co.uk" class="btn-primary">Visit Mavericks Adventures &rarr;</a>
-      </div>
-      <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px;">
-        <a href="https://www.digitalrevenuestudio.co.uk/faq-kdp.html" style="display:flex;align-items:center;justify-content:space-between;background:var(--warm);border:1px solid var(--border);border-left:2px solid var(--gold-dark);border-radius:0 3px 3px 0;padding:8px 12px;text-decoration:none;"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);">KDP FAQ</span><span style="font-size:0.75rem;color:var(--gold-dark);">&#8594;</span></a>
-        <a href="https://www.digitalrevenuestudio.co.uk/faq-sender.html" style="display:flex;align-items:center;justify-content:space-between;background:var(--warm);border:1px solid var(--border);border-left:2px solid var(--gold-dark);border-radius:0 3px 3px 0;padding:8px 12px;text-decoration:none;"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);">Sender FAQ</span><span style="font-size:0.75rem;color:var(--gold-dark);">&#8594;</span></a>
-      </div>
-    </div>
-  </div>
+ <div style="margin-top:20px;">
+ <a href="https://www.mavericksadventures.co.uk" class="btn-primary">Visit Mavericks Adventures &rarr;</a>
+ </div>
+ <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/faq-kdp.html" style="display:flex;align-items:center;justify-content:space-between;background:var(--warm);border:1px solid var(--border);border-left:2px solid var(--gold-dark);border-radius:0 3px 3px 0;padding:8px 12px;text-decoration:none;"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);">KDP FAQ</span><span style="font-size:0.75rem;color:var(--gold-dark);">&#8594;</span></a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq-sender.html" style="display:flex;align-items:center;justify-content:space-between;background:var(--warm);border:1px solid var(--border);border-left:2px solid var(--gold-dark);border-radius:0 3px 3px 0;padding:8px 12px;text-decoration:none;"><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);">Sender FAQ</span><span style="font-size:0.75rem;color:var(--gold-dark);">&#8594;</span></a>
+ </div>
+ </div>
+ </div>
 
-  <div style="border-top:1px solid var(--border);padding-top:32px;margin-top:48px;">
-    <div class="section-label" style="color:var(--text-muted);margin-bottom:16px;">Other case studies</div>
-    <div class="next-cs">
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="border-left:3px solid #4a9eda;"><span style="color:var(--text-dark);">Whiteout Survival Guide &rarr;</span></a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="border-left:3px solid var(--bright);"><span style="color:var(--text-dark);">Atker Consultancy &rarr;</span></a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="border-left:3px solid #8B5CF6;"><span style="color:var(--text-dark);">Digital Income Experiment &rarr;</span></a>
-    </div>
-  </div>
+ <div style="border-top:1px solid var(--border);padding-top:32px;margin-top:48px;">
+ <div class="section-label" style="color:var(--text-muted);margin-bottom:16px;">Other case studies</div>
+ <div class="next-cs">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="border-left:3px solid #4a9eda;"><span style="color:var(--text-dark);">Whiteout Survival Guide &rarr;</span></a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="border-left:3px solid var(--bright);"><span style="color:var(--text-dark);">Atker Consultancy &rarr;</span></a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="border-left:3px solid #8B5CF6;"><span style="color:var(--text-dark);">The Digital Income Experiment &rarr;</span></a>
+ </div>
+ </div>
 </div>
-  <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Case Studies</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Case Studies</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Digital Income Experiment</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="/cdn-cgi/l/email-protection#432a2d252c03272a242a37222f312635262d3626303736272a2c6d202c6d3628" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="f79e999198b7939e909e83969b85928192998292848382939e98d99498d9829c">[email&#160;protected]</span></a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
-          <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
-        </div>
-      </div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
-      <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</span>
-      <span style="font-
+ <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
+ <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
+ </div>
+ </div>
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Case Studies</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">The Digital Income Experiment</a>
+ </div>
+ </div>
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
+ </div>
+ </div>
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="/cdn-cgi/l/email-protection#432a2d252c03272a242a37222f312635262d3626303736272a2c6d202c6d3628" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="f79e999198b7939e909e83969b85928192998292848382939e98d99498d9829c">[email&#160;protected]</span></a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
+ <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
+ </div>
+ </div>
+ </div>
+ <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+ <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</span>
+ <span style="font-

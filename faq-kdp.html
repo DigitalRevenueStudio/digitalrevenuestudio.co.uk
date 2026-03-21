@@ -1,266 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KDP FAQ — Kindle Direct Publishing Questions Answered | Digital Revenue Studio</title>
-  <meta name="description" content="Common questions about Kindle Direct Publishing — royalties, costs, timelines, and what KDP actually pays UK authors in 2026. Based on our real experience publishing on the platform." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
-    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
-    .topbar-right{display:flex;align-items:center;gap:28px;}
-    .topbar-nav{display:flex;gap:24px;}
-    .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
-    .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-80px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(46,139,74,0.1) 0%,transparent 65%);pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
-    .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
-    .faq-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-    .topic-tag{background:rgba(46,139,74,0.12);border:1px solid rgba(46,139,74,0.28);color:#6ec98a;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
-    .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
-    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;}
-    .layout{max-width:1040px;margin:0 auto;padding:52px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
-    @media(max-width:820px){.layout{grid-template-columns:1fr;padding:40px 24px;}.sidebar{position:static!important;}}
-    .article p{font-size:0.97rem;margin-bottom:20px;color:var(--text-body);line-height:1.85;}
-    .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin:40px 0 14px;padding-top:16px;border-top:2px solid var(--border);}
-    .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
-    .article h2:first-child{margin-top:0;border-top:none;padding-top:0;}
-    .article strong{color:var(--text-dark);font-weight:600;}
-    .faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden;}
-    .faq-q{background:var(--white);padding:18px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;gap:16px;}
-    .faq-q::after{content:'↓';color:var(--gold);font-size:1rem;flex-shrink:0;}
-    .faq-a{background:var(--warm);padding:16px 22px;border-top:1px solid var(--border);font-size:0.92rem;color:var(--text-body);line-height:1.8;}
-    .faq-a p{margin:0 0 10px;} .faq-a p:last-child{margin-bottom:0;}
-    .faq-a strong{color:var(--text-dark);}
-    .data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.88rem;}
-    .data-table th{background:var(--warm);padding:10px 14px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);}
-    .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-body);}
-    .data-table tr:last-child td{border-bottom:none;}
-    .data-table strong{color:var(--text-dark);}
-    .highlight{background:var(--gold-pale);border:1px solid rgba(245,166,35,0.3);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 6px 6px 0;margin:24px 0;}
-    .highlight p{margin:0;font-size:0.92rem;color:var(--text-dark);}
-    .pullquote{border-left:3px solid var(--gold);background:var(--gold-pale);padding:20px 24px;margin:28px 0;border-radius:0 4px 4px 0;}
-    .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.03rem;color:var(--text-dark);margin:0;line-height:1.7;}
-    .verdict-box{background:var(--dark);border-radius:8px;padding:28px 32px;margin:32px 0;}
-    .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-    .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
-    .cta-box{background:var(--dark-2);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
-    .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);margin-bottom:8px;}
-    .cta-box h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
-    .cta-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-    .cta-btn{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
-    .related-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:24px 0;text-decoration:none;}
-    .related-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:3px;}
-    .related-title{font-size:0.88rem;color:var(--text-dark);font-weight:500;}
-    .sidebar{position:sticky;top:24px;}
-    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
-    .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
-    .sidebar-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px;}
-    .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:3px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;transition:opacity 0.2s;}
-    .sidebar-btn:last-child{margin-bottom:0;}
-    .sidebar-btn:hover{opacity:0.85;}
-    .amber-btn{background:var(--gold-dark);color:var(--white);}
-    .dark-btn{background:var(--dark);color:var(--white);}
-    .toc-list{list-style:none;}
-    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
-    .toc-list li:last-child{border-bottom:none;}
-    .toc-list a{color:var(--mid);text-decoration:none;font-weight:500;}
-    .toc-list a:hover{color:var(--gold-dark);}
-    .qf-list{list-style:none;}
-    .qf-item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
-    .qf-item:last-child{border-bottom:none;}
-    .qf-val.green{color:var(--bright);font-weight:600;}
-    .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
-    .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
-    .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>KDP FAQ — Kindle Direct Publishing Questions Answered | Digital Revenue Studio</title>
+ <meta name="description" content="Common questions about Kindle Direct Publishing — royalties, costs, timelines, and what KDP actually pays UK authors in 2026. Based on our real experience publishing on the platform." />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+ <style>
+ :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+ *{margin:0;padding:0;box-sizing:border-box;}
+ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+ .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
+ .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+ .topbar-right{display:flex;align-items:center;gap:28px;}
+ .topbar-nav{display:flex;gap:24px;}
+ .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+ .topbar-nav a:hover{color:var(--gold);}
+ .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
+ .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
+ .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+ .hero-glow{position:absolute;top:-80px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(46,139,74,0.1) 0%,transparent 65%);pointer-events:none;}
+ .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
+ .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+ .faq-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+ .topic-tag{background:rgba(46,139,74,0.12);border:1px solid rgba(46,139,74,0.28);color:#6ec98a;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+ .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
+ .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+ .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;}
+ .layout{max-width:1040px;margin:0 auto;padding:52px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
+ @media(max-width:820px){.layout{grid-template-columns:1fr;padding:40px 24px;}.sidebar{position:static!important;}}
+ .article p{font-size:0.97rem;margin-bottom:20px;color:var(--text-body);line-height:1.85;}
+ .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin:40px 0 14px;padding-top:16px;border-top:2px solid var(--border);}
+ .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
+ .article h2:first-child{margin-top:0;border-top:none;padding-top:0;}
+ .article strong{color:var(--text-dark);font-weight:600;}
+ .faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden;}
+ .faq-q{background:var(--white);padding:18px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;gap:16px;}
+ .faq-q::after{content:'↓';color:var(--gold);font-size:1rem;flex-shrink:0;}
+ .faq-a{background:var(--warm);padding:16px 22px;border-top:1px solid var(--border);font-size:0.92rem;color:var(--text-body);line-height:1.8;}
+ .faq-a p{margin:0 0 10px;} .faq-a p:last-child{margin-bottom:0;}
+ .faq-a strong{color:var(--text-dark);}
+ .data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.88rem;}
+ .data-table th{background:var(--warm);padding:10px 14px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);}
+ .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-body);}
+ .data-table tr:last-child td{border-bottom:none;}
+ .data-table strong{color:var(--text-dark);}
+ .highlight{background:var(--gold-pale);border:1px solid rgba(245,166,35,0.3);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 6px 6px 0;margin:24px 0;}
+ .highlight p{margin:0;font-size:0.92rem;color:var(--text-dark);}
+ .pullquote{border-left:3px solid var(--gold);background:var(--gold-pale);padding:20px 24px;margin:28px 0;border-radius:0 4px 4px 0;}
+ .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.03rem;color:var(--text-dark);margin:0;line-height:1.7;}
+ .verdict-box{background:var(--dark);border-radius:8px;padding:28px 32px;margin:32px 0;}
+ .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+ .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
+ .cta-box{background:var(--dark-2);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
+ .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);margin-bottom:8px;}
+ .cta-box h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+ .cta-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+ .cta-btn{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
+ .related-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:24px 0;text-decoration:none;}
+ .related-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:3px;}
+ .related-title{font-size:0.88rem;color:var(--text-dark);font-weight:500;}
+ .sidebar{position:sticky;top:24px;}
+ .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
+ .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+ .sidebar-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px;}
+ .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:3px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;transition:opacity 0.2s;}
+ .sidebar-btn:last-child{margin-bottom:0;}
+ .sidebar-btn:hover{opacity:0.85;}
+ .amber-btn{background:var(--gold-dark);color:var(--white);}
+ .dark-btn{background:var(--dark);color:var(--white);}
+ .toc-list{list-style:none;}
+ .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+ .toc-list li:last-child{border-bottom:none;}
+ .toc-list a{color:var(--mid);text-decoration:none;font-weight:500;}
+ .toc-list a:hover{color:var(--gold-dark);}
+ .qf-list{list-style:none;}
+ .qf-item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+ .qf-item:last-child{border-bottom:none;}
+ .qf-val.green{color:var(--bright);font-weight:600;}
+ .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
+ .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+ .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
+ .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+ .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+ .footer-links a:hover{color:var(--gold);}
+ .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
+ </style>
 </head>
 <body>
 
-  <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
+ <nav class="topbar">
+ <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
+ <div class="topbar-right">
+ <div class="topbar-nav">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+ </div>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
+ </div>
+ </nav>
 
-  <header class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="hero-eyebrow">
-        <span class="faq-tag">FAQ</span>
-        <span class="topic-tag">KDP &amp; Self-Publishing</span>
-      </div>
-      <h1>KDP — <em>Common Questions</em><br />Answered Honestly</h1>
-      <p class="hero-sub">Royalties, costs, timelines and what Kindle Direct Publishing actually pays UK authors in 2026. Based on our own experience publishing on the platform.</p>
-    </div>
-  </header>
+ <header class="hero">
+ <div class="hero-grid"></div>
+ <div class="hero-glow"></div>
+ <div class="hero-inner">
+ <div class="hero-eyebrow">
+ <span class="faq-tag">FAQ</span>
+ <span class="topic-tag">KDP &amp; Self-Publishing</span>
+ </div>
+ <h1>KDP — <em>Common Questions</em><br />Answered Honestly</h1>
+ <p class="hero-sub">Royalties, costs, timelines and what Kindle Direct Publishing actually pays UK authors in 2026. Based on our own experience publishing on the platform.</p>
+ </div>
+ </header>
 
-  <div class="layout">
-    <article class="article">
+ <div class="layout">
+ <article class="article">
 
-      <h2 id="basics">The <em>Basics</em></h2>
+ <h2 id="basics">The <em>Basics</em></h2>
 
-      <div class="faq-item">
-        <div class="faq-q">What is KDP?</div>
-        <div class="faq-a"><p>Kindle Direct Publishing (KDP) is Amazon's self-publishing platform. It allows anyone to publish ebooks and paperbacks and sell them across Amazon's global marketplaces — including Amazon UK, US, and all other international stores. It is completely free to publish, and Amazon takes its cut only when a sale is made.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">What is KDP?</div>
+ <div class="faq-a"><p>Kindle Direct Publishing (KDP) is Amazon's self-publishing platform. It allows anyone to publish ebooks and paperbacks and sell them across Amazon's global marketplaces — including Amazon UK, US, and all other international stores. It is completely free to publish, and Amazon takes its cut only when a sale is made.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Do I need to pay anything to publish on KDP?</div>
-        <div class="faq-a"><p>No. There is no upfront cost to publish. You upload your files, set your price, choose your distribution and go live. Amazon deducts royalties and printing costs from each sale rather than charging you separately.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Do I need to pay anything to publish on KDP?</div>
+ <div class="faq-a"><p>No. There is no upfront cost to publish. You upload your files, set your price, choose your distribution and go live. Amazon deducts royalties and printing costs from each sale rather than charging you separately.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">What formats can I publish on KDP?</div>
-        <div class="faq-a"><p>KDP supports two main formats: Kindle ebooks and paperback print-on-demand. There is also a hardcover option through their expanded print programme. You can publish one or both formats for the same title — they each have separate royalty structures.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">What formats can I publish on KDP?</div>
+ <div class="faq-a"><p>KDP supports two main formats: Kindle ebooks and paperback print-on-demand. There is also a hardcover option through their expanded print programme. You can publish one or both formats for the same title — they each have separate royalty structures.</p></div>
+ </div>
 
-      <h2 id="royalties">Royalties — <em>The Real Numbers</em></h2>
+ <h2 id="royalties">Royalties — <em>The Real Numbers</em></h2>
 
-      <p>This is the part most KDP guides gloss over. The headline royalty rates sound straightforward until you account for printing costs. Here is how it actually breaks down for UK authors.</p>
+ <p>This is the part most KDP guides gloss over. The headline royalty rates sound straightforward until you account for printing costs. Here is how it actually breaks down for UK authors.</p>
 
-      <table class="data-table">
-        <tr><th>Format</th><th>Royalty Rate</th><th>How It Works</th></tr>
-        <tr><td><strong>Kindle ebook</strong></td><td><strong>70% or 35%</strong></td><td>70% applies between £1.99–£9.99. Below or above that range, it drops to 35%.</td></tr>
-        <tr><td><strong>Paperback</strong></td><td><strong>60% of list price</strong><br />minus printing cost</td><td>Printing cost is deducted first. Your royalty is 60% of what remains after the print cost is covered.</td></tr>
-      </table>
+ <table class="data-table">
+ <tr><th>Format</th><th>Royalty Rate</th><th>How It Works</th></tr>
+ <tr><td><strong>Kindle ebook</strong></td><td><strong>70% or 35%</strong></td><td>70% applies between £1.99–£9.99. Below or above that range, it drops to 35%.</td></tr>
+ <tr><td><strong>Paperback</strong></td><td><strong>60% of list price</strong><br />minus printing cost</td><td>Printing cost is deducted first. Your royalty is 60% of what remains after the print cost is covered.</td></tr>
+ </table>
 
-      <div class="highlight">
-        <p><strong>Real example from our KDP publishing:</strong> A children's paperback priced at £6.99 with a printing cost of approximately £4.19 returns a royalty of roughly £2.80 per sale — about 40% of the cover price in practice. The Kindle edition at £2.99 returns approximately £2.09 at the 70% rate.</p>
-      </div>
+ <div class="highlight">
+ <p><strong>Real example from our KDP publishing:</strong> A children's paperback priced at £6.99 with a printing cost of approximately returns a royalty of roughly per sale — about 40% of the cover price in practice. The Kindle edition at £2.99 returns approximately at the 70% rate.</p>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Why are children's book royalties lower than text-only books?</div>
-        <div class="faq-a"><p>Children's books with full-colour interior pages have significantly higher printing costs than text-only paperbacks. That printing cost is deducted before your 60% royalty is calculated, which reduces the net return per sale. The more colour pages, the higher the printing cost and the lower your net royalty at any given price point.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Why are children's book royalties lower than text-only books?</div>
+ <div class="faq-a"><p>Children's books with full-colour interior pages have significantly higher printing costs than text-only paperbacks. That printing cost is deducted before your 60% royalty is calculated, which reduces the net return per sale. The more colour pages, the higher the printing cost and the lower your net royalty at any given price point.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">When does KDP pay out?</div>
-        <div class="faq-a"><p>KDP pays royalties approximately 60 days after the end of the month in which the sale occurs. So a sale in January is paid in late March. Payments are made by BACS bank transfer for UK authors once you reach the minimum threshold (typically £10 for bank transfer).</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">When does KDP pay out?</div>
+ <div class="faq-a"><p>KDP pays royalties approximately 60 days after the end of the month in which the sale occurs. So a sale in January is paid in late March. Payments are made by BACS bank transfer for UK authors once you reach the minimum threshold (typically £10 for bank transfer).</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Can I see sales data in real time?</div>
-        <div class="faq-a"><p>Yes. KDP provides a real-time sales dashboard that shows units sold, royalties earned and orders. The data updates continuously, though royalties are marked as estimated until the payment period closes.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Can I see sales data in real time?</div>
+ <div class="faq-a"><p>Yes. KDP provides a real-time sales dashboard that shows units sold, royalties earned and orders. The data updates continuously, though royalties are marked as estimated until the payment period closes.</p></div>
+ </div>
 
-      <h2 id="discovery">Discovery and <em>What Actually Drives Sales</em></h2>
+ <h2 id="discovery">Discovery and <em>What Actually Drives Sales</em></h2>
 
-      <div class="faq-item">
-        <div class="faq-q">Will Amazon automatically promote my book?</div>
-        <div class="faq-a"><p>Not in the early stages. Amazon's algorithm rewards books that are already selling — it surfaces titles with reviews, consistent sales velocity and strong keyword matching. A new book with no reviews and no initial sales traction gets minimal organic visibility. You need to drive initial traffic through your own channels, which creates the social proof the algorithm then amplifies.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Will Amazon automatically promote my book?</div>
+ <div class="faq-a"><p>Not in the early stages. Amazon's algorithm rewards books that are already selling — it surfaces titles with reviews, consistent sales velocity and strong keyword matching. A new book with no reviews and no initial sales traction gets minimal organic visibility. You need to drive initial traffic through your own channels, which creates the social proof the algorithm then amplifies.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">How important are keywords on KDP?</div>
-        <div class="faq-a"><p>Extremely. Amazon is a search engine. The seven keyword fields and two category selections you choose during the publishing setup directly determine whether your book appears in relevant searches. Choosing broad, generic keywords results in low visibility in a competitive space. Researching specific, lower-competition phrases that your target reader is actually searching is one of the highest-leverage activities in KDP publishing.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">How important are keywords on KDP?</div>
+ <div class="faq-a"><p>Extremely. Amazon is a search engine. The seven keyword fields and two category selections you choose during the publishing setup directly determine whether your book appears in relevant searches. Choosing broad, generic keywords results in low visibility in a competitive space. Researching specific, lower-competition phrases that your target reader is actually searching is one of the highest-leverage activities in KDP publishing.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Do reviews matter?</div>
-        <div class="faq-a"><p>Yes, significantly. Reviews are one of the primary signals Amazon uses to assess whether a book is worth surfacing to more readers. Even three or four genuine reviews can meaningfully improve a book's ranking compared to zero. Getting early reviews from genuine readers — friends, family, early buyers — is a legitimate and important part of launching a KDP title.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Do reviews matter?</div>
+ <div class="faq-a"><p>Yes, significantly. Reviews are one of the primary signals Amazon uses to assess whether a book is worth surfacing to more readers. Even three or four genuine reviews can meaningfully improve a book's ranking compared to zero. Getting early reviews from genuine readers — friends, family, early buyers — is a legitimate and important part of launching a KDP title.</p></div>
+ </div>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/blog/kdp-self-publishing.html" class="related-link">
-        <div>
-          <div class="related-label">Our KDP Experiment</div>
-          <div class="related-title">What We Learned Publishing a Children's Book on KDP — Read the full story &rarr;</div>
-        </div>
-      </a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog/kdp-self-publishing.html" class="related-link">
+ <div>
+ <div class="related-label">Our KDP Experiment</div>
+ <div class="related-title">What We Learned Publishing a Children's Book on KDP — Read the full story &rarr;</div>
+ </div>
+ </a>
 
-      <h2 id="misc">Other Common Questions</h2>
+ <h2 id="misc">Other Common Questions</h2>
 
-      <div class="faq-item">
-        <div class="faq-q">Can I publish under a pen name?</div>
-        <div class="faq-a"><p>Yes. KDP allows you to set any author name for your published titles. Your legal name and payment details are associated with your KDP account but the name shown on the book and Amazon listing can be whatever you choose.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Can I publish under a pen name?</div>
+ <div class="faq-a"><p>Yes. KDP allows you to set any author name for your published titles. Your legal name and payment details are associated with your KDP account but the name shown on the book and Amazon listing can be whatever you choose.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">What is KDP Select and should I use it?</div>
-        <div class="faq-a"><p>KDP Select is an optional programme that gives Amazon exclusive rights to your ebook for 90-day periods in exchange for inclusion in Kindle Unlimited (a subscription reading service) and access to promotional tools like Kindle Countdown Deals. The trade-off is exclusivity — you cannot sell the ebook elsewhere during the enrolment period. For authors building a wider distribution strategy, the exclusivity requirement can be limiting. For those focused entirely on Amazon, the Kindle Unlimited page-read royalties can supplement direct sale royalties usefully.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">What is KDP Select and should I use it?</div>
+ <div class="faq-a"><p>KDP Select is an optional programme that gives Amazon exclusive rights to your ebook for 90-day periods in exchange for inclusion in Kindle Unlimited (a subscription reading service) and access to promotional tools like Kindle Countdown Deals. The trade-off is exclusivity — you cannot sell the ebook elsewhere during the enrolment period. For authors building a wider distribution strategy, the exclusivity requirement can be limiting. For those focused entirely on Amazon, the Kindle Unlimited page-read royalties can supplement direct sale royalties usefully.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Can I update my book after publishing?</div>
-        <div class="faq-a"><p>Yes. You can upload revised manuscript files, cover artwork or update your book description, keywords and categories at any time through the KDP dashboard. Updates typically go live within 24–72 hours after review.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Can I update my book after publishing?</div>
+ <div class="faq-a"><p>Yes. You can upload revised manuscript files, cover artwork or update your book description, keywords and categories at any time through the KDP dashboard. Updates typically go live within 24–72 hours after review.</p></div>
+ </div>
 
-      <div class="verdict-box">
-        <div class="verdict-label">Our Take</div>
-        <p>KDP is a legitimate low-cost publishing route. The platform works, the royalties are paid reliably and global distribution is real. The challenge is not the platform — it is discoverability. Without an audience or a keyword strategy that surfaces your book to genuinely interested buyers, sales do not happen by default. That is the honest constraint, and it applies regardless of how good the book is.</p>
-      </div>
+ <div class="verdict-box">
+ <div class="verdict-label">Our Take</div>
+ <p>KDP is a legitimate low-cost publishing route. The platform works, the royalties are paid reliably and global distribution is real. The challenge is not the platform — it is discoverability. Without an audience or a keyword strategy that surfaces your book to genuinely interested buyers, sales do not happen by default. That is the honest constraint, and it applies regardless of how good the book is.</p>
+ </div>
 
-      <div class="cta-box">
-        <h3>Read the <em>Full Experiment</em></h3>
-        <p>Seven copies sold, £18.82 in royalties, three reviews. Our full KDP publishing story documented with real numbers.</p>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog/kdp-self-publishing.html" class="cta-btn">KDP in Detail &rarr;</a>
-      </div>
+ <div class="cta-box">
+ <h3>Read the <em>full story</em></h3>
+ <p>Seven copies sold, in royalties, three reviews. Our full KDP publishing story documented with real numbers.</p>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog/kdp-self-publishing.html" class="cta-btn">KDP in Detail &rarr;</a>
+ </div>
 
-    </article>
+ </article>
 
-    <aside class="sidebar">
-      <div class="sidebar-card">
-        <h4>On This Page</h4>
-        <ul class="toc-list">
-          <li><a href="#basics">The basics</a></li>
-          <li><a href="#royalties">Royalties — real numbers</a></li>
-          <li><a href="#discovery">Discovery &amp; sales</a></li>
-          <li><a href="#misc">Other questions</a></li>
-        </ul>
-      </div>
-      <div class="sidebar-card">
-        <h4>Our KDP Results</h4>
-        <ul class="qf-list">
-          <li class="qf-item"><span>Copies sold</span><span class="qf-val">7</span></li>
-          <li class="qf-item"><span>Total royalties</span><span class="qf-val">£18.82</span></li>
-          <li class="qf-item"><span>Reviews</span><span class="qf-val green">3</span></li>
-          <li class="qf-item"><span>Cost to publish</span><span class="qf-val green">£0</span></li>
-        </ul>
-      </div>
-      <div class="sidebar-card">
-        <h4>Related</h4>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog/kdp-self-publishing.html" class="sidebar-btn dark-btn">KDP — Full Story</a>
-        <a href="https://kdp.amazon.com" target="_blank" rel="noopener" class="sidebar-btn amber-btn">KDP Platform &rarr;</a>
-      </div>
-    </aside>
-  </div>
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <h4>On This Page</h4>
+ <ul class="toc-list">
+ <li><a href="#basics">The basics</a></li>
+ <li><a href="#royalties">Royalties — real numbers</a></li>
+ <li><a href="#discovery">Discovery &amp; sales</a></li>
+ <li><a href="#misc">Other questions</a></li>
+ </ul>
+ </div>
+ <div class="sidebar-card">
+ <h4>Our KDP Results</h4>
+ <ul class="qf-list">
+ <li class="qf-item"><span>Copies sold</span><span class="qf-val">7</span></li>
+ <li class="qf-item"></li>
+ <li class="qf-item"><span>Reviews</span><span class="qf-val green">3</span></li>
+ <li class="qf-item"><span>Cost to publish</span><span class="qf-val green">£0</span></li>
+ </ul>
+ </div>
+ <div class="sidebar-card">
+ <h4>Related</h4>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog/kdp-self-publishing.html" class="sidebar-btn dark-btn">KDP — Full Story</a>
+ <a href="https://kdp.amazon.com" target="_blank" rel="noopener" class="sidebar-btn amber-btn">KDP Platform &rarr;</a>
+ </div>
+ </aside>
+ </div>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
-      <div class="footer-links">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
-      </div>
-      <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
-    </div>
-  </footer>
+ <footer class="footer">
+ <div class="footer-inner">
+ <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+ <div class="footer-links">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
+ </div>
+ <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
+ </div>
+ </footer>
 
 </body>
 </html>

@@ -1,217 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frequently Asked Questions | Digital Revenue Studio</title>
-  <meta name="description" content="Honest answers to common questions about the platforms, tools and methods we test and document at Digital Revenue Studio — KDP, Payhip, Sender, council tax bands and more." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Frequently Asked Questions | Digital Revenue Studio</title>
+ <meta name="description" content="Honest answers to common questions about the platforms, tools and methods we test and document at Digital Revenue Studio — KDP, Payhip, Sender, council tax bands and more." />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+ <style>
+ :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+ *{margin:0;padding:0;box-sizing:border-box;}
+ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
 
-    /* NAV */
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
-    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
-    .topbar-right{display:flex;align-items:center;gap:28px;}
-    .topbar-nav{display:flex;gap:24px;}
-    .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
+ /* NAV */
+ .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
+ .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+ .topbar-right{display:flex;align-items:center;gap:28px;}
+ .topbar-nav{display:flex;gap:24px;}
+ .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+ .topbar-nav a:hover{color:var(--gold);}
+ .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
 
-    /* HERO */
-    .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-80px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(46,139,74,0.08) 0%,transparent 65%);pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;text-align:center;}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
-    .page-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3rem);color:var(--white);line-height:1.08;margin-bottom:18px;}
-    .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
-    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.5);line-height:1.75;max-width:560px;margin:0 auto;}
+ /* HERO */
+ .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
+ .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+ .hero-glow{position:absolute;top:-80px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(46,139,74,0.08) 0%,transparent 65%);pointer-events:none;}
+ .hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;text-align:center;}
+ .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
+ .page-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+ .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3rem);color:var(--white);line-height:1.08;margin-bottom:18px;}
+ .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+ .hero-sub{font-size:1rem;color:rgba(255,255,255,0.5);line-height:1.75;max-width:560px;margin:0 auto;}
 
-    /* MAIN CONTENT */
-    .main{max-width:900px;margin:0 auto;padding:64px 40px 80px;}
-    @media(max-width:680px){.main{padding:40px 24px 60px;}}
+ /* MAIN CONTENT */
+ .main{max-width:900px;margin:0 auto;padding:64px 40px 80px;}
+ @media(max-width:680px){.main{padding:40px 24px 60px;}}
 
-    .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:28px;padding-bottom:12px;border-bottom:2px solid var(--border);}
+ .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:28px;padding-bottom:12px;border-bottom:2px solid var(--border);}
 
-    /* FAQ CARDS GRID */
-    .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:64px;}
-    @media(max-width:640px){.faq-grid{grid-template-columns:1fr;}}
+ /* FAQ CARDS GRID */
+ .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:64px;}
+ @media(max-width:640px){.faq-grid{grid-template-columns:1fr;}}
 
-    .faq-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px;text-decoration:none;display:flex;flex-direction:column;transition:border-color 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;}
-    .faq-card:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(245,166,35,0.08);}
-    .faq-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity 0.2s;}
-    .faq-card:hover::before{opacity:1;}
+ .faq-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px;text-decoration:none;display:flex;flex-direction:column;transition:border-color 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;}
+ .faq-card:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(245,166,35,0.08);}
+ .faq-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity 0.2s;}
+ .faq-card:hover::before{opacity:1;}
 
-    .card-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:2px;margin-bottom:16px;display:inline-block;}
-    .tag-tools{background:rgba(46,139,74,0.1);color:var(--bright);}
-    .tag-publishing{background:rgba(245,166,35,0.12);color:var(--gold-dark);}
-    .tag-email{background:rgba(27,94,150,0.12);color:#2a7ab8;}
-    .tag-products{background:rgba(111,78,242,0.1);color:#7c5cf5;}
+ .card-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:2px;margin-bottom:16px;display:inline-block;}
+ .tag-tools{background:rgba(46,139,74,0.1);color:var(--bright);}
+ .tag-publishing{background:rgba(245,166,35,0.12);color:var(--gold-dark);}
+ .tag-email{background:rgba(27,94,150,0.12);color:#2a7ab8;}
+ .tag-products{background:rgba(111,78,242,0.1);color:#7c5cf5;}
 
-    .card-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text-dark);margin-bottom:10px;line-height:1.2;}
-    .card-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.7;flex:1;margin-bottom:20px;}
-    .card-questions{list-style:none;margin-bottom:20px;}
-    .card-questions li{font-size:0.82rem;color:var(--text-body);padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:8px;}
-    .card-questions li:last-child{border-bottom:none;}
-    .card-questions li::before{content:'?';color:var(--gold);font-family:'Syne',sans-serif;font-weight:800;font-size:0.72rem;flex-shrink:0;margin-top:2px;}
-    .card-link{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:6px;margin-top:auto;}
-    .card-link::after{content:'→';transition:transform 0.2s;}
-    .faq-card:hover .card-link{color:var(--gold-dark);}
-    .faq-card:hover .card-link::after{transform:translateX(3px);}
+ .card-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text-dark);margin-bottom:10px;line-height:1.2;}
+ .card-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.7;flex:1;margin-bottom:20px;}
+ .card-questions{list-style:none;margin-bottom:20px;}
+ .card-questions li{font-size:0.82rem;color:var(--text-body);padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:8px;}
+ .card-questions li:last-child{border-bottom:none;}
+ .card-questions li::before{content:'?';color:var(--gold);font-family:'Syne',sans-serif;font-weight:800;font-size:0.72rem;flex-shrink:0;margin-top:2px;}
+ .card-link{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:6px;margin-top:auto;}
+ .card-link::after{content:'→';transition:transform 0.2s;}
+ .faq-card:hover .card-link{color:var(--gold-dark);}
+ .faq-card:hover .card-link::after{transform:translateX(3px);}
 
-    /* INTRO TEXT */
-    .intro-block{max-width:640px;margin:0 auto 52px;text-align:center;}
-    .intro-block p{font-size:1rem;color:var(--text-body);line-height:1.8;}
-    .intro-block p + p{margin-top:14px;}
+ /* INTRO TEXT */
+ .intro-block{max-width:640px;margin:0 auto 52px;text-align:center;}
+ .intro-block p{font-size:1rem;color:var(--text-body);line-height:1.8;}
+ .intro-block p + p{margin-top:14px;}
 
-    /* MORE COMING */
-    .coming-block{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:32px 36px;text-align:center;}
-    .coming-block h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:10px;}
-    .coming-block h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
-    .coming-block p{font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:20px;}
-    .coming-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
-    .coming-tag{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);font-family:'Syne',sans-serif;font-weight:600;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;}
-    .coming-cta{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:11px 24px;border-radius:3px;text-decoration:none;margin-top:20px;}
+ /* MORE COMING */
+ .coming-block{background:var(--dark-2);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:32px 36px;text-align:center;}
+ .coming-block h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:10px;}
+ .coming-block h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+ .coming-block p{font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:20px;}
+ .coming-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+ .coming-tag{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);font-family:'Syne',sans-serif;font-weight:600;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;}
+ .coming-cta{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:11px 24px;border-radius:3px;text-decoration:none;margin-top:20px;}
 
-    /* FOOTER */
-    .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
-    .footer-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
-    .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
-  </style>
+ /* FOOTER */
+ .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
+ .footer-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+ .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
+ .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+ .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+ .footer-links a:hover{color:var(--gold);}
+ .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
+ </style>
 </head>
 <body>
 
-  <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
+ <nav class="topbar">
+ <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
+ <div class="topbar-right">
+ <div class="topbar-nav">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+ </div>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
+ </div>
+ </nav>
 
-  <header class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="hero-eyebrow">
-        <span class="page-tag">FAQ</span>
-      </div>
-      <h1>Honest Answers to <em>Common Questions</em></h1>
-      <p class="hero-sub">Detailed, first-hand answers about the platforms, tools and methods we use and test at Digital Revenue Studio. No fluff, no sponsorship — just what we found.</p>
-    </div>
-  </header>
+ <header class="hero">
+ <div class="hero-grid"></div>
+ <div class="hero-glow"></div>
+ <div class="hero-inner">
+ <div class="hero-eyebrow">
+ <span class="page-tag">FAQ</span>
+ </div>
+ <h1>Honest Answers to <em>Common Questions</em></h1>
+ <p class="hero-sub">Detailed, first-hand answers about the platforms, tools and methods we use and test at Digital Revenue Studio. No fluff, no sponsorship — just what we found.</p>
+ </div>
+ </header>
 
-  <main class="main">
+ <main class="main">
 
-    <div class="intro-block">
-      <p>These FAQ pages are built around questions that come up repeatedly — in comments, in emails, and in our own research before we started each experiment. Every answer is based on direct experience using the platform or method in question.</p>
-      <p>More topics are added as experiments progress. If you have a question that is not covered, the blog and experiments pages are the best place to find the detail.</p>
-    </div>
+ <div class="intro-block">
+ <p>These FAQ pages are built around questions that come up repeatedly — in comments, in emails, and in our own research before we started each project. Every answer is based on direct experience using the platform or method in question.</p>
+ <p>More topics are added as experiments progress. If you have a question that is not covered, the blog and case studies pages are the best place to find the detail.</p>
+ </div>
 
-    <div class="section-label">Current FAQ Pages</div>
+ <div class="section-label">Current FAQ Pages</div>
 
-    <div class="faq-grid">
+ <div class="faq-grid">
 
-      <a href="https://www.digitalrevenuestudio.co.uk/faq-cdm-tool.html" class="faq-card">
-        <span class="card-tag tag-tools">Council Tax</span>
-        <div class="card-title">CDM Tool — What Is It and How Do You Use It?</div>
-        <p class="card-desc">Everything you need to know about the Check My Council Tax tool — what it does, what it cannot do, and how to use it as a starting point for a band challenge.</p>
-        <ul class="card-questions">
-          <li>What data does the CDM tool actually use?</li>
-          <li>Is the result guaranteed to be accurate?</li>
-          <li>Does it submit a challenge on my behalf?</li>
-          <li>Can my band go up if I challenge it?</li>
-        </ul>
-        <span class="card-link">Read the FAQ</span>
-      </a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq-cdm-tool.html" class="faq-card">
+ <span class="card-tag tag-tools">Council Tax</span>
+ <div class="card-title">CDM Tool — What Is It and How Do You Use It?</div>
+ <p class="card-desc">Everything you need to know about the Check My Council Tax tool — what it does, what it cannot do, and how to use it as a starting point for a band challenge.</p>
+ <ul class="card-questions">
+ <li>What data does the CDM tool actually use?</li>
+ <li>Is the result guaranteed to be accurate?</li>
+ <li>Does it submit a challenge on my behalf?</li>
+ <li>Can my band go up if I challenge it?</li>
+ </ul>
+ <span class="card-link">Read the FAQ</span>
+ </a>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/faq-kdp.html" class="faq-card">
-        <span class="card-tag tag-publishing">KDP &amp; Self-Publishing</span>
-        <div class="card-title">KDP — Common Questions Answered Honestly</div>
-        <p class="card-desc">Royalties, printing costs, discovery and what Kindle Direct Publishing actually pays UK authors — based on our Test 01 children's book experience.</p>
-        <ul class="card-questions">
-          <li>What does a UK paperback royalty actually look like?</li>
-          <li>When does KDP pay out?</li>
-          <li>Will Amazon promote my book automatically?</li>
-          <li>Should I use KDP Select?</li>
-        </ul>
-        <span class="card-link">Read the FAQ</span>
-      </a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq-kdp.html" class="faq-card">
+ <span class="card-tag tag-publishing">KDP &amp; Self-Publishing</span>
+ <div class="card-title">KDP — Common Questions Answered Honestly</div>
+ <p class="card-desc">Royalties, printing costs, discovery and what Kindle Direct Publishing actually pays UK authors — based on our children's book experience.</p>
+ <ul class="card-questions">
+ <li>What does a UK paperback royalty actually look like?</li>
+ <li>When does KDP pay out?</li>
+ <li>Will Amazon promote my book automatically?</li>
+ <li>Should I use KDP Select?</li>
+ </ul>
+ <span class="card-link">Read the FAQ</span>
+ </a>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/faq-sender.html" class="faq-card">
-        <span class="card-tag tag-email">Email Marketing</span>
-        <div class="card-title">Sender — Your Questions Answered</div>
-        <p class="card-desc">Free plan limits, automation, form embedding, deliverability and how we run Sender across two completely separate brands without paying anything.</p>
-        <ul class="card-questions">
-          <li>What do you actually get on the free plan?</li>
-          <li>Can I run automation without paying?</li>
-          <li>How do I embed a form on an external site?</li>
-          <li>Can I manage multiple brands on one account?</li>
-        </ul>
-        <span class="card-link">Read the FAQ</span>
-      </a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq-sender.html" class="faq-card">
+ <span class="card-tag tag-email">Email Marketing</span>
+ <div class="card-title">Sender — Your Questions Answered</div>
+ <p class="card-desc">Free plan limits, automation, form embedding, deliverability and how we run Sender across two completely separate brands without paying anything.</p>
+ <ul class="card-questions">
+ <li>What do you actually get on the free plan?</li>
+ <li>Can I run automation without paying?</li>
+ <li>How do I embed a form on an external site?</li>
+ <li>Can I manage multiple brands on one account?</li>
+ </ul>
+ <span class="card-link">Read the FAQ</span>
+ </a>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/faq-payhip.html" class="faq-card">
-        <span class="card-tag tag-products">Digital Products</span>
-        <div class="card-title">Payhip — Questions We Actually Get Asked</div>
-        <p class="card-desc">Fees, free plan trade-offs, what you can sell, and the honest answer to whether Payhip will drive traffic to your products (it won't — but that isn't the point).</p>
-        <ul class="card-questions">
-          <li>What is the true cost of the free plan?</li>
-          <li>When does upgrading make financial sense?</li>
-          <li>What types of products can I sell?</li>
-          <li>Does Payhip have an affiliate programme?</li>
-        </ul>
-        <span class="card-link">Read the FAQ</span>
-      </a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq-payhip.html" class="faq-card">
+ <span class="card-tag tag-products">Digital Products</span>
+ <div class="card-title">Payhip — Questions We Actually Get Asked</div>
+ <p class="card-desc">Fees, free plan trade-offs, what you can sell, and the honest answer to whether Payhip will drive traffic to your products (it won't — but that isn't the point).</p>
+ <ul class="card-questions">
+ <li>What is the true cost of the free plan?</li>
+ <li>When does upgrading make financial sense?</li>
+ <li>What types of products can I sell?</li>
+ <li>Does Payhip have an affiliate programme?</li>
+ </ul>
+ <span class="card-link">Read the FAQ</span>
+ </a>
 
-    </div>
+ </div>
 
-    <div class="coming-block">
-      <h3>More FAQ Pages <em>Coming</em></h3>
-      <p>New FAQ pages are added as experiments complete and new questions emerge. Topics currently in the pipeline include platforms and methods from active and upcoming tests.</p>
-      <div class="coming-tags">
-        <span class="coming-tag">Freecash</span>
-        <span class="coming-tag">InboxPounds</span>
-        <span class="coming-tag">EarnLabs</span>
-        <span class="coming-tag">Ko-fi</span>
-        <span class="coming-tag">Prolific</span>
-        <span class="coming-tag">Sweatcoin</span>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="coming-cta">Follow the Studio for Updates</a>
-    </div>
+ <div class="coming-block">
+ <h3>More FAQ Pages <em>Coming</em></h3>
+ <p>New FAQ pages are added as experiments complete and new questions emerge. Topics currently in the pipeline include platforms and methods from active and upcoming tests.</p>
+ <div class="coming-tags">
+ <span class="coming-tag">Freecash</span>
+ <span class="coming-tag">InboxPounds</span>
+ <span class="coming-tag">EarnLabs</span>
+ <span class="coming-tag">Ko-fi</span>
+ <span class="coming-tag">Prolific</span>
+ <span class="coming-tag">Sweatcoin</span>
+ </div>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="coming-cta">Follow the Studio for Updates</a>
+ </div>
 
-  </main>
+ </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
-      <div class="footer-links">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
-      </div>
-      <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
-    </div>
-  </footer>
+ <footer class="footer">
+ <div class="footer-inner">
+ <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+ <div class="footer-links">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
+ </div>
+ <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
+ </div>
+ </footer>
 
 </body>
 </html>

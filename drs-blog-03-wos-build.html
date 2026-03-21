@@ -1,294 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html" />
-  <title>How One Reddit Post Became a 323,000-View Gaming Wiki | Digital Revenue Studio</title>
-  <meta name="description" content="The full story of how Digital Revenue Studio built the Whiteout Survival Guide — from a single Reddit post to a growing wiki, blog and community resource built entirely on free tools." />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
-  <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
-        :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
-    
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
-    .topbar-logo{height:34px;width:auto;display:block;}
-    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .topbar-right{display:flex;align-items:center;gap:24px;}
-    .topbar-nav{display:flex;gap:24px;align-items:center;}
-    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
-    .topbar-cta:hover{background:#fdc84d;}
-    
-    
-    .gold-bar{height:3px;background:var(--gold);width:100%;}
-    .hero{background:var(--dark-2);padding:76px 40px 84px;position:relative;overflow:hidden;}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(26,92,58,0.18) 0%,transparent 65%);pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;animation:fadeUp 0.7s ease both;}
-    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
-    .exp-tag{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.25);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:2px;}
-    .sep{color:rgba(255,255,255,0.15);font-size:0.8rem;}
-    .date-tag{color:rgba(255,255,255,0.3);font-size:0.75rem;letter-spacing:0.06em;}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.08;color:var(--white);letter-spacing:-0.02em;margin-bottom:20px;}
-    .hero h1 em{font-style:italic;font-family:'Lora',serif;color:var(--gold);}
-    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.45);max-width:580px;line-height:1.7;margin-bottom:28px;}
-    .hero-meta{display:flex;gap:20px;flex-wrap:wrap;}
-    .hero-meta span{font-size:0.78rem;color:rgba(255,255,255,0.3);}
-    .hero-meta strong{color:rgba(255,255,255,0.55);}
-    .layout{max-width:1060px;margin:0 auto;padding:56px 40px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start;}
-    .article p{font-size:1rem;margin-bottom:22px;color:var(--text-body);}
-    .article h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--text-dark);margin:52px 0 16px;letter-spacing:-0.01em;border-bottom:2px solid var(--border);padding-bottom:10px;}
-    .article h3{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;color:var(--mid);margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.1em;}
-    .pullquote{border-left:3px solid var(--gold);padding:16px 24px;margin:32px 0;background:var(--gold-pale);border-radius:0 4px 4px 0;}
-    .pullquote p{font-family:'Lora',serif!important;font-size:1.15rem!important;font-style:italic;color:var(--dark)!important;margin:0!important;line-height:1.6;}
-    .numbers-box{background:var(--dark-2);border-radius:6px;padding:28px;margin:32px 0;}
-    .numbers-box-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-    .numbers-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:0.9rem;}
-    .numbers-row:last-child{border-bottom:none;}
-    .numbers-row span:first-child{color:rgba(255,255,255,0.5);}
-    .numbers-row span:last-child{font-weight:700;color:var(--white);}
-    .numbers-row.highlight span:last-child{color:var(--gold)!important;}
-    .info-box{background:rgba(46,139,74,0.05);border:1px solid rgba(46,139,74,0.2);border-radius:4px;padding:18px 20px;margin:24px 0;}
-    .info-box p{font-size:0.88rem!important;color:var(--text-body)!important;margin:0!important;line-height:1.7;}
-    .info-box strong{color:var(--mid);}
-    .tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0;}
-    .tool-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:16px;}
-    .tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:4px;}
-    .tool-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-pale);padding:2px 8px;border-radius:2px;margin-bottom:8px;display:inline-block;}
-    .tool-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.6;}
-    .cta-box{background:var(--dark);border-radius:6px;padding:28px 32px;margin:40px 0;text-align:center;}
-    .cta-box h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);margin-bottom:10px;}
-    .cta-box p{color:rgba(255,255,255,0.5)!important;font-size:0.88rem!important;max-width:420px;margin:0 auto 20px!important;line-height:1.7;}
-    .cta-btn{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:12px 24px;border-radius:3px;text-decoration:none;}
-    .sidebar{position:sticky;top:80px;}
-    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:16px;}
-    .sidebar-head{background:var(--dark);padding:12px 16px;}
-    .sidebar-head h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
-    .sidebar-body{padding:14px 16px;}
-    .sidebar-body p{font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;line-height:1.6;}
-    .toc-list{list-style:none;}
-    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
-    .toc-list li:last-child{border-bottom:none;}
-    .toc-list a{color:var(--text-body);text-decoration:none;font-weight:500;}
-    .toc-list a:hover{color:var(--bright);}
-    .sidebar-btn{display:block;text-align:center;background:var(--mid);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px;border-radius:3px;text-decoration:none;margin-top:10px;}
-    .sidebar-btn:hover{background:var(--dark);}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:860px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;position:static;}}
-    @media(max-width:640px){.hero,.layout{padding-left:20px;padding-right:20px;}}
-  
-    /* MOBILE NAV */
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
-    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
-    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-    .hamburger.open span:nth-child(2){opacity:0;}
-    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
-    .mobile-overlay.open{display:flex;}
-    .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-    .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
-    .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
-    .mobile-overlay-links{display:flex;flex-direction:column;}
-    .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
-    .mobile-overlay-links a:last-child{border-bottom:none;}
-    .mobile-overlay-links a:hover{color:var(--gold);}
-    .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
-    @media(max-width:860px){
-      .hamburger{display:flex;}
-      .topbar-nav{display:none!important;}
-      .topbar-cta{display:none!important;}
-    }
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html" />
+ <title>How One Reddit Post Became a 323,000-View Gaming Wiki | Digital Revenue Studio</title>
+ <meta name="description" content="The full story of how Digital Revenue Studio built the Whiteout Survival Guide — from a single Reddit post to a growing wiki, blog and community resource built entirely on free tools." />
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+ <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+ <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+ <style>
+ *{margin:0;padding:0;box-sizing:border-box;}
+ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+ :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+ 
+ .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
+ .topbar-logo{height:34px;width:auto;display:block;}
+ .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+ .topbar-right{display:flex;align-items:center;gap:24px;}
+ .topbar-nav{display:flex;gap:24px;align-items:center;}
+ .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+ .topbar-nav a:hover{color:var(--gold);}
+ .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+ .topbar-cta:hover{background:#fdc84d;}
+ 
+ 
+ .gold-bar{height:3px;background:var(--gold);width:100%;}
+ .hero{background:var(--dark-2);padding:76px 40px 84px;position:relative;overflow:hidden;}
+ .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+ .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(26,92,58,0.18) 0%,transparent 65%);pointer-events:none;}
+ .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+ .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
+ .exp-tag{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.25);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:2px;}
+ .sep{color:rgba(255,255,255,0.15);font-size:0.8rem;}
+ .date-tag{color:rgba(255,255,255,0.3);font-size:0.75rem;letter-spacing:0.06em;}
+ .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.08;color:var(--white);letter-spacing:-0.02em;margin-bottom:20px;}
+ .hero h1 em{font-style:italic;font-family:'Lora',serif;color:var(--gold);}
+ .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.45);max-width:580px;line-height:1.7;margin-bottom:28px;}
+ .hero-meta{display:flex;gap:20px;flex-wrap:wrap;}
+ .hero-meta span{font-size:0.78rem;color:rgba(255,255,255,0.3);}
+ .hero-meta strong{color:rgba(255,255,255,0.55);}
+ .layout{max-width:1060px;margin:0 auto;padding:56px 40px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start;}
+ .article p{font-size:1rem;margin-bottom:22px;color:var(--text-body);}
+ .article h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--text-dark);margin:52px 0 16px;letter-spacing:-0.01em;border-bottom:2px solid var(--border);padding-bottom:10px;}
+ .article h3{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;color:var(--mid);margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.1em;}
+ .pullquote{border-left:3px solid var(--gold);padding:16px 24px;margin:32px 0;background:var(--gold-pale);border-radius:0 4px 4px 0;}
+ .pullquote p{font-family:'Lora',serif!important;font-size:1.15rem!important;font-style:italic;color:var(--dark)!important;margin:0!important;line-height:1.6;}
+ .numbers-box{background:var(--dark-2);border-radius:6px;padding:28px;margin:32px 0;}
+ .numbers-box-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+ .numbers-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:0.9rem;}
+ .numbers-row:last-child{border-bottom:none;}
+ .numbers-row span:first-child{color:rgba(255,255,255,0.5);}
+ .numbers-row span:last-child{font-weight:700;color:var(--white);}
+ .numbers-row.highlight span:last-child{color:var(--gold)!important;}
+ .info-box{background:rgba(46,139,74,0.05);border:1px solid rgba(46,139,74,0.2);border-radius:4px;padding:18px 20px;margin:24px 0;}
+ .info-box p{font-size:0.88rem!important;color:var(--text-body)!important;margin:0!important;line-height:1.7;}
+ .info-box strong{color:var(--mid);}
+ .tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0;}
+ .tool-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:16px;}
+ .tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:4px;}
+ .tool-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-pale);padding:2px 8px;border-radius:2px;margin-bottom:8px;display:inline-block;}
+ .tool-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.6;}
+ .cta-box{background:var(--dark);border-radius:6px;padding:28px 32px;margin:40px 0;text-align:center;}
+ .cta-box h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);margin-bottom:10px;}
+ .cta-box p{color:rgba(255,255,255,0.5)!important;font-size:0.88rem!important;max-width:420px;margin:0 auto 20px!important;line-height:1.7;}
+ .cta-btn{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:12px 24px;border-radius:3px;text-decoration:none;}
+ .sidebar{position:sticky;top:80px;}
+ .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:16px;}
+ .sidebar-head{background:var(--dark);padding:12px 16px;}
+ .sidebar-head h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+ .sidebar-body{padding:14px 16px;}
+ .sidebar-body p{font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;line-height:1.6;}
+ .toc-list{list-style:none;}
+ .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+ .toc-list li:last-child{border-bottom:none;}
+ .toc-list a{color:var(--text-body);text-decoration:none;font-weight:500;}
+ .toc-list a:hover{color:var(--bright);}
+ .sidebar-btn{display:block;text-align:center;background:var(--mid);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px;border-radius:3px;text-decoration:none;margin-top:10px;}
+ .sidebar-btn:hover{background:var(--dark);}
+ @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+ @media(max-width:860px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;position:static;}}
+ @media(max-width:640px){.hero,.layout{padding-left:20px;padding-right:20px;}}
+ 
+ /* MOBILE NAV */
+ .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+ .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
+ .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+ .hamburger.open span:nth-child(2){opacity:0;}
+ .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+ .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
+ .mobile-overlay.open{display:flex;}
+ .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
+ .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+ .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
+ .mobile-overlay-links{display:flex;flex-direction:column;}
+ .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+ .mobile-overlay-links a:last-child{border-bottom:none;}
+ .mobile-overlay-links a:hover{color:var(--gold);}
+ .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
+ @media(max-width:860px){
+ .hamburger{display:flex;}
+ .topbar-nav{display:none!important;}
+ .topbar-cta{display:none!important;}
+ }
+ </style>
 </head>
 <body>
-    <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
-      <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
-    </a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
+ <nav class="topbar">
+ <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
+ <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
+ </a>
+ <div class="topbar-right">
+ <div class="topbar-nav">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+ </div>
+ <button class="hamburger" id="hamburger" aria-label="Open menu"></button>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+ </div>
+ </nav>
 
-  <!-- MOBILE OVERLAY -->
-  <div class="mobile-overlay" id="mobileOverlay">
-    <div class="mobile-overlay-top">
-      <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
-      <button class="mobile-overlay-close" id="mobileClose">&times;</button>
-    </div>
-    <div class="mobile-overlay-links">
-      <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-    </div>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
-  </div>
-  <script>
-    (function(){
-      var btn = document.getElementById('hamburger');
-      var overlay = document.getElementById('mobileOverlay');
-      var close = document.getElementById('mobileClose');
-      if(btn && overlay && close){
-        btn.addEventListener('click', function(){ overlay.classList.add('open'); btn.classList.add('open'); });
-        close.addEventListener('click', function(){ overlay.classList.remove('open'); btn.classList.remove('open'); });
-      }
-    })();
-  </script>
+ <!-- MOBILE OVERLAY -->
+ <div class="mobile-overlay" id="mobileOverlay">
+ <div class="mobile-overlay-top">
+ <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
+ <button class="mobile-overlay-close" id="mobileClose">&times;</button>
+ </div>
+ <div class="mobile-overlay-links">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+ </div>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
+ </div>
+ <script>
+ (function(){
+ var btn = document.getElementById('hamburger');
+ var overlay = document.getElementById('mobileOverlay');
+ var close = document.getElementById('mobileClose');
+ if(btn && overlay && close){
+ btn.addEventListener('click', function(){ overlay.classList.add('open'); btn.classList.add('open'); });
+ close.addEventListener('click', function(){ overlay.classList.remove('open'); btn.classList.remove('open'); });
+ }
+ })();
+ </script>
 <header class="hero">
-  <div class="hero-grid"></div><div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="exp-tag">Case Study</span>
-      <span class="sep">|</span>
-      <span class="date-tag">March 2026</span>
-    </div>
-    <h1>How One Reddit Post Became<br />a <em>323,000-View</em> Gaming Wiki</h1>
-    <p class="hero-sub">From zero presence to a growing F2P wiki, gift code tracker and community resource — built entirely on free tools by listening to what the community actually asked for.</p>
-    <div class="hero-meta">
-      <span><strong>6 min read</strong></span>
-      <span><strong>Digital Revenue Studio</strong></span>
-      <span><strong>March 2026</strong></span>
-    </div>
-  </div>
+ <div class="hero-grid"></div><div class="hero-glow"></div>
+ <div class="hero-inner">
+ <div class="hero-eyebrow">
+ <span class="exp-tag">Case Study</span>
+ <span class="sep">|</span>
+ <span class="date-tag">March 2026</span>
+ </div>
+ <h1>How One Reddit Post Became<br />a <em>323,000-View</em> Gaming Wiki</h1>
+ <p class="hero-sub">From zero presence to a growing F2P wiki, gift code tracker and community resource — built entirely on free tools by listening to what the community actually asked for.</p>
+ <div class="hero-meta">
+ <span><strong>6 min read</strong></span>
+ <span><strong>Digital Revenue Studio</strong></span>
+ <span><strong>March 2026</strong></span>
+ </div>
+ </div>
 </header>
 <div class="gold-bar"></div>
 <div class="layout">
-  <article class="article">
-    <p>In January 2026 we posted a beginner's guide to Whiteout Survival on Reddit. We were not sure whether anyone would read it. Within 48 hours it had 17,000 views, 56 upvotes and 59 comments.</p>
-    <p>That post became the foundation of the WOS Guide — a growing wiki, blog, gift code tracker and community resource built entirely on free tools. Here is how it happened.</p>
+ <article class="article">
+ <p>In January 2026 we posted a beginner's guide to Whiteout Survival on Reddit. We were not sure whether anyone would read it. Within 48 hours it had 17,000 views, 56 upvotes and 59 comments.</p>
+ <p>That post became the foundation of the WOS Guide — a growing wiki, blog, gift code tracker and community resource built entirely on free tools. Here is how it happened.</p>
 
-    <h2 id="post">The post that started it</h2>
-    <p>The first Reddit post was a straightforward F2P beginner guide posted to r/whiteoutsurvival. No promotion, no existing audience, no prior presence in the community. Just a useful guide posted in the right place at the right time.</p>
-    <p>The engagement was immediate and disproportionate. More importantly, the comments told us exactly what the community actually needed. One comment in particular changed everything.</p>
+ <h2 id="post">The post that started it</h2>
+ <p>The first Reddit post was a straightforward F2P beginner guide posted to r/whiteoutsurvival. No promotion, no existing audience, no prior presence in the community. Just a useful guide posted in the right place at the right time.</p>
+ <p>The engagement was immediate and disproportionate. More importantly, the comments told us exactly what the community actually needed. One comment in particular changed everything.</p>
 
-    <div class="pullquote"><p>&ldquo;There are hundreds of guides like this online — just not put into a single wiki.&rdquo; — ChandlerOG, r/whiteoutsurvival</p></div>
+ <div class="pullquote"><p>&ldquo;There are hundreds of guides like this online — just not put into a single wiki.&rdquo; — ChandlerOG, r/whiteoutsurvival</p></div>
 
-    <p>That one comment became the brief. The WOS Wiki was the direct result of listening to the community rather than assuming what they wanted.</p>
+ <p>That one comment became the brief. The WOS Wiki was the direct result of listening to the community rather than assuming what they wanted.</p>
 
-    <h2 id="wiki">Building the wiki</h2>
-    <p>The wiki was built on the DRS website — not a separate platform, not a third-party wiki tool. Clean HTML pages, organised by category, indexed on Google from day one. Eight guides live at launch covering the most-requested topics: Bear Hunt, Frostfire Mine, SvS prep, event token strategy, gift codes and more.</p>
-    <p>Every guide is free. No login, no paywall, no email required to read. The free-first model is the entire strategy — build trust with the community by giving them genuinely useful content with no strings attached. Everything else follows from that trust.</p>
+ <h2 id="wiki">Building the wiki</h2>
+ <p>The wiki was built on the DRS website — not a separate platform, not a third-party wiki tool. Clean HTML pages, organised by category, indexed on Google from day one. Eight guides live at launch covering the most-requested topics: Bear Hunt, Frostfire Mine, SvS prep, event token strategy, gift codes and more.</p>
+ <p>Every guide is free. No login, no paywall, no email required to read. The free-first model is the entire strategy — build trust with the community by giving them genuinely useful content with no strings attached. Everything else follows from that trust.</p>
 
-    <div class="numbers-box">
-      <div class="numbers-box-label">WOS Guide — March 2026 snapshot</div>
-      <div class="numbers-row highlight"><span>Reddit reach (council tax post)</span><span>323,000 views</span></div>
-      <div class="numbers-row"><span>WOS wiki guides live</span><span>8+</span></div>
-      <div class="numbers-row"><span>Reddit posting rhythm</span><span>2 posts per week</span></div>
-      <div class="numbers-row"><span>Cost to build</span><span>£0</span></div>
-      <div class="numbers-row"><span>Alliance relationship</span><span>WAO — State 1389 (top alliance)</span></div>
-    </div>
+ <div class="numbers-box">
+ <div class="numbers-box-label">WOS Guide — March 2026 snapshot</div>
+ <div class="numbers-row highlight"><span>Reddit reach (council tax post)</span><span>323,000 views</span></div>
+ <div class="numbers-row"><span>WOS wiki guides live</span><span>8+</span></div>
+ <div class="numbers-row"><span>Reddit posting rhythm</span><span>2 posts per week</span></div>
+ <div class="numbers-row"><span>Cost to build</span><span>£0</span></div>
+ <div class="numbers-row"><span>Alliance relationship</span><span>WAO — State 1389 (top alliance)</span></div>
+ </div>
 
-    <h2 id="community">Community before content</h2>
-    <p>The WOS strategy is community-first. We do not post content and hope the community finds it. We participate in the community and let the content emerge from what they actually ask for. Two Reddit posts per week maintains presence without over-posting.</p>
-    <p>The most significant community development came after we reached out directly to ChandlerOG — the player whose comment had shaped the wiki. He shared it with his alliance (WAO, state 1389 — the top alliance across neighbouring states). Getting feedback from players at that level is invaluable for a guide that aims to be genuinely useful at all levels of play.</p>
+ <h2 id="community">Community before content</h2>
+ <p>The WOS strategy is community-first. We do not post content and hope the community finds it. We participate in the community and let the content emerge from what they actually ask for. Two Reddit posts per week maintains presence without over-posting.</p>
+ <p>The most significant community development came after we reached out directly to ChandlerOG — the player whose comment had shaped the wiki. He shared it with his alliance (WAO, state 1389 — the top alliance across neighbouring states). Getting feedback from players at that level is invaluable for a guide that aims to be genuinely useful at all levels of play.</p>
 
-    <h2 id="tools">The free tool stack</h2>
-    <div class="tool-grid">
-      <div class="tool-card"><div class="tool-tag">Hosting</div><div class="tool-name">GitHub Pages</div><div class="tool-desc">Wiki and blog hosted free. No server costs, instant deployment.</div></div>
-      <div class="tool-card"><div class="tool-tag">Traffic</div><div class="tool-name">Reddit</div><div class="tool-desc">Primary traffic source. Community-first approach. 2 posts/week.</div></div>
-      <div class="tool-card"><div class="tool-tag">Traffic</div><div class="tool-name">Pinterest</div><div class="tool-desc">Infographics and guide pins. Evergreen traffic months after posting.</div></div>
-      <div class="tool-card"><div class="tool-tag">Email</div><div class="tool-name">Sender</div><div class="tool-desc">WOS-specific newsletter. Free tier. Gift code drops and new guide alerts.</div></div>
-    </div>
+ <h2 id="tools">The free tool stack</h2>
+ <div class="tool-grid">
+ <div class="tool-card"><div class="tool-tag">Hosting</div><div class="tool-name">GitHub Pages</div><div class="tool-desc">Wiki and blog hosted free. No server costs, instant deployment.</div></div>
+ <div class="tool-card"><div class="tool-tag">Traffic</div><div class="tool-name">Reddit</div><div class="tool-desc">Primary traffic source. Community-first approach. 2 posts/week.</div></div>
+ <div class="tool-card"><div class="tool-tag">Traffic</div><div class="tool-name">Pinterest</div><div class="tool-desc">Infographics and guide pins. Evergreen traffic months after posting.</div></div>
+ <div class="tool-card"><div class="tool-tag">Email</div><div class="tool-name">Sender</div><div class="tool-desc">WOS-specific newsletter. Free tier. Gift code drops and new guide alerts.</div></div>
+ </div>
 
-    <h2 id="lessons">What this proves</h2>
-    <p>The WOS Guide was built with zero budget using entirely free tools. The traffic came from genuine community participation, not paid promotion. The wiki grew because we listened to what the community asked for rather than publishing what we assumed they needed.</p>
-    <p>That is the model. Find a community that already exists. Give them something genuinely useful. Do not ask for anything in return until there is enough trust to make asking appropriate.</p>
+ <h2 id="lessons">What this proves</h2>
+ <p>The WOS Guide was built with zero budget using entirely free tools. The traffic came from genuine community participation, not paid promotion. The wiki grew because we listened to what the community asked for rather than publishing what we assumed they needed.</p>
+ <p>That is the model. Find a community that already exists. Give them something genuinely useful. Do not ask for anything in return until there is enough trust to make asking appropriate.</p>
 
-    <div class="cta-box">
-      <h3>Visit the WOS Wiki</h3>
-      <p>Free F2P guides, gift code tracker, event strategy and more.</p>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn">Visit the wiki &rarr;</a>
-    </div>
+ <div class="cta-box">
+ <h3>Visit the WOS Wiki</h3>
+ <p>Free F2P guides, gift code tracker, event strategy and more.</p>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn">Visit the wiki &rarr;</a>
+ </div>
 
-    <p>&mdash; Digit</p>
-  </article>
+ <p>&mdash; Digit</p>
+ </article>
 
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-head"><h4>In this post</h4></div>
-      <div class="sidebar-body">
-        <ul class="toc-list">
-          <li><a href="#post">The post that started it</a></li>
-          <li><a href="#wiki">Building the wiki</a></li>
-          <li><a href="#community">Community before content</a></li>
-          <li><a href="#tools">The free tool stack</a></li>
-          <li><a href="#lessons">What this proves</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="sidebar-card">
-      <div class="sidebar-head"><h4>Case study</h4></div>
-      <div class="sidebar-body">
-        <p>Full WOS Guide case study — deliverables, timeline and community strategy.</p>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" class="sidebar-btn">Read case study &rarr;</a>
-      </div>
-    </div>
-    <div class="sidebar-card">
-      <div class="sidebar-head"><h4>WOS wiki</h4></div>
-      <div class="sidebar-body">
-        <p>All free F2P guides in one place.</p>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="sidebar-btn">Go to the wiki &rarr;</a>
-      </div>
-    </div>
-  </aside>
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <div class="sidebar-head"><h4>In this post</h4></div>
+ <div class="sidebar-body">
+ <ul class="toc-list">
+ <li><a href="#post">The post that started it</a></li>
+ <li><a href="#wiki">Building the wiki</a></li>
+ <li><a href="#community">Community before content</a></li>
+ <li><a href="#tools">The free tool stack</a></li>
+ <li><a href="#lessons">What this proves</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="sidebar-card">
+ <div class="sidebar-head"><h4>Case study</h4></div>
+ <div class="sidebar-body">
+ <p>Full WOS Guide case study — deliverables, timeline and community strategy.</p>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" class="sidebar-btn">Read case study &rarr;</a>
+ </div>
+ </div>
+ <div class="sidebar-card">
+ <div class="sidebar-head"><h4>WOS wiki</h4></div>
+ <div class="sidebar-body">
+ <p>All free F2P guides in one place.</p>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="sidebar-btn">Go to the wiki &rarr;</a>
+ </div>
+ </div>
+ </aside>
 </div>
-  <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Case Studies</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Case Studies</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-die.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Digital Income Experiment</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="/cdn-cgi/l/email-protection#caa3a4aca58aaea3ada3beaba6b8afbcafa4bfafb9bebfaea3a5e4a9a5e4bfa1" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="adc4c3cbc2edc9c4cac4d9ccc1dfc8dbc8c3d8c8ded9d8c9c4c283cec283d8c6">[email&#160;protected]</span></a>
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
-          <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
-        </div>
-      </div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
-      <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</span>
-      <span style="font-
+ <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
+ <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
+ </div>
+ </div>
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Case Studies</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-die.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">The Digital Income Experiment</a>
+ </div>
+ </div>
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
+ </div>
+ </div>
+ <div>
+ <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
+ <div style="display:flex;flex-direction:column;gap:8px;">
+ <a href="/cdn-cgi/l/email-protection#caa3a4aca58aaea3ada3beaba6b8afbcafa4bfafb9bebfaea3a5e4a9a5e4bfa1" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="adc4c3cbc2edc9c4cac4d9ccc1dfc8dbc8c3d8c8ded9d8c9c4c283cec283d8c6">[email&#160;protected]</span></a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
+ <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
+ </div>
+ </div>
+ </div>
+ <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+ <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</span>
+ <span style="font-

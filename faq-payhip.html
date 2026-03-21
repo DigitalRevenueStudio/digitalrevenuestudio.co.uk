@@ -1,255 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payhip FAQ — Digital Products Questions Answered | Digital Revenue Studio</title>
-  <meta name="description" content="Common questions about Payhip — fees, free plan limits, file delivery, what you can sell and whether it is right for beginners. Based on real experience using it for our studio work." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;--payhip:#6F4EF2;}
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
-    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
-    .topbar-right{display:flex;align-items:center;gap:28px;}
-    .topbar-nav{display:flex;gap:24px;}
-    .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
-    .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(111,78,242,0.12) 0%,transparent 65%);pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
-    .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
-    .faq-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-    .topic-tag{background:rgba(111,78,242,0.12);border:1px solid rgba(111,78,242,0.3);color:#b39dfa;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
-    .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
-    .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;}
-    .layout{max-width:1040px;margin:0 auto;padding:52px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
-    @media(max-width:820px){.layout{grid-template-columns:1fr;padding:40px 24px;}.sidebar{position:static!important;}}
-    .article p{font-size:0.97rem;margin-bottom:20px;color:var(--text-body);line-height:1.85;}
-    .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin:40px 0 14px;padding-top:16px;border-top:2px solid var(--border);}
-    .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
-    .article h2:first-child{margin-top:0;border-top:none;padding-top:0;}
-    .article strong{color:var(--text-dark);font-weight:600;}
-    .faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden;}
-    .faq-q{background:var(--white);padding:18px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;gap:16px;}
-    .faq-q::after{content:'↓';color:var(--gold);font-size:1rem;flex-shrink:0;}
-    .faq-a{background:var(--warm);padding:16px 22px;border-top:1px solid var(--border);font-size:0.92rem;color:var(--text-body);line-height:1.8;}
-    .faq-a p{margin:0 0 10px;} .faq-a p:last-child{margin-bottom:0;}
-    .faq-a strong{color:var(--text-dark);}
-    .data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.88rem;}
-    .data-table th{background:var(--warm);padding:10px 14px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);}
-    .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-body);}
-    .data-table tr:last-child td{border-bottom:none;}
-    .data-table .green{color:var(--bright);font-weight:600;}
-    .highlight{background:var(--gold-pale);border:1px solid rgba(245,166,35,0.3);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 6px 6px 0;margin:24px 0;}
-    .highlight p{margin:0;font-size:0.92rem;color:var(--text-dark);}
-    .pullquote{border-left:3px solid var(--gold);background:var(--gold-pale);padding:20px 24px;margin:28px 0;border-radius:0 4px 4px 0;}
-    .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.03rem;color:var(--text-dark);margin:0;line-height:1.7;}
-    .verdict-box{background:var(--dark);border-radius:8px;padding:28px 32px;margin:32px 0;}
-    .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-    .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
-    .cta-box{background:var(--dark-2);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
-    .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);margin-bottom:8px;}
-    .cta-box h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
-    .cta-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-    .cta-btn{display:inline-block;background:var(--payhip);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
-    .cta-note{display:block;font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:10px;}
-    .related-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:24px 0;text-decoration:none;}
-    .related-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:3px;}
-    .related-title{font-size:0.88rem;color:var(--text-dark);font-weight:500;}
-    .sidebar{position:sticky;top:24px;}
-    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
-    .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
-    .sidebar-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px;}
-    .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:3px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;transition:opacity 0.2s;}
-    .sidebar-btn:last-child{margin-bottom:0;}
-    .sidebar-btn:hover{opacity:0.85;}
-    .amber-btn{background:var(--gold-dark);color:var(--white);}
-    .dark-btn{background:var(--dark);color:var(--white);}
-    .payhip-btn{background:var(--payhip);color:var(--white);}
-    .toc-list{list-style:none;}
-    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
-    .toc-list li:last-child{border-bottom:none;}
-    .toc-list a{color:var(--mid);text-decoration:none;font-weight:500;}
-    .toc-list a:hover{color:var(--gold-dark);}
-    .qf-list{list-style:none;}
-    .qf-item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
-    .qf-item:last-child{border-bottom:none;}
-    .qf-val.green{color:var(--bright);font-weight:600;}
-    .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
-    .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
-    .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
-    .footer-links a:hover{color:var(--gold);}
-    .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
-    .disclosure{background:var(--warm);border-top:1px solid var(--border);padding:18px 40px;text-align:center;}
-    .disclosure p{font-size:0.75rem;color:var(--text-muted);max-width:700px;margin:0 auto;}
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Payhip FAQ — Digital Products Questions Answered | Digital Revenue Studio</title>
+ <meta name="description" content="Common questions about Payhip — fees, free plan limits, file delivery, what you can sell and whether it is right for beginners. Based on real experience using it for our studio work." />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+ <style>
+ :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;--payhip:#6F4EF2;}
+ *{margin:0;padding:0;box-sizing:border-box;}
+ body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+ .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
+ .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
+ .topbar-right{display:flex;align-items:center;gap:28px;}
+ .topbar-nav{display:flex;gap:24px;}
+ .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+ .topbar-nav a:hover{color:var(--gold);}
+ .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;white-space:nowrap;}
+ .hero{background:var(--dark-2);padding:64px 40px 72px;position:relative;overflow:hidden;}
+ .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+ .hero-glow{position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(111,78,242,0.12) 0%,transparent 65%);pointer-events:none;}
+ .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
+ .hero-eyebrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+ .faq-tag{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.28);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+ .topic-tag{background:rgba(111,78,242,0.12);border:1px solid rgba(111,78,242,0.3);color:#b39dfa;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+ .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,2.7rem);color:var(--white);line-height:1.1;margin-bottom:16px;}
+ .hero h1 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+ .hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;}
+ .layout{max-width:1040px;margin:0 auto;padding:52px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
+ @media(max-width:820px){.layout{grid-template-columns:1fr;padding:40px 24px;}.sidebar{position:static!important;}}
+ .article p{font-size:0.97rem;margin-bottom:20px;color:var(--text-body);line-height:1.85;}
+ .article h2{font-family:'Syne',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text-dark);margin:40px 0 14px;padding-top:16px;border-top:2px solid var(--border);}
+ .article h2 em{font-style:italic;color:var(--gold-dark);font-family:'Lora',serif;}
+ .article h2:first-child{margin-top:0;border-top:none;padding-top:0;}
+ .article strong{color:var(--text-dark);font-weight:600;}
+ .faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden;}
+ .faq-q{background:var(--white);padding:18px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:var(--text-dark);display:flex;justify-content:space-between;align-items:center;gap:16px;}
+ .faq-q::after{content:'↓';color:var(--gold);font-size:1rem;flex-shrink:0;}
+ .faq-a{background:var(--warm);padding:16px 22px;border-top:1px solid var(--border);font-size:0.92rem;color:var(--text-body);line-height:1.8;}
+ .faq-a p{margin:0 0 10px;} .faq-a p:last-child{margin-bottom:0;}
+ .faq-a strong{color:var(--text-dark);}
+ .data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.88rem;}
+ .data-table th{background:var(--warm);padding:10px 14px;text-align:left;font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);border-bottom:2px solid var(--border);}
+ .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-body);}
+ .data-table tr:last-child td{border-bottom:none;}
+ .data-table .green{color:var(--bright);font-weight:600;}
+ .highlight{background:var(--gold-pale);border:1px solid rgba(245,166,35,0.3);border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 6px 6px 0;margin:24px 0;}
+ .highlight p{margin:0;font-size:0.92rem;color:var(--text-dark);}
+ .pullquote{border-left:3px solid var(--gold);background:var(--gold-pale);padding:20px 24px;margin:28px 0;border-radius:0 4px 4px 0;}
+ .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1.03rem;color:var(--text-dark);margin:0;line-height:1.7;}
+ .verdict-box{background:var(--dark);border-radius:8px;padding:28px 32px;margin:32px 0;}
+ .verdict-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+ .verdict-box p{color:rgba(255,255,255,0.75);font-size:0.95rem;line-height:1.8;margin:0;}
+ .cta-box{background:var(--dark-2);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:28px 32px;margin:32px 0;text-align:center;}
+ .cta-box h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--white);margin-bottom:8px;}
+ .cta-box h3 em{font-style:italic;color:var(--gold);font-family:'Lora',serif;}
+ .cta-box p{font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+ .cta-btn{display:inline-block;background:var(--payhip);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;}
+ .cta-note{display:block;font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:10px;}
+ .related-link{display:flex;align-items:center;gap:14px;background:var(--warm);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin:24px 0;text-decoration:none;}
+ .related-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:3px;}
+ .related-title{font-size:0.88rem;color:var(--text-dark);font-weight:500;}
+ .sidebar{position:sticky;top:24px;}
+ .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:22px;margin-bottom:20px;}
+ .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dark);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+ .sidebar-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px;}
+ .sidebar-btn{display:block;text-align:center;padding:10px 16px;border-radius:3px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-bottom:10px;transition:opacity 0.2s;}
+ .sidebar-btn:last-child{margin-bottom:0;}
+ .sidebar-btn:hover{opacity:0.85;}
+ .amber-btn{background:var(--gold-dark);color:var(--white);}
+ .dark-btn{background:var(--dark);color:var(--white);}
+ .payhip-btn{background:var(--payhip);color:var(--white);}
+ .toc-list{list-style:none;}
+ .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+ .toc-list li:last-child{border-bottom:none;}
+ .toc-list a{color:var(--mid);text-decoration:none;font-weight:500;}
+ .toc-list a:hover{color:var(--gold-dark);}
+ .qf-list{list-style:none;}
+ .qf-item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+ .qf-item:last-child{border-bottom:none;}
+ .qf-val.green{color:var(--bright);font-weight:600;}
+ .footer{background:var(--dark);padding:40px;border-top:1px solid rgba(245,166,35,0.1);}
+ .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+ .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.88rem;letter-spacing:0.06em;color:var(--gold);}
+ .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+ .footer-links a{font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+ .footer-links a:hover{color:var(--gold);}
+ .footer-copy{width:100%;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05);}
+ .disclosure{background:var(--warm);border-top:1px solid var(--border);padding:18px 40px;text-align:center;}
+ .disclosure p{font-size:0.75rem;color:var(--text-muted);max-width:700px;margin:0 auto;}
+ </style>
 </head>
 <body>
 
-  <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
+ <nav class="topbar">
+ <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">DIGITAL REVENUE STUDIO</a>
+ <div class="topbar-right">
+ <div class="topbar-nav">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/about.html">About</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/services.html">Services</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/case-studies.html">Case Studies</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/shop.html">Shop</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+ </div>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html" class="topbar-cta">Follow the Studio</a>
+ </div>
+ </nav>
 
-  <header class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="hero-eyebrow">
-        <span class="faq-tag">FAQ</span>
-        <span class="topic-tag">Payhip &mdash; Digital Products</span>
-      </div>
-      <h1>Payhip — <em>Questions</em><br />We Actually Get Asked</h1>
-      <p class="hero-sub">Fees, free plan limits, what you can sell, and whether Payhip is the right starting point for a digital product business. Based on our own our studio work experience.</p>
-    </div>
-  </header>
+ <header class="hero">
+ <div class="hero-grid"></div>
+ <div class="hero-glow"></div>
+ <div class="hero-inner">
+ <div class="hero-eyebrow">
+ <span class="faq-tag">FAQ</span>
+ <span class="topic-tag">Payhip &mdash; Digital Products</span>
+ </div>
+ <h1>Payhip — <em>Questions</em><br />We Actually Get Asked</h1>
+ <p class="hero-sub">Fees, free plan limits, what you can sell, and whether Payhip is the right starting point for a digital product business. Based on our own our studio work experience.</p>
+ </div>
+ </header>
 
-  <div class="layout">
-    <article class="article">
+ <div class="layout">
+ <article class="article">
 
-      <h2 id="what">What Is <em>Payhip?</em></h2>
+ <h2 id="what">What Is <em>Payhip?</em></h2>
 
-      <p>Payhip is an e-commerce platform built for digital products. You upload files, set a price, and Payhip handles the checkout, payment processing and automatic file delivery to the buyer. There is nothing technical to manage. The free plan is genuinely functional for a new seller.</p>
+ <p>Payhip is an e-commerce platform built for digital products. You upload files, set a price, and Payhip handles the checkout, payment processing and automatic file delivery to the buyer. There is nothing technical to manage. The free plan is genuinely functional for a new seller.</p>
 
-      <p>We use it as the storefront for our our studio work digital products — including a ChatGPT prompt workbook and the Whiteout Survival strategy guide. It is the platform we reviewed and currently recommend for beginners.</p>
+ <p>We use it as the storefront for our our studio work digital products — including a ChatGPT prompt workbook and the Whiteout Survival strategy guide. It is the platform we reviewed and currently recommend for beginners.</p>
 
-      <h2 id="costs">Costs and <em>Fees</em></h2>
+ <h2 id="costs">Costs and <em>Fees</em></h2>
 
-      <table class="data-table">
-        <tr><th>Plan</th><th>Monthly Cost</th><th>Transaction Fee</th></tr>
-        <tr><td><strong>Free</strong></td><td class="green">£0</td><td>5% per sale</td></tr>
-        <tr><td><strong>Plus</strong></td><td>£29/month</td><td>2% per sale</td></tr>
-        <tr><td><strong>Pro</strong></td><td>£79/month</td><td>0%</td></tr>
-      </table>
+ <table class="data-table">
+ <tr><th>Plan</th><th>Monthly Cost</th><th>Transaction Fee</th></tr>
+ <tr><td><strong>Free</strong></td><td class="green">£0</td><td>5% per sale</td></tr>
+ <tr><td><strong>Plus</strong></td><td>£29/month</td><td>2% per sale</td></tr>
+ <tr><td><strong>Pro</strong></td><td>£79/month</td><td>0%</td></tr>
+ </table>
 
-      <div class="highlight">
-        <p><strong>When does upgrading make sense?</strong> At 5% on the free plan, you break even on the Plus upgrade at approximately £580/month in sales. Below that, the free plan costs you less overall. Start free, upgrade when the maths justifies it.</p>
-      </div>
+ <div class="highlight">
+ <p><strong>When does upgrading make sense?</strong> At 5% on the free plan, you break even on the Plus upgrade at approximately £580/month in sales. Below that, the free plan costs you less overall. Start free, upgrade when the maths justifies it.</p>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Are there any other fees on top of the transaction fee?</div>
-        <div class="faq-a"><p>Payhip passes through Stripe or PayPal payment processing fees, which are separate from Payhip's own transaction fee. Stripe typically charges around 1.4% + 25p for European cards and 2.9% + 25p for non-European cards. These are standard payment processing costs not specific to Payhip — any platform using Stripe or PayPal will have the same underlying fees.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Are there any other fees on top of the transaction fee?</div>
+ <div class="faq-a"><p>Payhip passes through Stripe or PayPal payment processing fees, which are separate from Payhip's own transaction fee. Stripe typically charges around 1.4% + 25p for European cards and 2.9% + 25p for non-European cards. These are standard payment processing costs not specific to Payhip — any platform using Stripe or PayPal will have the same underlying fees.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Do I need a business account or company registration to sell on Payhip?</div>
-        <div class="faq-a"><p>No. You can sell as an individual. You will need a payment account (Stripe or PayPal) to receive funds, but neither requires you to be a registered company. Be aware of your tax obligations — income from digital product sales is taxable in the UK, and you should keep records of earnings regardless of whether you are formally registered as self-employed.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Do I need a business account or company registration to sell on Payhip?</div>
+ <div class="faq-a"><p>No. You can sell as an individual. You will need a payment account (Stripe or PayPal) to receive funds, but neither requires you to be a registered company. Be aware of your tax obligations — income from digital product sales is taxable in the UK, and you should keep records of earnings regardless of whether you are formally registered as self-employed.</p></div>
+ </div>
 
-      <h2 id="products">What Can You <em>Sell?</em></h2>
+ <h2 id="products">What Can You <em>Sell?</em></h2>
 
-      <div class="faq-item">
-        <div class="faq-q">What types of digital products does Payhip support?</div>
-        <div class="faq-a"><p>Payhip supports: downloadable files (PDFs, ebooks, templates, spreadsheets, images, software), online courses, memberships, coaching products and physical products. For most digital content creators the download and course options are the most relevant.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">What types of digital products does Payhip support?</div>
+ <div class="faq-a"><p>Payhip supports: downloadable files (PDFs, ebooks, templates, spreadsheets, images, software), online courses, memberships, coaching products and physical products. For most digital content creators the download and course options are the most relevant.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Is there a file size limit for uploads?</div>
-        <div class="faq-a"><p>Yes — the maximum file size for a single upload is 5GB. For most digital products (PDFs, ebooks, templates, guides) this limit is never a constraint. Larger software files or video-heavy course content may need to consider this.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Is there a file size limit for uploads?</div>
+ <div class="faq-a"><p>Yes — the maximum file size for a single upload is 5GB. For most digital products (PDFs, ebooks, templates, guides) this limit is never a constraint. Larger software files or video-heavy course content may need to consider this.</p></div>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Can I sell the same product for different prices — including free?</div>
-        <div class="faq-a"><p>Yes. Payhip supports pay-what-you-want pricing, fixed pricing and free downloads. Free products are a useful lead-generation tool — you can offer a free guide, collect the buyer's email, and follow up through a separate email platform. We use this approach to distribute our free DRS guide.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Can I sell the same product for different prices — including free?</div>
+ <div class="faq-a"><p>Yes. Payhip supports pay-what-you-want pricing, fixed pricing and free downloads. Free products are a useful lead-generation tool — you can offer a free guide, collect the buyer's email, and follow up through a separate email platform. We use this approach to distribute our free DRS guide.</p></div>
+ </div>
 
-      <h2 id="discovery">Traffic and <em>Discovery</em></h2>
+ <h2 id="discovery">Traffic and <em>Discovery</em></h2>
 
-      <p>This is the part most Payhip coverage glosses over. Payhip is not a marketplace — it has no internal search or browse function for buyers to discover your products. Customers arrive only if you bring them. There is no Amazon-equivalent organic discovery on Payhip.</p>
+ <p>This is the part most Payhip coverage glosses over. Payhip is not a marketplace — it has no internal search or browse function for buyers to discover your products. Customers arrive only if you bring them. There is no Amazon-equivalent organic discovery on Payhip.</p>
 
-      <div class="pullquote">
-        <p>&ldquo;The platform handles the transaction flawlessly. Getting someone to the checkout — that is entirely on you. Payhip cannot substitute for an audience.&rdquo;</p>
-      </div>
+ <div class="pullquote">
+ <p>&ldquo;The platform handles the transaction flawlessly. Getting someone to the checkout — that is entirely on you. Payhip cannot substitute for an audience.&rdquo;</p>
+ </div>
 
-      <div class="faq-item">
-        <div class="faq-q">Does Payhip have an affiliate programme?</div>
-        <div class="faq-a"><p>Yes — two separate ones. Payhip has a referral programme where existing users can refer new sellers and earn a small ongoing commission. They also allow you to set up your own affiliate programme for your products, so other people can promote your products for a share of the revenue. Both are available on the free plan.</p></div>
-      </div>
+ <div class="faq-item">
+ <div class="faq-q">Does Payhip have an affiliate programme?</div>
+ <div class="faq-a"><p>Yes — two separate ones. Payhip has a referral programme where existing users can refer new sellers and earn a small ongoing commission. They also allow you to set up your own affiliate programme for your products, so other people can promote your products for a share of the revenue. Both are available on the free plan.</p></div>
+ </div>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/blog/payhip-review.html" class="related-link">
-        <div>
-          <div class="related-label">Platform Review</div>
-          <div class="related-title">Our Full Payhip Review — Honest Assessment After Using It for our studio work &rarr;</div>
-        </div>
-      </a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog/payhip-review.html" class="related-link">
+ <div>
+ <div class="related-label">Platform Review</div>
+ <div class="related-title">Our Full Payhip Review — Honest Assessment After Using It for our studio work &rarr;</div>
+ </div>
+ </a>
 
-      <div class="verdict-box">
-        <div class="verdict-label">Our Verdict</div>
-        <p>Payhip is the right starting point for selling digital products if you have no audience yet and want to test the concept without a monthly commitment. The free plan is genuinely useful, the checkout is clean and the setup is fast. The core challenge — driving traffic — is not Payhip's limitation, it applies to every non-marketplace platform. Build the audience alongside it.</p>
-      </div>
+ <div class="verdict-box">
+ <div class="verdict-label">Our Verdict</div>
+ <p>Payhip is the right starting point for selling digital products if you have no audience yet and want to test the concept without a monthly commitment. The free plan is genuinely useful, the checkout is clean and the setup is fast. The core challenge — driving traffic — is not Payhip's limitation, it applies to every non-marketplace platform. Build the audience alongside it.</p>
+ </div>
 
-      <div class="cta-box">
-        <h3>Try <em>Payhip</em> Free</h3>
-        <p>No monthly fee until you are ready to scale. Set up your storefront in under an hour.</p>
-        <a href="https://payhip.com?fp_ref=rick17" target="_blank" rel="nofollow" class="cta-btn">Start Free on Payhip</a>
-        <span class="cta-note">Affiliate link — we earn a small commission if you sign up. No cost to you.</span>
-      </div>
+ <div class="cta-box">
+ <h3>Try <em>Payhip</em> Free</h3>
+ <p>No monthly fee until you are ready to scale. Set up your storefront in under an hour.</p>
+ <a href="https://payhip.com?fp_ref=rick17" target="_blank" rel="nofollow" class="cta-btn">Start Free on Payhip</a>
+ <span class="cta-note">Affiliate link — we earn a small commission if you sign up. No cost to you.</span>
+ </div>
 
-    </article>
+ </article>
 
-    <aside class="sidebar">
-      <div class="sidebar-card">
-        <h4>On This Page</h4>
-        <ul class="toc-list">
-          <li><a href="#what">What is Payhip?</a></li>
-          <li><a href="#costs">Costs and fees</a></li>
-          <li><a href="#products">What can you sell?</a></li>
-          <li><a href="#discovery">Traffic and discovery</a></li>
-        </ul>
-      </div>
-      <div class="sidebar-card">
-        <h4>Quick Facts</h4>
-        <ul class="qf-list">
-          <li class="qf-item"><span>Free plan</span><span class="qf-val green">Yes</span></li>
-          <li class="qf-item"><span>Free tier fee</span><span class="qf-val">5% per sale</span></li>
-          <li class="qf-item"><span>Marketplace?</span><span class="qf-val">No</span></li>
-          <li class="qf-item"><span>Auto delivery</span><span class="qf-val green">Yes</span></li>
-          <li class="qf-item"><span>DRS rating</span><span class="qf-val green">Recommended</span></li>
-        </ul>
-      </div>
-      <div class="sidebar-card">
-        <h4>Try Payhip</h4>
-        <a href="https://payhip.com?fp_ref=rick17" target="_blank" rel="nofollow" class="sidebar-btn payhip-btn">Start Free on Payhip</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog/payhip-review.html" class="sidebar-btn dark-btn">Read Our Review</a>
-      </div>
-    </aside>
-  </div>
+ <aside class="sidebar">
+ <div class="sidebar-card">
+ <h4>On This Page</h4>
+ <ul class="toc-list">
+ <li><a href="#what">What is Payhip?</a></li>
+ <li><a href="#costs">Costs and fees</a></li>
+ <li><a href="#products">What can you sell?</a></li>
+ <li><a href="#discovery">Traffic and discovery</a></li>
+ </ul>
+ </div>
+ <div class="sidebar-card">
+ <h4>Quick Facts</h4>
+ <ul class="qf-list">
+ <li class="qf-item"><span>Free plan</span><span class="qf-val green">Yes</span></li>
+ <li class="qf-item"><span>Free tier fee</span><span class="qf-val">5% per sale</span></li>
+ <li class="qf-item"><span>Marketplace?</span><span class="qf-val">No</span></li>
+ <li class="qf-item"><span>Auto delivery</span><span class="qf-val green">Yes</span></li>
+ <li class="qf-item"><span>DRS rating</span><span class="qf-val green">Recommended</span></li>
+ </ul>
+ </div>
+ <div class="sidebar-card">
+ <h4>Try Payhip</h4>
+ <a href="https://payhip.com?fp_ref=rick17" target="_blank" rel="nofollow" class="sidebar-btn payhip-btn">Start Free on Payhip</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog/payhip-review.html" class="sidebar-btn dark-btn">Read Our Review</a>
+ </div>
+ </aside>
+ </div>
 
-  <div class="disclosure">
-    <p>This page contains affiliate links. If you sign up to Payhip through our link we earn a small commission at no extra cost to you. We use Payhip ourselves and our opinion is based on first-hand experience.</p>
-  </div>
+ <div class="disclosure">
+ <p>This page contains affiliate links. If you sign up to Payhip through our link we earn a small commission at no extra cost to you. We use Payhip ourselves and our opinion is based on first-hand experience.</p>
+ </div>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
-      <div class="footer-links">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Experiments</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
-      </div>
-      <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
-    </div>
-  </footer>
+ <footer class="footer">
+ <div class="footer-inner">
+ <div class="footer-brand">DIGITAL REVENUE STUDIO</div>
+ <div class="footer-links">
+ <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/blog.html">Blog</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Experiments</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/faq.html">FAQ</a>
+ <a href="https://www.digitalrevenuestudio.co.uk/signup.html">Follow the Studio</a>
+ </div>
+ <div class="footer-copy">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</div>
+ </div>
+ </footer>
 
 </body>
 </html>
