@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-blog-01-tool-stack.html" />
+  <title>The Free Tool Stack We Use to Build Digital Brands | Digital Revenue Studio</title>
+  <meta name="description" content="Every tool Digital Revenue Studio uses across four active brands — all free or freemium, all tested, all recommended. Website hosting, email, traffic, publishing and analytics." />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+  <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+        :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+    
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
+    .topbar-logo{height:34px;width:auto;display:block;}
+    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .topbar-right{display:flex;align-items:center;gap:24px;}
+    .topbar-nav{display:flex;gap:24px;align-items:center;}
+    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+    .topbar-nav a:hover{color:var(--gold);}
+    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
+    .topbar-cta:hover{background:#fdc84d;}
+    
+    @media(max-width:860px){.topbar-nav{display:none;}.topbar{padding:12px 20px;}}
+    .gold-bar{height:3px;background:var(--gold);width:100%;}
+    .hero{background:var(--dark-2);padding:76px 40px 84px;position:relative;overflow:hidden;}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
+    .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(26,92,58,0.18) 0%,transparent 65%);pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
+    .exp-tag{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.25);color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:2px;}
+    .sep{color:rgba(255,255,255,0.15);font-size:0.8rem;}
+    .date-tag{color:rgba(255,255,255,0.3);font-size:0.75rem;letter-spacing:0.06em;}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.08;color:var(--white);letter-spacing:-0.02em;margin-bottom:20px;}
+    .hero h1 em{font-style:italic;font-family:'Lora',serif;color:var(--gold);}
+    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.45);max-width:580px;line-height:1.7;margin-bottom:28px;}
+    .hero-meta{display:flex;gap:20px;flex-wrap:wrap;}
+    .hero-meta span{font-size:0.78rem;color:rgba(255,255,255,0.3);}
+    .hero-meta strong{color:rgba(255,255,255,0.55);}
+    .layout{max-width:1060px;margin:0 auto;padding:56px 40px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start;}
+    .article p{font-size:1rem;margin-bottom:22px;color:var(--text-body);}
+    .article h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--text-dark);margin:52px 0 16px;letter-spacing:-0.01em;border-bottom:2px solid var(--border);padding-bottom:10px;}
+    .article h3{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;color:var(--mid);margin:28px 0 10px;text-transform:uppercase;letter-spacing:0.1em;}
+    .pullquote{border-left:3px solid var(--gold);padding:16px 24px;margin:32px 0;background:var(--gold-pale);border-radius:0 4px 4px 0;}
+    .pullquote p{font-family:'Lora',serif!important;font-size:1.15rem!important;font-style:italic;color:var(--dark)!important;margin:0!important;line-height:1.6;}
+    .numbers-box{background:var(--dark-2);border-radius:6px;padding:28px;margin:32px 0;}
+    .numbers-box-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .numbers-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:0.9rem;}
+    .numbers-row:last-child{border-bottom:none;}
+    .numbers-row span:first-child{color:rgba(255,255,255,0.5);}
+    .numbers-row span:last-child{font-weight:700;color:var(--white);}
+    .numbers-row.highlight span:last-child{color:var(--gold)!important;}
+    .info-box{background:rgba(46,139,74,0.05);border:1px solid rgba(46,139,74,0.2);border-radius:4px;padding:18px 20px;margin:24px 0;}
+    .info-box p{font-size:0.88rem!important;color:var(--text-body)!important;margin:0!important;line-height:1.7;}
+    .info-box strong{color:var(--mid);}
+    .tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0;}
+    .tool-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:16px;}
+    .tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:4px;}
+    .tool-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);background:var(--gold-pale);padding:2px 8px;border-radius:2px;margin-bottom:8px;display:inline-block;}
+    .tool-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.6;}
+    .cta-box{background:var(--dark);border-radius:6px;padding:28px 32px;margin:40px 0;text-align:center;}
+    .cta-box h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);margin-bottom:10px;}
+    .cta-box p{color:rgba(255,255,255,0.5)!important;font-size:0.88rem!important;max-width:420px;margin:0 auto 20px!important;line-height:1.7;}
+    .cta-btn{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:12px 24px;border-radius:3px;text-decoration:none;}
+    .sidebar{position:sticky;top:80px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:16px;}
+    .sidebar-head{background:var(--dark);padding:12px 16px;}
+    .sidebar-head h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+    .sidebar-body{padding:14px 16px;}
+    .sidebar-body p{font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;line-height:1.6;}
+    .toc-list{list-style:none;}
+    .toc-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:0.82rem;}
+    .toc-list li:last-child{border-bottom:none;}
+    .toc-list a{color:var(--text-body);text-decoration:none;font-weight:500;}
+    .toc-list a:hover{color:var(--bright);}
+    .sidebar-btn{display:block;text-align:center;background:var(--mid);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px;border-radius:3px;text-decoration:none;margin-top:10px;}
+    .sidebar-btn:hover{background:var(--dark);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:860px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;position:static;}}
+    @media(max-width:640px){.hero,.layout{padding-left:20px;padding-right:20px;}}
+  </style>
+</head>
+<body>
+    <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
+      <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
+    </a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+    </div>
+  </nav>
+<header class="hero">
+  <div class="hero-grid"></div><div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="exp-tag">Studio Guide</span>
+      <span class="sep">|</span>
+      <span class="date-tag">March 2026</span>
+    </div>
+    <h1>The Free Tool Stack We Use to<br /><em>Build Digital Brands</em></h1>
+    <p class="hero-sub">Every brand we build starts with zero paid tools. Here is the complete stack we use across all four studio projects — tested, used daily and recommended without reservation.</p>
+    <div class="hero-meta">
+      <span><strong>6 min read</strong></span>
+      <span><strong>Digital Revenue Studio</strong></span>
+      <span><strong>March 2026</strong></span>
+    </div>
+  </div>
+</header>
+<div class="gold-bar"></div>
+<div class="layout">
+  <article class="article">
+    <p>Every brand we build at Digital Revenue Studio starts with zero paid tools. Not because we cannot afford them — because we want to know what is genuinely achievable without a budget. If something costs money it gets disclosed. Most of what we use is free or freemium, and most of it is excellent.</p>
+    <p>Here is the complete tool stack we use across all four studio brands — tested, used daily and recommended without reservation.</p>
+
+    <h2 id="hosting">Websites and hosting</h2>
+
+    <h3>GitHub Pages — free static hosting</h3>
+    <p>Every brand we build launches on GitHub Pages first. Zero hosting cost, instant deployment, reliable uptime. You push a file and it is live. For static websites — which covers most of what we build — it is hard to justify paying for hosting until you have a specific reason to.</p>
+    <p>Mavericks Adventures, Digital Revenue Studio, the WOS Wiki and Atker Consultancy all launched on GitHub Pages. IONOS domain pointing is straightforward and costs only the domain registration fee.</p>
+
+    <div class="info-box"><p><strong>When to upgrade:</strong> GitHub Pages works until you need server-side functionality — databases, user accounts, dynamic content. For a blog, portfolio or brand website it handles everything you need.</p></div>
+
+    <h3>IONOS — domain and DNS</h3>
+    <p>Low-cost domain registration and DNS management. Connecting a custom domain to GitHub Pages takes about ten minutes and a couple of DNS records. We use IONOS across all brands that have custom domains.</p>
+
+    <h2 id="email">Email marketing</h2>
+
+    <h3>Sender — free up to 2,500 subscribers</h3>
+    <p>Free tier includes up to 2,500 subscribers, 15,000 emails per month, full automation sequences and sign-up form builder. No credit card required to start. We run separate Sender accounts for DRS, Mavericks Adventures and the WOS Guide — each audience gets content relevant to them, nothing else.</p>
+    <p>The automation builder is genuinely good. Welcome sequences, conditional logic, drip campaigns — all available on the free tier. It is the email tool we recommend without qualification to anyone starting out.</p>
+
+    <h2 id="traffic">Content and traffic</h2>
+
+    <h3>Reddit — primary community platform</h3>
+    <p>Our highest-performing traffic source by a significant margin. One post in r/UKPersonalFinance reached 323,000 views. The WOS Guide was built from community engagement in r/whiteoutsurvival. Reddit rewards genuine contribution — posts that add real value to a community consistently outperform promotional content.</p>
+    <p>The approach: participate first, post second. Two posts per week per brand where relevant. Never promotional. Always useful.</p>
+
+    <h3>Pinterest — evergreen traffic engine</h3>
+    <p>Pinterest drives search traffic months after a pin is posted. The strategy is simple: create a pin for every blog post. Once you have ten or more posts on a brand, scale to three to five pins per post. The traffic compounds slowly but reliably. It is one of the most underused platforms for content-led brands.</p>
+
+    <h3>Google Search Console — free indexing management</h3>
+    <p>Canonical tags, sitemap submission, URL inspection, indexing requests. Essential from day one on every brand. We went from four indexed pages to eleven on the DRS site in a single day by using URL inspection correctly. Free, powerful, ignored by most people who build websites.</p>
+
+    <h2 id="publishing">Publishing and products</h2>
+
+    <h3>Amazon KDP — free self-publishing</h3>
+    <p>Print on demand with zero upfront costs. Global distribution across Amazon marketplaces from day one. The royalty on a children's paperback is modest but the reach is immediate. For Mavericks Adventures, KDP removed the barrier between having a book and having a book for sale everywhere.</p>
+
+    <h3>Payhip — free digital product storefront</h3>
+    <p>Five percent transaction fee on the free plan, no monthly cost. Clean product pages, instant download delivery, affiliate programme. The CDM Digital Audit Tool and WOS Lite Guide both sell through Payhip. For digital products it is our default recommendation.</p>
+
+    <h3>Ko-fi — tip jar and support page</h3>
+    <p>Zero friction to set up. Useful as a passive support option once an audience exists. We use it across WOS and DRS — not as a primary revenue source but as an available option for anyone who wants to support the work.</p>
+
+    <h2 id="analytics">Analytics</h2>
+    <p>Google Analytics 4 and Google Search Console on every brand property from day one. Both free, both essential. GA4 for traffic behaviour, GSC for search indexing and keyword visibility. No paid analytics tools — GA4 tells us everything we need at this stage.</p>
+
+    <div class="cta-box">
+      <h3>Want us to build something like this for you?</h3>
+      <p>Same tools, same approach, applied to your brand. Get in touch and we will talk through what that looks like.</p>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" class="cta-btn">See our services &rarr;</a>
+    </div>
+
+    <p>&mdash; Digit</p>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>In this post</h4></div>
+      <div class="sidebar-body">
+        <ul class="toc-list">
+          <li><a href="#hosting">Websites &amp; hosting</a></li>
+          <li><a href="#email">Email marketing</a></li>
+          <li><a href="#traffic">Content &amp; traffic</a></li>
+          <li><a href="#publishing">Publishing &amp; products</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-head"><h4>Free guide</h4></div>
+      <div class="sidebar-body">
+        <p>The DRS Studio Playbook covers our full approach including the tool stack in detail.</p>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="sidebar-btn">Get the playbook &rarr;</a>
+      </div>
+    </div>
+  </aside>
+</div>
+  <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Case Studies</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Case Studies</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-die.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Digital Income Experiment</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="/cdn-cgi/l/email-protection#0d64636b624d69646a64796c617f687b686378687e7978696462236e62237866" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;"><span class="__cf_email__" data-cfemail="2d44434b426d49444a44594c415f485b484358485e5958494442034e42035846">[email&#160;protected]</span></a>
+          <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
+          <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+      <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk</span>
+      <span style="font-

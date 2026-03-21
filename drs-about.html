@@ -25,13 +25,7 @@
     .topbar-nav a:hover{color:var(--gold);}
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
-    .nav-dropdown{position:relative;}
-    .nav-dropdown-trigger{cursor:pointer;}
-    .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:var(--dark-2);border:1px solid rgba(245,166,35,0.15);border-radius:3px;min-width:220px;z-index:200;padding:6px 0;}
-    .nav-dropdown-menu a{display:block;padding:9px 16px;color:rgba(255,255,255,0.5);font-size:0.76rem;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;transition:all 0.15s;border-bottom:1px solid rgba(255,255,255,0.04);}
-    .nav-dropdown-menu a:last-child{border-bottom:none;}
-    .nav-dropdown-menu a:hover{color:var(--gold);background:rgba(245,166,35,0.05);padding-left:20px;}
-    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    
     @media(max-width:860px){.topbar-nav{display:none;}.topbar{padding:12px 20px;}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
@@ -76,7 +70,7 @@
   </style>
 </head>
 <body>
-  <nav class="topbar">
+    <nav class="topbar">
     <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
       <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
     </a>
@@ -85,15 +79,7 @@
         <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-        <div class="nav-dropdown">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" class="nav-dropdown-trigger">Case Studies &#9662;</a>
-          <div class="nav-dropdown-menu">
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html">Mavericks Adventures</a>
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html">Whiteout Survival Guide</a>
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html">Atker Consultancy</a>
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html">Digital Income Experiment</a>
-          </div>
-        </div>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
       </div>
@@ -118,7 +104,7 @@
       <h2 class="section-title">A content studio built <em>in public</em></h2>
       <p>Digital Revenue Studio is an independent content creation studio. We build digital brands from scratch — websites, tools, content strategies and brand infrastructure — and we document the process openly.</p>
       <p>We are not a finished story. We are an ongoing build. The four brands in our portfolio are live, active and generating real results — some modest, some growing, all documented honestly. That transparency is not a marketing angle. It is how we work.</p>
-      <div class="pullquote"><p>&ldquo;Everything we offer, we have built for ourselves first. The case studies are the portfolio.&rdquo;</p></div>
+      <div class="pullquote"><p>&ldquo;A selection of client work and studio projects. Each one is live, independent and documented openly.&rdquo;</p></div>
       <p>We started with a question: what actually happens when you try to build digital brands from zero, with free tools, in the open? The answer became four active brands, a growing content studio and a services offering built on real proof of work.</p>
       <p>Digital Revenue Studio is the creative layer that connects everything. The brands are the evidence.</p>
     </div>
@@ -138,14 +124,25 @@
   </div>
 
   <div style="border-top:1px solid var(--border);padding-top:48px;margin-bottom:48px;">
-    <div class="section-label">The studio portfolio</div>
-    <h2 class="section-title">Four brands. <em>Four case studies.</em></h2>
-    <p class="section-sub">Each brand is independent — its own audience, its own identity. DRS is the creative layer that built them all.</p>
-    <div class="brand-strip">
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" class="brand-strip-card"><div class="brand-strip-dot" style="background:var(--gold);"></div><div class="brand-strip-name">Mavericks Adventures</div><div class="brand-strip-desc">Children&rsquo;s books</div></a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" class="brand-strip-card"><div class="brand-strip-dot" style="background:#4a9eda;"></div><div class="brand-strip-name">WOS Guide</div><div class="brand-strip-desc">Gaming wiki &amp; guides</div></a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" class="brand-strip-card"><div class="brand-strip-dot" style="background:var(--bright);"></div><div class="brand-strip-name">Atker Consultancy</div><div class="brand-strip-desc">PM &amp; digital tools</div></a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" class="brand-strip-card"><div class="brand-strip-dot" style="background:#8B5CF6;"></div><div class="brand-strip-name">Digital Income Exp.</div><div class="brand-strip-desc">Honest income log</div></a>
+    <div class="section-label">Our work</div>
+    <h2 class="section-title">Client work &amp; <em>studio projects</em></h2>
+    <p class="section-sub">A selection of brands and projects we have built. Each one is independent — its own audience, its own identity. These are the case studies we are most proud of so far.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 3px 3px 0;padding:14px 16px;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(10,31,20,0.08)'" onmouseout="this.style.boxShadow=''">
+        <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);">Mavericks Adventures</div><div style="font-size:0.75rem;color:var(--text-muted);">Children's book brand — KDP, website, social</div></div><span style="margin-left:auto;color:var(--gold-dark);">&rarr;</span>
+      </a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-left:3px solid #4a9eda;border-radius:0 3px 3px 0;padding:14px 16px;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(10,31,20,0.08)'" onmouseout="this.style.boxShadow=''">
+        <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);">Whiteout Survival Guide</div><div style="font-size:0.75rem;color:var(--text-muted);">Gaming wiki — 323k reach, community-first</div></div><span style="margin-left:auto;color:#4a9eda;">&rarr;</span>
+      </a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-left:3px solid var(--bright);border-radius:0 3px 3px 0;padding:14px 16px;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(10,31,20,0.08)'" onmouseout="this.style.boxShadow=''">
+        <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);">Atker Consultancy Services</div><div style="font-size:0.75rem;color:var(--text-muted);">Full brand build — logo, website, CDM tool</div></div><span style="margin-left:auto;color:var(--bright);">&rarr;</span>
+      </a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-left:3px solid #8B5CF6;border-radius:0 3px 3px 0;padding:14px 16px;text-decoration:none;transition:box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(10,31,20,0.08)'" onmouseout="this.style.boxShadow=''">
+        <div><div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-dark);">The Digital Income Experiment</div><div style="font-size:0.75rem;color:var(--text-muted);">Brand, website, content strategy &amp; writing</div></div><span style="margin-left:auto;color:#8B5CF6;">&rarr;</span>
+      </a>
+    </div>
+    <div style="margin-top:16px;text-align:center;">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:var(--gold-dark);font-weight:600;text-decoration:none;">View all case studies &rarr;</a>
     </div>
   </div>
 

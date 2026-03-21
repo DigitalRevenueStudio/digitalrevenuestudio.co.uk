@@ -124,17 +124,17 @@
     .brand-die .brand-card-footer{background:rgba(139,92,246,0.04);border-top-color:rgba(139,92,246,0.15);}
 
     /* ── WIKI CALLOUT ── */
-    .wiki-section{background:var(--dark);padding:72px 40px;}
+    .wiki-section{background:#0a1f35;padding:72px 40px;}
     .wiki-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:center;}
     .wiki-left{}
-    .wiki-eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .wiki-eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:#60b4e8;margin-bottom:12px;}
     .wiki-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);letter-spacing:-0.02em;line-height:1.1;margin-bottom:14px;}
     .wiki-title em{font-family:'Lora',serif;font-style:italic;color:var(--gold);}
     .wiki-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.4);line-height:1.8;margin-bottom:24px;}
     .wiki-stats{display:flex;gap:0;border:1px solid rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;}
     .wiki-stat{flex:1;padding:16px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);}
     .wiki-stat:last-child{border-right:none;}
-    .wiki-stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--gold);display:block;line-height:1;}
+    .wiki-stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:#60b4e8;display:block;line-height:1;}
     .wiki-stat-label{font-size:0.68rem;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;display:block;}
     .wiki-right{}
     .wiki-guides{display:flex;flex-direction:column;gap:8px;}
@@ -226,19 +226,22 @@
 <body>
 
 <!-- ── NAV ── -->
-<nav class="topbar">
-  <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-brand">
-    <img src="logo-white.png" alt="Digital Revenue Studio" />
-  </a>
-  <div class="topbar-nav">
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">WOS Wiki</a>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
-  </div>
-</nav>
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
+      <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
+    </a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
+    </div>
+  </nav>
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -421,7 +424,7 @@
         </div>
       </div>
       <div style="margin-top:24px;">
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="btn-primary">Go to the WOS Wiki</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="btn-primary" style="background:#4a9eda;color:#fff;">Go to the WOS Wiki</a>
       </div>
     </div>
     <div class="wiki-right">
@@ -480,49 +483,31 @@
 
     <div class="blog-grid">
 
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-7-council-tax.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-02-ma-build.html" class="blog-card">
         <div class="blog-card-body">
-          <div class="blog-card-tags">
-            <span class="blog-tag tag-case-study">Case Study</span>
-            <span class="blog-tag tag-studio">Test 08</span>
-          </div>
-          <h4>How I Got a £1,500 Council Tax Refund — and How You Can Check Yours</h4>
-          <p>A two-year investigation, 10 neighbouring properties, the Nationwide House Price Index and a full cash refund from the council.</p>
+          <div class="blog-card-tags"><span class="blog-tag tag-case-study">Case Study</span><span class="blog-tag tag-studio">MA</span></div>
+          <h4>How We Built Mavericks Adventures from a Dinner Table Idea</h4>
+          <p>From concept to published book on Amazon KDP. Logo, website, blog content and a character-led brand built around a real cockapoo.</p>
         </div>
-        <div class="blog-card-footer">
-          <span>Read &rarr;</span>
-          <span class="blog-date">Mar 2026</span>
-        </div>
+        <div class="blog-card-footer"><span>Read &rarr;</span><span class="blog-date">Mar 2026</span></div>
       </a>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-8-games-blog-a.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html" class="blog-card">
         <div class="blog-card-body">
-          <div class="blog-card-tags">
-            <span class="blog-tag tag-case-study">Case Study</span>
-            <span class="blog-tag tag-studio">Test 04</span>
-          </div>
-          <h4>Can You Actually Earn Money Playing Games? We Tested Four Platforms</h4>
-          <p>InboxPounds, EarnLabs, Freecash and Prograd — all tested. Real hourly rates, real payout proofs, one honest verdict.</p>
+          <div class="blog-card-tags"><span class="blog-tag tag-case-study">Case Study</span><span class="blog-tag tag-studio">WOS</span></div>
+          <h4>How One Reddit Post Became a 323,000-View Gaming Wiki</h4>
+          <p>From zero presence to a growing F2P wiki and community resource — built entirely on free tools by listening to what the community asked for.</p>
         </div>
-        <div class="blog-card-footer">
-          <span>Read &rarr;</span>
-          <span class="blog-date">Mar 2026</span>
-        </div>
+        <div class="blog-card-footer"><span>Read &rarr;</span><span class="blog-date">Mar 2026</span></div>
       </a>
 
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-9-cashback.html" class="blog-card">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-01-tool-stack.html" class="blog-card">
         <div class="blog-card-body">
-          <div class="blog-card-tags">
-            <span class="blog-tag tag-case-study">Case Study</span>
-            <span class="blog-tag tag-studio">Test 05</span>
-          </div>
-          <h4>Cashback — Running Quidco and TopCashback Simultaneously</h4>
-          <p>Most guides say pick one. We run both and always take the best rate. The first transaction showed a £27.88 difference between platforms.</p>
+          <div class="blog-card-tags"><span class="blog-tag tag-studio">Studio Guide</span><span class="blog-tag tag-income">Free Tools</span></div>
+          <h4>The Free Tool Stack We Use to Build Digital Brands</h4>
+          <p>Every tool we use across four active brands — all free or freemium. Tested, used daily and recommended without reservation.</p>
         </div>
-        <div class="blog-card-footer">
-          <span>Read &rarr;</span>
-          <span class="blog-date">Mar 2026</span>
-        </div>
+        <div class="blog-card-footer"><span>Read &rarr;</span><span class="blog-date">Mar 2026</span></div>
       </a>
 
     </div>
@@ -540,7 +525,7 @@
       <div class="section-eyebrow">Atker Consultancy</div>
       <h2 class="services-title">Professional services for construction &amp; infrastructure</h2>
       <p class="services-sub">Project management expertise for civil engineering and infrastructure projects. From CDM compliance to full project oversight — delivered by practitioners with real site experience.</p>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" class="btn-primary" style="background:var(--mid);margin-top:4px;">View services &rarr;</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" class="btn-primary" style="background:var(--gold);color:var(--dark);margin-top:4px;">View services &rarr;</a>
     </div>
     <div class="services-right">
       <div class="service-item">

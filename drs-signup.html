@@ -25,13 +25,7 @@
     .topbar-nav a:hover{color:var(--gold);}
     .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
     .topbar-cta:hover{background:#fdc84d;}
-    .nav-dropdown{position:relative;}
-    .nav-dropdown-trigger{cursor:pointer;}
-    .nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:var(--dark-2);border:1px solid rgba(245,166,35,0.15);border-radius:3px;min-width:220px;z-index:200;padding:6px 0;}
-    .nav-dropdown-menu a{display:block;padding:9px 16px;color:rgba(255,255,255,0.5);font-size:0.76rem;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;transition:all 0.15s;border-bottom:1px solid rgba(255,255,255,0.04);}
-    .nav-dropdown-menu a:last-child{border-bottom:none;}
-    .nav-dropdown-menu a:hover{color:var(--gold);background:rgba(245,166,35,0.05);padding-left:20px;}
-    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    
     @media(max-width:860px){.topbar-nav{display:none;}.topbar{padding:12px 20px;}}
     .gold-bar{height:3px;background:var(--gold);width:100%;}
     .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
@@ -65,7 +59,7 @@
   </style>
 </head>
 <body>
-  <nav class="topbar">
+    <nav class="topbar">
     <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
       <img src="logo-white.png" alt="Digital Revenue Studio" class="topbar-logo" />
     </a>
@@ -74,15 +68,7 @@
         <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-        <div class="nav-dropdown">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" class="nav-dropdown-trigger">Case Studies &#9662;</a>
-          <div class="nav-dropdown-menu">
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html">Mavericks Adventures</a>
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html">Whiteout Survival Guide</a>
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html">Atker Consultancy</a>
-            <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html">Digital Income Experiment</a>
-          </div>
-        </div>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
       </div>
