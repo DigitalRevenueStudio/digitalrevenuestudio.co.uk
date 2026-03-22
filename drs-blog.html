@@ -59,10 +59,16 @@
     .blog-card-top{padding:24px 24px 0;}
     .blog-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
     .blog-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;padding:3px 8px;border-radius:2px;}
-    .tag-case study{background:rgba(245,166,35,0.1);color:var(--gold-dark);border:1px solid rgba(245,166,35,0.2);}
-    .tag-review{background:rgba(26,92,58,0.08);color:var(--mid);border:1px solid rgba(26,92,58,0.18);}
+    /* Category tags */
+    .tag-type{background:rgba(10,31,20,0.07);color:#444;border:1px solid rgba(10,31,20,0.14);}
+    .tag-review{background:rgba(245,166,35,0.1);color:var(--gold-dark);border:1px solid rgba(245,166,35,0.2);}
+    .tag-recommend{background:rgba(46,139,74,0.08);color:var(--bright);border:1px solid rgba(46,139,74,0.18);}
     .tag-tool{background:rgba(74,158,218,0.08);color:#2a7ab0;border:1px solid rgba(74,158,218,0.2);}
-    .tag-income{background:rgba(46,139,74,0.08);color:var(--bright);border:1px solid rgba(46,139,74,0.18);}
+    /* Brand tags */
+    .tag-drs{background:rgba(245,166,35,0.12);color:var(--gold-dark);border:1px solid rgba(245,166,35,0.25);}
+    .tag-ma{background:rgba(46,139,74,0.1);color:#1a6e35;border:1px solid rgba(46,139,74,0.25);}
+    .tag-wos{background:rgba(74,158,218,0.1);color:#1a6899;border:1px solid rgba(74,158,218,0.25);}
+    .tag-die{background:rgba(139,92,246,0.1);color:#6d35c9;border:1px solid rgba(139,92,246,0.25);}
     .blog-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text-dark);line-height:1.3;margin-bottom:8px;}
     .blog-card p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;}
     .blog-card-footer{padding:16px 24px;border-top:1px solid var(--border);margin-top:16px;display:flex;align-items:center;justify-content:space-between;}
@@ -128,7 +134,7 @@
       <!-- BLOG 01 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-01-tool-stack.html" class="blog-card" data-category="guide studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Studio Guide</span><span class="blog-tag tag-income">Free Tools</span></div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Studio Guide</span><span class="blog-tag tag-drs">Digital Revenue Studio</span></div>
           <h3>The Free Tool Stack We Use to Build Digital Brands</h3>
           <p>Every tool we use across four active client brands &mdash; all free or freemium. Website hosting, email, traffic, publishing and analytics. Tested and used daily.</p>
         </div>
@@ -141,7 +147,7 @@
       <!-- BLOG 02 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-02-ma-build.html" class="blog-card" data-category="case-study studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Case Study</span></div><div class="blog-brand">Mavericks Adventures</div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Case Study</span><span class="blog-tag tag-ma">Mavericks Adventures</span></div>
           <h3>From Dining Room Idea to Published Book</h3>
           <p>How we helped a client take a children&rsquo;s book concept from a dining room conversation to a live brand on Amazon KDP &mdash; logo, website, publishing and content strategy.</p>
         </div>
@@ -154,7 +160,7 @@
       <!-- BLOG 03 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html" class="blog-card" data-category="case-study studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Case Study</span></div><div class="blog-brand">Whiteout Survival Guide</div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Case Study</span><span class="blog-tag tag-wos">Whiteout Survival Guide</span></div>
           <h3>How One Reddit Post Became a 323,000-View Gaming Wiki</h3>
           <p>From zero presence to a growing F2P wiki and community resource &mdash; built entirely on free tools by listening to what the community actually asked for.</p>
         </div>
@@ -167,7 +173,7 @@
       <!-- BLOG 04 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-04-die-case-study.html" class="blog-card" data-category="case-study studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Case Study</span></div><div class="blog-brand">The Digital Income Experiment</div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Case Study</span><span class="blog-tag tag-die">The Digital Income Experiment</span></div>
           <h3>Building a Digital Income Brand from Zero</h3>
           <p>A client wanted to document their online income journey honestly. We built the brand, website, blog templates and three founding content pieces. Here is how.</p>
         </div>
@@ -180,7 +186,7 @@
       <!-- BLOG 05 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-05-pure-pet-food.html" class="blog-card" data-category="review studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Content</span><span class="blog-tag tag-review">Affiliate</span></div><div class="blog-brand">Mavericks Adventures</div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Affiliate Content</span><span class="blog-tag tag-ma">Mavericks Adventures</span></div>
           <h3>When Our Client Switched Their Dog&rsquo;s Food</h3>
           <p>A genuine product switch, a real reaction and an affiliate opportunity built naturally into an MA brand blog. How we helped tell the story well.</p>
         </div>
@@ -193,7 +199,7 @@
       <!-- BLOG 06 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-06-kdp.html" class="blog-card" data-category="review studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Recommended by DRS</span><span class="blog-tag tag-income">Publishing</span></div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Publishing</span><span class="blog-tag tag-recommend">Recommended</span><span class="blog-tag tag-drs">Digital Revenue Studio</span></div>
           <h3>Is Amazon KDP Worth It in the UK in 2026?</h3>
           <p>An honest look at Amazon KDP UK &mdash; royalty structure, discoverability, what actually drives sales and whether it is worth starting today.</p>
         </div>
@@ -206,7 +212,7 @@
       <!-- BLOG 07 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-07-sender-review.html" class="blog-card" data-category="review studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Recommended by DRS</span><span class="blog-tag tag-tool">Tools</span></div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Tools</span><span class="blog-tag tag-recommend">Recommended</span><span class="blog-tag tag-drs">Digital Revenue Studio</span></div>
           <h3>Sender Review 2026: The Email Tool We Use Across Multiple Brands</h3>
           <p>We run multiple client brands off one Sender account. An honest review of the platform, the free tier and whether it is worth it for small creators.</p>
         </div>
@@ -219,7 +225,7 @@
       <!-- BLOG 08 -->
       <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-08-payhip-review.html" class="blog-card" data-category="review studio">
         <div class="blog-card-top">
-          <div class="blog-tags"><span class="blog-tag tag-studio">Recommended by DRS</span><span class="blog-tag tag-review">Platform Review</span></div>
+          <div class="blog-tags"><span class="blog-tag tag-type">Platform Review</span><span class="blog-tag tag-recommend">Recommended</span><span class="blog-tag tag-drs">Digital Revenue Studio</span></div>
           <h3>Payhip Review 2026 &mdash; An Honest Look From Someone Actually Using It</h3>
           <p>Is Payhip the best platform for selling digital products in the UK? We use it as a storefront for client products &mdash; here is what we actually think.</p>
         </div>
