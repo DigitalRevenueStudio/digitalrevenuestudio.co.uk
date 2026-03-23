@@ -21,12 +21,11 @@
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-01-tool-stack.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-02-ma-build.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-04-sender-review.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-05-payhip-review.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-06-pure-pet-food.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-07-kdp.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-08-council-tax.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-09-car-finance.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-04-exp-case-study.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-05-pure-pet-food.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-06-kdp.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-07-sender-review.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-08-payhip-review.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- FAQ PAGES -->
   <url><loc>https://www.digitalrevenuestudio.co.uk/faq.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -57,5 +56,13 @@
   <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-crazy-joe.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-snowbusters.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-hall-of-chiefs.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-first-7-days.html</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-hero-priority.html</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-speedups.html</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- LEGAL -->
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-privacy.html</loc><lastmod>2026-03-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html</loc><lastmod>2026-03-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
 </urlset>
