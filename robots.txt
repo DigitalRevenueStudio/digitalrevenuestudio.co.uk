@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /drs-signup.html
+Disallow: /drs-thankyou.html
+Disallow: /wos-signup.html
+Disallow: /wos-thankyou.html
+
+Sitemap: https://www.digitalrevenuestudio.co.uk/sitemap.xml
