@@ -1,0 +1,25 @@
+# Non-www to www
+http://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:splat 301
+http://www.digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:splat 301
+
+# Old blog URLs → new blog URLs
+/drs-blog-3-pure-pet-food-review.html /drs-blog-05-pure-pet-food.html 301
+/blog.html /drs-blog.html 301
+/drs-blog-04-sender-review.html /drs-blog-07-sender-review.html 301
+/shop.html /drs-shop.html 301
+/drs-blog-2-ai-prompts-income.html /drs-blog-02-ma-build.html 301
+/case-studies.html /drs-case-studies.html 301
+/drs-case-study-die.html /drs-case-study-exp.html 301
+/drs-experiments.html / 301
+
+# Old Blogger format blogs → new numbered blogs
+/drs-blog-1-kdp-blogger.html /drs-blog-06-kdp.html 301
+/drs-blog-5-sender-review-blogger.html /drs-blog-07-sender-review.html 301
+/drs-blog-6-payhip-review.html /drs-blog-08-payhip-review.html 301
+/drs-blog-4-overview-blogger.html /drs-blog.html 301
+
+# Signup/thankyou noindex support
+/wos-signup.html /wos-signup.html 200
+/wos-thankyou.html /wos-thankyou.html 200
+/drs-signup.html /drs-signup.html 200
+/drs-thankyou.html /drs-thankyou.html 200
