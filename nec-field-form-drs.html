@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>NEC Field Notification — Digital Revenue Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --or:#F5A623;--orl:#fdc84d;--ordim:rgba(245,166,35,.1);--orb:rgba(245,166,35,.25);
+  --dk:#0A1F14;--dk2:#0D2B1E;--dk3:#1A3D2A;--dk4:#2E8B4A;
+  --tx:#E8EDF2;--tx2:#A8B4C0;--tx3:#6B7A8D;
+  --gn:#22c55e;--gnbg:rgba(34,197,94,.1);--gnb:rgba(34,197,94,.3);
+  --rd:#ef4444;
+  --am:#f59e0b;--ambg:rgba(245,158,11,.1);--amb:rgba(245,158,11,.3);
+  --rl:rgba(255,255,255,.08);--rad:14px;--rads:10px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--dk);color:var(--tx);min-height:100vh;padding-bottom:40px;}
+.topbar{background:var(--dk2);border-bottom:1px solid var(--rl);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
+.tb-brand{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;}
+.tb-brand span{color:var(--or);}
+.tb-tag{font-size:10px;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase;}
+.chip{background:var(--ordim);border:1px solid var(--orb);border-radius:99px;padding:4px 12px;font-size:11px;color:var(--orl);font-weight:500;}
+.wrap{max-width:560px;margin:0 auto;padding:20px 16px;}
+.status-bar{display:flex;align-items:center;gap:8px;margin-bottom:22px;}
+.st{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--tx3);}
+.st.active{color:var(--or);}
+.st.done{color:var(--gn);}
+.st-dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex-shrink:0;}
+.st-line{flex:1;height:1px;background:var(--rl);}
+.info-box{background:var(--ordim);border:1px solid var(--orb);border-radius:var(--rads);padding:12px 14px;font-size:12px;color:var(--tx2);line-height:1.6;margin-bottom:16px;}
+.info-box b{color:var(--orl);}
+.triage{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.tc{background:var(--dk2);border:2px solid var(--rl);border-radius:var(--rad);padding:20px 14px;cursor:pointer;transition:all .2s;text-align:center;}
+.tc:hover,.tc.sel{border-color:var(--or);background:var(--ordim);}
+.tc-icon{font-size:30px;margin-bottom:10px;}
+.tc-title{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;margin-bottom:4px;}
+.tc-sub{font-size:11px;color:var(--tx3);line-height:1.4;}
+.tc-clause{font-size:10px;color:var(--or);margin-top:6px;font-weight:600;}
+.triage-note{font-size:12px;color:var(--tx3);text-align:center;line-height:1.6;padding:0 8px;}
+.fs{background:var(--dk2);border:1px solid var(--rl);border-radius:var(--rad);overflow:hidden;margin-bottom:14px;}
+.fs-hdr{padding:11px 16px;background:var(--dk3);border-bottom:1px solid var(--rl);display:flex;align-items:center;gap:10px;}
+.fs-num{width:22px;height:22px;border-radius:6px;background:var(--ordim);border:1px solid var(--orb);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--or);flex-shrink:0;}
+.fs-title{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;}
+.fs-body{padding:16px;}
+.field{margin-bottom:14px;}
+.field:last-child{margin-bottom:0;}
+.field label{display:block;font-size:11px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.field input,.field select,.field textarea{width:100%;font-size:14px;padding:12px 14px;border-radius:var(--rads);border:1px solid rgba(255,255,255,.1);background:var(--dk3);color:var(--tx);font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;-webkit-appearance:none;appearance:none;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--or);box-shadow:0 0 0 3px var(--ordim);}
+.field select option{background:var(--dk3);}
+.field textarea{resize:vertical;min-height:100px;line-height:1.55;}
+.field input[type="date"]{color-scheme:dark;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.field-hint{font-size:11px;color:var(--tx3);margin-top:5px;line-height:1.4;}
+.req{color:var(--or);}
+.check-list{display:flex;flex-direction:column;gap:10px;}
+.ci{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--dk3);border:1px solid rgba(255,255,255,.07);border-radius:var(--rads);cursor:pointer;transition:all .15s;}
+.ci.chk{background:var(--ordim);border-color:var(--orb);}
+.ci input{width:18px;height:18px;accent-color:var(--or);flex-shrink:0;margin-top:1px;cursor:pointer;}
+.ci span{font-size:13px;line-height:1.4;}
+.clause-grid{display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto;padding-right:2px;}
+.co{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:var(--dk3);border:1px solid rgba(255,255,255,.07);border-radius:8px;cursor:pointer;transition:all .15s;}
+.co.sel{background:var(--ordim);border-color:var(--orb);}
+.co input{width:16px;height:16px;accent-color:var(--or);flex-shrink:0;margin-top:2px;}
+.co-num{font-size:11px;font-weight:700;color:var(--or);white-space:nowrap;min-width:52px;}
+.co-text{font-size:12px;color:var(--tx2);line-height:1.4;}
+.photo-drop-zone{border:2px dashed rgba(255,255,255,.15);border-radius:var(--rads);padding:22px;text-align:center;cursor:pointer;transition:all .2s;background:var(--dk3);}
+.photo-drop-zone:hover{border-color:var(--or);background:var(--ordim);}
+.pd-icon{font-size:28px;margin-bottom:8px;}
+.pd-text{font-size:13px;color:var(--tx2);margin-bottom:4px;}
+.pd-hint{font-size:11px;color:var(--tx3);}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;}
+.photo-thumb{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--dk3);border:1px solid var(--rl);}
+.photo-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo-del{position:absolute;top:4px;right:4px;background:rgba(0,0,0,.7);border:none;color:#fff;width:22px;height:22px;border-radius:50%;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;}
+.photo-del:hover{background:var(--rd);}
+.photo-count{font-size:11px;color:var(--tx3);margin-top:8px;text-align:center;}
+.photo-count b{color:var(--or);}
+.photo-reminder{background:var(--ambg);border:1px solid var(--amb);border-radius:8px;padding:12px 14px;margin-top:14px;display:none;}
+.photo-reminder.show{display:block;}
+.pr-title{font-size:12px;font-weight:600;color:var(--am);margin-bottom:4px;}
+.pr-text{font-size:11px;color:var(--tx2);line-height:1.5;}
+.btn-submit{width:100%;padding:16px;border-radius:var(--rad);background:var(--or);border:none;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;}
+.btn-submit:hover{background:var(--orl);}
+.btn-back{background:none;border:none;color:var(--tx3);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;margin:10px auto 0;display:block;}
+.result-hdr{background:var(--dk2);border:1px solid var(--rl);border-radius:var(--rad);padding:20px;margin-bottom:14px;text-align:center;}
+.result-icon{font-size:44px;margin-bottom:10px;}
+.result-title{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;margin-bottom:6px;}
+.result-sub{font-size:13px;color:var(--tx3);line-height:1.5;}
+.import-box{background:var(--dk2);border:1px solid var(--orb);border-radius:var(--rad);overflow:hidden;margin-bottom:12px;}
+.box-hdr{padding:11px 16px;background:var(--ordim);border-bottom:1px solid var(--orb);display:flex;align-items:center;justify-content:space-between;}
+.box-hdr span{font-size:12px;font-weight:600;color:var(--orl);text-transform:uppercase;letter-spacing:.06em;}
+.box-body{padding:12px 16px;font-size:11px;color:var(--tx3);font-family:monospace;word-break:break-all;line-height:1.5;max-height:100px;overflow-y:auto;}
+.email-box{background:var(--dk2);border:1px solid var(--rl);border-radius:var(--rad);overflow:hidden;margin-bottom:12px;}
+.email-hdr{padding:11px 16px;background:var(--dk3);border-bottom:1px solid var(--rl);display:flex;align-items:center;justify-content:space-between;}
+.email-hdr span{font-size:12px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;}
+.email-pre{padding:14px 16px;font-size:11px;color:var(--tx2);font-family:monospace;line-height:1.7;white-space:pre-wrap;max-height:300px;overflow-y:auto;}
+.copy-btn{background:var(--dk4);border:1px solid rgba(255,255,255,.1);color:var(--tx3);padding:5px 11px;border-radius:6px;font-size:11px;cursor:pointer;font-family:'Inter',sans-serif;}
+.copy-btn:hover{border-color:var(--or);color:var(--or);}
+.copy-btn.ok{border-color:var(--gnb);color:var(--gn);}
+.btn-block{display:block;width:100%;padding:14px;border-radius:var(--rad);font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;text-align:center;border:1px solid;margin-bottom:10px;transition:all .15s;}
+.btn-orange{background:var(--or);border-color:var(--or);color:#fff;}
+.btn-orange:hover{background:var(--orl);}
+.btn-outline{background:var(--dk2);border-color:rgba(255,255,255,.1);color:var(--tx);}
+.btn-outline:hover{background:var(--dk3);}
+.foot-note{font-size:11px;color:var(--tx3);text-align:center;line-height:1.6;margin-top:12px;padding:0 8px;}
+.hidden{display:none!important;}
+@media(max-width:400px){.triage{grid-template-columns:1fr;}.field-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <div class="tb-brand">NEC<span>.</span>Field</div>
+    <div class="tb-tag">Contract Notification Form</div>
+  </div>
+  <div class="chip">NEC4 / NEC3</div>
+</div>
+
+<div class="wrap">
+  <div class="status-bar">
+    <div class="st active" id="st1"><div class="st-dot"></div>Type</div>
+    <div class="st-line"></div>
+    <div class="st" id="st2"><div class="st-dot"></div>Details</div>
+    <div class="st-line"></div>
+    <div class="st" id="st3"><div class="st-dot"></div>Send</div>
+  </div>
+
+  <div id="pg-triage">
+    <div class="info-box"><b>Field Notification Form</b> — Raise an Early Warning or Compensation Event. Your submission generates a formatted email and an import code for NEC Manager.</div>
+    <div class="triage">
+      <div class="tc" id="tc-ewn" onclick="selectType('ewn')">
+        <div class="tc-icon">&#9888;&#65039;</div>
+        <div class="tc-title">Early Warning</div>
+        <div class="tc-sub">A risk that could affect price, time or performance</div>
+        <div class="tc-clause">NEC4 Cl.15.1 / NEC3 Cl.16.1</div>
+      </div>
+      <div class="tc" id="tc-ce" onclick="selectType('ce')">
+        <div class="tc-icon">&#128203;</div>
+        <div class="tc-title">Compensation Event</div>
+        <div class="tc-sub">An event entitling the Contractor to more time or money</div>
+        <div class="tc-clause">NEC4/NEC3 Cl.60.1</div>
+      </div>
+    </div>
+    <p class="triage-note">Not sure? Raise an <b style="color:var(--tx)">Early Warning</b> when you spot a risk — before it becomes an issue. Raise a <b style="color:var(--tx)">Compensation Event</b> when an event has already occurred that entitles the Contractor to additional time or cost.</p>
+  </div>
+
+  <div id="pg-form" class="hidden">
+    <div id="form-body"></div>
+    <button class="btn-submit" onclick="generateEmail()">Generate Email &amp; Import Code &#8594;</button>
+    <button class="btn-back" onclick="goBack()">&#8592; Change notification type</button>
+  </div>
+
+  <div id="pg-result" class="hidden">
+    <div class="result-hdr">
+      <div class="result-icon">&#9989;</div>
+      <div class="result-title">Notification Ready</div>
+      <div class="result-sub" id="result-sub">Your email and import code have been generated.</div>
+    </div>
+    <div class="import-box">
+      <div class="box-hdr">
+        <span>&#128273; NEC Manager Import Code</span>
+        <button class="copy-btn" id="btn-copy-code" onclick="doCopy('code')">Copy</button>
+      </div>
+      <div class="box-body" id="import-display"></div>
+    </div>
+    <div class="email-box">
+      <div class="email-hdr">
+        <span>&#128231; Email Preview</span>
+        <button class="copy-btn" id="btn-copy-email" onclick="doCopy('email')">Copy</button>
+      </div>
+      <div class="email-pre" id="email-display"></div>
+    </div>
+    <button class="btn-block btn-orange" onclick="openMail()">Open in Mail App</button>
+    <button class="btn-block btn-outline" onclick="startOver()">Submit another notification</button>
+    <p class="foot-note">Paste the import code into NEC Manager using the <b style="color:var(--tx)">Import from Field</b> button to add this record automatically.</p>
+  </div>
+</div>
+
+<script>
+var _type = null;
+var _photos = [];
+var _code = '';
+var _email = '';
+var _subject = '';
+var _to = '';
+var _clause = '';
+
+var CLAUSES = [
+  ['60.1(1)','PM instruction changing Scope'],
+  ['60.1(2)','Employer fails to give access'],
+  ['60.1(3)','Employer fails to provide something'],
+  ['60.1(4)','PM instruction stopping or changing key date'],
+  ['60.1(5)','PM instruction not resolving ambiguity'],
+  ['60.1(6)','PM instruction dealing with object of value'],
+  ['60.1(7)','PM instruction dealing with unforeseen conditions'],
+  ['60.1(8)','PM instruction changing a previous decision'],
+  ['60.1(9)','Employer withholds acceptance'],
+  ['60.1(10)','PM does not reply within required period'],
+  ['60.1(11)','Employer does not provide materials/facilities/samples'],
+  ['60.1(12)','PM instruction to stop or accelerate work'],
+  ['60.1(13)','Weather conditions more adverse than forecast'],
+  ['60.1(14)','Employer risk event'],
+  ['60.1(15)','PM certifies takeover before Completion Date'],
+  ['60.1(16)','Employer does not provide access'],
+  ['60.1(17)','Breach of contract by Employer'],
+  ['60.1(18)','Preventions'],
+  ['Other','Other — describe basis manually']
+];
+
+function tdv() { return new Date().toISOString().slice(0,10); }
+
+function fmt(d) {
+  if (!d) return '—';
+  try { return new Date(d).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}); }
+  catch(e) { return d; }
+}
+
+function gv(id) { var e = document.getElementById(id); return e ? e.value.trim() : ''; }
+function gc(id) { var e = document.getElementById(id); return e ? e.checked : false; }
+
+function setSt(n) {
+  for (var i = 1; i <= 3; i++) {
+    var el = document.getElementById('st'+i);
+    el.className = 'st' + (i < n ? ' done' : i === n ? ' active' : '');
+  }
+}
+
+function selectType(t) {
+  _type = t;
+  document.getElementById('tc-ewn').className = 'tc' + (t==='ewn'?' sel':'');
+  document.getElementById('tc-ce').className = 'tc' + (t==='ce'?' sel':'');
+  setTimeout(showForm, 180);
+}
+
+function showForm() {
+  document.getElementById('pg-triage').className = 'hidden';
+  _photos = []; _clause = '';
+  document.getElementById('form-body').innerHTML = _type==='ewn' ? mkEWN() : mkCE();
+  document.getElementById('pg-form').className = '';
+  setSt(2);
+  window.scrollTo(0,0);
+}
+
+function goBack() {
+  document.getElementById('pg-form').className = 'hidden';
+  document.getElementById('pg-triage').className = '';
+  setSt(1);
+  window.scrollTo(0,0);
+}
+
+function mkField(label, inner, hint) {
+  var h = hint ? '<div class="field-hint">'+hint+'</div>' : '';
+  return '<div class="field"><label>'+label+'</label>'+inner+h+'</div>';
+}
+
+function mkEWN() {
+  var html = '<div class="info-box"><b>Early Warning Notice</b> — NEC4 Cl.15.1 / NEC3 Cl.16.1. Raise as soon as a risk is identified.</div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">1</div><div class="fs-title">Project Details</div></div><div class="fs-body">';
+  html += mkField('Project Name <span class="req">*</span>', '<input id="f-proj" placeholder="Enter project name"/>');
+  html += '<div class="field-row">';
+  html += mkField('Contract Number', '<input id="f-num" placeholder="e.g. NEC-2026-001"/>');
+  html += mkField('Your Name <span class="req">*</span>', '<input id="f-name" placeholder="Full name"/>');
+  html += '</div><div class="field-row">';
+  html += mkField('Organisation', '<input id="f-org" placeholder="Company name"/>');
+  html += mkField('Date <span class="req">*</span>', '<input type="date" id="f-date" value="'+tdv()+'"/>');
+  html += '</div>';
+  html += mkField('Notifying as', '<select id="f-party"><option value="Contractor">Contractor</option><option value="Project Manager">Project Manager</option><option value="Subcontractor">Subcontractor</option></select>');
+  html += mkField('Send to (email)', '<input type="email" id="f-to" placeholder="pm@company.co.uk"/>', 'Pre-addresses your mail app');
+  html += '</div></div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">2</div><div class="fs-title">Description of Matter</div></div><div class="fs-body">';
+  html += mkField('Description <span class="req">*</span>', '<textarea id="f-desc" placeholder="Describe the matter, where on site, and when you became aware of it..."></textarea>');
+  html += '</div></div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">3</div><div class="fs-title">Potential Impact</div></div><div class="fs-body">';
+  html += '<div class="check-list">';
+  html += '<label class="ci" onclick="togCI(this)"><input type="checkbox" id="imp1"/><span>Increase the total of Prices</span></label>';
+  html += '<label class="ci" onclick="togCI(this)"><input type="checkbox" id="imp2"/><span>Delay Completion or achievement of a Key Date</span></label>';
+  html += '<label class="ci" onclick="togCI(this)"><input type="checkbox" id="imp3"/><span>Impair performance of the works in use</span></label>';
+  html += '</div></div></div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">4</div><div class="fs-title">Evidence &amp; Proposed Actions</div></div><div class="fs-body">';
+  html += mkField('Supporting Evidence', '<textarea id="f-evidence" placeholder="Reference photos, emails, drawings or reports..."></textarea>');
+  html += mkField('Proposed Meeting Date', '<input type="date" id="f-meeting"/>', 'NEC4 Cl.15.2 — a risk reduction meeting should be held as soon as practicable');
+  html += '</div></div>';
+
+  html += mkPhotoSection(5);
+  return html;
+}
+
+function mkCE() {
+  var clHtml = '';
+  for (var i = 0; i < CLAUSES.length; i++) {
+    clHtml += '<div class="co" id="co'+i+'" onclick="selCl('+i+')">';
+    clHtml += '<input type="radio" name="cl" id="cr'+i+'"/>';
+    clHtml += '<div class="co-num">'+CLAUSES[i][0]+'</div>';
+    clHtml += '<div class="co-text">'+CLAUSES[i][1]+'</div>';
+    clHtml += '</div>';
+  }
+
+  var html = '<div class="info-box"><b>Compensation Event</b> — NEC4/NEC3 Cl.60.1. Notify within <b>8 weeks</b> of becoming aware. Failure to notify loses entitlement (Cl.61.3).</div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">1</div><div class="fs-title">Project Details</div></div><div class="fs-body">';
+  html += mkField('Project Name <span class="req">*</span>', '<input id="f-proj" placeholder="Enter project name"/>');
+  html += '<div class="field-row">';
+  html += mkField('Contract Number', '<input id="f-num" placeholder="e.g. NEC-2026-001"/>');
+  html += mkField('Related EWN (if any)', '<input id="f-ewn" placeholder="e.g. EWN-003"/>');
+  html += '</div><div class="field-row">';
+  html += mkField('Your Name <span class="req">*</span>', '<input id="f-name" placeholder="Full name"/>');
+  html += mkField('Organisation', '<input id="f-org" placeholder="Company name"/>');
+  html += '</div><div class="field-row">';
+  html += mkField('Date of Notification <span class="req">*</span>', '<input type="date" id="f-date" value="'+tdv()+'"/>');
+  html += mkField('Date Event Occurred', '<input type="date" id="f-event-date"/>');
+  html += '</div>';
+  html += mkField('Send to (email)', '<input type="email" id="f-to" placeholder="pm@company.co.uk"/>');
+  html += '</div></div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">2</div><div class="fs-title">Event Description</div></div><div class="fs-body">';
+  html += mkField('Description <span class="req">*</span>', '<textarea id="f-desc" placeholder="What happened, where, when, and what instruction or event caused it..."></textarea>');
+  html += '</div></div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">3</div><div class="fs-title">Contractual Basis — Clause 60.1</div></div><div class="fs-body">';
+  html += '<div class="field"><label>Select applicable sub-clause <span class="req">*</span></label><div class="clause-grid">'+clHtml+'</div></div>';
+  html += '<div class="field" id="other-wrap" style="display:none">'+mkField('Describe other basis', '<input id="f-other" placeholder="Describe the contractual basis..."/>')+'</div>';
+  html += '</div></div>';
+
+  html += '<div class="fs"><div class="fs-hdr"><div class="fs-num">4</div><div class="fs-title">Preliminary Impact Assessment</div></div><div class="fs-body">';
+  html += '<div class="field-row">';
+  html += mkField('Est. time impact (days)', '<input type="number" id="f-time" placeholder="0" min="0"/>', 'Approximate — formal quotation to follow');
+  html += mkField('Est. cost impact (&#163;)', '<input type="number" id="f-cost" placeholder="0" min="0" step="0.01"/>', 'Approximate — formal quotation to follow');
+  html += '</div>';
+  html += mkField('Supporting Evidence', '<textarea id="f-evidence" placeholder="Reference photos, emails, instructions, drawings..."></textarea>');
+  html += '</div></div>';
+
+  html += mkPhotoSection(5);
+  return html;
+}
+
+function mkPhotoSection(n) {
+  var html = '<div class="fs"><div class="fs-hdr"><div class="fs-num">'+n+'</div><div class="fs-title">Photo Evidence</div></div><div class="fs-body">';
+  html += '<div class="photo-drop-zone" id="photo-drop" onclick="document.getElementById(\'photo-input\').click()">';
+  html += '<div class="pd-icon">&#128247;</div>';
+  html += '<div class="pd-text">Tap to take a photo or choose from your library</div>';
+  html += '<div class="pd-hint">Up to 6 photos &middot; JPEG or PNG &middot; compressed automatically</div>';
+  html += '</div>';
+  html += '<input type="file" id="photo-input" accept="image/*" multiple style="display:none"/>';
+  html += '<div class="photo-grid" id="photo-grid"></div>';
+  html += '<div class="photo-count" id="photo-count"></div>';
+  html += '<div class="photo-reminder" id="photo-reminder">';
+  html += '<div class="pr-title">&#128206; Remember to attach your photos to the email</div>';
+  html += '<div class="pr-text">Photos are embedded in the import code so they arrive in NEC Manager automatically. Also attach the original image files to your email so the Project Manager has full-resolution copies on record.</div>';
+  html += '</div>';
+  html += '</div></div>';
+  return html;
+}
+
+function togCI(label) {
+  var cb = label.querySelector('input');
+  setTimeout(function() { label.className = 'ci' + (cb.checked ? ' chk' : ''); }, 10);
+}
+
+function selCl(i) {
+  var opts = document.querySelectorAll('.co');
+  for (var j = 0; j < opts.length; j++) opts[j].classList.remove('sel');
+  document.getElementById('co'+i).classList.add('sel');
+  document.getElementById('cr'+i).checked = true;
+  _clause = CLAUSES[i][0] + ' ' + CLAUSES[i][1];
+  var ow = document.getElementById('other-wrap');
+  if (ow) ow.style.display = CLAUSES[i][0]==='Other' ? '' : 'none';
+}
+
+document.addEventListener('change', function(e) {
+  if (e.target && e.target.id === 'photo-input') {
+    addPhotos(e.target.files);
+    e.target.value = '';
+  }
+});
+
+function addPhotos(files) {
+  var arr = [];
+  for (var i = 0; i < files.length; i++) arr.push(files[i]);
+  var rem = 6 - _photos.length;
+  if (rem <= 0) { alert('Maximum 6 photos per notification.'); return; }
+  var add = arr.slice(0, rem);
+  if (arr.length > rem) alert('Maximum 6 photos total. Adding first ' + rem + '.');
+  var loaded = 0;
+  for (var i = 0; i < add.length; i++) {
+    (function(file) {
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        var img = new Image();
+        img.onload = function() {
+          var c = document.createElement('canvas');
+          var M = 600, w = img.width, h = img.height;
+          if (w > M || h > M) {
+            if (w > h) { h = Math.round(h*M/w); w = M; }
+            else { w = Math.round(w*M/h); h = M; }
+          }
+          c.width = w; c.height = h;
+          c.getContext('2d').drawImage(img, 0, 0, w, h);
+          _photos.push({ dataUrl: c.toDataURL('image/jpeg', 0.72), name: file.name });
+          loaded++;
+          if (loaded === add.length) renderPhotos();
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    })(add[i]);
+  }
+}
+
+function removePhoto(i) {
+  _photos.splice(i, 1);
+  renderPhotos();
+}
+
+function renderPhotos() {
+  var grid = document.getElementById('photo-grid');
+  var cnt = document.getElementById('photo-count');
+  var rem = document.getElementById('photo-reminder');
+  if (!grid) return;
+  var html = '';
+  for (var i = 0; i < _photos.length; i++) {
+    html += '<div class="photo-thumb">';
+    html += '<img src="' + _photos[i].dataUrl + '" alt="Photo ' + (i+1) + '"/>';
+    html += '<button class="photo-del" onclick="removePhoto('+i+')">&#x2715;</button>';
+    html += '</div>';
+  }
+  grid.innerHTML = html;
+  if (cnt) cnt.innerHTML = _photos.length > 0 ? '<b>'+_photos.length+'</b> photo'+(_photos.length!==1?'s':'')+' added' : '';
+  if (rem) rem.className = 'photo-reminder' + (_photos.length > 0 ? ' show' : '');
+}
+
+function sep() { return '--------------------------------------------------------------'; }
+
+function generateEmail() {
+  var proj = gv('f-proj'), name = gv('f-name'), desc = gv('f-desc');
+  if (!proj || !name || !desc) { alert('Please fill in the required fields before continuing.'); return; }
+  if (_type === 'ewn') buildEWN();
+  else buildCE();
+  document.getElementById('pg-form').className = 'hidden';
+  document.getElementById('pg-result').className = '';
+  setSt(3);
+  window.scrollTo(0,0);
+}
+
+function buildEWN() {
+  var proj=gv('f-proj'), num=gv('f-num'), name=gv('f-name'), org=gv('f-org');
+  var date=gv('f-date'), party=gv('f-party');
+  var desc=gv('f-desc'), evidence=gv('f-evidence'), meeting=gv('f-meeting');
+  var i1=gc('imp1'), i2=gc('imp2'), i3=gc('imp3');
+  _to = gv('f-to');
+
+  var ref = 'EWN-' + Date.now().toString(36).toUpperCase().slice(-5);
+  _subject = 'Early Warning Notice — ' + proj + (num?' ('+num+')':'') + ' — ' + ref + ' — ' + fmt(date);
+
+  var impacts = [];
+  if (i1) impacts.push('  * Increase the total of Prices');
+  if (i2) impacts.push('  * Delay Completion or achievement of a Key Date');
+  if (i3) impacts.push('  * Impair performance of the works in use');
+
+  var pline = _photos.length > 0
+    ? _photos.length + ' photo' + (_photos.length!==1?'s':'') + ' attached to this email and embedded in the import code.'
+    : 'No photos attached.';
+
+  var b = 'EARLY WARNING NOTICE\n';
+  b += 'NEC4 Clause 15.1 / NEC3 Clause 16.1\n';
+  b += sep()+'\n\n';
+  b += 'Reference:        '+ref+'\n';
+  b += 'Project:          '+proj+'\n';
+  b += 'Contract Number:  '+(num||'--')+'\n';
+  b += 'Date of Issue:    '+fmt(date)+'\n';
+  b += 'Notifying Party:  '+(party||'Contractor')+'\n';
+  b += 'Issued by:        '+name+(org?' ('+org+')':'')+'\n\n';
+  b += sep()+'\nDESCRIPTION OF MATTER\n'+sep()+'\n\n'+desc+'\n\n';
+  b += sep()+'\nPOTENTIAL IMPACT\n'+sep()+'\n\n';
+  b += (impacts.length ? impacts.join('\n') : '  No specific impacts identified at this stage.')+'\n\n';
+  b += sep()+'\nSUPPORTING EVIDENCE\n'+sep()+'\n\n'+(evidence||'No supporting evidence referenced at this stage.')+'\n\n';
+  if (meeting) b += sep()+'\nPROPOSED MEETING DATE\n'+sep()+'\n\n'+fmt(meeting)+'\n\n';
+  b += sep()+'\nPHOTO EVIDENCE\n'+sep()+'\n\n'+pline+'\n\n';
+  b += sep()+'\nNEC OBLIGATIONS\n'+sep()+'\n\n';
+  b += 'NEC4 Cl.15.2 / NEC3 Cl.16.2: The parties must attend a risk reduction meeting as soon\n';
+  b += 'as practicable to cooperate in making proposals to avoid or reduce the notified risk.\n\n';
+  b += 'Please acknowledge receipt and confirm the proposed meeting date.\n\n';
+  b += sep()+'\n\n'+name+(org?'\n'+org:'')+'\n'+fmt(date);
+  _email = b;
+
+  var payload = {
+    t:'ewn', ref:ref, proj:proj, num:num, date:date,
+    party:(party||'Contractor'), name:name, org:org,
+    desc:desc, imp1:i1, imp2:i2, imp3:i3,
+    evidence:evidence, meeting:meeting,
+    photos: _photos.slice(0,6).map(function(p){return{dataUrl:p.dataUrl,name:p.name};}),
+    generated: new Date().toISOString()
+  };
+  _code = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+  showResult();
+}
+
+function buildCE() {
+  var proj=gv('f-proj'), num=gv('f-num'), name=gv('f-name'), org=gv('f-org');
+  var date=gv('f-date'), evDate=gv('f-event-date'), ewn=gv('f-ewn');
+  var desc=gv('f-desc'), evidence=gv('f-evidence');
+  var time=gv('f-time'), cost=gv('f-cost'), other=gv('f-other');
+  var clause = _clause || '-- not specified --';
+  _to = gv('f-to');
+
+  var ref = 'CE-' + Date.now().toString(36).toUpperCase().slice(-5);
+  _subject = 'Compensation Event Notification — ' + proj + (num?' ('+num+')':'') + ' — ' + ref + ' — ' + fmt(date);
+
+  var pline = _photos.length > 0
+    ? _photos.length + ' photo' + (_photos.length!==1?'s':'') + ' attached to this email and embedded in the import code.'
+    : 'No photos attached.';
+
+  var costStr = cost ? ('£' + parseFloat(cost).toLocaleString('en-GB',{minimumFractionDigits:2}) + ' (to be confirmed in formal quotation)') : 'To be assessed';
+
+  var b = 'COMPENSATION EVENT NOTIFICATION\n';
+  b += 'NEC4 / NEC3 -- Clause 60.1 & 61.3\n';
+  b += sep()+'\n\n';
+  b += 'Reference:              '+ref+'\n';
+  b += 'Project:                '+proj+'\n';
+  b += 'Contract Number:        '+(num||'--')+'\n';
+  b += 'Date of Notification:   '+fmt(date)+'\n';
+  b += 'Date Event Occurred:    '+(fmt(evDate)||'See description')+'\n';
+  b += 'Related EWN:            '+(ewn||'None')+'\n';
+  b += 'Notified by:            '+name+(org?' ('+org+')':'')+'\n\n';
+  b += sep()+'\nDESCRIPTION OF EVENT\n'+sep()+'\n\n'+desc+'\n\n';
+  b += sep()+'\nCONTRACTUAL BASIS\n'+sep()+'\n\n'+clause+(other?'\n\nAdditional detail: '+other:'')+'\n\n';
+  b += sep()+'\nPRELIMINARY IMPACT ASSESSMENT\n'+sep()+'\n\n';
+  b += '  Est. time impact:  '+(time?time+' days (to be confirmed in formal quotation)':'To be assessed')+'\n';
+  b += '  Est. cost impact:  '+costStr+'\n\n';
+  b += sep()+'\nSUPPORTING EVIDENCE\n'+sep()+'\n\n'+(evidence||'No supporting evidence referenced at this stage.')+'\n\n';
+  b += sep()+'\nPHOTO EVIDENCE\n'+sep()+'\n\n'+pline+'\n\n';
+  b += sep()+'\nNEC OBLIGATIONS\n'+sep()+'\n\n';
+  b += 'NEC4 Cl.61.4: The PM must respond within 2 weeks confirming whether this is a\n';
+  b += 'compensation event. Failure to respond entitles the Contractor to proceed as if\n';
+  b += 'instructed to submit a quotation.\n\n';
+  b += 'Issued in accordance with NEC4/NEC3 Clause 61.3. Please acknowledge receipt.\n\n';
+  b += sep()+'\n\n'+name+(org?'\n'+org:'')+'\n'+fmt(date);
+  _email = b;
+
+  var payload = {
+    t:'ce', ref:ref, proj:proj, num:num, date:date, eventDate:evDate,
+    ewn:ewn, name:name, org:org, desc:desc,
+    clause:clause, clauseOther:other,
+    quoteTime:time, quoteCost:cost, evidence:evidence,
+    photos: _photos.slice(0,6).map(function(p){return{dataUrl:p.dataUrl,name:p.name};}),
+    generated: new Date().toISOString()
+  };
+  _code = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+  showResult();
+}
+
+function showResult() {
+  document.getElementById('import-display').textContent = 'ATKER-NEC-IMPORT::' + _code;
+  document.getElementById('email-display').textContent = _email;
+  var sub = document.getElementById('result-sub');
+  if (_photos.length > 0) {
+    sub.innerHTML = _photos.length + ' photo' + (_photos.length!==1?'s':'') + ' embedded in import code. <b style="color:var(--am)">Attach original image files to your email manually.</b>';
+  } else {
+    sub.textContent = 'Your email and import code have been generated. Copy the email text or open your mail app.';
+  }
+}
+
+function doCopy(which) {
+  var text = which === 'code' ? ('ATKER-NEC-IMPORT::' + _code) : _email;
+  var btnId = which === 'code' ? 'btn-copy-code' : 'btn-copy-email';
+  var btn = document.getElementById(btnId);
+  function done() {
+    btn.textContent = '✓ Copied'; btn.classList.add('ok');
+    setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('ok'); }, 2000);
+  }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(done).catch(function() { fallbackCopy(text); done(); });
+  } else {
+    fallbackCopy(text); done();
+  }
+}
+
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try { document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
+}
+
+function openMail() {
+  var note = _photos.length > 0
+    ? '\n\n⚠ IMPORTANT: Please attach ' + _photos.length + ' photo file(s) to this email before sending.'
+    : '';
+  var fullBody = _email + '\n\n\n'
+    + '====== NEC MANAGER IMPORT CODE (paste into NEC Manager) ======\n'
+    + 'ATKER-NEC-IMPORT::' + _code + '\n'
+    + '==============================================================' + note;
+  var to = _to ? encodeURIComponent(_to) : '';
+  window.location.href = 'mailto:' + to
+    + '?subject=' + encodeURIComponent(_subject)
+    + '&body=' + encodeURIComponent(fullBody);
+}
+
+function startOver() {
+  _type=null; _photos=[]; _code=''; _email=''; _subject=''; _to=''; _clause='';
+  document.getElementById('tc-ewn').className = 'tc';
+  document.getElementById('tc-ce').className = 'tc';
+  document.getElementById('pg-result').className = 'hidden';
+  document.getElementById('pg-triage').className = '';
+  setSt(1);
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

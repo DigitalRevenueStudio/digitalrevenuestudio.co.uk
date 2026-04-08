@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CDM 2015 Compliance Manager | Digital Revenue Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --navy: #0A1F14;
+  --navy2: #0D2B1E;
+  --navy3: #1A3D2A;
+  --navy4: #2E8B4A;
+  --teal: #F5A623;
+  --teal-light: #fdc84d;
+  --teal-dim: rgba(245,166,35,0.12);
+  --teal-border: rgba(245,166,35,0.3);
+  --text: #E8EDF2;
+  --text2: #A8B4C0;
+  --text3: #6B7A8D;
+  --green: #22c55e;
+  --green-bg: rgba(34,197,94,0.12);
+  --green-border: rgba(34,197,94,0.3);
+  --red: #ef4444;
+  --red-bg: rgba(239,68,68,0.1);
+  --red-border: rgba(239,68,68,0.25);
+  --amber: #f59e0b;
+  --amber-bg: rgba(245,158,11,0.1);
+  --amber-border: rgba(245,158,11,0.3);
+  --slate-bg: rgba(168,180,192,0.08);
+  --slate-border: rgba(168,180,192,0.2);
+  --sidebar-w: 240px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); display: flex; min-height: 100vh; font-size: 14px; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--navy2);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 40;
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  padding: 20px 18px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brand-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+.brand-logo span { color: var(--teal); }
+.brand-tagline {
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebar-project {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.sidebar-project-label {
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.sidebar-project input, .sidebar-project select {
+  width: 100%;
+  background: var(--navy3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-bottom: 6px;
+  outline: none;
+  transition: border-color .15s;
+}
+.sidebar-project input:focus, .sidebar-project select:focus {
+  border-color: var(--teal);
+}
+.sidebar-project select option { background: var(--navy3); }
+
+.sidebar-progress {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+.progress-pct { color: var(--teal); font-weight: 600; }
+.progress-track {
+  background: rgba(255,255,255,0.08);
+  border-radius: 99px;
+  height: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: var(--teal);
+  transition: width .4s ease;
+}
+.mini-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.mini-stat {
+  background: var(--navy3);
+  border-radius: 6px;
+  padding: 8px 10px;
+  text-align: center;
+}
+.mini-stat-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+}
+.mini-stat-val.green { color: var(--green); }
+.mini-stat-val.red { color: var(--red); }
+.mini-stat-val.teal { color: var(--teal); }
+.mini-stat-val.muted { color: var(--text3); }
+.mini-stat-label { font-size: 10px; color: var(--text3); margin-top: 3px; }
+
+.sidebar-nav {
+  padding: 14px 10px;
+  flex: 1;
+}
+.nav-section-label {
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 8px;
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+.nav-section-label:first-child { margin-top: 0; }
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text2);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .15s;
+  margin-bottom: 2px;
+  border: 1px solid transparent;
+}
+.nav-item:hover { background: var(--navy3); color: var(--text); }
+.nav-item.active {
+  background: var(--teal-dim);
+  border-color: var(--teal-border);
+  color: var(--teal-light);
+}
+.nav-item-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.nav-item-count {
+  margin-left: auto;
+  font-size: 10px;
+  background: rgba(255,255,255,0.08);
+  padding: 2px 6px;
+  border-radius: 99px;
+  color: var(--text3);
+}
+.nav-item.active .nav-item-count {
+  background: var(--teal-dim);
+  color: var(--teal);
+}
+
+.sidebar-actions {
+  padding: 14px 10px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--navy3);
+  color: var(--text2);
+  transition: all .15s;
+  width: 100%;
+}
+.action-btn:hover { background: var(--navy4); color: var(--text); border-color: rgba(255,255,255,0.15); }
+.action-btn.primary { background: var(--teal); border-color: var(--teal); color: #fff; }
+.action-btn.primary:hover { background: var(--teal-light); border-color: var(--teal-light); }
+.action-btn.danger { border-color: var(--red-border); color: var(--red); }
+.action-btn.danger:hover { background: var(--red-bg); }
+
+/* ── MAIN CONTENT ── */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  background: var(--navy2);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.topbar-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+.topbar-meta {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+.cdm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal-dim);
+  border: 1px solid var(--teal-border);
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--teal-light);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.cdm-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.content {
+  padding: 24px 28px 80px;
+  flex: 1;
+}
+
+/* ── SECTION GROUP ── */
+.section-group {
+  margin-bottom: 28px;
+}
+.section-group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.section-group-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--navy3);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal);
+  flex-shrink: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.section-group-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+.section-group-stats {
+  font-size: 11px;
+  color: var(--text3);
+  background: var(--navy3);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.section-chevron {
+  font-size: 10px;
+  color: var(--text3);
+  transition: transform .2s;
+}
+.section-chevron.open { transform: rotate(90deg); }
+
+/* ── CHECK CARDS ── */
+.check-cards { display: flex; flex-direction: column; gap: 6px; }
+
+.check-card {
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color .15s;
+}
+.check-card:hover { border-color: rgba(255,255,255,0.12); }
+.check-card.status-y { border-left: 3px solid var(--green); }
+.check-card.status-n { border-left: 3px solid var(--red); }
+.check-card.status-na { border-left: 3px solid var(--text3); }
+
+.check-card-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+}
+
+.status-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.sbtn {
+  width: 36px;
+  height: 24px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: var(--text3);
+  transition: all .12s;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: .04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sbtn:hover { background: rgba(255,255,255,0.1); color: var(--text); }
+.sbtn.y.active { background: var(--green-bg); border-color: var(--green-border); color: var(--green); }
+.sbtn.n.active { background: var(--red-bg); border-color: var(--red-border); color: var(--red); }
+.sbtn.na.active { background: var(--slate-bg); border-color: var(--slate-border); color: var(--text2); }
+.sbtn.clr { font-size: 12px; }
+.sbtn.clr.hidden { visibility: hidden; pointer-events: none; }
+
+.check-card-content { flex: 1; min-width: 0; }
+.check-card-text {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.check-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.timing-tag {
+  font-size: 10px;
+  color: var(--amber);
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 500;
+}
+.expand-link {
+  font-size: 11px;
+  color: var(--teal);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  opacity: .8;
+}
+.expand-link:hover { opacity: 1; }
+
+.check-card-detail {
+  display: none;
+  padding: 0 16px 14px 78px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.1);
+}
+.check-card-detail.open { display: block; padding-top: 12px; }
+.detail-textarea {
+  width: 100%;
+  background: var(--navy3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 8px 10px;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  margin-bottom: 10px;
+  transition: border-color .15s;
+}
+.detail-textarea:focus { border-color: var(--teal); }
+.photo-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.photo-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  background: var(--navy3);
+  color: var(--text3);
+  font-size: 11px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all .15s;
+}
+.photo-btn:hover { border-color: var(--teal); color: var(--teal); }
+.thumbs { display: flex; gap: 6px; flex-wrap: wrap; }
+.thumb { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
+.file-in { display: none; }
+
+/* ── ACTION LOG ── */
+.log-table-wrap {
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.log-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.log-table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text3);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: var(--navy3);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.log-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: top;
+}
+.log-table tr:last-child td { border-bottom: none; }
+.log-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  outline: none;
+}
+.log-input:focus { background: var(--navy3); border: 1px solid var(--teal-border); }
+.log-date { width: 104px; }
+.add-log-btn {
+  margin-top: 10px;
+  padding: 7px 14px;
+  border: 1px dashed rgba(255,255,255,0.12);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text3);
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all .15s;
+}
+.add-log-btn:hover { border-color: var(--teal); color: var(--teal); }
+.log-action-stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.log-stat {
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.log-stat-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.log-stat-label { font-size: 10px; color: var(--text3); margin-top: 2px; text-transform: uppercase; letter-spacing: .06em; }
+
+/* ── MODAL ── */
+.modal-bg {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+.modal-bg.open { display: flex; }
+.modal {
+  background: var(--navy2);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 460px;
+  width: 90%;
+  box-shadow: 0 24px 60px rgba(0,0,0,.4);
+}
+.modal h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.modal p { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 20px; }
+.modal-btns { display: flex; gap: 8px; justify-content: flex-end; }
+.saved-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; max-height: 200px; overflow-y: auto; }
+.saved-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--navy3);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.saved-item:hover { border-color: var(--teal-border); }
+.saved-item-name { font-weight: 500; color: var(--text); }
+.saved-item-date { font-size: 10px; color: var(--text3); margin-top: 2px; }
+.del-saved { background: none; border: none; color: var(--red); cursor: pointer; font-size: 14px; padding: 0 4px; }
+
+/* ── COPYRIGHT ── */
+.copyright-bar {
+  position: fixed;
+  bottom: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  background: var(--navy2);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 7px 28px;
+  font-size: 10px;
+  color: var(--text3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+}
+.copyright-bar a { color: var(--teal); text-decoration: none; }
+
+/* ── MOBILE ── */
+.mob-header { display: none; }
+@media (max-width: 800px) {
+  .sidebar { transform: translateX(-100%); transition: transform .25s; }
+  .sidebar.mob-open { transform: translateX(0); }
+  .main { margin-left: 0; }
+  .copyright-bar { left: 0; }
+  .mob-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: var(--navy2);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 35;
+  }
+  .mob-menu-btn {
+    background: var(--navy3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    color: var(--text);
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+  .topbar { display: none; }
+  .content { padding: 16px 16px 80px; }
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-logo">CDM<span>.</span>Manager</div>
+    <div class="brand-tagline">Digital Revenue Studio</div>
+  </div>
+
+  <div class="sidebar-project">
+    <div class="sidebar-project-label">Project details</div>
+    <input id="f-title" placeholder="Project title" />
+    <input id="f-num" placeholder="Project number" />
+    <input id="f-pd" placeholder="Principal designer" />
+    <input id="f-pc" placeholder="Principal contractor" />
+    <input id="f-pm" placeholder="Client rep / PM" />
+    <select id="f-type">
+      <option value="">Check type...</option>
+      <option>Pre-start / Mobilisation</option>
+      <option>Construction Phase — Monthly</option>
+      <option>Construction Phase — Ad hoc</option>
+      <option>Closeout / Handover</option>
+    </select>
+    <input id="f-month" type="month" />
+    <input id="f-date" type="date" />
+  </div>
+
+  <div class="sidebar-progress">
+    <div class="progress-label">
+      <span>Compliance</span>
+      <span class="progress-pct" id="hdr-pct">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="main-fill" style="width:0%"></div>
+    </div>
+    <div class="mini-stats">
+      <div class="mini-stat"><div class="mini-stat-val teal" id="st-tot">0</div><div class="mini-stat-label">Total</div></div>
+      <div class="mini-stat"><div class="mini-stat-val green" id="st-yes">0</div><div class="mini-stat-label">In place</div></div>
+      <div class="mini-stat"><div class="mini-stat-val red" id="st-no">0</div><div class="mini-stat-label">Issues</div></div>
+      <div class="mini-stat"><div class="mini-stat-val muted" id="st-na">0</div><div class="mini-stat-label">N/A</div></div>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Checklist phases</div>
+    <div class="nav-item active" id="nav-pre" onclick="switchPhase('pre')">
+      <div class="nav-item-icon">🔲</div>
+      Pre-start
+      <span class="nav-item-count" id="nc-pre">20</span>
+    </div>
+    <div class="nav-item" id="nav-con" onclick="switchPhase('con')">
+      <div class="nav-item-icon">🏗</div>
+      Construction
+      <span class="nav-item-count" id="nc-con">25</span>
+    </div>
+    <div class="nav-section-label">Actions</div>
+    <div class="nav-item" id="nav-log" onclick="switchPhase('log')">
+      <div class="nav-item-icon">📋</div>
+      Action log
+      <span class="nav-item-count" id="nc-log" style="display:none;background:rgba(239,68,68,0.2);color:var(--red)">0</span>
+    </div>
+  </nav>
+
+  <div class="sidebar-actions">
+    <button class="action-btn primary" onclick="exportReport()">
+      ↓ Export PDF report
+    </button>
+    <button class="action-btn" onclick="saveThisMonth()">
+      💾 Save this month
+    </button>
+    <button class="action-btn" onclick="openCopyModal()">
+      ⎘ Copy previous month
+    </button>
+    <button class="action-btn danger" onclick="clearAll()">
+      ✕ Clear all data
+    </button>
+  </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mob-header">
+  <button class="mob-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('mob-open')">☰</button>
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;">CDM Manager</div>
+  <div class="cdm-badge">CDM 2015</div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="topbar">
+    <div>
+      <div class="topbar-title" id="topbar-title">Pre-start / Mobilisation</div>
+      <div class="topbar-meta" id="topbar-meta">F10 &amp; Key Personnel · SHE Plan · Meetings</div>
+    </div>
+    <div class="cdm-badge">CDM 2015</div>
+  </div>
+
+  <div class="content">
+    <div id="checklist-content"></div>
+    <div id="action-log-panel" style="display:none;">
+      <div class="action-summary-bar" id="action-summary-bar" style="display:flex;align-items:center;gap:16px;background:var(--navy3);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 20px;margin-bottom:16px;flex-wrap:wrap;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:var(--text);flex:1;min-width:140px;">Running Action Log</div>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--teal);line-height:1;" id="sum-tot">0</div>
+            <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:2px;">Total</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--green);line-height:1;" id="sum-closed">0</div>
+            <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:2px;">Closed</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--red);line-height:1;" id="sum-open">0</div>
+            <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:2px;">Outstanding</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--amber);line-height:1;" id="sum-overdue">0</div>
+            <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:2px;">Overdue</div>
+          </div>
+        </div>
+      </div>
+      <div class="log-action-stats">
+        <div class="log-stat"><div class="log-stat-val" id="st-act-tot" style="color:var(--teal)">0</div><div class="log-stat-label">Total actions</div></div>
+        <div class="log-stat"><div class="log-stat-val" id="st-act-closed" style="color:var(--green)">0</div><div class="log-stat-label">Closed</div></div>
+        <div class="log-stat"><div class="log-stat-val" id="st-act-open" style="color:var(--red)">0</div><div class="log-stat-label">Open</div></div>
+        <div class="log-stat"><div class="log-stat-val" id="st-act-overdue" style="color:var(--amber)">0</div><div class="log-stat-label">Overdue</div></div>
+      </div>
+      <div class="log-table-wrap">
+        <table class="log-table">
+          <thead>
+            <tr>
+              <th style="width:28px">#</th>
+              <th>Action required</th>
+              <th style="width:120px">Action owner</th>
+              <th class="log-date">Date entered</th>
+              <th class="log-date">Date due</th>
+              <th class="log-date">Completed</th>
+            </tr>
+          </thead>
+          <tbody id="log-body"></tbody>
+        </table>
+      </div>
+      <button class="add-log-btn" onclick="addLogRow()">+ Add action row</button>
+    </div>
+  </div>
+</div>
+
+<!-- COPY MODAL -->
+<div class="modal-bg" id="copy-modal">
+  <div class="modal">
+    <h3>Copy previous month</h3>
+    <p>Select a saved report to carry forward as this month's starting point. Review all statuses after loading.</p>
+    <div class="saved-list" id="saved-list"></div>
+    <div class="modal-btns">
+      <button class="action-btn" onclick="closeCopyModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="copyright-bar">
+  <span>CDM Digital Audit Tool &nbsp;&middot;&nbsp; Powered by <strong style="color:var(--text)">Digital Revenue Studio</strong> &nbsp;&middot;&nbsp; <a href="https://www.digitalrevenuestudio.co.uk" target="_blank">digitalrevenuestudio.co.uk</a></span>
+  <span>&copy; 2026 Digital Revenue Studio &nbsp;&middot;&nbsp; Licensed to purchaser only</span>
+</div>
+
+<script>
+const PRESTART = [
+  { section: 'F10 & Key Personnel', items: [
+    { id:'pre1', text:'F10 notification (including any update) in place', timing:'Pre-start / Mobilisation' },
+    { id:'pre2', text:'Key project personnel identified — Client Rep. / Project Manager', timing:'Pre-start / Mobilisation' },
+    { id:'pre3', text:'Principal Designer appointed', timing:'Pre-start / Mobilisation' },
+    { id:'pre4', text:'Designer (Civil) appointed', timing:'Pre-start / Mobilisation' },
+    { id:'pre5', text:'Designer (Electrical) appointed', timing:'Pre-start / Mobilisation' },
+    { id:'pre6', text:'Principal Contractor appointed', timing:'Pre-start / Mobilisation' },
+    { id:'pre7', text:'Contract Partners identified and competent', timing:'Pre-start / Mobilisation' },
+  ]},
+  { section: 'SHE Plan & Programme', items: [
+    { id:'pre8', text:'Pre-Construction SHE Information issued', timing:'4 Weeks Before' },
+    { id:'pre9', text:'Enabling Works — SHE Plan in place', timing:'4 Weeks Before' },
+    { id:'pre10', text:'Construction Phase SHE Plan received', timing:'Pre-start / Mobilisation' },
+    { id:'pre11', text:'Construction Phase SHE Plan accepted', timing:'Pre-start / Mobilisation' },
+    { id:'pre12', text:'RACI confirmed with Work Programme / Phases', timing:'4 Weeks Before' },
+    { id:'pre13', text:"Principal Contractor's Organisation Chart in place", timing:'Pre-start / Mobilisation' },
+    { id:'pre14', text:'Contract Partners CVs — Competency confirmed', timing:'Ongoing' },
+    { id:'pre15', text:'Site Induction Presentation prepared', timing:'2 Weeks Before' },
+    { id:'pre16', text:'Start / Finish dates for Construction Phase identified', timing:'Pre-start / Mobilisation' },
+  ]},
+  { section: 'Meetings & Visits', items: [
+    { id:'pre17', text:'Client Construction Phase Site Visit Meetings developed: Who / Dates in CPP', timing:'Pre-start / Mobilisation' },
+    { id:'pre18', text:'Project Progress Meetings scheduled and in diaries', timing:'Pre-start / Mobilisation' },
+    { id:'pre19', text:'Site Mobilisation Visit / Check completed', timing:'Pre-start / Mobilisation' },
+    { id:'pre20', text:'Pre-Start Meeting completed', timing:'Pre-start / Mobilisation' },
+  ]}
+];
+
+const CONSTRUCTION = [
+  { section: 'Site Establishment', items: [
+    { id:'con1', text:'Safe access off the public highway', timing:'To Check' },
+    { id:'con2', text:'Access road around site suitable', timing:'To Check' },
+    { id:'con3', text:'Secure and fenced site compound', timing:'To Check' },
+    { id:'con4', text:'Access control barrier and site gatehouse', timing:'To Check' },
+    { id:'con5', text:'Risk / hazard boards and SHE rules in place', timing:'To Check' },
+    { id:'con6', text:'Vehicle / pedestrian separation in place', timing:'To Check' },
+    { id:'con7', text:'Site office and staff welfare', timing:'To Check' },
+    { id:'con8', text:'Site storage and lay down area', timing:'To Check' },
+    { id:'con9', text:'Plant area', timing:'To Check' },
+    { id:'con10', text:'Plant quarantine area', timing:'To Check' },
+    { id:'con11', text:'Emergency response plan', timing:'To Check' },
+    { id:'con12', text:'Traffic management plan', timing:'To Check' },
+    { id:'con13', text:'ESQCR Compliance', timing:'To Check' },
+    { id:'con14', text:'Agreed site establishment, management system and arrangements. Temporary mitigation measures being monitored.', timing:'To Check' },
+    { id:'con15', text:'Agreed full site establishment, management systems and arrangements in place. All temporary mitigation measures replaced with permanent / long term measures and controls.', timing:'4 Weeks after start' },
+    { id:'con16', text:'Temporary works design package identified', timing:'4 weeks prior' },
+  ]},
+  { section: 'Site Supervision & Documentation', items: [
+    { id:'con17', text:'Site Supervision — suitable and sufficient', timing:'To Check' },
+    { id:'con18', text:'Site Induction carried out — suitable and recorded', timing:'To Check' },
+    { id:'con19', text:'RAMS identified / agreed', timing:'To Check' },
+    { id:'con20', text:'Site security suitable and sufficient', timing:'To Check' },
+    { id:'con21', text:'Site SHE Documentation (F10) / notices in place', timing:'To Check' },
+    { id:'con22', text:'Hazard notices posted around site', timing:'To Check' },
+    { id:'con23', text:'Site SHE Folder up-to-date', timing:'To Check' },
+    { id:'con24', text:'Site Operative Register: Competency records and inducted', timing:'To Check' },
+    { id:'con25', text:'Principal Contractor site monitoring in place', timing:'To Check' },
+    { id:'con26', text:'Management of RACI effective', timing:'To Check' },
+  ]},
+  { section: 'Management & Risk', items: [
+    { id:'con27', text:'SHE Risk Register updated', timing:'To Check' },
+    { id:'con28', text:'Management of Construction Phase Plan effective', timing:'To Check' },
+    { id:'con29', text:'Relevant parts of CPP provided to sub-contractors', timing:'To Check' },
+    { id:'con30', text:'Emergency Arrangements understood by workers', timing:'To Check' },
+    { id:'con31', text:'Incident reporting and investigation effective', timing:'To Check' },
+    { id:'con32', text:'Client Construction Phase Site Visits completed', timing:'To Check' },
+    { id:'con33', text:'Assessment of work on / adjacent to live conductors completed', timing:'To Check' },
+    { id:'con34', text:'Management of Change / Variations reviewed / agreed', timing:'To Check' },
+    { id:'con35', text:'Management of Temporary Works effective', timing:'To Check' },
+    { id:'con36', text:'Collection / collation of SHE File information', timing:'To Check' },
+  ]}
+];
+
+let state = JSON.parse(localStorage.getItem('cdm_mgr_state') || '{}');
+let openSecs = JSON.parse(localStorage.getItem('cdm_mgr_open') || '{}');
+let logRows = JSON.parse(localStorage.getItem('cdm_mgr_log') || '[]');
+let activePhase = 'pre';
+const PF = ['f-title','f-num','f-pd','f-pc','f-date','f-type','f-pm','f-month'];
+
+function saveState() {
+  localStorage.setItem('cdm_mgr_state', JSON.stringify(state));
+  localStorage.setItem('cdm_mgr_open', JSON.stringify(openSecs));
+  localStorage.setItem('cdm_mgr_log', JSON.stringify(logRows));
+  PF.forEach(id => { const el = document.getElementById(id); if(el) localStorage.setItem('cdm_mgr_'+id, el.value); });
+}
+
+function loadFields() {
+  PF.forEach(id => {
+    const el = document.getElementById(id);
+    const v = localStorage.getItem('cdm_mgr_'+id);
+    if(el && v) el.value = v;
+    if(el) el.addEventListener('change', saveState);
+  });
+}
+
+function allItems(phase) { return (phase==='pre'?PRESTART:CONSTRUCTION).flatMap(s=>s.items); }
+function allAllItems() { return [...allItems('pre'), ...allItems('con')]; }
+
+function getStats(items) {
+  let y=0,n=0,na=0;
+  items.forEach(i => { const s=state[i.id]; if(s==='Y')y++; else if(s==='N')n++; else if(s==='NA')na++; });
+  return { y, n, na, tot:items.length, assessed:y+n+na };
+}
+
+function updateGlobal() {
+  const all = allAllItems();
+  const { y, n, na, tot, assessed } = getStats(all);
+  const pct = assessed===0 ? 0 : Math.round((y+na)/assessed*100);
+  document.getElementById('hdr-pct').textContent = pct+'%';
+  document.getElementById('main-fill').style.width = pct+'%';
+  document.getElementById('st-tot').textContent = tot;
+  document.getElementById('st-yes').textContent = y;
+  document.getElementById('st-no').textContent = n;
+  document.getElementById('st-na').textContent = na;
+
+  // Update nav counts
+  const pre = getStats(allItems('pre'));
+  const con = getStats(allItems('con'));
+  document.getElementById('nc-pre').textContent = pre.assessed+'/'+pre.tot;
+  document.getElementById('nc-con').textContent = con.assessed+'/'+con.tot;
+
+  updateActionStats();
+}
+
+function updateActionStats() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const withAction = logRows.filter(r => r.action && r.action.trim()!=='');
+  const tot = withAction.length;
+  const closed = withAction.filter(r => r.completed && r.completed.trim()!=='').length;
+  const open = tot - closed;
+  const overdue = withAction.filter(r => {
+    if(r.completed) return false;
+    if(!r.due) return false;
+    const due = new Date(r.due); due.setHours(0,0,0,0);
+    return due < today;
+  }).length;
+  document.getElementById('st-act-tot').textContent = tot;
+  document.getElementById('st-act-closed').textContent = closed;
+  document.getElementById('st-act-open').textContent = open;
+  document.getElementById('st-act-overdue').textContent = overdue;
+  // Also update summary bar
+  const sb_tot=document.getElementById('sum-tot'); if(sb_tot)sb_tot.textContent=tot;
+  const sb_closed=document.getElementById('sum-closed'); if(sb_closed)sb_closed.textContent=closed;
+  const sb_open=document.getElementById('sum-open'); if(sb_open)sb_open.textContent=open;
+  const sb_ov=document.getElementById('sum-overdue'); if(sb_ov)sb_ov.textContent=overdue;
+  const badge = document.getElementById('nc-log');
+  if(badge) { if(open>0){badge.textContent=open+' open';badge.style.display='inline';}else{badge.style.display='none';} }
+}
+
+function switchPhase(phase) {
+  activePhase = phase;
+  ['pre','con','log'].forEach(p => {
+    document.getElementById('nav-'+p).classList.toggle('active', p===phase);
+  });
+  document.getElementById('action-log-panel').style.display = phase==='log' ? 'block' : 'none';
+  document.getElementById('checklist-content').style.display = phase==='log' ? 'none' : 'block';
+  const titles = {
+    pre: ['Pre-start / Mobilisation', 'F10 & Key Personnel · SHE Plan · Meetings'],
+    con: ['Construction Phase', 'Site Establishment · Supervision · Management & Risk'],
+    log: ['Running Action Log', 'Issues · owners · due dates · overdue tracking'],
+  };
+  if(document.getElementById('topbar-title')) {
+    document.getElementById('topbar-title').textContent = titles[phase][0];
+    document.getElementById('topbar-meta').textContent = titles[phase][1];
+  }
+  if(phase!=='log') renderChecklist(phase==='pre'?PRESTART:CONSTRUCTION);
+  // Close mobile sidebar
+  document.getElementById('sidebar').classList.remove('mob-open');
+}
+
+function renderChecklist(data) {
+  const el = document.getElementById('checklist-content');
+  el.innerHTML = data.map((sec, si) => {
+    const isOpen = openSecs[sec.section] !== false;
+    const { y, n, na, tot } = getStats(sec.items);
+    return `
+    <div class="section-group">
+      <div class="section-group-header" onclick="toggleSec('${CSS.escape(sec.section)}')">
+        <div class="section-group-num">${String(si+1).padStart(2,'0')}</div>
+        <div class="section-group-title">${sec.section}</div>
+        <div class="section-group-stats">${y+n+na} / ${tot}</div>
+        <div class="section-chevron ${isOpen?'open':''}">▶</div>
+      </div>
+      ${isOpen ? `<div class="check-cards">${sec.items.map(item => renderItem(item)).join('')}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function renderItem(item) {
+  const s = state[item.id] || null;
+  const notes = state[item.id+'_notes'] || '';
+  const photos = state[item.id+'_photos'] || [];
+  const detailOpen = s!==null || notes;
+  const cardClass = s==='Y'?'status-y':s==='N'?'status-n':s==='NA'?'status-na':'';
+  return `
+  <div class="check-card ${cardClass}" id="ci-${item.id}">
+    <div class="check-card-main">
+      <div class="status-buttons">
+        <button class="sbtn y ${s==='Y'?'active':''}" onclick="setS('${item.id}','Y')">Y</button>
+        <button class="sbtn n ${s==='N'?'active':''}" onclick="setS('${item.id}','N')">N</button>
+        <button class="sbtn na ${s==='NA'?'active':''}" onclick="setS('${item.id}','NA')">N/A</button>
+        <button class="sbtn clr ${s?'':'hidden'}" onclick="clearS('${item.id}')" title="Clear">✕</button>
+      </div>
+      <div class="check-card-content">
+        <div class="check-card-text">${item.text}</div>
+        <div class="check-card-meta">
+          <span class="timing-tag">${item.timing}</span>
+          <button class="expand-link" onclick="toggleDetail('${item.id}')">${detailOpen?'Hide notes':'Add notes / photo'}</button>
+        </div>
+      </div>
+    </div>
+    <div class="check-card-detail ${detailOpen?'open':''}" id="det-${item.id}">
+      <textarea class="detail-textarea" placeholder="Comments / evidence / actions…" onchange="setNotes('${item.id}',this.value)">${notes}</textarea>
+      <div class="photo-row">
+        <button class="photo-btn" onclick="document.getElementById('ph-${item.id}').click()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          Add photo
+        </button>
+        <input type="file" accept="image/*" capture="environment" class="file-in" id="ph-${item.id}" onchange="addPhoto('${item.id}',this)" />
+        <div class="thumbs" id="th-${item.id}">
+          ${photos.map((p,i)=>`<img class="thumb" src="${p}" title="Click to remove" onclick="removePhoto('${item.id}',${i})" />`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggleSec(name) {
+  openSecs[name] = openSecs[name]===false ? true : false;
+  saveState(); renderChecklist(activePhase==='pre'?PRESTART:CONSTRUCTION);
+}
+
+function toggleDetail(id) {
+  const el = document.getElementById('det-'+id);
+  const btn = el.previousElementSibling.querySelector('.expand-link');
+  const open = el.classList.toggle('open');
+  if(btn) btn.textContent = open ? 'Hide notes' : 'Add notes / photo';
+}
+
+function setS(id, val) {
+  if(state[id]===val) delete state[id]; else state[id]=val;
+  saveState(); updateGlobal();
+  const ci = document.getElementById('ci-'+id);
+  if(!ci) return;
+  ci.className = 'check-card' + (state[id]==='Y'?' status-y':state[id]==='N'?' status-n':state[id]==='NA'?' status-na':'');
+  ci.querySelectorAll('.sbtn').forEach(b => {
+    b.classList.remove('active');
+    if(b.classList.contains(val.toLowerCase()) && state[id]===val) b.classList.add('active');
+  });
+  const clrBtn = ci.querySelector('.sbtn.clr');
+  if(clrBtn) { state[id]?clrBtn.classList.remove('hidden'):clrBtn.classList.add('hidden'); }
+  const secEl = ci.closest('.section-group');
+  if(secEl) {
+    const phase = activePhase==='pre'?PRESTART:CONSTRUCTION;
+    const sec = phase.find(s=>s.section===secEl.querySelector('.section-group-title').textContent);
+    if(sec) { const {y,n,na,tot}=getStats(sec.items); secEl.querySelector('.section-group-stats').textContent=`${y+n+na} / ${tot}`; }
+  }
+}
+
+function clearS(id) {
+  delete state[id]; saveState(); updateGlobal();
+  const ci = document.getElementById('ci-'+id);
+  if(!ci) return;
+  ci.className = 'check-card';
+  ci.querySelectorAll('.sbtn').forEach(b=>b.classList.remove('active'));
+  ci.querySelector('.sbtn.clr')?.classList.add('hidden');
+}
+
+function setNotes(id,val) { state[id+'_notes']=val; saveState(); }
+
+function addPhoto(id,input) {
+  const file=input.files[0]; if(!file) return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const photos=state[id+'_photos']||[];
+    photos.push(e.target.result); state[id+'_photos']=photos; saveState();
+    const th=document.getElementById('th-'+id);
+    if(th){const img=document.createElement('img');img.className='thumb';img.src=e.target.result;img.title='Click to remove';const idx=photos.length-1;img.onclick=()=>removePhoto(id,idx);th.appendChild(img);}
+  };
+  reader.readAsDataURL(file); input.value='';
+}
+
+function removePhoto(id,idx) {
+  const photos=state[id+'_photos']||[];photos.splice(idx,1);state[id+'_photos']=photos;saveState();
+  const th=document.getElementById('th-'+id);
+  if(th)th.innerHTML=photos.map((p,i)=>`<img class="thumb" src="${p}" title="Click to remove" onclick="removePhoto('${id}',${i})" />`).join('');
+}
+
+function renderLog() {
+  const tbody=document.getElementById('log-body'); if(!tbody) return;
+  tbody.innerHTML=logRows.map((row,i)=>`<tr>
+    <td style="color:var(--teal);font-weight:600;font-size:11px;padding-left:14px">${i+1}</td>
+    <td><input class="log-input" value="${row.action||''}" onchange="updateLog(${i},'action',this.value)" placeholder="Describe action…" /></td>
+    <td><input class="log-input" value="${row.owner||''}" onchange="updateLog(${i},'owner',this.value)" placeholder="Owner" /></td>
+    <td><input class="log-input log-date" type="date" value="${row.entered||''}" onchange="updateLog(${i},'entered',this.value)" /></td>
+    <td><input class="log-input log-date" type="date" value="${row.due||''}" onchange="updateLog(${i},'due',this.value)" /></td>
+    <td><input class="log-input log-date" type="date" value="${row.completed||''}" onchange="updateLog(${i},'completed',this.value)" /></td>
+  </tr>`).join('');
+}
+
+function addLogRow() { logRows.push({action:'',owner:'',entered:'',due:'',completed:''}); saveState(); renderLog(); updateActionStats(); }
+function updateLog(i,key,val) { logRows[i][key]=val; saveState(); updateActionStats(); }
+if(logRows.length===0) { for(let i=0;i<6;i++) logRows.push({action:'',owner:'',entered:'',due:'',completed:''}); }
+
+function saveThisMonth() {
+  const title=document.getElementById('f-title').value||'Unnamed Project';
+  const num=document.getElementById('f-num').value||'';
+  const month=document.getElementById('f-month').value||new Date().toISOString().slice(0,7);
+  const monthLabel=month?new Date(month+'-01').toLocaleDateString('en-GB',{month:'long',year:'numeric'}):month;
+  const saveName=[title,num,monthLabel].filter(Boolean).join(' — ');
+  const key='cdm_mgr_saved_'+Date.now();
+  const snapshot={key,title:saveName,month,state:JSON.stringify(state),log:JSON.stringify(logRows),
+    fields:Object.fromEntries(PF.map(id=>[id,document.getElementById(id)?.value||'']))};
+  localStorage.setItem(key,JSON.stringify(snapshot));
+  const all=getSaved(); all.push(key); localStorage.setItem('cdm_mgr_saved_keys',JSON.stringify(all));
+  alert('Saved: '+saveName);
+}
+
+function getSaved() { return JSON.parse(localStorage.getItem('cdm_mgr_saved_keys')||'[]'); }
+
+function openCopyModal() {
+  const keys=getSaved();
+  const list=document.getElementById('saved-list');
+  if(keys.length===0){list.innerHTML='<div style="font-size:12px;color:var(--text3);padding:8px 0;">No saved reports yet. Save this month first.</div>';}
+  else{list.innerHTML=keys.map(k=>{const snap=JSON.parse(localStorage.getItem(k)||'{}');
+    return `<div class="saved-item" onclick="loadSnapshot('${k}')">
+      <div><div class="saved-item-name">${snap.title||'Untitled'}</div><div class="saved-item-date">${snap.month||''}</div></div>
+      <button class="del-saved" onclick="event.stopPropagation();deleteSnapshot('${k}')">✕</button>
+    </div>`;}).join('');}
+  document.getElementById('copy-modal').classList.add('open');
+}
+
+function closeCopyModal() { document.getElementById('copy-modal').classList.remove('open'); }
+
+function loadSnapshot(k) {
+  const snap=JSON.parse(localStorage.getItem(k)||'{}'); if(!snap.state) return;
+  state=JSON.parse(snap.state); logRows=JSON.parse(snap.log||'[]');
+  const now=new Date();
+  const newMonth=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  if(snap.fields){
+    PF.forEach(id=>{const el=document.getElementById(id);if(el&&snap.fields[id])el.value=snap.fields[id];});
+    const monthEl=document.getElementById('f-month'); if(monthEl)monthEl.value=newMonth;
+    const dateEl=document.getElementById('f-date'); if(dateEl)dateEl.value='';
+  }
+  saveState(); closeCopyModal(); renderAll();
+  alert('Loaded. Review all statuses and update for this month.');
+}
+
+function deleteSnapshot(k) {
+  localStorage.removeItem(k);
+  const keys=getSaved().filter(x=>x!==k);
+  localStorage.setItem('cdm_mgr_saved_keys',JSON.stringify(keys));
+  openCopyModal();
+}
+
+function clearAll() {
+  if(!confirm('Clear all data for this report? Saved months are not affected.')) return;
+  state={}; logRows=[];
+  for(let i=0;i<6;i++) logRows.push({action:'',owner:'',entered:'',due:'',completed:''});
+  PF.forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  saveState(); renderAll();
+}
+
+function exportReport() {
+  const g=id=>document.getElementById(id)?.value||'—';
+  const title=g('f-title'),num=g('f-num'),pd=g('f-pd'),pc=g('f-pc');
+  const date=g('f-date'),type=g('f-type'),pm=g('f-pm'),month=g('f-month');
+  const all=allAllItems();
+  const {y,n,na,tot}=getStats(all);
+
+  function tableRows(data) {
+    return data.flatMap(sec=>sec.items.map(item=>{
+      const s=state[item.id]||'';
+      const notes=state[item.id+'_notes']||'';
+      const photos=state[item.id+'_photos']||[];
+      const bg=s==='Y'?'#e8f5e9':s==='N'?'#ffebee':s==='NA'?'#f5f5f5':'#fff';
+      const statusLabel=s==='Y'?'In Place':s==='N'?'Issue':s==='NA'?'N/A':'—';
+      const photoHtml=photos.length?`<div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;">${photos.map(p=>`<img src="${p}" style="width:72px;height:72px;object-fit:cover;border-radius:4px;border:1px solid #ddd;" />`).join('')}</div>`:'';
+      return `<tr style="background:${bg}">
+        <td>${item.text}</td>
+        <td style="text-align:center;white-space:nowrap;font-size:10px">${item.timing}</td>
+        <td style="text-align:center;font-weight:700">${statusLabel}</td>
+        <td>${notes}${photoHtml}</td>
+      </tr>`;
+    })).join('');
+  }
+
+  function logRowsHtml() {
+    return logRows.filter(r=>r.action).map((r,i)=>`<tr>
+      <td style="text-align:center">${i+1}</td>
+      <td>${r.action}</td><td>${r.owner}</td>
+      <td>${r.entered}</td><td>${r.due}</td><td>${r.completed}</td>
+    </tr>`).join('');
+  }
+
+  const reportHtml=`<!DOCTYPE html><html><head><meta charset="UTF-8"/>
+<title>CDM Compliance Report — ${title}</title>
+<style>
+  body{font-family:Arial,sans-serif;font-size:11px;color:#111;margin:0;padding:20px;}
+  .header{background:#1A1A1A;color:white;padding:14px 16px;margin-bottom:0;border-bottom:3px solid #E8561A;}
+  .doc-title{color:white;margin-top:2px;}
+  h2{font-size:12px;font-weight:bold;background:#2D2D2D;color:white;padding:5px 10px;margin:16px 0 0;border-left:3px solid #E8561A;}
+  .fields-table{width:100%;border-collapse:collapse;}
+  .fields-table td{padding:5px 10px;border:1px solid #ddd;}
+  .fields-table .lbl{background:#f0f4f8;font-weight:bold;width:150px;}
+  .summary{display:flex;gap:0;margin:12px 0;}
+  .sum-cell{flex:1;text-align:center;padding:8px;border:1px solid #ddd;}
+  .sum-val{font-size:22px;font-weight:bold;}
+  .s-y{background:#e8f5e9;color:#166534;}.s-n{background:#ffebee;color:#991b1b;}
+  .s-na{background:#f5f5f5;color:#555;}.s-t{background:#FBE9E0;color:#0369a1;}
+  table.checklist{width:100%;border-collapse:collapse;margin-bottom:4px;}
+  table.checklist th{background:#1A1A1A;color:white;padding:6px 8px;text-align:left;font-size:10px;}
+  table.checklist td{padding:5px 8px;border:1px solid #ddd;vertical-align:top;font-size:10px;}
+  table.log th{background:#2D2D2D;color:white;padding:5px 8px;font-size:10px;text-align:left;}
+  table.log td{padding:5px 8px;border:1px solid #ddd;font-size:10px;vertical-align:top;}
+  table.log{width:100%;border-collapse:collapse;}
+  .note-box{background:#FBE9E0;border-left:4px solid #E8561A;padding:8px 12px;font-size:10px;margin:10px 0;}
+  .powered-by{background:#f0f4f8;border-bottom:1px solid #ddd;padding:5px 12px;font-size:9px;color:#666;display:flex;gap:8px;}
+  .footer{margin-top:20px;padding-top:8px;border-top:2px solid #E8561A;font-size:10px;color:#737373;display:flex;justify-content:space-between;}
+  @media print{body{padding:8px;}}
+</style>
+</head><body>
+<div class="header">
+  <div class="doc-title" style="font-size:15px;font-weight:bold;margin-bottom:6px;">CDM 2015 — Site Compliance Checklist</div>
+  <div class="doc-title" style="font-size:11px;opacity:0.7;">Construction (Design and Management) Regulations 2015 — Project Compliance Record</div>
+</div>
+<div class="powered-by">
+  <span>Generated using the CDM Digital Audit Tool</span>
+  <span>·</span>
+  <span>Powered by <strong>Digital Revenue Studio</strong> — <a href="https://www.digitalrevenuestudio.co.uk" style="color:#F5A623;">digitalrevenuestudio.co.uk</a></span>
+</div>
+<table class="fields-table">
+  <tr><td class="lbl">Project Title</td><td>${title}</td><td class="lbl">Project No.</td><td>${num}</td></tr>
+  <tr><td class="lbl">Principal Designer</td><td>${pd}</td><td class="lbl">Principal Contractor</td><td>${pc}</td></tr>
+  <tr><td class="lbl">Client Rep / PM</td><td>${pm}</td><td class="lbl">Report Month</td><td>${month}</td></tr>
+  <tr><td class="lbl">Check Date</td><td>${date}</td><td class="lbl">Check Type</td><td>${type}</td></tr>
+</table>
+<div class="summary">
+  <div class="sum-cell s-t"><div class="sum-val">${tot}</div><div>Total</div></div>
+  <div class="sum-cell s-y"><div class="sum-val">${y}</div><div>In Place</div></div>
+  <div class="sum-cell s-n"><div class="sum-val">${n}</div><div>Issues</div></div>
+  <div class="sum-cell s-na"><div class="sum-val">${na}</div><div>N/A</div></div>
+  <div class="sum-cell"><div class="sum-val">${tot-y-n-na}</div><div>Not assessed</div></div>
+</div>
+<h2>Pre-start / Mobilisation</h2>
+<table class="checklist"><thead><tr><th style="width:52%">Requirement</th><th style="width:16%">Timing</th><th style="width:10%">Status</th><th>Comments / Evidence</th></tr></thead>
+<tbody>${tableRows(PRESTART)}</tbody></table>
+<h2>Construction Phase</h2>
+<table class="checklist"><thead><tr><th style="width:52%">Requirement</th><th style="width:16%">Timing</th><th style="width:10%">Status</th><th>Comments / Evidence</th></tr></thead>
+<tbody>${tableRows(CONSTRUCTION)}</tbody></table>
+<div class="note-box"><strong>Note:</strong> A Pre-Start / Mobilisation site check is to be completed prior to starting the Construction Phase. This record is to be saved in the project file. Construction Phase site checks are to be completed in conjunction with the Principal Contractor at agreed times.</div>
+<h2>Running Action Log</h2>
+<table class="log"><thead><tr><th style="width:24px">No</th><th>Action Required</th><th style="width:110px">Action Owner</th><th style="width:82px">Date Entered</th><th style="width:82px">Date Due</th><th style="width:82px">Completed</th></tr></thead>
+<tbody>${logRowsHtml()||'<tr><td colspan="6" style="text-align:center;color:#999">No actions recorded</td></tr>'}</tbody></table>
+<div class="footer">
+  <span>Digital Revenue Studio — digitalrevenuestudio.co.uk</span>
+  <span>CDM Digital Audit Tool v1.0 — © 2026 Digital Revenue Studio</span>
+  <span>Generated: ${new Date().toLocaleDateString('en-GB')}</span>
+</div>
+<script>window.onload=()=>window.print()<\/script>
+</body></html>`;
+
+  const w=window.open('','_blank');
+  if(w){w.document.write(reportHtml);w.document.close();}
+}
+
+function renderAll() {
+  renderChecklist(activePhase==='pre'?PRESTART:CONSTRUCTION);
+  renderLog();
+  updateGlobal();
+}
+
+loadFields(); renderAll();
+</script>
+</body>
+</html>
