@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- CORE PAGES -->
-  <url><loc>https://www.digitalrevenuestudio.co.uk/</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-about.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-services.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog.html</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-about.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-services.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog.html</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-shop.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-free-guide-landing.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- CASE STUDIES -->
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-studies.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <!-- PORTFOLIO / CASE STUDIES -->
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-studies.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- BLOG POSTS -->
+  <!-- DRS BLOG POSTS -->
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-01-tool-stack.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-02-ma-build.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -24,8 +24,8 @@
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-05-pure-pet-food.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-06-kdp.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-07-sender-review.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-08-payhip-review.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-09-how-to-sell-digital-products.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-08-payhip-review.html</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog-09-how-to-sell-digital-products.html</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- FAQ PAGES -->
   <url><loc>https://www.digitalrevenuestudio.co.uk/faq.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -46,35 +46,39 @@
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-template-council-tax.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-template-car-finance.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- WOS SECTION -->
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog.html</loc><lastmod>2026-03-22</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-1-early-mistakes.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-2-f2p-vs-spender.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-3-guide-launch.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-4-bear-hunt.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-5-event-token-redemption-blogger.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-6-auto-redemption.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-7-wiki-announcement.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-8-frostfire-mine.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-9-svs-prep.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-svs-prep-cheatsheet.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-labyrinth.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-crazy-joe.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-snowbusters.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-hall-of-chiefs.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-first-7-days.html</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-hero-priority.html</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-speedups.html</loc><lastmod>2026-03-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-alliance-tips.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-polar-terror.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-resource-management.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
+  <!-- TOOLS -->
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-cdm-tool.html</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-nec-tool.html</loc><lastmod>2026-03-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- WOS WIKI — CORE -->
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-community.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-signup.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog.html</loc><lastmod>2026-04-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- WOS WIKI GUIDES -->
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-first-7-days.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-hero-priority.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-alliance-tips.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-resource-management.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-speedups.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-labyrinth.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-crazy-joe.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-snowbusters.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-hall-of-chiefs.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-wiki-guide-polar-terror.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- WOS BLOG POSTS -->
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-1-early-mistakes.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-2-f2p-vs-spender.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-3-guide-launch.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-4-bear-hunt.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-5-event-token-redemption-blogger.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-6-auto-redemption.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-7-wiki-announcement.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-8-frostfire-mine.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/wos-blog-9-svs-prep.html</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- LEGAL -->
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-privacy.html</loc><lastmod>2026-03-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
