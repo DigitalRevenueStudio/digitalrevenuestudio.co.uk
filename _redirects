@@ -1,22 +1,35 @@
 # Non-www to www
-http://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:splat 301
 https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:splat 301
 
-# Old blog URLs → new blog URLs
-/drs-blog-3-pure-pet-food-review.html /drs-blog-05-pure-pet-food.html 301
-/blog.html /drs-blog.html 301
-/drs-blog-04-sender-review.html /drs-blog-07-sender-review.html 301
-/shop.html /drs-shop.html 301
-/drs-blog-2-ai-prompts-income.html /drs-blog-02-ma-build.html 301
-/case-studies.html /drs-case-studies.html 301
-/drs-case-study-die.html /drs-case-study-exp.html 301
-/drs-experiments.html /drs-blog.html 301
+# Old blog URLs → new guide URLs (April 2026 rename)
+/wos-blog-1-early-mistakes.html /wos-guide-early-mistakes.html 301
+/wos-blog-2-f2p-vs-spender.html /wos-guide-f2p-vs-spender.html 301
+/wos-blog-3-guide-launch.html /wos-guide-about.html 301
+/wos-blog-4-bear-hunt.html /wos-guide-bear-hunt.html 301
+/wos-blog-5-event-token-redemption-blogger.html /wos-guide-event-tokens.html 301
+/wos-blog-6-auto-redemption.html /wos-guide-auto-redemption.html 301
+/wos-blog-7-wiki-announcement.html /wos-guide-wiki-announcement.html 301
+/wos-blog-8-frostfire-mine.html /wos-guide-frostfire-mine.html 301
+/wos-blog-9-svs-prep.html /wos-guide-svs-prep.html 301
 
-# Old Blogger format blogs → new numbered blogs
-/drs-blog-1-kdp-blogger.html /drs-blog-06-kdp.html 301
+# Old wiki-guide URLs → new guide URLs (April 2026 rename)
+/wos-wiki-guide-first-7-days.html /wos-guide-first-7-days.html 301
+/wos-wiki-guide-hero-priority.html /wos-guide-hero-priority.html 301
+/wos-wiki-guide-alliance-tips.html /wos-guide-alliance-tips.html 301
+/wos-wiki-guide-crazy-joe.html /wos-guide-crazy-joe.html 301
+/wos-wiki-guide-hall-of-chiefs.html /wos-guide-hall-of-chiefs.html 301
+/wos-wiki-guide-labyrinth.html /wos-guide-labyrinth.html 301
+/wos-wiki-guide-polar-terror.html /wos-guide-polar-terror.html 301
+/wos-wiki-guide-resource-management.html /wos-guide-resource-management.html 301
+/wos-wiki-guide-snowbusters.html /wos-guide-snowbusters.html 301
+/wos-wiki-guide-speedups.html /wos-guide-speedups.html 301
+
+# Old DRS blog redirects
+/drs-blog-7-council-tax.html /drs-blog.html 301
+/drs-experiments.html /drs-case-studies.html 301
+/drs-blog-1-kdp-blogger.html /drs-blog-01-tool-stack.html 301
+/drs-blog-2-ai-prompts-income.html /drs-blog-02-ma-build.html 301
+/drs-blog-3-pure-pet-food-review.html /drs-blog-05-pure-pet-food.html 301
+/drs-blog-4-overview-blogger.html /drs-blog-04-exp-case-study.html 301
 /drs-blog-5-sender-review-blogger.html /drs-blog-07-sender-review.html 301
 /drs-blog-6-payhip-review.html /drs-blog-08-payhip-review.html 301
-/drs-blog-4-overview-blogger.html /drs-blog.html 301
-
-# Old council tax blog URL
-/drs-blog-7-council-tax.html /drs-template-council-tax.html 301

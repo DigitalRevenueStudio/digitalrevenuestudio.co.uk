@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bear Hunt in Whiteout Survival — The Beginner's Complete Guide | WOS Guide</title>
+  <meta name="description" content="Everything a beginner needs to know about Bear Hunt in Whiteout Survival — hero selection by generation, rally mechanics, F2P strategy and how to maximise your alliance score." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" media="print" onload="this.media=\'all\'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" /></noscript>
+  <style>
+    :root{--ice-dark:#050D1A;--ice-mid:#091628;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--green-dark:#1A8A4A;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--bear:#8B4513;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(232,131,42,0.3);background:rgba(232,131,42,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--orange);padding-left:20px;margin-bottom:28px;}
+    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
+    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--orange);flex-shrink:0;}
+    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--orange) 50%,var(--ice-border) 80%,transparent);}
+    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;animation:fadeUp 0.7s 0.15s ease both;}
+    .post-body>p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin:48px 0 24px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--ice-border);}
+
+    /* BASICS GRID */
+    .basics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0;}
+    .basic-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:22px 24px;}
+    .basic-card-icon{font-size:1.6rem;margin-bottom:10px;display:block;}
+    .basic-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;}
+    .basic-card p{font-size:0.88rem;color:var(--text);line-height:1.7;margin:0;}
+
+    /* RALLY SPLIT */
+    .rally-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+    .rally-col{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .rally-header{padding:14px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid var(--ice-border);}
+    .rally-header.start{background:rgba(232,131,42,0.12);color:var(--orange);}
+    .rally-header.join{background:rgba(77,168,218,0.1);color:var(--ice-bright);}
+    .rally-item{padding:12px 20px;font-size:0.88rem;color:var(--text);border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:flex-start;gap:10px;line-height:1.55;}
+    .rally-item:last-child{border-bottom:none;}
+    .rally-item .ri{flex-shrink:0;font-size:0.82rem;margin-top:1px;}
+    .rally-item strong{color:var(--frost);}
+
+    /* HERO TABLE */
+    .hero-table{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;margin:28px 0;}
+    .hero-table-header{background:rgba(232,131,42,0.1);border-bottom:1px solid var(--ice-border);padding:16px 24px;display:grid;grid-template-columns:80px 1fr 1fr 1fr;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .hero-row{padding:14px 24px;display:grid;grid-template-columns:80px 1fr 1fr 1fr;gap:12px;border-bottom:1px solid rgba(255,255,255,0.04);align-items:center;}
+    .hero-row:last-child{border-bottom:none;}
+    .hero-row:nth-child(even){background:rgba(255,255,255,0.02);}
+    .gen-badge{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.9rem;color:var(--white);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.25);padding:4px 10px;border-radius:2px;text-align:center;letter-spacing:0.06em;}
+    .hero-name{font-size:0.9rem;font-weight:600;color:var(--frost);}
+    .hero-name span{display:block;font-size:0.75rem;font-weight:400;color:var(--text-muted);margin-top:2px;}
+    .role-pill{display:inline-block;font-size:0.68rem;font-weight:700;padding:3px 10px;border-radius:2px;letter-spacing:0.08em;text-transform:uppercase;}
+    .role-best{background:rgba(212,168,42,0.15);color:var(--gold);border:1px solid rgba(212,168,42,0.25);}
+    .role-alt{background:rgba(77,168,218,0.1);color:var(--ice-bright);border:1px solid rgba(77,168,218,0.2);}
+    .role-f2p{background:rgba(46,204,113,0.1);color:var(--green);border:1px solid rgba(46,204,113,0.2);}
+
+    /* IMAGE REFERENCE BLOCKS */
+
+
+    /* TIER ROWS */
+    .tier-section{margin:28px 0;}
+    .tier-row{display:flex;align-items:stretch;gap:0;margin-bottom:8px;border-radius:4px;overflow:hidden;border:1px solid var(--ice-border);}
+    .tier-label{width:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--white);}
+    .tier-label.s{background:#E74C3C;}
+    .tier-label.a{background:#E67E22;}
+    .tier-label.b{background:#F1C40F;color:var(--ice-dark);}
+    .tier-label.c{background:var(--green-dark);}
+    .tier-content{flex:1;background:var(--ice-panel);padding:14px 20px;}
+    .tier-content-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;color:var(--white);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;}
+    .tier-content p{font-size:0.86rem;color:var(--text);line-height:1.65;margin:0;}
+
+    /* KEY RULES */
+    .rule-list{list-style:none;margin:20px 0;}
+    .rule-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:16px 20px;margin-bottom:10px;display:flex;align-items:flex-start;gap:14px;font-size:0.93rem;color:var(--text);line-height:1.65;}
+    .rule-item:last-child{margin-bottom:0;}
+    .rule-icon{flex-shrink:0;font-size:1rem;margin-top:2px;}
+    .rule-item strong{color:var(--frost);}
+
+    /* CALLOUT */
+    .callout{background:rgba(212,168,42,0.06);border:1px solid rgba(212,168,42,0.25);border-radius:4px;padding:24px 28px;margin:28px 0;position:relative;}
+    .callout::before{content:'!';position:absolute;top:-13px;left:24px;background:var(--ice-dark);padding:0 8px;font-size:1rem;}
+    .callout p{font-size:0.97rem;color:var(--frost);line-height:1.8;margin:0;}
+    .callout strong{color:var(--gold);}
+
+    .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-top:3px solid var(--orange);border-radius:4px;padding:32px 36px;margin-top:52px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+    .cta-text h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:6px;}
+    .cta-text p{font-size:0.86rem;color:var(--text-muted);margin:0;}
+    .btn-orange{background:var(--orange);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;padding:12px 28px;border-radius:2px;text-decoration:none;transition:all 0.2s;white-space:nowrap;display:inline-block;}
+    .btn-orange:hover{background:var(--orange-hot,#F5A23C);transform:translateY(-2px);}
+
+    .site-footer{background:var(--ice-mid);border-top:1px solid var(--ice-border);padding:32px 40px;text-align:center;position:relative;z-index:1;}
+    .site-footer p{font-size:0.78rem;color:var(--text-muted);margin-bottom:6px;}
+    .site-footer a{color:var(--ice-bright);text-decoration:none;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:640px){
+      .post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
+      .site-header{padding:14px 20px;}
+      .basics-grid,.rally-grid{grid-template-columns:1fr;}
+      .hero-table-header,.hero-row{grid-template-columns:60px 1fr 1fr;}
+      .hero-row .hero-f2p{display:none;}
+      .hero-table-header .hf2p{display:none;}
+      .post-cta{padding:24px 20px;}
+      .header-tag{display:none;}
+    }
+  
+    /* Blogger override — force dark theme */
+    .wos-wrapper {
+      background: #050D1A;
+      min-height: 100vh;
+      margin: -20px -20px 0;
+      padding: 0;
+      position: relative;
+    }
+    body { background: #050D1A !important; }
+    </style>
+  <meta property="og:title" content="Bear Hunt in Whiteout Survival — The Beginner's Complete Guide | WOS Guide" />
+  <meta property="og:description" content="Everything a beginner needs to know about Bear Hunt in Whiteout Survival — hero selection by generation, rally mechanics, F2P strategy and how to maximise your alliance score." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-wos.png" />
+  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-guide-bear-hunt.html" />
+  <meta property="og:site_name" content="Digital Revenue Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bear Hunt in Whiteout Survival — The Beginner's Complete Guide | WOS Guide" />
+  <meta name="twitter:description" content="Everything a beginner needs to know about Bear Hunt in Whiteout Survival — hero selection by generation, rally mechanics, F2P strategy and how to maximise your alliance score." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Bear Hunt in Whiteout Survival — The Beginner's Complete Guide | WOS Guide","description":"Everything a beginner needs to know about Bear Hunt in Whiteout Survival — hero selection by generation, rally mechanics, F2P strategy and how to maxi","url":"https://www.digitalrevenuestudio.co.uk/wos-guide-bear-hunt.html","publisher":{"@type":"Organization","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk"}}</script>
+</head>
+<body><div class="wos-wrapper">
+  <header class="site-header">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Whiteout Survival Guide</a>
+    <span class="header-tag">Beginner Guides · Strategy · F2P Tips</span>
+  </header>
+
+  <article>
+    <div class="post-hero">
+      <div class="post-category"> Event Guide</div>
+      <h1>Bear Hunt in<br /><em>Whiteout Survival</em><br />The Beginner's Guide</h1>
+      <p class="post-intro">Bear Hunt is one of the best resource events in the game — and one of the most misunderstood. This is everything a beginner needs to know: what it is, how the rally mechanics work, which heroes to use and how to maximise your score as a F2P player.</p>
+      <div class="post-meta">
+        <span class="meta-item"><span class="dot"></span>WOS Guide</span>
+        <span class="meta-item"><span class="dot"></span>Event Guide</span>
+        <span class="meta-item"><span class="dot"></span>Hero Recommendations Included</span>
+      </div>
+    </div>
+
+    <div class="frost-divider"></div>
+
+    <div class="post-body">
+
+      <p>I treated Bear Hunt as optional for my first few weeks. Participated when I remembered, skipped it when I was busy. It was one of the more costly mistakes I made as a beginner — and based on the comments I have seen, I am not the only one who underestimated it.</p>
+      <p>This post covers everything you need to actually understand Bear Hunt: what the event is, how starting vs joining a rally changes everything, which heroes to use at your generation level and the rules that separate average scores from great ones.</p>
+
+      <div class="section-label">What Bear Hunt Actually Is</div>
+
+      <div class="basics-grid">
+        <div class="basic-card"><span class="basic-card-icon"></span><h3>When Does It Run?</h3><p>Bear Hunt runs as a regular alliance event. Your alliance coordinates to attack increasingly powerful bears — the stronger the bear, the better the rewards. Timing your attacks and coordinating boss kills with your alliance significantly affects the total reward pool.</p></div>
+        <div class="basic-card"><span class="basic-card-icon"></span><h3>Why Does It Matter?</h3><p>Bear Hunt is one of the most resource-efficient events in the early game. Resources, speed-ups, hero XP and alliance contribution points — all available from consistent participation. Missing it repeatedly is genuinely leaving meaningful progression on the table.</p></div>
+        <div class="basic-card"><span class="basic-card-icon"></span><h3>Alliance Coordination</h3><p>The event is designed around alliance coordination. A well-organised alliance that targets the right bears at the right time will dramatically outperform a disorganised one with higher individual power. Strategy matters more than stats at most levels.</p></div>
+        <div class="basic-card"><span class="basic-card-icon">+</span><h3>Starting vs Joining</h3><p>There are two completely different roles in Bear Hunt — starting a rally and joining one. The hero setup, skill requirements and strategy for each role are different. Understanding which role you are playing changes which heroes you should be using entirely.</p></div>
+      </div>
+
+      <div class="section-label">Starting a Rally vs Joining One</div>
+
+      <p>This is the mechanic that most beginners miss. The hero rules for starting a rally and joining one are fundamentally different — and using the wrong heroes for the wrong role actively hurts your alliance's score.</p>
+
+      <div class="rally-grid">
+        <div class="rally-col">
+          <div class="rally-header start">&rsaquo; Starting a Rally</div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span><strong>All expedition skills</strong> from all your heroes are used to buff the rally</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Use your <strong>best troop and hero formation</strong> — not Gina or blue quality heroes</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Prefer <strong>4-star gold heroes</strong> — they can have triple expedition Level 5 skills</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Your formation quality directly sets the <strong>damage ceiling</strong> for the whole rally</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Jeronimo + Mia + Alonso is the standard strong formation across multiple generations</span></div>
+        </div>
+        <div class="rally-col">
+          <div class="rally-header join">* Joining a Rally</div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Only the <strong>first slot hero's first expedition skill</strong> is used to buff the rally</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Use the specific <strong>recommended hero in slot one</strong> — the rest of the formation matters less</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Only <strong>four member buffs</strong> can be given to buff the rally total</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span>Upgrade heroes in the <strong>correct order</strong> or use pre-saved formations for speed</span></div>
+          <div class="rally-item"><span class="ri">&rsaquo;</span><span><strong>Mia</strong> is one of the few speed heroes with two AoE damage skills — excellent for joining</span></div>
+        </div>
+      </div>
+
+      <div class="section-label">Hero Recommendations by Generation</div>
+
+      <p>Which heroes you should use for Bear Hunt depends on your generation. The reference charts below show the best, alternative and F2P options at each stage. Here is the summary in table form:</p>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;"><strong style="color:var(--white);">Note on the Join column:</strong> "Best (Join)" refers to joining someone else's rally — not leading one. Mia appears across multiple generations in this column because her double AoE damage skills make her consistently one of the best join heroes even when stronger start heroes exist for leading.</p>
+
+
+      <div class="hero-table">
+        <div class="hero-table-header">
+          <span>Gen</span>
+          <span>Best Formation (Start)</span>
+          <span>Best (Join)</span>
+          <span class="hf2p">F2P Option</span>
+        </div>
+        <div class="hero-row"><span class="gen-badge">G1</span><span class="hero-name">Jeronimo + Molly + Bahiti<span>Standard starting lineup</span></span><span class="hero-name">Molly + Sergey + Bahiti<span style="font-size:0.75em;color:var(--text-muted);">Note: Natalia is spender-only</span></span><span class="hero-name hero-f2p" style="color:var(--green)">Sergey + Molly + Bahiti</span></div>
+        <div class="hero-row"><span class="gen-badge">G2</span><span class="hero-name">Jeronimo + Phily + Alonso<span>Alonso adds expedition bonus</span></span><span class="hero-name">Molly + Alonso + Philly<span style="font-size:0.75em;color:var(--text-muted);">Note: Natalia is spender-only</span></span><span class="hero-name hero-f2p" style="color:var(--green)">Flint + Molly + Bahiti</span></div>
+        <div class="hero-row"><span class="gen-badge">G3</span><span class="hero-name">Natalia + Mia + Alonso<span>Mia AoE skills key here</span></span><span class="hero-name">Jeronimo + Mia + Alonso</span><span class="hero-name hero-f2p" style="color:var(--green)">Flint + Mia + Bah'ri</span></div>
+        <div class="hero-row"><span class="gen-badge">G4</span><span class="hero-name">Jeronimo + Reina + Alonso<span>Reina joins the core</span></span><span class="hero-name">Jeronimo + Mia + Lynn</span><span class="hero-name hero-f2p" style="color:var(--green)">Flint + Mia + Lynn</span></div>
+        <div class="hero-row"><span class="gen-badge">G5</span><span class="hero-name">Jeronimo + Reina + Gwen<span>Gwen adds consistent DPS</span></span><span class="hero-name">Hector + Mia + Gwen</span><span class="hero-name hero-f2p" style="color:var(--green)">Hector + Mia + Lynn</span></div>
+        <div class="hero-row"><span class="gen-badge">G6</span><span class="hero-name">Jeronimo + Reina + Wayne</span><span class="hero-name">Jeronimo + Mia + Wayne</span><span class="hero-name hero-f2p" style="color:var(--green)">Hector + Renae + Lynn</span></div>
+        <div class="hero-row"><span class="gen-badge">G7</span><span class="hero-name">Jeronimo + Mia + Bradley</span><span class="hero-name">Jeronimo + Reina + Wayne</span><span class="hero-name hero-f2p" style="color:var(--green)">Hector + Mia + Bradley</span></div>
+        <div class="hero-row"><span class="gen-badge">G8</span><span class="hero-name">Jeronimo + Mia + Bradley<span>Current gen benchmark</span></span><span class="hero-name">Hector + Sonya + Wayne</span><span class="hero-name hero-f2p" style="color:var(--green)">Hector + Mia + Bradley</span></div>
+      </div>
+
+
+      <div class="section-label">Bear Trap DMG — The Expedition Skill Tier List</div>
+
+      <p>Not all heroes contribute equally to Bear Hunt damage. The expedition skills your heroes have — and their level — determine how much damage your rally or join contribution adds. Here is how the tiers break down for the Bear Trap damage-up mechanic:</p>
+
+
+      <div class="tier-section">
+        <div class="tier-row"><div class="tier-label s">S</div><div class="tier-content"><div class="tier-content-title">S Tier — Best Expedition Heroes</div><p>Evelin, Jeronimo, Jasser, Aaron, Balaguun, Rahul. These heroes have the highest-value expedition skills for Bear Hunt damage. If you have them developed, these should be prioritised in your formation. 4-star gold quality with Level 5 expedition skills is the target.</p></div></div>
+        <div class="tier-row"><div class="tier-label a">A</div><div class="tier-content"><div class="tier-content-title">A Tier — Strong Alternatives</div><p>Mia, Layton, Norah, Greg, Philip. Solid expedition contributors — strong if you do not have S-tier heroes developed. Mia in particular is one of the best join-rally heroes due to her AoE damage skills alongside expedition utility.</p></div></div>
+        <div class="tier-row"><div class="tier-label b">B</div><div class="tier-content"><div class="tier-content-title">B Tier — Usable</div><p>Wayne, Renae, Layton (lower star), Flint. Fine to use if you do not have better options at your development stage. Do not over-invest in these heroes specifically for Bear Hunt.</p></div></div>
+        <div class="tier-row"><div class="tier-label c">C</div><div class="tier-content"><div class="tier-content-title">C Tier — Last Resort</div><p>If you do not have any of the above heroes ready: join with a low-star hero in the first slot, or join with no heroes. The key rule: none of the four rally member buff slots should be occupied by non-damage heroes. An empty slot is better than a wrong hero.</p></div></div>
+      </div>
+
+      <div class="section-label">The Rules That Actually Matter</div>
+
+      <ul class="rule-list">
+        <li class="rule-item"><span class="rule-icon">&rsaquo;</span><div><strong>The displacement order is top-to-bottom.</strong> The first four rally members from the top of the member list take the buff slots. Position matters — if you join early, you are more likely to be in a buff slot. If you join late, you may not contribute a buff even if your hero is strong.</div></li>
+        <li class="rule-item"><span class="rule-icon">&rsaquo;</span><div><strong>A 3-star hero with a Level 4 expedition skill gets replaced.</strong> If a higher hero with a Level 5 expedition skill joins, the Level 4 hero is displaced according to the rally member list order. Build your join heroes to Level 5 expedition skills to hold your buff slot.</div></li>
+        <li class="rule-item"><span class="rule-icon">&rsaquo;</span><div><strong>Hero level and hero quality do not matter for joining.</strong> Only the first slot hero's first expedition skill level matters when joining. A lower-level hero with a Level 5 expedition skill outperforms a high-level hero with a Level 4 skill.</div></li>
+        <li class="rule-item"><span class="rule-icon">&rsaquo;</span><div><strong>A hero cannot be overwritten if their first expedition skill is Level 5.</strong> Once you have a hero in a buff slot with a maxed expedition skill, they hold that position. Getting your key join heroes to Level 5 expedition skill is a priority worth front-loading.</div></li>
+        <li class="rule-item"><span class="rule-icon">&rsaquo;</span><div><strong>Starting from Gen 8, use the current generation bear as the best choice.</strong> The damage bonuses from current-gen heroes scale with the current-gen bear — using older heroes on higher-tier bears reduces your damage output. Stay current with your formation as you progress.</div></li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>The single most important Bear Hunt habit:</strong> Show up consistently. The difference between an alliance that coordinates Bear Hunt and one that does not is not close. If your alliance has a set time for kills, be there. The compounding value of consistent Bear Hunt participation over 30 days is one of the clearest differences between fast-developing players and slow ones at every level.</p>
+      </div>
+
+      <div class="post-cta">
+        <div class="cta-text">
+          <h3>The wiki is free — always.</h3>
+          <p>All guides, event walkthroughs and the gift code tracker are completely free. No sign-up, no paywall. Built by a player, shaped by the community. If it helped your game, a Ko-fi is always appreciated but never expected.</p>
+        </div>
+        <a href="https://ko-fi.com/M4M71VM8J6" target="_blank" class="btn-orange">Support on Ko-fi — Optional</a>
+      </div>
+
+    </div>
+  </article>
+
+  
+  <!-- WOS EMAIL SIGNUP -->
+  <section style="background:var(--dark);padding:56px 40px;border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:560px;margin:0 auto;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">WOS Guide Newsletter</div>
+      <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em;">New guides, gift codes &amp; event tips</h3>
+      <p style="font-family:'Lora',serif;font-style:italic;font-size:0.95rem;color:rgba(255,255,255,0.4);margin-bottom:24px;line-height:1.75;">Get notified when new F2P guides land, gift codes drop and event strategy posts go live. WOS players only — no off-topic content.</p>
+      <div style="background:var(--dark-2);border:1px solid rgba(245,166,35,0.2);border-top:3px solid var(--gold);border-radius:3px;padding:24px;text-align:left;">
+              <a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html" 
+         style="display:inline-block;background:var(--ice-bright);color:var(--ice-dark);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 32px;border-radius:3px;text-decoration:none;margin-top:12px;">
+        &#128276; Get Code Alerts — Sign Up Free
+      </a>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px;">No spam. Unsubscribe any time. Gift codes and F2P guide updates only.</p>
+      </div>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.2);margin-top:12px;">No spam. Unsubscribe any time. WOS players only.</p>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <p><a href="https://www.digitalrevenuestudio.co.uk/wos-blog.html">WOS Blog</a> — Real strategies from a real player.</p>
+    <p>Not affiliated with Whiteout Survival or Century Games.</p>
+  </footer>
+</div>
+  <footer style="background:#050D1A;padding:20px 40px;border-top:1px solid rgba(96,180,232,0.1);margin-top:40px;">
+    <p style="font-size:0.72rem;color:rgba(255,255,255,0.2);">&copy; 2026 WOS Wiki &mdash; Digital Revenue Studio &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></p>
+  </footer>
+
+  <!-- INTERNAL LINKS -->
+  <div style="background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:32px 0;">
+    <p style="margin:0;font-size:0.88rem;color:var(--text);line-height:1.75;">&#128214; <strong style="color:var(--white);">More F2P Resources:</strong> Check the <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="color:var(--ice-bright);font-weight:600;">WOS gift code tracker</a> for active free codes, or browse all guides on the <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="color:var(--ice-bright);font-weight:600;">WOS Wiki index</a>.</p>
+  </div>
+
+  <!-- COMMUNITY FEEDBACK -->
+  <div style="max-width:860px;margin:0 auto;padding:0 40px 48px;">
+    <div style="background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;">&#128172; Spot an Error or Have a Tip?</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.65;">This wiki is built and maintained by the community. If something is wrong, outdated or missing — let us know. Drop a comment on Reddit or use the link below. Corrections are made fast.</p>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;">Submit Feedback &rarr;</a>
+    </div>
+    <div style="margin-top:10px;font-size:0.72rem;color:var(--text-muted);text-align:right;">&#x2713; Community reviewed &bull; Last checked April 2026 &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="color:#5A7A94;text-decoration:none;">Submit a correction</a></div>
+  </div>
+</body>
+</html>
