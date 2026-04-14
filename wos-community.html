@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-community.html" />
+  <title>WOS Community Hub — Feedback, Corrections & Newsletter | WOS Wiki</title>
+  <meta name="description" content="Spotted an error in a WOS guide? Want to suggest new content? This is the place. Community feedback shapes the wiki." />
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+  <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" /></noscript>
+  <style>
+    :root{
+      --ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-mid:#091628;
+      --ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;
+      --gold:#D4A82A;--white:#FFFFFF;--text:#B8D4E8;--text-muted:#5A7A94;
+      --green:#2ECC71;--red:#E74C3C;--orange:#E8832A;
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+
+    /* NAV */
+    .site-header{background:rgba(9,22,40,0.97);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .nav-links{display:flex;gap:24px;list-style:none;}
+    .nav-links a{font-size:0.82rem;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--white);}
+
+    /* HERO */
+    .hero{padding:72px 40px 56px;max-width:860px;margin:0 auto;position:relative;}
+    .hero::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%);pointer-events:none;z-index:0;}
+    .hero-inner{position:relative;z-index:1;}
+    .hero-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-bright);border:1px solid rgba(77,168,218,0.3);padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:20px;}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.4rem);color:var(--white);line-height:1.05;text-transform:uppercase;margin-bottom:16px;}
+    .hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .hero-sub{font-size:1rem;color:var(--text-muted);max-width:580px;line-height:1.7;}
+
+    /* MAIN CONTENT */
+    .page-inner{max-width:860px;margin:0 auto;padding:0 40px 80px;}
+
+    /* SECTION LABEL */
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--ice-border),transparent);}
+    .section-label.gold-line{color:var(--gold);}
+    .section-label.gold-line::after{background:linear-gradient(90deg,rgba(212,168,42,0.3),transparent);}
+
+    /* CARDS GRID */
+    .hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:40px;}
+    .hub-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.2s;}
+    .hub-card:hover{border-color:rgba(77,168,218,0.35);}
+    .hub-card-icon{font-size:1.4rem;margin-bottom:2px;}
+    .hub-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);}
+    .hub-card-desc{font-size:0.83rem;color:var(--text-muted);line-height:1.65;flex:1;}
+    .hub-card-btn{display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:9px 16px;border-radius:3px;text-decoration:none;text-align:center;transition:all 0.2s;margin-top:4px;}
+    .hub-card-btn:hover{background:rgba(77,168,218,0.2);border-color:var(--ice-bright);}
+    .hub-card-btn.gold{background:rgba(212,168,42,0.12);border-color:rgba(212,168,42,0.3);color:var(--gold);}
+    .hub-card-btn.gold:hover{background:rgba(212,168,42,0.2);}
+
+    /* FEEDBACK FORM */
+    .form-wrap{background:var(--ice-panel);border:1px solid var(--ice-border);border-top:2px solid var(--ice-bright);border-radius:4px;padding:32px;}
+    .form-intro{font-size:0.88rem;color:var(--text-muted);margin-bottom:24px;line-height:1.7;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+    .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+    .form-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);}
+    .form-input,.form-select,.form-textarea{background:rgba(255,255,255,0.04);border:1px solid var(--ice-border);border-radius:3px;padding:11px 14px;color:var(--white);font-family:'Barlow',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s;width:100%;}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--ice-bright);}
+    .form-textarea{resize:vertical;min-height:120px;line-height:1.6;}
+    .form-select option{background:var(--ice-panel);color:var(--white);}
+    .form-submit{background:var(--ice-bright);color:var(--ice-dark);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 32px;border:none;border-radius:3px;cursor:pointer;transition:all 0.2s;width:100%;margin-top:8px;}
+    .form-submit:hover{background:var(--ice-glow);}
+    .form-note{font-size:0.75rem;color:var(--text-muted);margin-top:10px;text-align:center;}
+    .success-msg{display:none;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.3);border-radius:3px;padding:16px;text-align:center;color:var(--green);font-size:0.88rem;margin-top:16px;}
+
+    /* CALLOUT */
+    .callout{background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:24px 0;}
+    .callout p{font-size:0.88rem;color:var(--text);line-height:1.75;margin:0;}
+
+    /* NEWSLETTER */
+    .newsletter-wrap{background:linear-gradient(135deg,var(--ice-panel),rgba(77,168,218,0.08));border:1px solid var(--ice-border);border-top:2px solid var(--ice-glow);border-radius:4px;padding:32px;text-align:center;}
+    .newsletter-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .newsletter-title em{font-style:normal;color:var(--ice-glow);}
+    .newsletter-sub{font-size:0.85rem;color:var(--text-muted);margin-bottom:24px;line-height:1.65;}
+    .newsletter-btn{display:inline-block;background:var(--ice-bright);color:var(--ice-dark);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 36px;border-radius:3px;text-decoration:none;}
+
+    /* FOOTER */
+    footer{background:var(--ice-mid);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;}
+    footer p{font-size:0.75rem;color:var(--text-muted);}
+    footer a{color:var(--text-muted);text-decoration:none;}
+
+    @media(max-width:640px){
+      .site-header{padding:12px 20px;}.nav-links{display:none;}
+      .hero{padding:48px 20px 36px;}.page-inner{padding:0 20px 60px;}
+      .form-row{grid-template-columns:1fr;}
+      footer{padding:16px 20px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
+    <nav><ul class="nav-links">
+      <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-blog.html">Blog</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html">Newsletter</a></li>
+    </ul></nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-tag">Community Hub</span>
+      <h1>Help Us Make<br />the Wiki <em>Better</em></h1>
+      <p class="hero-sub">Spotted an error? Have a tip we missed? Want to suggest a guide? This is where community feedback goes. Every correction gets reviewed — most get actioned same day.</p>
+    </div>
+  </section>
+
+  <div class="page-inner">
+
+    <div class="callout">
+      <p>&#128172; <strong style="color:var(--white);">Community corrections welcome.</strong> The wiki is shaped by players who know the game. If something is wrong, outdated or missing — tell us. Everything here is read by a real person.</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="section-label">Quick Links</div>
+    <div class="hub-grid">
+      <div class="hub-card">
+        <div class="hub-card-icon">&#128214;</div>
+        <div class="hub-card-title">Browse All Guides</div>
+        <div class="hub-card-desc">The full WOS Wiki — every beginner guide, event walkthrough and strategy tip. All free, no sign-up needed.</div>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="hub-card-btn">Visit the Wiki &rarr;</a>
+      </div>
+      <div class="hub-card">
+        <div class="hub-card-icon">&#127381;</div>
+        <div class="hub-card-title">Gift Code Tracker</div>
+        <div class="hub-card-desc">All active WOS gift codes in one place. Updated whenever new codes drop. Bookmark it and check back regularly.</div>
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" class="hub-card-btn">See Active Codes &rarr;</a>
+      </div>
+      <div class="hub-card">
+        <div class="hub-card-icon">&#128172;</div>
+        <div class="hub-card-title">Reddit Community</div>
+        <div class="hub-card-desc">Join the conversation on r/whiteoutsurvival. Post feedback publicly, upvote corrections and help other players.</div>
+        <a href="https://www.reddit.com/r/whiteoutsurvival" target="_blank" rel="nofollow" class="hub-card-btn">Visit Reddit &rarr;</a>
+      </div>
+    </div>
+
+    <!-- FEEDBACK FORM -->
+    <div class="section-label gold-line">&#9998; Submit a Correction or Suggestion</div>
+    <div class="form-wrap">
+      <p class="form-intro">Use this form to flag an error, suggest a missing topic or send general feedback. All submissions go directly to the wiki team. We review everything — most corrections are live within 24 hours.</p>
+
+      <form id="feedback-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name (optional)</label>
+            <input type="text" class="form-input" placeholder="Chief name or Reddit username" id="f-name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Feedback Type</label>
+            <select class="form-select" id="f-type" required>
+              <option value="">Select a type...</option>
+              <option value="error">Error or incorrect info</option>
+              <option value="missing">Missing content or guide</option>
+              <option value="outdated">Outdated information</option>
+              <option value="suggestion">New guide suggestion</option>
+              <option value="general">General feedback</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Which guide or page? (optional)</label>
+          <input type="text" class="form-input" placeholder="e.g. Hero Priority Guide, Bear Hunt, Gift Code Tracker" id="f-page" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Feedback</label>
+          <textarea class="form-textarea" placeholder="Describe the error, what it should say, or what you'd like to see added..." id="f-message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">&#10003; Submit Feedback</button>
+        <p class="form-note">No account needed. All submissions are reviewed by a real person. We may use your feedback to improve the wiki — no personal data is stored.</p>
+      </form>
+      <div class="success-msg" id="success-msg">
+        &#10003; Thanks — feedback received. We review all submissions and most corrections go live within 24 hours. You're helping make the wiki better for everyone.
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="section-label">&#128276; Stay Updated</div>
+    <div class="newsletter-wrap">
+      <div class="newsletter-title">Get <em>Code Alerts</em> & Guide Updates</div>
+      <p class="newsletter-sub">New WOS gift codes expire within hours. New guides go live regularly. Sign up and we'll notify you when either happens — no spam, just WOS content.</p>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html" class="newsletter-btn">Sign Up Free &rarr;</a>
+      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:12px;">No spam. Unsubscribe any time.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>WOS Community Hub &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">Wiki Index</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const type = document.getElementById('f-type').value;
+      const message = document.getElementById('f-message').value;
+      const name = document.getElementById('f-name').value;
+      const page = document.getElementById('f-page').value;
+
+      if (!type || !message) return;
+
+      // Build mailto link
+      const subject = encodeURIComponent('WOS Wiki Feedback: ' + type);
+      const body = encodeURIComponent(
+        'Feedback Type: ' + type + '\n' +
+        'Name/Username: ' + (name || 'Anonymous') + '\n' +
+        'Page/Guide: ' + (page || 'Not specified') + '\n\n' +
+        'Feedback:\n' + message
+      );
+      window.location.href = 'mailto:info@digitalrevenuestudio.co.uk?subject=' + subject + '&body=' + body;
+
+      // Show success message
+      document.getElementById('feedback-form').style.display = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
