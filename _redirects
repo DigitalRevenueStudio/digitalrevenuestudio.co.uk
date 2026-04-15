@@ -24,6 +24,9 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /wos-wiki-guide-snowbusters.html /wos-guide-snowbusters.html 301
 /wos-wiki-guide-speedups.html /wos-guide-speedups.html 301
 
+# Community review sandbox — moved from GitHub Pages to DRS site (April 2026)
+# Note: GitHub Pages shared links are handled via redirect pages in the community-feedback repo
+
 # Old DRS blog redirects
 /drs-blog-7-council-tax.html /drs-blog.html 301
 /drs-experiments.html /drs-case-studies.html 301

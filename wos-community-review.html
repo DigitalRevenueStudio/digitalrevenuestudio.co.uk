@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" />
+  <title>WOS Wiki Community Review — Guides Under Alliance Review | WOS Wiki</title>
+  <meta name="description" content="7 new WOS guides currently under community review by alliance members before publishing. Read, check the facts and submit feedback." />
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+  <meta property="og:title" content="WOS Wiki Community Review | WOS Wiki" />
+  <meta property="og:description" content="7 new WOS guides under alliance review before publishing. Check the facts and submit feedback." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" />
+  <meta property="og:site_name" content="Whiteout Survival Guide | WOS Wiki" />
+  <style>
+    :root {
+      --dark: #050D1A;
+      --panel: #0D1F38;
+      --border: #1A3A5C;
+      --bright: #4DA8DA;
+      --glow: #7DD4F8;
+      --gold: #D4A82A;
+      --white: #FFFFFF;
+      --text: #B8D4E8;
+      --muted: #5A7A94;
+      --green: #2ECC71;
+      --orange: #E8832A;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(77,168,218,0.07) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap { max-width: 820px; margin: 0 auto; padding: 56px 24px 80px; position: relative; z-index: 1; }
+
+    /* HEADER */
+    .header { text-align: center; margin-bottom: 48px; }
+    .tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--bright);
+      border: 1px solid rgba(77,168,218,0.3);
+      padding: 4px 14px;
+      border-radius: 2px;
+      margin-bottom: 18px;
+    }
+    .header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .header h1 span { color: var(--glow); }
+    .header p {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 24px;
+    }
+
+    /* CALLOUT */
+    .callout {
+      background: rgba(212,168,42,0.07);
+      border: 1px solid rgba(212,168,42,0.25);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 4px 4px 0;
+      padding: 14px 18px;
+      margin-bottom: 40px;
+    }
+    .callout p { font-size: 0.88rem; color: var(--text); margin: 0; }
+    .callout strong { color: var(--gold); }
+
+    /* SECTION LABEL */
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bright);
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* GUIDE CARDS */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-bottom: 16px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .card:hover { border-color: rgba(77,168,218,0.4); transform: translateY(-2px); }
+    .card-cat {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bright);
+    }
+    .card-cat.events { color: var(--orange); }
+    .card-cat.strategy { color: var(--glow); }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .card-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .card-arrow { font-size: 0.82rem; color: var(--bright); }
+
+    /* FEEDBACK SECTION */
+    .feedback-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--bright);
+      border-radius: 4px;
+      padding: 28px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .feedback-box h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .feedback-box h2 span { color: var(--glow); }
+    .feedback-box p { font-size: 0.88rem; color: var(--muted); margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .btn {
+      display: inline-block;
+      background: var(--bright);
+      color: var(--dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--glow); }
+    .btn.outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      margin-left: 10px;
+    }
+    .btn.outline:hover { border-color: var(--bright); color: var(--white); }
+
+    /* HOW TO REVIEW */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 16px 0 32px;
+    }
+    .step {
+      background: rgba(77,168,218,0.04);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 16px;
+    }
+    .step-num {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--bright);
+      opacity: 0.5;
+      margin-bottom: 6px;
+    }
+    .step-title { font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .step-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* FOOTER */
+    .footer { text-align: center; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .footer p { font-size: 0.75rem; color: var(--muted); }
+    .footer a { color: var(--muted); text-decoration: none; }
+
+    @media(max-width: 480px) {
+      .wrap { padding: 36px 16px 60px; }
+      .btn.outline { margin-left: 0; margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav style="background:rgba(5,13,26,0.97);border-bottom:1px solid #1A3A5C;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);">
+  <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-family:sans-serif;font-weight:900;font-size:0.95rem;letter-spacing:0.1em;text-transform:uppercase;color:#7DD4F8;text-decoration:none;">WOS Wiki</a>
+  <div style="display:flex;gap:20px;align-items:center;">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.8rem;color:#5A7A94;text-decoration:none;">All Guides</a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.8rem;color:#5A7A94;text-decoration:none;">Gift Codes</a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="font-size:0.8rem;color:#5A7A94;text-decoration:none;">Community</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <div class="header">
+    <div class="tag">&#128172; Community Review</div>
+    <h1>WOS Wiki <span>Community Review</span></h1>
+    <p>7 new guides built from alliance feedback. Read them, check the facts, and tell us what we've got wrong before they go live.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>This sandbox has moved.</strong> The WOS Wiki community review is now hosted on the main site at <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" style="color:var(--gold);">digitalrevenuestudio.co.uk</a>. All guide links below will take you directly to the live wiki. The guides that were shared for review are linked individually below.</p>
+  </div>
+
+  <!-- HOW TO REVIEW -->
+  <div class="section-label">How to Review</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Read the guide</div>
+      <div class="step-desc">Click any guide below. Read it as if you were a new player seeing it for the first time.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Check the facts</div>
+      <div class="step-desc">Is anything wrong, outdated or missing? Numbers, hero names, event mechanics, strategy advice.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Submit feedback</div>
+      <div class="step-desc">Use the Community Hub link at the bottom of each guide to send corrections directly.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">We fix and publish</div>
+      <div class="step-desc">Corrections are made fast. Once reviewed the "Draft" banner is removed and the guide goes fully live.</div>
+    </div>
+  </div>
+
+  <!-- EVENT GUIDES -->
+  <div class="section-label">New Event Guides</div>
+  <div class="grid">
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-foundry-battle.html" class="card" target="_blank">
+      <div class="card-cat events">Events</div>
+      <div class="card-title">Foundry Battle: Complete F2P Guide</div>
+      <div class="card-desc">Phases, building values, Arsenal Points and how to contribute without top-tier power.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-alliance-championship.html" class="card" target="_blank">
+      <div class="card-cat events">Events</div>
+      <div class="card-title">Alliance Championship: Fortress Battle</div>
+      <div class="card-desc">8-week seasonal. Weekly Fridays. 16 structures. How alliances fight for state dominance.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- STRATEGY GUIDES -->
+  <div class="section-label">New Strategy Guides</div>
+  <div class="grid">
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" class="card" target="_blank">
+      <div class="card-cat strategy">Strategy</div>
+      <div class="card-title">War Academy: Troop Research Priority</div>
+      <div class="card-desc">Which research to unlock first, tier priority rules and F2P army building.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" class="card" target="_blank">
+      <div class="card-cat strategy">Strategy</div>
+      <div class="card-title">Pets System — Which Pets to Prioritise</div>
+      <div class="card-desc">Pet Refinement strategy, F2P priorities and the SvS timing rule most players miss.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" class="card" target="_blank">
+      <div class="card-cat strategy">Strategy</div>
+      <div class="card-title">Experts System — Who to Prioritise First</div>
+      <div class="card-desc">All six experts explained with F2P priority order and Affinity system guide.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-server-timeline.html" class="card" target="_blank">
+      <div class="card-cat strategy">Strategy</div>
+      <div class="card-title">Server Timeline: What Unlocks and When</div>
+      <div class="card-desc">Generation schedule, key Furnace milestones and how to plan F2P progression.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" class="card" target="_blank">
+      <div class="card-cat strategy">Strategy</div>
+      <div class="card-title">Hero Guide by Generation: Gen 1 to 6+</div>
+      <div class="card-desc">Who to build at every generation. The 50-0-50 F2P path explained in full.</div>
+      <div class="card-footer">
+        <span class="card-status">&#9998; Under Review</span>
+        <span class="card-arrow">Read &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div class="feedback-box">
+    <h2>Spotted Something <span>Wrong?</span></h2>
+    <p>Every correction makes the wiki better for new players. Use the Community Hub to send feedback directly — it goes straight to us and gets fixed fast.</p>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" class="btn" target="_blank">Submit Feedback &rarr;</a>
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="btn outline" target="_blank">Browse Full Wiki</a>
+  </div>
+
+  <div class="footer">
+    <p>WOS Wiki &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community Hub</a></p>
+  </div>
+
+</div>
+</body>
+</html>
