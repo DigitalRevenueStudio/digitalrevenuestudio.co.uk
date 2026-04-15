@@ -98,8 +98,8 @@
 
   <section class="post-hero">
     <div class="post-category">&#9876; Strategy</div>
-    <h1>War Academy —<br /><em>Troop Research Guide</em></h1>
-    <p class="post-intro">The War Academy is where you unlock and upgrade your troop tiers through research. Getting the research order right is one of the most impactful decisions you make in Whiteout Survival. The wrong order wastes weeks of research time and leaves you training troops that are far weaker than they should be.</p>
+    <h1>War Academy:<br /><em>Research Order and F2P Strategy</em></h1>
+    <p class="post-intro">The War Academy is where you unlock higher troop tiers, improve combat stats and increase march capacity. Getting the research order right is one of the most impactful decisions in the game. This guide covers the recommended research path, tier unlock order, bottleneck nodes, F2P troop strategy and what to avoid.</p>
     <div class="meta-row">
       <span class="meta-item"><span class="dot"></span>War Academy</span>
       <span class="meta-updated">&#x2713; Community Reviewed &mdash; April 2026</span>
@@ -115,27 +115,156 @@
 
     <div class="section-label">Overview</div>
     <h2>How the War Academy <em>Works</em></h2>
-    <p>The War Academy houses your Military research tree. This is where you unlock higher troop tiers, improve troop combat stats, and increase your march capacity. Every upgrade you research here directly affects every battle you fight.</p>
-    <p>Research in the War Academy requires time, resources, and in some cases prerequisite research to be completed first. The tree is deep, so prioritising correctly is essential for F2P players who cannot speed through every branch simultaneously.</p>
-    <div class='callout gold'><p><strong>Core rule:</strong> Always prioritise unlocking the next troop tier above combat stat improvements. A T8 troop with average stats beats a T6 troop with excellent stats. Get to the highest tier you can unlock first, then return to improve stats.</p></div>
+    <p>The War Academy houses your Military research tree. This is where you unlock higher troop tiers, improve troop combat stats and increase march capacity. Every node you research here permanently affects every battle, rally and event you participate in.</p>
+    <p>Research requires time, resources and in many cases prerequisite nodes to be completed first. The tree is deep and costs grow as you progress, so getting the order right from the start matters significantly for F2P players who cannot speed through every branch simultaneously.</p>
 
-    <div class="section-label">Research Priority</div>
-    <h2>What to Research <em>First</em></h2>
-    <h3>Early Game (Furnace 1–15)</h3>
-    <p>Focus entirely on unlocking the next troop tier. Do not branch into combat stat research until you have unlocked the highest tier available to your Furnace level. Every resource spent on stat research before reaching your tier ceiling is a wasted resource.</p>
-    <h3>Mid Game (Furnace 16–25)</h3>
-    <p>Once your troop tiers match your Furnace level, begin researching troop attack, defence, and health improvements for your primary troop type. If your hero lineup is Infantry-focused, prioritise Infantry combat stats first.</p>
-    <h3>Late Game (Furnace 26+)</h3>
-    <p>March capacity research becomes increasingly important as you participate in larger-scale events. A higher march cap means more troops contributing to each rally or defence. Prioritise this alongside combat stat improvements once core tiers are unlocked.</p>
-    <div class='callout'><p><strong>Alliance Research:</strong> The War Academy feeds into Alliance Technology as well. Contributing to alliance Battle tech nodes improves combat performance for your entire alliance. Check which nodes your leadership has highlighted and contribute to those first.</p></div>
+    <!-- QUICK SUMMARY -->
+    <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-top:3px solid var(--gold);border-radius:4px;padding:24px 28px;margin:24px 0 32px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">&#9889; Quick Summary</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;">
+        <div>
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Core Rule</div>
+          <div style="font-size:0.88rem;color:var(--text);line-height:1.7;">Always unlock the next troop tier before improving combat stats.</div>
+        </div>
+        <div>
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">Biggest Mistake</div>
+          <div style="font-size:0.88rem;color:var(--red);line-height:1.7;font-weight:600;">Researching stat nodes before reaching your tier ceiling.</div>
+        </div>
+        <div>
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;">March Capacity</div>
+          <div style="font-size:0.88rem;color:var(--text);line-height:1.7;">Top-3 priority for rally players at all stages, not just late game.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout gold"><p><strong>Core rule:</strong> Always prioritise unlocking the next troop tier above combat stat improvements. A T8 troop with average stats beats a T6 troop with excellent stats. Reach the highest tier available at your Furnace level first, then return to improve stats.</p></div>
+
+    <div class="section-label">Troop Tiers</div>
+    <h2>The Tier <em>Progression</em></h2>
+    <p>Troop tiers are unlocked sequentially through War Academy research. Each new tier represents a significant power jump — the gap between tiers is much larger than the incremental gains from stat research within a tier. Furnace level gates which tiers you can unlock.</p>
+
+    <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;margin:16px 0 28px;">
+      <div style="display:grid;grid-template-columns:80px 1fr 1fr;border-bottom:1px solid var(--ice-border);">
+        <div style="padding:10px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Tier</div>
+        <div style="padding:10px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Approx. Furnace</div>
+        <div style="padding:10px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);">Stage</div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px 1fr 1fr;border-bottom:1px solid var(--ice-border);">
+        <div style="padding:10px 14px;font-size:0.85rem;color:var(--text-muted);font-weight:600;">T1–T3</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Furnace 1–5</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Tutorial / starter troops</div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px 1fr 1fr;border-bottom:1px solid var(--ice-border);">
+        <div style="padding:10px 14px;font-size:0.85rem;color:var(--text);font-weight:600;">T4–T5</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Furnace 6–10</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Early game core</div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px 1fr 1fr;border-bottom:1px solid var(--ice-border);">
+        <div style="padding:10px 14px;font-size:0.85rem;color:var(--text);font-weight:600;">T6–T7</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Furnace 11–18</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Mid game. Meaningful combat power.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px 1fr 1fr;border-bottom:1px solid var(--ice-border);">
+        <div style="padding:10px 14px;font-size:0.85rem;color:var(--white);font-weight:600;">T8–T9</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Furnace 19–25</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Strong mid-late game. Priority target.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:80px 1fr 1fr;">
+        <div style="padding:10px 14px;font-size:0.85rem;color:var(--gold);font-weight:700;">T10–T11</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Furnace 26+ / Fire Crystal</div>
+        <div style="padding:10px 14px;font-size:0.83rem;color:var(--text-muted);">Late game. T11 via Fire Crystal research.</div>
+      </div>
+    </div>
+    <div class="callout"><p><strong>Note:</strong> Exact Furnace unlock requirements vary slightly and may change with game updates. These are community-based approximations. The core principle holds regardless: reach the highest tier your Furnace supports before investing in stat improvements.</p></div>
+
+    <div class="section-label">Research Path</div>
+    <h2>Recommended Research <em>Order</em></h2>
+    <p>This is the order most F2P players follow based on community consensus. It is not the only valid path, but it avoids the most common costly mistakes.</p>
+
+    <div style="display:flex;flex-direction:column;gap:8px;margin:16px 0 24px;">
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.8rem;color:var(--ice-dark);">1</div>
+        <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:12px 16px;flex:1;"><strong style="color:var(--white);">Unlock next troop tier</strong> — this is always the first priority regardless of game stage. Repeat until you hit your Furnace ceiling.</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--ice-bright);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.8rem;color:var(--ice-dark);">2</div>
+        <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:12px 16px;flex:1;"><strong style="color:var(--white);">March Capacity I</strong> — unlock early and upgrade consistently. March capacity directly affects every rally you join or lead. This is a top-3 priority for rally-active players at all stages, not just late game.</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--ice-bright);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.8rem;color:var(--ice-dark);">3</div>
+        <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:12px 16px;flex:1;"><strong style="color:var(--white);">Primary troop type Attack I and II</strong> — once at your tier ceiling, start improving stats for your primary troop type. Infantry Attack is the most common early focus.</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--ice-bright);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.8rem;color:var(--ice-dark);">4</div>
+        <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:12px 16px;flex:1;"><strong style="color:var(--white);">Troop Defence and Health for primary type</strong> — builds overall combat resilience. Particularly valuable for players who participate in garrison and defensive events.</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--ice-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.8rem;color:var(--text-muted);">5</div>
+        <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:12px 16px;flex:1;"><strong style="color:var(--white);">Training Speed</strong> — speeds up how fast new troops come out of barracks. Valuable over time but not a priority until tiers and core stats are solid.</div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--ice-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.8rem;color:var(--text-muted);">6</div>
+        <div style="background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:12px 16px;flex:1;"><strong style="color:var(--white);">March Capacity II and III</strong> — expensive and long timers, but high long-term value for rally-focused play. Plan for these well in advance.</div>
+      </div>
+    </div>
+
+    <div class="section-label">Bottleneck Nodes</div>
+    <h2>The Research That <em>Slows Everyone Down</em></h2>
+    <p>Certain nodes in the War Academy are notorious for their cost and timer length relative to what they provide. Knowing about them in advance helps you plan rather than get blindsided.</p>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0 28px;">
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Troop Health II and III:</strong> Among the most expensive stat nodes in the tree. High resource cost relative to the stat gain. Do not rush these — they should come after Attack and Defence improvements for your primary type.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">March Capacity II:</strong> Long timers and high resource cost. Worth completing eventually but plan ahead — this is not a quick research. Save speed-ups specifically for this node if you want to push it during an event.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Troop Load nodes:</strong> Increase the resources your troops can carry when gathering. Useful for gathering builds but a low priority compared to combat and tier nodes. Many F2P players skip these entirely in the early and mid game.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Troop Training Speed:</strong> Long timers for moderate gain. Start this once core tiers and primary stat improvements are well-developed. Not worth rushing.</p>
+      </div>
+    </div>
 
     <div class="section-label">F2P Troop Strategy</div>
     <h2>Building Troops as <em>F2P Player</em></h2>
     <p>F2P troop strategy is quality over quantity. You cannot match the raw troop numbers of heavy spenders, but you can ensure every troop you train is as strong as possible.</p>
-    <p><strong>Always train the highest tier you have unlocked.</strong> Never fill queues with lower-tier troops just to keep training running. One T9 troop is worth significantly more than three T6 troops in combat.</p>
-    <p><strong>Upgrade existing troops before training new ones.</strong> Promoting lower-tier troops to higher tiers is more resource-efficient than training from scratch.</p>
-    <p><strong>Keep your Hospital upgraded.</strong> Hospital capacity determines how many troops survive as wounded rather than dying permanently. A full Hospital during combat means permanent troop losses. Always check before engaging.</p>
-    <div class='callout red'><p><strong>Auto-Join is your most important passive setting.</strong> Enable Alliance rally Auto-Join in settings. You accumulate rally rewards, hero fragments, and keep your troops earning even while offline. Never leave this off.</p></div>
+
+    <p><strong>Always train the highest tier you have unlocked.</strong> One T9 troop is worth significantly more than three T6 troops in direct combat. The tier gap compounds dramatically at higher levels.</p>
+
+    <p><strong>Upgrade existing troops before training new ones — with one important caveat.</strong> Promoting lower-tier troops to higher tiers is generally more resource-efficient than training from scratch. However, during events that score on troop training completions (Troop Training events, Power Sprint, Hero Rally), fresh training often scores better than promotions. Check the active event before deciding which approach to use.</p>
+
+    <div class="callout"><p><strong>Lower-tier troops are not always useless.</strong> Some players intentionally train lower-tier troops for Alliance Donation, Troop Promotion Events or Hospital Healing Events. Context matters. The general rule of always training the highest tier applies to combat readiness — event-specific strategies may differ.</p></div>
+
+    <p><strong>Keep your Hospital upgraded.</strong> Hospital capacity determines how many troops survive as wounded rather than dying permanently. A full Hospital during combat means permanent troop losses. Always check before engaging in any PvP.</p>
+
+    <div class='callout red'><p><strong>Auto-Join is your most important passive setting.</strong> Enable Alliance rally Auto-Join in settings. You accumulate rally rewards, hero fragments and keep your troops earning even while offline. Never leave this off.</p></div>
+
+    <div class="callout gold"><p><strong>Troop types and hero synergy:</strong> The War Academy tree has separate stat branches for Infantry, Lancers and Marksmen. Which branch to prioritise depends on your hero lineup. For a full breakdown of troop types, their strengths and weaknesses, combat roles and hero synergies, see the <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-troop-mastery.html" style="color:var(--gold);">Troop Mastery Guide</a>.</p></div>
+
+    <div class="callout"><p><strong>Alliance Research:</strong> The War Academy feeds into Alliance Technology as well. Contributing to alliance Battle tech nodes improves combat performance for your entire alliance. Check which nodes your leadership has highlighted and contribute to those first.</p></div>
+
+    <div class="section-label">Common Mistakes</div>
+    <h2>What Sets Back <em>Your Research</em></h2>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0 28px;">
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Researching combat stat nodes before reaching your tier ceiling.</strong> This is the single most common War Academy mistake. Stat improvements at T6 are wasted the moment you unlock T8. Always push tier unlocks first.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Spreading stat research across all three troop types equally.</strong> Researching Infantry, Lancer and Marksman stats simultaneously means none of them reach meaningful levels quickly. Pick your primary troop type based on your hero lineup and go deep there first.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Ignoring March Capacity until late game.</strong> Many players treat march capacity as a late-game concern. For anyone participating in rallies — Foundry Battle, SvS, Bear Hunt — march capacity is a top-3 priority at every stage. Each additional troop in your march compounds across every event you participate in.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Using speed-ups on short research timers outside of events.</strong> The value of a speed-up is multiplied when used during an event that rewards completions. Using them casually on minor nodes between events wastes their scoring potential significantly.</p>
+      </div>
+      <div style="background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;">
+        <p style="margin:0;font-size:0.9rem;color:var(--text);"><strong style="color:var(--white);">Training lower-tier troops to fill queues.</strong> Keeping training queues busy by filling them with T4 or T5 troops feels productive but weakens your overall army. Idle queues are better than a growing pool of weak troops that dilute your march composition.</p>
+      </div>
+    </div>
 
 
     <div class="post-cta">
