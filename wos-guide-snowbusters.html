@@ -1,314 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html" />
+  <title>Snowbusters Guide — Complete Event Strategy | WOS Wiki</title>
+  <meta name="description" content="Complete Snowbusters guide for Whiteout Survival — gear upgrade order, resource management, clearing strategy, enemy handling and F2P tips." />
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
-  <meta charset="UTF-8" />
-  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snowbusters — Complete Event Guide | WOS Guide</title>
-  <meta name="description" content="Complete guide to the Snowbusters event in Whiteout Survival — gear upgrade order, fuel management, clearing strategy and how to earn the best rewards." />
+  <meta property="og:title" content="Snowbusters Guide — Complete Event Strategy | WOS Wiki" />
+  <meta property="og:description" content="Complete Snowbusters guide for Whiteout Survival — gear upgrade order, resource management, clearing strategy and F2P tips." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-wos.png" />
+  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html" />
+  <meta property="og:site_name" content="Whiteout Survival Guide | WOS Wiki" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Article","headline":"Snowbusters Guide — Complete Event Strategy | WOS Wiki","description":"Complete Snowbusters guide for Whiteout Survival — gear upgrade order, resource management, clearing strategy and F2P tips.","url":"https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html","dateModified":"2026-04-15","author":{"@type":"Person","name":"Slick78"},"publisher":{"@type":"Organization","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WOS Wiki","item":"https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html"},{"@type":"ListItem","position":2,"name":"Snowbusters Guide","item":"https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is Snowbusters in Whiteout Survival?","acceptedAnswer":{"@type":"Answer","text":"Snowbusters is a solo event where you drive a snowplow, clear snow and manage three resources: Fuel, Health and Coal. The depth is in resource management and gear upgrade order. Players who clear in one consistent direction and upgrade gear correctly score significantly better."}},
+      {"@type":"Question","name":"What is the correct gear upgrade order in Snowbusters?","acceptedAnswer":{"@type":"Answer","text":"1. Gloves (health and fuel consumption). 2. Coat (damage resistance and fuel recovery rate). 3. Snowbuster (attack power and clearing range). 4. Boots (movement speed and fire regeneration). Coat is the most impactful upgrade for Fuel over the full event."}},
+      {"@type":"Question","name":"How should I manage Fuel in Snowbusters?","acceptedAnswer":{"@type":"Answer","text":"Never waste Fuel on the last 5% of snow in any area. Use the rocket ability at 95% cleared to finish efficiently. Plan routes to minimise wasted movement. The Coat upgrade level directly determines how fast Fuel regenerates."}},
+      {"@type":"Question","name":"What is the best clearing strategy in Snowbusters?","acceptedAnswer":{"@type":"Answer","text":"Always clear in one consistent direction. Rescue survivors first as each one increases your clearing radius by 10%. Stop at 95% and use the rocket. Never roam randomly as this wastes Fuel on movement without clearing new snow."}},
+      {"@type":"Question","name":"What are the most common Snowbusters mistakes?","acceptedAnswer":{"@type":"Answer","text":"Roaming randomly instead of one direction; wrong gear upgrade order; using the rocket too early or too late; not rescuing survivors promptly; and fighting enemies that cost more Fuel and Health than the reward justifies."}}
+    ]}
+  ]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" media="print" onload="this.media=\'all\'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" /></noscript>
   <style>
-    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--snow:#E8F4FD;}
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-mid:#091628;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--gold:#D4A82A;--white:#FFFFFF;--text:#B8D4E8;--text-muted:#5A7A94;--green:#2ECC71;--red:#E74C3C;--orange:#E8832A;}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
     body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
-    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.08) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.06) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
     .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
     .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
     .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
-    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
-    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;animation:fadeUp 0.7s ease both;}
+    .nav-links{display:flex;gap:20px;list-style:none;}
+    .nav-links a{font-size:0.82rem;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;}
+    .nav-links a:hover{color:var(--white);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
     .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-bright);border:1px solid rgba(77,168,218,0.3);background:rgba(77,168,218,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
     .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
     .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
-    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--ice-bright);padding-left:20px;margin-bottom:28px;}
-    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
-    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--ice-bright);flex-shrink:0;}
-    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
-    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--ice-bright) 50%,var(--ice-border) 80%,transparent);}
-    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;animation:fadeUp 0.7s 0.15s ease both;}
-    .post-body p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
-    .post-body h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);text-transform:uppercase;line-height:1.05;margin:44px 0 14px;}
-    .post-body h2 em{font-style:normal;color:var(--ice-glow);}
-    .post-body strong{color:var(--white);}
-    .post-body a{color:var(--ice-bright);text-decoration:none;}
-    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
-    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(77,168,218,0.3),transparent);}
-    .callout{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
-    .callout.gold{border-left-color:var(--gold);}
-    .callout.green{border-left-color:var(--green);}
-    .callout.red{border-left-color:var(--red);}
-    .callout p{font-size:0.92rem;margin:0;line-height:1.75;color:var(--text);}
-    .callout strong{color:var(--white);}
-    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0;}
-    .res-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:16px 18px;text-align:center;}
-    .res-icon{font-size:1.6rem;margin-bottom:8px;display:block;}
-    .res-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;color:var(--white);margin-bottom:4px;}
-    .res-desc{font-size:0.78rem;color:var(--text-muted);line-height:1.55;}
-    .gear-priority{display:flex;flex-direction:column;gap:8px;margin:20px 0;}
-    .gear-row{display:flex;gap:0;border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;align-items:stretch;}
-    .gear-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--white);background:var(--ice-panel);padding:12px 16px;min-width:52px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--ice-border);}
-    .gear-num.p1{color:var(--gold);}
-    .gear-num.p2{color:var(--ice-bright);}
-    .gear-num.p3{color:var(--text);}
-    .gear-num.p4{color:var(--text-muted);}
-    .gear-info{background:var(--ice-panel);padding:12px 16px;flex:1;}
-    .gear-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;color:var(--white);margin-bottom:3px;}
-    .gear-desc{font-size:0.84rem;color:var(--text-muted);line-height:1.55;}
-    .tips-list{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
-    .tip-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start;}
-    .tip-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
-    .tip-text{font-size:0.9rem;color:var(--text);line-height:1.65;}
-    .tip-text strong{color:var(--white);}
-    .avoid-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;}
-    .avoid-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
-    .avoid-header{padding:10px 16px;border-bottom:1px solid var(--ice-border);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;}
-    .avoid-header.do{background:rgba(46,204,113,0.08);color:var(--green);}
-    .avoid-header.dont{background:rgba(192,57,43,0.08);color:var(--red);}
-    .avoid-body{padding:12px 16px;font-size:0.86rem;color:var(--text);line-height:1.65;}
-    .avoid-body li{list-style:none;display:flex;gap:8px;margin-bottom:6px;}
-    .avoid-body li:last-child{margin-bottom:0;}
-    .avoid-body li.do-item::before{content:'\2713';color:var(--green);flex-shrink:0;font-weight:700;}
-    .avoid-body li.dont-item::before{content:'\2715';color:var(--red);flex-shrink:0;font-weight:700;}
-    .avoid-body strong{color:var(--white);}
+    .post-intro{font-size:1.05rem;color:var(--text-muted);max-width:620px;line-height:1.75;margin-bottom:24px;}
+    .meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .meta-item{font-size:0.75rem;font-weight:600;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;}
+    .meta-updated{font-size:0.75rem;font-weight:700;color:var(--green);letter-spacing:0.08em;text-transform:uppercase;}
+    .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted);display:inline-block;}
+    .post-body{max-width:860px;margin:0 auto;padding:0 40px 80px;position:relative;z-index:1;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:44px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--ice-border),transparent);}
+    h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:16px;line-height:1.1;}
+    h2 em{font-style:normal;color:var(--ice-glow);}
+    p{color:var(--text);line-height:1.8;margin-bottom:14px;}
+    strong{color:var(--white);}
+    .callout{background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:24px 0;}
+    .callout.gold{border-left-color:var(--gold);background:rgba(212,168,42,0.05);}
+    .callout.red{border-left-color:var(--red);background:rgba(231,76,60,0.05);}
+    .callout p{margin:0;font-size:0.9rem;}
+    .qs-box{background:var(--ice-panel);border:1px solid var(--ice-border);border-top:3px solid var(--gold);border-radius:4px;padding:24px 28px;margin-bottom:32px;}
+    .qs-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .qs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+    .qs-item-label{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+    .qs-item-value{font-size:0.88rem;color:var(--text);line-height:1.7;}
+    .qs-item-value.bad{color:var(--red);font-weight:600;}
+    /* RESOURCE CARDS */
+    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 28px;}
+    .res-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:16px 18px;}
+    .res-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+    .res-icon{font-size:1.2rem;}
+    .res-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;color:var(--white);}
+    .res-card p{font-size:0.84rem;color:var(--text-muted);line-height:1.6;margin:0;}
+    /* GEAR ORDER */
+    .gear-list{display:flex;flex-direction:column;gap:8px;margin:20px 0 28px;}
+    .gear-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 18px;display:flex;gap:14px;align-items:flex-start;}
+    .gear-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--ice-bright);line-height:1;flex-shrink:0;min-width:28px;}
+    .gear-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;color:var(--white);margin-bottom:4px;}
+    .gear-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.6;}
+    /* STRATEGY ITEMS */
+    .strategy-list{display:flex;flex-direction:column;gap:8px;margin:20px 0 28px;}
+    .strategy-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;}
+    .strategy-icon{font-size:1rem;flex-shrink:0;margin-top:2px;}
+    .strategy-text{font-size:0.9rem;color:var(--text);line-height:1.65;}
+    .strategy-text strong{color:var(--white);}
+    /* MISTAKE ITEMS */
+    .mistake-item{background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;margin-bottom:10px;}
+    .mistake-item p{margin:0;font-size:0.9rem;color:var(--text);}
+    .mistake-item p strong{color:var(--white);}
+    .community-box{background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin:32px 0;}
+    .community-box-text .title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;}
+    .community-box-text p{font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.65;}
+    .community-box a.btn{display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;}
     .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
     .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
     .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
     .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
-    .cta-buttons{display:flex;flex-direction:column;align-items:center;gap:10px;}
-    .cta-btn{display:inline-block;width:100%;max-width:320px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
-    .cta-btn.primary{background:var(--ice-bright);color:var(--white) !important;}
+    .cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .cta-btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-btn.primary{background:var(--ice-bright);color:var(--ice-dark) !important;}
     .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text) !important;}
-    .sign-off{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:32px 0 8px;}
-    .kofi-wrap{text-align:center;padding:24px 0 8px;border-top:1px solid var(--ice-border);margin-top:32px;}
-    .kofi-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;}
-    .wos-wrapper{background:#050D1A;min-height:100vh;margin:-20px -20px 0;padding:0;position:relative;}
-    body{background:#050D1A !important;}
+    .contrib-reviewed{border-top:1px solid var(--ice-border);margin-top:32px;padding-top:20px;}
+    .contrib-reviewed .contrib-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
+    .contrib-reviewed .reviewer{font-size:0.82rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}
+    .contrib-reviewed .reviewer::before{content:'✓';color:var(--green);font-size:0.75rem;}
+    .kofi-wrap{text-align:center;padding:28px 0;border-top:1px solid var(--ice-border);margin-top:20px;}
+    .kofi-note{font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;}
+    footer{background:var(--ice-mid);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;}
+    footer p{font-size:0.75rem;color:var(--text-muted);}
+    footer a{color:var(--text-muted);text-decoration:none;}
     @media(max-width:640px){
-      .site-header{padding:12px 20px;}.post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
-      .resource-grid{grid-template-columns:1fr 1fr;}
-      .avoid-grid{grid-template-columns:1fr;}
+      .site-header{padding:12px 20px;}.nav-links{display:none;}
+      .post-hero,.post-body{padding-left:20px;padding-right:20px;}
+      .resource-grid{grid-template-columns:1fr;}
     }
-  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
   </style>
-  <meta property="og:title" content="Snowbusters — Complete Event Guide | WOS Guide" />
-  <meta property="og:description" content="Complete guide to the Snowbusters event in Whiteout Survival — gear upgrade order, fuel management, clearing strategy and how to earn the best rewards." />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-wos.png" />
-  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html" />
-  <meta property="og:site_name" content="Digital Revenue Studio" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Snowbusters — Complete Event Guide | WOS Guide" />
-  <meta name="twitter:description" content="Complete guide to the Snowbusters event in Whiteout Survival — gear upgrade order, fuel management, clearing strategy and how to earn the best rewards." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Snowbusters — Complete Event Guide | WOS Guide","description":"Complete guide to the Snowbusters event in Whiteout Survival — gear upgrade order, fuel management, clearing strategy and how to earn the best rewards","url":"https://www.digitalrevenuestudio.co.uk/wos-guide-snowbusters.html","publisher":{"@type":"Organization","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk"}}</script>
 </head>
-<body><div class="wos-wrapper">
-<header class="site-header">
-  <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Guide</a>
-  <span class="header-tag">Events &bull; Snowbusters</span>
-</header>
-<div class="post-hero">
-  <div class="post-category">&#x2744; Event Guide</div>
-  <h1>Snowbusters<br /><em>Complete Event</em><br />Guide</h1>
-  <p class="post-intro">Snowbusters looks simple — drive a snowplow, clear snow. The depth is in resource management. Get the gear upgrade order right, move in one consistent direction, and you will clear stages efficiently and earn significantly better rewards than players who just roam the map randomly.</p>
-  <div class="post-meta">
-    <span class="meta-item"><span class="dot"></span>WOS Guide</span>
-    <span class="meta-item"><span class="dot"></span>Snowbusters</span>
-    <span class="meta-item"><span class="dot"></span>F2P Tips</span>
-    <span class="meta-item"><span class="dot"></span>March 2026</span>
-  </div>
-</div>
-<div class="frost-divider"></div>
-<div class="post-body">
+<body>
+  <header class="site-header">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
+    <nav><ul class="nav-links">
+      <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html">Newsletter</a></li>
+    </ul></nav>
+  </header>
 
-  <div class="section-label">The Three Resources</div>
-  <h2>Fuel, Health <em>and Coal</em></h2>
-
-  <div class="resource-grid">
-    <div class="res-card">
-      <span class="res-icon">&#x26FD;</span>
-      <div class="res-name">Fuel</div>
-      <div class="res-desc">Consumed by movement, snow clearing and fighting. Starts at 200. Regenerates at 12 every 5 minutes. Runs out = stop. Never waste it on the last 5% of snow — use the rocket at 95%.</div>
+  <section class="post-hero">
+    <div class="post-category">&#x2744; Event Guide</div>
+    <h1>Snowbusters:<br /><em>Complete Event</em><br />Guide</h1>
+    <p class="post-intro">Snowbusters looks simple: drive a snowplow, clear snow. The depth is in resource management. Get the gear upgrade order right, move in one consistent direction and you will earn significantly better rewards than players who just roam the map randomly.</p>
+    <div class="meta-row">
+      <span class="meta-item"><span class="dot"></span>Event Guide</span>
+      <span class="meta-updated">&#x2713; Updated April 2026</span>
     </div>
-    <div class="res-card">
-      <span class="res-icon">&#x2764;</span>
-      <div class="res-name">Health</div>
-      <div class="res-desc">Drops when fighting enemies or taking damage. Zero health means you drop all your Coal. Manage health via the central fire and medkits. Stay close to fire when possible.</div>
-    </div>
-    <div class="res-card">
-      <span class="res-icon">&#x1F4A8;</span>
-      <div class="res-name">Coal</div>
-      <div class="res-desc">Used to upgrade the Fire Pit each stage. Leftover coal converts to bonus fuel at stage end. Only upgrade the Fire Pit when necessary — save the rest for conversion.</div>
-    </div>
-  </div>
+  </section>
 
-  <div class="section-label">Gear Upgrade Order</div>
-  <h2>Upgrade in This <em>Exact Order</em></h2>
-
-  <p>Gear resets after every Snowbusters event so there is no carrying upgrades forward. The goal is to invest your Toolkits in the order that gives the most benefit during the current event. This is the F2P priority order:</p>
-
-  <div class="gear-priority">
-    <div class="gear-row">
-      <div class="gear-num p1">1</div>
-      <div class="gear-info">
-        <div class="gear-name">Gloves</div>
-        <div class="gear-desc">Boosts health and reduces fuel consumption. Directly extends how long you can keep clearing snow — the most impactful early upgrade for F2P players.</div>
+  <div class="post-body">
+    <div class="qs-box">
+      <div class="qs-label">&#9889; Quick Summary</div>
+      <div class="qs-grid">
+        <div><div class="qs-item-label">Three Resources</div><div class="qs-item-value">Fuel, Health, Coal</div></div>
+        <div><div class="qs-item-label">Gear Priority</div><div class="qs-item-value">Gloves, then Coat, then Snowbuster, then Boots</div></div>
+        <div><div class="qs-item-label">Core Rule</div><div class="qs-item-value">Clear in one direction. Stop at 95% and use the rocket.</div></div>
+        <div><div class="qs-item-label">Biggest Mistake</div><div class="qs-item-value bad">Roaming randomly and wasting Fuel on movement</div></div>
       </div>
     </div>
-    <div class="gear-row">
-      <div class="gear-num p1">2</div>
-      <div class="gear-info">
-        <div class="gear-name">Coat</div>
-        <div class="gear-desc">Improves damage resistance and, critically, determines how fast your Fuel recovers. A higher Coat level gives you more total Fuel across the entire event. Upgrade this on Day 1 if possible for maximum effect.</div>
+
+    <div class="section-label">The Three Resources</div>
+    <h2>Fuel, Health <em>and Coal</em></h2>
+
+    <div class="resource-grid">
+      <div class="res-card">
+        <div class="res-header"><span class="res-icon">&#x26FD;</span><div class="res-name">Fuel</div></div>
+        <p>Consumed by movement, snow clearing and fighting. Starts at 200. Regenerates at 12 every 5 minutes. Runs out means you stop. Never waste it on the last 5% of snow in any area.</p>
+      </div>
+      <div class="res-card">
+        <div class="res-header"><span class="res-icon">&#x2764;</span><div class="res-name">Health</div></div>
+        <p>Drops when fighting enemies or taking damage. Zero health means you drop all your Coal. Manage health via the central fire and medkits. Stay close to fire when possible.</p>
+      </div>
+      <div class="res-card">
+        <div class="res-header"><span class="res-icon">&#x1F4A8;</span><div class="res-name">Coal</div></div>
+        <p>Used to upgrade the Fire Pit each stage. Leftover coal converts to bonus fuel at stage end. Only upgrade the Fire Pit when necessary and save the rest for conversion.</p>
       </div>
     </div>
-    <div class="gear-row">
-      <div class="gear-num p2">3</div>
-      <div class="gear-info">
-        <div class="gear-name">Snowbuster</div>
-        <div class="gear-desc">Increases attack power and snow-clearing range. Useful but lower priority than the survival-focused upgrades above. Upgrade once Gloves and Coat are handled.</div>
+
+    <div class="section-label">Gear Upgrade Order</div>
+    <h2>Upgrade in <em>This Exact Order</em></h2>
+
+    <p>Gear resets after every Snowbusters event so there is no carrying upgrades forward. The goal is to invest your Toolkits in the order that gives the most benefit during the current run.</p>
+
+    <div class="gear-list">
+      <div class="gear-item">
+        <div class="gear-num">1</div>
+        <div>
+          <div class="gear-name">Gloves</div>
+          <div class="gear-desc">Boosts health and reduces fuel consumption. Directly extends how long you can keep clearing snow. The most impactful early upgrade for F2P players.</div>
+        </div>
+      </div>
+      <div class="gear-item">
+        <div class="gear-num">2</div>
+        <div>
+          <div class="gear-name">Coat</div>
+          <div class="gear-desc">Improves damage resistance and determines how fast your Fuel recovers. A higher Coat level gives you more total Fuel across the entire event. Upgrade this on Day 1 if possible for maximum effect. This is the key upgrade for sustained performance.</div>
+        </div>
+      </div>
+      <div class="gear-item">
+        <div class="gear-num">3</div>
+        <div>
+          <div class="gear-name">Snowbuster</div>
+          <div class="gear-desc">Increases attack power and snow-clearing range. Useful but lower priority than the survival-focused upgrades above. Upgrade once Gloves and Coat are handled.</div>
+        </div>
+      </div>
+      <div class="gear-item">
+        <div class="gear-num">4</div>
+        <div>
+          <div class="gear-name">Boots</div>
+          <div class="gear-desc">Increases movement speed and improves fire regeneration. Genuinely useful but the last priority. The other three gear pieces affect your core loop more directly.</div>
+        </div>
       </div>
     </div>
-    <div class="gear-row">
-      <div class="gear-num p3">4</div>
-      <div class="gear-info">
-        <div class="gear-name">Boots</div>
-        <div class="gear-desc">Increases movement speed and improves fire regeneration. Genuinely useful but the last priority — the other three gear pieces affect your core loop more directly.</div>
+
+    <div class="callout gold"><p><strong>Coat is the key to fuel recovery.</strong> The level of your Coat directly determines how fast Fuel regenerates and how much total Fuel you get during the whole event. Upgrading Coat to maximum on Day 1 pays dividends across all three days. Every subsequent run will have more fuel available than if you upgraded it later.</p></div>
+
+    <div class="section-label">Clearing Strategy</div>
+    <h2>How to Clear <em>Efficiently</em></h2>
+
+    <div class="strategy-list">
+      <div class="strategy-item">
+        <span class="strategy-icon">&#x27A1;</span>
+        <div class="strategy-text"><strong>Always clear in one direction.</strong> Moving systematically in one consistent direction is the most fuel-efficient clearing method. Zigzagging and backtracking wastes Fuel on movement without clearing new snow. Pick a direction at the start of each stage and stick to it.</div>
+      </div>
+      <div class="strategy-item">
+        <span class="strategy-icon">&#x1F9CD;</span>
+        <div class="strategy-text"><strong>Rescue survivors first.</strong> Each survivor you rescue increases your snow-clearing radius by 10%. Survivors near the Fire Pit should be your first priority when entering a new stage. They make every subsequent action more efficient.</div>
+      </div>
+      <div class="strategy-item">
+        <span class="strategy-icon">&#x1F3AF;</span>
+        <div class="strategy-text"><strong>Stop at 95% and use the rocket.</strong> Once you hit 95% snow cleared, use the rocket to finish the stage. Never waste Fuel clearing the last 5% manually. The rocket activates at 95% and handles the remainder instantly.</div>
+      </div>
+      <div class="strategy-item">
+        <span class="strategy-icon">&#x1F525;</span>
+        <div class="strategy-text"><strong>Stay close to the central fire.</strong> The fire regenerates your health passively when nearby. Routing your clearing path to keep you within range reduces medkit usage and keeps your Health stable throughout the stage.</div>
+      </div>
+      <div class="strategy-item">
+        <span class="strategy-icon">&#x2694;</span>
+        <div class="strategy-text"><strong>Be selective about which enemies you fight.</strong> Some enemies cost more Fuel and Health than the reward justifies. Prioritise enemies that drop useful items and avoid extended fights with low-value targets that drain your resources.</div>
       </div>
     </div>
-  </div>
 
-  <div class="callout gold">
-    <p><strong>Coat is the key to Fuel recovery.</strong> The level of your Coat directly determines how fast your Fuel regenerates and how much total Fuel you get during the whole event. Upgrading Coat to maximum level on Day 1 pays dividends across all three days — every subsequent run you play will have more fuel available than if you upgraded it later.</p>
-  </div>
+    <div class="section-label">Common Mistakes</div>
+    <h2>What Most Players <em>Get Wrong</em></h2>
 
-  <div class="section-label">Clearing Strategy</div>
-  <h2>How to <em>Clear Efficiently</em></h2>
+    <div class="mistake-item"><p><strong>Roaming randomly across the map.</strong> Clearing in one consistent direction is significantly more efficient than roaming. Random movement wastes Fuel, leaves incomplete areas and reduces your total clear count by the end of the event.</p></div>
+    <div class="mistake-item"><p><strong>Upgrading gear in the wrong order.</strong> The gear upgrade order determines your clearing efficiency for the entire event. Not upgrading Coat early means every run has less total Fuel than it should. This compounds across all three days of the event.</p></div>
+    <div class="mistake-item"><p><strong>Not using the rocket at 95%.</strong> The rocket finishes the final 5% instantly without Fuel cost. Using it too early wastes its clearing power. Clearing the last 5% manually wastes Fuel inefficiently. Use it exactly at 95%.</p></div>
+    <div class="mistake-item"><p><strong>Not rescuing survivors promptly.</strong> Every survivor adds 10% to your clearing radius. Ignoring them and clearing snow in the wrong order means every subsequent action is less efficient than it should be.</p></div>
+    <div class="mistake-item"><p><strong>Fighting every enemy regardless of reward.</strong> Some enemies are worth engaging, others cost more Fuel and Health than the reward justifies. Assess each enemy before engaging and skip those that drain resources without meaningful gain.</p></div>
 
-  <div class="tips-list">
-    <div class="tip-item">
-      <div class="tip-icon">&#x27A1;</div>
-      <div class="tip-text"><strong>Always clear in one direction in a line.</strong> Moving systematically in one direction is the single most fuel-efficient clearing method. Zigzagging and backtracking wastes fuel on movement without clearing new snow.</div>
-    </div>
-    <div class="tip-item">
-      <div class="tip-icon">&#x1F9CD;</div>
-      <div class="tip-text"><strong>Rescue survivors first.</strong> Each survivor you rescue increases your snow-clearing radius by 10%. Survivors near the Fire Pit should always be your first priority when entering a new stage — they make every subsequent action more efficient.</div>
-    </div>
-    <div class="tip-item">
-      <div class="tip-icon">&#x1F3AF;</div>
-      <div class="tip-text"><strong>Stop at 95% — use the rocket.</strong> Once you hit 95% snow cleared, the rocket activates automatically. Use it immediately rather than manually clearing the remaining 5%. Anything beyond 95% is pure wasted fuel.</div>
-    </div>
-    <div class="tip-item">
-      <div class="tip-icon">&#x1F525;</div>
-      <div class="tip-text"><strong>Upgrade the Fire Pit early — but only when necessary.</strong> A higher Fire Pit level increases HP regeneration rate, reducing reliance on medkits. Upgrade it early in each stage but stop once you have enough regen to sustain fights. Save remaining Coal for end-of-stage fuel conversion.</div>
-    </div>
-    <div class="tip-item">
-      <div class="tip-icon">&#x1F4A5;</div>
-      <div class="tip-text"><strong>Stack boosts — Super Snowbuster + Infini-Fuel together.</strong> When both are active simultaneously, only clear snow during that window. This combination is the highest-efficiency clearing state in the game. Do not waste either boost on areas you were going to clear anyway.</div>
-    </div>
-    <div class="tip-item">
-      <div class="tip-icon">&#x1F4B0;</div>
-      <div class="tip-text"><strong>Bonus stages (5, 10, 15) give unlimited Fuel.</strong> These are your opportunity to clear everything on the map — all chests, survivors and snow. Do not finish a bonus stage early just because there are no enemies left. Exhaust it completely before moving on.</div>
-    </div>
-  </div>
-
-  <div class="section-label">Snowmen and Beasts</div>
-  <h2>How to Handle <em>Enemies</em></h2>
-
-  <div class="avoid-grid">
-    <div class="avoid-card">
-      <div class="avoid-header dont">&#x2745; Snowmen — Avoid Unless Needed</div>
-      <div class="avoid-body">
-        <ul>
-          <li class="dont-item">Snowmen drop Coal and Fuel when defeated — but the fuel cost of fighting them usually outweighs the reward</li>
-          <li class="dont-item">Do not chase snowmen across the map. Clear snow in your lane first</li>
-          <li class="dont-item">Only engage if one is directly in your clearing path or you have surplus fuel</li>
-        </ul>
+    <div style="margin:32px 0;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:14px;display:flex;align-items:center;gap:12px;">Related Guides<span style="flex:1;height:1px;background:linear-gradient(90deg,var(--ice-border),transparent);display:block;"></span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-event-tokens.html" style="display:inline-block;background:rgba(77,168,218,0.08);border:1px solid var(--ice-border);border-radius:3px;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ice-bright);text-decoration:none;">Event Tokens Guide &rarr;</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-resource-management.html" style="display:inline-block;background:rgba(77,168,218,0.08);border:1px solid var(--ice-border);border-radius:3px;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ice-bright);text-decoration:none;">Resource Management Guide &rarr;</a>
       </div>
     </div>
-    <div class="avoid-card">
-      <div class="avoid-header dont">&#x1F98C; Elk / Animals — Avoid</div>
-      <div class="avoid-body">
-        <ul>
-          <li class="dont-item">Elk and animals are obstacles — they will not help you clear stages faster</li>
-          <li class="dont-item">Navigate around them rather than engaging</li>
-          <li class="dont-item">Walking near the Fire Pit resets monster aggression if you are being chased</li>
-        </ul>
+
+    <div class="post-cta">
+      <h3>The Wiki is Free: <em>Always</em></h3>
+      <p>Every guide, event walkthrough and gift code on this wiki is completely free. Built by a player, shaped by the community.</p>
+      <div class="cta-buttons">
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn primary">Browse All Free Guides</a>
+        <a href="https://ko-fi.com/M4M71VM8J6" target="_blank" class="cta-btn secondary">Support on Ko-fi (Optional)</a>
       </div>
     </div>
-    <div class="avoid-card">
-      <div class="avoid-header do">&#x1F43B; Beasts — Prioritise in Beast Stages</div>
-      <div class="avoid-body">
-        <ul>
-          <li class="do-item">Beasts drop Map Fragments tied to the event theme — essential for unlocking cosmetic rewards</li>
-          <li class="do-item">In stages that have a beast, clear only enough snow to make a walking path to the beast first</li>
-          <li class="do-item">Lure beasts near medkits before engaging so you can heal mid-fight</li>
-          <li class="do-item">Use Portable Snowshield to survive longer during fights</li>
-        </ul>
-      </div>
+
+    <div style="background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:32px 0;">
+      <p style="margin:0;font-size:0.88rem;color:var(--text);line-height:1.75;">&#128214; <strong style="color:var(--white);">More F2P Resources:</strong> Check the <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="color:var(--ice-bright);font-weight:600;">WOS gift code tracker</a> for active free codes, or browse all guides on the <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="color:var(--ice-bright);font-weight:600;">WOS Wiki index</a>.</p>
     </div>
-    <div class="avoid-card">
-      <div class="avoid-header do">&#x1F680; Rockets — Save Them</div>
-      <div class="avoid-body">
-        <ul>
-          <li class="do-item">V2 Rockets are rare and carry over to the next Snowbusters event — never use them early</li>
-          <li class="do-item">Only use rockets to destroy dark and thick ice blocks after Stage 20</li>
-          <li class="do-item">Stack rockets across multiple events then use them all in one session to push deeper stages</li>
-          <li class="do-item">Standard rockets from stage rewards do not carry over — use those freely</li>
-        </ul>
-      </div>
+
+    <div class="community-box">
+      <div class="community-box-text"><div class="title">&#128172; Spot an Error or Have a Tip?</div><p>This wiki is built and maintained by the community. If something is wrong, outdated or missing, let us know. Corrections are made fast.</p></div>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" class="btn">Submit Feedback &rarr;</a>
+    </div>
+    <div class="contrib-reviewed">
+      <div class="contrib-label">&#128172; Community Reviewed by</div>
+      <div class="reviewer"><strong>Slick78</strong> &bull; [TJW] &bull; State #3217</div>
+    </div>
+    <div class="kofi-wrap">
+      <p class="kofi-note">All guides are free. If this one helped your game, you can support the project here. Completely optional, always appreciated.</p>
+      <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+      <script>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
     </div>
   </div>
-
-  <div class="callout">
-    <p><strong>Fuel Supply Chests carry over — Coal does not.</strong> Do not open Fuel Supply Chests unless you can use the fuel immediately. Opened fuel that you do not use is lost when the event ends. Unopened chests stay in your backpack for the next event.</p>
-  </div>
-
-  <div class="post-cta">
-    <h3>The Wiki is Free — <em>Always</em></h3>
-    <p>Every guide, event walkthrough and the gift code tracker on this wiki is completely free. No sign-up, no paywall. There is an optional paid guide if you want to go deeper, but it is never required.</p>
-    <div class="cta-buttons">
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn primary">Browse All Free Guides</a>
-      <a href="https://ko-fi.com/M4M71VM8J6" target="_blank" class="cta-btn secondary">Support on Ko-fi — Optional</a>
-    </div>
-    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--ice-border);">The wiki covers everything you need. The paid guide goes deeper on the same topics — it is a supplement, not a requirement.</p>
-  </div>
-
-  <p class="sign-off">— Digit</p>
-  <div class="kofi-wrap">
-    <p class="kofi-note">All guides are free. If this one helped, you can support the project here. Completely optional, always appreciated.</p>
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
-  </div>
-
-</div>
-</div>
-  <footer style="background:#050D1A;padding:20px 40px;border-top:1px solid rgba(96,180,232,0.1);margin-top:0;">
-    <div style="max-width:860px;margin:0 auto;">
-      <p style="font-size:0.72rem;color:rgba(255,255,255,0.2);">&copy; 2026 WOS Wiki &mdash; Digital Revenue Studio &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></p>
-    </div>
-  </footer>
-
-  <!-- INTERNAL LINKS -->
-  <div style="background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:32px 0;">
-    <p style="margin:0;font-size:0.88rem;color:var(--text);line-height:1.75;">&#128214; <strong style="color:var(--white);">More F2P Resources:</strong> Check the <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="color:var(--ice-bright);font-weight:600;">WOS gift code tracker</a> for active free codes, or browse all guides on the <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="color:var(--ice-bright);font-weight:600;">WOS Wiki index</a>.</p>
-  </div>
-
-  <!-- COMMUNITY FEEDBACK -->
-  <div style="max-width:860px;margin:0 auto;padding:0 40px 48px;">
-    <div style="background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:200px;">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;">&#128172; Spot an Error or Have a Tip?</div>
-        <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.65;">This wiki is built and maintained by the community. If something is wrong, outdated or missing — let us know. Drop a comment on Reddit or use the link below. Corrections are made fast.</p>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;">Submit Feedback &rarr;</a>
-    </div>
-    <div style="margin-top:10px;font-size:0.72rem;color:var(--text-muted);text-align:right;">&#x2713; Community reviewed &bull; Last checked April 2026 &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="color:#5A7A94;text-decoration:none;">Submit a correction</a></div>
-  </div>
+  <footer><p>WOS Wiki &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community Hub</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy</a></p></footer>
 </body>
 </html>
