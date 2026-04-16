@@ -1,294 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>F2P vs Spender in Whiteout Survival — What the Difference Actually Means | WOS Guide</title>
-  <meta name="description" content="An honest, strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it doesn't, and how to compete regardless." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" media="print" onload="this.media=\'all\'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" /></noscript>
-  <style>
-    :root {
-      --ice-dark:    #050D1A;
-      --ice-mid:     #091628;
-      --ice-panel:   #0D1F38;
-      --ice-border:  #1A3A5C;
-      --ice-bright:  #4DA8DA;
-      --ice-glow:    #7DD4F8;
-      --frost:       #C8E8F8;
-      --white:       #FFFFFF;
-      --orange:      #E8832A;
-      --green:       #2ECC71;
-      --green-dark:  #27AE60;
-      --red:         #C0392B;
-      --text:        #B8D4E8;
-      --text-muted:  #5A7A94;
-      --gold:        #D4A82A;
-      --purple:      #8E44AD;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Barlow', sans-serif; background: var(--ice-dark); color: var(--text); line-height: 1.75; }
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(77,168,218,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 90% 60%, rgba(46,204,113,0.03) 0%, transparent 60%),
-        repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(77,168,218,0.012) 80px, rgba(77,168,218,0.012) 81px),
-        repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(77,168,218,0.012) 80px, rgba(77,168,218,0.012) 81px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .site-header { background: rgba(9,22,40,0.95); border-bottom: 1px solid var(--ice-border); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
-    .site-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ice-glow); text-decoration: none; display: flex; align-items: center; gap: 10px; }
-    .site-brand::before { content: '*'; font-size: 1rem; color: var(--ice-bright); }
-    .header-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
-    .post-hero { position: relative; z-index: 1; padding: 72px 40px 48px; max-width: 860px; margin: 0 auto; animation: fadeUp 0.7s ease both; }
-    .post-category { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ice-bright); border: 1px solid rgba(77,168,218,0.3); background: rgba(77,168,218,0.08); padding: 5px 14px; border-radius: 2px; margin-bottom: 20px; }
-    .post-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.6rem); color: var(--white); line-height: 1.0; text-transform: uppercase; margin-bottom: 20px; }
-    .post-hero h1 em { font-style: normal; color: var(--ice-glow); }
-    .post-intro { font-family: 'Barlow Semi Condensed', sans-serif; font-style: italic; font-size: 1.1rem; color: var(--text); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--ice-bright); padding-left: 20px; margin-bottom: 28px; }
-    .post-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .meta-item { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
-    .meta-item .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--ice-bright); flex-shrink: 0; }
-    .frost-divider { max-width: 860px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
-    .frost-divider::after { content: ''; display: block; height: 1px; background: linear-gradient(90deg, transparent, var(--ice-border) 20%, var(--ice-bright) 50%, var(--ice-border) 80%, transparent); }
-    .post-body { max-width: 860px; margin: 0 auto; padding: 40px 40px 80px; position: relative; z-index: 1; animation: fadeUp 0.7s 0.15s ease both; }
-    .post-body > p { font-size: 1rem; color: var(--text); line-height: 1.85; margin-bottom: 20px; }
-    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ice-bright); margin: 48px 0 24px; display: flex; align-items: center; gap: 12px; }
-    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--ice-border); }
-
-    /* COMPARISON TABLE */
-    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
-    .compare-col { background: var(--ice-panel); border: 1px solid var(--ice-border); border-radius: 4px; overflow: hidden; }
-    .compare-header { padding: 14px 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-    .compare-header.spender { background: rgba(192,57,43,0.15); color: var(--orange); border-bottom: 1px solid rgba(192,57,43,0.2); }
-    .compare-header.f2p { background: rgba(46,204,113,0.1); color: var(--green); border-bottom: 1px solid rgba(46,204,113,0.2); }
-    .compare-item { padding: 12px 20px; font-size: 0.9rem; color: var(--text); border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
-    .compare-item:last-child { border-bottom: none; }
-    .compare-item .ci { flex-shrink: 0; font-size: 0.8rem; margin-top: 1px; }
-
-    /* SECTION PANELS */
-    .panel {
-      background: var(--ice-panel);
-      border: 1px solid var(--ice-border);
-      border-radius: 4px;
-      padding: 32px 36px;
-      margin: 28px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .panel.panel-green::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--green-dark), var(--green)); }
-    .panel.panel-red::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--red), var(--orange)); }
-    .panel.panel-gold::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--gold), var(--orange)); }
-    .panel-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-    .panel-eyebrow.green { color: var(--green); }
-    .panel-eyebrow.red { color: var(--red); }
-    .panel-eyebrow.gold { color: var(--gold); }
-    .panel-eyebrow::after { content: ''; flex: 1; height: 1px; max-width: 60px; background: currentColor; opacity: 0.2; }
-    .panel h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 16px; line-height: 1.2; }
-    .panel p { font-size: 0.96rem; color: var(--text); line-height: 1.8; margin-bottom: 14px; }
-    .panel p:last-child { margin-bottom: 0; }
-    .panel strong { color: var(--frost); }
-
-    /* BULLET LIST */
-    .tactic-list { list-style: none; margin: 16px 0 0; }
-    .tactic-list li { font-size: 0.94rem; color: var(--text); line-height: 1.7; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; gap: 12px; align-items: flex-start; }
-    .tactic-list li:last-child { border-bottom: none; padding-bottom: 0; }
-    .tactic-list .ti { color: var(--ice-bright); flex-shrink: 0; font-size: 0.9rem; margin-top: 2px; }
-    .tactic-list strong { color: var(--frost); }
-
-    /* VERDICT BOX */
-    .verdict {
-      background: rgba(77,168,218,0.06);
-      border: 1px solid rgba(77,168,218,0.2);
-      border-radius: 4px;
-      padding: 28px 32px;
-      margin: 36px 0;
-    }
-    .verdict-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ice-bright); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-    .verdict-label::before { content: '*'; }
-    .verdict p { font-size: 0.97rem; color: var(--frost); line-height: 1.8; margin-bottom: 12px; }
-    .verdict p:last-child { margin-bottom: 0; }
-    .verdict strong { color: var(--ice-glow); }
-
-    .post-cta { background: var(--ice-panel); border: 1px solid var(--ice-border); border-top: 3px solid var(--ice-bright); border-radius: 4px; padding: 32px 36px; margin-top: 52px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-    .cta-text h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
-    .cta-text p { font-size: 0.86rem; color: var(--text-muted); margin: 0; }
-    .btn-ice { background: var(--ice-bright); color: var(--ice-dark); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 28px; border-radius: 2px; text-decoration: none; transition: all 0.2s; white-space: nowrap; display: inline-block; }
-    .btn-ice:hover { background: var(--ice-glow); transform: translateY(-2px); }
-    .site-footer { background: var(--ice-mid); border-top: 1px solid var(--ice-border); padding: 32px 40px; text-align: center; position: relative; z-index: 1; }
-    .site-footer p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; }
-    .site-footer a { color: var(--ice-bright); text-decoration: none; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-    @media(max-width:640px) {
-      .post-hero, .post-body, .frost-divider { padding-left: 20px; padding-right: 20px; }
-      .site-header { padding: 14px 20px; }
-      .compare-grid { grid-template-columns: 1fr; }
-      .panel { padding: 22px 18px; }
-      .post-cta { padding: 24px 20px; }
-      .header-tag { display: none; }
-    }
-  
-    /* Blogger override — force dark theme */
-    .wos-wrapper {
-      background: #050D1A;
-      min-height: 100vh;
-      margin: -20px -20px 0;
-      padding: 0;
-      position: relative;
-    }
-    body { background: #050D1A !important; }
-    </style>
-  <meta property="og:title" content="F2P vs Spender in Whiteout Survival — What the Difference Actually Means | WOS Guide" />
-  <meta property="og:description" content="An honest, strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it doesn't, and how to compete regardless." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-guide-f2p-vs-spender.html" />
+  <title>F2P vs Spender in Whiteout Survival — What the Gap Actually Means | WOS Wiki</title>
+  <meta name="description" content="An honest strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it does not, and how to compete regardless of budget." />
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+  <meta property="og:title" content="F2P vs Spender in Whiteout Survival — What the Gap Actually Means | WOS Wiki" />
+  <meta property="og:description" content="An honest strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it does not, and how to compete regardless of budget." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-wos.png" />
   <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-guide-f2p-vs-spender.html" />
-  <meta property="og:site_name" content="Digital Revenue Studio" />
+  <meta property="og:site_name" content="Whiteout Survival Guide | WOS Wiki" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="F2P vs Spender in Whiteout Survival — What the Difference Actually Means | WOS Guide" />
-  <meta name="twitter:description" content="An honest, strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it doesn't, and how to compete regardless." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"F2P vs Spender in Whiteout Survival — What the Difference Actually Means | WOS Guide","description":"An honest, strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it doesn't, and how to compete regardless.","url":"https://www.digitalrevenuestudio.co.uk/wos-guide-f2p-vs-spender.html","publisher":{"@type":"Organization","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk"}}</script>
+  <meta name="twitter:title" content="F2P vs Spender in Whiteout Survival — What the Gap Actually Means | WOS Wiki" />
+  <meta name="twitter:description" content="An honest strategic breakdown of the F2P vs spender gap in Whiteout Survival — where it matters, where it does not, and how to compete regardless of budget." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "F2P vs Spender in Whiteout Survival — What the Gap Actually Means | WOS Wiki",
+        "description": "Honest breakdown of the F2P vs spender gap in Whiteout Survival — where spending matters most, where it does not, and how to compete on a budget.",
+        "url": "https://www.digitalrevenuestudio.co.uk/wos-guide-f2p-vs-spender.html",
+        "dateModified": "2026-04-15",
+        "author": {"@type": "Person", "name": "Slick78"},
+        "publisher": {"@type": "Organization", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "WOS Wiki", "item": "https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html"},
+          {"@type": "ListItem", "position": 2, "name": "F2P vs Spender Guide", "item": "https://www.digitalrevenuestudio.co.uk/wos-guide-f2p-vs-spender.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"Can F2P players compete in Whiteout Survival?","acceptedAnswer":{"@type":"Answer","text":"Yes, but with realistic expectations. F2P players can compete effectively in most events, progress through all game systems and be valuable alliance members. The gap is most visible in direct PvP combat power and hero generation access. Understanding where spending matters most helps F2P players focus energy on areas where the gap is smallest."}},
+          {"@type":"Question","name":"Where does spending have the biggest impact?","acceptedAnswer":{"@type":"Answer","text":"Spending has the highest impact on hero generation access, Chief Gear progression and Troop Tier speed. The biggest advantage spenders have is time: they reach milestones weeks or months faster than F2P. The gap in raw power is real but manageable if F2P players invest efficiently."}},
+          {"@type":"Question","name":"Where does spending have the least impact?","acceptedAnswer":{"@type":"Answer","text":"Alliance coordination, strategy and event knowledge are areas where F2P players can match or exceed spenders. A well-organised F2P player in an active alliance will outperform a disorganised spender. Event strategy, resource management and hero prioritisation matter more than raw spending in many game modes."}},
+          {"@type":"Question","name":"What is the best F2P strategy in Whiteout Survival?","acceptedAnswer":{"@type":"Answer","text":"Focus on Furnace progression first, pick one hero per troop type and develop them fully, never miss Bear Hunt, join an active alliance with strong R4/R5 leadership, and save resources specifically for high-value event windows rather than spending casually."}},
+          {"@type":"Question","name":"Is Whiteout Survival pay to win?","acceptedAnswer":{"@type":"Answer","text":"Partially. Spending accelerates progression and provides earlier access to stronger heroes. However, the game is designed so F2P players can participate meaningfully in most content. Alliance-level events that matter most for progression can be played competitively without spending. Treating it as a long-term progression game rather than a competition with spenders leads to a better experience."}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" /></noscript>
+  <style>
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-mid:#091628;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--gold:#D4A82A;--white:#FFFFFF;--text:#B8D4E8;--text-muted:#5A7A94;--green:#2ECC71;--green-dark:#27AE60;--red:#E74C3C;--orange:#E8832A;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.06) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .nav-links{display:flex;gap:20px;list-style:none;}
+    .nav-links a{font-size:0.82rem;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--white);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-bright);border:1px solid rgba(77,168,218,0.3);background:rgba(77,168,218,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-size:1.05rem;color:var(--text-muted);max-width:620px;line-height:1.75;margin-bottom:24px;}
+    .meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .meta-item{font-size:0.75rem;font-weight:600;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;}
+    .meta-updated{font-size:0.75rem;font-weight:700;color:var(--green);letter-spacing:0.08em;text-transform:uppercase;}
+    .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted);display:inline-block;}
+    .post-body{max-width:860px;margin:0 auto;padding:0 40px 80px;position:relative;z-index:1;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:44px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--ice-border),transparent);}
+    h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:16px;line-height:1.1;}
+    h2 em{font-style:normal;color:var(--ice-glow);}
+    p{color:var(--text);line-height:1.8;margin-bottom:14px;}
+    strong{color:var(--white);}
+    /* CALLOUTS */
+    .callout{background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:24px 0;}
+    .callout.gold{border-left-color:var(--gold);background:rgba(212,168,42,0.05);}
+    .callout p{margin:0;font-size:0.9rem;}
+    /* QUICK SUMMARY */
+    .qs-box{background:var(--ice-panel);border:1px solid var(--ice-border);border-top:3px solid var(--gold);border-radius:4px;padding:24px 28px;margin-bottom:32px;}
+    .qs-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .qs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+    .qs-item-label{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+    .qs-item-value{font-size:0.88rem;color:var(--text);line-height:1.7;}
+    .qs-item-value.bad{color:var(--red);font-weight:600;}
+    /* COMPARE GRID - stacked items, no inline dashes */
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 32px;}
+    .compare-col{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .compare-header{padding:12px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--ice-border);}
+    .compare-header.spender{background:rgba(231,76,60,0.08);color:var(--red);}
+    .compare-header.f2p{background:rgba(46,204,113,0.08);color:var(--green);}
+    .compare-item{padding:11px 18px;font-size:0.87rem;color:var(--text);border-bottom:1px solid rgba(255,255,255,0.04);}
+    .compare-item:last-child{border-bottom:none;}
+    .compare-item strong{display:block;color:var(--white);margin-bottom:2px;}
+    .compare-item span{font-size:0.82rem;color:var(--text-muted);line-height:1.5;}
+    /* SECTION PANELS */
+    .panel{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;margin:20px 0 28px;position:relative;overflow:hidden;}
+    .panel.panel-green{border-left:4px solid var(--green);}
+    .panel.panel-red{border-left:4px solid var(--red);}
+    .panel.panel-gold{border-left:4px solid var(--gold);}
+    .panel-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:10px;}
+    .panel-eyebrow.green{color:var(--green);}
+    .panel-eyebrow.red{color:var(--red);}
+    .panel-eyebrow.gold{color:var(--gold);}
+    .panel h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);text-transform:uppercase;letter-spacing:0.03em;margin-bottom:14px;line-height:1.2;}
+    .panel p{font-size:0.92rem;color:var(--text);line-height:1.8;margin-bottom:12px;}
+    .panel p:last-of-type{margin-bottom:0;}
+    /* TACTIC LIST */
+    .tactic-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:16px;}
+    .tactic-list li{font-size:0.9rem;color:var(--text);line-height:1.7;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;gap:12px;align-items:flex-start;}
+    .tactic-list li:last-child{border-bottom:none;padding-bottom:0;}
+    .tactic-list li::before{content:'›';color:var(--ice-bright);flex-shrink:0;font-weight:700;font-size:1rem;margin-top:1px;}
+    /* VERDICT BOX */
+    .verdict{background:rgba(77,168,218,0.06);border:1px solid rgba(77,168,218,0.2);border-radius:4px;padding:28px 32px;margin:32px 0;}
+    .verdict-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:14px;}
+    .verdict p{font-size:0.95rem;color:var(--text);line-height:1.8;margin-bottom:12px;}
+    .verdict p:last-child{margin-bottom:0;}
+    /* MISTAKE ITEMS */
+    .mistake-item{background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;margin-bottom:10px;}
+    .mistake-item p{margin:0;font-size:0.9rem;color:var(--text);}
+    .mistake-item p strong{color:var(--white);}
+    /* CTA */
+    .community-box{background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin:32px 0;}
+    .community-box-text .title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;}
+    .community-box-text p{font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.65;}
+    .community-box a.btn{display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;}
+    .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
+    .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
+    .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
+    .cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .cta-btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-btn.primary{background:var(--ice-bright);color:var(--ice-dark) !important;}
+    .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text) !important;}
+    .contrib-reviewed{border-top:1px solid var(--ice-border);margin-top:32px;padding-top:20px;}
+    .contrib-reviewed .contrib-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
+    .contrib-reviewed .reviewer{font-size:0.82rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}
+    .contrib-reviewed .reviewer::before{content:'✓';color:var(--green);font-size:0.75rem;}
+    .kofi-wrap{text-align:center;padding:28px 0;border-top:1px solid var(--ice-border);margin-top:20px;}
+    .kofi-note{font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;}
+    footer{background:var(--ice-mid);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;}
+    footer p{font-size:0.75rem;color:var(--text-muted);}
+    footer a{color:var(--text-muted);text-decoration:none;}
+    @media(max-width:640px){
+      .site-header{padding:12px 20px;}
+      .nav-links{display:none;}
+      .post-hero,.post-body{padding-left:20px;padding-right:20px;}
+      .compare-grid{grid-template-columns:1fr;}
+      .panel{padding:20px 18px;}
+      .verdict{padding:20px 18px;}
+    }
+  </style>
 </head>
-<body><div class="wos-wrapper">
+<body>
+
   <header class="site-header">
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Whiteout Survival Guide</a>
-    <span class="header-tag">Beginner Guides · Strategy · F2P Tips</span>
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
+    <nav><ul class="nav-links">
+      <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html">Newsletter</a></li>
+    </ul></nav>
   </header>
 
-  <article>
-    <div class="post-hero">
-      <div class="post-category">+ Strategy Guide</div>
-      <h1>F2P vs Spender in<br /><em>Whiteout Survival</em><br />What the Gap Actually Means</h1>
-      <p class="post-intro">The F2P vs spender debate is constant in this game. Rather than treat it as a grievance or a justification, this post breaks it down as a strategic reality — where the gap is real, where it is not, and how to compete regardless of your budget.</p>
-      <div class="post-meta">
-        <span class="meta-item"><span class="dot"></span>WOS Guide</span>
-        <span class="meta-item"><span class="dot"></span>Strategy Series</span>
-        <span class="meta-item"><span class="dot"></span>Honest Assessment</span>
-      </div>
-    </div>
-
-    <div class="frost-divider"></div>
-
-    <div class="post-body">
-
-      <p>This post is for players at every level. F2P players who want to compete seriously. Light spenders who want to understand where their money has the most impact. And anyone who has wondered whether the game is worth continuing given the apparent pay-to-win gap.</p>
-
-      <div class="section-label">What spending actually buys</div>
-
-      <div class="compare-grid">
-        <div class="compare-col">
-          <div class="compare-header spender">💳 What Spending Gets You</div>
-          <div class="compare-item"><span class="ci">&rsaquo;</span><span><strong>Speed</strong> — months of F2P progress compressed into weeks</span></div>
-          <div class="compare-item"><span class="ci">&rsaquo;</span><span><strong>Hero depth</strong> — premium heroes are harder to max without spending</span></div>
-          <div class="compare-item"><span class="ci">&rsaquo;</span><span><strong>Event competitiveness</strong> — individual ranking events heavily favour spenders</span></div>
-          <div class="compare-item"><span class="ci">&rsaquo;</span><span><strong>Direct combat edge</strong> — maxed gear and heroes win more fights</span></div>
-        </div>
-        <div class="compare-col">
-          <div class="compare-header f2p">🛡 What F2P Gets Right</div>
-          <div class="compare-item"><span class="ci">&check;</span><span><strong>Alliance events</strong> — strategy beats wallets in coordinated play</span></div>
-          <div class="compare-item"><span class="ci">&check;</span><span><strong>Consistency compounds</strong> — daily discipline beats burst spending</span></div>
-          <div class="compare-item"><span class="ci">&check;</span><span><strong>Strategic knowledge</strong> — understanding the game is free and permanent</span></div>
-          <div class="compare-item"><span class="ci">&check;</span><span><strong>Long-term staying power</strong> — F2P players tend to last longer and build better communities</span></div>
-        </div>
-      </div>
-
-      <div class="section-label">Where the gap is real</div>
-
-      <div class="panel panel-red">
-        <div class="panel-eyebrow red">Spending Wins Here</div>
-        <h3>Individual PvP and solo event rankings</h3>
-        <p>In direct player-versus-player combat and individual ranking events, there is a real and persistent advantage to significant spending. A maxed hero with premium gear beats an equivalent F2P build more often than not. This is the intended monetisation design.</p>
-        <p>If your goal is to be the top-ranked individual in your state, free-to-play makes that significantly harder. Not impossible, but harder — and honest assessment matters more than wishful thinking here.</p>
-        <p><strong>What this means practically:</strong> F2P players should be selective about which competitive modes they invest energy in. Chasing top-10 in a resource-burn event against heavy spenders is almost always a losing play. Your time and resources are better spent elsewhere.</p>
-      </div>
-
-      <div class="section-label">Where F2P is genuinely competitive</div>
-
-      <div class="panel panel-green">
-        <div class="panel-eyebrow green">F2P Competes Here</div>
-        <h3>Alliance events, coordination and long game</h3>
-        <p>State wars, Bear Hunt, Polar Terror, territory — these are team events where strategic coordination matters as much as raw power. A well-organised alliance of active F2P players will consistently outperform a disorganised alliance of spenders.</p>
-        <p>The gap between good and bad strategy at the alliance level is larger than the gap between F2P and spender at the individual level. That is not a small statement — it is a fundamental truth about how this game is actually won and lost at scale.</p>
-        <ul class="tactic-list">
-          <li><span class="ti">*</span><span><strong>Efficiency compounds.</strong> A F2P player who logs in twice daily, completes all tasks and never misses Bear Hunt will pull ahead of a light spender who plays inconsistently. Discipline beats money at the lower spending tiers.</span></li>
-          <li><span class="ti">*</span><span><strong>Strategic positioning is free.</strong> Knowing when to burn resources, which events to compete in and how to coordinate rallies is knowledge, not money. F2P players who develop this literacy early have a durable edge.</span></li>
-          <li><span class="ti">*</span><span><strong>Longevity matters.</strong> Heavy spenders max out and migrate to the next game. F2P players who are invested in their community tend to stay longer and become the backbone of the strongest states.</span></li>
-        </ul>
-      </div>
-
-      <div class="section-label">If you're going to spend — where it counts</div>
-
-      <div class="panel panel-gold">
-        <div class="panel-eyebrow gold">Light Spend Strategy</div>
-        <h3>Permanent progression over consumables</h3>
-        <p>If you are spending anything, the principle is simple: spend on permanent progression, not consumables. Speed-ups and resources purchased directly are poor value — they are gone the moment you use them.</p>
-        <ul class="tactic-list">
-          <li><span class="ti">*</span><span><strong>The Battle Pass</strong> consistently offers the best per-pound value in the game. Steady stream of resources and hero fragments for a fixed monthly cost. Most experienced light spenders treat this as the baseline and evaluate everything else against it.</span></li>
-          <li><span class="ti">*</span><span><strong>Hero development</strong> pays off over the lifetime of your account. Fragment bundles that push a key hero to the next tier are permanent gains that compound in every future fight.</span></li>
-          <li><span class="ti">*</span><span><strong>Ignore sale notifications.</strong> In-game sale urgency is designed to trigger impulse purchases. If you are making spending decisions based on a countdown timer, you are spending for the wrong reasons.</span></li>
-        </ul>
-      </div>
-
-      <div class="verdict">
-        <div class="verdict-label">Honest Verdict</div>
-        <p>Whiteout Survival has a spending gap. That is true and worth acknowledging rather than dismissing.</p>
-        <p>What is also true: the game is more playable as a F2P or light-spend player than the loudest community voices suggest. <strong>The gap is real in specific competitive contexts and much smaller in others.</strong> The players who struggle most as F2P are usually those competing in the wrong modes — chasing individual rankings against heavy spenders rather than finding the parts of the game where strategic play levels the field.</p>
-        <p>Know where the game is fair to you. Compete there. Develop real strategic depth rather than chasing the spending arms race. That is a sustainable path — and it is considerably more interesting than buying your way to a leaderboard number.</p>
-      </div>
-
-      <div class="post-cta">
-        <div class="cta-text">
-          <h3>F2P or spender — what's your experience?</h3>
-          <p>Drop your strategy in the comments. Next post covers hero levelling for beginners.</p>
-        </div>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="btn-ice">More Guides &rarr;</a>
-      </div>
-
-    </div>
-  </article>
-
-  
-  <!-- WOS EMAIL SIGNUP -->
-  <section style="background:var(--dark);padding:56px 40px;border-top:1px solid rgba(255,255,255,0.06);">
-    <div style="max-width:560px;margin:0 auto;text-align:center;">
-      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">WOS Guide Newsletter</div>
-      <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:var(--white);margin-bottom:10px;letter-spacing:-0.01em;">New guides, gift codes &amp; event tips</h3>
-      <p style="font-family:'Lora',serif;font-style:italic;font-size:0.95rem;color:rgba(255,255,255,0.4);margin-bottom:24px;line-height:1.75;">Get notified when new F2P guides land, gift codes drop and event strategy posts go live. WOS players only — no off-topic content.</p>
-      <div style="background:var(--dark-2);border:1px solid rgba(245,166,35,0.2);border-top:3px solid var(--gold);border-radius:3px;padding:24px;text-align:left;">
-              <a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html" 
-         style="display:inline-block;background:var(--ice-bright);color:var(--ice-dark);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 32px;border-radius:3px;text-decoration:none;margin-top:12px;">
-        &#128276; Get Code Alerts — Sign Up Free
-      </a>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px;">No spam. Unsubscribe any time. Gift codes and F2P guide updates only.</p>
-      </div>
-      <p style="font-size:0.75rem;color:rgba(255,255,255,0.2);margin-top:12px;">No spam. Unsubscribe any time. WOS players only.</p>
+  <section class="post-hero">
+    <div class="post-category">&#x1F4CA; Strategy Guide</div>
+    <h1>F2P vs Spender:<br /><em>What the Gap</em><br />Actually Means</h1>
+    <p class="post-intro">The F2P vs spender debate is constant in this game. Rather than treat it as a grievance or a justification, this guide breaks it down as a strategic reality: where the gap is real, where it is not, and how to compete regardless of budget.</p>
+    <div class="meta-row">
+      <span class="meta-item"><span class="dot"></span>Strategy Guide</span>
+      <span class="meta-item"><span class="dot"></span>Honest Assessment</span>
+      <span class="meta-updated">&#x2713; Updated April 2026</span>
     </div>
   </section>
-  <footer class="site-footer">
-    <p><a href="https://www.digitalrevenuestudio.co.uk/wos-blog.html">WOS Blog</a> — Real strategies from a real player.</p>
-    <p>Not affiliated with Whiteout Survival or Century Games.</p>
-  </footer>
-</div>
-  <footer style="background:#050D1A;padding:20px 40px;border-top:1px solid rgba(96,180,232,0.1);margin-top:40px;">
-    <p style="font-size:0.72rem;color:rgba(255,255,255,0.2);">&copy; 2026 WOS Wiki &mdash; Digital Revenue Studio &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></p>
+
+  <div class="post-body">
+
+    <!-- QUICK SUMMARY -->
+    <div class="qs-box">
+      <div class="qs-label">&#9889; Quick Summary</div>
+      <div class="qs-grid">
+        <div>
+          <div class="qs-item-label">Gap Is Real In</div>
+          <div class="qs-item-value bad">Individual PvP, hero access speed, Chief Gear</div>
+        </div>
+        <div>
+          <div class="qs-item-label">Gap Is Smaller In</div>
+          <div class="qs-item-value">Alliance events, strategy, coordination</div>
+        </div>
+        <div>
+          <div class="qs-item-label">F2P Advantage</div>
+          <div class="qs-item-value">Discipline and consistency compound over time</div>
+        </div>
+        <div>
+          <div class="qs-item-label">Biggest F2P Mistake</div>
+          <div class="qs-item-value bad">Competing in modes designed to favour spenders</div>
+        </div>
+      </div>
+    </div>
+
+    <p>This guide is for players at every level. F2P players who want to compete seriously. Light spenders who want to understand where their money has the most impact. And anyone who has wondered whether the game is worth continuing given the apparent pay-to-win gap.</p>
+
+    <div class="section-label">What Spending Actually Buys</div>
+    <h2>Where the <em>Money Goes</em></h2>
+
+    <div class="compare-grid">
+      <div class="compare-col">
+        <div class="compare-header spender">&#x1F4B3; What Spending Gets You</div>
+        <div class="compare-item">
+          <strong>Speed</strong>
+          <span>Months of F2P progress compressed into weeks</span>
+        </div>
+        <div class="compare-item">
+          <strong>Hero Depth</strong>
+          <span>Premium heroes are significantly harder to max without spending</span>
+        </div>
+        <div class="compare-item">
+          <strong>Event Competitiveness</strong>
+          <span>Individual ranking events heavily favour spenders</span>
+        </div>
+        <div class="compare-item">
+          <strong>Direct Combat Edge</strong>
+          <span>Maxed gear and premium heroes win more direct fights</span>
+        </div>
+      </div>
+      <div class="compare-col">
+        <div class="compare-header f2p">&#x1F6E1; What F2P Gets Right</div>
+        <div class="compare-item">
+          <strong>Alliance Events</strong>
+          <span>Strategy beats wallets in coordinated team play</span>
+        </div>
+        <div class="compare-item">
+          <strong>Consistency Compounds</strong>
+          <span>Daily discipline over months beats burst spending at lower tiers</span>
+        </div>
+        <div class="compare-item">
+          <strong>Strategic Knowledge</strong>
+          <span>Understanding the game is free, permanent and transferable</span>
+        </div>
+        <div class="compare-item">
+          <strong>Long-Term Staying Power</strong>
+          <span>F2P players tend to last longer and build stronger communities</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Where the Gap Is Real</div>
+    <h2>Spending <em>Wins Here</em></h2>
+
+    <div class="panel panel-red">
+      <div class="panel-eyebrow red">&#x26A0; Real Disadvantage for F2P</div>
+      <h3>Individual PvP and solo event rankings</h3>
+      <p>In direct player-versus-player combat and individual ranking events, there is a real and persistent advantage to significant spending. A maxed hero with premium gear beats an equivalent F2P build more often than not. This is the intended monetisation design.</p>
+      <p>If your goal is to be the top-ranked individual in your state, F2P makes that significantly harder. Not impossible, but harder. Honest assessment matters more than wishful thinking here.</p>
+      <p><strong>What this means practically:</strong> F2P players should be selective about which competitive modes they invest energy in. Chasing top-10 in a resource-burn event against heavy spenders is almost always a losing play. Time and resources are better spent elsewhere.</p>
+    </div>
+
+    <div class="section-label">Where F2P Is Genuinely Competitive</div>
+    <h2>F2P <em>Competes Here</em></h2>
+
+    <div class="panel panel-green">
+      <div class="panel-eyebrow green">&#x2713; Strong F2P Territory</div>
+      <h3>Alliance events, coordination and the long game</h3>
+      <p>State wars, Bear Hunt, Polar Terror, territory: these are team events where strategic coordination matters as much as raw power. A well-organised alliance of active F2P players will consistently outperform a disorganised alliance of spenders.</p>
+      <p>The gap between good and bad strategy at the alliance level is larger than the gap between F2P and spender at the individual level.</p>
+      <ul class="tactic-list">
+        <li><strong>Efficiency compounds.</strong> A F2P player who logs in twice daily, completes all tasks and never misses Bear Hunt will pull ahead of a light spender who plays inconsistently. Discipline beats money at the lower spending tiers.</li>
+        <li><strong>Strategic positioning is free.</strong> Knowing when to burn resources, which events to compete in and how to coordinate rallies is knowledge, not money. F2P players who develop this literacy early have a durable edge.</li>
+        <li><strong>Longevity matters.</strong> Heavy spenders max out and move on. F2P players who are invested in their community tend to stay longer and become the backbone of the strongest states.</li>
+      </ul>
+    </div>
+
+    <div class="section-label">If You Spend Anything</div>
+    <h2>Where Light Spending <em>Has the Most Impact</em></h2>
+
+    <div class="panel panel-gold">
+      <div class="panel-eyebrow gold">&#x1F4A1; Light Spend Strategy</div>
+      <h3>Permanent progression over consumables</h3>
+      <p>If spending anything, the principle is straightforward: spend on permanent progression, not consumables. Speed-ups and resources purchased directly are poor value as they disappear the moment you use them.</p>
+      <ul class="tactic-list">
+        <li><strong>The Battle Pass</strong> consistently offers the best per-pound value in the game. A steady stream of resources and hero fragments for a fixed monthly cost. Most experienced light spenders treat this as the baseline and evaluate everything else against it.</li>
+        <li><strong>Hero development</strong> pays off over the lifetime of your account. Fragment bundles that push a key hero to the next star tier are permanent gains that compound in every future fight.</li>
+        <li><strong>Ignore sale notifications.</strong> In-game sale urgency is designed to trigger impulse purchases. If spending decisions are based on a countdown timer, they are being made for the wrong reasons.</li>
+      </ul>
+    </div>
+
+    <div class="section-label">Common Mistakes</div>
+    <h2>What F2P Players <em>Get Wrong</em></h2>
+
+    <div class="mistake-item"><p><strong>Competing in modes designed to favour spenders.</strong> Individual ranking events and direct PvP leaderboards are monetised around spending. Investing significant time and resources chasing these as F2P returns poor value. Find the parts of the game where strategy levels the field.</p></div>
+    <div class="mistake-item"><p><strong>Abandoning the game when the gap feels too large.</strong> The power gap is most visible in early and mid game before F2P compounding kicks in. Players who stay consistent and build efficiently find the gap less impactful at later stages.</p></div>
+    <div class="mistake-item"><p><strong>Treating small occasional spends as strategically neutral.</strong> Small random purchases provide minimal impact. If spending occasionally, concentrating it on one specific hero development path or the Battle Pass delivers far more value than spreading it across multiple impulse buys.</p></div>
+
+    <!-- VERDICT -->
+    <div class="verdict">
+      <div class="verdict-label">&#x1F4CB; Honest Verdict</div>
+      <p>Whiteout Survival has a spending gap. That is true and worth acknowledging rather than dismissing.</p>
+      <p>What is also true: the game is more playable as a F2P or light-spend player than the loudest community voices suggest. <strong>The gap is real in specific competitive contexts and much smaller in others.</strong> The players who struggle most as F2P are usually those competing in the wrong modes — chasing individual rankings against heavy spenders rather than finding the parts of the game where strategic play levels the field.</p>
+      <p>Know where the game is fair. Compete there. Develop real strategic depth rather than chasing the spending arms race. That is a sustainable path and considerably more interesting than buying a leaderboard position.</p>
+    </div>
+
+    <!-- RELATED GUIDES -->
+    <div style="margin:32px 0;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:14px;display:flex;align-items:center;gap:12px;">Related Guides<span style="flex:1;height:1px;background:linear-gradient(90deg,var(--ice-border),transparent);display:block;"></span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-hero-priority.html" style="display:inline-block;background:rgba(77,168,218,0.08);border:1px solid var(--ice-border);border-radius:3px;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ice-bright);text-decoration:none;">Hero Priority Guide &rarr;</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-early-mistakes.html" style="display:inline-block;background:rgba(77,168,218,0.08);border:1px solid var(--ice-border);border-radius:3px;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ice-bright);text-decoration:none;">Early Mistakes Guide &rarr;</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-alliance-tips.html" style="display:inline-block;background:rgba(77,168,218,0.08);border:1px solid var(--ice-border);border-radius:3px;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ice-bright);text-decoration:none;">Alliance Tips Guide &rarr;</a>
+      </div>
+    </div>
+
+    <div class="post-cta">
+      <h3>The Wiki is Free: <em>Always</em></h3>
+      <p>Every guide, event walkthrough and gift code on this wiki is completely free. Built by a player, shaped by the community.</p>
+      <div class="cta-buttons">
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn primary">Browse All Free Guides</a>
+        <a href="https://ko-fi.com/M4M71VM8J6" target="_blank" class="cta-btn secondary">Support on Ko-fi (Optional)</a>
+      </div>
+    </div>
+
+    <div style="background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:32px 0;">
+      <p style="margin:0;font-size:0.88rem;color:var(--text);line-height:1.75;">&#128214; <strong style="color:var(--white);">More F2P Resources:</strong> Check the <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="color:var(--ice-bright);font-weight:600;">WOS gift code tracker</a> for active free codes, or browse all guides on the <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="color:var(--ice-bright);font-weight:600;">WOS Wiki index</a>.</p>
+    </div>
+
+    <div class="community-box">
+      <div class="community-box-text">
+        <div class="title">&#128172; Spot an Error or Have a Tip?</div>
+        <p>This wiki is built and maintained by the community. If something is wrong, outdated or missing, let us know. Corrections are made fast.</p>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" class="btn">Submit Feedback &rarr;</a>
+    </div>
+
+    <div class="contrib-reviewed">
+      <div class="contrib-label">&#128172; Community Reviewed by</div>
+      <div class="reviewer"><strong>Slick78</strong> &bull; [TJW] &bull; State #3217</div>
+    </div>
+
+    <div class="kofi-wrap">
+      <p class="kofi-note">All guides are free. If this one helped your game, you can support the project here. Completely optional, always appreciated.</p>
+      <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+      <script>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>WOS Wiki &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community Hub</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy</a></p>
   </footer>
 
-  <!-- COMMUNITY FEEDBACK -->
-  <div style="max-width:860px;margin:0 auto;padding:0 40px 48px;">
-    <div style="background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:200px;">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;">&#128172; Spot an Error or Have a Tip?</div>
-        <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.65;">This wiki is built and maintained by the community. If something is wrong, outdated or missing — let us know. Drop a comment on Reddit or use the link below. Corrections are made fast.</p>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;">Submit Feedback &rarr;</a>
-    </div>
-    <div style="margin-top:10px;font-size:0.72rem;color:var(--text-muted);text-align:right;">&#x2713; Community reviewed &bull; Last checked April 2026 &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="color:#5A7A94;text-decoration:none;">Submit a correction</a></div>
-  </div>
 </body>
 </html>
