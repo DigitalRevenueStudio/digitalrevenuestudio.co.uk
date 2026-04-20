@@ -227,6 +227,22 @@
     .footer p { font-size: 0.75rem; color: var(--muted); }
     .footer a { color: var(--muted); text-decoration: none; }
 
+
+    /* SEARCH */
+    .search-wrap { margin-bottom: 32px; }
+    .search-field-wrap { position: relative; display: flex; align-items: center; }
+    .search-field-icon { position: absolute; left: 14px; font-size: 0.88rem; color: var(--muted); pointer-events: none; }
+    .search-field { width: 100%; background: rgba(77,168,218,0.07); border: 1px solid var(--border); border-radius: 4px; padding: 11px 40px 11px 38px; font-size: 0.9rem; color: var(--white); font-family: inherit; outline: none; transition: border-color 0.2s; }
+    .search-field::placeholder { color: var(--muted); }
+    .search-field:focus { border-color: rgba(77,168,218,0.45); background: rgba(77,168,218,0.1); }
+    .search-field-clear { position: absolute; right: 12px; background: none; border: none; color: var(--muted); cursor: pointer; font-size: 0.8rem; padding: 2px 4px; display: none; line-height: 1; }
+    .search-field-clear:hover { color: var(--white); }
+    .search-status { font-size: 0.78rem; color: var(--muted); margin-top: 8px; min-height: 1.2em; }
+    .search-status strong { color: var(--glow); }
+    .card.search-hidden { display: none; }
+    .grid.grid-empty { display: none; }
+    .section-label.label-hidden { display: none; }
+
     @media(max-width: 480px) {
       .wrap { padding: 36px 16px 60px; }
       .btn.outline { margin-left: 0; margin-top: 8px; }
@@ -254,6 +270,16 @@
 
   <div class="callout">
     <p><strong>This sandbox has moved.</strong> The WOS Wiki community review is now hosted on the main site at <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" style="color:var(--gold);">digitalrevenuestudio.co.uk</a>. All guide links below will take you directly to the live wiki. The guides that were shared for review are linked individually below.</p>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <div class="search-field-wrap">
+      <span class="search-field-icon">&#128269;</span>
+      <input type="text" id="cr-search" class="search-field" placeholder="Search guides under review..." autocomplete="off" spellcheck="false" />
+      <button id="cr-clear" class="search-field-clear" aria-label="Clear">&#x2715;</button>
+    </div>
+    <div id="cr-status" class="search-status"></div>
   </div>
 
   <!-- HOW TO REVIEW -->
@@ -376,5 +402,60 @@
   </div>
 
 </div>
+<script>
+(function(){
+  var input = document.getElementById('cr-search');
+  var clearBtn = document.getElementById('cr-clear');
+  var status = document.getElementById('cr-status');
+
+  function run(){
+    var q = input.value.trim().toLowerCase();
+    var cards = document.querySelectorAll('.card');
+    var visible = 0;
+
+    cards.forEach(function(card){
+      var text = card.textContent.toLowerCase();
+      if(!q || text.indexOf(q) !== -1){
+        card.classList.remove('search-hidden');
+        visible++;
+      } else {
+        card.classList.add('search-hidden');
+      }
+    });
+
+    // Hide grid+label pairs where all cards hidden
+    document.querySelectorAll('.grid').forEach(function(grid){
+      var anyVisible = false;
+      grid.querySelectorAll('.card').forEach(function(c){ if(!c.classList.contains('search-hidden')) anyVisible = true; });
+      grid.classList.toggle('grid-empty', !anyVisible);
+      // Also hide the preceding section-label
+      var prev = grid.previousElementSibling;
+      while(prev){
+        if(prev.classList.contains('section-label')){
+          prev.classList.toggle('label-hidden', !anyVisible);
+          break;
+        }
+        prev = prev.previousElementSibling;
+      }
+    });
+
+    clearBtn.style.display = q ? 'block' : 'none';
+    if(q){
+      status.innerHTML = visible === 0
+        ? 'No guides found for <strong>"' + input.value + '"</strong>'
+        : '<strong>' + visible + '</strong> guide' + (visible !== 1 ? 's' : '') + ' matching <strong>"' + input.value + '"</strong>';
+    } else {
+      status.innerHTML = '';
+    }
+  }
+
+  input.addEventListener('input', run);
+  clearBtn.addEventListener('click', function(){
+    input.value = '';
+    run();
+    input.focus();
+  });
+})();
+</script>
 </body>
 </html>

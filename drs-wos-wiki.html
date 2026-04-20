@@ -50,6 +50,23 @@
  .stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--ice-glow);line-height:1;}
  .stat-label{font-size:0.72rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;}
 
+
+ /* SEARCH INPUT */
+ .search-input-wrap{position:relative;display:flex;align-items:center;min-width:240px;flex:1;max-width:360px;}
+ .search-icon{position:absolute;left:12px;font-size:0.85rem;color:var(--muted);pointer-events:none;}
+ .search-input{width:100%;background:rgba(123,200,245,0.07);border:1px solid rgba(123,200,245,0.2);border-radius:4px;padding:8px 36px 8px 34px;font-family:'Barlow',sans-serif;font-size:0.88rem;color:var(--white);outline:none;transition:border-color 0.2s;}
+ .search-input::placeholder{color:var(--muted);}
+ .search-input:focus{border-color:rgba(123,200,245,0.5);background:rgba(123,200,245,0.1);}
+ .search-clear{position:absolute;right:10px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.75rem;padding:2px 4px;display:none;line-height:1;}
+ .search-clear:hover{color:var(--white);}
+ .search-results-bar{background:rgba(123,200,245,0.05);border-top:1px solid var(--border);padding:8px 32px;}
+ .search-results-text{font-size:0.78rem;color:var(--muted);}
+ .search-results-text strong{color:var(--ice-glow);}
+ .guide-card.search-hidden{display:none;}
+ .wiki-section.section-hidden{display:none;}
+ .search-tag{background:rgba(123,200,245,0.08);border:1px solid rgba(123,200,245,0.2);color:var(--ice-glow);font-size:0.78rem;font-weight:600;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all 0.2s;font-family:'Barlow',sans-serif;}
+ .search-tag:hover,.search-tag.active{background:var(--ice-mid);border-color:var(--ice-mid);color:var(--white);}
+
  /* SEARCH BAR */
  .search-bar{background:var(--arctic-2);border-bottom:1px solid var(--border);padding:20px 32px;}
  .search-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;}
@@ -215,18 +232,25 @@
  </header>
 
  <div class="search-bar">
- <div class="search-inner">
- <span class="search-label">Browse by:</span>
- <div class="search-tags">
- <a href="#beginner" class="search-tag active">Beginner</a>
- <a href="#events" class="search-tag">Events</a>
- <a href="#heroes" class="search-tag">Heroes</a>
- <a href="#strategy" class="search-tag">Strategy</a>
- <a href="#economy" class="search-tag">Economy</a>
- <a href="#f2p" class="search-tag">F2P</a>
+ <div class="search-inner" style="flex-wrap:wrap;gap:12px;">
+  <div class="search-input-wrap">
+   <span class="search-icon">&#128269;</span>
+   <input type="text" id="wiki-search" class="search-input" placeholder="Search guides..." autocomplete="off" spellcheck="false" />
+   <button id="search-clear" class="search-clear" aria-label="Clear search">&#x2715;</button>
+  </div>
+  <div class="search-tags" id="search-tags">
+   <button class="search-tag active" data-filter="all">All</button>
+   <button class="search-tag" data-filter="beginner">Beginner</button>
+   <button class="search-tag" data-filter="events">Events</button>
+   <button class="search-tag" data-filter="heroes">Heroes</button>
+   <button class="search-tag" data-filter="strategy">Strategy</button>
+   <button class="search-tag" data-filter="economy">Economy</button>
+  </div>
  </div>
+ <div id="search-results-bar" class="search-results-bar" style="display:none;">
+  <div class="search-inner"><span id="search-results-text" class="search-results-text"></span></div>
  </div>
- </div>
+</div>
 
  <main class="main">
 
@@ -779,5 +803,91 @@
       <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></span>
     </div>
   </footer>
+
+<script>
+(function(){
+  var input = document.getElementById('wiki-search');
+  var clearBtn = document.getElementById('search-clear');
+  var resultsBar = document.getElementById('search-results-bar');
+  var resultsText = document.getElementById('search-results-text');
+  var filterBtns = document.querySelectorAll('#search-tags .search-tag');
+  var activeFilter = 'all';
+
+  function getCards() {
+    return document.querySelectorAll('.guide-card');
+  }
+
+  function getSections() {
+    return document.querySelectorAll('.wiki-section');
+  }
+
+  function filterCards() {
+    var query = input.value.trim().toLowerCase();
+    var cards = getCards();
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var title = (card.querySelector('.card-title') || {}).textContent || '';
+      var desc = (card.querySelector('.card-desc') || {}).textContent || '';
+      var tag = (card.querySelector('.card-tag') || {}).textContent || '';
+      var text = (title + ' ' + desc + ' ' + tag).toLowerCase();
+
+      var matchesQuery = !query || text.indexOf(query) !== -1;
+      var matchesFilter = activeFilter === 'all' || tag.toLowerCase().indexOf(activeFilter) !== -1
+        || (activeFilter === 'beginner' && (tag.toLowerCase().indexOf('beginner') !== -1 || tag.toLowerCase().indexOf('start') !== -1))
+        || (activeFilter === 'f2p' && text.indexOf('f2p') !== -1);
+
+      if (matchesQuery && matchesFilter) {
+        card.classList.remove('search-hidden');
+        visible++;
+      } else {
+        card.classList.add('search-hidden');
+      }
+    });
+
+    // Hide sections where all cards are hidden
+    getSections().forEach(function(section) {
+      var sectionCards = section.querySelectorAll('.guide-card');
+      var anyVisible = false;
+      sectionCards.forEach(function(c){ if(!c.classList.contains('search-hidden')) anyVisible = true; });
+      section.classList.toggle('section-hidden', !anyVisible);
+    });
+
+    // Results bar
+    if (query || activeFilter !== 'all') {
+      resultsBar.style.display = 'block';
+      if (visible === 0) {
+        resultsText.innerHTML = 'No guides found for <strong>"' + (input.value || activeFilter) + '"</strong>';
+      } else {
+        var label = query ? '"' + input.value + '"' : activeFilter;
+        resultsText.innerHTML = '<strong>' + visible + '</strong> guide' + (visible !== 1 ? 's' : '') + ' found' + (query ? ' for <strong>"' + input.value + '"</strong>' : '') + '';
+      }
+    } else {
+      resultsBar.style.display = 'none';
+    }
+
+    clearBtn.style.display = query ? 'block' : 'none';
+  }
+
+  input.addEventListener('input', filterCards);
+
+  clearBtn.addEventListener('click', function(){
+    input.value = '';
+    clearBtn.style.display = 'none';
+    filterCards();
+    input.focus();
+  });
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter');
+      filterCards();
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
