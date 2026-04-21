@@ -70,6 +70,18 @@
     .secret-tip p:last-of-type{margin-bottom:0;}
     .secret-tip-credit{font-size:0.75rem;color:var(--text-muted);margin-top:12px;padding-top:10px;border-top:1px solid rgba(212,168,42,0.15);}
     .secret-tip-credit strong{color:var(--gold);}
+
+    .matchmaking-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:20px 0 24px;}
+    .mm-card{background:rgba(232,131,42,0.05);border:1px solid rgba(232,131,42,0.2);border-top:2px solid var(--orange);border-radius:4px;padding:16px 18px;}
+    .mm-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--orange);opacity:0.35;line-height:1;margin-bottom:6px;}
+    .mm-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:6px;}
+    .mm-body{font-size:0.83rem;color:var(--text-muted);line-height:1.6;}
+    .mm-impact{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-top:8px;display:inline-block;}
+    .impact-high{background:rgba(46,204,113,0.1);color:var(--green);border:1px solid rgba(46,204,113,0.2);}
+    .impact-med{background:rgba(212,168,42,0.1);color:var(--gold);border:1px solid rgba(212,168,42,0.2);}
+    .community-caveat{background:rgba(138,79,212,0.07);border:1px solid rgba(138,79,212,0.25);border-left:4px solid var(--purple);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
+    .community-caveat-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;}
+    .community-caveat p{font-size:0.88rem;color:var(--text);line-height:1.75;margin:0;}
     /* NAV */
     .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
     .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
@@ -236,9 +248,52 @@
     <div class="section-label">Before It Starts</div>
     <h2>Matchmaking: <em>Before Prep Phase Opens</em></h2>
 
-    <p>Before the prep phase opens there is an opportunity to influence which state you face. Matchmaking occurs on Saturday and Sunday UTC. If the top players in your state coordinate a temporary power reduction during this window (removing hero gear, resetting hero levels through Drill Camp) to influence the match in your favour.</p>
+    <div class="community-caveat">
+      <div class="community-caveat-label">&#9888; Community Consensus — Not Officially Confirmed</div>
+      <p>The developers state that power reduction tactics do not influence matchmaking. However, a significant number of experienced players report consistently favourable matches following coordinated power drops. The community consensus is that it has a meaningful effect. The risk of trying is zero — the worst outcome is your normal match. Apply your own judgement.</p>
+    </div>
 
-    <p>Individual actions have minimal effect. It only works as a coordinated effort across your state's top 100 to 150 players. Speak to your state leaders about organising this before the window opens.</p>
+    <p>Matchmaking occurs on Saturday and Sunday UTC. The system evaluates your state's collective power and pairs you with a comparable opponent. A coordinated power reduction during this window may result in a weaker match. Individual actions have minimal effect — this only works across your state's top 100 to 150 players simultaneously.</p>
+
+    <div class="matchmaking-grid">
+      <div class="mm-card">
+        <div class="mm-num">01</div>
+        <div class="mm-title">Remove Hero Gear</div>
+        <div class="mm-body">Unequip all hero gear from your top heroes before the window opens. Hero gear contributes significantly to power calculations and removing it creates the largest single drop in individual power.</div>
+        <span class="mm-impact impact-high">High Impact</span>
+      </div>
+      <div class="mm-card">
+        <div class="mm-num">02</div>
+        <div class="mm-title">Reset Hero Levels</div>
+        <div class="mm-body">Use the Drill Camp reset function to lower hero levels. This reduces hero power contribution to matchmaking calculations. Can only be done once per hero per day — time it for the matchmaking window.</div>
+        <span class="mm-impact impact-high">High Impact</span>
+      </div>
+      <div class="mm-card">
+        <div class="mm-num">03</div>
+        <div class="mm-title">Fill Infirmaries</div>
+        <div class="mm-body">Pack infirmaries with troops before matchmaking. Injured troops count toward your power total but cannot be deployed in battle, reducing your effective fighting strength relative to your paper power.</div>
+        <span class="mm-impact impact-med">Medium Impact</span>
+      </div>
+      <div class="mm-card">
+        <div class="mm-num">04</div>
+        <div class="mm-title">Clear Inactive Players</div>
+        <div class="mm-body">Work with state leadership to identify players inactive for 20 or more days. Inactive accounts still contribute their power to matchmaking. Burning their troops before the window removes that dead weight from your state's evaluated power.</div>
+        <span class="mm-impact impact-med">Medium Impact</span>
+      </div>
+      <div class="mm-card">
+        <div class="mm-num">05</div>
+        <div class="mm-title">Coordinate Top 100–150 Players</div>
+        <div class="mm-body">The matchmaking algorithm weighs your state's top players most heavily. Simultaneous gear removal and hero resets across this group produces a far larger power drop than scattered individual actions. R4/R5 coordination is essential.</div>
+        <span class="mm-impact impact-high">Highest Collective Impact</span>
+      </div>
+    </div>
+
+
+    <div style="text-align:center;margin:8px 0 28px;">
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-matchmaking-cheatsheet.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,131,42,0.08);border:1px solid rgba(232,131,42,0.25);color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 20px;border-radius:3px;text-decoration:none;">&#128203; Matchmaking Cheat Sheet &rarr;</a>
+    </div>
+
+    <p>Coordinate the timing so all participating players act simultaneously, ideally within the same hour. Use state Discord or alliance chat to agree an exact time in advance.</p>
 
     <div class="section-label">The 5-Day Schedule</div>
     <h2>Day by Day: <em>What to Do When</em></h2>
