@@ -61,6 +61,15 @@
     html{scroll-behavior:smooth;}
     body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
     body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(232,131,42,0.06) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+
+    .secret-tip{background:rgba(212,168,42,0.07);border:1px solid rgba(212,168,42,0.3);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:20px 24px;margin:20px 0;}
+    .secret-tip-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+    .secret-tip-icon{font-size:1.2rem;line-height:1;}
+    .secret-tip-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+    .secret-tip p{font-size:0.92rem;color:var(--text);line-height:1.75;margin:0 0 10px;}
+    .secret-tip p:last-of-type{margin-bottom:0;}
+    .secret-tip-credit{font-size:0.75rem;color:var(--text-muted);margin-top:12px;padding-top:10px;border-top:1px solid rgba(212,168,42,0.15);}
+    .secret-tip-credit strong{color:var(--gold);}
     /* NAV */
     .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
     .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
@@ -327,6 +336,18 @@
             </ul>
           </div>
         </div>
+      </div>
+
+
+      <!-- SECRET TIP: ONE TROOP TRICK -->
+      <div class="secret-tip">
+        <div class="secret-tip-header">
+          <span class="secret-tip-icon">&#128161;</span>
+          <span class="secret-tip-label">Secret Tip: The One Troop Trick</span>
+        </div>
+        <p>When leading a Polar Terror rally on Day 3, send only a single troop alongside your heroes. The troop takes an injury and enters the infirmary, but your heroes return to your city instantly rather than marching back with the army.</p>
+        <p>This means you can launch another rally immediately without waiting for the full march to return. Every extra rally you squeeze in is another 30,000 points. Over a full Day 3 session this method can double or triple the number of rallies you lead compared to sending a full march each time.</p>
+        <div class="secret-tip-credit">&#128172; Thanks to <strong>Slick78</strong> for sharing this one. <span style="float:right;">Added April 2026</span></div>
       </div>
 
       <!-- DAY 4 -->

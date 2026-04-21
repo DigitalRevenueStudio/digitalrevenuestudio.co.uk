@@ -15,8 +15,9 @@
 <style>
   :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--white:#FFFFFF;--orange:#E8832A;--green:#2ECC71;--gold:#D4A82A;--text:#B8D4E8;--text-muted:#5A7A94;}
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--ice-dark);color:var(--text);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--ice-dark);color:var(--text);min-height:100vh;}
 
+  .sheet-wrap{display:flex;justify-content:center;padding:24px;}
   .sheet{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:8px;overflow:hidden;width:100%;max-width:560px;}
 
   .sheet-header{background:linear-gradient(135deg,#0a1628,#0f2040);padding:18px 22px;border-bottom:1px solid var(--ice-border);}
@@ -68,6 +69,9 @@
   .sheet-footer{padding:12px 22px;background:rgba(0,0,0,0.15);border-top:1px solid var(--ice-border);display:flex;flex-direction:column;gap:4px;}
   .footer-note{font-size:0.7rem;color:var(--text-muted);}
   .footer-note strong{color:var(--orange);}
+  .footer-tip{font-size:0.72rem;color:var(--text);padding:8px 0 4px;border-top:1px solid rgba(26,58,92,0.5);margin-top:4px;line-height:1.6;}
+  .footer-tip strong{color:var(--gold);}
+  .footer-tip-credit{font-size:0.68rem;color:var(--text-muted);margin-top:3px;}
 </style>
 </head>
 <body>
@@ -76,7 +80,7 @@
   <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5A7A94;text-decoration:none;">← Back to WOS Wiki</a>
 </div>
 
-<div class="sheet">
+<div class="sheet-wrap"><div class="sheet">
   <div class="sheet-header">
     <div class="sheet-eyebrow">&#9876; State vs State</div>
     <div class="sheet-title">SvS Prep Week</div>
@@ -203,8 +207,10 @@
   <div class="sheet-footer">
     <span class="footer-note">&#128081; <strong>All days:</strong> Wait for President skills before spending speedups or crystals.</span>
     <span class="footer-note">&#10052; <strong>Day 3 only:</strong> Level 26+ beasts &amp; Polar Terror rallies only. Do not start Day 2.</span>
+    <div class="footer-tip">&#128161; <strong>Day 3 Secret:</strong> When leading a Polar Terror rally, send only one troop with your heroes. The troop goes to the infirmary but your heroes return instantly, letting you launch another rally straight away. Every extra rally = another 30,000 points.</div>
+    <div class="footer-tip-credit">&#128172; Thanks to <strong>Slick78</strong> for this one &bull; Added April 2026</div>
   </div>
-</div>
+</div></div>
 
 
   <!-- WOS EMAIL SIGNUP -->
