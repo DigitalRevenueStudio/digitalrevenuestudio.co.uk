@@ -32,6 +32,19 @@
  .nav-links a:hover{color:var(--white);}
  .nav-cta{background:var(--ice-mid);color:var(--white) !important;padding:7px 16px;border-radius:3px;font-weight:600 !important;}
 
+
+ /* UPDATE TICKER */
+ .update-ticker{background:rgba(10,22,40,0.97);border-bottom:1px solid rgba(245,200,66,0.2);height:32px;overflow:hidden;display:flex;align-items:center;position:sticky;top:60px;z-index:99;}
+ .ticker-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);background:rgba(245,200,66,0.12);border-right:1px solid rgba(245,200,66,0.2);padding:0 14px;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0;}
+ .ticker-track{flex:1;overflow:hidden;position:relative;}
+ .ticker-inner{display:flex;gap:0;white-space:nowrap;animation:ticker-scroll 40s linear infinite;}
+ .ticker-inner:hover{animation-play-state:paused;}
+ @keyframes ticker-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+ .ticker-item{display:inline-flex;align-items:center;gap:6px;font-size:0.72rem;color:rgba(255,255,255,0.6);padding:0 28px;}
+ .ticker-item::before{content:'●';font-size:0.45rem;color:var(--gold);opacity:0.6;flex-shrink:0;}
+ .ticker-item a{color:var(--ice-glow);text-decoration:none;font-weight:600;}
+ .ticker-item a:hover{color:var(--white);}
+ .ticker-item .ticker-new{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(46,204,113,0.15);color:var(--green);border:1px solid rgba(46,204,113,0.3);padding:1px 5px;border-radius:2px;margin-right:2px;}
  /* HERO */
  .hero{background:linear-gradient(160deg,var(--arctic) 0%,var(--arctic-2) 50%,var(--arctic-3) 100%);padding:72px 32px 56px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
  .hero-frost{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(123,200,245,0.08) 0%,transparent 60%);pointer-events:none;}
@@ -213,6 +226,17 @@
  <li><a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" class="nav-cta">Shop</a></li>
  </ul>
  </nav>
+
+ <div class="update-ticker">
+   <div class="ticker-label">&#9889; Updates</div>
+   <div class="ticker-track">
+     <div class="ticker-inner">
+       <span class="ticker-item"><span class="ticker-new">New</span> <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-flame-and-fangs.html">Flame and Fangs guide</a> added — April 2026</span><span class="ticker-item"><span class="ticker-new">New</span> Gift code <strong style="color:var(--white);">Earth26</strong> active — <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">redeem now</a></span><span class="ticker-item"><span class="ticker-new">New</span> <a href="https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html">R4/R5 Alliance Chat Templates</a> — SvS prep, matchmaking and Flame and Fangs</span><span class="ticker-item"><span class="ticker-new">New</span> <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-svs-prep.html">SvS Prep guide</a> updated with matchmaking power reduction tactics</span><span class="ticker-item"><a href="https://www.digitalrevenuestudio.co.uk/wos-matchmaking-cheatsheet.html">SvS Matchmaking Cheat Sheet</a> — community consensus power reduction guide</span><span class="ticker-item">Gift code tracker updated — <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">check active codes</a></span>
+       <span class="ticker-item"><span class="ticker-new">New</span> <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-flame-and-fangs.html">Flame and Fangs guide</a> added — April 2026</span><span class="ticker-item"><span class="ticker-new">New</span> Gift code <strong style="color:var(--white);">Earth26</strong> active — <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">redeem now</a></span><span class="ticker-item"><span class="ticker-new">New</span> <a href="https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html">R4/R5 Alliance Chat Templates</a> — SvS prep, matchmaking and Flame and Fangs</span><span class="ticker-item"><span class="ticker-new">New</span> <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-svs-prep.html">SvS Prep guide</a> updated with matchmaking power reduction tactics</span><span class="ticker-item"><a href="https://www.digitalrevenuestudio.co.uk/wos-matchmaking-cheatsheet.html">SvS Matchmaking Cheat Sheet</a> — community consensus power reduction guide</span><span class="ticker-item">Gift code tracker updated — <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">check active codes</a></span>
+     </div>
+   </div>
+ </div>
+
 
  <header class="hero">
  <div class="hero-frost"></div>
