@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html" />
+  <title>R4/R5 Alliance Resources — Copy-Paste Chat Templates | WOS Wiki</title>
+  <meta name="description" content="Ready-to-use alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS alliance chat. SvS prep schedule, matchmaking tactics and more." />
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" /></noscript>
+  <style>
+    :root{
+      --ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;
+      --ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--white:#FFFFFF;
+      --orange:#E8832A;--green:#2ECC71;--gold:#D4A82A;--red:#C0392B;
+      --text:#B8D4E8;--text-muted:#5A7A94;--purple:#8A4FD4;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.06) 0%,transparent 70%);pointer-events:none;z-index:0;}
+
+    /* NAV */
+    .site-header{background:rgba(9,22,40,0.97);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .nav-links{display:flex;gap:20px;list-style:none;}
+    .nav-links a{font-size:0.8rem;font-weight:500;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--white);}
+
+    /* HERO */
+    .post-hero{position:relative;z-index:1;padding:64px 40px 40px;max-width:900px;margin:0 auto;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,168,42,0.3);background:rgba(212,168,42,0.06);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:16px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow',sans-serif;font-size:1rem;color:var(--text);line-height:1.75;max-width:640px;border-left:3px solid var(--gold);padding-left:18px;margin-bottom:24px;}
+
+    /* HOW TO USE */
+    .how-to{background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;max-width:900px;margin:0 auto 0;position:relative;z-index:1;}
+    .how-to-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:8px;}
+    .how-to-steps{display:flex;gap:32px;flex-wrap:wrap;}
+    .how-to-step{display:flex;align-items:flex-start;gap:10px;}
+    .how-to-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;color:var(--ice-bright);opacity:0.4;line-height:1;flex-shrink:0;}
+    .how-to-text{font-size:0.83rem;color:var(--text-muted);line-height:1.55;}
+    .how-to-text strong{color:var(--text);}
+
+    /* FROST DIVIDER */
+    .frost-divider{max-width:900px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--ice-bright) 50%,var(--ice-border) 80%,transparent);margin:32px 0;}
+
+    /* PAGE BODY */
+    .post-body{max-width:900px;margin:0 auto;padding:0 40px 80px;position:relative;z-index:1;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(77,168,218,0.3),transparent);}
+
+    /* TEMPLATE CARD */
+    .template-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;margin-bottom:32px;}
+    .template-header{background:rgba(77,168,218,0.08);border-bottom:1px solid var(--ice-border);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+    .template-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);}
+    .template-meta{font-size:0.72rem;color:var(--text-muted);}
+    .copy-btn{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.3);color:var(--ice-bright);padding:7px 16px;border-radius:3px;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+    .copy-btn:hover{background:var(--ice-bright);color:var(--ice-dark);}
+    .copy-btn.copied{background:rgba(46,204,113,0.15);border-color:rgba(46,204,113,0.3);color:var(--green);}
+
+    /* TEMPLATE TEXT BOX */
+    .template-text{padding:20px;font-family:'Barlow',monospace;font-size:0.88rem;line-height:1.8;color:var(--text);white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,0.2);border-bottom:1px solid var(--ice-border);user-select:all;cursor:text;}
+    .template-note{padding:12px 20px;font-size:0.75rem;color:var(--text-muted);line-height:1.6;}
+    .template-note strong{color:var(--text);}
+
+    /* CAVEAT BOX */
+    .caveat-box{background:rgba(138,79,212,0.07);border:1px solid rgba(138,79,212,0.2);border-left:3px solid var(--purple);border-radius:0 4px 4px 0;padding:14px 18px;margin-bottom:20px;}
+    .caveat-box p{font-size:0.85rem;color:var(--text);line-height:1.7;margin:0;}
+    .caveat-box strong{color:#b388f4;}
+
+    /* FOOTER */
+    footer{background:var(--ice-dark);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;margin-top:40px;}
+    footer p{font-size:0.72rem;color:var(--text-muted);}
+    footer a{color:var(--text-muted);text-decoration:none;}
+    footer a:hover{color:var(--ice-bright);}
+
+    @media(max-width:640px){
+      .site-header{padding:12px 20px;}
+      .nav-links{display:none;}
+      .post-hero,.post-body,.how-to,.frost-divider{padding-left:20px;padding-right:20px;}
+      .how-to-steps{flex-direction:column;gap:12px;}
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
+  <nav><ul class="nav-links">
+    <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
+    <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+    <li><a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community</a></li>
+    <li><a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html">Newsletter</a></li>
+  </ul></nav>
+</header>
+
+<div class="post-hero">
+  <div class="post-category">&#128081; R4 / R5 Resources</div>
+  <h1>Alliance Chat<br /><em>Templates</em></h1>
+  <p class="post-intro">Ready-formatted templates for R4 and R5 leaders. Each one is pre-formatted to display correctly in WOS alliance chat. Tap the copy button, paste into chat, send.</p>
+</div>
+
+<div class="how-to" style="padding:16px 40px 16px;">
+  <div class="how-to-label">&#128161; How to Use</div>
+  <div class="how-to-steps">
+    <div class="how-to-step">
+      <div class="how-to-num">1</div>
+      <div class="how-to-text"><strong>Tap Copy</strong> on the template you want</div>
+    </div>
+    <div class="how-to-step">
+      <div class="how-to-num">2</div>
+      <div class="how-to-text"><strong>Open WOS</strong> and go to Alliance Chat</div>
+    </div>
+    <div class="how-to-step">
+      <div class="how-to-num">3</div>
+      <div class="how-to-text"><strong>Long press</strong> the chat input and tap Paste</div>
+    </div>
+    <div class="how-to-step">
+      <div class="how-to-num">4</div>
+      <div class="how-to-text"><strong>Send.</strong> Formatting displays automatically</div>
+    </div>
+  </div>
+</div>
+
+<div class="frost-divider"></div>
+
+<div class="post-body">
+
+  <!-- TEMPLATE 1: SVS PREP SCHEDULE -->
+  <div id="svs-prep" class="section-label">&#9876; State vs State</div>
+
+  <div class="template-card">
+    <div class="template-header">
+      <div>
+        <div class="template-title">SvS Prep Week Schedule</div>
+        <div class="template-meta">5-day task schedule for the full alliance. Matches Slick78's original format.</div>
+      </div>
+      <button class="copy-btn" onclick="copyTemplate('svs-prep')">&#128203; Copy</button>
+    </div>
+    <div class="template-text" id="svs-prep">SVS Prep Week 
+🔱 SvS Prep ✅ Best To-Do
+１　２　３　４　５：day
+🆗｜－｜🆗｜✅｜－：🌟Charms
+✅｜🆗｜－｜－｜🆗：🌺FC
+✅｜🆗｜－｜🆗｜🆗：Building 
+－｜✅｜✅｜－｜－：Wheel
+－｜✅｜✅｜－｜－：Shards
+－｜✅｜－｜－｜－：Gathering
+－｜－｜🆗｜－｜✅：🐱Pets
+－｜－｜✅｜－｜－：🔪Hunting 
+－｜－｜－｜🆗｜✅：Hero Gear   －｜－｜－｜✅｜－：Training   －｜－｜－｜－｜✅：👕Chief Gear    －｜－｜－｜－｜✅：Research</div>
+    <div class="template-note">
+      <div style="margin-bottom:6px;color:var(--ice-bright);font-size:0.72rem;font-weight:600;">&#128203; Tap Copy above, then paste directly into WOS alliance chat.</div>
+      <span style="opacity:0.7;">&#9989; Best day &nbsp;&bull;&nbsp; <span style="display:inline-block;background:rgba(77,168,218,0.2);border:1px solid rgba(77,168,218,0.4);color:var(--ice-bright);font-size:0.68rem;padding:1px 5px;border-radius:2px;font-family:monospace;vertical-align:middle;">OK</span> Secondary window &nbsp;&bull;&nbsp; &#xFF0D; Hold, wrong day</span>
+      <div style="margin-top:6px;font-size:0.7rem;color:var(--muted);">Note: preview may look different to in-game. The copied text formats correctly in WOS chat.</div>
+    </div>
+  </div>
+
+  <!-- TEMPLATE 2: MATCHMAKING TACTICS -->
+  <div id="matchmaking" class="section-label">&#128203; Matchmaking</div>
+
+  <div class="template-card">
+    <div class="template-header">
+      <div>
+        <div class="template-title">Matchmaking Power Reduction</div>
+        <div class="template-meta">Saturday &ndash; Sunday UTC coordination message</div>
+      </div>
+      <button class="copy-btn" onclick="copyTemplate('mm1')">&#128203; Copy</button>
+    </div>
+    <div class="template-text" id="mm1">⚔️ SvS Matchmaking Window
+📅 Sat & Sun UTC only
+🔹 Reduce state power:
+✅ Remove ALL hero gear
+✅ Drill Camp reset heroes
+🆗 Fill infirmaries
+🆗 Burn inactive troops
+🔹 Coordinate top 100-150:
+✅ All act SAME TIME
+✅ Re-equip after Sunday</div>
+    <div class="template-note">
+      <strong>Tip:</strong> Pin this in alliance chat before the matchmaking window opens. Remind members the evening before to be ready.
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(77,168,218,0.15);color:var(--text-muted);">&#9888; <strong style="color:rgba(138,79,212,0.8);">Community consensus only.</strong> Developers state power reduction does not affect matchmaking. The community broadly disagrees. The risk of trying is zero. Apply your own judgement before sharing with your alliance.</div>
+    </div>
+  </div>
+
+
+  <!-- TEMPLATE 3: FLAME AND FANGS -->
+  <div id="flame-and-fangs" class="section-label">&#x1F525; Flame and Fangs</div>
+
+  <div class="template-card">
+    <div class="template-header">
+      <div>
+        <div class="template-title">Flame and Fangs Schedule</div>
+        <div class="template-meta">Send 1&ndash;2 days before event starts</div>
+      </div>
+      <button class="copy-btn" onclick="copyTemplate('fnf')">&#128203; Copy</button>
+    </div>
+    <div class="template-text" id="fnf">🔥 Flame & Fangs Schedule
+📅 Mon & Tue (SoP/SvS weeks)
+🔹 UTC  ✅Complete  ✅Claim
+――――――――――――
+🔹 SUNDAY NIGHT:
+00:00  ✅  ✅
+08:00  ✅  ⏳HOLD
+16:00  ❌  ❌
+――――――――――――
+🔹 MON + TUE:
+00:00⭐  ✅  ✅+held
+08:00  ✅  ✅
+16:00  ✅  ✅
+――――――――――――
+⭐Hold Sun 08:00 = +16 cores
+💡Spend cores before event ends!</div>
+    <div class="template-note">
+      <div style="margin-bottom:6px;color:var(--ice-bright);font-size:0.72rem;font-weight:600;">&#128203; Tap Copy above, then paste directly into WOS alliance chat.</div>
+      <div style="font-size:0.7rem;color:var(--text-muted);">&#11088; The 00:00* Monday session collects Sunday&rsquo;s held missions for bonus cores. &nbsp;&bull;&nbsp; Note: preview may look different to in-game.</div>
+      <div style="margin-top:6px;font-size:0.72rem;"><a href="https://www.digitalrevenuestudio.co.uk/wos-guide-flame-and-fangs.html" style="color:var(--ice-bright);text-decoration:none;">Full Flame and Fangs guide &rarr;</a></div>
+    </div>
+  </div>
+
+  <!-- MORE COMING -->
+  <div style="background:rgba(77,168,218,0.04);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;text-align:center;margin-top:16px;">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">More Templates Coming</div>
+    <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:480px;margin:0 auto;">Bear Hunt coordination and Alliance Championship lane strategy are in the build queue. <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="color:var(--ice-bright);text-decoration:none;">Request a template &rarr;</a></p>
+  </div>
+
+</div>
+
+<!-- COMMUNITY FEEDBACK -->
+<div style="max-width:900px;margin:0 auto;padding:0 40px 48px;">
+  <div style="background:rgba(77,168,218,0.05);border:1px solid rgba(26,58,92,0.8);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:#4DA8DA;margin-bottom:6px;">&#128172; Spot an Error or Have a Tip?</div>
+      <p style="font-size:0.82rem;color:#5A7A94;margin:0;line-height:1.65;">If a template is wrong, a tactic is outdated, or you have a format that works better in your alliance chat, let us know. Corrections are made fast.</p>
+    </div>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:#4DA8DA;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;">Submit Feedback &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <p>WOS Wiki &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community Hub</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy</a></p>
+</footer>
+
+<script>
+function copyTemplate(id) {
+  const el = document.getElementById(id);
+  const text = el.innerText;
+  const btn = el.parentElement.querySelector('.copy-btn');
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copied';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = '&#128203; Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  } else {
+    // Fallback for older browsers
+    const range = document.createRange();
+    range.selectNode(el);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    btn.textContent = '✓ Copied';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.innerHTML = '&#128203; Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  }
+}
+</script>
+
+</body>
+</html>
