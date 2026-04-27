@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-blog-11-community-review.html" />
+  <title>Why We Added Community Review to Every WOS Guide | WOS Wiki</title>
+  <meta name="description" content="Anyone can publish a guide. Not everyone gets it checked by players who actually compete at a high level. Here is why we built community review into the WOS Wiki." />
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" /></noscript>
+  <style>
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--purple:#8A4FD4;--cat-color:#8A4FD4;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
+    .nav-links{display:flex;gap:20px;list-style:none;}
+    .nav-links a{font-size:0.82rem;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;}
+    .nav-links a:hover{color:var(--white);}
+    .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cat-color);border:1px solid rgba(var(--cat-color),0.3);background:rgba(77,168,218,0.06);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
+    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
+    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.05rem;color:var(--text);line-height:1.75;max-width:660px;border-left:3px solid var(--cat-color);padding-left:18px;margin-bottom:24px;}
+    .post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .meta-item{font-size:0.75rem;font-weight:600;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;}
+    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;}
+    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--cat-color) 50%,var(--ice-border) 80%,transparent);margin:0 0 40px;}
+    .post-body{max-width:860px;margin:0 auto;padding:0 40px 80px;position:relative;z-index:1;}
+    .post-body p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:18px;}
+    .post-body h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);text-transform:uppercase;line-height:1.05;margin:40px 0 12px;}
+    .post-body h2 em{font-style:normal;color:var(--ice-glow);}
+    .post-body strong{color:var(--white);}
+    .post-body a{color:var(--ice-bright);text-decoration:none;}
+    .post-body a:hover{color:var(--white);}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--cat-color);margin:44px 0 18px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(77,168,218,0.2),transparent);}
+    .callout{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--cat-color);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
+    .callout p{font-size:0.92rem;margin:0;line-height:1.75;}
+    .callout strong{color:var(--white);}
+    .highlight-box{background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-top:2px solid var(--cat-color);border-radius:2px 2px 4px 4px;padding:20px 24px;margin:24px 0;}
+    .highlight-box-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--cat-color);margin-bottom:10px;}
+    .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
+    .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
+    .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:18px;}
+    .cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .cta-btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 26px;border-radius:3px;text-decoration:none;}
+    .cta-btn.primary{background:var(--cat-color);color:var(--white);}
+    .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text);}
+    .sign-off{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:32px 0 8px;}
+    .kofi-wrap{text-align:center;padding:24px 0 8px;border-top:1px solid var(--ice-border);margin-top:32px;}
+    .kofi-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;}
+    footer{background:var(--ice-panel);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;}
+    footer p{font-size:0.72rem;color:var(--text-muted);}
+    footer a{color:var(--text-muted);text-decoration:none;}
+    @media(max-width:640px){.site-header{padding:12px 20px;}.nav-links{display:none;}.post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
+    <nav><ul class="nav-links">
+      <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-blog.html">Blog</a></li>
+    </ul></nav>
+  </header>
+
+  <section class="post-hero">
+    <div class="post-category">Community</div>
+    <h1>Why We Added Community Review<br /><em>to Every Guide</em></h1>
+    <p class="post-intro">Anyone can publish a guide. Not everyone gets it checked by players who actually compete at a high level. Here is why we built community review into the wiki from the ground up.</p>
+    <div class="post-meta">
+      <span class="meta-item">Digit &bull; Digital Revenue Studio</span>
+      <span class="meta-item">April 2026</span>
+    </div>
+  </section>
+
+  <div class="frost-divider"></div>
+
+  <div class="post-body">
+
+    <p>Most game guides are written by one person, published once, and never checked by anyone who actually plays at a high level. Sometimes they are accurate. Sometimes they repeat outdated information that was true six months ago. Often there is no way to tell which is which.</p>
+
+    <p>We wanted to do something different with the WOS Wiki.</p>
+
+    <h2>What Community Review <em>Actually Means</em></h2>
+
+    <p>Every guide on the WOS Wiki that covers competitive content: SvS prep, Bear Hunt, Foundry Battle, the server timeline — goes through a community review process before it is marked as reviewed. That means a real player, named and credited, has read it, checked the tactics against their actual experience, and either confirmed it or flagged corrections.</p>
+
+    <p>Reviewers are credited at the bottom of every guide with their name, alliance tag and state number. This is not just a credibility signal. It means that if something changes or a reviewer spots an error later, we know who to contact and the information can be updated quickly.</p>
+
+    <div class="callout">
+      <p><strong>Guides under community review</strong> are marked clearly in the wiki index. They are live and readable but flagged as not yet independently verified. Guides marked as community reviewed have been checked by at least one active competitive player.</p>
+    </div>
+
+    <h2>Why We Did Not Just <em>Publish and Move On</em></h2>
+
+    <p>The honest answer is that no single person has full knowledge of every aspect of WOS at a competitive level. Alliance Championship, Foundry Battle, high-level SvS — these events play out differently depending on your state age, your alliance strength and your position in the meta. A guide written purely from one perspective is going to have blind spots.</p>
+
+    <p>Community review does not fix everything but it catches the obvious errors and it forces us to be honest about what we know versus what we think we know.</p>
+
+    <h2>How to <em>Get Involved</em></h2>
+
+    <p>If you play WOS at a competitive level and you spot something wrong in a guide, or you think a guide would benefit from your experience, the <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">community hub</a> is the place to start. Corrections are credited and made fast. If you want to formally review a guide, reach out through the community page.</p>
+
+
+    <p class="sign-off">Digit &mdash; Digital Revenue Studio</p>
+
+    <div class="post-cta">
+      <h3>The Wiki is Free. <em>Always.</em></h3>
+      <p>Every guide, event walkthrough and gift code tracker on this wiki is completely free.</p>
+      <div class="cta-buttons">
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-community-review.html" class="cta-btn primary">Guides Under Review</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" class="cta-btn secondary">Submit Feedback</a>
+      </div>
+    </div>
+
+    <div class="kofi-wrap">
+      <p class="kofi-note">If this helped, you can support the project on Ko-fi. Completely optional.</p>
+      <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+      <script>kofiwidget2.init('Support on Ko-fi', '#D4A82A', 'M4M71VM8J6');kofiwidget2.draw();</script>
+    </div>
+  </div>
+
+  <footer>
+    <p>WOS Wiki &mdash; <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-blog.html">Blog</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-matchmaking-cheatsheet.html" />
+<title>WOS SvS Matchmaking Tactics Cheat Sheet — Power Reduction Guide | WOS Wiki</title>
+<meta name="description" content="Community consensus tactics for reducing state power before the Whiteout Survival SvS matchmaking window. Hero gear removal, Drill Camp resets, infirmary packing and coordination guide." />
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-EWFNWGYHH9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-EWFNWGYHH9');</script>
+<style>
+  :root{
+    --ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;
+    --ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--white:#FFFFFF;
+    --orange:#E8832A;--green:#2ECC71;--gold:#D4A82A;
+    --text:#B8D4E8;--text-muted:#5A7A94;--purple:#8A4FD4;--red:#C0392B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--ice-dark);color:var(--text);min-height:100vh;}
+
+  .sheet-wrap{display:flex;justify-content:center;padding:24px;}
+  .sheet{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:8px;overflow:hidden;width:100%;max-width:580px;}
+
+  /* HEADER */
+  .sheet-header{background:linear-gradient(135deg,#0a1628,#0f2040);padding:18px 22px;border-bottom:2px solid var(--orange);}
+  .sheet-eyebrow{font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+  .sheet-title{font-size:1.3rem;font-weight:900;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);line-height:1.1;}
+  .sheet-subtitle{font-size:0.75rem;color:var(--text-muted);margin-top:4px;}
+
+  /* CAVEAT — prominent, first thing seen */
+  .caveat-block{background:rgba(138,79,212,0.08);border-bottom:1px solid rgba(138,79,212,0.2);padding:14px 20px;display:flex;gap:12px;align-items:flex-start;}
+  .caveat-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+  .caveat-text{font-size:0.78rem;color:var(--text);line-height:1.65;}
+  .caveat-text strong{color:#b388f4;}
+
+  /* WINDOW STRIP */
+  .window-strip{background:rgba(232,131,42,0.07);border-bottom:1px solid var(--ice-border);padding:10px 20px;display:flex;align-items:center;gap:10px;}
+  .window-label{font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--orange);}
+  .window-value{font-size:0.82rem;color:var(--white);font-weight:600;}
+  .window-note{font-size:0.72rem;color:var(--text-muted);margin-left:auto;}
+
+  /* TACTICS */
+  .tactics-list{padding:16px 20px;display:flex;flex-direction:column;gap:10px;}
+  .tactic-row{background:rgba(255,255,255,0.02);border:1px solid var(--ice-border);border-left:3px solid var(--orange);border-radius:0 4px 4px 0;padding:12px 16px;display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:start;}
+  .tactic-num{font-family:monospace;font-weight:700;font-size:0.85rem;color:var(--orange);opacity:0.5;padding-top:1px;}
+  .tactic-content{}
+  .tactic-title{font-size:0.85rem;font-weight:700;color:var(--white);margin-bottom:3px;}
+  .tactic-desc{font-size:0.76rem;color:var(--text-muted);line-height:1.55;}
+  .impact-badge{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;white-space:nowrap;margin-top:2px;}
+  .impact-high{background:rgba(46,204,113,0.1);color:var(--green);border:1px solid rgba(46,204,113,0.2);}
+  .impact-med{background:rgba(212,168,42,0.1);color:var(--gold);border:1px solid rgba(212,168,42,0.2);}
+  .impact-top{background:rgba(77,168,218,0.1);color:var(--ice-bright);border:1px solid rgba(77,168,218,0.2);}
+
+  /* COORDINATION NOTE */
+  .coord-block{margin:0 20px 16px;background:rgba(77,168,218,0.05);border:1px solid rgba(77,168,218,0.15);border-radius:4px;padding:12px 16px;}
+  .coord-label{font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;}
+  .coord-steps{display:flex;flex-direction:column;gap:4px;}
+  .coord-step{font-size:0.76rem;color:var(--text-muted);display:flex;gap:8px;align-items:baseline;}
+  .coord-step-num{color:var(--ice-bright);font-weight:700;flex-shrink:0;width:14px;}
+
+  /* FOOTER */
+  .sheet-footer{padding:12px 20px;background:rgba(0,0,0,0.15);border-top:1px solid var(--ice-border);display:flex;flex-direction:column;gap:4px;}
+  .footer-note{font-size:0.7rem;color:var(--text-muted);}
+  .footer-note strong{color:var(--orange);}
+  .footer-link{font-size:0.7rem;color:var(--ice-bright);text-decoration:none;}
+  .footer-link:hover{color:var(--white);}
+</style>
+</head>
+<body>
+
+<div style="text-align:center;padding:10px 20px;background:#050D1A;border-bottom:1px solid #1A3A5C;">
+  <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-svs-prep.html" style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5A7A94;text-decoration:none;">&#8592; Back to SvS Prep Guide</a>
+</div>
+
+<div class="sheet-wrap">
+<div class="sheet">
+
+  <div class="sheet-header">
+    <div class="sheet-eyebrow">&#9876; State vs State — Pre-Match</div>
+    <div class="sheet-title">Matchmaking<br />Power Reduction</div>
+    <div class="sheet-subtitle">Community tactics for the Saturday–Sunday UTC matchmaking window</div>
+  </div>
+
+  <!-- CAVEAT — always first -->
+  <div class="caveat-block">
+    <span class="caveat-icon">&#9888;</span>
+    <div class="caveat-text"><strong>Community consensus — not officially confirmed.</strong> The developers state that power reduction does not influence matchmaking. However, many experienced players report consistently favourable matches after coordinated power drops. The community broadly agrees it helps. The risk of trying is zero — worst case is your normal match. Apply your own judgement.</div>
+  </div>
+
+  <!-- WINDOW -->
+  <div class="window-strip">
+    <span class="window-label">&#128197; Window</span>
+    <span class="window-value">Saturday and Sunday UTC</span>
+    <span class="window-note">Actions outside this window have no effect</span>
+  </div>
+
+  <!-- TACTICS -->
+  <div class="tactics-list">
+
+    <div class="tactic-row">
+      <div class="tactic-num">01</div>
+      <div class="tactic-content">
+        <div class="tactic-title">Remove Hero Gear</div>
+        <div class="tactic-desc">Unequip all hero gear from top heroes before the window opens. Hero gear is the largest single contributor to individual power — removing it creates the biggest single drop.</div>
+      </div>
+      <span class="impact-badge impact-high">High</span>
+    </div>
+
+    <div class="tactic-row">
+      <div class="tactic-num">02</div>
+      <div class="tactic-content">
+        <div class="tactic-title">Reset Hero Levels via Drill Camp</div>
+        <div class="tactic-desc">Use the Drill Camp reset to lower hero levels during the window. Reduces hero power contribution to matchmaking calculations. Once per hero per day — time it carefully.</div>
+      </div>
+      <span class="impact-badge impact-high">High</span>
+    </div>
+
+    <div class="tactic-row">
+      <div class="tactic-num">03</div>
+      <div class="tactic-content">
+        <div class="tactic-title">Fill Infirmaries</div>
+        <div class="tactic-desc">Pack infirmaries with troops before the window. Injured troops still count toward paper power but cannot be deployed — reducing effective fighting strength in the match evaluation.</div>
+      </div>
+      <span class="impact-badge impact-med">Medium</span>
+    </div>
+
+    <div class="tactic-row">
+      <div class="tactic-num">04</div>
+      <div class="tactic-content">
+        <div class="tactic-title">Clear Inactive Player Troops</div>
+        <div class="tactic-desc">Identify players inactive for 20 or more days. Their power still contributes to matchmaking. State leadership burning inactive troops before the window removes dead weight from the state's evaluated power.</div>
+      </div>
+      <span class="impact-badge impact-med">Medium</span>
+    </div>
+
+    <div class="tactic-row">
+      <div class="tactic-num">05</div>
+      <div class="tactic-content">
+        <div class="tactic-title">Coordinate Top 100–150 Players Simultaneously</div>
+        <div class="tactic-desc">The algorithm weighs top players most heavily. Scattered individual actions have little effect. Simultaneous gear removal and hero resets across the top 100 to 150 produces the largest collective power drop. R4/R5 must organise this.</div>
+      </div>
+      <span class="impact-badge impact-top">Highest</span>
+    </div>
+
+  </div>
+
+  <!-- COORDINATION STEPS -->
+  <div class="coord-block">
+    <div class="coord-label">&#128172; How to Coordinate</div>
+    <div class="coord-steps">
+      <div class="coord-step"><span class="coord-step-num">1.</span><span>R4/R5 agrees an exact time in state Discord or alliance chat</span></div>
+      <div class="coord-step"><span class="coord-step-num">2.</span><span>All top 100 to 150 players act simultaneously — ideally within the same hour</span></div>
+      <div class="coord-step"><span class="coord-step-num">3.</span><span>Remove gear and reset heroes at the same time for maximum combined drop</span></div>
+      <div class="coord-step"><span class="coord-step-num">4.</span><span>Re-equip gear after the window closes — Sunday UTC end</span></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="sheet-footer">
+    <span class="footer-note">&#9876; <strong>Remember:</strong> Individual actions have minimal effect. This only works as a coordinated state effort.</span>
+    <span class="footer-note">&#9888; <strong>Caveat:</strong> Community consensus only. Developers state this does not affect matchmaking.</span>
+    <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-svs-prep.html" class="footer-link">Full SvS Prep Guide &rarr;</a>
+  </div>
+
+</div>
+</div>
+
+<!-- WOS EMAIL SIGNUP -->
+<section style="background:#0D1F38;padding:48px 40px;border-top:1px solid rgba(26,58,92,0.8);">
+  <div style="max-width:480px;margin:0 auto;text-align:center;">
+    <div style="font-family:'Segoe UI',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">WOS Guide Newsletter</div>
+    <h3 style="font-family:'Segoe UI',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);margin-bottom:10px;">New guides, gift codes and event tips</h3>
+    <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:24px;line-height:1.7;">Get notified when new F2P guides land and gift codes drop. WOS players only.</p>
+    <div style="background:#091628;border:1px solid rgba(212,168,42,0.2);border-top:3px solid var(--gold);border-radius:3px;padding:20px;text-align:left;">
+      <div class="sender-form-field" data-sender-form-id="dwpqlX"></div>
+    </div>
+    <p style="font-size:0.72rem;color:rgba(255,255,255,0.2);margin-top:10px;">No spam. Unsubscribe any time.</p>
+  </div>
+</section>
+
+<footer style="background:#050D1A;padding:16px 40px;border-top:1px solid rgba(26,58,92,0.6);text-align:center;">
+  <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);">&copy; 2026 WOS Wiki &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk" style="color:rgba(255,255,255,0.3);text-decoration:none;">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy</a></p>
+</footer>
+
+<script src="https://cdn.sender.net/accounts_resources/universal.js" async></script>
+<script>sender('84286577fb8740')</script>
+
+</body>
+</html>
