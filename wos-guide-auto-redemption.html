@@ -1,214 +1,317 @@
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" media="print" onload="this.media=\'all\'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:ital,wght@1,400;1,500&display=swap" /></noscript>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-guide-auto-redemption.html" />
+  <title>WOS Rewards Auto Redemption: An Honest Review | WOS Wiki</title>
+  <meta name="description" content="An honest review of WOS Rewards, the third-party tool that redeems active Whiteout Survival gift codes to your account. What the free tier does, who the paid tier is for, and whether it is worth using." />
+  <script defer src="/drs-consent.js"></script>
 
-    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--frost:#C8E8F8;--white:#FFFFFF;--orange:#E8832A;--red:#C0392B;--green:#2ECC71;--text:#B8D4E8;--text-muted:#5A7A94;--gold:#D4A82A;--accent:#1ABC9C;}
+  <meta property="og:title" content="WOS Rewards Auto Redemption: An Honest Review | WOS Wiki" />
+  <meta property="og:description" content="An honest review of WOS Rewards, the third-party tool that redeems active Whiteout Survival gift codes to your account. What the free tier does, who the paid tier is for, and whether it is worth using." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-wos.png" />
+  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-guide-auto-redemption.html" />
+  <meta property="og:site_name" content="Whiteout Survival Guide | WOS Wiki" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WOS Rewards Auto Redemption: An Honest Review | WOS Wiki" />
+  <meta name="twitter:description" content="An honest review of WOS Rewards, the third-party tool that redeems active Whiteout Survival gift codes to your account. What the free tier does, who the paid tier is for, and whether it is worth using." />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "WOS Rewards Auto Redemption: An Honest Review", "description": "An honest review of WOS Rewards, the third-party tool that redeems active Whiteout Survival gift codes to your account. What the free tier does, who the paid tier is for, and whether it is worth using.", "url": "https://www.digitalrevenuestudio.co.uk/wos-guide-auto-redemption.html", "datePublished": "2026-03-15", "dateModified": "2026-10-08", "author": {"@type": "Person", "name": "Digit"}, "publisher": {"@type": "Organization", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "WOS Wiki", "item": "https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html"}, {"@type": "ListItem", "position": 2, "name": "WOS Rewards Auto Redemption", "item": "https://www.digitalrevenuestudio.co.uk/wos-guide-auto-redemption.html"}]}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" /></noscript>
+  <style>
+    :root{--ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-mid:#091628;--ice-border:#1A3A5C;--ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--gold:#D4A82A;--white:#FFFFFF;--text:#B8D4E8;--text-muted:#5A7A94;--green:#2ECC71;--red:#E74C3C;--orange:#E8832A;--purple:#8A4FD4;}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     html{scroll-behavior:smooth;}
     body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
-    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.07) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(232,131,42,0.06) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(77,168,218,0.012) 80px,rgba(77,168,218,0.012) 81px);pointer-events:none;z-index:0;}
+
+    .secret-tip{background:rgba(212,168,42,0.07);border:1px solid rgba(212,168,42,0.3);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:20px 24px;margin:20px 0;}
+    .secret-tip-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+    .secret-tip-icon{font-size:1.2rem;line-height:1;}
+    .secret-tip-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+    .secret-tip p{font-size:0.92rem;color:var(--text);line-height:1.75;margin:0 0 10px;}
+    .secret-tip p:last-of-type{margin-bottom:0;}
+    .secret-tip-credit{font-size:0.75rem;color:var(--text-muted);margin-top:12px;padding-top:10px;border-top:1px solid rgba(212,168,42,0.15);}
+    .secret-tip-credit strong{color:var(--gold);}
+
+    .matchmaking-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:20px 0 24px;}
+    .mm-card{background:rgba(232,131,42,0.05);border:1px solid rgba(232,131,42,0.2);border-top:2px solid var(--orange);border-radius:4px;padding:16px 18px;}
+    .mm-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:var(--orange);opacity:0.35;line-height:1;margin-bottom:6px;}
+    .mm-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:6px;}
+    .mm-body{font-size:0.83rem;color:var(--text-muted);line-height:1.6;}
+    .mm-impact{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-top:8px;display:inline-block;}
+    .impact-high{background:rgba(46,204,113,0.1);color:var(--green);border:1px solid rgba(46,204,113,0.2);}
+    .impact-med{background:rgba(212,168,42,0.1);color:var(--gold);border:1px solid rgba(212,168,42,0.2);}
+    .community-caveat{background:rgba(138,79,212,0.07);border:1px solid rgba(138,79,212,0.25);border-left:4px solid var(--purple);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
+    .community-caveat-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;}
+    .community-caveat p{font-size:0.88rem;color:var(--text);line-height:1.75;margin:0;}
+    /* NAV */
     .site-header{background:rgba(9,22,40,0.95);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
     .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
     .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
-    .header-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);}
+    .nav-links{display:flex;gap:20px;list-style:none;}
+    .nav-links a{font-size:0.82rem;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--white);}
+    /* HERO */
     .post-hero{position:relative;z-index:1;padding:72px 40px 48px;max-width:860px;margin:0 auto;}
-    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(26,188,156,0.3);background:rgba(26,188,156,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(232,131,42,0.3);background:rgba(232,131,42,0.08);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
     .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.8rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:20px;}
     .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
-    .post-intro{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;font-size:1.1rem;color:var(--text);line-height:1.7;max-width:680px;border-left:3px solid var(--accent);padding-left:20px;margin-bottom:28px;}
-    .post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-    .meta-item{font-size:0.78rem;font-weight:600;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
-    .meta-item .dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0;}
-    .frost-divider{max-width:860px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
-    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--accent) 50%,var(--ice-border) 80%,transparent);}
-    .post-body{max-width:860px;margin:0 auto;padding:40px 40px 80px;position:relative;z-index:1;}
-    .post-body p{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
-    .post-body h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);text-transform:uppercase;line-height:1.05;margin:44px 0 14px;}
-    .post-body h2 em{font-style:normal;color:var(--ice-glow);}
-    .post-body strong{color:var(--white);}
-    .post-body a{color:var(--ice-bright);text-decoration:none;}
-    .post-body a:hover{color:var(--white);}
-    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
-    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(26,188,156,0.3),transparent);}
-    .callout{background:var(--ice-panel);border:1px solid var(--ice-border);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;padding:16px 20px;margin:20px 0;}
-    .callout.gold{border-left-color:var(--gold);}
-    .callout.green{border-left-color:var(--green);}
-    .callout.red{border-left-color:var(--red);}
-    .callout p{font-size:0.92rem;margin:0;line-height:1.75;color:var(--text);}
-    .callout strong{color:var(--white);}
-    .steps-list{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
-    .step-item{display:flex;gap:14px;align-items:flex-start;background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 18px;}
-    .step-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--accent);opacity:0.5;line-height:1;min-width:24px;flex-shrink:0;}
-    .step-text{font-size:0.92rem;color:var(--text);line-height:1.65;}
-    .step-text strong{color:var(--white);}
-    .sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:20px 0;}
-    .source-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 16px;font-size:0.88rem;color:var(--text);line-height:1.6;display:flex;gap:10px;align-items:flex-start;}
-    .source-item::before{content:'\203A';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px;}
-    .tier-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
-    .tier-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
-    .tier-header{padding:12px 18px;border-bottom:1px solid var(--ice-border);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;}
-    .tier-free .tier-header{background:rgba(26,188,156,0.08);color:var(--accent);}
-    .tier-paid .tier-header{background:rgba(212,168,42,0.08);color:var(--gold);}
-    .tier-body{padding:14px 18px;font-size:0.88rem;color:var(--text);line-height:1.65;}
-    .wiki-cta{background:rgba(26,188,156,0.06);border:1px solid rgba(26,188,156,0.2);border-radius:4px;padding:16px 20px;margin:24px 0;display:flex;gap:14px;align-items:center;}
-    .wiki-cta-icon{font-size:1.4rem;flex-shrink:0;}
-    .wiki-cta-text{font-size:0.9rem;color:var(--text);line-height:1.6;}
-    .wiki-cta-text a{color:var(--accent);font-weight:600;text-decoration:none;}
-    .wiki-cta-text a:hover{color:var(--white);}
+    .post-intro{font-size:1.05rem;color:var(--text-muted);max-width:620px;line-height:1.75;margin-bottom:24px;}
+    .meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .meta-item{font-size:0.75rem;font-weight:600;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;}
+    .meta-updated{font-size:0.75rem;font-weight:700;color:var(--green);letter-spacing:0.08em;text-transform:uppercase;}
+    .dot{width:3px;height:3px;border-radius:50%;background:var(--text-muted);display:inline-block;}
+    /* BODY */
+    .post-body{max-width:860px;margin:0 auto;padding:0 40px 80px;position:relative;z-index:1;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:44px 0 20px;display:flex;align-items:center;gap:12px;}
+    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--ice-border),transparent);}
+    h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.6rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:16px;line-height:1.1;}
+    h2 em{font-style:normal;color:var(--ice-glow);}
+    p{color:var(--text);line-height:1.8;margin-bottom:14px;}
+    /* CALLOUTS */
+    .callout{background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;margin:24px 0;}
+    .callout.gold{border-left-color:var(--gold);background:rgba(212,168,42,0.05);}
+    .callout.green{border-left-color:var(--green);background:rgba(46,204,113,0.05);}
+    .callout.red{border-left-color:var(--red);background:rgba(231,76,60,0.05);}
+    .callout p{margin:0;font-size:0.9rem;}
+    /* QUICK SUMMARY */
+    .qs-box{background:var(--ice-panel);border:1px solid var(--ice-border);border-top:3px solid var(--gold);border-radius:4px;padding:24px 28px;margin-bottom:32px;}
+    .qs-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .qs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+    .qs-item-label{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px;}
+    .qs-item-value{font-size:0.88rem;color:var(--text);line-height:1.7;}
+    .qs-item-value.bad{color:var(--red);font-weight:600;}
+    /* DAY CARDS */
+    .day-cards{display:flex;flex-direction:column;gap:12px;margin:24px 0 32px;}
+    .day-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .day-header{display:flex;align-items:center;gap:14px;padding:13px 20px;border-bottom:1px solid var(--ice-border);}
+    .day-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;line-height:1;min-width:32px;flex-shrink:0;}
+    .d1 .day-num{color:#4DA8DA;} .d1 .day-header{background:rgba(77,168,218,0.06);}
+    .d2 .day-num{color:#1ABC9C;} .d2 .day-header{background:rgba(26,188,156,0.06);}
+    .d3 .day-num{color:#E74C3C;} .d3 .day-header{background:rgba(231,76,60,0.06);}
+    .d4 .day-num{color:#8A4FD4;} .d4 .day-header{background:rgba(138,79,212,0.06);}
+    .d5 .day-num{color:#D4A82A;} .d5 .day-header{background:rgba(212,168,42,0.06);}
+    .day-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);}
+    .day-sub{font-size:0.78rem;color:var(--text-muted);margin-top:3px;}
+    .day-body{padding:14px 20px;display:flex;flex-direction:column;gap:12px;}
+    .task-group-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:6px;}
+    .label-do{color:var(--green);}
+    .label-save{color:var(--red);}
+    .label-warn{color:var(--orange);}
+    .label-note{color:var(--ice-glow);}
+    /* Task items */
+    .task-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+    .task-list li{font-size:0.88rem;color:var(--text);display:flex;gap:10px;align-items:flex-start;line-height:1.55;}
+    .task-list li .ti{flex-shrink:0;margin-top:1px;font-weight:700;font-size:0.85rem;}
+    .task-list li.do .ti{color:var(--green);}
+    .task-list li.save .ti{color:var(--red);}
+    .task-list li.warn .ti{color:var(--orange);}
+    .task-list li.note .ti{color:var(--ice-glow);}
+    .task-list li .tc{flex:1;}
+    .task-list li .tc strong{color:var(--white);display:block;margin-bottom:1px;}
+    .task-list li .tc span{color:var(--text-muted);font-size:0.82rem;line-height:1.45;}
+    /* President bar */
+    .president-bar{background:rgba(138,79,212,0.08);border:1px solid rgba(138,79,212,0.2);border-radius:3px;padding:10px 14px;font-size:0.82rem;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start;line-height:1.55;}
+    .president-bar::before{content:'';}
+    /* MISTAKE ITEMS */
+    .mistake-item{background:rgba(231,76,60,0.06);border:1px solid rgba(231,76,60,0.2);border-left:3px solid var(--red);border-radius:0 4px 4px 0;padding:14px 18px;margin-bottom:10px;}
+    .mistake-item p{margin:0;font-size:0.9rem;color:var(--text);}
+    .mistake-item p strong{color:var(--white);}
+    /* APPENDIX CTA */
+    .appendix-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-top:3px solid var(--gold);border-radius:4px;padding:28px 32px;margin:40px 0;}
+    .appendix-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
+    .appendix-cta h3 em{font-style:normal;color:var(--gold);}
+    .appendix-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;line-height:1.7;}
+    .appendix-cta ul{list-style:none;display:flex;flex-direction:column;gap:5px;margin-bottom:24px;}
+    .appendix-cta ul li{font-size:0.86rem;color:var(--text);display:flex;gap:8px;align-items:flex-start;}
+    .appendix-cta ul li::before{content:'›';color:var(--gold);font-weight:700;flex-shrink:0;}
+    .appendix-buttons{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn-signup{display:inline-block;background:var(--gold);color:var(--ice-dark) !important;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    /* STANDARD CTA */
+    .community-box{background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin:32px 0;}
+    .community-box-text .title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:6px;}
+    .community-box-text p{font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.65;}
+    .community-box a.btn{display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:var(--ice-bright);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;}
     .post-cta{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:28px 32px;text-align:center;margin:40px 0;}
     .post-cta h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);margin-bottom:8px;}
     .post-cta h3 em{font-style:normal;color:var(--ice-glow);}
     .post-cta p{font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;}
-    .cta-buttons{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:4px;}
-    .cta-btn{display:inline-block;width:100%;max-width:320px;background:var(--ice-bright);color:var(--white) !important;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .cta-btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none !important;text-align:center;}
+    .cta-btn.primary{background:var(--orange);color:var(--white) !important;}
     .cta-btn.secondary{background:transparent;border:1px solid var(--ice-border);color:var(--text) !important;}
-    .appendix-note{font-size:0.78rem;color:var(--text-muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--ice-border);line-height:1.6;}
-    .sign-off{font-family:'Barlow Semi Condensed',sans-serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:32px 0 8px;}
-    .kofi-wrap{text-align:center;padding:24px 0 8px;border-top:1px solid var(--ice-border);margin-top:32px;}
-    .kofi-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;}
-    @media(max-width:600px){
-      .site-header{padding:12px 20px;}.post-hero,.post-body,.frost-divider{padding-left:20px;padding-right:20px;}
-      .tier-compare{grid-template-columns:1fr;}
+    .contrib-reviewed{border-top:1px solid var(--ice-border);margin-top:32px;padding-top:20px;}
+    .contrib-reviewed .contrib-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
+    .contrib-reviewed .reviewer{font-size:0.82rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}
+    .contrib-reviewed .reviewer::before{content:'✓';color:var(--green);font-size:0.75rem;}
+    .kofi-wrap{text-align:center;padding:28px 0;border-top:1px solid var(--ice-border);margin-top:20px;}
+    .kofi-note{font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;}
+    footer{background:var(--ice-mid);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;}
+    footer p{font-size:0.75rem;color:var(--text-muted);}
+    footer a{color:var(--text-muted);text-decoration:none;}
+    @media(max-width:640px){
+      .site-header{padding:12px 20px;}
+      .nav-links{display:none;}
+      .post-hero,.post-body{padding-left:20px;padding-right:20px;}
+      .appendix-buttons{flex-direction:column;}
     }
-  
-  .wos-wrapper {
-    background: #050D1A;
-    min-height: 100vh;
-    margin: -20px -20px 0;
-    padding: 0;
-    position: relative;
-  }
-  body { background: #050D1A !important; }
-</style>
 
-<div class="wos-wrapper">
-<header class="site-header">
-  <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Guide</a>
-  <span class="header-tag">F2P Strategy &bull; Gift Codes</span>
-</header>
+    .post-body a{color:var(--ice-bright);text-decoration:none;}
+    .post-body a:hover{color:var(--white);}
+    .steps-list{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
+    .step-item{display:flex;gap:14px;align-items:flex-start;background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 18px;}
+    .step-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--ice-bright);opacity:0.6;line-height:1;min-width:24px;flex-shrink:0;}
+    .step-text{font-size:0.92rem;color:var(--text);line-height:1.65;}
+    .step-text strong{color:var(--white);}
+    .sources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:20px 0;}
+    .source-item{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;padding:14px 16px;font-size:0.88rem;color:var(--text);line-height:1.6;display:flex;gap:10px;align-items:flex-start;}
+    .source-item::before{content:'\203A';color:var(--ice-bright);font-weight:700;flex-shrink:0;margin-top:1px;}
+    .tier-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+    .tier-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;}
+    .tier-header{padding:12px 18px;border-bottom:1px solid var(--ice-border);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;}
+    .tier-free .tier-header{background:rgba(46,204,113,0.08);color:var(--green);}
+    .tier-paid .tier-header{background:rgba(212,168,42,0.08);color:var(--gold);}
+    .tier-body{padding:14px 18px;font-size:0.88rem;color:var(--text);line-height:1.65;}
+    .wiki-cta{background:rgba(77,168,218,0.06);border:1px solid var(--ice-border);border-radius:4px;padding:16px 20px;margin:24px 0;display:flex;gap:14px;align-items:center;}
+    .wiki-cta-icon{font-size:1.4rem;flex-shrink:0;}
+    .wiki-cta-text{font-size:0.9rem;color:var(--text);line-height:1.6;}
+    .wiki-cta-text a{color:var(--ice-bright);font-weight:600;}
+    @media(max-width:640px){.tier-compare{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
 
-<div class="post-hero">
-  <div class="post-category">&#127873; Gift Codes &amp; Free Resources</div>
-  <h1>WOS Rewards<br /><em>Auto Redemption</em><br />— An Honest Review</h1>
-  <p class="post-intro">Gift codes are some of the best free resources available to F2P players. The problem is keeping track of them. WOS Rewards handles that automatically — here is what it does, how I use it, and whether the free tier is worth your time.</p>
-  <div class="post-meta">
-    <span class="meta-item"><span class="dot"></span>WOS Guide</span>
-    <span class="meta-item"><span class="dot"></span>Gift Codes</span>
-    <span class="meta-item"><span class="dot"></span>F2P Strategy</span>
-    <span class="meta-item"><span class="dot"></span>March 2026</span>
-  </div>
-</div>
+  <header class="site-header">
+    <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
+    <nav><ul class="nav-links">
+      <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community</a></li>
+      <li><a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html">Newsletter</a></li>
+    </ul></nav>
+  </header>
 
-<div class="frost-divider"></div>
-
-<div class="post-body">
-
-  <p>Gift codes in Whiteout Survival are one of the best free resources available to F2P players. Speed-ups, resources, hero fragments — codes hand them out without asking for anything in return. The problem is keeping track of them, remembering to redeem them, and making sure you don't miss one while you're offline.</p>
-
-  <p>I've been using WOS Rewards to handle that — and honestly, it's one of those small quality-of-life upgrades that just works.</p>
-
-  <div class="section-label">What Is It</div>
-  <h2>What Is <em>WOS Rewards?</em></h2>
-
-  <p>WOS Rewards (wosrewards.com) is a third-party site that tracks Whiteout Survival gift codes. Their free tool lets you enter your Player ID and redeem all currently active codes to your account in one go — no manual input required, no hunting through social media trying to find the latest codes.</p>
-
-  <div class="tier-compare">
-    <div class="tier-card tier-free">
-      <div class="tier-header">&#10003; Free Tier — For Individual Players</div>
-      <div class="tier-body">Enter your Player ID and redeem all active codes instantly. No registration required. The full core value of the tool, completely free.</div>
+  <section class="post-hero">
+    <div class="post-category">&#127873; Gift Codes &amp; Free Resources</div>
+    <h1>WOS Rewards<br /><em>Auto Redemption:</em><br />An Honest Review</h1>
+    <p class="post-intro">Gift codes are some of the best free resources available to F2P players. The problem is keeping track of them. WOS Rewards handles that automatically. Here is what it does, how to use it, and whether the free tier is worth your time.</p>
+    <div class="meta-row">
+      <span class="meta-item"><span class="dot"></span>Gift Codes</span>
+      <span class="meta-item"><span class="dot"></span>F2P Strategy</span>
+      <span class="meta-updated">&#x2713; Tool details as of March 2026</span>
     </div>
-    <div class="tier-card tier-paid">
-      <div class="tier-header">&#9733; Paid Tier — For Alliance Leaders</div>
-      <div class="tier-body">Auto-redeems codes across your entire roster. Built for R4/R5 leaders managing 50–100+ players. Roughly $10–$24/month depending on size.</div>
-    </div>
-  </div>
+  </section>
 
-  <div class="section-label">How I Use It</div>
-  <h2>What I Actually <em>Use It For</em></h2>
+  <div class="post-body">
 
-  <p>I use the free tier. You enter your Player ID, and the site redeems all active codes straight to your account. No typing codes in one by one through the in-game interface, no worrying about whether you've missed something that dropped overnight.</p>
+    <p>Gift codes in Whiteout Survival are one of the best free resources available to F2P players. Speed-ups, resources, hero fragments: codes hand them out without asking for anything in return. The problem is keeping track of them, remembering to redeem them, and making sure you do not miss one while you are offline.</p>
 
-  <div class="callout gold">
-    <p><strong>The thing I appreciate most is the peace of mind.</strong> Codes come out at all hours — during live streams, from creator partnerships, around update windows. Before WOS Rewards I was constantly second-guessing whether I'd caught everything. Now I don't think about it. I check the site, it handles it, and the rewards show up.</p>
-  </div>
+    <p>WOS Rewards is a third-party tool built to take that chore away, and for most players it is one of those small quality-of-life upgrades that simply works.</p>
 
-  <p>For a F2P player where every speed-up and resource matters, that's not a small thing.</p>
+    <div class="section-label">What Is It</div>
+    <h2>What Is <em>WOS Rewards?</em></h2>
 
-  <div class="section-label">Step by Step</div>
-  <h2>How to <em>Use It</em></h2>
+    <p>WOS Rewards (wosrewards.com) is a third-party site that tracks Whiteout Survival gift codes. Its free tool lets you enter your Player ID and redeem all currently active codes to your account in one go. There is no manual input and no hunting through social media for the latest codes.</p>
 
-  <div class="steps-list">
-    <div class="step-item"><div class="step-num">1</div><div class="step-text">Go to <strong>wosrewards.com</strong></div></div>
-    <div class="step-item"><div class="step-num">2</div><div class="step-text">Enter your <strong>Whiteout Survival Player ID</strong></div></div>
-    <div class="step-item"><div class="step-num">3</div><div class="step-text">The site <strong>redeems all currently active codes</strong> to your account automatically</div></div>
-    <div class="step-item"><div class="step-num">4</div><div class="step-text">Rewards arrive in your <strong>in-game mailbox</strong></div></div>
-  </div>
-
-  <p>That's it. No account registration required for the basic redemption. Takes about 30 seconds. They also have a Telegram channel for instant code alerts — worth joining so you know when new codes drop and can run the tool straight away.</p>
-
-  <p>&#128073; <a href="https://t.me/wosrewards">Join the WOS Rewards Telegram channel</a></p>
-
-  <div class="section-label">Where Codes Come From</div>
-  <h2>Where Else to <em>Find Codes</em></h2>
-
-  <p>WOS Rewards tracks most codes reliably, but it's worth knowing where they originate so you can spot new ones early:</p>
-
-  <div class="sources-grid">
-    <div class="source-item">Official Whiteout Survival Facebook page</div>
-    <div class="source-item">Official WOS Discord server</div>
-    <div class="source-item">YouTube creators — codes in video descriptions or live streams</div>
-    <div class="source-item">The WOS subreddit — community shares codes within minutes</div>
-    <div class="source-item">In-game notifications around major updates and events</div>
-  </div>
-
-  <div class="wiki-cta">
-    <div class="wiki-cta-icon">&#127873;</div>
-    <div class="wiki-cta-text">We also keep a live gift code tracker on the WOS Wiki — active and expired codes updated whenever new ones drop, with full redemption instructions for all device types. <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">WOS Gift Code Tracker &rarr;</a></div>
-  </div>
-
-  <div class="section-label">Bottom Line</div>
-  <h2>Is It <em>Worth It?</em></h2>
-
-  <div class="callout green">
-    <p><strong>Yes — use the free tier.</strong> It removes the manual hassle of code redemption and makes sure you're not leaving free resources on the table. I use it regularly and it earns its place in any F2P routine. The paid tier is for alliance leaders managing a roster — individual players don't need it.</p>
-  </div>
-
-  <p>Join the Telegram for alerts, run the site when new codes drop, and stop worrying about missing out.</p>
-
-  <div class="post-cta">
-    <h3>The Wiki is Free — <em>Always</em></h3>
-    <p>Every guide, event walkthrough and gift code on this wiki is completely free. Built by a player, shaped by the community.</p>
-    <div class="cta-buttons">
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn">Browse All Free Guides</a>
-      <a href="https://ko-fi.com/M4M71VM8J6" target="_blank" class="cta-btn secondary">Support on Ko-fi (Optional)</a>
-    </div>
-  </div>
-
-  <p class="sign-off">— Digit</p>
-
-  <div class="kofi-wrap">
-    <p class="kofi-note">All guides are free. If this one helped your game, you can support the project here. Completely optional, always appreciated.</p>
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
-  </div>
-
-</div>
-</div>
-
-
-  <!-- COMMUNITY FEEDBACK -->
-  <div style="max-width:860px;margin:0 auto;padding:0 40px 48px;">
-    <div style="background:rgba(77,168,218,0.05);border:1px solid rgba(26,58,92,0.8);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:200px;">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:#4DA8DA;margin-bottom:6px;">&#128172; Spot an Error or Have a Tip?</div>
-        <p style="font-size:0.82rem;color:#5A7A94;margin:0;line-height:1.65;">This wiki is built and maintained by the community. If something is wrong, outdated or missing — let us know. Drop a comment on Reddit or use the link below. Corrections are made fast.</p>
+    <div class="tier-compare">
+      <div class="tier-card tier-free">
+        <div class="tier-header">&#10003; Free Tier: For Individual Players</div>
+        <div class="tier-body">Enter your Player ID and redeem all active codes instantly. No registration required. The full core value of the tool, completely free.</div>
       </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:#4DA8DA;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;">Submit Feedback &rarr;</a>
+      <div class="tier-card tier-paid">
+        <div class="tier-header">&#9733; Paid Tier: For Alliance Leaders</div>
+        <div class="tier-body">Auto-redeems codes across your entire roster. Built for R4/R5 leaders managing 50 to 100+ players. Roughly $10 to $24 a month depending on size when we last checked in March 2026, so confirm current pricing on the site.</div>
+      </div>
     </div>
-    <div style="margin-top:10px;font-size:0.72rem;color:#5A7A94;text-align:right;">&#x2713; Community reviewed &bull; Last checked April 2026 &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="color:#5A7A94;text-decoration:none;">Submit a correction</a></div>
+
+    <div class="section-label">Free Tier</div>
+    <h2>What the Free Tier <em>Does for You</em></h2>
+
+    <p>The free tier is all most players need. You enter your Player ID, and the site redeems all active codes straight to your account. No typing codes in one by one through the in-game interface, and no worrying about whether you have missed something that dropped overnight.</p>
+
+    <div class="callout gold">
+      <p><strong>The real benefit is peace of mind.</strong> Codes come out at all hours: during live streams, from creator partnerships, around update windows. Without a tool like this it is easy to keep second-guessing whether you have caught everything. With it, you check the site, it handles the redemption, and the rewards show up.</p>
+    </div>
+
+    <p>For a F2P player where every speed-up and resource matters, that is not a small thing.</p>
+
+    <div class="section-label">Step by Step</div>
+    <h2>How to <em>Use It</em></h2>
+
+    <div class="steps-list">
+      <div class="step-item"><div class="step-num">1</div><div class="step-text">Go to <strong>wosrewards.com</strong></div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-text">Enter your <strong>Whiteout Survival Player ID</strong></div></div>
+      <div class="step-item"><div class="step-num">3</div><div class="step-text">The site <strong>redeems all currently active codes</strong> to your account automatically</div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-text">Rewards arrive in your <strong>in-game mailbox</strong></div></div>
+    </div>
+
+    <p>That is it. No account registration is required for the basic redemption, and it takes about 30 seconds. They also run a Telegram channel for instant code alerts, which is worth joining so you know when new codes drop and can run the tool straight away.</p>
+
+    <p>&#128073; <a href="https://t.me/wosrewards" target="_blank" rel="noopener">Join the WOS Rewards Telegram channel</a></p>
+
+    <div class="section-label">Where Codes Come From</div>
+    <h2>Where Else to <em>Find Codes</em></h2>
+
+    <p>WOS Rewards tracks most codes reliably, but it helps to know where they originate so you can spot new ones early:</p>
+
+    <div class="sources-grid">
+      <div class="source-item">Official Whiteout Survival Facebook page</div>
+      <div class="source-item">Official WOS Discord server</div>
+      <div class="source-item">YouTube creators, with codes in video descriptions or live streams</div>
+      <div class="source-item">The WOS subreddit, where the community shares codes within minutes</div>
+      <div class="source-item">In-game notifications around major updates and events</div>
+    </div>
+
+    <div class="wiki-cta">
+      <div class="wiki-cta-icon">&#127873;</div>
+      <div class="wiki-cta-text">We also keep a live gift code tracker on the WOS Wiki, with active and expired codes updated whenever new ones drop and full redemption instructions for all device types. <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">WOS Gift Code Tracker &rarr;</a></div>
+    </div>
+
+    <div class="section-label">Bottom Line</div>
+    <h2>Is It <em>Worth It?</em></h2>
+
+    <div class="callout green">
+      <p><strong>Yes, use the free tier.</strong> It removes the manual hassle of code redemption and makes sure you are not leaving free resources on the table. It earns its place in any F2P routine. The paid tier is for alliance leaders managing a roster, and individual players do not need it.</p>
+    </div>
+
+    <p>Join the Telegram for alerts, run the site when new codes drop, and stop worrying about missing out.</p>
+
+    <div class="post-cta">
+      <h3>The Wiki is Free: <em>Always</em></h3>
+      <p>Every guide, event walkthrough and gift code on this wiki is completely free. Built by a player, shaped by the community.</p>
+      <div class="cta-buttons">
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn primary">Browse All Free Guides</a>
+        <a href="https://ko-fi.com/M4M71VM8J6" target="_blank" rel="noopener" class="cta-btn secondary">Support on Ko-fi (Optional)</a>
+      </div>
+    </div>
+
+    <div class="community-box">
+      <div class="community-box-text">
+        <div class="title">&#128172; Spot an Error or Have a Tip?</div>
+        <p>This wiki is built and maintained by the community. If something is wrong, outdated or missing, let us know. Corrections are made fast.</p>
+      </div>
+      <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" class="btn">Submit Feedback &rarr;</a>
+    </div>
+
+    <div class="kofi-wrap">
+      <p class="kofi-note">All guides are free. If this one helped your game, you can support the project here. Completely optional, always appreciated.</p>
+      <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+      <script>kofiwidget2.init('Support me on Ko-fi', '#F5A623', 'M4M71VM8J6');kofiwidget2.draw();</script>
+    </div>
+
   </div>
-  <footer style="background:#050D1A;padding:20px 40px;border-top:1px solid rgba(96,180,232,0.1);margin-top:40px;">
-    <p style="font-size:0.72rem;color:rgba(255,255,255,0.2);">&copy; 2026 WOS Wiki &mdash; Digital Revenue Studio &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></p>
+
+  <footer>
+    <p>WOS Wiki &bull; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community Hub</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy</a></p>
   </footer>
+
+</body>
+</html>

@@ -1,7 +1,30 @@
-<!-- SUBJECT: We started building a paid WOS guide. Reddit changed that. -->
-<!-- DRS BLOG — Case Study: Whiteout Survival Wiki -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-blog-10-wos-pivot.html" />
+  <title>We Started Building a Paid WOS Guide. Reddit Changed That. | Digital Revenue Studio</title>
+  <meta name="description" content="The honest story of how a Reddit comment changed the Whiteout Survival project from a paid guide into a free community wiki, and why we think it was the right call." />
+  <script defer src="/drs-consent.js"></script>
 
-<style>
+  <meta property="og:title" content="We Started Building a Paid WOS Guide. Reddit Changed That. | Digital Revenue Studio" />
+  <meta property="og:description" content="The honest story of how a Reddit comment changed the Whiteout Survival project from a paid guide into a free community wiki, and why we think it was the right call." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-blog-10-wos-pivot.html" />
+  <meta property="og:site_name" content="Digital Revenue Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="We Started Building a Paid WOS Guide. Reddit Changed That. | Digital Revenue Studio" />
+  <meta name="twitter:description" content="The honest story of how a Reddit comment changed the Whiteout Survival project from a paid guide into a free community wiki, and why we think it was the right call." />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Article", "headline": "We Started Building a Paid WOS Guide. Reddit Changed That.", "description": "The honest story of how a Reddit comment changed the Whiteout Survival project from a paid guide into a free community wiki, and why we think it was the right call.", "url": "https://www.digitalrevenuestudio.co.uk/drs-blog-10-wos-pivot.html", "datePublished": "2026-04-21", "dateModified": "2026-10-08", "author": {"@type": "Person", "name": "Digit"}, "publisher": {"@type": "Organization", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" /></noscript>
+  <style>
     :root {
       --dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;
       --gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;
@@ -11,7 +34,9 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
 
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);}
+    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.15);position:sticky;top:0;z-index:100;}
+    .topbar-nav{display:flex;gap:20px;}
+    html{scroll-behavior:smooth;}
     .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;}
     .topbar-right{display:flex;align-items:center;gap:24px;}
     .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
@@ -42,7 +67,7 @@
     @media(max-width:600px){.stat-strip-inner{grid-template-columns:repeat(2,1fr);}.strip-item{border-bottom:1px solid rgba(10,31,20,0.1);}}
 
     .layout{max-width:1060px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 280px;gap:52px;align-items:start;}
-    @media(max-width:860px){.layout{grid-template-columns:1fr;}.sidebar{order:-1;}}
+    @media(max-width:860px){.layout{grid-template-columns:1fr;padding:32px 20px;}.sidebar{order:-1;position:static!important;}}
 
     .article p{font-size:1rem;margin-bottom:20px;color:var(--text-body);}
     .article h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.55rem;color:var(--text-dark);margin:52px 0 14px;letter-spacing:-0.01em;line-height:1.2;}
@@ -80,7 +105,7 @@
     .cta-btn{display:inline-block;background:var(--dark);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:11px 24px;border-radius:2px;text-decoration:none;}
     .cta-btn:hover{background:var(--mid);}
 
-    .sidebar{position:sticky;top:20px;}
+    .sidebar{position:sticky;top:72px;}
     .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:16px;box-shadow:0 2px 8px rgba(10,31,20,0.05);}
     .sidebar-head{background:var(--dark);padding:12px 16px;}
     .sidebar-head h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
@@ -106,7 +131,51 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
     .blogger-logo{height:28px;width:auto;margin-bottom:16px;display:block;opacity:0.85;}
-</style>
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;}
+    .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
+    .mobile-overlay.open{display:flex;}
+    .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
+    .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
+    .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
+    .mobile-overlay-links{display:flex;flex-direction:column;}
+    .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .mobile-overlay-links a:last-child{border-bottom:none;}
+    .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
+    @media(max-width:860px){.hamburger{display:flex;}.topbar-nav{display:none!important;}.topbar-cta{display:none!important;}}
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="https://www.digitalrevenuestudio.co.uk/" class="topbar-brand">Digital Revenue Studio</a>
+    <div class="topbar-right">
+      <div class="topbar-nav">
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+      </div>
+      <a href="https://stats.sender.net/forms/e1wv33/view" class="topbar-cta">Free Guide</a>
+      <button class="hamburger" id="menuBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-overlay-top">
+      <span class="mobile-overlay-brand">Digital Revenue Studio</span>
+      <button class="mobile-overlay-close" id="menuClose">&times;</button>
+    </div>
+    <div class="mobile-overlay-links">
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Case Studies</a>
+      <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
+    </div>
+    <a href="https://stats.sender.net/forms/e1wv33/view" class="mobile-overlay-cta">Get Free Guide</a>
+  </div>
 
 <header class="hero">
   <div class="hero-grid"></div>
@@ -114,7 +183,7 @@
   <div class="hero-inner">
     <img src="logo-white.webp" alt="Digital Revenue Studio" class="blogger-logo" />
     <div class="hero-eyebrow">
-      <span class="exp-tag">Case Study &mdash; WOS Wiki</span>
+      <span class="exp-tag">Case Study &middot; WOS Wiki</span>
       <span class="sep">/</span>
       <span class="date-tag">April 2026</span>
     </div>
@@ -123,7 +192,7 @@
     <div class="hero-meta">
       <span><strong>6 min read</strong></span>
       <span><strong>Digital Revenue Studio</strong></span>
-      <span><strong>WOS Wiki &mdash; Live</strong></span>
+      <span><strong>WOS Wiki &middot; Live</strong></span>
     </div>
   </div>
 </header>
@@ -142,10 +211,10 @@
 
     <div class="exp-label">
       <span class="exp-label-dot"></span>
-      <span>Case Study &mdash; WOS Wiki &mdash; Status: Live &amp; Growing</span>
+      <span>Case Study &middot; WOS Wiki &middot; Status: Live &amp; Growing</span>
     </div>
 
-    <p>This is the story of a project that changed direction because of one comment on Reddit. It is also a honest account of what we originally intended to build, why that changed, and what the WOS Wiki actually is today.</p>
+    <p>This is the story of a project that changed direction because of one comment on Reddit. It is also an honest account of what we originally intended to build, why that changed, and what the WOS Wiki actually is today.</p>
 
     <p>We are writing this because we owe it to the community that shaped it to be clear about where this started and where it is going.</p>
 
@@ -210,14 +279,14 @@
         <p>Errors caught and fixed same day by One-Temperature-1025, CestBritneyPute and others. All corrections actioned within the hour.</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-label">Today</div>
+        <div class="timeline-label">April 2026</div>
         <p>24 guides live. Community review section active. Free, always will be.</p>
       </div>
     </div>
 
     <h2 id="what-the-wiki-is-now">What the Wiki Is Now</h2>
 
-    <p>The WOS Wiki currently has 24 live guides covering beginner strategy, every major event, hero priority, resource management, the experts system, pets, the server timeline and more. Everything is free with no sign-up required. A community review process runs alongside new guide releases so that errors get caught before they reach new players.</p>
+    <p>At the time of writing, in April 2026, the WOS Wiki had 24 live guides covering beginner strategy, every major event, hero priority, resource management, the experts system, pets, the server timeline and more. Everything is free with no sign-up required. A community review process runs alongside new guide releases so that errors get caught before they reach new players.</p>
 
     <div class="info-grid">
       <div class="info-card">
@@ -254,7 +323,7 @@
 
     <div class="cta-box">
       <h3>Visit the WOS Wiki</h3>
-      <p>24 free guides, event walkthroughs and a live gift code tracker. No sign-up needed, no catch.</p>
+      <p>Free guides, event walkthroughs and a live gift code tracker. No sign-up needed, no catch.</p>
       <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="cta-btn">Browse the Wiki &rarr;</a>
     </div>
 
@@ -277,7 +346,7 @@
     <div class="sidebar-card">
       <div class="sidebar-head gold"><h4>WOS Wiki</h4></div>
       <div class="sidebar-body">
-        <p>24 free guides, event walkthroughs and a live gift code tracker. Built by players, shaped by community.</p>
+        <p>Free guides, event walkthroughs and a live gift code tracker. Built by players, shaped by community.</p>
         <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="sidebar-btn gold-btn">Visit the Wiki</a>
       </div>
     </div>
@@ -298,8 +367,21 @@
   </aside>
 </div>
 
-<footer class="footer">
-  <div class="footer-brand">Digital Revenue Studio</div>
-  <p class="footer-tag">"Built in the open. Documented honestly."</p>
-  <p>&copy; 2026 Digital Revenue Studio &mdash; <a href="https://www.digitalrevenuestudio.co.uk" style="color:rgba(255,255,255,0.3);text-decoration:none;">digitalrevenuestudio.co.uk</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.25);text-decoration:none;">Privacy</a></p>
-</footer>
+  <footer class="footer">
+    <div class="footer-brand">Digital Revenue Studio</div>
+    <p style="font-family:'Lora',serif;font-style:italic;color:rgba(255,255,255,0.35);font-size:0.82rem;margin-top:6px;">&ldquo;Building multiple digital revenue streams, one experiment at a time.&rdquo;</p>
+    <p style="color:rgba(255,255,255,0.25);font-size:0.76rem;margin-top:8px;">&copy; 2026 Digital Revenue Studio &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const overlay = document.getElementById('mobileOverlay');
+    const close = document.getElementById('menuClose');
+    if (btn && overlay && close) {
+      btn.addEventListener('click', () => { overlay.classList.add('open'); });
+      close.addEventListener('click', () => { overlay.classList.remove('open'); });
+    }
+  </script>
+
+</body>
+</html>
