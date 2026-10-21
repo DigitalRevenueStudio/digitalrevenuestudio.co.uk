@@ -53,6 +53,8 @@
   var all = sorted(D.updates || []);
 
 
+  /* autoplay helpers: pause on hover only for mouse users (a tap fires emulated mouse events on phones and would stall the loop), always resume after interaction */
+  window.drsHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   /* ---------- seamless loop helper (shared with carousel.js) ----------
      Clones the first slide to the end. Moving past the last slide slides into the clone, then snaps back to the real first slide with no visible rewind. */
   window.drsLoop = function (track, n) {
@@ -88,7 +90,7 @@
       (items.length > 1 ? '<button class="cnav prev" type="button" aria-label="Previous update">&#8249;</button><button class="cnav next" type="button" aria-label="Next update">&#8250;</button>' +
         '<div class="dots">' + items.map(function (_, n) { return '<button type="button" aria-label="Show update ' + (n + 1) + '"></button>'; }).join("") + '</div>' : '');
     var track = box.querySelector(".track"), dots = box.querySelectorAll(".dots button"), i = 0, timer = null;
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var reduce = false;
     var L = items.length, loop = L > 1 ? window.drsLoop(track, L) : null;
     function go(n) {
       var m = (n + L) % L;
@@ -105,7 +107,8 @@
       else { var k = Array.prototype.indexOf.call(dots, b); if (k > -1) go(k); }
       play();
     });
-    box.addEventListener("mouseenter", stop); box.addEventListener("mouseleave", play); box.addEventListener("focusin", stop);
+    if (window.drsHover) { box.addEventListener("mouseenter", stop); box.addEventListener("mouseleave", play); box.addEventListener("focusin", stop); box.addEventListener("focusout", play); }
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else play(); });
     var x0 = null;
     box.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
     box.addEventListener("touchend", function (e) {
@@ -136,8 +139,8 @@
 
   /* ---------- Meet the brands tabs ---------- */
   document.querySelectorAll("[data-tabs]").forEach(function (box) {
-    var tabs = box.querySelectorAll('[role="tab"]'), panes = box.querySelectorAll('[role="tabpanel"]'), cur = 0, timer = null;
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var tabs = box.querySelectorAll('[role="tab"]'), panes = box.querySelectorAll('[role="tabpanel"]'), cur = 0, timer = null, resume = null;
+    var reduce = false;
     function show(n) {
       cur = (n + tabs.length) % tabs.length;
       tabs.forEach(function (t, k) { t.setAttribute("aria-selected", k === cur ? "true" : "false"); t.tabIndex = k === cur ? 0 : -1; });
@@ -146,13 +149,14 @@
     function stop() { if (timer) clearInterval(timer); timer = null; }
     function play() { if (reduce) return; stop(); timer = setInterval(function () { show(cur + 1); }, 6000); }
     tabs.forEach(function (t, k) {
-      t.addEventListener("click", function () { show(k); stop(); });
+      t.addEventListener("click", function () { show(k); stop(); clearTimeout(resume); resume = setTimeout(play, 12000); });
       t.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowRight") { show(cur + 1); tabs[cur].focus(); stop(); }
-        if (e.key === "ArrowLeft") { show(cur - 1); tabs[cur].focus(); stop(); }
+        if (e.key === "ArrowRight") { show(cur + 1); tabs[cur].focus(); stop(); clearTimeout(resume); resume = setTimeout(play, 12000); }
+        if (e.key === "ArrowLeft") { show(cur - 1); tabs[cur].focus(); stop(); clearTimeout(resume); resume = setTimeout(play, 12000); }
       });
     });
-    box.addEventListener("mouseenter", stop); box.addEventListener("focusin", stop);
+    if (window.drsHover) { box.addEventListener("mouseenter", stop); box.addEventListener("mouseleave", play); }
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else play(); });
     show(0); play();
   });
 })();

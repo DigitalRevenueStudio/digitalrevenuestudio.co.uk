@@ -1,10 +1,10 @@
 /* Shared carousels: news carousel, work gallery and social pills.
-   Both carousels advance automatically, loop seamlessly (no rewind), pause on hover or focus, and do not auto-advance for visitors who prefer reduced motion.
+   Carousels advance automatically and loop seamlessly (no rewind). They pause on hover (mouse users only) and while the tab is hidden; touch visitors are never stalled by a tap.
    Needs data/updates.js and assets/site.js (which provides window.drsLoop) on the page. */
 (function () {
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function fmtd(d) { if (!d) return ""; var f = /^\d{4}-\d{2}-\d{2}$/.test(d), m = /^\d{4}-\d{2}$/.test(d); if (!f && !m) return d; var t = new Date(f ? d + "T00:00:00" : d + "-01T00:00:00"); return isNaN(t) ? d : t.toLocaleDateString("en-GB", f ? { day: "numeric", month: "short", year: "numeric" } : { month: "short", year: "numeric" }); }
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = false;
 
   /* generic: wires a looping track to controls and autoplay */
   function wire(box, track, n, dots, prevBtn, nextBtn, delay) {
@@ -20,7 +20,8 @@
     if (prevBtn) prevBtn.addEventListener("click", function () { go(cur - 1); play(); });
     if (nextBtn) nextBtn.addEventListener("click", function () { go(cur + 1); play(); });
     dots.forEach(function (d, i) { d.addEventListener("click", function () { go(i); play(); }); });
-    box.addEventListener("mouseenter", stop); box.addEventListener("mouseleave", play); box.addEventListener("focusin", stop); box.addEventListener("focusout", play);
+    if (window.drsHover) { box.addEventListener("mouseenter", stop); box.addEventListener("mouseleave", play); box.addEventListener("focusin", stop); box.addEventListener("focusout", play); }
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else play(); });
     var x0 = null;
     box.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
     box.addEventListener("touchend", function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); play(); });
