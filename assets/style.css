@@ -763,3 +763,4 @@ body.b-ac main .cs-band{border:1px solid rgba(232,103,43,.35)}
 
 /* mobile: portrait gallery captions sit below the image instead of covering it */
 @media (max-width:900px){.gslide.port{display:block;min-height:0}.gslide.port img{height:min(80vw,420px)}.gslide.port figcaption{position:static;max-width:none;margin:0;left:auto;right:auto;bottom:auto;border-radius:0;padding:14px 18px 62px;background:rgba(40,20,5,.9)}}
+.pcard.ma .banner .tl{max-width:58%}
