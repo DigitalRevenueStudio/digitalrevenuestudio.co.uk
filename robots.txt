@@ -1,8 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /drs-signup.html
-Disallow: /drs-thankyou.html
-Disallow: /wos-signup.html
-Disallow: /wos-thankyou.html
+
+# Signup and thank-you pages carry a noindex tag, so they are left crawlable on purpose
+# (a Disallow would stop search engines from ever seeing the noindex).
 
 Sitemap: https://www.digitalrevenuestudio.co.uk/sitemap.xml

@@ -1,670 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/" />
-  <title>Digital Revenue Studio — We Build Digital Brands</title>
-  <meta name="description" content="We build your digital brand. You enjoy the revenue. Digital Revenue Studio creates websites, tools, content strategies and brand infrastructure. You bring the concept, we build it." />
-  <script defer src="/drs-consent.js"></script>
-  
-  <meta property="og:title" content="Digital Revenue Studio — We Build Digital Brands" />
-  <meta property="og:description" content="We build your digital brand. You enjoy the revenue. Websites, tools, content strategies and brand infrastructure. You bring the concept, we build it." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-drs.png" />
-  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/" />
-  <meta property="og:site_name" content="Digital Revenue Studio" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Digital Revenue Studio — We Build Digital Brands" />
-  <meta name="twitter:description" content="We build your digital brand. You enjoy the revenue. Websites, tools, content strategies and brand infrastructure. You bring the concept, we build it." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk","logo":"https://www.digitalrevenuestudio.co.uk/logo-white.webp","description":"Independent content creation studio building digital brands from scratch.","sameAs":["https://www.pinterest.co.uk/digitalrevenuestudio"]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk/","potentialAction":{"@type":"SearchAction","target":"https://www.digitalrevenuestudio.co.uk/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
-  <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" /></noscript>
-  <style>
-    :root{
-      --dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;
-      --gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;
-      --white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;
-      --text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
-
-    /* ── NAV ── */
-    .topbar{background:var(--dark);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(245,166,35,0.12);}
-    .topbar-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.95rem;color:var(--gold);letter-spacing:0.04em;text-decoration:none;display:flex;align-items:center;gap:10px;}
-    .topbar-logo{height:34px;width:auto;display:block;}
-    .topbar-brand img{height:32px;width:auto;}
-    .topbar-nav{display:flex;gap:20px;align-items:center;}
-    .topbar-nav a{color:rgba(255,255,255,0.45);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-right{display:flex;align-items:center;gap:20px;flex-wrap:nowrap;}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;padding:8px 14px;border-radius:2px;text-decoration:none;transition:background 0.2s;white-space:nowrap;}
-    .topbar-cta:hover{background:#fdc84d;}
-
-    /* ── HERO ── */
-    .hero{background:var(--dark);padding:96px 40px 0;position:relative;overflow:hidden;}
-    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(26,92,58,0.25) 0%,transparent 65%);pointer-events:none;}
-    .hero-glow-2{position:absolute;bottom:-60px;left:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(245,166,35,0.06) 0%,transparent 65%);pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:end;}
-    .hero-left{padding-bottom:80px;animation:fadeUp 0.7s ease both;}
-    .hero-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-    .hero-label::after{content:'';flex:0 0 32px;height:1px;background:rgba(245,166,35,0.4);}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.2rem,5vw,4rem);line-height:1.04;letter-spacing:-0.03em;color:var(--white);margin-bottom:22px;}
-    .hero h1 em{font-family:'Lora',serif;font-style:italic;color:var(--gold);}
-    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1.1rem;color:rgba(255,255,255,0.45);max-width:480px;line-height:1.8;margin-bottom:32px;}
-    .hero-cta-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
-    .btn-primary{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;padding:13px 28px;border-radius:2px;text-decoration:none;transition:all 0.2s;}
-    .btn-primary:hover{background:#fdc84d;transform:translateY(-1px);}
-    .btn-ghost{display:inline-block;color:rgba(255,255,255,0.5);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-decoration:none;transition:color 0.2s;display:flex;align-items:center;gap:6px;}
-    .btn-ghost:hover{color:var(--white);}
-    .hero-right{padding-bottom:0;animation:fadeUp 0.7s 0.12s ease both;align-self:end;}
-    .hero-digit{display:flex;justify-content:center;margin-bottom:0;}
-    .hero-digit img{width:400px;height:auto;object-fit:contain;filter:drop-shadow(0 12px 40px rgba(46,139,74,0.4));}
-    .hero-stat-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-top:3px solid var(--gold);border-radius:4px 4px 0 0;padding:28px 28px 32px;}
-    .hero-stat-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
-    .hero-stat-row{display:flex;gap:0;border-bottom:1px solid rgba(255,255,255,0.06);}
-    .hero-stat-row:last-child{border-bottom:none;}
-    .hero-stat-item{flex:1;padding:14px 0;text-align:center;border-right:1px solid rgba(255,255,255,0.06);}
-    .hero-stat-item:last-child{border-right:none;}
-    .hero-stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;color:var(--white);line-height:1;display:block;margin-bottom:4px;}
-    .hero-stat-num.gold{color:var(--gold);}
-    .hero-stat-desc{font-size:0.7rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.08em;font-family:'DM Sans',sans-serif;}
-    .hero-stat-brands{margin-top:20px;display:flex;flex-direction:column;gap:8px;}
-    .hero-brand-pill{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:2px;padding:9px 14px;}
-    .hero-brand-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-    .dot-ma{background:#F5A623;}
-    .dot-wos{background:#4DA8DA;}
-    .dot-ac{background:#2E8B4A;}
-    .dot-fathom{background:#1F9EC9;}
-    .dot-die{background:#8B5CF6;}
-    .hero-brand-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;color:rgba(255,255,255,0.7);}
-    .hero-brand-tag{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-left:auto;}
-
-    /* Gold divider bar */
-    .gold-bar{background:var(--gold);height:4px;width:100%;}
-
-    /* ── SECTION WRAPPER ── */
-    .section{padding:80px 40px;}
-    .section-inner{max-width:1100px;margin:0 auto;}
-    .section-eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px;}
-    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--text-dark);letter-spacing:-0.02em;line-height:1.1;margin-bottom:14px;}
-    .section-title em{font-family:'Lora',serif;font-style:italic;color:var(--mid);}
-    .section-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:var(--text-muted);max-width:560px;line-height:1.8;margin-bottom:48px;}
-
-    /* ── BRAND CARDS ── */
-    .brands-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-    .brand-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.2s,box-shadow 0.2s;}
-    .brand-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(10,31,20,0.1);}
-    .brand-card-top{padding:28px 28px 20px;flex:1;}
-    .brand-card-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
-    .brand-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-    .brand-eyebrow-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;}
-    .brand-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.25rem;color:var(--text-dark);letter-spacing:-0.01em;margin-bottom:10px;line-height:1.2;}
-    .brand-card p{font-size:0.92rem;color:var(--text-muted);line-height:1.75;margin-bottom:16px;}
-    .brand-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;}
-    .brand-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
-    .brand-card-footer{padding:16px 28px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-    .brand-link{font-family:'Syne',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:6px;transition:gap 0.2s;}
-    .brand-link:hover{gap:10px;}
-    .brand-link-sub{font-size:0.72rem;color:var(--text-muted);}
-
-    /* Brand colour themes */
-    .brand-ma .brand-dot,.brand-ma .brand-card-footer{background:rgba(245,166,35,0.06);}
-    .brand-ma .brand-dot{background:#F5A623;}
-    .brand-ma .brand-eyebrow-label{color:#C9841A;}
-    .brand-ma .brand-tag{background:#FDF3E0;color:#C9841A;}
-    .brand-ma .brand-link{color:#C9841A;}
-    .brand-ma .brand-card-footer{border-top-color:rgba(245,166,35,0.2);}
-
-    .brand-wos .brand-dot{background:#4DA8DA;}
-    .brand-wos .brand-eyebrow-label{color:#185FA5;}
-    .brand-wos .brand-tag{background:#E6F1FB;color:#185FA5;}
-    .brand-wos .brand-link{color:#185FA5;}
-    .brand-wos .brand-card-footer{background:rgba(77,168,218,0.04);border-top-color:rgba(77,168,218,0.15);}
-
-    .brand-ac .brand-dot{background:#2E8B4A;}
-    .brand-ac .brand-eyebrow-label{color:#1A5C3A;}
-    .brand-ac .brand-tag{background:#EAF3DE;color:#1A5C3A;}
-    .brand-ac .brand-link{color:#1A5C3A;}
-    .brand-ac .brand-card-footer{background:rgba(46,139,74,0.04);border-top-color:rgba(46,139,74,0.15);}
-
-    .brand-fathom{grid-column:1 / -1;}
-    .brand-fathom .brand-dot{background:#1F9EC9;}
-    .brand-fathom .brand-eyebrow-label{color:#14688A;}
-    .brand-fathom .brand-tag{background:#E3F4FA;color:#14688A;}
-    .brand-fathom .brand-link{color:#14688A;}
-    .brand-fathom .brand-card-footer{background:rgba(31,158,201,0.04);border-top-color:rgba(31,158,201,0.18);}
-    .brand-die .brand-dot{background:#8B5CF6;}
-    .brand-die .brand-eyebrow-label{color:#6D28D9;}
-    .brand-die .brand-tag{background:#EDE9FE;color:#6D28D9;}
-    .brand-die .brand-link{color:#6D28D9;}
-    .brand-die .brand-card-footer{background:rgba(139,92,246,0.04);border-top-color:rgba(139,92,246,0.15);}
-
-    /* ── WIKI CALLOUT ── */
-    .wiki-section{background:#0a1f35;padding:72px 40px;}
-    .wiki-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:center;}
-    .wiki-left{}
-    .wiki-eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:#60b4e8;margin-bottom:12px;}
-    .wiki-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);letter-spacing:-0.02em;line-height:1.1;margin-bottom:14px;}
-    .wiki-title em{font-family:'Lora',serif;font-style:italic;color:var(--gold);}
-    .wiki-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.4);line-height:1.8;margin-bottom:24px;}
-    .wiki-stats{display:flex;gap:0;border:1px solid rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;}
-    .wiki-stat{flex:1;padding:16px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);}
-    .wiki-stat:last-child{border-right:none;}
-    .wiki-stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:#60b4e8;display:block;line-height:1;}
-    .wiki-stat-label{font-size:0.68rem;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;display:block;}
-    .wiki-right{}
-    .wiki-guides{display:flex;flex-direction:column;gap:8px;}
-    .wiki-guide-item{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:3px;padding:12px 14px;text-decoration:none;transition:border-color 0.2s,background 0.2s;}
-    .wiki-guide-item:hover{border-color:rgba(245,166,35,0.3);background:rgba(245,166,35,0.04);}
-    .wiki-guide-icon{font-size:1rem;flex-shrink:0;}
-    .wiki-guide-text{flex:1;}
-    .wiki-guide-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;color:rgba(255,255,255,0.8);display:block;}
-    .wiki-guide-sub{font-size:0.72rem;color:rgba(255,255,255,0.3);}
-    .wiki-guide-arrow{color:rgba(255,255,255,0.2);font-size:0.8rem;transition:color 0.2s;}
-    .wiki-guide-item:hover .wiki-guide-arrow{color:var(--gold);}
-
-    /* ── BLOG SECTION ── */
-    .blog-section{background:var(--paper);padding:80px 40px;}
-    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:0;}
-    .blog-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;}
-    .blog-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(10,31,20,0.08);}
-    .blog-card-body{padding:22px 22px 16px;flex:1;}
-    .blog-card-tags{display:flex;gap:6px;margin-bottom:12px;}
-    .blog-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;}
-    .tag-studio{background:#F0EDE6;color:#777;}
-    .tag-case-study{background:#FDF3E0;color:#C9841A;}
-    .tag-guide{background:#E6F1FB;color:#185FA5;}
-    .tag-tool{background:#EAF3DE;color:#1A5C3A;}
-    .blog-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text-dark);line-height:1.3;margin-bottom:8px;}
-    .blog-card p{font-size:0.86rem;color:var(--text-muted);line-height:1.7;}
-    .blog-card-footer{padding:12px 22px;border-top:1px solid var(--border);font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-dark);display:flex;justify-content:space-between;align-items:center;}
-    .blog-date{color:var(--text-muted);font-weight:400;font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0;}
-    .blog-view-all{text-align:center;margin-top:32px;}
-
-    /* ── SERVICES STRIP ── */
-    .services-section{background:var(--warm);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 40px;}
-    .services-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-    .services-left{}
-    .services-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.01em;margin-bottom:10px;}
-    .services-sub{font-size:0.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:20px;}
-    .services-right{display:flex;flex-direction:column;gap:12px;}
-    .service-item{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:3px;padding:16px 18px;}
-    .service-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px;}
-    .service-text h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:var(--text-dark);margin-bottom:3px;}
-    .service-text p{font-size:0.82rem;color:var(--text-muted);line-height:1.6;}
-
-    /* ── SIGNUP ── */
-    .signup-section{background:var(--dark);padding:80px 40px;}
-    .signup-inner{max-width:560px;margin:0 auto;text-align:center;}
-    .signup-eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
-    .signup-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);letter-spacing:-0.02em;line-height:1.1;margin-bottom:12px;}
-    .signup-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.4);line-height:1.8;margin-bottom:28px;}
-    .sender-form-field{text-align:center;}
-
-    /* ── FOOTER ── */
-    .footer{background:var(--dark-2);padding:40px 40px 28px;border-top:1px solid rgba(245,166,35,0.1);}
-    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px;}
-    .footer-col-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-    .footer-links{display:flex;flex-direction:column;gap:8px;}
-    .footer-links a{font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
-    .footer-links a:hover{color:rgba(255,255,255,0.7);}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.2);}
-    .footer-brand-name{font-family:'Syne',sans-serif;font-weight:800;font-size:0.85rem;color:var(--gold);opacity:0.6;}
-
-    /* ── UTILITIES ── */
-    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-    .text-center{text-align:center;}
-
-    @media(max-width:960px){
-      .hero-inner{grid-template-columns:1fr;gap:40px;}
-      .brands-grid{grid-template-columns:1fr;}
-      .wiki-inner{grid-template-columns:1fr;}
-      .wiki-right{display:none;}
-      .blog-grid{grid-template-columns:1fr 1fr;}
-      .services-inner{grid-template-columns:1fr;}
-      .footer-inner{grid-template-columns:1fr 1fr;}
-    }
-    @media(max-width:600px){
-      .topbar{padding:12px 20px;}
-      .topbar-nav{display:none;}
-      .section,.blog-section,.services-section,.wiki-section,.signup-section{padding:56px 20px;}
-      .hero{padding:64px 20px 0;}
-      .hero-left{padding-bottom:56px;}
-      .blog-grid{grid-template-columns:1fr;}
-      .footer{padding:40px 20px 24px;}
-      .footer-inner{grid-template-columns:1fr 1fr;}
-      .footer-bottom{flex-direction:column;text-align:center;}
-    }
-  
-    .footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.82rem;color:var(--gold);opacity:0.4;}
-  </style>
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Revenue Studio | Creator and brand studio</title>
+<meta name="description" content="Digital Revenue Studio is a creator and brand studio: branding, content, social presence, practical tools and AI know-how.">
+<link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/">
+<meta property="og:title" content="Digital Revenue Studio | Creator and brand studio"><meta property="og:description" content="Digital Revenue Studio is a creator and brand studio: branding, content, social presence, practical tools and AI know-how."><meta property="og:type" content="website">
+<meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/img/og-drs-v2.png"><meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/"><meta property="og:site_name" content="Digital Revenue Studio">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Digital Revenue Studio | Creator and brand studio"><meta name="twitter:description" content="Digital Revenue Studio is a creator and brand studio: branding, content, social presence, practical tools and AI know-how."><meta name="twitter:image" content="https://www.digitalrevenuestudio.co.uk/img/og-drs-v2.png">
+<link rel="icon" type="image/png" href="img/favicon.png"><link rel="apple-touch-icon" href="img/favicon.png">
+<script defer src="/drs-consent.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.digitalrevenuestudio.co.uk/#org", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk/", "logo": "https://www.digitalrevenuestudio.co.uk/img/favicon.png", "description": "Creator and brand studio offering branding, content, social presence, practical tools and AI guidance.", "sameAs": ["https://www.instagram.com/digital.revenuestudio/", "https://www.facebook.com/profile.php?id=61586853106276", "https://www.tiktok.com/@digitalrevenuestu", "https://uk.pinterest.com/digitalrevenuestudio/", "https://www.reddit.com/user/digitalrevenuestudio/"]}, {"@type": "WebSite", "@id": "https://www.digitalrevenuestudio.co.uk/#site", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk/", "publisher": {"@id": "https://www.digitalrevenuestudio.co.uk/#org"}}]}</script>
+<script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Syne:wght@600;700;800&family=Lora:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<meta name="google-adsense-account" content="ca-pub-5306195679240930">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
+<nav class="nav" id="nav" aria-label="Main">
+<a class="navlink" href="index.html" aria-current="page">Home</a><a class="navlink" href="drs-about.html">About</a><a class="navlink" href="drs-services.html">Services</a><a class="navlink" href="portfolio.html">Portfolio</a><a class="navlink" href="drs-shop.html">Shop</a><a class="navlink" href="drs-blog.html">Blog</a>
+<a class="btn btn-gold btn-sm" href="drs-signup.html" data-link="other.signup">Follow the studio</a>
+</nav></div></header>
+<main id="main">
+<div class="hero">
+<div class="hl">
+<div class="eyebrow">Creator and brand studio</div>
+<h1>Ideas with a pulse. <em>Brands with a purpose.</em></h1>
+<p class="lead">We turn good ideas into digital brands people want to spend time with. Branding, content, social presence, practical tools and AI know-how, built from the ground up.</p>
+</div>
+<div class="ml">
+<div class="meet" data-tabs>
+<div class="meet-head"><span class="meet-label">Meet the brands</span><span class="glance"><span><b>5</b>active brands</span><span><b>18+</b>guides</span><span><b>2026</b>founded</span></span></div>
+<div class="tabs" role="tablist" aria-label="Brands"><button class="tab" role="tab" type="button" aria-selected="true" id="t-ma" aria-controls="p-ma"><i class="d-ma"></i><span>Mavericks Adventures</span><small>Children's books</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-wos" aria-controls="p-wos"><i class="d-wos"></i><span>Whiteout Survival Wiki</span><small>Gaming</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-fathom" aria-controls="p-fathom"><i class="d-fathom"></i><span>Fathom Guides</span><small>Game guides</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-ac" aria-controls="p-ac"><i class="d-ac"></i><span>Atker Consultancy</span><small>Construction tools</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-die" aria-controls="p-die"><i class="d-die"></i><span>Digital Income Experiment</span><small>Income testing</small></button></div>
+<div class="pane" role="tabpanel" id="p-ma" aria-labelledby="t-ma"><p>A children's book brand built around a real cockapoo. <i>Where is Maverick?</i> is live on Amazon.</p><a class="btn btn-gold btn-sm" href="drs-case-study-ma.html" data-link="brands.ma.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-wos" aria-labelledby="t-wos" hidden><p>A free-to-play wiki with 18+ guides and a live gift code tracker, shaped by what players ask for.</p><a class="btn btn-gold btn-sm" href="drs-case-study-wos.html" data-link="brands.wos.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-fathom" aria-labelledby="t-fathom" hidden><p>A game-neutral guide brand launched in October 2026. We are its branding and content partner.</p><a class="btn btn-gold btn-sm" href="drs-case-study-fathom.html" data-link="brands.fathom.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-ac" aria-labelledby="t-ac" hidden><p>NEC and CDM tools plus the Tactical Leadership Companion, built and published through DRS.</p><a class="btn btn-gold btn-sm" href="drs-case-study-ac.html" data-link="brands.ac.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-die" aria-labelledby="t-die" hidden><p>Online income streams tested in the open, with the real numbers. The zeros included.</p><a class="btn btn-gold btn-sm" href="drs-case-study-exp.html" data-link="brands.die.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div>
+</div>
+</div>
+<aside class="hr" aria-label="Featured resource">
+<div class="eyebrow">Featured resource</div>
+<p class="wos-h">The Whiteout Survival <em>F2P Wiki</em></p>
+<p class="big">The resource people <em>come back for.</em></p>
+<p class="desc">Free guides, a live gift code tracker and honest F2P advice, written by a player. No paywall, ever.</p>
+<div class="wstats"><div><b>Free</b><span>Always</span></div><div><b>18+</b><span>Guides live</span></div></div>
+<h2 class="nu">News and updates</h2>
+<ul class="news dark-news" data-news data-brand="wos" data-limit="3" aria-label="Wiki news"></ul>
+<div class="cta-row"><a class="btn btn-gold" href="drs-wos-wiki.html" data-link="other.wiki">Explore the WOS Wiki <span class="arrow">&#8599;</span></a><a class="link" href="wos-wiki-gift-code-tracker.html" data-link="other.codes">Go to gift codes &rarr;</a></div>
+<p class="fan">Independent fan resource. Not affiliated with Century Games.</p>
+</aside>
+<img class="explorer" src="img/wos-explorer.webp" alt="" width="400" height="316">
+<div class="digit-seam"><img src="img/digit-point.webp" alt="Digit, the Digital Revenue Studio robot, pointing at the Whiteout Survival wiki" width="560" height="975"></div>
+</div>
 
-<!-- ── NAV ── -->
-  <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
-      <img src="logo-white.webp" alt="Digital Revenue Studio" class="topbar-logo" />
-    </a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-      </div>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
+<section class="s"><div class="wrap">
+<div class="dowrap">
+<div>
+<div class="sec-head" style="margin-bottom:26px"><div><div class="eyebrow">What the studio does</div><h2>Five skills, <em>one studio</em></h2><p>Most ideas stall somewhere between a good concept and something people can find, trust and use. We cover the gap.</p></div></div>
+<div class="skills">
+<div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><path d="M24 5l5 10 11 1.6-8 7.7 2 11L24 30l-10 5.3 2-11-8-7.7L19 15z"/></svg></div><h3>Branding</h3><p>Names, logos and a look that holds together across a website, a book cover and a social feed.</p></div>
+<div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><rect x="8" y="6" width="32" height="36" rx="3"/><path d="M15 16h18M15 23h18M15 30h11"/></svg></div><h3>Content</h3><p>Guides, blogs, books and newsletters that give people a reason to come back.</p></div>
+<div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="36" cy="36" r="5"/><path d="M16.5 21.5l15-7M16.5 26.5l15 7"/></svg></div><h3>Social presence</h3><p>Profiles, banners and a posting rhythm you can keep up on Facebook, Instagram, TikTok and Pinterest.</p></div>
+<div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><path d="M30 8a10 10 0 0 0-9 13L8 34a4 4 0 0 0 6 6l13-13a10 10 0 0 0 13-9l-6 5-5-1-1-5z"/></svg></div><h3>Practical tools</h3><p>Browser-based checkers, trackers and calculators. No installs and no subscriptions.</p></div>
+<div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><rect x="10" y="14" width="28" height="22" rx="6"/><path d="M24 14V7M20 7h8"/><circle cx="19" cy="25" r="2.5"/><circle cx="29" cy="25" r="2.5"/><path d="M5 25h5M38 25h5"/></svg></div><h3>AI understanding</h3><p>Plain-English help using AI sensibly: where it saves time, where it falls over and how to check it.</p></div>
+</div></div>
+<div class="art"><img src="img/digit-services.webp" alt="" width="340" height="424" loading="lazy"></div>
+</div>
+</div></section>
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-label">Digital Revenue Studio</div>
-      <h1>We build your digital brand.<br /><em>You enjoy the revenue.</em></h1>
-      <p class="hero-sub">An independent content studio. Currently our active projects range from children's books to professional tools to gaming wikis — with our portfolio continuing to grow. Everything built with honesty, integrity and real life experience.</p>
-      <div class="hero-cta-row">
-        <a href="#brands" class="btn-primary">See what we build</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" class="btn-ghost">About the studio &rarr;</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-digit">
-        <img src="digit-v3.webp" alt="Digit — Digital Revenue Studio" width="400" />
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-label">Studio at a glance</div>
-        <div class="hero-stat-row">
-          <div class="hero-stat-item">
-            <span class="hero-stat-num gold">5</span>
-            <span class="hero-stat-desc">Active brands</span>
-          </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-num">18+</span>
-            <span class="hero-stat-desc">Guides live</span>
-          </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-num">2026</span>
-            <span class="hero-stat-desc">Founded</span>
-          </div>
-        </div>
-        <div class="hero-stat-brands">
-          <div class="hero-brand-pill">
-            <span class="hero-brand-dot dot-ma"></span>
-            <span class="hero-brand-name">Mavericks Adventures</span>
-            <span class="hero-brand-tag">Children's books</span>
-          </div>
-          <div class="hero-brand-pill">
-            <span class="hero-brand-dot dot-wos"></span>
-            <span class="hero-brand-name">Whiteout Survival Guide</span>
-            <span class="hero-brand-tag">Gaming</span>
-          </div>
-          <div class="hero-brand-pill">
-            <span class="hero-brand-dot dot-fathom"></span>
-            <span class="hero-brand-name">Fathom Guides</span>
-            <span class="hero-brand-tag">Game guides</span>
-          </div>
-          <div class="hero-brand-pill">
-            <span class="hero-brand-dot dot-ac"></span>
-            <span class="hero-brand-name">Atker Consultancy</span>
-            <span class="hero-brand-tag">Construction tools</span>
-          </div>
-          <div class="hero-brand-pill">
-            <span class="hero-brand-dot dot-die"></span>
-            <span class="hero-brand-name">Digital Income Experiment</span>
-            <span class="hero-brand-tag">Income testing</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="s" style="padding-top:0"><div class="wrap">
+<div class="band">
+<div><div class="eyebrow">The portfolio</div><h2>Every project gets its own voice, <em>audience and look.</em></h2>
+<p>Children's books, a gaming wiki, game guides, construction tools and an open income experiment. See what we built for each and where it stands today.</p>
+<a class="btn btn-gold" href="portfolio.html" data-link="other.portfolio">Explore the portfolio <span class="arrow">&rarr;</span></a></div>
+<div class="pic"><img src="img/digit-portfolio.webp" alt="" width="240" height="300" loading="lazy"></div>
+</div></div></section>
 
-<div class="gold-bar"></div>
+<section class="s" style="padding-top:20px"><div class="wrap">
+<div class="sec-head"><div><div class="eyebrow">From the blog</div><h2>Guides and <em>build notes</em></h2><p>What we are building, the tools we use and what we learn on the way.</p></div><a class="btn btn-green btn-sm" href="drs-blog.html" data-link="other.blog">View all posts <span class="arrow">&rarr;</span></a></div>
+<div class="posts" data-posts data-limit="3"></div>
+</div></section>
 
-<!-- ── ACTIVE BRANDS ── -->
-<section class="section" id="brands">
-  <div class="section-inner">
-    <div class="section-eyebrow">The Studio Portfolio</div>
-    <h2 class="section-title">Active brands. <em>One studio.</em></h2>
-    <p class="section-sub">Each brand is independent — its own audience, its own identity, its own content. Digital Revenue Studio is the creative layer that connects them.</p>
-
-    <div class="brands-grid">
-
-      <!-- FATHOM -->
-      <div class="brand-card brand-fathom">
-        <div class="brand-card-top">
-          <div class="brand-card-eyebrow">
-            <span class="brand-dot"></span>
-            <span class="brand-eyebrow-label">Fathom Guides &middot; New launch</span>
-          </div>
-          <h3>Independent game guides, built as routes you follow while you play</h3>
-          <p>A new multi-platform guide brand, live now with four Whiteout Survival guides, a live gift code and news site, and a Minecraft survival manual in production. Digital Revenue Studio is its branding and content partner.</p>
-          <div class="brand-tags">
-            <span class="brand-tag">Gaming Guides</span>
-            <span class="brand-tag">PDF Downloads</span>
-            <span class="brand-tag">Brand Launch</span>
-          </div>
-        </div>
-        <div class="brand-card-footer">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html" class="brand-link">Read the Fathom case study &rarr;</a>
-          <span class="brand-link-sub">fathomguides.github.io</span>
-        </div>
-      </div>
-
-      <!-- MA -->
-      <div class="brand-card brand-ma">
-        <div class="brand-card-top">
-          <div class="brand-card-eyebrow">
-            <span class="brand-dot"></span>
-            <span class="brand-eyebrow-label">Mavericks Adventures</span>
-          </div>
-          <h3>A children's book series built around a real character</h3>
-          <p>From a dinner table idea to a published book on Amazon — Mavericks Adventures follows Maverick, our cockapoo, through a series of illustrated adventures. Documented from the very first page.</p>
-          <div class="brand-tags">
-            <span class="brand-tag">KDP Publishing</span>
-            <span class="brand-tag">Children's Books</span>
-            <span class="brand-tag">Instagram</span>
-          </div>
-        </div>
-        <div class="brand-card-footer">
-          <a href="https://www.mavericksadventures.co.uk" class="brand-link">Visit Mavericks Adventures &rarr;</a>
-          <span class="brand-link-sub">mavericksadventures.co.uk</span>
-        </div>
-      </div>
-
-      <!-- WOS -->
-      <div class="brand-card brand-wos">
-        <div class="brand-card-top">
-          <div class="brand-card-eyebrow">
-            <span class="brand-dot"></span>
-            <span class="brand-eyebrow-label">Whiteout Survival Guide</span>
-          </div>
-          <h3>A free F2P strategy resource built from the community up</h3>
-          <p>The WOS Guide started with one Reddit post and 17,000 views. It grew into a blog, a wiki, event guides and a community-shaped resource — all free, written from a real player's perspective.</p>
-          <div class="brand-tags">
-            <span class="brand-tag">Gaming</span>
-            <span class="brand-tag">Wiki</span>
-            <span class="brand-tag">Reddit</span>
-            <span class="brand-tag">F2P Strategy</span>
-          </div>
-        </div>
-        <div class="brand-card-footer">
-          <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="brand-link">Visit the WOS Guide &rarr;</a>
-          <span class="brand-link-sub">WOS Wiki &amp; Blog</span>
-        </div>
-      </div>
-
-      <!-- AC -->
-      <div class="brand-card brand-ac">
-        <div class="brand-card-top">
-          <div class="brand-card-eyebrow">
-            <span class="brand-dot"></span>
-            <span class="brand-eyebrow-label">Atker Consultancy</span>
-          </div>
-          <h3>Practical tools for construction &amp; infrastructure</h3>
-          <p>NEC, CDM and leadership resources for the people delivering construction and infrastructure projects. Home of the CDM Digital Audit Tool, the NEC Contract Manager and the Tactical Leadership Companion. Created by Atker. Distributed by DRS.</p>
-          <div class="brand-tags">
-            <span class="brand-tag">NEC Tools</span>
-            <span class="brand-tag">CDM 2015</span>
-            <span class="brand-tag">Leadership</span>
-          </div>
-        </div>
-        <div class="brand-card-footer">
-          <a href="https://atker.co.uk" class="brand-link" target="_blank" rel="noopener">Visit Atker Consultancy &rarr;</a>
-          <span class="brand-link-sub">Tools &amp; resources</span>
-        </div>
-      </div>
-
-      <!-- DIE -->
-      <div class="brand-card brand-die">
-        <div class="brand-card-top">
-          <div class="brand-card-eyebrow">
-            <span class="brand-dot"></span>
-            <span class="brand-eyebrow-label">The Digital Income Experiment</span>
-          </div>
-          <h3>An honest income experiment log. Real numbers. No agenda.</h3>
-          <p>Nine online income streams tested and documented with genuine numbers — including the zeros. We create the content. Nothing is sold there. It exists because the honest version of this story is worth telling.</p>
-          <div class="brand-tags">
-            <span class="brand-tag">Income Testing</span>
-            <span class="brand-tag">Honest Data</span>
-            <span class="brand-tag">No Products</span>
-          </div>
-        </div>
-        <div class="brand-card-footer">
-          <a href="#" class="brand-link">Coming Soon &rarr;</a>
-          <span class="brand-link-sub">Content by DRS</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── WOS WIKI ── -->
-<section class="wiki-section">
-  <div class="wiki-inner">
-    <div class="wiki-left">
-      <div class="wiki-eyebrow">Featured Resource</div>
-      <h2 class="wiki-title">The Whiteout Survival<br /><em>F2P Wiki</em></h2>
-      <p class="wiki-sub">The r/whiteoutsurvival community asked for one place with all beginner guides organised. We built it. Free, growing, written from a real player's perspective. No login required.</p>
-      <div class="wiki-stats">
-        <div class="wiki-stat">
-          <span class="wiki-stat-num">18+</span>
-          <span class="wiki-stat-label">Guides live</span>
-        </div>
-        <div class="wiki-stat">
-          <span class="wiki-stat-num">323k</span>
-          <span class="wiki-stat-label">Reddit reach</span>
-        </div>
-        <div class="wiki-stat">
-          <span class="wiki-stat-num">Free</span>
-          <span class="wiki-stat-label">Always</span>
-        </div>
-      </div>
-      <div style="margin-top:24px;">
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="btn-primary" style="background:#4a9eda;color:#fff;">Go to the WOS Wiki</a>
-      </div>
-    </div>
-    <div class="wiki-right">
-      <div class="wiki-guides">
-        <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" class="wiki-guide-item">
-          <span class="wiki-guide-icon">🎁</span>
-          <div class="wiki-guide-text">
-            <span class="wiki-guide-name">Gift Code Tracker</span>
-            <span class="wiki-guide-sub">Active &amp; expired — updated regularly</span>
-          </div>
-          <span class="wiki-guide-arrow">&rarr;</span>
-        </a>
-        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-frostfire-mine.html" class="wiki-guide-item">
-          <span class="wiki-guide-icon">⚡</span>
-          <div class="wiki-guide-text">
-            <span class="wiki-guide-name">Frostfire Mine Guide</span>
-            <span class="wiki-guide-sub">The strategy most players miss</span>
-          </div>
-          <span class="wiki-guide-arrow">&rarr;</span>
-        </a>
-        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-svs-prep.html" class="wiki-guide-item">
-          <span class="wiki-guide-icon">⚔️</span>
-          <div class="wiki-guide-text">
-            <span class="wiki-guide-name">SvS Prep — 5-Day Playbook</span>
-            <span class="wiki-guide-sub">F2P guide to the biggest event</span>
-          </div>
-          <span class="wiki-guide-arrow">&rarr;</span>
-        </a>
-        <a href="https://www.digitalrevenuestudio.co.uk/wos-guide-bear-hunt.html" class="wiki-guide-item">
-          <span class="wiki-guide-icon">🐻</span>
-          <div class="wiki-guide-text">
-            <span class="wiki-guide-name">Bear Hunt — Beginner's Guide</span>
-            <span class="wiki-guide-sub">Hero selection, rally mechanics, F2P tips</span>
-          </div>
-          <span class="wiki-guide-arrow">&rarr;</span>
-        </a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="wiki-guide-item">
-          <span class="wiki-guide-icon">📖</span>
-          <div class="wiki-guide-text">
-            <span class="wiki-guide-name">View all guides</span>
-            <span class="wiki-guide-sub">Full wiki index</span>
-          </div>
-          <span class="wiki-guide-arrow">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── BLOG ── -->
-<section class="blog-section">
-  <div class="section-inner">
-    <div class="section-eyebrow">Latest from the Studio</div>
-    <h2 class="section-title">Build diaries &amp; <em>portfolio</em></h2>
-    <p class="section-sub">What we are building, what we are learning and what actually happened.</p>
-
-    <div class="blog-grid">
-
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-02-ma-build.html" class="blog-card">
-        <div class="blog-card-body">
-          <div class="blog-card-tags"><span class="blog-tag tag-case-study">Case Study</span><span class="blog-tag tag-studio">MA</span></div>
-          <h4>How We Built Mavericks Adventures from a Dinner Table Idea</h4>
-          <p>From concept to published book on Amazon KDP. Logo, website, blog content and a character-led brand built around a real cockapoo.</p>
-        </div>
-        <div class="blog-card-footer"><span>Read &rarr;</span><span class="blog-date">Mar 2026</span></div>
-      </a>
-
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-03-wos-build.html" class="blog-card">
-        <div class="blog-card-body">
-          <div class="blog-card-tags"><span class="blog-tag tag-case-study">Case Study</span><span class="blog-tag tag-studio">WOS</span></div>
-          <h4>How One Reddit Post Became a 323,000-View Gaming Wiki</h4>
-          <p>From zero presence to a growing F2P wiki and community resource — built entirely on free tools by listening to what the community asked for.</p>
-        </div>
-        <div class="blog-card-footer"><span>Read &rarr;</span><span class="blog-date">Mar 2026</span></div>
-      </a>
-
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-01-tool-stack.html" class="blog-card">
-        <div class="blog-card-body">
-          <div class="blog-card-tags"><span class="blog-tag tag-studio">Studio Guide</span><span class="blog-tag tag-income">Free Tools</span></div>
-          <h4>The Free Tool Stack We Use to Build Digital Brands</h4>
-          <p>Every tool we use across our active brands — all free or freemium. Tested, used daily and recommended without reservation.</p>
-        </div>
-        <div class="blog-card-footer"><span>Read &rarr;</span><span class="blog-date">Mar 2026</span></div>
-      </a>
-
-    </div>
-
-    <div class="blog-view-all">
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" class="btn-primary">View all posts &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── SERVICES ── -->
-<section class="services-section">
-  <div class="services-inner">
-    <div class="services-left">
-      <div class="section-eyebrow">Atker Consultancy</div>
-      <h2 class="services-title">Practical tools for construction &amp; infrastructure</h2>
-      <p class="services-sub">NEC, CDM and leadership resources built by practitioners with real site experience. Browser-based tools, templates and a field companion book you can use on live projects.</p>
-      <a href="https://atker.co.uk" class="btn-primary" style="background:var(--gold);color:var(--dark);margin-top:4px;" target="_blank" rel="noopener">View Atker tools &rarr;</a>
-    </div>
-    <div class="services-right">
-      <div class="service-item">
-        <span class="service-icon">📋</span>
-        <div class="service-text">
-          <h4>CDM Digital Audit Tool</h4>
-          <p>Browser-based CDM 2015 compliance checklist. No software, no subscription. Works offline on any device. Created by Atker Consultancy.</p>
-        </div>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">🏗️</span>
-        <div class="service-text">
-          <h4>NEC Contract Manager</h4>
-          <p>Browser-based tool for tracking Early Warning Notices and Compensation Events through the NEC4 / NEC3 assessment cycle. Dashboard, PDF export, works offline.</p>
-        </div>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">📘</span>
-        <div class="service-text">
-          <h4>Tactical Leadership Companion</h4>
-          <p>A leadership field companion in hardback, Kindle and a printable edition. Practical frameworks for reading a situation, deciding what to do and handling the conversation that follows.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── SIGNUP ── -->
-<section class="signup-section">
-  <div class="signup-inner">
-    <div class="signup-eyebrow">Follow the Studio</div>
-    <h2 class="signup-title">See what we build next</h2>
-    <p class="signup-sub">Updates when something worth sharing happens — new brands, new builds, new portfolio entries. No filler. No hustle content.</p>
-    <div style="text-align:center" class="sender-form-field" data-sender-form-id="e1wv33"></div>
-    <p style="font-size:0.75rem;color:rgba(255,255,255,0.2);margin-top:12px;">
-      Interested in the income experiment data specifically?
-      <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:underline;">The Digital Income Experiment &rarr;</a>
-    </p>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-col-title">The Studio</div>
-      <div class="footer-links">
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About DRS</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-title">The Brands</div>
-      <div class="footer-links">
-        <a href="https://www.mavericksadventures.co.uk">Mavericks Adventures</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">WOS Guide &amp; Wiki</a>
-        <a href="https://atker.co.uk" target="_blank" rel="noopener">Atker Consultancy</a>
-        <a href="#">Digital Income Experiment</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Resources</div>
-      <div class="footer-links">
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">WOS Wiki</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Code Tracker</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html">Free Templates</a>
-        <a href="https://payhip.com/DigitalRevenueStudio">Shop on Payhip</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Contact</div>
-      <div class="footer-links">
-        <a href="mailto:info@digitalrevenuestudio.co.uk" style="color:rgba(255,255,255,0.35);text-decoration:none;">info@digitalrevenuestudio.co.uk</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html">Newsletter</a>
-        <a href="https://www.reddit.com/user/Digit_DRS">Reddit</a>
-      </div>
-    </div>
-  </div>
-          <div class="footer-bottom">
-    <span class="footer-copy">&copy; 2026 Digital Revenue Studio</span>
-    <span class="footer-brand">DIGITAL REVENUE STUDIO</span>
-  </div>
-</footer>
-
-</body>
-</html>
+<section class="signup" id="follow"><div class="wrap">
+<div class="txt"><div class="eyebrow">Follow the studio</div><h2>See what we build next</h2>
+<p>New brands, new tools and new guides, when there is something worth sharing. No filler.</p>
+<div class="sender-form-field" data-sender-form-id="e1wv33"></div></div>
+<div class="pic"><img src="img/digit-signup.webp" alt="" width="240" height="300" loading="lazy"></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div class="about"><a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<p>A creator and brand studio. Branding, content, social presence, practical tools and AI know-how, for brands that deserve to be found.</p><div class="fsocial" aria-label="Digital Revenue Studio on social media"><a href="https://www.instagram.com/digital.revenuestudio/" data-link="other.social.instagram" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61586853106276" data-link="other.social.facebook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@digitalrevenuestu" data-link="other.social.tiktok" target="_blank" rel="noopener">TikTok</a><a href="https://uk.pinterest.com/digitalrevenuestudio/" data-link="other.social.pinterest" target="_blank" rel="noopener">Pinterest</a><a href="https://www.reddit.com/user/digitalrevenuestudio/" data-link="other.social.reddit" target="_blank" rel="noopener">Reddit</a></div></div>
+<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="drs-blog.html">Blog</a></div>
+<div class="col"><h4>Brands</h4><a href="drs-case-study-ma.html">Mavericks Adventures</a><a href="drs-case-study-wos.html">Whiteout Survival Wiki</a><a href="drs-case-study-fathom.html">Fathom Guides</a><a href="drs-case-study-ac.html">Atker Consultancy</a><a href="drs-case-study-exp.html">Digital Income Experiment</a></div>
+<div class="col"><h4>Resources</h4><a href="drs-wos-wiki.html">Whiteout Survival Wiki</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-cdm-tool.html">CDM audit tool</a><a href="drs-signup.html">Follow the studio</a></div>
+</div>
+<div class="legal">
+<div>&copy; 2026 Digital Revenue Studio. Mavericks Adventures, Fathom Guides and Atker Consultancy are independent brands that DRS supports as branding and content partner.</div>
+<div>As an Amazon Associate we earn from qualifying purchases.</div>
+<div>Whiteout Survival is a trademark of Century Games. The DRS WOS wiki is an independent fan resource and is not affiliated with or endorsed by Century Games.</div>
+<div><a href="drs-privacy.html">Privacy</a> &middot; <a href="drs-disclaimer.html">Disclaimer</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></div>
+</div></div></footer>
+<script src="data/links.js"></script><script src="data/updates.js"></script><script src="assets/site.js"></script>
+</body></html>

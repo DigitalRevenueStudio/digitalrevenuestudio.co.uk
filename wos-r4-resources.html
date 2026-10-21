@@ -1,151 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html" />
-  <title>WOS Alliance Chat Templates for R4 and R5 Leaders | Whiteout Survival Wiki</title>
-  <meta name="description" content="Ready-formatted Whiteout Survival alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS chat. SvS prep schedule, matchmaking coordination and Flame and Fangs event template." />
-  <script defer src="/drs-consent.js"></script>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" /></noscript>
-  <style>
-    :root{
-      --ice-dark:#050D1A;--ice-panel:#0D1F38;--ice-border:#1A3A5C;
-      --ice-bright:#4DA8DA;--ice-glow:#7DD4F8;--white:#FFFFFF;
-      --orange:#E8832A;--green:#2ECC71;--gold:#D4A82A;--red:#C0392B;
-      --text:#B8D4E8;--text-muted:#5A7A94;--purple:#8A4FD4;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Barlow',sans-serif;background:var(--ice-dark);color:var(--text);line-height:1.75;}
-    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(77,168,218,0.06) 0%,transparent 70%);pointer-events:none;z-index:0;}
-
-    /* NAV */
-    .site-header{background:rgba(9,22,40,0.97);border-bottom:1px solid var(--ice-border);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
-    .site-brand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ice-glow);text-decoration:none;display:flex;align-items:center;gap:10px;}
-    .site-brand::before{content:'WOS';font-size:0.6rem;letter-spacing:0.05em;color:var(--ice-bright);background:rgba(77,168,218,0.15);border:1px solid rgba(77,168,218,0.3);padding:2px 6px;border-radius:2px;}
-    .nav-links{display:flex;gap:20px;list-style:none;}
-    .nav-links a{font-size:0.8rem;font-weight:500;color:var(--text-muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;}
-    .nav-links a:hover{color:var(--white);}
-
-    /* HERO */
-    .post-hero{position:relative;z-index:1;padding:64px 40px 40px;max-width:900px;margin:0 auto;}
-    .post-category{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,168,42,0.3);background:rgba(212,168,42,0.06);padding:5px 14px;border-radius:2px;margin-bottom:20px;}
-    .post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--white);line-height:1.0;text-transform:uppercase;margin-bottom:16px;}
-    .post-hero h1 em{font-style:normal;color:var(--ice-glow);}
-    .post-intro{font-family:'Barlow',sans-serif;font-size:1rem;color:var(--text);line-height:1.75;max-width:640px;border-left:3px solid var(--gold);padding-left:18px;margin-bottom:24px;}
-
-    /* HOW TO USE */
-    .how-to{background:rgba(77,168,218,0.05);border:1px solid var(--ice-border);border-left:3px solid var(--ice-bright);border-radius:0 4px 4px 0;padding:16px 20px;max-width:900px;margin:0 auto 0;position:relative;z-index:1;}
-    .how-to-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ice-bright);margin-bottom:8px;}
-    .how-to-steps{display:flex;gap:32px;flex-wrap:wrap;}
-    .how-to-step{display:flex;align-items:flex-start;gap:10px;}
-    .how-to-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;color:var(--ice-bright);opacity:0.4;line-height:1;flex-shrink:0;}
-    .how-to-text{font-size:0.83rem;color:var(--text-muted);line-height:1.55;}
-    .how-to-text strong{color:var(--text);}
-
-    /* FROST DIVIDER */
-    .frost-divider{max-width:900px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
-    .frost-divider::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--ice-border) 20%,var(--ice-bright) 50%,var(--ice-border) 80%,transparent);margin:32px 0;}
-
-    /* PAGE BODY */
-    .post-body{max-width:900px;margin:0 auto;padding:0 40px 80px;position:relative;z-index:1;}
-    .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ice-bright);margin:48px 0 20px;display:flex;align-items:center;gap:12px;}
-    .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(77,168,218,0.3),transparent);}
-
-    /* TEMPLATE CARD */
-    .template-card{background:var(--ice-panel);border:1px solid var(--ice-border);border-radius:4px;overflow:hidden;margin-bottom:32px;}
-    .template-header{background:rgba(77,168,218,0.08);border-bottom:1px solid var(--ice-border);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
-    .template-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--white);}
-    .template-meta{font-size:0.72rem;color:var(--text-muted);}
-    .copy-btn{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.3);color:var(--ice-bright);padding:7px 16px;border-radius:3px;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
-    .copy-btn:hover{background:var(--ice-bright);color:var(--ice-dark);}
-    .copy-btn.copied{background:rgba(46,204,113,0.15);border-color:rgba(46,204,113,0.3);color:var(--green);}
-
-    /* TEMPLATE TEXT BOX */
-    .template-text{padding:20px;font-family:'Barlow',monospace;font-size:0.88rem;line-height:1.8;color:var(--text);white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,0.2);border-bottom:1px solid var(--ice-border);user-select:all;cursor:text;}
-    .template-note{padding:12px 20px;font-size:0.75rem;color:var(--text-muted);line-height:1.6;}
-    .template-note strong{color:var(--text);}
-
-    /* CAVEAT BOX */
-    .caveat-box{background:rgba(138,79,212,0.07);border:1px solid rgba(138,79,212,0.2);border-left:3px solid var(--purple);border-radius:0 4px 4px 0;padding:14px 18px;margin-bottom:20px;}
-    .caveat-box p{font-size:0.85rem;color:var(--text);line-height:1.7;margin:0;}
-    .caveat-box strong{color:#b388f4;}
-
-    /* FOOTER */
-    footer{background:var(--ice-dark);border-top:1px solid var(--ice-border);padding:20px 40px;text-align:center;margin-top:40px;}
-    footer p{font-size:0.72rem;color:var(--text-muted);}
-    footer a{color:var(--text-muted);text-decoration:none;}
-    footer a:hover{color:var(--ice-bright);}
-
-    @media(max-width:640px){
-      .site-header{padding:12px 20px;}
-      .nav-links{display:none;}
-      .post-hero,.post-body,.how-to,.frost-divider{padding-left:20px;padding-right:20px;}
-      .how-to-steps{flex-direction:column;gap:12px;}
-    }
-  </style>
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WOS Alliance Chat Templates for R4 and R5 Leaders | WOS Wiki</title>
+<meta name="description" content="Ready-formatted Whiteout Survival alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS chat.">
+<link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html">
+<meta property="og:title" content="WOS Alliance Chat Templates for R4 and R5 Leaders | WOS Wiki"><meta property="og:description" content="Ready-formatted Whiteout Survival alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS chat."><meta property="og:type" content="article">
+<meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/img/og-wos.png"><meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html"><meta property="og:site_name" content="Digital Revenue Studio">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="WOS Alliance Chat Templates for R4 and R5 Leaders | WOS Wiki"><meta name="twitter:description" content="Ready-formatted Whiteout Survival alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS chat."><meta name="twitter:image" content="https://www.digitalrevenuestudio.co.uk/img/og-wos.png">
+<link rel="icon" type="image/png" href="img/favicon.png"><link rel="apple-touch-icon" href="img/favicon.png">
+<script defer src="/drs-consent.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html#page", "name": "WOS Alliance Chat Templates for R4 and R5 Leaders | WOS Wiki", "url": "https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html", "description": "Ready-formatted Whiteout Survival alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS chat.", "isPartOf": {"@id": "https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html#site"}}, {"@type": "WebSite", "@id": "https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html#site", "name": "Whiteout Survival Wiki", "url": "https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html", "publisher": {"@type": "Organization", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk/"}}, {"@type": "Article", "@id": "https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html#article", "headline": "WOS Alliance Chat Templates for R4 and R5 Leaders", "description": "Ready-formatted Whiteout Survival alliance chat templates for R4 and R5 leaders. Copy and paste directly into WOS chat.", "mainEntityOfPage": "https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html", "url": "https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html", "inLanguage": "en-GB", "image": "https://www.digitalrevenuestudio.co.uk/img/og-wos.png", "author": {"@type": "Person", "name": "Slick78"}, "publisher": {"@type": "Organization", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk/", "logo": {"@type": "ImageObject", "url": "https://www.digitalrevenuestudio.co.uk/img/favicon.png"}}}]}</script>
+<script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Syne:wght@600;700;800&family=Lora:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/wos.css">
+<link rel="stylesheet" href="assets/wos-guide.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Digital Revenue Studio", "item": "https://www.digitalrevenuestudio.co.uk/index.html"}, {"@type": "ListItem", "position": 2, "name": "Whiteout Survival Wiki", "item": "https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html"}, {"@type": "ListItem", "position": 3, "name": "Alliance tools", "item": "https://www.digitalrevenuestudio.co.uk/wos-alliance-tools.html"}, {"@type": "ListItem", "position": 4, "name": "R4 and R5 Chat Templates", "item": "https://www.digitalrevenuestudio.co.uk/wos-r4-resources.html"}]}</script>
+<meta name="google-adsense-account" content="ca-pub-5306195679240930">
 </head>
-<body>
-
-<header class="site-header">
-  <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" class="site-brand">Wiki</a>
-  <nav><ul class="nav-links">
-    <li><a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a></li>
-    <li><a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html">Gift Codes</a></li>
-    <li><a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community</a></li>
-    <li><a href="https://www.digitalrevenuestudio.co.uk/wos-signup.html">Newsletter</a></li>
-  </ul></nav>
-</header>
-
-<div class="post-hero">
-  <div class="post-category">&#128081; R4 / R5 Resources</div>
-  <h1>Alliance Chat<br /><em>Templates</em></h1>
-  <p class="post-intro">Ready-formatted templates for R4 and R5 leaders. Each one is pre-formatted to display correctly in WOS alliance chat. Tap the copy button, paste into chat, send.</p>
+<body class="wiki">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="drs-wos-wiki.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>WHITEOUT SURVIVAL WIKI</b><small>BY DIGITAL REVENUE STUDIO</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
+<nav class="nav" id="nav" aria-label="Main">
+<a class="navlink" href="drs-wos-wiki.html">Wiki home</a><a class="navlink" href="wos-wiki-gift-code-tracker.html">Gift codes</a>
+<div class="dd"><a class="navlink" href="wos-beginner-guides.html" aria-current="page">Guides &#9662;</a><div class="ddm"><a href="wos-beginner-guides.html">Beginner guides</a><a href="wos-event-guides.html">Event guides</a><a href="wos-heroes-pets-troops.html">Heroes, pets and troops</a><a href="wos-economy-rewards.html">Economy and rewards</a><a href="wos-strategy-progression.html">Strategy and progression</a><a href="wos-alliance-tools.html">Alliance tools</a></div></div>
+<a class="navlink" href="wos-community.html">Community</a><a class="navlink" href="wos-news.html">News</a><a class="navlink" href="index.html">Studio</a>
+<a class="btn btn-kofi btn-sm" href="https://ko-fi.com/digitalrevenuestudio" target="_blank" rel="noopener" data-link="other.kofi">Support the wiki</a>
+</nav></div></header>
+<main id="main">
+<div class="whero slim"><div class="wrap">
+<div><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Digital Revenue Studio</a> &rsaquo; <a href="drs-wos-wiki.html">Whiteout Survival Wiki</a> &rsaquo; <a href="wos-alliance-tools.html">Alliance tools</a> &rsaquo; <span aria-current="page">R4 and R5 Chat Templates</span></nav><div class="eyebrow">R4 / R5 Resources</div><h1>Alliance Chat<br/><em>Templates</em></h1><p class="sub">Ready-formatted templates for R4 and R5 leaders. Each one is pre-formatted to display correctly in WOS alliance chat. Tap the copy button, paste into chat, send.</p><div class="gmeta"><span>R4 / R5 Resources</span><span class="ok">Community reviewed</span></div></div>
 </div>
-
-<div class="how-to" style="padding:16px 40px 16px;">
-  <div class="how-to-label">&#128161; How to Use</div>
-  <div class="how-to-steps">
-    <div class="how-to-step">
-      <div class="how-to-num">1</div>
-      <div class="how-to-text"><strong>Tap Copy</strong> on the template you want</div>
-    </div>
-    <div class="how-to-step">
-      <div class="how-to-num">2</div>
-      <div class="how-to-text"><strong>Open WOS</strong> and go to Alliance Chat</div>
-    </div>
-    <div class="how-to-step">
-      <div class="how-to-num">3</div>
-      <div class="how-to-text"><strong>Long press</strong> the chat input and tap Paste</div>
-    </div>
-    <div class="how-to-step">
-      <div class="how-to-num">4</div>
-      <div class="how-to-text"><strong>Send.</strong> Formatting displays automatically</div>
-    </div>
-  </div>
+<div class="wrap hsup"><span>The wiki is free and always will be. If it helped your game, you can help keep it going.</span><a class="btn btn-kofi btn-sm" href="https://ko-fi.com/digitalrevenuestudio" target="_blank" rel="noopener" data-link="other.kofi">Ko-fi <span class="arrow">&rarr;</span></a></div></div>
+<section class="s gsec"><div class="wrap gwrap"><article class="gbody g-wos-r4-resources">
+<div class="how-to" style="">
+<div class="how-to-label">💡 How to Use</div>
+<div class="how-to-steps">
+<div class="how-to-step">
+<div class="how-to-num">1</div>
+<div class="how-to-text"><strong>Tap Copy</strong> on the template you want</div>
 </div>
-
-<div class="frost-divider"></div>
-
-<div class="post-body">
-
-  <!-- TEMPLATE 1: SVS PREP SCHEDULE -->
-  <div id="svs-prep" class="section-label">&#9876; State vs State</div>
-
-  <div class="template-card">
-    <div class="template-header">
-      <div>
-        <div class="template-title">SvS Prep Week Schedule</div>
-        <div class="template-meta">5-day task schedule for the full alliance. Matches Slick78's original format.</div>
-      </div>
-      <button class="copy-btn" onclick="copyTemplate('svs-prep')">&#128203; Copy</button>
-    </div>
-    <div class="template-text" id="svs-prep">SVS Prep Week 
+<div class="how-to-step">
+<div class="how-to-num">2</div>
+<div class="how-to-text"><strong>Open WOS</strong> and go to Alliance Chat</div>
+</div>
+<div class="how-to-step">
+<div class="how-to-num">3</div>
+<div class="how-to-text"><strong>Long press</strong> the chat input and tap Paste</div>
+</div>
+<div class="how-to-step">
+<div class="how-to-num">4</div>
+<div class="how-to-text"><strong>Send.</strong> Formatting displays automatically</div>
+</div>
+</div>
+</div><div class="section-label" id="svs-prep">⚔ State vs State</div><div class="template-card">
+<div class="template-header">
+<div>
+<div class="template-title">SvS Prep Week Schedule</div>
+<div class="template-meta">5-day task schedule for the full alliance. Matches Slick78's original format.</div>
+</div>
+<button class="copy-btn" onclick="copyTemplate('svs-prep')">📋 Copy</button>
+</div>
+<div class="template-text" id="svs-prep">SVS Prep Week 
 🔱 SvS Prep ✅ Best To-Do
 １　２　３　４　５：day
 🆗｜－｜🆗｜✅｜－：🌟Charms
@@ -157,26 +76,21 @@
 －｜－｜🆗｜－｜✅：🐱Pets
 －｜－｜✅｜－｜－：🔪Hunting 
 －｜－｜－｜🆗｜✅：Hero Gear   －｜－｜－｜✅｜－：Training   －｜－｜－｜－｜✅：👕Chief Gear    －｜✅｜－｜－｜🆗：Research</div>
-    <div class="template-note">
-      <div style="margin-bottom:6px;color:var(--ice-bright);font-size:0.72rem;font-weight:600;">&#128203; Tap Copy above, then paste directly into WOS alliance chat.</div>
-      <span style="opacity:0.7;">&#9989; Best day &nbsp;&bull;&nbsp; <span style="display:inline-block;background:rgba(77,168,218,0.2);border:1px solid rgba(77,168,218,0.4);color:var(--ice-bright);font-size:0.68rem;padding:1px 5px;border-radius:2px;font-family:monospace;vertical-align:middle;">OK</span> Secondary window &nbsp;&bull;&nbsp; &#xFF0D; Hold, wrong day</span>
-      <div style="margin-top:6px;font-size:0.7rem;color:var(--muted);">Note: preview may look different to in-game. The copied text formats correctly in WOS chat.</div>
-    </div>
-  </div>
-
-  <!-- TEMPLATE 2: MATCHMAKING TACTICS -->
-  <div id="matchmaking" class="section-label">&#128203; Matchmaking</div>
-
-  <div class="template-card">
-    <div class="template-header">
-      <div>
-        <div class="template-title">Matchmaking Power Reduction</div>
-        <div class="template-meta">Saturday &ndash; Sunday UTC coordination message</div>
-      </div>
-      <button class="copy-btn" onclick="copyTemplate('mm1')">&#128203; Copy</button>
-    </div>
-    <div class="template-text" id="mm1">⚔️ SvS Matchmaking Window
-📅 Sat & Sun UTC only
+<div class="template-note">
+<div style="margin-bottom:6px;color:var(--ice-bright);font-size:0.72rem;font-weight:600;">📋 Tap Copy above, then paste directly into WOS alliance chat.</div>
+<span style="opacity:0.7;">✅ Best day  •  <span style="display:inline-block;background:rgba(31,107,168,0.2);border:1px solid rgba(31,107,168,0.4);color:var(--ice-bright);font-size:0.68rem;padding:1px 5px;border-radius:2px;font-family:monospace;vertical-align:middle;">OK</span> Secondary window  •  － Hold, wrong day</span>
+<div style="margin-top:6px;font-size:0.7rem;color:var(--muted);">Note: preview may look different to in-game. The copied text formats correctly in WOS chat.</div>
+</div>
+</div><div class="section-label" id="matchmaking">📋 Matchmaking</div><div class="template-card">
+<div class="template-header">
+<div>
+<div class="template-title">Matchmaking Power Reduction</div>
+<div class="template-meta">Saturday – Sunday UTC coordination message</div>
+</div>
+<button class="copy-btn" onclick="copyTemplate('mm1')">📋 Copy</button>
+</div>
+<div class="template-text" id="mm1">⚔️ SvS Matchmaking Window
+📅 Sat &amp; Sun UTC only
 🔹 Reduce state power:
 ✅ Remove ALL hero gear
 ✅ Drill Camp reset heroes
@@ -185,25 +99,19 @@
 🔹 Coordinate top 100-150:
 ✅ All act SAME TIME
 ✅ Re-equip after Sunday</div>
-    <div class="template-note">
-      <strong>Tip:</strong> Pin this in alliance chat before the matchmaking window opens. Remind members the evening before to be ready.
-      <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(77,168,218,0.15);color:var(--text-muted);">&#9888; <strong style="color:rgba(138,79,212,0.8);">Community consensus only.</strong> Developers state power reduction does not affect matchmaking. The community broadly disagrees. The risk of trying is zero. Apply your own judgement before sharing with your alliance.</div>
-    </div>
-  </div>
-
-
-  <!-- TEMPLATE 3: FLAME AND FANGS -->
-  <div id="flame-and-fangs" class="section-label">&#x1F525; Flame and Fangs</div>
-
-  <div class="template-card">
-    <div class="template-header">
-      <div>
-        <div class="template-title">Flame and Fangs Schedule</div>
-        <div class="template-meta">Send 1&ndash;2 days before event starts</div>
-      </div>
-      <button class="copy-btn" onclick="copyTemplate('fnf')">&#128203; Copy</button>
-    </div>
-    <div class="template-text" id="fnf">🔥 Flame & Fangs
+<div class="template-note">
+<strong>Tip:</strong> Pin this in alliance chat before the matchmaking window opens. Remind members the evening before to be ready.
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(31,107,168,0.15);color:var(--text-muted);">⚠ <strong style="color:rgba(107,63,181,0.8);">Community consensus only.</strong> Developers state power reduction does not affect matchmaking. The community broadly disagrees. The risk of trying is zero. Apply your own judgement before sharing with your alliance.</div>
+</div>
+</div><div class="section-label" id="flame-and-fangs">🔥 Flame and Fangs</div><div class="template-card">
+<div class="template-header">
+<div>
+<div class="template-title">Flame and Fangs Schedule</div>
+<div class="template-meta">Send 1–2 days before event starts</div>
+</div>
+<button class="copy-btn" onclick="copyTemplate('fnf')">📋 Copy</button>
+</div>
+<div class="template-text" id="fnf">🔥 Flame &amp; Fangs
 🔹 ✅Do ✅Claim
 ――――――――――――
 🔹 SUNDAY NIGHT:
@@ -214,44 +122,36 @@
 🔹 MON + TUE:
 00:00 ✅ ✅  08:00 ✅ ✅  16:00 ✅ ✅
 💡Spend cores before ends!</div>
-    <div class="template-note">
-      <div style="margin-bottom:6px;color:var(--ice-bright);font-size:0.72rem;font-weight:600;">&#128203; Tap Copy above, then paste directly into WOS alliance chat.</div>
-      <div style="font-size:0.7rem;color:var(--text-muted);">&#11088; The 00:00* Monday session collects Sunday&rsquo;s held missions for bonus cores. &nbsp;&bull;&nbsp; Note: preview may look different to in-game.</div>
-      <div style="margin-top:6px;font-size:0.72rem;"><a href="https://www.digitalrevenuestudio.co.uk/wos-guide-flame-and-fangs.html" style="color:var(--ice-bright);text-decoration:none;">Full Flame and Fangs guide &rarr;</a></div>
-    </div>
-  </div>
-
-
-  <!-- TEMPLATE 4: BEAR HUNT -->
-  <div id="bear-hunt" class="section-label">&#x1F43E; Bear Hunt</div>
-
-  <div class="template-card">
-    <div class="template-header">
-      <div>
-        <div class="template-title">Bear Hunt: Rally Starters</div>
-        <div class="template-meta">Message 1 of 3</div>
-      </div>
-      <button class="copy-btn" onclick="copyTemplate('bh1')">&#128203; Copy</button>
-    </div>
-    <div class="template-text" id="bh1">🐾 Bear Hunt: Starters
+<div class="template-note">
+<div style="margin-bottom:6px;color:var(--ice-bright);font-size:0.72rem;font-weight:600;">📋 Tap Copy above, then paste directly into WOS alliance chat.</div>
+<div style="font-size:0.7rem;color:var(--text-muted);">⭐ The 00:00* Monday session collects Sunday’s held missions for bonus cores.  •  Note: preview may look different to in-game.</div>
+<div style="margin-top:6px;font-size:0.72rem;"><a href="wos-guide-flame-and-fangs.html" style="color:var(--ice-bright);text-decoration:none;">Full Flame and Fangs guide →</a></div>
+</div>
+</div><div class="section-label" id="bear-hunt">🐾 Bear Hunt</div><div class="template-card">
+<div class="template-header">
+<div>
+<div class="template-title">Bear Hunt: Rally Starters</div>
+<div class="template-meta">Message 1 of 3</div>
+</div>
+<button class="copy-btn" onclick="copyTemplate('bh1')">📋 Copy</button>
+</div>
+<div class="template-text" id="bh1">🐾 Bear Hunt: Starters
 ――――――――――――
 ✅ 3 strongest heroes
 ✅ Gold quality only
 ❌ No Gina in formation
 👀 Check squads before go
 🔔 Kick wrong squads</div>
-    <div class="template-note"><strong>Send first</strong> &mdash; before the session opens. Rally starters need this before joining.</div>
-  </div>
-
-  <div class="template-card">
-    <div class="template-header">
-      <div>
-        <div class="template-title">Bear Hunt: Joiners</div>
-        <div class="template-meta">Message 2 of 3</div>
-      </div>
-      <button class="copy-btn" onclick="copyTemplate('bh2')">&#128203; Copy</button>
-    </div>
-    <div class="template-text" id="bh2">🐾 Bear Hunt: Joiners
+<div class="template-note"><strong>Send first</strong>, before the session opens. Rally starters need this before joining.</div>
+</div><div class="template-card">
+<div class="template-header">
+<div>
+<div class="template-title">Bear Hunt: Joiners</div>
+<div class="template-meta">Message 2 of 3</div>
+</div>
+<button class="copy-btn" onclick="copyTemplate('bh2')">📋 Copy</button>
+</div>
+<div class="template-text" id="bh2">🐾 Bear Hunt: Joiners
 🔹 Slot 1 hero matters!
 ――――――――――――
 ✅ Reina/Any/Any
@@ -262,26 +162,24 @@
 ✅ Gwen/Any/Any
 ✅ Bradley/Any/Any
 ✅ Magnus/Any/Any</div>
-    <div class="template-note">
-      <strong>Send second.</strong> Alliance members use their best joiner hero in Slot 1. Heroes listed from best to worst based on expedition skill.
-      <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(77,168,218,0.15);">
-        <span style="color:var(--gold);font-weight:700;">S Tier:</span> Reina [Gen 4] &nbsp;
-        <span style="color:var(--ice-bright);font-weight:700;">A Tier:</span> Jessie [Gen 1], Jasser [Gen 1], Seo-Yoon [Gen 1], Jeronimo [Gen 1], Gwen [Gen 5], Bradley [Gen 7], Magnus [Gen 9] &nbsp;
+<div class="template-note">
+<strong>Send second.</strong> Alliance members use their best joiner hero in Slot 1. Heroes listed from best to worst based on expedition skill.
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(31,107,168,0.15);">
+<span style="color:var(--gold);font-weight:700;">S Tier:</span> Reina [Gen 4]  
+        <span style="color:var(--ice-bright);font-weight:700;">A Tier:</span> Jessie [Gen 1], Jasser [Gen 1], Seo-Yoon [Gen 1], Jeronimo [Gen 1], Gwen [Gen 5], Bradley [Gen 7], Magnus [Gen 9]  
         <span style="color:var(--text-muted);font-weight:700;">B Tier:</span> Sonya [Gen 8] (omitted from template)
       </div>
-      <div style="margin-top:4px;font-size:0.7rem;color:var(--text-muted);">Note: preview may look different to in-game. The copied text formats correctly in WOS chat.</div>
-    </div>
-  </div>
-
-  <div class="template-card">
-    <div class="template-header">
-      <div>
-        <div class="template-title">Bear Hunt: Rally Timing</div>
-        <div class="template-meta">Message 3 of 3</div>
-      </div>
-      <button class="copy-btn" onclick="copyTemplate('bh3')">&#128203; Copy</button>
-    </div>
-    <div class="template-text" id="bh3">🐾 Bear Hunt: Timing
+<div style="margin-top:4px;font-size:0.7rem;color:var(--text-muted);">Note: preview may look different to in-game. The copied text formats correctly in WOS chat.</div>
+</div>
+</div><div class="template-card">
+<div class="template-header">
+<div>
+<div class="template-title">Bear Hunt: Rally Timing</div>
+<div class="template-meta">Message 3 of 3</div>
+</div>
+<button class="copy-btn" onclick="copyTemplate('bh3')">📋 Copy</button>
+</div>
+<div class="template-text" id="bh3">🐾 Bear Hunt: Timing
 ――――――――――――
 👉 Row 1: first 6 rallies
 👉 Row 2: after 1 min
@@ -289,32 +187,39 @@
 ――――――――――――
 ✅ Groups of 6 rallies
 ✅ 30sec between groups</div>
-    <div class="template-note"><strong>Send third.</strong> Row timings are an example &mdash; adjust to match your alliance's structure before sending.</div>
-  </div>
-
-  <!-- MORE COMING -->
-  <div style="background:rgba(77,168,218,0.04);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;text-align:center;margin-top:16px;">
-    <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">More Templates Coming</div>
-    <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:480px;margin:0 auto;">Alliance Championship lane strategy is in the build queue. <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="color:var(--ice-bright);text-decoration:none;">Request a template &rarr;</a></p>
-  </div>
-
+<div class="template-note"><strong>Send third.</strong> Row timings are an example, adjust to match your alliance's structure before sending.</div>
+</div><div style="background:rgba(31,107,168,0.04);border:1px solid var(--ice-border);border-radius:4px;padding:20px 24px;text-align:center;margin-top:16px;">
+<div style="font-family:var(--f-head);font-weight:800;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;">More Templates Coming</div>
+<p style="font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:480px;margin:0 auto;">Alliance Championship lane strategy is in the build queue. <a href="wos-community.html" style="color:var(--ice-bright);text-decoration:none;">Request a template →</a></p>
 </div>
-
-<!-- COMMUNITY FEEDBACK -->
-<div style="max-width:900px;margin:0 auto;padding:0 40px 48px;">
-  <div style="background:rgba(77,168,218,0.05);border:1px solid rgba(26,58,92,0.8);border-radius:4px;padding:20px 24px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
-    <div style="flex:1;min-width:200px;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:#4DA8DA;margin-bottom:6px;">&#128172; Spot an Error or Have a Tip?</div>
-      <p style="font-size:0.82rem;color:#5A7A94;margin:0;line-height:1.65;">If a template is wrong, a tactic is outdated, or you have a format that works better in your alliance chat, let us know. Corrections are made fast.</p>
-    </div>
-    <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html" style="display:inline-block;background:rgba(77,168,218,0.12);border:1px solid rgba(77,168,218,0.25);color:#4DA8DA;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:10px 18px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:center;">Submit Feedback &rarr;</a>
-  </div>
+</article></div></section>
+<div class="adslot" data-ad="guide-1" aria-hidden="true"></div>
+<section class="s" style="padding-top:0"><div class="wrap gwrap">
+<div class="gfeed"><div><div class="eyebrow">Spot an error or have a tip?</div><h2>Help keep this guide accurate</h2><p>This wiki is built with its players. If something is wrong, out of date or missing, tell us and we will check it in game.</p></div>
+<a class="btn btn-ice-solid" href="wos-community.html">Send feedback <span class="arrow">&rarr;</span></a></div>
+<div class="sec-head"><div><div class="eyebrow">Keep exploring</div><h2>Related <em>reading.</em></h2></div></div>
+<div class="related"><a href="wos-guide-alliance-tips.html">Alliance Tips</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-wos-wiki.html">All wiki guides</a></div></div></section>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="kofi-big">
+<img src="img/digit-wiki.webp" alt="" width="120" height="174" loading="lazy">
+<div><div class="eyebrow">Keep the wiki free</div><h2>Found it useful? <em>Buy us a coffee.</em></h2><p>Every guide and every gift code is free to read. A small Ko-fi donation pays for the time it takes to test, write and check them. It is never expected, always appreciated.</p></div>
+<a class="btn btn-kofi" href="https://ko-fi.com/digitalrevenuestudio" target="_blank" rel="noopener" data-link="other.kofi">Support on Ko-fi <span class="arrow">&rarr;</span></a>
+</div></div></section>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div class="about"><a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<p>A creator and brand studio. Branding, content, social presence, practical tools and AI know-how, for brands that deserve to be found.</p><div class="fsocial" aria-label="Digital Revenue Studio on social media"><a href="https://www.instagram.com/digital.revenuestudio/" data-link="other.social.instagram" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61586853106276" data-link="other.social.facebook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@digitalrevenuestu" data-link="other.social.tiktok" target="_blank" rel="noopener">TikTok</a><a href="https://uk.pinterest.com/digitalrevenuestudio/" data-link="other.social.pinterest" target="_blank" rel="noopener">Pinterest</a><a href="https://www.reddit.com/user/digitalrevenuestudio/" data-link="other.social.reddit" target="_blank" rel="noopener">Reddit</a></div></div>
+<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="drs-blog.html">Blog</a></div>
+<div class="col"><h4>Brands</h4><a href="drs-case-study-ma.html">Mavericks Adventures</a><a href="drs-case-study-wos.html">Whiteout Survival Wiki</a><a href="drs-case-study-fathom.html">Fathom Guides</a><a href="drs-case-study-ac.html">Atker Consultancy</a><a href="drs-case-study-exp.html">Digital Income Experiment</a></div>
+<div class="col"><h4>Resources</h4><a href="drs-wos-wiki.html">Whiteout Survival Wiki</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-cdm-tool.html">CDM audit tool</a><a href="drs-signup.html">Follow the studio</a></div>
 </div>
-
-<footer>
-  <p>WOS Wiki &mdash; Part of <a href="https://www.digitalrevenuestudio.co.uk">Digital Revenue Studio</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html">All Guides</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/wos-community.html">Community Hub</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html">Privacy</a></p>
-</footer>
-
+<div class="legal">
+<div>&copy; 2026 Digital Revenue Studio. Mavericks Adventures, Fathom Guides and Atker Consultancy are independent brands that DRS supports as branding and content partner.</div>
+<div>As an Amazon Associate we earn from qualifying purchases.</div>
+<div>Whiteout Survival is a trademark of Century Games. The DRS WOS wiki is an independent fan resource and is not affiliated with or endorsed by Century Games.</div>
+<div><a href="drs-privacy.html">Privacy</a> &middot; <a href="drs-disclaimer.html">Disclaimer</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></div>
+</div></div></footer>
+<script src="data/links.js"></script><script src="data/updates.js"></script><script src="assets/site.js"></script>
+<script src="data/wos-guides.js"></script><script src="data/wos-gear.js"></script><script src="assets/wos.js"></script><script src="assets/carousel.js"></script>
 <script>
 function copyTemplate(id) {
   const el = document.getElementById(id);
@@ -346,7 +251,4 @@ function copyTemplate(id) {
     }, 2000);
   }
 }
-</script>
-
-</body>
-</html>
+</script></body></html>
