@@ -1,348 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" />
- <title>Case Study — The Digital Income Experiment | Digital Revenue Studio</title>
- <meta name="description" content="How Digital Revenue Studio built the brand, website, content strategy and ongoing blog content for The Digital Income Experiment — an independent project documenting online income testing." />
- <script defer src="/drs-consent.js"></script>
- 
- <script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media=\'all\'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" /></noscript>
- <style>
- *{margin:0;padding:0;box-sizing:border-box;}
- body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
- :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
- 
- .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
- .topbar-logo{height:34px;width:auto;display:block;}
- .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
- .topbar-right{display:flex;align-items:center;gap:24px;}
- .topbar-nav{display:flex;gap:24px;align-items:center;}
- .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
- .topbar-nav a:hover{color:var(--gold);}
- .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
- .topbar-cta:hover{background:#fdc84d;}
- 
- 
- .gold-bar{height:3px;background:var(--gold);width:100%;}
- .hero{background:var(--dark);padding:72px 40px 80px;position:relative;overflow:hidden;}
- .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
- .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 65%);pointer-events:none;}
- .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
- .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
- .hero-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:99px;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.3);color:#a78bfa;}
- .hero-back{font-size:0.78rem;text-decoration:none;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:5px;}
- .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);color:var(--white);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
- .hero h1 em{font-family:'Lora',serif;font-style:italic;color:var(--gold);}
- .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.45);max-width:580px;line-height:1.75;}
- .page-inner{max-width:1100px;margin:0 auto;padding:64px 40px;}
- .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
- .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#6D28D9;margin-bottom:8px;}
- .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.015em;line-height:1.15;margin-bottom:10px;}
- .section-title em{font-family:'Lora',serif;font-style:italic;color:var(--mid);}
- p{font-size:0.95rem;color:var(--text-body);line-height:1.85;margin-bottom:16px;}
- p:last-child{margin-bottom:0;}
- .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px;}
- .stat-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:18px;text-align:center;}
- .stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;display:block;line-height:1;margin-bottom:4px;}
- .stat-label{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
- .deliverables{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:28px;}
- .del-row{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);font-size:0.88rem;}
- .del-row:last-child{border-bottom:none;}
- .del-check{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;background:#EDE9FE;color:#6D28D9;}
- .del-pending{background:var(--warm);color:var(--text-muted);}
- .del-label{color:var(--text-body);font-weight:500;flex:1;}
- .del-desc{color:var(--text-muted);font-size:0.82rem;white-space:nowrap;}
- .pullquote{border-left:3px solid var(--gold);padding:14px 20px;margin:24px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
- .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:var(--dark);margin:0;line-height:1.65;}
- .timeline{display:flex;flex-direction:column;gap:0;}
- .tl-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}
- .tl-item:last-child{border-bottom:none;}
- .tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px;background:#8B5CF6;}
- .tl-dot.ongoing{background:var(--bright);}
- .tl-date{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);min-width:64px;margin-top:2px;}
- .tl-text{font-size:0.88rem;color:var(--text-body);line-height:1.65;}
- .tl-text strong{color:var(--text-dark);}
- .scope-card{background:var(--white);border:1px solid var(--border);border-left:3px solid #8B5CF6;border-radius:0 3px 3px 0;padding:16px 18px;margin-bottom:10px;}
- .scope-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;color:var(--text-dark);margin-bottom:4px;}
- .scope-card p{font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;}
- .next-cs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px;}
- .next-cs a{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:3px;padding:14px 16px;text-decoration:none;font-size:0.82rem;font-weight:600;color:var(--text-dark);transition:border-color 0.15s;}
- .next-cs a:hover{border-color:var(--gold);}
- .btn-primary{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 26px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
- .btn-primary:hover{background:#fdc84d;}
- @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
- @media(max-width:720px){.two-col{grid-template-columns:1fr;}.stat-grid{grid-template-columns:1fr 1fr;}.next-cs{grid-template-columns:1fr;}.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
- 
- /* MOBILE NAV */
- .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
- .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
- .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
- .hamburger.open span:nth-child(2){opacity:0;}
- .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
- .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
- .mobile-overlay.open{display:flex;}
- .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
- .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
- .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
- .mobile-overlay-links{display:flex;flex-direction:column;}
- .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
- .mobile-overlay-links a:last-child{border-bottom:none;}
- .mobile-overlay-links a:hover{color:var(--gold);}
- .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
- @media(max-width:860px){
- .hamburger{display:flex;}
- .topbar-nav{display:none!important;}
- .topbar-cta{display:none!important;}
- }
- </style>
-  <meta property="og:title" content="Case Study — The Digital Income Experiment | Digital Revenue Studio" />
-  <meta property="og:description" content="How Digital Revenue Studio built the brand, website, content strategy and ongoing blog content for The Digital Income Experiment — an independent project documenting online income testing." />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-drs.png" />
-  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" />
-  <meta property="og:site_name" content="Digital Revenue Studio" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Case Study — The Digital Income Experiment | Digital Revenue Studio" />
-  <meta name="twitter:description" content="How Digital Revenue Studio built the brand, website, content strategy and ongoing blog content for The Digital Income Experiment — an independent project documenting online income testing." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Case Study — The Digital Income Experiment | Digital Revenue Studio","description":"How Digital Revenue Studio built the brand, website, content strategy and ongoing blog content for The Digital Income Experiment — an independent proj","url":"https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html","publisher":{"@type":"Organization","name":"Digital Revenue Studio","url":"https://www.digitalrevenuestudio.co.uk"}}</script>
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Income Experiment Case Study | Digital Revenue Studio</title>
+<meta name="description" content="How Digital Revenue Studio built the Digital Income Experiment brand and website from scratch for an independent project documenting online income tests.">
+<link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html">
+<meta property="og:title" content="Digital Income Experiment Case Study | Digital Revenue Studio"><meta property="og:description" content="How Digital Revenue Studio built the Digital Income Experiment brand and website from scratch for an independent project documenting online income tests."><meta property="og:type" content="article">
+<meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/img/og-drs-v2.png"><meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html"><meta property="og:site_name" content="Digital Revenue Studio">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Digital Income Experiment Case Study | Digital Revenue Studio"><meta name="twitter:description" content="How Digital Revenue Studio built the Digital Income Experiment brand and website from scratch for an independent project documenting online income tests.">
+<link rel="icon" type="image/png" href="img/favicon.png"><link rel="apple-touch-icon" href="img/favicon.png">
+<script defer src="/drs-consent.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html#page", "name": "Digital Income Experiment Case Study | Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html", "description": "How Digital Revenue Studio built the Digital Income Experiment brand and website from scratch for an independent project documenting online income tests.", "inLanguage": "en-GB"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.digitalrevenuestudio.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://www.digitalrevenuestudio.co.uk/portfolio.html"}, {"@type": "ListItem", "position": 3, "name": "Digital Income Experiment"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Syne:wght@600;700;800&family=Lora:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<meta name="google-adsense-account" content="ca-pub-5306195679240930">
 </head>
-<body>
- <nav class="topbar">
- <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
- <img src="logo-white.webp" alt="Digital Revenue Studio" class="topbar-logo" />
- </a>
- <div class="topbar-right">
- <div class="topbar-nav">
- <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
- </div>
- <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
- </div>
- </nav>
+<body class="b-die">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
+<nav class="nav" id="nav" aria-label="Main">
+<a class="navlink" href="index.html">Home</a><a class="navlink" href="drs-about.html">About</a><a class="navlink" href="drs-services.html">Services</a><a class="navlink" href="portfolio.html" aria-current="page">Portfolio</a><a class="navlink" href="drs-shop.html">Shop</a><a class="navlink" href="drs-blog.html">Blog</a>
+<a class="btn btn-gold btn-sm" href="drs-signup.html" data-link="other.signup">Follow the studio</a>
+</nav></div></header>
+<main id="main">
+<div class="bhero bhero t die"><div class="wrap">
+<div class="copy"><div class="crumb"><a href="index.html">Home</a><span>/</span><a href="portfolio.html">Portfolio</a><span>/</span><span>Digital Income Experiment</span></div>
+<div class="eyebrow">Case study &middot; Independent project</div>
+<h1>Digital Income<br>Experiment</h1><p class="sub">The zeros included.</p>
+<div class="bchips"><span>Brand</span><span>Website</span><span>Content</span></div></div>
+<div class="art"><img src="img/die-flask.webp" alt="The Digital Income Experiment flask logo" width="250" height="285"></div>
+</div></div>
+<main id="main">
 
+<section class="s"><div class="wrap">
+<div class="cs-grid">
+<article class="cs-card"><div class="eyebrow">About the brand</div><h2>An honest income project, built from scratch</h2><p>The Digital Income Experiment is an independent project testing online income streams and publishing the results as they come in, including the ones that do not work. The brief to Digital Revenue Studio was to build a brand, build a website and help produce the content.</p><p>The client provides the numbers. The studio builds the strategy and writes the words.</p>
+<div class="cs-stats"><div><b>2026</b><span>Project started</span></div><div><b>9</b><span>Income streams</span></div><div><b>Monthly</b><span>Content published</span></div></div></article>
+<article class="cs-card cs-prod"><div class="eyebrow">The free report</div>
+<div class="cs-prodrow"><div class="cov"><span class="badge">Free</span><img src="img/die-logo.webp" alt="The Digital Income Experiment logo" width="420" height="456"></div>
+<div class="bi"><h3>The First 90 Days</h3><div class="by">The Digital Income Experiment</div><p>An email-gated report documenting all nine experiments with real numbers. It unlocks on the page, with no download required.</p><div class="facts"><div><b>Price</b><span>Free with email</span></div><div><b>Streams</b><span>9 documented</span></div><div><b>Status</b><span>Live now</span></div></div>
+</div></div>
+<div class="btnrow cs-prodbtns"><a class="btn btn-b btn-sm" href="https://digitalincomeexperiment.github.io/digitalincomeexperiment/" data-link="brands.die.site" target="_blank" rel="noopener">Visit the Experiment</a><a class="btn btn-bo btn-sm" href="drs-brand-die.html">Visit the brand shop</a></div>
+</article>
+</div></div></section>
 
- <!-- MOBILE OVERLAY -->
- <div class="mobile-overlay" id="mobileOverlay">
- <div class="mobile-overlay-top">
- <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
- <button class="mobile-overlay-close" id="mobileClose">&times;</button>
- </div>
- <div class="mobile-overlay-links">
- <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
- </div>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
- </div>
- <script>
- (function(){
- var btn = document.getElementById('hamburger');
- var overlay = document.getElementById('mobileOverlay');
- var close = document.getElementById('mobileClose');
- if(btn && overlay && close){
- btn.addEventListener('click', function(){ overlay.classList.add('open'); btn.classList.add('open'); });
- close.addEventListener('click', function(){ overlay.classList.remove('open'); btn.classList.remove('open'); });
- }
- })();
- </script>
-<section class="hero">
- <div class="hero-grid"></div>
- <div class="hero-glow"></div>
- <div class="hero-inner">
- <div class="hero-eyebrow">
- <span class="hero-tag">Case Study</span>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" class="hero-back">&larr; All case studies</a>
- </div>
- <h1>The Digital Income Experiment &mdash;<br />Brand build &amp; content for an <em>independent client</em></h1>
- <p class="hero-sub">A private individual documenting their online income testing approached Digital Revenue Studio to build their brand from scratch and manage their ongoing content. Here is what we delivered.</p>
- </div>
-</section>
-<div class="gold-bar"></div>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="cs-grid cs-2x2">
+<article class="cs-card"><div class="eyebrow">The idea</div><h2>Something people can trust</h2><p>The brief was simple: build something people can trust because it has nothing to sell them. The project needed a brand that felt independent, honest and credible, and a site that was clean, fast and easy to use on mobile.</p><blockquote>&ldquo;Build something people can trust because it has nothing to sell them.&rdquo;</blockquote></article>
+<article class="cs-card cs-news"><div class="eyebrow">Brand news</div><h2>Latest from Digital Income Experiment</h2>
+<div class="nm" data-news-more data-brand="die" data-skip="0" data-title="Latest news"></div></article>
+<article class="cs-card"><div class="eyebrow">What we built</div><h2>Putting the project online</h2><p>A name, a website and a content plan, so each experiment gets its own honest write-up as the data arrives.</p><ul class="cs-built"><li><b>Brand identity</b><span>Name, visual identity and logo</span></li><li><b>Website</b><span>Fast, mobile friendly and free to host</span></li><li><b>Gated free report</b><span>The First 90 Days, unlocked by email</span></li><li><b>Content strategy</b><span>A plan covering all nine streams</span></li><li><b>Specialist posts</b><span>Council tax and car finance guides with templates</span></li><li><b>Monthly posts</b><span>New results published as they come in</span></li></ul></article>
+<article class="cs-card"><div class="eyebrow">What is in the pipeline</div><h2>Coming next</h2><ul class="cs-pipe"><li><span class="st">In development</span><b>Social identity</b><p>Channels for the project are being set up.</p></li><li><span class="st">In development</span><b>Shop</b><p>Rebranded guides and bundles are being prepared. Shop coming soon.</p></li></ul></article>
+</div></div></section>
 
-<div class="page-inner">
+<section class="s" style="padding-top:0"><div class="wrap">
+<div class="sec-head"><div><div class="eyebrow">The work</div><h2>What we have made <em>for the brand</em></h2><p>The brand marks behind the project.</p></div></div>
+<div class="gallery" data-gallery><figure class="gslide"><img src="img/die-logo.webp" alt="The Digital Income Experiment logo" loading="lazy"><figcaption><b>The logo</b><span>A flask mark that says experiment, not product.</span></figcaption></figure><figure class="gslide"><img src="img/die-flask.webp" alt="The Digital Income Experiment flask icon" loading="lazy"><figcaption><b>The flask</b><span>A compact icon for avatars and favicons.</span></figcaption></figure></div>
+</div></section>
 
- <div class="stat-grid">
- <div class="stat-card"><span class="stat-num" style="color:#8B5CF6;">2026</span><span class="stat-label">Project started</span></div>
- <div class="stat-card"><span class="stat-num" style="color:var(--bright);">9</span><span class="stat-label">Income streams documented</span></div>
- <div class="stat-card"><span class="stat-num" style="color:var(--gold);">Ongoing</span><span class="stat-label">Content retainer</span></div>
- </div>
-
- <div class="two-col">
-
- <div>
- <div class="section-label">The client</div>
- <h2 class="section-title">An individual documenting income testing <em>honestly</em></h2>
- <p>The Digital Income Experiment is an independent project run by a private individual testing online income streams and documenting the results in real time. The brief to Digital Revenue Studio was straightforward: build a brand, build a website and help produce the content.</p>
- <p>The client had a clear vision — an honest, no-agenda resource where real income experiment results are published openly, including the failures. No products sold, no affiliate agenda baked into the content. Just data.</p>
- <div class="pullquote"><p>&ldquo;The brief was simple: build something people can trust because it has nothing to sell them.&rdquo;</p></div>
- <p>Our job was to give that vision a professional brand and platform, and to produce the written content that brings it to life each month. The client runs the case studies and provides the numbers. We build the strategy and write the words.</p>
-
- <div style="margin-top:32px;">
- <div class="section-label">Scope of work</div>
- <h3 class="section-title" style="font-size:1.2rem;margin-bottom:16px;">What we were asked to do</h3>
- <div class="scope-card">
- <h4>Brand identity</h4>
- <p>Name, visual identity, logo and brand positioning for a brand that needed to feel independent, honest and credible.</p>
- </div>
- <div class="scope-card">
- <h4>Website design and build</h4>
- <p>Full website built and hosted on GitHub Pages. Designed to be clean, fast and easy to navigate on mobile. Gated lead magnet page built to capture an email audience from day one.</p>
- </div>
- <div class="scope-card">
- <h4>Content strategy</h4>
- <p>Monthly content plan covering all active income stream experiments. each project gets its own documented post — platform tested, method used, honest result published.</p>
- </div>
- <div class="scope-card">
- <h4>Ongoing blog content</h4>
- <p>We write the content. The client provides the data. Published on an ongoing retainer basis as experiments conclude and results come in.</p>
- </div>
- <div class="scope-card">
- <h4>Specialist content pieces</h4>
- <p>Including a council tax band challenge blog and free letter template, and a car finance DCA blog and complaint letter template — produced by DRS, published under the client's brand.</p>
- </div>
- </div>
- </div>
-
- <div>
- <div class="section-label">What we delivered</div>
- <h3 class="section-title" style="font-size:1.2rem;">Deliverables</h3>
- <div class="deliverables">
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Brand identity and name</span><span class="del-desc">The Digital Income Experiment</span></div>
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Website — GitHub Pages</span><span class="del-desc">Live &amp; hosted</span></div>
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Gated lead magnet page</span><span class="del-desc">Email unlock, no download</span></div>
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Content strategy</span><span class="del-desc">9 experiment streams</span></div>
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Council tax blog &amp; template</span><span class="del-desc">Written &amp; designed by DRS</span></div>
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Car finance DCA blog &amp; template</span><span class="del-desc">Written &amp; designed by DRS</span></div>
- <div class="del-row"><div class="del-check">&#10003;</div><span class="del-label">Monthly experiment blog posts</span><span class="del-desc">Ongoing retainer</span></div>
- <div class="del-row"><div class="del-check del-pending">&#8226;</div><span class="del-label">Social media identity</span><span class="del-desc">In progress</span></div>
- </div>
-
- <div style="margin-top:28px;">
- <div class="section-label">How it developed</div>
- <h3 class="section-title" style="font-size:1.2rem;">Timeline</h3>
- <div class="timeline">
- <div class="tl-item">
- <div class="tl-dot"></div>
- <span class="tl-date">Early 2026</span>
- <span class="tl-text"><strong>Client brief received.</strong> Private individual with 9 active income stream experiments and no brand, website or content presence.</span>
- </div>
- <div class="tl-item">
- <div class="tl-dot"></div>
- <span class="tl-date">Mar 2026</span>
- <span class="tl-text"><strong>Brand identity and website built.</strong> Name agreed, visual identity developed, site live on GitHub Pages at <a href="https://digitalincomeexperiment.github.io/digitalincomeexperiment/" style="color:#8B5CF6;">digitalincomeexperiment.github.io</a></span>
- </div>
- <div class="tl-item">
- <div class="tl-dot"></div>
- <span class="tl-date">Mar 2026</span>
- <span class="tl-text"><strong>Specialist content delivered.</strong> Council tax challenge blog and letter template. Car finance DCA blog and complaint letter template. Both published and live.</span>
- </div>
- <div class="tl-item">
- <div class="tl-dot"></div>
- <span class="tl-date">Mar 2026</span>
- <span class="tl-text"><strong>Gated lead magnet live.</strong> "The First 90 Days" — email-gated report documenting all 9 experiments with real numbers. Unlocks on page, no download required.</span>
- </div>
- <div class="tl-item">
- <div class="tl-dot ongoing"></div>
- <span class="tl-date">Ongoing</span>
- <span class="tl-text"><strong>Monthly content retainer active.</strong> new project results published each month as data comes in. Social media identity in development.</span>
- </div>
- </div>
- </div>
-
- <div style="margin-top:28px;background:var(--dark-2);border-radius:3px;padding:24px;">
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Tools used</div>
- <div style="display:flex;flex-wrap:wrap;gap:8px;">
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">GitHub Pages</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Sender (email)</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Analytics 4</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Search Console</span>
- </div>
- </div>
-
- <div style="margin-top:20px;">
- <a href="https://digitalincomeexperiment.github.io/digitalincomeexperiment/" class="btn-primary" style="background:#8B5CF6;">Visit the project &rarr;</a>
- </div>
- </div>
- </div>
-
- <div style="background:var(--warm);border:1px solid var(--border);border-radius:3px;padding:28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:6px;">Need something similar?</div>
- <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--text-dark);margin-bottom:4px;">We build brands and content for independent projects and businesses.</h3>
- <p style="font-size:0.85rem;color:var(--text-muted);margin:0;">Brand identity, website, content strategy, ongoing writing — all available as standalone services or as a full build.</p>
- </div>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" class="btn-primary">See our services &rarr;</a>
- </div>
-
- <div style="border-top:1px solid var(--border);padding-top:32px;margin-top:48px;">
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Other case studies</div>
- <div class="next-cs">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="border-left:3px solid var(--gold);">Mavericks Adventures &rarr;</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="border-left:3px solid #4a9eda;">Whiteout Survival Guide &rarr;</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="border-left:3px solid var(--bright);">Atker Consultancy &rarr;</a>
- </div>
- </div>
-
+<section class="s" style="padding-top:0"><div class="wrap"><div class="cs-grid">
+<article class="cs-card"><div class="eyebrow">Follow Digital Income Experiment</div><h2>Find the brand online</h2><div class="nets" data-socials="die"><a class="net off" data-net="instagram" aria-disabled="true">Instagram</a><a class="net off" data-net="x" aria-disabled="true">X</a><a class="net off" data-net="youtube" aria-disabled="true">YouTube</a><a class="net web" href="https://digitalincomeexperiment.github.io/digitalincomeexperiment/" target="_blank" rel="noopener" data-link="brands.die.site">Website</a></div><p class="note">Greyed out channels are not live yet.</p></article>
+<article class="cs-card"><div class="eyebrow">Get in touch</div><h2>Want a brand like this?</h2><p>Digital Revenue Studio helps creators and small brands turn an idea into a brand people can find: the name, the look, the website, the content and the products. If that sounds like your project, say hello.</p><div class="btnrow"><a class="btn btn-b" href="drs-services.html">See what we do</a><a class="btn btn-bo" href="mailto:info@digitalrevenuestudio.co.uk">Email the studio</a></div></article>
 </div>
+</div></section>
 
- <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
- <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Portfolio</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
- </div>
- </div>
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Portfolio</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Fathom Guides</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">The Digital Income Experiment</a>
- </div>
- </div>
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
- <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
- </div>
- </div>
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="mailto:info@digitalrevenuestudio.co.uk" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">info@digitalrevenuestudio.co.uk</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
- <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
- </div>
- </div>
- </div>
- <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
- <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></span>
+<section class="s" style="padding-top:0"><div class="wrap">
+<div class="eyebrow" style="margin-bottom:10px">More from the portfolio</div>
+<div class="related"><a href="drs-shop.html">Back to the shop<span class="arrow">&rarr;</span></a><a href="drs-case-study-ma.html">Mavericks Adventures<span class="arrow">&rarr;</span></a><a href="drs-case-study-wos.html">Whiteout Survival Wiki<span class="arrow">&rarr;</span></a><a href="drs-case-study-ac.html">Atker Consultancy<span class="arrow">&rarr;</span></a><a href="drs-case-study-fathom.html">Fathom Guides<span class="arrow">&rarr;</span></a></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div class="about"><a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<p>A creator and brand studio. Branding, content, social presence, practical tools and AI know-how, for brands that deserve to be found.</p><div class="fsocial" aria-label="Digital Revenue Studio on social media"><a href="https://www.instagram.com/digital.revenuestudio/" data-link="other.social.instagram" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61586853106276" data-link="other.social.facebook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@digitalrevenuestu" data-link="other.social.tiktok" target="_blank" rel="noopener">TikTok</a><a href="https://uk.pinterest.com/digitalrevenuestudio/" data-link="other.social.pinterest" target="_blank" rel="noopener">Pinterest</a><a href="https://www.reddit.com/user/digitalrevenuestudio/" data-link="other.social.reddit" target="_blank" rel="noopener">Reddit</a></div></div>
+<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="drs-blog.html">Blog</a></div>
+<div class="col"><h4>Brands</h4><a href="drs-case-study-ma.html">Mavericks Adventures</a><a href="drs-case-study-wos.html">Whiteout Survival Wiki</a><a href="drs-case-study-fathom.html">Fathom Guides</a><a href="drs-case-study-ac.html">Atker Consultancy</a><a href="drs-case-study-exp.html">Digital Income Experiment</a></div>
+<div class="col"><h4>Resources</h4><a href="drs-wos-wiki.html">Whiteout Survival Wiki</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-cdm-tool.html">CDM audit tool</a><a href="drs-signup.html">Follow the studio</a></div>
 </div>
-</footer>
-</body>
-</html>
+<div class="legal">
+<div>&copy; 2026 Digital Revenue Studio. Mavericks Adventures, Fathom Guides and Atker Consultancy are independent brands that DRS supports as branding and content partner.</div>
+<div>As an Amazon Associate we earn from qualifying purchases.</div>
+<div>Whiteout Survival is a trademark of Century Games. The DRS WOS wiki is an independent fan resource and is not affiliated with or endorsed by Century Games.</div>
+<div><a href="drs-privacy.html">Privacy</a> &middot; <a href="drs-disclaimer.html">Disclaimer</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></div>
+</div></div></footer>
+<script src="data/links.js"></script><script src="data/updates.js"></script><script src="assets/site.js"></script><script src="assets/carousel.js"></script>
+</body></html>

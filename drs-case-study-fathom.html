@@ -1,295 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html" />
- <title>Case Study: Fathom Guides | Digital Revenue Studio</title>
- <meta name="description" content="How a new independent game guide brand launched with four Whiteout Survival guides, a live-updating website and a Minecraft manual in production. Digital Revenue Studio is its branding and content partner." />
- <script defer src="/drs-consent.js"></script>
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" /></noscript>
- <style>
- *{margin:0;padding:0;box-sizing:border-box;}
- body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
- :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
- 
- .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
- .topbar-logo{height:34px;width:auto;display:block;}
- .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
- .topbar-right{display:flex;align-items:center;gap:24px;}
- .topbar-nav{display:flex;gap:24px;align-items:center;}
- .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
- .topbar-nav a:hover{color:var(--gold);}
- .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
- .topbar-cta:hover{background:#fdc84d;}
- 
- 
- .gold-bar{height:3px;background:var(--gold);width:100%;}
- .hero{padding:72px 40px 80px;position:relative;overflow:hidden;}
- .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
- .hero-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;pointer-events:none;}
- .hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;animation:fadeUp 0.7s ease both;}
- .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
- .hero-tag{font-family:'Syne',sans-serif;font-weight:700;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 12px;border-radius:99px;}
- .hero-back{font-size:0.78rem;text-decoration:none;display:flex;align-items:center;gap:5px;}
- .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.9rem,4vw,3.2rem);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
- .hero h1 em{font-family:'Lora',serif;font-style:italic;}
- .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1rem;max-width:580px;line-height:1.75;}
- .page-inner{max-width:1100px;margin:0 auto;padding:64px 40px;}
- .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
- .one-col{max-width:720px;}
- .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;}
- .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.015em;line-height:1.15;margin-bottom:10px;}
- .section-title em{font-family:'Lora',serif;font-style:italic;color:var(--mid);}
- .section-sub{font-size:0.95rem;color:var(--text-muted);margin-bottom:28px;line-height:1.75;}
- p{font-size:0.95rem;color:var(--text-body);line-height:1.8;margin-bottom:16px;}
- p:last-child{margin-bottom:0;}
- .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;}
- .stat-card{background:var(--white);border:1px solid var(--border);border-radius:3px;padding:18px;text-align:center;}
- .stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;display:block;line-height:1;margin-bottom:4px;}
- .stat-label{font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
- .deliverables{background:var(--white);border:1px solid var(--border);border-radius:3px;overflow:hidden;margin-bottom:28px;}
- .del-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);font-size:0.88rem;}
- .del-row:last-child{border-bottom:none;}
- .del-check{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;flex-shrink:0;}
- .del-label{color:var(--text-body);font-weight:500;}
- .del-desc{color:var(--text-muted);font-size:0.82rem;margin-left:auto;}
- .pullquote{border-left:3px solid var(--gold);padding:14px 20px;margin:24px 0;background:var(--gold-pale);border-radius:0 3px 3px 0;}
- .pullquote p{font-family:'Lora',serif;font-style:italic;font-size:1rem;color:var(--dark);margin:0;line-height:1.65;}
- .timeline{display:flex;flex-direction:column;gap:0;}
- .tl-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);}
- .tl-item:last-child{border-bottom:none;}
- .tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px;}
- .tl-date{font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;color:var(--text-muted);min-width:64px;margin-top:2px;}
- .tl-text{font-size:0.88rem;color:var(--text-body);line-height:1.6;}
- .tl-text strong{color:var(--text-dark);}
- .next-cs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px;}
- .next-cs a{display:flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:3px;padding:14px 16px;text-decoration:none;font-size:0.82rem;font-weight:600;transition:border-color 0.15s;}
- .next-cs a:hover{border-color:var(--gold);}
- .btn-primary{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 26px;border-radius:2px;text-decoration:none;transition:background 0.2s;}
- .btn-primary:hover{background:#fdc84d;}
- @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
- @media(max-width:720px){.two-col{grid-template-columns:1fr;}.stat-grid{grid-template-columns:1fr 1fr;}.next-cs{grid-template-columns:1fr;}.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}}
- 
- 
- /* MOBILE NAV */
- .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
- .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
- .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
- .hamburger.open span:nth-child(2){opacity:0;}
- .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
- .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
- .mobile-overlay.open{display:flex;}
- .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
- .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
- .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
- .mobile-overlay-links{display:flex;flex-direction:column;}
- .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
- .mobile-overlay-links a:last-child{border-bottom:none;}
- .mobile-overlay-links a:hover{color:var(--gold);}
- .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
- @media(max-width:860px){
- .hamburger{display:flex;}
- .topbar-nav{display:none!important;}
- .topbar-cta{display:none!important;}
- }
- </style>
- <meta property="og:title" content="Case Study: Fathom Guides | Digital Revenue Studio" />
- <meta property="og:description" content="How a new independent game guide brand launched with four Whiteout Survival guides, a live-updating website and a Minecraft manual in production. Digital Revenue Studio is its branding and content partner." />
- <meta property="og:type" content="article" />
- <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-fathom.png" />
- <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html" />
- <meta property="og:site_name" content="Digital Revenue Studio" />
- <meta name="twitter:card" content="summary_large_image" />
- <meta name="twitter:title" content="Case Study: Fathom Guides | Digital Revenue Studio" />
- <meta name="twitter:description" content="How a new independent game guide brand launched with four Whiteout Survival guides, a live-updating website and a Minecraft manual in production. Digital Revenue Studio is its branding and content partner." />
- <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Case Study: Fathom Guides", "description": "How a new independent game guide brand launched with four Whiteout Survival guides, a live-updating website and a Minecraft manual in production. Digital Revenue Studio is its branding and content partner.", "url": "https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html", "datePublished": "2026-10-08", "dateModified": "2026-10-08", "image": "https://www.digitalrevenuestudio.co.uk/fathom-logo.webp", "author": {"@type": "Organization", "name": "Digital Revenue Studio"}, "publisher": {"@type": "Organization", "name": "Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk"}}</script>
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fathom Guides Case Study | Digital Revenue Studio</title>
+<meta name="description" content="How Digital Revenue Studio helped launch Fathom Guides, an independent brand of downloadable game guides: identity, guides, a live-updating website and a store.">
+<link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html">
+<meta property="og:title" content="Fathom Guides Case Study | Digital Revenue Studio"><meta property="og:description" content="How Digital Revenue Studio helped launch Fathom Guides, an independent brand of downloadable game guides: identity, guides, a live-updating website and a store."><meta property="og:type" content="article">
+<meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/img/og-drs-v2.png"><meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html"><meta property="og:site_name" content="Digital Revenue Studio">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Fathom Guides Case Study | Digital Revenue Studio"><meta name="twitter:description" content="How Digital Revenue Studio helped launch Fathom Guides, an independent brand of downloadable game guides: identity, guides, a live-updating website and a store.">
+<link rel="icon" type="image/png" href="img/favicon.png"><link rel="apple-touch-icon" href="img/favicon.png">
+<script defer src="/drs-consent.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html#page", "name": "Fathom Guides Case Study | Digital Revenue Studio", "url": "https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html", "description": "How Digital Revenue Studio helped launch Fathom Guides, an independent brand of downloadable game guides: identity, guides, a live-updating website and a store.", "inLanguage": "en-GB"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.digitalrevenuestudio.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://www.digitalrevenuestudio.co.uk/portfolio.html"}, {"@type": "ListItem", "position": 3, "name": "Fathom Guides"}]}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Syne:wght@600;700;800&family=Lora:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<meta name="google-adsense-account" content="ca-pub-5306195679240930">
 </head>
-<body>
- <nav class="topbar">
- <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
- <img src="logo-white.webp" alt="Digital Revenue Studio" class="topbar-logo" />
- </a>
- <div class="topbar-right">
- <div class="topbar-nav">
- <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
- </div>
- <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
- </div>
- </nav>
+<body class="b-fathom">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
+<nav class="nav" id="nav" aria-label="Main">
+<a class="navlink" href="index.html">Home</a><a class="navlink" href="drs-about.html">About</a><a class="navlink" href="drs-services.html">Services</a><a class="navlink" href="portfolio.html" aria-current="page">Portfolio</a><a class="navlink" href="drs-shop.html">Shop</a><a class="navlink" href="drs-blog.html">Blog</a>
+<a class="btn btn-gold btn-sm" href="drs-signup.html" data-link="other.signup">Follow the studio</a>
+</nav></div></header>
+<main id="main">
+<div class="bhero bhero t fathom"><div class="wrap">
+<div class="copy"><div class="crumb"><a href="index.html">Home</a><span>/</span><a href="portfolio.html">Portfolio</a><span>/</span><span>Fathom Guides</span></div>
+<div class="eyebrow">Case study &middot; Game guide brand</div>
+<h1>Fathom<br>Guides</h1><p class="sub">A route, not a wiki.</p>
+<div class="bchips"><span>Brand</span><span>Content</span><span>Store</span></div></div>
+<div class="art"><img src="img/fathom-compass.webp" alt="The Fathom Guides compass logo" width="360" height="330"></div>
+</div></div>
+<main id="main">
 
- <!-- MOBILE OVERLAY -->
- <div class="mobile-overlay" id="mobileOverlay">
- <div class="mobile-overlay-top">
- <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
- <button class="mobile-overlay-close" id="mobileClose">&times;</button>
- </div>
- <div class="mobile-overlay-links">
- <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
- </div>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
- </div>
- <script>
- (function(){
- var btn = document.getElementById('hamburger');
- var overlay = document.getElementById('mobileOverlay');
- var close = document.getElementById('mobileClose');
- if(btn && overlay && close){
- btn.addEventListener('click', function(){ overlay.classList.add('open'); btn.classList.add('open'); });
- close.addEventListener('click', function(){ overlay.classList.remove('open'); btn.classList.remove('open'); });
- }
- })();
- </script>
-<section class="hero" style="background:var(--dark);">
- <div class="hero-grid"></div>
- <div class="hero-glow" style="background:radial-gradient(circle,rgba(74,158,218,0.12) 0%,transparent 65%);"></div>
- <div class="hero-inner">
- <div class="hero-eyebrow">
- <span class="hero-tag" style="background:rgba(74,158,218,0.12);border:1px solid rgba(74,158,218,0.3);color:#60a5fa;">Case Study</span>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" class="hero-back" style="color:rgba(255,255,255,0.3);">&larr; All case studies</a>
- </div>
- <h1 style="color:var(--white);">Fathom Guides:<br />A game guide brand, built <em>route by route</em></h1>
- <p class="hero-sub" style="color:rgba(255,255,255,0.45);">A new independent publisher of downloadable game guides. Brand, content and a live-updating website, launched with four Whiteout Survival guides and a Minecraft manual in production.</p>
- </div>
-</section>
-<div class="gold-bar"></div>
+<section class="s"><div class="wrap">
+<div class="cs-grid">
+<article class="cs-card"><div class="eyebrow">About the brand</div><h2>One brand, many games</h2><p>Fathom Guides is an independent brand that publishes practical game guides as downloadable PDFs. The name and the compass logo are deliberately game-neutral, so one identity can cover mobile, console and PC titles.</p><p>Digital Revenue Studio is the branding and content partner behind the brand. Fathom is independent and is not affiliated with or endorsed by Century Games, Mojang Studios, Microsoft, Supercell or Nintendo.</p>
+<div class="cs-stats"><div><b>Oct 2026</b><span>Brand launched</span></div><div><b>4</b><span>Games covered</span></div><div><b>Live</b><span>Codes and news</span></div></div></article>
+<article class="cs-card cs-prod"><div class="eyebrow">The main product</div>
+<div class="cs-prodrow"><div class="cov"><span class="badge">Web app</span><img src="img/fathom-snowfox-intro.webp" alt="Snowfox, the Fathom Guides brand avatar, holding a tablet and compass" width="700" height="824"></div>
+<div class="bi"><h3>Pokémon GO Trail Ledger</h3><div class="by">Fathom Guides</div><p>Live and upcoming events with countdowns, a raid board with counters, GO Pass catch maths, Battle League cups and a checklist saved on your phone. Currently covering Halloween 2026 and Twilight Trails.</p><div class="facts"><div><b>Type</b><span>Web app</span></div><div><b>Price</b><span>£4.99, introductory</span></div><div><b>Devices</b><span>One key, up to 5</span></div></div>
+</div></div>
+<div class="btnrow cs-prodbtns"><a class="btn btn-b btn-sm" href="https://fathomguides.github.io/pokemon-go/?utm_source=drs&utm_medium=case_study&utm_campaign=trail_ledger" target="_blank" rel="noopener">Trail Ledger</a><a class="btn btn-bo btn-sm" href="https://fathomguides.github.io/" data-link="brands.fathom.site" target="_blank" rel="noopener">Visit website</a><a class="btn btn-bo btn-sm" href="drs-brand-fathom.html">Brand shop</a></div>
+</article>
+</div></div></section>
 
-<div class="page-inner">
- <div style="display:grid;grid-template-columns:1fr 240px;gap:32px;align-items:start;margin-bottom:48px;">
- <div class="stat-grid" style="margin-bottom:0;grid-template-columns:repeat(3,1fr);">
- <div class="stat-card"><span class="stat-num" style="color:#4a9eda;">4</span><span class="stat-label">Whiteout Survival guides</span></div>
- <div class="stat-card"><span class="stat-num" style="color:var(--bright);">2</span><span class="stat-label">Games covered so far</span></div>
- <div class="stat-card"><span class="stat-num" style="color:var(--gold);">&pound;1.99</span><span class="stat-label">Guides from</span></div>
- </div>
- <div style="text-align:center;">
- <img src="fathom-wos-starter.webp" alt="Fathom Guides Whiteout Survival Starter Guide cover" style="max-width:200px;width:100%;border-radius:4px;box-shadow:0 8px 24px rgba(10,31,20,0.15);" />
- <div style="font-size:0.75rem;color:var(--text-muted);margin-top:8px;font-style:italic;">WOS Starter Guide, 2026 Edition</div>
- </div>
- </div>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="cs-grid cs-2x2">
+<article class="cs-card"><div class="eyebrow">The idea</div><h2>A route, not a wiki</h2><p>Fathom guides follow one rule: they are written to be used while the game is open. Each is a route you follow in order, with a checkpoint at the end of every chapter, and the numbers inside are checked against the current version of the game.</p><blockquote>&ldquo;A route, not a wiki.&rdquo;</blockquote></article>
+<article class="cs-card cs-news"><div class="eyebrow">Brand news</div><h2>Latest from Fathom Guides</h2>
+<div class="nm" data-news-more data-brand="fathom" data-skip="0" data-title="Latest news"></div></article>
+<article class="cs-card"><div class="eyebrow">What we built</div><h2>What launched</h2><p>A brand, a catalogue and a website, delivered together so the first guides launched into a store that already looked finished.</p><ul class="cs-built"><li><b>Brand identity</b><span>Compass logo, wordmark and a consistent cover style</span></li><li><b>Whiteout Survival series</b><span>Starter guide, three companions and a bundle</span></li><li><b>Minecraft survival manual</b><span>38 chapters, from first block to Ender Dragon</span></li><li><b>Clash of Clans guide</b><span>A beginner&#x27;s guide for new and returning players</span></li><li><b>Pokémon GO Trail Ledger</b><span>A live web app companion for Pokémon GO players</span></li><li><b>Pokémon Legends: Z-A manual</b><span>Real-time battles, Mega Evolution and every main mission</span></li><li><b>Website and store</b><span>A page per game, live gift codes and news, and instant PDF checkout</span></li></ul></article>
+<article class="cs-card"><div class="eyebrow">What is in the pipeline</div><h2>Coming next</h2><ul class="cs-pipe"><li><span class="st">Planned</span><b>Minecraft companions</b><p>Redstone and farm builds, and a hardcore survival route for 2027.</p></li></ul></article>
+</div></div></section>
 
- <div class="two-col">
- <div>
- <div class="section-label" style="color:#185FA5;">The approach</div>
- <h2 class="section-title">One brand. <em>Many games.</em></h2>
- <p>Fathom Guides is an independent brand that publishes practical game guides as downloadable PDFs. The name and the compass logo are deliberately game-neutral, so the same identity can cover mobile, console and PC titles without being tied to any single one.</p>
- <p>The guides themselves follow one rule: they are written to be used while the game is open. Each is a route you follow in order, with a checkpoint at the end of every chapter, and the numbers inside are checked against the current version of the game.</p>
- <div class="pullquote"><p>&ldquo;A route, not a wiki.&rdquo; (Fathom Guides)</p></div>
- <p>Digital Revenue Studio is the branding and content partner behind the brand. Fathom is independent, and it is not affiliated with or endorsed by Century Games, Mojang Studios or Microsoft.</p>
+<section class="s" style="padding-top:0"><div class="wrap">
+<div class="sec-head"><div><div class="eyebrow">The work</div><h2>What we have made <em>for the brand</em></h2><p>Social posts made for the brand, from the website launch to game tips and gift codes.</p></div></div>
+<div class="gallery multi" data-gallery><figure class="gslide port"><img src="img/fathom-post-website-launch.webp" alt="The Fathom Guides website launch announcement" loading="lazy"><figcaption><b>Website launch</b><span>Announcing the new Fathom Guides website.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-meet-snowfox.webp" alt="Meet Snowfox, the Fathom Guides brand avatar" loading="lazy"><figcaption><b>Meet Snowfox</b><span>Introducing the brand avatar.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-research-speedups.webp" alt="Whiteout Survival research speed-ups comparison post for State vs State" loading="lazy"><figcaption><b>Research speed-ups</b><span>A discussion post for Whiteout Survival players.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-svs-tips.webp" alt="Whiteout Survival SVS matchmaking tactics post" loading="lazy"><figcaption><b>SVS tactics</b><span>Strategy tips in the brand style.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-minecraft.webp" alt="Minecraft Survival Manual announcement post" loading="lazy"><figcaption><b>Minecraft manual</b><span>Announcing the Minecraft guide.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-clash-of-clans.webp" alt="Clash of Clans guide announcement with top tips" loading="lazy"><figcaption><b>Clash of Clans tips</b><span>A guide announcement with quick tips.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-pokemon-za.webp" alt="Pokémon Legends: Z-A guide coming soon post" loading="lazy"><figcaption><b>Pokémon Z-A teaser</b><span>A coming-soon teaser.</span></figcaption></figure><figure class="gslide port"><img src="img/fathom-post-giftcode.webp" alt="Whiteout Survival gift code post with rewards" loading="lazy"><figcaption><b>Gift code post</b><span>A recurring gift code format.</span></figcaption></figure></div>
+</div></section>
 
- <div style="margin-top:32px;">
- <div class="section-label" style="color:#185FA5;">What launched</div>
- <div class="deliverables">
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Brand identity</span><span class="del-desc">Compass logo, wordmark and a consistent cover style</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Whiteout Survival series</span><span class="del-desc">Starter Guide plus three companions</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Complete Bundle</span><span class="del-desc">All four guides, saves &pound;2.97</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Brand website</span><span class="del-desc">Home, store, about and a page per game</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Live updates</span><span class="del-desc">Gift codes, news and top tips from one data file</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Payhip store</span><span class="del-desc">Checkout and instant PDF delivery</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Minecraft manual</span><span class="del-desc">In production, 38 chapters</span></div>
- <div class="del-row"><div class="del-check" style="background:#E6F1FB;color:#185FA5;">&#10003;</div><span class="del-label">Disclaimers and trademark notices</span><span class="del-desc">Clear, on every page</span></div>
-
- </div>
- </div>
- </div>
-
- <div>
- <div class="section-label" style="color:#185FA5;">How it developed</div>
- <h3 class="section-title" style="font-size:1.2rem;">Timeline</h3>
- <div class="timeline">
- <div class="tl-item"><div class="tl-dot" style="background:#4a9eda;"></div><span class="tl-date">6 Oct 2026</span><span class="tl-text"><strong>Whiteout Survival series published.</strong> The Starter Guide and three appendices go live on Payhip, with a bundle priced to save &pound;2.97.</span></div>
- <div class="tl-item"><div class="tl-dot" style="background:#4a9eda;"></div><span class="tl-date">Oct 2026</span><span class="tl-text"><strong>Fathom website goes live.</strong> A store page, a page per game, a live gift code carousel and news, all running on free hosting.</span></div>
- <div class="tl-item"><div class="tl-dot" style="background:var(--bright);"></div><span class="tl-date">Next</span><span class="tl-text"><strong>Ultimate Minecraft Survival Manual.</strong> 38 chapters across seven parts, with a free sample of Part I planned alongside it.</span></div>
- <div class="tl-item"><div class="tl-dot" style="background:var(--bright);"></div><span class="tl-date">2027</span><span class="tl-text"><strong>Companion guides.</strong> Redstone and farm builds, and a hardcore survival route, are planned.</span></div>
-
- </div>
-
- <div style="margin-top:28px;background:var(--dark-2);border-radius:3px;padding:24px;">
- <div class="section-label" style="color:var(--gold);margin-bottom:12px;">Tools used</div>
- <div style="display:flex;flex-wrap:wrap;gap:8px;">
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">GitHub Pages</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Payhip</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Amazon Associates</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Plain HTML, CSS and JS</span>
- <span style="font-size:0.78rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.6);padding:4px 10px;border-radius:2px;">Google Fonts</span>
-
- </div>
- </div>
-
- <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
- <a href="https://fathomguides.github.io/" class="btn-primary" style="background:#4a9eda;" target="_blank" rel="noopener">Visit Fathom Guides &rarr;</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog-13-fathom-guides-launch.html" style="display:inline-block;background:var(--dark);color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 26px;border-radius:2px;text-decoration:none;">Read the launch post &rarr;</a>
- </div>
- </div>
- </div>
-
- <div style="border-top:1px solid var(--border);padding-top:32px;margin-top:48px;">
- <div class="section-label" style="color:var(--text-muted);margin-bottom:16px;">Other case studies</div>
- <div class="next-cs">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="border-left:3px solid #4a9eda;"><span style="color:var(--text-dark);">Whiteout Survival Guide &rarr;</span></a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="border-left:3px solid var(--gold);"><span style="color:var(--text-dark);">Mavericks Adventures &rarr;</span></a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="border-left:3px solid var(--bright);"><span style="color:var(--text-dark);">Atker Consultancy &rarr;</span></a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="border-left:3px solid #8B5CF6;"><span style="color:var(--text-dark);">The Digital Income Experiment &rarr;</span></a>
- </div>
- </div>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="cs-grid">
+<article class="cs-card"><div class="eyebrow">Follow Fathom Guides</div><h2>Find the brand online</h2><div class="nets" data-socials="fathom"><a class="net off" data-net="instagram" aria-disabled="true">Instagram</a><a class="net off" data-net="facebook" aria-disabled="true">Facebook</a><a class="net off" data-net="tiktok" aria-disabled="true">TikTok</a><a class="net off" data-net="pinterest" aria-disabled="true">Pinterest</a><a class="net web" href="https://fathomguides.github.io/" target="_blank" rel="noopener" data-link="brands.fathom.site">Website</a></div><p class="note">Greyed out channels are not live yet.</p></article>
+<article class="cs-card"><div class="eyebrow">Get in touch</div><h2>Want a brand like this?</h2><p>Digital Revenue Studio helps creators and small brands turn an idea into a brand people can find: the name, the look, the website, the content and the products. If that sounds like your project, say hello.</p><div class="btnrow"><a class="btn btn-b" href="drs-services.html">See what we do</a><a class="btn btn-bo" href="mailto:info@digitalrevenuestudio.co.uk">Email the studio</a></div></article>
 </div>
- <footer style="background:var(--dark-2);padding:40px 40px 24px;border-top:1px solid rgba(245,166,35,0.08);">
- <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:28px;">
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">The Studio</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">About DRS</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Services</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Portfolio</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Blog</a>
- </div>
- </div>
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Portfolio</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ma.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Mavericks Adventures</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-wos.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Whiteout Survival Guide</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Fathom Guides</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Atker Consultancy</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-exp.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">The Digital Income Experiment</a>
- </div>
- </div>
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Resources</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="https://www.digitalrevenuestudio.co.uk/drs-wos-wiki.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">WOS Wiki</a>
- <a href="https://www.digitalrevenuestudio.co.uk/wos-wiki-gift-code-tracker.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Gift Code Tracker</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-templates.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Free Templates</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Shop</a>
- </div>
- </div>
- <div>
- <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Contact</div>
- <div style="display:flex;flex-direction:column;gap:8px;">
- <a href="mailto:info@digitalrevenuestudio.co.uk" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">info@digitalrevenuestudio.co.uk</a>
- <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Newsletter</a>
- <a href="https://ko-fi.com/digitalrevenuestudio" style="font-size:0.82rem;color:rgba(255,255,255,0.35);text-decoration:none;">Ko-fi</a>
- </div>
- </div>
- </div>
- <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
- <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &bull; digitalrevenuestudio.co.uk &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></span>
- </div>
- </footer>
-</body>
-</html>
+</div></section>
+
+<section class="s" style="padding-top:0"><div class="wrap">
+<div class="eyebrow" style="margin-bottom:10px">More from the portfolio</div>
+<div class="related"><a href="drs-shop.html">Back to the shop<span class="arrow">&rarr;</span></a><a href="drs-case-study-ma.html">Mavericks Adventures<span class="arrow">&rarr;</span></a><a href="drs-case-study-wos.html">Whiteout Survival Wiki<span class="arrow">&rarr;</span></a><a href="drs-case-study-ac.html">Atker Consultancy<span class="arrow">&rarr;</span></a><a href="drs-case-study-exp.html">Digital Income Experiment<span class="arrow">&rarr;</span></a></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div class="about"><a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<p>A creator and brand studio. Branding, content, social presence, practical tools and AI know-how, for brands that deserve to be found.</p><div class="fsocial" aria-label="Digital Revenue Studio on social media"><a href="https://www.instagram.com/digital.revenuestudio/" data-link="other.social.instagram" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61586853106276" data-link="other.social.facebook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@digitalrevenuestu" data-link="other.social.tiktok" target="_blank" rel="noopener">TikTok</a><a href="https://uk.pinterest.com/digitalrevenuestudio/" data-link="other.social.pinterest" target="_blank" rel="noopener">Pinterest</a><a href="https://www.reddit.com/user/digitalrevenuestudio/" data-link="other.social.reddit" target="_blank" rel="noopener">Reddit</a></div></div>
+<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="drs-blog.html">Blog</a></div>
+<div class="col"><h4>Brands</h4><a href="drs-case-study-ma.html">Mavericks Adventures</a><a href="drs-case-study-wos.html">Whiteout Survival Wiki</a><a href="drs-case-study-fathom.html">Fathom Guides</a><a href="drs-case-study-ac.html">Atker Consultancy</a><a href="drs-case-study-exp.html">Digital Income Experiment</a></div>
+<div class="col"><h4>Resources</h4><a href="drs-wos-wiki.html">Whiteout Survival Wiki</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-cdm-tool.html">CDM audit tool</a><a href="drs-signup.html">Follow the studio</a></div>
+</div>
+<div class="legal">
+<div>&copy; 2026 Digital Revenue Studio. Mavericks Adventures, Fathom Guides and Atker Consultancy are independent brands that DRS supports as branding and content partner.</div>
+<div>As an Amazon Associate we earn from qualifying purchases.</div>
+<div>Whiteout Survival is a trademark of Century Games. The DRS WOS wiki is an independent fan resource and is not affiliated with or endorsed by Century Games.</div>
+<div><a href="drs-privacy.html">Privacy</a> &middot; <a href="drs-disclaimer.html">Disclaimer</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></div>
+</div></div></footer>
+<script src="data/links.js"></script><script src="data/updates.js"></script><script src="assets/site.js"></script><script src="assets/carousel.js"></script>
+</body></html>

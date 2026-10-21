@@ -1,261 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-cdm-tool.html" />
-  <title>CDM 2015 Digital Audit Tool — Built for Atker, Available for Everyone | Digital Revenue Studio</title>
-  <meta name="description" content="A browser-based CDM 2015 compliance manager built for Atker Consultancy. 45-item checklist, action log, photo evidence, PDF export. Works offline on any device." />
-  <script defer src="/drs-consent.js"></script>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media=\'all\'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap" /></noscript>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
-    :root{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--ac:#e5630b;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
-    .topbar{background:var(--dark);padding:13px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,0.12);position:sticky;top:0;z-index:100;}
-    .topbar-logo{height:34px;width:auto;display:block;}
-    .topbar-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .topbar-right{display:flex;align-items:center;gap:24px;}
-    .topbar-nav{display:flex;gap:24px;align-items:center;}
-    .topbar-nav a{color:rgba(255,255,255,0.4);font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
-    .topbar-nav a:hover{color:var(--gold);}
-    .topbar-cta{background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;padding:8px 18px;border-radius:2px;text-decoration:none;}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
-    .hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;transition:all 0.25s;}
-    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-    .hamburger.open span:nth-child(2){opacity:0;}
-    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:200;flex-direction:column;padding:24px 28px 40px;overflow-y:auto;}
-    .mobile-overlay.open{display:flex;}
-    .mobile-overlay-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;}
-    .mobile-overlay-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:0.9rem;color:var(--gold);letter-spacing:0.04em;}
-    .mobile-overlay-close{background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1.6rem;line-height:1;padding:0;}
-    .mobile-overlay-links{display:flex;flex-direction:column;}
-    .mobile-overlay-links a{color:rgba(255,255,255,0.75);font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.02em;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
-    .mobile-overlay-links a:last-child{border-bottom:none;}
-    .mobile-overlay-cta{display:block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;text-align:center;margin-top:32px;}
-    @media(max-width:860px){.hamburger{display:flex;}.topbar-nav{display:none!important;}.topbar-cta{display:none!important;}}
-    .hero{background:var(--dark-2);padding:72px 40px 80px;position:relative;overflow:hidden;}
-    .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(245,166,35,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
-    .hero-glow{position:absolute;top:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(229,99,11,0.1) 0%,transparent 65%);pointer-events:none;}
-    .hero-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
-    .origin-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(229,99,11,0.1);border:1px solid rgba(229,99,11,0.25);color:#f4845a;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:20px;}
-    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);color:var(--white);letter-spacing:-0.02em;line-height:1.08;margin-bottom:16px;}
-    .hero h1 em{font-style:italic;font-family:'Lora',serif;color:var(--gold);}
-    .hero-sub{font-family:'Lora',serif;font-style:italic;font-size:1.05rem;color:rgba(255,255,255,0.45);max-width:580px;line-height:1.75;margin-bottom:32px;}
-    .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-    .btn-buy{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 32px;border-radius:2px;text-decoration:none;}
-    .btn-secondary{display:inline-block;background:transparent;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.15);font-family:'Syne',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:12px 24px;border-radius:2px;text-decoration:none;}
-    .gold-bar{height:3px;background:var(--ac);width:100%;}
-    .page-inner{max-width:900px;margin:0 auto;padding:64px 40px;}
-    /* Origin story */
-    .origin-story{background:var(--gold-pale);border-left:4px solid var(--ac);padding:28px 32px;border-radius:0 4px 4px 0;margin-bottom:56px;}
-    .origin-story .eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
-    .origin-story p{font-size:0.95rem;color:var(--text-body);line-height:1.85;margin-bottom:12px;}
-    .origin-story p:last-child{margin-bottom:0;}
-    .origin-story a{color:var(--ac);text-decoration:underline;}
-    /* Features */
-    .section-label{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px;}
-    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.015em;line-height:1.15;margin-bottom:32px;}
-    .features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:56px;}
-    @media(max-width:640px){.features{grid-template-columns:1fr;}}
-    .feature{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--ac);border-radius:0 4px 4px 0;padding:20px 22px;}
-    .feature-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:6px;}
-    .feature-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.65;}
-    /* What's included */
-    .included{background:var(--dark);border-radius:4px;padding:36px 40px;margin-bottom:56px;}
-    .included .eyebrow{font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-    .included h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--white);margin-bottom:24px;}
-    .inc-list{display:flex;flex-direction:column;gap:12px;}
-    .inc-item{display:flex;gap:14px;align-items:flex-start;}
-    .inc-check{width:20px;height:20px;border-radius:50%;background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:var(--gold);margin-top:2px;}
-    .inc-text strong{display:block;font-size:0.9rem;color:var(--white);margin-bottom:2px;}
-    .inc-text span{font-size:0.8rem;color:rgba(255,255,255,0.4);}
-    /* CTA section */
-    .cta-section{background:var(--dark-2);border:1px solid rgba(245,166,35,0.15);border-top:3px solid var(--gold);border-radius:4px;padding:40px;text-align:center;margin-bottom:56px;}
-    .cta-section h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;color:var(--white);margin-bottom:10px;}
-    .cta-section p{font-size:0.9rem;color:rgba(255,255,255,0.45);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;}
-    .cta-section .btn-buy{font-size:0.9rem;padding:16px 40px;}
-    .cta-note{font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:12px;display:block;}
-    /* Who it's for */
-    .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:56px;}
-    @media(max-width:640px){.who-grid{grid-template-columns:1fr;}}
-    .who-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:20px;}
-    .who-card-role{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;color:var(--text-dark);margin-bottom:6px;}
-    .who-card-desc{font-size:0.8rem;color:var(--text-muted);line-height:1.6;}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-    @media(max-width:640px){.page-inner{padding:40px 20px;}.hero{padding:52px 20px 60px;}.included{padding:28px 24px;}}
-  </style>
-  <meta property="og:title" content="CDM 2015 Digital Audit Tool — Built for Atker, Available for Everyone" />
-  <meta property="og:description" content="Browser-based CDM 2015 compliance manager. 45-item checklist, action log, photo evidence, PDF export. Works offline on any device. No software, no subscription." />
-  <meta property="og:type" content="product" />
-  <meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/og-cdm.png" />
-  <meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-cdm-tool.html" />
-  <meta property="og:site_name" content="Digital Revenue Studio" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CDM 2015 Digital Audit Tool — Built for Atker, Available for Everyone" />
-  <meta name="twitter:description" content="Browser-based CDM 2015 compliance manager. 45-item checklist, action log, photo evidence, PDF export. Works offline on any device. No software, no subscription." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"CDM 2015 Digital Audit Tool","description":"Browser-based CDM 2015 compliance manager covering Pre-Start and Construction Phase. 45-item checklist, action log, photo evidence, PDF export. Works offline.","brand":{"@type":"Brand","name":"Digital Revenue Studio"},"offers":{"@type":"Offer","url":"https://payhip.com/b/FB1ZU","priceCurrency":"GBP","availability":"https://schema.org/InStock"}}</script>
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CDM 2015 Digital Audit Tool: Built for Atker, Available for Everyone</title>
+<meta name="description" content="A browser-based CDM 2015 compliance manager built for Atker Consultancy. 45-item checklist, action log, photo evidence, PDF export. Works offline on any device.">
+<link rel="canonical" href="https://www.digitalrevenuestudio.co.uk/drs-cdm-tool.html">
+<meta property="og:title" content="CDM 2015 Digital Audit Tool: Built for Atker, Available for Everyone"><meta property="og:description" content="A browser-based CDM 2015 compliance manager built for Atker Consultancy. 45-item checklist, action log, photo evidence, PDF export. Works offline on any device."><meta property="og:type" content="website">
+<meta property="og:image" content="https://www.digitalrevenuestudio.co.uk/img/og-drs-v2.png"><meta property="og:url" content="https://www.digitalrevenuestudio.co.uk/drs-cdm-tool.html"><meta property="og:site_name" content="Digital Revenue Studio">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CDM 2015 Digital Audit Tool: Built for Atker, Available for Everyone"><meta name="twitter:description" content="A browser-based CDM 2015 compliance manager built for Atker Consultancy. 45-item checklist, action log, photo evidence, PDF export. Works offline on any device."><meta name="twitter:image" content="https://www.digitalrevenuestudio.co.uk/img/og-drs-v2.png">
+<link rel="icon" type="image/png" href="img/favicon.png"><link rel="apple-touch-icon" href="img/favicon.png">
+<script defer src="/drs-consent.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.digitalrevenuestudio.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://www.digitalrevenuestudio.co.uk/drs-shop.html"}, {"@type": "ListItem", "position": 3, "name": "Atker Consultancy", "item": "https://www.digitalrevenuestudio.co.uk/drs-brand-ac.html"}, {"@type": "ListItem", "position": 4, "name": "CDM audit tool", "item": "https://www.digitalrevenuestudio.co.uk/drs-cdm-tool.html"}]}, {"@type": "Product", "name": "CDM 2015 Digital Audit Tool", "description": "Browser-based CDM 2015 compliance manager covering Pre-Start and Construction Phase. 45-item checklist, action log, photo evidence, PDF export. Works offline.", "brand": {"@type": "Brand", "name": "Digital Revenue Studio"}, "offers": {"@type": "Offer", "url": "https://digitalrevstudio.gumroad.com/l/wkqrj", "priceCurrency": "GBP", "availability": "https://schema.org/InStock"}}]}</script>
+<script>(function(s,e,n,d,er){s['Sender']=er;s[er]=s[er]||function(){(s[er].q=s[er].q||[]).push(arguments)},s[er].l=1*new Date();var a=e.createElement(n),m=e.getElementsByTagName(n)[0];a.async=1;a.src=d;m.parentNode.insertBefore(a,m)})(window,document,'script','https://cdn.sender.net/accounts_resources/universal.js','sender');sender('84286577fb8740')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Syne:wght@600;700;800&family=Lora:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>.lg{--paper:#F8F6F0;--warm:#F1EEE3;--white:#fff;--border:#E3DECF;--text-dark:#14231c;--text-body:#2d3a33;--text-muted:#5d6a63;--dark:#0A1F14;--dark-2:#123425;--mid:#1d4031;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#8A5A0A}
+:where(.lg) *{margin:0;padding:0;box-sizing:border-box;}
+.lg{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--text-body);line-height:1.8;}
+.lg{--dark:#0A1F14;--dark-2:#0D2B1E;--mid:#1A5C3A;--bright:#2E8B4A;--gold:#F5A623;--gold-pale:#FDF3E0;--gold-dark:#C9841A;--ac:#e5630b;--white:#FFFFFF;--paper:#F8F6F1;--warm:#F0EDE6;--text-dark:#111111;--text-body:#333333;--text-muted:#777777;--border:#E2DDD6;}
+.lg .origin-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(229,99,11,0.1);border:1px solid rgba(229,99,11,0.25);color:#f4845a;font-family:var(--f-head);font-weight:700;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+.lg .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.lg .btn-buy{display:inline-block;background:var(--gold);color:var(--dark);font-family:var(--f-head);font-weight:700;font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;padding:14px 32px;border-radius:2px;text-decoration:none;}
+.lg .btn-secondary{display:inline-block;background:transparent;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.15);font-family:var(--f-head);font-weight:600;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;padding:12px 24px;border-radius:2px;text-decoration:none;}
+.lg .page-inner{max-width:900px;margin:0 auto;padding:64px 40px;}
+.lg .origin-story{background:var(--gold-pale);border-left:4px solid var(--ac);padding:28px 32px;border-radius:0 4px 4px 0;margin-bottom:56px;}
+.lg .origin-story .eyebrow{font-family:var(--f-head);font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.lg .origin-story p{font-size:0.95rem;color:var(--text-body);line-height:1.85;margin-bottom:12px;}
+.lg .origin-story p:last-child{margin-bottom:0;}
+.lg .origin-story a{color:var(--ac);text-decoration:underline;}
+.lg .section-label{font-family:var(--f-head);font-weight:700;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px;}
+.lg .section-title{font-family:var(--f-head);font-weight:800;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--text-dark);letter-spacing:-0.015em;line-height:1.15;margin-bottom:32px;}
+.lg .features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:56px;}
+@media(max-width:640px){.lg .features{grid-template-columns:1fr;}}
+.lg .feature{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--ac);border-radius:0 4px 4px 0;padding:20px 22px;}
+.lg .feature-title{font-family:var(--f-head);font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:6px;}
+.lg .feature-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.65;}
+.lg .included{background:var(--dark);border-radius:4px;padding:36px 40px;margin-bottom:56px;}
+.lg .included .eyebrow{font-family:var(--f-head);font-weight:700;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.lg .included h3{font-family:var(--f-head);font-weight:800;font-size:1.3rem;color:var(--white);margin-bottom:24px;}
+.lg .inc-list{display:flex;flex-direction:column;gap:12px;}
+.lg .inc-item{display:flex;gap:14px;align-items:flex-start;}
+.lg .inc-check{width:20px;height:20px;border-radius:50%;background:rgba(245,166,35,0.15);border:1px solid rgba(245,166,35,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:var(--gold);margin-top:2px;}
+.lg .inc-text strong{display:block;font-size:0.9rem;color:var(--white);margin-bottom:2px;}
+.lg .inc-text span{font-size:0.8rem;color:rgba(255,255,255,0.4);}
+.lg .cta-section{background:var(--dark-2);border:1px solid rgba(245,166,35,0.15);border-top:3px solid var(--gold);border-radius:4px;padding:40px;text-align:center;margin-bottom:56px;}
+.lg .cta-section h2{font-family:var(--f-head);font-weight:800;font-size:1.6rem;color:var(--white);margin-bottom:10px;}
+.lg .cta-section p{font-size:0.9rem;color:rgba(255,255,255,0.45);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;}
+.lg .cta-section .btn-buy{font-size:0.9rem;padding:16px 40px;}
+.lg .cta-note{font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:12px;display:block;}
+.lg .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:56px;}
+@media(max-width:640px){.lg .who-grid{grid-template-columns:1fr;}}
+.lg .who-card{background:var(--white);border:1px solid var(--border);border-radius:4px;padding:20px;}
+.lg .who-card-role{font-family:var(--f-head);font-weight:700;font-size:0.82rem;color:var(--text-dark);margin-bottom:6px;}
+.lg .who-card-desc{font-size:0.8rem;color:var(--text-muted);line-height:1.6;}
+@media(max-width:640px){.lg .page-inner{padding:40px 20px;}.lg .included{padding:28px 24px;}}.lg{--dark:#171311;--dark-2:#272220;--mid:#9A4B22;--bright:#D4571C;--gold:#E8672B;--gold-pale:#FBEBE1;--gold-dark:#9A4B22;--ac:#D4571C;--paper:#F6F1EC;--warm:#EFE7DF;--border:#E6DACE}
+.lg .btn-buy{background:#E8672B;color:#fff}.lg .btn-buy:hover{background:#D4571C}.lg .btn-secondary{color:#F4C6AD;border-color:rgba(244,198,173,.45)}.lg .origin-tag{color:#F4A57A;background:rgba(232,103,43,.14);border-color:rgba(232,103,43,.4)}.lg .bhero.atool h1 em{color:#F4A57A}.lg .bhero.atool .hero-cta-row{margin-top:18px}.lg .bhero.atool .origin-tag{margin:14px 0 0}.lg .price-card .btn-price,.lg .btn-price{background:#171311}.lg .price-card.featured .btn-price{background:#D4571C}.lg .btn-price:hover{background:#9A4B22}
+</style>
+<meta name="google-adsense-account" content="ca-pub-5306195679240930">
 </head>
 <body>
-  <nav class="topbar">
-    <a href="https://www.digitalrevenuestudio.co.uk" class="topbar-logo-wrap">
-      <img src="logo-white.webp" alt="Digital Revenue Studio" class="topbar-logo" />
-    </a>
-    <div class="topbar-right">
-      <div class="topbar-nav">
-        <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="topbar-cta">Follow the Studio</a>
-    </div>
-  </nav>
-  <div class="mobile-overlay" id="mobileOverlay">
-    <div class="mobile-overlay-top">
-      <span class="mobile-overlay-brand">DIGITAL REVENUE STUDIO</span>
-      <button class="mobile-overlay-close" id="mobileClose">&times;</button>
-    </div>
-    <div class="mobile-overlay-links">
-      <a href="https://www.digitalrevenuestudio.co.uk">Home</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-about.html">About</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-services.html">Services</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-studies.html">Portfolio</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html">Shop</a>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-blog.html">Blog</a>
-    </div>
-    <a href="https://www.digitalrevenuestudio.co.uk/drs-signup.html" class="mobile-overlay-cta">Follow the Studio</a>
-  </div>
-  <script>(function(){var btn=document.getElementById('hamburger');var overlay=document.getElementById('mobileOverlay');var close=document.getElementById('mobileClose');if(btn&&overlay&&close){btn.addEventListener('click',function(){overlay.classList.add('open');btn.classList.add('open');});close.addEventListener('click',function(){overlay.classList.remove('open');btn.classList.remove('open');});}})()</script>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
+<nav class="nav" id="nav" aria-label="Main">
+<a class="navlink" href="index.html">Home</a><a class="navlink" href="drs-about.html">About</a><a class="navlink" href="drs-services.html">Services</a><a class="navlink" href="portfolio.html">Portfolio</a><a class="navlink" href="drs-shop.html" aria-current="page">Shop</a><a class="navlink" href="drs-blog.html">Blog</a>
+<a class="btn btn-gold btn-sm" href="drs-signup.html" data-link="other.signup">Follow the studio</a>
+</nav></div></header>
 
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="origin-tag">Built for a client &mdash; now available for everyone</div>
-      <h1>CDM 2015 Compliance<br /><em>Without the Paper.</em></h1>
-      <p class="hero-sub">A browser-based digital audit tool built for Atker Consultancy. 45-item checklist, action log, photo evidence and one-click PDF export. Works offline on any device.</p>
-      <div class="hero-cta-row">
-        <a href="https://payhip.com/b/FB1ZU" class="btn-buy" target="_blank">See Pricing &amp; Buy &rarr;</a>
-        <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html" class="btn-secondary">Read the Case Study &rarr;</a>
-      </div>
-    </div>
-  </section>
-  <div class="gold-bar"></div>
-
-  <div class="page-inner">
-
-    <div class="origin-story">
-      <div class="eyebrow">Where it came from</div>
-      <p>Atker Consultancy Services came to Digital Revenue Studio with a frustration we recognised immediately — CDM 2015 compliance tracking was still being done on paper forms. Clunky, inconsistent and impossible to report from.</p>
-      <p>We built them a browser-based tool from scratch. No software to install, no subscription, works offline on site. They use it. It works. Now it's available for any construction or project management professional with the same problem.</p>
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-case-study-ac.html">Read the full Atker case study &rarr;</a>
-    </div>
-
-    <div class="section-label">What it does</div>
-    <h2 class="section-title">Everything you need for CDM compliance. Nothing you don't.</h2>
-
-    <div class="features">
-      <div class="feature">
-        <div class="feature-title">Pre-Start / Mobilisation Phase</div>
-        <div class="feature-desc">F10 notifications, SHE plan status, designer appointments, welfare provisions — all tracked in one place.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Construction Phase</div>
-        <div class="feature-desc">Site establishment, supervision checks, inductions, subcontractor management and ongoing compliance items.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Running Action Log</div>
-        <div class="feature-desc">Track open actions with owners, due dates and status. Overdue items flagged automatically. Full history retained.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Photo Evidence</div>
-        <div class="feature-desc">Attach photo evidence directly to checklist items. Embedded in the PDF export for a complete audit trail.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Monthly Carry-Forward</div>
-        <div class="feature-desc">Save a snapshot at month end and carry forward open items automatically. No data lost between reporting periods.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">One-Click PDF Export</div>
-        <div class="feature-desc">Generate a professional compliance report instantly. Share with clients, principal designers or auditors without reformatting anything.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Works Offline</div>
-        <div class="feature-desc">Browser-based HTML file. Open it on site, in a cabin, on a tablet. No internet connection required once downloaded.</div>
-      </div>
-      <div class="feature">
-        <div class="feature-title">Any Device</div>
-        <div class="feature-desc">Phone, tablet or desktop. No app to install, no software licence, no IT approval needed.</div>
-      </div>
-    </div>
-
-    <div class="section-label">Who it's for</div>
-    <h2 class="section-title">Built for professionals who deal with CDM daily.</h2>
-    <div class="who-grid">
-      <div class="who-card">
-        <div class="who-card-role">Principal Contractors</div>
-        <div class="who-card-desc">Manage compliance across Pre-Start and Construction Phase from one tool. Export reports for client meetings.</div>
-      </div>
-      <div class="who-card">
-        <div class="who-card-role">Project Managers</div>
-        <div class="who-card-desc">Track actions across multiple projects. Monthly carry-forward keeps everything current without starting from scratch.</div>
-      </div>
-      <div class="who-card">
-        <div class="who-card-role">CDM Coordinators</div>
-        <div class="who-card-desc">A structured digital record of every compliance item. Photo evidence and action log provide the audit trail you need.</div>
-      </div>
-    </div>
-
-    <div class="included">
-      <div class="eyebrow">What&rsquo;s included</div>
-      <h3>Everything in one download</h3>
-      <div class="inc-list">
-        <div class="inc-item">
-          <div class="inc-check">&#10003;</div>
-          <div class="inc-text"><strong>CDM Manager — HTML tool</strong><span>The full browser-based compliance tool. Open in any browser, works offline.</span></div>
-        </div>
-        <div class="inc-item">
-          <div class="inc-check">&#10003;</div>
-          <div class="inc-text"><strong>Quick Start Guide — PDF</strong><span>Step-by-step setup and usage guide. 5 pages, no waffle.</span></div>
-        </div>
-        <div class="inc-item">
-          <div class="inc-check">&#10003;</div>
-          <div class="inc-text"><strong>Example Audit Report — PDF</strong><span>A completed fictitious audit showing exactly what the PDF export looks like.</span></div>
-        </div>
-        <div class="inc-item">
-          <div class="inc-check">&#10003;</div>
-          <div class="inc-text"><strong>Single-user licence</strong><span>One purchase, one user. No subscription, no annual renewal.</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cta-section">
-      <h2>Ready to ditch the paper forms?</h2>
-      <p>One purchase. Instant download. Works on site from day one.</p>
-      <a href="https://payhip.com/b/FB1ZU" class="btn-buy" target="_blank">See Pricing &amp; Buy on Payhip &rarr;</a>
-      <span class="cta-note">Instant download via Payhip &bull; Single-user licence &bull; No subscription</span>
-    </div>
-
-    <div style="text-align:center;">
-      <a href="https://www.digitalrevenuestudio.co.uk/faq-cdm-tool.html" style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;">CDM Tool FAQ &rarr;</a>
-      &nbsp;&nbsp;&bull;&nbsp;&nbsp;
-      <a href="https://www.digitalrevenuestudio.co.uk/drs-shop.html" style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;">Back to Shop &rarr;</a>
-    </div>
-
-  </div>
-
-  <footer style="background:var(--dark-2);padding:32px 40px;border-top:1px solid rgba(245,166,35,0.08);margin-top:40px;">
-    <div style="max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-      <span style="font-size:0.75rem;color:rgba(255,255,255,0.2);">&copy; 2026 Digital Revenue Studio &mdash; digitalrevenuestudio.co.uk &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-privacy.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Privacy Policy</a> &bull; <a href="https://www.digitalrevenuestudio.co.uk/drs-disclaimer.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Disclaimer</a></span>
-    </div>
-  </footer>
-</body>
-</html>
+<main id="main" class="lg">
+<div class="bhero ac atool"><div class="wrap"><div class="copy">
+<div class="crumb"><a href="index.html">Home</a><span>/</span><a href="drs-shop.html">Shop</a><span>/</span><a href="drs-brand-ac.html">Atker Consultancy</a><span>/</span><span aria-current="page">CDM audit tool</span></div>
+<div class="eyebrow">Atker Consultancy tool</div>
+<h1>CDM 2015 Compliance <em>Without the Paper.</em></h1>
+<p class="sub">A browser-based digital audit tool built for Atker Consultancy. 45-item checklist, action log, photo evidence and one-click PDF export. Works offline on any device.</p>
+<div class="origin-tag">Built for a client: now available for everyone</div>
+<div class="hero-cta-row">
+<a class="btn-buy" href="https://digitalrevstudio.gumroad.com/l/wkqrj" target="_blank">See Pricing &amp; Buy →</a>
+<a class="btn-secondary" href="drs-case-study-ac.html">Read the Case Study →</a>
+</div>
+</div><div class="art"><img src="img/ac-logo.webp" alt="Atker Consultancy Services logo" width="480" height="480"></div></div></div>
+<div class="page-inner">
+<div class="origin-story">
+<div class="eyebrow">Where it came from</div>
+<p>Atker Consultancy Services came to Digital Revenue Studio with a frustration we recognised immediately, CDM 2015 compliance tracking was still being done on paper forms. Clunky, inconsistent and impossible to report from.</p>
+<p>We built them a browser-based tool from scratch. No software to install, no subscription, works offline on site. They use it. It works. Now it's available for any construction or project management professional with the same problem.</p>
+<a href="drs-case-study-ac.html">Read the full Atker case study →</a>
+</div>
+<div class="section-label">What it does</div>
+<h2 class="section-title">Everything you need for CDM compliance. Nothing you don't.</h2>
+<div class="features">
+<div class="feature">
+<div class="feature-title">Pre-Start / Mobilisation Phase</div>
+<div class="feature-desc">F10 notifications, SHE plan status, designer appointments, welfare provisions, all tracked in one place.</div>
+</div>
+<div class="feature">
+<div class="feature-title">Construction Phase</div>
+<div class="feature-desc">Site establishment, supervision checks, inductions, subcontractor management and ongoing compliance items.</div>
+</div>
+<div class="feature">
+<div class="feature-title">Running Action Log</div>
+<div class="feature-desc">Track open actions with owners, due dates and status. Overdue items flagged automatically. Full history retained.</div>
+</div>
+<div class="feature">
+<div class="feature-title">Photo Evidence</div>
+<div class="feature-desc">Attach photo evidence directly to checklist items. Embedded in the PDF export for a complete audit trail.</div>
+</div>
+<div class="feature">
+<div class="feature-title">Monthly Carry-Forward</div>
+<div class="feature-desc">Save a snapshot at month end and carry forward open items automatically. No data lost between reporting periods.</div>
+</div>
+<div class="feature">
+<div class="feature-title">One-Click PDF Export</div>
+<div class="feature-desc">Generate a professional compliance report instantly. Share with clients, principal designers or auditors without reformatting anything.</div>
+</div>
+<div class="feature">
+<div class="feature-title">Works Offline</div>
+<div class="feature-desc">Browser-based HTML file. Open it on site, in a cabin, on a tablet. No internet connection required once downloaded.</div>
+</div>
+<div class="feature">
+<div class="feature-title">Any Device</div>
+<div class="feature-desc">Phone, tablet or desktop. No app to install, no software licence, no IT approval needed.</div>
+</div>
+</div>
+<div class="section-label">Who it's for</div>
+<h2 class="section-title">Built for professionals who deal with CDM daily.</h2>
+<div class="who-grid">
+<div class="who-card">
+<div class="who-card-role">Principal Contractors</div>
+<div class="who-card-desc">Manage compliance across Pre-Start and Construction Phase from one tool. Export reports for client meetings.</div>
+</div>
+<div class="who-card">
+<div class="who-card-role">Project Managers</div>
+<div class="who-card-desc">Track actions across multiple projects. Monthly carry-forward keeps everything current without starting from scratch.</div>
+</div>
+<div class="who-card">
+<div class="who-card-role">CDM Coordinators</div>
+<div class="who-card-desc">A structured digital record of every compliance item. Photo evidence and action log provide the audit trail you need.</div>
+</div>
+</div>
+<div class="included">
+<div class="eyebrow">What’s included</div>
+<h3>Everything in one download</h3>
+<div class="inc-list">
+<div class="inc-item">
+<div class="inc-check">✓</div>
+<div class="inc-text"><strong>CDM Manager: HTML tool</strong><span>The full browser-based compliance tool. Open in any browser, works offline.</span></div>
+</div>
+<div class="inc-item">
+<div class="inc-check">✓</div>
+<div class="inc-text"><strong>Quick Start Guide: PDF</strong><span>Step-by-step setup and usage guide. 5 pages, no waffle.</span></div>
+</div>
+<div class="inc-item">
+<div class="inc-check">✓</div>
+<div class="inc-text"><strong>Example Audit Report: PDF</strong><span>A completed fictitious audit showing exactly what the PDF export looks like.</span></div>
+</div>
+<div class="inc-item">
+<div class="inc-check">✓</div>
+<div class="inc-text"><strong>Single-user licence</strong><span>One purchase, one user. No subscription, no annual renewal.</span></div>
+</div>
+</div>
+</div>
+<div class="cta-section">
+<h2>Ready to ditch the paper forms?</h2>
+<p>One purchase. Instant download. Works on site from day one.</p>
+<a class="btn-buy" href="https://digitalrevstudio.gumroad.com/l/wkqrj" rel="noopener" target="_blank">See Pricing &amp; Buy on Gumroad →</a>
+<span class="cta-note">Instant download via Gumroad • Single-user licence • No subscription</span>
+</div>
+<div style="text-align:center;">
+<a href="faq-cdm-tool.html" style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;">CDM Tool FAQ →</a>
+        •  
+      <a href="drs-shop.html" style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;">Back to Shop →</a>
+</div>
+</div>
+</main>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div class="about"><a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
+<p>A creator and brand studio. Branding, content, social presence, practical tools and AI know-how, for brands that deserve to be found.</p><div class="fsocial" aria-label="Digital Revenue Studio on social media"><a href="https://www.instagram.com/digital.revenuestudio/" data-link="other.social.instagram" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61586853106276" data-link="other.social.facebook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@digitalrevenuestu" data-link="other.social.tiktok" target="_blank" rel="noopener">TikTok</a><a href="https://uk.pinterest.com/digitalrevenuestudio/" data-link="other.social.pinterest" target="_blank" rel="noopener">Pinterest</a><a href="https://www.reddit.com/user/digitalrevenuestudio/" data-link="other.social.reddit" target="_blank" rel="noopener">Reddit</a></div></div>
+<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="drs-blog.html">Blog</a></div>
+<div class="col"><h4>Brands</h4><a href="drs-case-study-ma.html">Mavericks Adventures</a><a href="drs-case-study-wos.html">Whiteout Survival Wiki</a><a href="drs-case-study-fathom.html">Fathom Guides</a><a href="drs-case-study-ac.html">Atker Consultancy</a><a href="drs-case-study-exp.html">Digital Income Experiment</a></div>
+<div class="col"><h4>Resources</h4><a href="drs-wos-wiki.html">Whiteout Survival Wiki</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-cdm-tool.html">CDM audit tool</a><a href="drs-signup.html">Follow the studio</a></div>
+</div>
+<div class="legal">
+<div>&copy; 2026 Digital Revenue Studio. Mavericks Adventures, Fathom Guides and Atker Consultancy are independent brands that DRS supports as branding and content partner.</div>
+<div>As an Amazon Associate we earn from qualifying purchases.</div>
+<div>Whiteout Survival is a trademark of Century Games. The DRS WOS wiki is an independent fan resource and is not affiliated with or endorsed by Century Games.</div>
+<div><a href="drs-privacy.html">Privacy</a> &middot; <a href="drs-disclaimer.html">Disclaimer</a> &middot; <a href="#" data-cookie-settings>Cookie settings</a></div>
+</div></div></footer>
+<script src="data/links.js"></script><script src="data/updates.js"></script><script src="assets/site.js"></script>
+</body></html>

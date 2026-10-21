@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════════
 # CLOUDFLARE PAGES — _redirects
-# Updated: April 2026
+# Updated: October 2026 (site revamp)
 # ═══════════════════════════════════════════════════════════════
 
 # ── Non-www to www (must stay first) ────────────────────────────
@@ -12,7 +12,7 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 # ── Old wos-blog-* slugs → wos-guide-* ─────────────────────────
 /wos-blog-1-early-mistakes.html /wos-guide-early-mistakes.html 301
 /wos-blog-2-f2p-vs-spender.html /wos-guide-f2p-vs-spender.html 301
-/wos-blog-3-guide-launch.html /wos-guide-about.html 301
+/wos-blog-3-guide-launch.html /drs-wos-wiki.html 301
 /wos-blog-4-bear-hunt.html /wos-guide-bear-hunt.html 301
 /wos-blog-5-event-token-redemption-blogger.html /wos-guide-event-tokens.html 301
 /wos-blog-6-auto-redemption.html /wos-guide-auto-redemption.html 301
@@ -48,9 +48,23 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /drs-blog-7-council-tax.html /drs-blog.html 301
 
 # ── Missing/renamed pages → best current destination ───────────
-/drs-experiments.html /drs-case-studies.html 301
+/drs-experiments.html /portfolio.html 301
 /drs-blog-07-kdp.html /drs-blog.html 301
 
 # ── Old cheatsheet slug ─────────────────────────────────────────
 /wos-svs-cheatsheet.html /wos-svs-prep-cheatsheet.html 301
 
+# ── October 2026 revamp ─────────────────────────────────────────
+# Old WOS blog index is now the news hub
+/wos-blog.html /wos-news.html 301
+# Old case studies index is now the portfolio
+/drs-case-studies.html /portfolio.html 301
+# Old inline cheat sheet slugs
+/wos-svs-cheatsheet /wos-svs-prep-cheatsheet.html 301
+# Retired pages (they promoted a paid guide on the free wiki)
+/wos-free-guide-landing.html /drs-wos-wiki.html 301
+/wos-guide-about.html /drs-wos-wiki.html 301
+# Old Mavericks Adventures case study is now the new case study
+/drs-ma-case-study.html /drs-case-study-ma.html 301
+# The two KDP FAQ pages were merged into one
+/drs-faq-kdp.html /faq-kdp.html 301
