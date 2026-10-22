@@ -27,6 +27,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-22", brand: "wos", featured: true,
+      title: "21 new R4 and R5 chat templates",
+      text: "Daily checklist, hero and rally guides, Alliance Championship, Crazy Joe, Silverfrost Shop, Wild Brawl tips and chat art, now sorted into tabs.",
+      url: "wos-r4-resources.html", cta: "See the templates" },
+
     { date: "2026-10-21", brand: "wos", featured: true,
       title: "October 20 update explained",
       text: "Mergeventure, the Expedition Arena, gifting and the new Expert Justus, with the key dates in one place.",
