@@ -2,9 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.digitalrevenuestudio.co.uk/</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-about</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-services</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-services</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-content-pack</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-blog</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-shop</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-shop</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-ma</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-fathom</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-case-study-wos</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -93,7 +94,7 @@
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-brand-fathom</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-brand-ma</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/drs-brand-wos</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-shop-drs</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.digitalrevenuestudio.co.uk/drs-shop-drs</loc><lastmod>2026-10-23</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/portfolio</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/wos-alliance-tools</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.digitalrevenuestudio.co.uk/wos-beginner-guides</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>

@@ -15,7 +15,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Syne:wght@600;700;800&family=Lora:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/style.css?v=20261021b">
 <meta name="google-adsense-account" content="ca-pub-5306195679240930">
-</head>
+<style>
+.flag{background:linear-gradient(120deg,var(--g1),#1f5340);border-radius:26px;padding:40px 46px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;color:rgba(244,241,230,.86);position:relative;overflow:hidden}
+.flag:before{content:"";position:absolute;right:-70px;top:-130px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(255,255,255,.07);box-shadow:0 0 0 46px rgba(255,255,255,.025)}
+.flag>*{position:relative}
+.flag .tagf{display:inline-block;font-weight:700;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:var(--deep);border-radius:5px;padding:5px 10px}
+.flag h2{color:#F4F1E6;font-weight:600;font-size:clamp(1.7rem,3.2vw,2.5rem);letter-spacing:-.035em;margin:14px 0 12px}
+.flag h2 em{font-family:var(--f-serif);font-style:italic;font-weight:500;color:var(--gold)}
+.flag p{margin:0 0 18px;max-width:38em}
+.flag ul{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px;max-width:38em}
+.flag li{padding-left:24px;position:relative;font-size:.96rem}
+.flag li:before{content:"";position:absolute;left:2px;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.flag .btns{display:flex;gap:12px;flex-wrap:wrap}
+.flag .price{text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:28px 36px;min-width:210px}
+.flag .price b{display:block;font-family:var(--f-wide);font-weight:800;font-size:clamp(3rem,6vw,4rem);letter-spacing:-.04em;color:var(--gold);line-height:1}
+.flag .price span{display:block;margin-top:10px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,230,.75)}
+@media (max-width:820px){.flag{grid-template-columns:1fr;padding:32px 26px;gap:24px}.flag ul{grid-template-columns:1fr}.flag .price{justify-self:start}}
+</style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
@@ -28,9 +44,13 @@
 <main id="main">
 <div class="pagehero"><div class="wrap">
 <div class="copy"><div class="crumb"><a href="index.html">Home</a><span>/</span><span aria-current="page">DRS Shop</span></div>
-<div class="eyebrow">Digital Revenue Studio shop</div><h1>Prompts, AI tools and <em>a free playbook.</em></h1><p class="sub">Practical digital products with a clear purpose and an honest price. No countdown timers and no manufactured urgency.</p><div class="btns"><a class="btn btn-gold" href="#products">Browse the products <span class="arrow">&rarr;</span></a><a class="btn btn-line-light" href="drs-shop.html">All brand shops</a></div></div>
+<div class="eyebrow">Digital Revenue Studio shop</div><h1>Prompts, AI tools, a free playbook and <em>done-for-you content.</em></h1><p class="sub">Practical digital products and services with a clear purpose and an honest price. No countdown timers and no manufactured urgency.</p><div class="btns"><a class="btn btn-gold" href="#flagship">See the flagship service <span class="arrow">&rarr;</span></a><a class="btn btn-line-light" href="#products">Browse the products</a></div></div>
 <div class="art"><img src="img/digit-shop.webp" alt="Digit pushing a shopping trolley" width="480" height="720"></div>
 </div></div>
+<section class="s" style="padding-bottom:0" id="flagship"><div class="wrap"><div class="flag">
+<div><span class="tagf">Flagship service</span><h2>Branded Content Pack: two weeks of posts, <em>done for you.</em></h2><p>For independent consultants and coaches who know they should be posting but never have the time. One fixed scope, one fixed price.</p><ul><li>8 original branded graphics</li><li>8 captions in your voice</li><li>A two-week publishing plan</li><li>One revision round included</li></ul><div class="btns"><a class="btn btn-gold" href="drs-content-pack.html">See what is in the pack <span class="arrow">&rarr;</span></a><a class="btn btn-line-light" href="mailto:info@digitalrevenuestudio.co.uk?subject=Branded%20Content%20Pack">Ask about a pack</a></div></div>
+<div class="price"><b>&pound;199</b><span>Introductory price</span></div>
+</div></div></section>
 <section class="s" id="products"><div class="wrap"><div class="sec-head"><div><div class="eyebrow">Products</div><h2>The <em>DRS shop</em></h2><p>Everything here is delivered instantly and built from the same tools and methods we use ourselves.</p></div><a class="btn btn-green btn-sm" href="https://payhip.com/DigitalRevenueStudio" data-link="other.payhip" target="_blank" rel="noopener">Open the Payhip store <span class="arrow">&rarr;</span></a></div><div class="prod-grid"><article class="prod drs"><div class="pt"><div class="tagrow"><span class="tag free">Free</span></div><div class="brandline">Digital Revenue Studio</div></div><div class="pb"><h3>The DRS Studio Playbook</h3><p>How we build digital brands from scratch: the approach, the free tools we use, an honest timeline and six lessons learned. The best place to start.</p><a class="btn btn-green btn-sm go" href="drs-signup.html">Get the free guide</a></div></article><article class="prod drs"><div class="pt"><div class="tagrow"><span class="tag ">Workbook</span></div><div class="brandline">Digital Revenue Studio</div></div><div class="pb"><h3>150+ ChatGPT Prompt Workbook</h3><p>A structured library of over 150 tested prompts across eight categories, so you can stop starting from scratch every session.</p><a class="btn btn-green btn-sm go" href="https://payhip.com/b/RfKhQ" target="_blank" rel="noopener">See pricing and buy</a></div></article><article class="prod drs"><div class="pt"><div class="tagrow"><span class="tag ">Directory</span></div><div class="brandline">Digital Revenue Studio</div></div><div class="pb"><h3>800+ AI Tools and Apps Directory</h3><p>Every major AI tool in one workbook, each with a short description, a direct link and a Free, Freemium or Paid label.</p><a class="btn btn-green btn-sm go" href="https://payhip.com/DigitalRevenueStudio" target="_blank" rel="noopener">See pricing and buy</a></div></article></div></div></section>
 <section class="s" id="partners" style="padding-top:0"><div class="wrap"><div class="sec-head"><div><div class="eyebrow">Brand partners</div><h2>Tools we <em>recommend</em></h2><p>Tools and services we recommend. Some links are affiliate or referral links, so we may earn a small commission or reward at no extra cost to you.</p></div><a class="btn btn-green btn-sm" href="drs-affiliates-hub.html">All brand partners <span class="arrow">&rarr;</span></a></div><div class="partners p3"><a class="partner" href="faq-sender.html"><b>Sender</b><span>Email marketing, free up to 2,500 subscribers, with full automation. What we use across every DRS brand.</span><i>Read the FAQ &rarr;</i></a><a class="partner" href="https://payhip.com/?fp_ref=rick17" target="_blank" rel="sponsored noopener"><b>Payhip</b><span>A free digital product storefront with instant delivery and no monthly cost. What we use for our digital products.</span><i>Visit Payhip &rarr;</i></a><a class="partner" href="https://refer-nordvpn.com/pyHdUqvaiaX" target="_blank" rel="sponsored noopener"><b>NordVPN</b><span>A VPN service we recommend. We may earn a referral reward if you sign up through our link.</span><i>Visit NordVPN &rarr;</i></a></div></div></section>
 <section class="s" style="padding-top:0"><div class="wrap"><div class="cta">
