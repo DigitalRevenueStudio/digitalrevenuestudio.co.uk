@@ -27,6 +27,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-23", brand: "wos", featured: true,
+      title: "Recruitment and alliance notice templates",
+      text: "Thirteen new copy and paste messages for recruiting, welcoming members, rules reminders, activity checks and gift code announcements.",
+      url: "wos-r4-resources.html", cta: "See the templates" },
+
     { date: "2026-10-22", brand: "wos", featured: true,
       title: "21 new R4 and R5 chat templates",
       text: "Daily checklist, hero and rally guides, Alliance Championship, Crazy Joe, Silverfrost Shop, Wild Brawl tips and chat art, now sorted into tabs.",
