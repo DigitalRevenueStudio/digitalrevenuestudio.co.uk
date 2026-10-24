@@ -48,6 +48,10 @@
 @media (max-width:900px){.ttabs{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.ttabs{gap:10px}.ttabs button{padding:14px 12px 12px;min-height:104px}.ttabs .tt-sub{font-size:.76rem}}
 .related{margin-top:32px}
+.coffee-card{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:rgba(245,166,35,.10);border:1px solid rgba(245,166,35,.45);border-radius:6px;padding:16px 20px;margin:0 0 24px}
+.coffee-card .cc-text{display:flex;flex-direction:column;gap:2px;font-size:.92rem}.coffee-card .cc-text span{opacity:.85}
+.coffee-toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:12px;background:#10202b;color:#fff;border:1px solid rgba(245,166,35,.6);border-radius:8px;padding:10px 14px;box-shadow:0 8px 28px rgba(0,0,0,.35);max-width:calc(100vw - 24px);font-size:.88rem}
+.coffee-toast a.btn{white-space:nowrap}.coffee-toast button.x{background:none;border:0;color:#fff;font-size:1.2rem;line-height:1;cursor:pointer;opacity:.7}
 </style></head>
 <body class="wiki">
 <a class="skip" href="#main">Skip to content</a>
@@ -86,7 +90,7 @@
 <div class="how-to-text"><strong>Send.</strong> Formatting displays automatically</div>
 </div>
 </div>
-</div><div class="tchoose"><div class="tchoose-h">Choose a category</div><div class="tchoose-p">Tap one to see its templates.</div></div><div class="ttabs" role="tablist" aria-label="Template categories"><button type="button" role="tab" id="tab-events" aria-controls="panel-events" aria-selected="true" tabindex="0"><span class="tt-name">⚔ Events</span><span class="tt-sub">SvS, Bear Hunt, Crazy Joe, Championship and more</span><span class="tt-n">13 templates</span></button><button type="button" role="tab" id="tab-advice" aria-controls="panel-advice" aria-selected="false" tabindex="-1"><span class="tt-name">🧭 Advice</span><span class="tt-sub">Hero choices and rally basics</span><span class="tt-n">8 templates</span></button><button type="button" role="tab" id="tab-daily-shop" aria-controls="panel-daily-shop" aria-selected="false" tabindex="-1"><span class="tt-name">📅 Daily and shop</span><span class="tt-sub">Daily checklist and Silverfrost Shop</span><span class="tt-n">3 templates</span></button><button type="button" role="tab" id="tab-recruit" aria-controls="panel-recruit" aria-selected="false" tabindex="-1"><span class="tt-name">📣 Recruitment</span><span class="tt-sub">Recruiting posts, replies and welcomes</span><span class="tt-n">6 templates</span></button><button type="button" role="tab" id="tab-notices" aria-controls="panel-notices" aria-selected="false" tabindex="-1"><span class="tt-name">📢 Alliance notices</span><span class="tt-sub">Rules, activity checks, events, gift codes</span><span class="tt-n">7 templates</span></button><button type="button" role="tab" id="tab-fun" aria-controls="panel-fun" aria-selected="false" tabindex="-1"><span class="tt-name">🎨 For fun</span><span class="tt-sub">Chat art for a bit of fun</span><span class="tt-n">3 templates</span></button></div><div class="tpanel" id="panel-events" role="tabpanel" aria-labelledby="tab-events"><div class="section-label" id="svs-prep">⚔ State vs State</div><div class="tset"><div class="template-card">
+</div><div class="coffee-card"><div class="cc-text"><b>Free to copy, tested in game.</b><span>If these save you time, a coffee helps us build the next batch.</span></div><a class="btn btn-kofi" href="https://ko-fi.com/digitalrevenuestudio" target="_blank" rel="noopener" data-link="other.kofi">Buy us a coffee <span class="arrow">&rarr;</span></a></div><div class="tchoose"><div class="tchoose-h">Choose a category</div><div class="tchoose-p">Tap one to see its templates.</div></div><div class="ttabs" role="tablist" aria-label="Template categories"><button type="button" role="tab" id="tab-events" aria-controls="panel-events" aria-selected="true" tabindex="0"><span class="tt-name">⚔ Events</span><span class="tt-sub">SvS, Bear Hunt, Crazy Joe, Championship and more</span><span class="tt-n">13 templates</span></button><button type="button" role="tab" id="tab-advice" aria-controls="panel-advice" aria-selected="false" tabindex="-1"><span class="tt-name">🧭 Advice</span><span class="tt-sub">Hero choices and rally basics</span><span class="tt-n">8 templates</span></button><button type="button" role="tab" id="tab-daily-shop" aria-controls="panel-daily-shop" aria-selected="false" tabindex="-1"><span class="tt-name">📅 Daily and shop</span><span class="tt-sub">Daily checklist and Silverfrost Shop</span><span class="tt-n">3 templates</span></button><button type="button" role="tab" id="tab-recruit" aria-controls="panel-recruit" aria-selected="false" tabindex="-1"><span class="tt-name">📣 Recruitment</span><span class="tt-sub">Recruiting posts, replies and welcomes</span><span class="tt-n">6 templates</span></button><button type="button" role="tab" id="tab-notices" aria-controls="panel-notices" aria-selected="false" tabindex="-1"><span class="tt-name">📢 Alliance notices</span><span class="tt-sub">Rules, activity checks, events, gift codes</span><span class="tt-n">7 templates</span></button><button type="button" role="tab" id="tab-fun" aria-controls="panel-fun" aria-selected="false" tabindex="-1"><span class="tt-name">🎨 For fun</span><span class="tt-sub">Chat art for a bit of fun</span><span class="tt-n">3 templates</span></button></div><div class="tpanel" id="panel-events" role="tabpanel" aria-labelledby="tab-events"><div class="section-label" id="svs-prep">⚔ State vs State</div><div class="tset"><div class="template-card">
 <div class="template-header">
 <div>
 <div class="template-title">SvS Prep Week Schedule</div>
@@ -899,5 +903,20 @@ function copyTemplate(id) {
     el.scrollIntoView();
   }
   window.addEventListener('hashchange', fromHash); fromHash();
+})();
+</script><script>
+(function () {
+  var shown = false;
+  try { shown = sessionStorage.getItem('drsCoffeeToast') === '1'; } catch (e) {}
+  document.addEventListener('click', function (e) {
+    if (shown || !e.target.closest || !e.target.closest('.copy-btn')) return;
+    shown = true;
+    try { sessionStorage.setItem('drsCoffeeToast', '1'); } catch (e2) {}
+    var d = document.createElement('div'); d.className = 'coffee-toast'; d.setAttribute('role', 'status');
+    d.innerHTML = '<span>Copied! Saved you time? Buy us a coffee.</span><a class="btn btn-kofi btn-sm" href="https://ko-fi.com/digitalrevenuestudio" target="_blank" rel="noopener" data-link="other.kofi">Ko-fi &rarr;</a><button class="x" type="button" aria-label="Dismiss">&times;</button>';
+    d.querySelector('.x').addEventListener('click', function () { d.remove(); });
+    setTimeout(function () { document.body.appendChild(d); }, 600);
+    setTimeout(function () { if (d.parentNode) d.remove(); }, 12000);
+  });
 })();
 </script></body></html>
