@@ -27,6 +27,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-25", brand: "wos", featured: true,
+      title: "New gift code: WOS1025",
+      text: "5 x 100 Gems, a 3-day frame, 2 x 100 VIP XP and 10 x 5-minute Speedups.",
+      url: "wos-wiki-gift-code-tracker.html", cta: "Get the gift codes" },
+
     { date: "2026-10-23", brand: "wos", featured: true,
       title: "Recruitment and alliance notice templates",
       text: "Thirteen new copy and paste messages for recruiting, welcoming members, rules reminders, activity checks and gift code announcements.",
