@@ -1,0 +1,65 @@
+/* WOS wiki: free tools, Digit prompts and the news / tools carousel (28 Oct 2026) */
+
+/* Digit prompt block ("Still not sure?") */
+.dg-assist{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 24px;align-items:center;background:linear-gradient(135deg,#0a1f35,#15355a);border:2px solid #7DBDF0;border-radius:22px;padding:16px 28px 16px 20px;margin:26px 0;color:#cfe0f0}
+.dg-assist .dg-pic{display:flex;align-items:flex-end;justify-content:center}
+.dg-assist img{height:150px;width:auto;display:block;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+.dg-assist .dg-eb{font:800 .68rem/1 var(--f-body,inherit);letter-spacing:.16em;text-transform:uppercase;color:#7DBDF0;margin:0 0 6px}
+.dg-assist .dg-t{display:block;font-size:1.3rem;line-height:1.2;font-weight:700;letter-spacing:-.02em;color:#fff;margin:0 0 6px}
+.dg-assist p{margin:0 0 12px;color:#cfe0f0;font-size:.96rem;line-height:1.55}
+.dg-assist p a{color:#7DBDF0;font-weight:700}
+.dg-btns{display:flex;flex-wrap:wrap;gap:10px}
+.dg-btn{display:inline-flex;align-items:center;gap:6px;background:#7DBDF0;color:#0a1f35;font-weight:800;font-size:.9rem;border-radius:12px;padding:10px 16px;text-decoration:none;border:2px solid #7DBDF0}
+.dg-btn:hover{background:#a0d0f7;border-color:#a0d0f7}
+.dg-btn.alt{background:transparent;color:#fff;border-color:rgba(125,189,240,.6)}
+.dg-btn.alt:hover{border-color:#7DBDF0;color:#7DBDF0}
+.dg-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media (max-width:640px){.dg-assist{grid-template-columns:1fr;padding:18px}.dg-assist img{height:120px}.dg-assist .dg-pic{justify-content:flex-start}}
+
+/* Tool cards (wiki home and landing pages) */
+.tcard{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 18px;align-items:center;background:linear-gradient(160deg,#0a1f35,#15355a);border:2px solid #7DBDF0;border-radius:20px;padding:16px 22px 16px 16px;color:#cfe0f0;text-decoration:none;transition:transform .18s,box-shadow .18s}
+.tcard:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(10,31,53,.22)}
+.tcard img{height:118px;width:auto;display:block;filter:drop-shadow(0 8px 12px rgba(0,0,0,.35))}
+.tcard .tc-tag{display:inline-block;font:800 .64rem/1 var(--f-body,inherit);letter-spacing:.14em;text-transform:uppercase;background:rgba(125,189,240,.18);color:#7DBDF0;border-radius:20px;padding:4px 9px;margin-bottom:6px}
+.tcard h3{margin:0 0 4px;font-size:1.25rem;font-weight:700;letter-spacing:-.025em;color:#fff}
+.tcard p{margin:0 0 8px;font-size:.9rem;line-height:1.45;color:#b8cde0}
+.tcard .tc-go{font:800 .74rem/1 var(--f-head,var(--f-body,inherit));letter-spacing:.1em;text-transform:uppercase;color:#7DBDF0}
+.tcard:focus-visible{outline:3px solid #7DBDF0;outline-offset:3px}
+.tstack{display:grid;gap:16px}
+@media (max-width:520px){.tcard{grid-template-columns:1fr}.tcard img{height:96px}}
+
+/* Carousel (latest news on the wiki home, free tools on the Heroes page) */
+.wnews{background:linear-gradient(135deg,#0a1f35,#15355a);border-radius:26px;color:#cfe0f0;position:relative;overflow:hidden;padding:26px 34px 20px}
+.wnews:before{content:"";position:absolute;right:-70px;top:-130px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(125,189,240,.16);pointer-events:none}
+.wnews>*{position:relative}
+.wn-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.wn-head .wn-eb{font:800 .72rem/1 var(--f-body,inherit);letter-spacing:.16em;text-transform:uppercase;color:#7DBDF0;display:flex;align-items:center;gap:9px}
+.wn-head .wn-eb:before{content:"";width:9px;height:9px;border-radius:50%;background:#4cd37b}
+.wn-ctl{display:flex;gap:8px}
+.wn-ctl button{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(10,31,53,.6);color:#fff;font-size:1.3rem;line-height:1;cursor:pointer}
+.wn-ctl button:hover{border-color:#7DBDF0;color:#7DBDF0}
+.wn-ctl button:focus-visible{outline:3px solid #7DBDF0;outline-offset:2px}
+.wn-view{overflow:hidden}
+.wn-track{display:flex;transition:transform .5s ease}
+.wn-slide{flex:0 0 100%;min-width:0;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 28px;align-items:center;min-height:210px;padding:4px 2px}
+.wn-slide .wn-meta{font:800 .7rem/1.2 var(--f-body,inherit);letter-spacing:.14em;text-transform:uppercase;color:#7DBDF0;margin-bottom:6px}
+.wn-slide .wn-meta .wn-new{background:#ff5e5b;color:#fff;border-radius:4px;padding:2px 7px;margin-left:8px;letter-spacing:.1em}
+.wn-slide h3{margin:0 0 8px;color:#fff;font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.15;font-weight:700;letter-spacing:-.03em}
+.wn-slide h3 a{color:inherit;text-decoration:none}.wn-slide h3 a:hover{text-decoration:underline}
+.wn-slide p{margin:0 0 14px;max-width:44em;color:#cfe0f0;font-size:1rem;line-height:1.55}
+.wn-slide .wn-btn{display:inline-flex;align-items:center;gap:6px;background:#7DBDF0;color:#0a1f35;font-weight:800;font-size:.9rem;border-radius:12px;padding:10px 16px;text-decoration:none}
+.wn-slide .wn-btn:hover{background:#a0d0f7}
+.wn-slide .wn-btn.alt{background:transparent;color:#fff;border:2px solid rgba(125,189,240,.6);padding:8px 14px;margin-left:8px}
+.wn-slide .wn-btn.alt:hover{border-color:#7DBDF0;color:#7DBDF0}
+.wn-slide .wn-pic img{height:190px;width:auto;display:block;filter:drop-shadow(0 12px 16px rgba(0,0,0,.4))}
+.wn-dots{display:flex;gap:6px;justify-content:center;padding-top:12px}
+.wn-dots button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(255,255,255,.3);padding:0;cursor:pointer}
+.wn-dots button[aria-current="true"]{background:#7DBDF0;width:22px;border-radius:4px}
+@media (max-width:760px){.wnews{padding:20px 18px 16px}.wn-slide{grid-template-columns:1fr;min-height:0}.wn-slide .wn-pic{display:none}.wn-slide .wn-btn.alt{margin:8px 0 0}}
+@media (prefers-reduced-motion:reduce){.wn-track{transition:none}}
+
+.tstack .tcard img{height:140px}
+.tcard h3{text-transform:none;font-family:inherit}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:14px 0 26px}
+.wnews[data-wnews]{min-height:330px}
+@media (max-width:760px){.wnews[data-wnews]{min-height:0}}
