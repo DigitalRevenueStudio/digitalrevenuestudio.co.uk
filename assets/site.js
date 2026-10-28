@@ -1,5 +1,5 @@
 /* Digital Revenue Studio site script.
-   Fills brand links from data/links.js; renders the news lists, Portfolio carousel and blog picks from data/updates.js; runs the Meet the brands tabs. */
+   Fills brand links from data/links.js; renders the news lists, the Portfolio and Studio news carousels and blog picks from data/updates.js; runs the Meet the brands tabs. */
 (function () {
   var D = window.DRS || {}, L = window.DRS_LINKS || {};
   var names = D.brandNames || {};
@@ -78,14 +78,19 @@
 
   /* ---------- carousel ---------- */
   document.querySelectorAll("[data-carousel]").forEach(function (box) {
-    var items = all.filter(function (u) { return u.featured; });
+    /* data-flag="studio" shows the studio's own news (items with studio: true); with no flag the box shows Portfolio news (items with featured: true) */
+    var flag = box.getAttribute("data-flag") || "featured";
+    var items = all.filter(function (u) { return u[flag]; });
     if (!items.length) { box.hidden = true; return; }
     box.innerHTML = '<div class="track">' + items.map(function (u, n) {
-      return '<div class="slide" data-brand="' + esc(u.brand) + '" role="group" aria-roledescription="slide" aria-label="Update ' + (n + 1) + ' of ' + items.length + '">' +
-        '<div class="k"><span>' + esc(names[u.brand] || "Studio") + '</span>' + (u.date ? '<span class="tag">NEW</span>' : '<span class="tag">ALWAYS ON</span>') + '</div>' +
+      var tagHtml = u.tag ? '<span class="tag hot">' + esc(u.tag) + '</span>' : (u.date ? '<span class="tag">NEW</span>' : '<span class="tag">ALWAYS ON</span>');
+      var body = '<div class="k"><span>' + esc(names[u.brand] || "Studio") + '</span>' + tagHtml + '</div>' +
         '<h3>' + esc(u.title) + '</h3><p>' + esc(u.text) + '</p>' +
         '<div class="row"><span class="when">' + fmt(u.date) + '</span>' +
-        (u.url ? '<a class="btn btn-gold btn-sm" href="' + esc(u.url) + '">' + esc(u.cta || "Read more") + ' &rarr;</a>' : '') + '</div></div>';
+        (u.url ? '<a class="btn btn-gold btn-sm" href="' + esc(u.url) + '">' + esc(u.cta || "Read more") + ' &rarr;</a>' : '') + '</div>';
+      var showImg = flag === "studio" && u.img;
+      return '<div class="slide' + (showImg ? ' has-img' : '') + '" data-brand="' + esc(u.brand) + '" role="group" aria-roledescription="slide" aria-label="Update ' + (n + 1) + ' of ' + items.length + '">' +
+        (showImg ? '<div class="copy">' + body + '</div><div class="pic"><img src="' + esc(u.img) + '" alt="" loading="lazy" width="170" height="190"></div>' : body) + '</div>';
     }).join("") + '</div>' +
       (items.length > 1 ? '<button class="cnav prev" type="button" aria-label="Previous update">&#8249;</button><button class="cnav next" type="button" aria-label="Next update">&#8250;</button>' +
         '<div class="dots">' + items.map(function (_, n) { return '<button type="button" aria-label="Show update ' + (n + 1) + '"></button>'; }).join("") + '</div>' : '');

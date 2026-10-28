@@ -764,3 +764,16 @@ body.b-ac main .cs-band{border:1px solid rgba(232,103,43,.35)}
 /* mobile: portrait gallery captions sit below the image instead of covering it */
 @media (max-width:900px){.gslide.port{display:block;min-height:0}.gslide.port img{height:min(80vw,420px)}.gslide.port figcaption{position:static;max-width:none;margin:0;left:auto;right:auto;bottom:auto;border-radius:0;padding:14px 18px 62px;background:rgba(40,20,5,.9)}}
 .pcard.ma .banner .tl{max-width:58%}
+
+/* ---------- studio news carousel (home page) ---------- */
+.nbox.solid{background:linear-gradient(120deg,var(--g1),var(--g2));box-shadow:0 14px 34px rgba(10,31,20,.18)}
+.slide.has-img{display:grid;grid-template-columns:1fr 170px;column-gap:26px;align-items:center}
+.slide.has-img .copy{display:flex;flex-direction:column;min-height:100%}
+.slide.has-img .copy p{flex:1}
+.slide .pic{display:flex;justify-content:center;align-items:flex-end}
+.slide .pic img{max-height:190px;width:auto;object-fit:contain}
+.slide[data-brand="drs"]{--accent:var(--gold)}
+.slide .k .tag.hot{background:var(--gold);color:var(--deep)}
+.nbox-foot{margin:14px 2px 0;font-size:.92rem;color:var(--muted)}
+.nbox-foot a{color:var(--g1);font-weight:700}
+@media (max-width:760px){.slide.has-img{display:flex}.slide .pic{display:none}}
