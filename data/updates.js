@@ -27,6 +27,26 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
+      title: "New free tool: the Hero Advisor",
+      text: "Load your roster, choose how much you spend and get a plain invest, skip or stick answer for every new hero. It runs in your browser and nothing is uploaded.",
+      url: "wos-hero-advisor.html", cta: "Try the Hero Advisor" },
+
+    { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-jigsaw.webp",
+      title: "New free tool: the Bear Hunt Generator",
+      text: "Tell it which heroes you own and how many troops you can send. It drafts a Bear Hunt rally plan: who leads, who joins and how to split your troops.",
+      url: "wos-bear-generator.html", cta: "Build a Bear setup" },
+
+    { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-wand.webp",
+      title: "Hero Guide by Generation is live",
+      text: "A full guide for every hero from Gen 1 to Gen 17, with star targets for free to play, low and higher spenders. Gen 18 follows once its details are confirmed.",
+      url: "wos-guide-hero-generations.html", cta: "Open the Hero Guide" },
+
+    { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-wos-gift.webp",
+      title: "Gift code tracker refreshed",
+      text: "WOS1025, VIP1021, WOS1018 and SPORTSDAY26 have moved to Expired. Four older codes stay on the active list with a note that they may have ended.",
+      url: "wos-wiki-gift-code-tracker.html", cta: "Check the gift codes" },
+
     { date: "2026-10-25", brand: "wos", featured: true,
       title: "New gift code: WOS1025",
       text: "5 x 100 Gems, a 3-day frame, 2 x 100 VIP XP and 10 x 5-minute Speedups.",
