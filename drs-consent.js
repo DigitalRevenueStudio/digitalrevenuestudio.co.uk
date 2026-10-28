@@ -48,15 +48,15 @@
 
   /* ---------- page grouping ---------- */
   function contentGroup() {
-    var p = location.pathname.replace(/^\//, '') || 'index.html';
+    var p = location.pathname.replace(/^\//, '').replace(/\.html$/, '') || 'index';
     if (/^wos-guide-/.test(p)) { return 'WOS guide'; }
     if (/^wos-blog-|^wos-news/.test(p)) { return 'WOS news'; }
-    if (/^wos-/.test(p) || p === 'drs-wos-wiki.html') { return 'WOS wiki'; }
+    if (/^wos-/.test(p) || p === 'drs-wos-wiki') { return 'WOS wiki'; }
     if (/^drs-blog/.test(p)) { return 'DRS blog'; }
     if (/^drs-case-study|^portfolio|^drs-brand/.test(p)) { return 'Portfolio'; }
     if (/^drs-shop/.test(p)) { return 'Shop'; }
     if (/^faq|^cdm|^drs-cdm/.test(p)) { return 'Tools and FAQ'; }
-    if (p === 'index.html' || p === '') { return 'Home'; }
+    if (p === 'index' || p === '') { return 'Home'; }
     return 'Studio';
   }
 
@@ -172,7 +172,7 @@
       'They are only set if you accept, and the site works the same either way. ' +
       (current ? 'Your current choice is <strong>' + (current === 'granted' ? 'accepted' : 'declined') + '</strong>. ' : '') +
       'You can change your mind at any time from Cookie settings in the footer. ' +
-      '<a href="/drs-privacy.html#cookies">Privacy policy</a></p>' +
+      '<a href="/drs-privacy#cookies">Privacy policy</a></p>' +
       '<div class="drs-c-row">' +
       '<button type="button" class="drs-c-accept">Accept</button>' +
       '<button type="button" class="drs-c-decline">Decline</button></div>';
