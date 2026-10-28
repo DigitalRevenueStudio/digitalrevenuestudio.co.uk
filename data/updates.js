@@ -2,7 +2,7 @@
   DIGITAL REVENUE STUDIO: SITE UPDATES
   ---------------------------------------------------------------
   This is the file to edit for day-to-day news. Save it, upload it
-  to GitHub, and the Home page news, the Portfolio carousel and the
+  to GitHub, and the Home page studio news, the Portfolio carousel and the
   brand pages update.
 
   Rules:
@@ -10,7 +10,11 @@
   - Dates are written "YYYY-MM-DD", or "YYYY-MM" when only the month is known.
   - Newest dates show first.
   - brand is one of: drs, ma, wos, fathom, ac, die
-  - featured: true puts the item in the Portfolio news carousel.
+  - featured: true puts the item in the Portfolio News & Updates carousel (brand news).
+  - studio: true puts the item in the Home page Studio News & Updates carousel
+    (our own news: new tools, new clients, website changes). An item can have
+    both flags. Optional: tag (short label such as "New tool") and img (a Digit
+    picture shown beside the text on the Home carousel).
   - To remove an item, delete everything from its { to its },
   - New WOS gift codes: add them here as well as in the tracker and the
     wiki ticker, and only once the rewards are confirmed.
@@ -27,6 +31,36 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-28", brand: "drs", studio: true, tag: "New free tool", img: "img/digit-shop.webp",
+      title: "DRS Prompt Studio Free is live",
+      text: "Turn a task, an audience and a tone into a clear, copy-ready prompt for the AI assistant you already use. It runs in your browser, needs no sign-up and nothing is sent anywhere.",
+      url: "drs-prompt-studio-free.html", cta: "Try it free" },
+
+    { date: "2026-10-28", brand: "drs", studio: true, tag: "New tools", img: "img/digit-shop.webp",
+      title: "Prompt Studio Plus and the Faceless Content Workflow",
+      text: "Plus adds six learning modes, 96 visual presets and reusable context profiles (\u00a312). The Faceless Content Workflow plans short-form content without you being on camera (\u00a315). Both are one-off purchases.",
+      url: "drs-shop-drs.html#products", cta: "See the tools" },
+
+    { date: "2026-10-28", brand: "drs", studio: true, tag: "New directory", img: "img/digit-shop.webp",
+      title: "The DRS Tools Directory and Navigator Monthly",
+      text: "A searchable directory of 533 AI and digital tools for \u00a39, plus a membership that adds 3 to 6 selected tools or updates every month. \u00a39 for the first payment, then \u00a34.99 a month. Cancel any time.",
+      url: "drs-shop-drs.html#products", cta: "See the directory" },
+
+    { date: "2026-10-28", brand: "wos", studio: true, tag: "New free tools", img: "img/digit-clipboard.webp",
+      title: "Hero Advisor and Bear Hunt Generator for Whiteout Survival",
+      text: "Two free browser tools for players: a plain invest, skip or stick answer for every new hero, and a drafted Bear Hunt rally plan from the heroes and troops you own.",
+      url: "wos-hero-advisor.html", cta: "Try the Hero Advisor" },
+
+    { date: "2026-10-27", brand: "drs", studio: true, tag: "Studio news", img: "img/digit-services.webp",
+      title: "Website revamp underway",
+      text: "A refreshed look for the whole studio site is rolling out in stages, starting with a new shop and new tool pages. Some things may move around while we finish.",
+      url: "drs-shop-drs.html", cta: "Browse the new shop" },
+
+    { date: "2026-10-08", brand: "fathom", studio: true, tag: "New client", img: "img/digit-portfolio.webp",
+      title: "Fathom Guides joins the DRS family",
+      text: "We are the branding and content partner for Fathom Guides: Whiteout Survival guides, a live gift code and news site, and a Minecraft survival manual.",
+      url: "drs-case-study-fathom.html", cta: "Read the case study" },
+
     { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
       title: "New free tool: the Hero Advisor",
       text: "Load your roster, choose how much you spend and get a plain invest, skip or stick answer for every new hero. It runs in your browser and nothing is uploaded.",
@@ -118,7 +152,7 @@ window.DRS = {
       url: "drs-blog-11-ma-international.html", cta: "Read the story" }
   ],
 
-  /* Evergreen reads shown in "From the blog" on the Home page. */
+  /* Evergreen blog picks (no longer shown on the Home page; kept for any page that uses a data-posts list). */
   posts: [
     { label: "Studio guide", title: "The free tool stack we use to build digital brands",
       text: "Every tool we use across our brands, all free or freemium, and what each one is for.",
