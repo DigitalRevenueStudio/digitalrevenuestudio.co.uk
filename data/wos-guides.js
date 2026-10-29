@@ -62,7 +62,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Frostfire Mine",
-  "d": "Patrol guard farming, the correct skill sequence and how to score without contesting the top spots.",
+  "d": "The five-tier skill tree, patrols, veins, outbursts, the Smelter and a practical orichalcum plan.",
   "u": "/wos-guide-frostfire-mine",
   "s": "Event guides"
  },
@@ -116,7 +116,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Pets Guide",
-  "d": "All 12 pets with skills, unlock timeline, tier list and refinement strategy.",
+  "d": "All 14 pets, skill values, the capture chain, advancement gates and a broad-first refinement route.",
   "u": "/wos-guide-pets",
   "s": "Heroes, pets and troops"
  },
