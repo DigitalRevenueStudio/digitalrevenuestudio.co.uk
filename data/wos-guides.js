@@ -134,13 +134,13 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Resource Management",
-  "d": "Coal habits, gathering strategy, the four resources explained and how to avoid bottlenecks.",
+  "d": "The four resources, coal and the Furnace, offline gathering, which heroes boost each resource and how to protect your stockpile.",
   "u": "/wos-guide-resource-management",
   "s": "Economy and rewards"
  },
  {
-  "t": "Speed-Ups: When to Use Them",
-  "d": "Speed-up types, the best events to use them in and the rules that prevent waste.",
+  "t": "Speed-Ups: Where They Score",
+  "d": "What speedups do, where they score in SvS prep and Hall of Chiefs, and when to save them.",
   "u": "/wos-guide-speedups",
   "s": "Economy and rewards"
  },
@@ -158,7 +158,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "State vs State Prep",
-  "d": "The F2P prep phase playbook: day by day schedule, what to save and how to maximise your rank.",
+  "d": "What scores on each prep day, which speedups count when, what is known about matchmaking and a Day 3 top tip.",
   "u": "/wos-guide-svs-prep",
   "s": "Strategy and progression"
  },
