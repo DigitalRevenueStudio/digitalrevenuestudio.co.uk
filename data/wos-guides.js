@@ -97,6 +97,12 @@ window.WOS_GUIDES = [
   "s": "Event guides"
  },
  {
+  "t": "Wild Brawl",
+  "d": "Missions, scoring, supply trucks, airdrops, queue choice and building tactics for F2P players.",
+  "u": "/wos-guide-wild-brawl",
+  "s": "Event guides"
+ },
+ {
   "t": "Hero Guide by Generation",
   "d": "Who to build at Gen 1 through Gen 6+, Gold Shard targets and the 50-0-50 path.",
   "u": "/wos-guide-hero-generations",

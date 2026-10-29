@@ -31,6 +31,16 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-29", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
+      title: "New guide: Wild Brawl",
+      text: "An F2P-first guide to the free-for-all event: the missions, supply trucks and airdrops, Same-Gen or Cross-Gen queues, and tactics for the buildings.",
+      url: "/wos-guide-wild-brawl", cta: "Read the guide" },
+
+    { date: "2026-10-29", brand: "wos", featured: true, img: "img/digit-wand.webp",
+      title: "Wiki refresh: Experts, Labyrinth and new chat templates",
+      text: "The Experts guide now covers Gareth and Justus with a revised F2P order, the Labyrinth guide adds community feedback and alternative ratios, and the R4 templates gain Foundry and Canyon, Labyrinth, recruitment key and safety messages.",
+      url: "/wos-guide-experts", cta: "See the Experts guide" },
+
     { date: "2026-10-28", brand: "drs", studio: true, tag: "New free tool", img: "img/digit-shop.webp",
       title: "DRS Prompt Studio Free is live",
       text: "Turn a task, an audience and a tone into a clear, copy-ready prompt for the AI assistant you already use. It runs in your browser, needs no sign-up and nothing is sent anywhere.",
