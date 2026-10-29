@@ -19,8 +19,8 @@ window.WOS_GUIDES = [
   "s": "Beginner guides"
  },
  {
-  "t": "Hero Priority Guide",
-  "d": "Which heroes to invest in first by generation, what to avoid and the 2 to 3 hero rule.",
+  "t": "Hero Priority: How to Start",
+  "d": "How to choose and build your first heroes: build for the activity, shards versus XP versus manuals, and the Gen 1 and Gen 2 options.",
   "u": "/wos-guide-hero-priority",
   "s": "Beginner guides"
  },
