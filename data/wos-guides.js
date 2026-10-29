@@ -122,13 +122,13 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Troop Mastery",
-  "d": "Infantry, Lancers and Marksmen, T1 to T11 progression, the combat triangle and composition strategy.",
+  "d": "Infantry, Lancers and Marksmen, the counter triangle, tiers T1 to T12, Fire Crystal levels and how to plan your army.",
   "u": "/wos-guide-troop-mastery",
   "s": "Heroes, pets and troops"
  },
  {
   "t": "War Academy",
-  "d": "Troop unlocks, research priorities and how to progress through troop tiers efficiently.",
+  "d": "How Fire Crystal era research works: shards, Steel, the Helios unlock chain and how to plan a route.",
   "u": "/wos-guide-war-academy",
   "s": "Heroes, pets and troops"
  },
