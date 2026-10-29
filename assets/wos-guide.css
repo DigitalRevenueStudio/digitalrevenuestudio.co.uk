@@ -766,22 +766,29 @@
 .gbody .schedule-header, .gbody .schedule-row{grid-template-columns:64px 1fr 1fr;}
 .gbody .reward-table-header, .gbody .reward-row{grid-template-columns:1fr 60px 60px;}
 .gbody .ctx-grid{grid-template-columns:1fr;}
-.gbody .ht-header, .gbody .ht-row{grid-template-columns:70px 1fr;}
-.gbody .ht-header span:nth-child(3), .gbody .ht-row span:nth-child(3), .gbody .ht-header span:last-child, .gbody .ht-row span:last-child{display:none;}
+.gbody .ht-header, .gbody .ht-row{grid-template-columns:1fr auto;}
+.gbody .ht-header span:nth-child(3), .gbody .ht-header span:nth-child(4){display:none;}
+.gbody .ht-row span:nth-child(3), .gbody .ht-row span:nth-child(4){grid-column:1/-1;padding-top:0;}
+.gbody .ht-row span:nth-child(3){font-size:0.82rem;}
+.gbody .ht-row span:nth-child(4){font-size:0.75rem;color:var(--text-muted);}
 .gbody .shard-rules{grid-template-columns:1fr;}
 .gbody .ratio-header, .gbody .ratio-row{grid-template-columns:1fr 1fr;}
-.gbody .ratio-header span:last-child, .gbody .ratio-row span:last-child{display:none;}
+.gbody .ratio-header span:last-child{display:none;}
+.gbody .ratio-row span:last-child{grid-column:1/-1;padding-top:0;font-size:0.8rem;color:var(--text-muted);}
 .gbody .st-header, .gbody .st-row{grid-template-columns:1fr 1fr 1fr;}
-.gbody .st-header span:last-child, .gbody .st-row span:last-child{display:none;}
+.gbody .st-header span:last-child{display:none;}
+.gbody .st-row span:last-child{grid-column:1/-1;padding-top:0;font-size:0.8rem;color:var(--text-muted);}
 .gbody .do-dont{grid-template-columns:1fr;}
 .gbody .phase-grid{grid-template-columns:1fr;}
 .gbody .method-cards{grid-template-columns:1fr;}
 .gbody .sys-row{grid-template-columns:1fr 1fr;}
-.gbody .sys-cell.note{display:none;}
+.gbody .sys-row.header .sys-cell:nth-child(3){display:none;}
+.gbody .sys-cell.note{grid-column:1/-1;padding-top:0;font-size:0.8rem;}
 .gbody .res-grid{grid-template-columns:1fr;}
 .gbody .type-cards{grid-template-columns:1fr;}
 .gbody .et-header, .gbody .et-row{grid-template-columns:2fr 1fr;}
-.gbody .et-header span:last-child, .gbody .et-row span:last-child{display:none;}
+.gbody .et-header span:last-child{display:none;}
+.gbody .et-row span:last-child{grid-column:1/-1;padding-top:0;font-size:0.8rem;}
 .gbody .troop-grid{grid-template-columns:1fr;}
 .gbody .how-to{padding-left:20px;padding-right:20px;}
 .gbody .how-to-steps{flex-direction:column;gap:12px;}}
