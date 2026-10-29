@@ -13,8 +13,8 @@ window.WOS_GUIDES = [
   "s": "Beginner guides"
  },
  {
-  "t": "F2P vs Spender: What the Gap Actually Means",
-  "d": "An honest breakdown of where spending matters, where it does not and how to compete on any budget.",
+  "t": "F2P vs Spender: Where Spending Actually Helps",
+  "d": "What published guides say spending buys, where they disagree and how to avoid impulse purchases.",
   "u": "/wos-guide-f2p-vs-spender",
   "s": "Beginner guides"
  },
@@ -86,7 +86,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Snowbusters",
-  "d": "Resource management, gear upgrade order, clearing strategy and enemy handling.",
+  "d": "How areas, fuel, health and coal work, what each gear piece does and where guides disagree.",
   "u": "/wos-guide-snowbusters",
   "s": "Event guides"
  },
@@ -145,8 +145,8 @@ window.WOS_GUIDES = [
   "s": "Economy and rewards"
  },
  {
-  "t": "Event Token Redemption",
-  "d": "What to prioritise, what to skip and how to get the most from every token.",
+  "t": "Event Shops and Tokens",
+  "d": "Each event has its own currency: what carries over, what shops sell and how to decide when to spend.",
   "u": "/wos-guide-event-tokens",
   "s": "Economy and rewards"
  },
