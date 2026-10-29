@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-29", brand: "wos", featured: true, studio: true, tag: "Wiki update", img: "img/digit-clipboard.webp",
+      title: "Wiki accuracy review: guides rebuilt and re-checked",
+      text: "More than a dozen guides have been rebuilt from what several published guides agree on, with unconfirmed points marked and reviewer checks still in progress. Check your own in-game screens before you spend.",
+      url: "/drs-wos-wiki", cta: "Browse the wiki" },
+
     { date: "2026-10-29", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
       title: "New guide: Wild Brawl",
       text: "An F2P-first guide to the free-for-all event: the missions, supply trucks and airdrops, Same-Gen or Cross-Gen queues, and tactics for the buildings.",
@@ -57,7 +62,7 @@ window.DRS = {
       url: "/drs-shop-drs#products", cta: "See the directory" },
 
     { date: "2026-10-28", brand: "wos", studio: true, tag: "New free tools", img: "img/digit-clipboard.webp",
-      title: "Hero Advisor and Bear Hunt Generator for Whiteout Survival",
+      title: "Hero Advisor (beta) and Bear Hunt Generator for Whiteout Survival",
       text: "Two free browser tools for players: a plain invest, skip or stick answer for every new hero, and a drafted Bear Hunt rally plan from the heroes and troops you own.",
       url: "/wos-hero-advisor", cta: "Try the Hero Advisor" },
 
@@ -72,8 +77,8 @@ window.DRS = {
       url: "/drs-case-study-fathom", cta: "Read the case study" },
 
     { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
-      title: "New free tool: the Hero Advisor",
-      text: "Load your roster, choose how much you spend and get a plain invest, skip or stick answer for every new hero. It runs in your browser and nothing is uploaded.",
+      title: "New free tool: the Hero Advisor (beta)",
+      text: "Load your roster, choose how much you spend and get a plain invest, skip or stick answer for every new hero. It is in beta, so treat the answers as suggestions. It runs in your browser and nothing is uploaded.",
       url: "/wos-hero-advisor", cta: "Try the Hero Advisor" },
 
     { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-jigsaw.webp",
