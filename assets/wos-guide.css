@@ -793,3 +793,13 @@
 .gbody .how-to{padding-left:20px;padding-right:20px;}
 .gbody .how-to-steps{flex-direction:column;gap:12px;}}
 @media(max-width:600px){.gbody .diff-grid{grid-template-columns:1fr;}}
+/* Digit's Top Tip (added Stage 13) */
+.gbody .digit-tip{display:grid;grid-template-columns:84px minmax(0,1fr);gap:22px;align-items:center;background:linear-gradient(135deg,rgba(15,127,143,0.08),rgba(154,106,0,0.14));border:1px solid rgba(154,106,0,0.3);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:18px 22px;margin:26px 0;}
+.gbody .digit-tip-img img{display:block;width:84px;height:auto;}
+.gbody .digit-tip-label{font-family:var(--f-head);font-weight:900;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.gbody .digit-tip-title{font-family:var(--f-head);font-weight:900;font-size:1.1rem;line-height:1.2;text-transform:uppercase;color:var(--white);margin-bottom:10px;}
+.gbody .digit-tip p{font-size:0.92rem;color:var(--text);line-height:1.75;margin:0 0 10px;}
+.gbody .digit-tip p:last-of-type{margin-bottom:0;}
+.gbody .digit-tip-credit{font-size:0.75rem;color:var(--text-muted);margin-top:12px;padding-top:10px;border-top:1px solid rgba(154,106,0,0.2);}
+@media(max-width:560px){.gbody .digit-tip{grid-template-columns:52px minmax(0,1fr);gap:14px;padding:16px;}.gbody .digit-tip-img img{width:52px;}}
+@media(max-width:560px){.gbody .digit-tip{align-items:start;}}
