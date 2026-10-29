@@ -62,7 +62,7 @@ window.DRS = {
       url: "/drs-shop-drs#products", cta: "See the directory" },
 
     { date: "2026-10-28", brand: "wos", studio: true, tag: "New free tools", img: "img/digit-clipboard.webp",
-      title: "Hero Advisor (beta) and Bear Hunt Generator for Whiteout Survival",
+      title: "Hero Advisor and Bear Hunt Generator (both in beta) for Whiteout Survival",
       text: "Two free browser tools for players: a plain invest, skip or stick answer for every new hero, and a drafted Bear Hunt rally plan from the heroes and troops you own.",
       url: "/wos-hero-advisor", cta: "Try the Hero Advisor" },
 
@@ -82,8 +82,8 @@ window.DRS = {
       url: "/wos-hero-advisor", cta: "Try the Hero Advisor" },
 
     { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-jigsaw.webp",
-      title: "New free tool: the Bear Hunt Generator",
-      text: "Tell it which heroes you own and how many troops you can send. It drafts a Bear Hunt rally plan: who leads, who joins and how to split your troops.",
+      title: "New free tool: the Bear Hunt Generator (beta)",
+      text: "Tell it which heroes you own and how many troops you can send. It drafts a Bear Hunt rally plan: who leads, who joins and how to split your troops. It is in beta, so treat each plan as a draft.",
       url: "/wos-bear-generator", cta: "Build a Bear setup" },
 
     { date: "2026-10-28", brand: "wos", featured: true, img: "img/digit-wand.webp",
