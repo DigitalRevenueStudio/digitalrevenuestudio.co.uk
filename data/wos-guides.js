@@ -31,8 +31,8 @@ window.WOS_GUIDES = [
   "s": "Beginner guides"
  },
  {
-  "t": "Server Timeline: What Unlocks and When",
-  "d": "Every unlock by day: hero generations, pets, experts, War Academy and Furnace milestones, with F2P strategy for each stage.",
+  "t": "Server Timeline: Approximate Unlocks by State Age",
+  "d": "Roughly when hero generations, pets and systems arrive by state age. Ranges, where sources disagree, and how to estimate your own.",
   "u": "/wos-guide-server-timeline",
   "s": "Beginner guides"
  },
@@ -44,7 +44,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Crazy Joe",
-  "d": "Troop strategy, hero setup, wave breakdown and how to maximise your alliance score as F2P.",
+  "d": "The 20 waves, who to reinforce with, how scoring works and why peace shields do not help.",
   "u": "/wos-guide-crazy-joe",
   "s": "Event guides"
  },
@@ -68,7 +68,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Hall of Chiefs",
-  "d": "A day by day schedule for all six days: what to save, what to spend and how to reach the milestone rewards.",
+  "d": "What scores on each day in the Generation 1 and Generation 2 editions, and what to save before you spend.",
   "u": "/wos-guide-hall-of-chiefs",
   "s": "Event guides"
  },
