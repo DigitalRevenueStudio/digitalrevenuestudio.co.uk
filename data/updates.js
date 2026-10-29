@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-29", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
+      title: "New guides: Drill Camp and Hero XP",
+      text: "How the Drill Camp shares levels from your five instructors, what a Level Reset does, where Hero XP comes from and how to stop spreading it too thin. Both are marked as review in progress.",
+      url: "/wos-guide-drill-camp", cta: "Read the Drill Camp guide" },
+
     { date: "2026-10-29", brand: "wos", featured: true, studio: true, tag: "Wiki update", img: "img/digit-clipboard.webp",
       title: "Wiki accuracy review: guides rebuilt and re-checked",
       text: "More than a dozen guides have been rebuilt from what several published guides agree on, with unconfirmed points marked and reviewer checks still in progress. Check your own in-game screens before you spend.",

@@ -133,6 +133,18 @@ window.WOS_GUIDES = [
   "s": "Heroes, pets and troops"
  },
  {
+  "t": "Drill Camp",
+  "d": "How instructors set the level of slotted heroes, who to slot, what a Level Reset does and how the cooldowns work.",
+  "u": "/wos-guide-drill-camp",
+  "s": "Heroes, pets and troops"
+ },
+ {
+  "t": "Hero XP",
+  "d": "What Hero XP is, where it comes from, Exploration and Intel tips, what players say about the shops and how the Drill Camp helps.",
+  "u": "/wos-guide-hero-xp",
+  "s": "Heroes, pets and troops"
+ },
+ {
   "t": "Resource Management",
   "d": "The four resources, coal and the Furnace, offline gathering, which heroes boost each resource and how to protect your stockpile.",
   "u": "/wos-guide-resource-management",
