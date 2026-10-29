@@ -170,7 +170,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "SvS Matchmaking Cheat Sheet",
-  "d": "Community tactics for reducing state power before the matchmaking window.",
+  "d": "Unconfirmed community tactics for lowering state power before matchmaking, with costs and caveats.",
   "u": "/wos-matchmaking-cheatsheet",
   "s": "Alliance tools"
  },
