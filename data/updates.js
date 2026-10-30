@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-30", brand: "wos", featured: true,
+      title: "Gift code labels made clearer",
+      text: "Every code on the tracker now shows whether it is verified active, reported active, reported expired or expired, so you can see how sure we are. The Labyrinth unlock timing wording has also been tightened.",
+      url: "/wos-wiki-gift-code-tracker", cta: "See the gift codes" },
+
     { date: "2026-10-29", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
       title: "New guides: Drill Camp and Hero XP",
       text: "How the Drill Camp shares levels from your five instructors, what a Level Reset does, where Hero XP comes from and how to stop spreading it too thin. Both are marked as review in progress.",
