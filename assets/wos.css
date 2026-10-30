@@ -293,3 +293,19 @@ body.wiki .cta{background:linear-gradient(120deg,#0a1f35,#15355a);border:2px sol
 @media (max-width:640px){.gbody [style*="1fr 100px 100px 100px"]{grid-template-columns:1fr 68px 68px 68px!important}.gbody [style*="1fr 100px 100px 100px"]>div{padding:8px 6px!important;font-size:.7rem!important}}
 .gbody .template-text{font-family:ui-monospace,Menlo,Consolas,monospace;background:#F4F8FB}
 .steps .step,.steps .step:first-child,.steps .step:last-child{border-radius:18px;border:2px solid #d9e6f1}.steps .step+.step{border-left:2px solid #d9e6f1}@media (max-width:900px){.steps .step:first-child,.steps .step:last-child{border-radius:18px}}
+
+/* hub and process pages: readable text blocks (moved here so every wiki page gets them) */
+.hubtext{max-width:800px}.hubtext p{margin:0 0 14px;line-height:1.7}.hubtext h3{font-size:1.2rem;margin:26px 0 8px}.hubtext a{text-decoration:underline;text-underline-offset:2px}
+.steps.s2{grid-template-columns:repeat(2,minmax(0,1fr))}@media (max-width:900px){.steps.s2{grid-template-columns:1fr}}
+/* checks and corrections log */
+.logtab{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:2px solid #d9e6f1;border-radius:14px;overflow:hidden;margin:0 0 8px}
+.logtab th{text-align:left;font:700 .7rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#46647f;background:#EEF3F7;padding:11px 14px}
+.logtab td{padding:13px 14px;border-top:1px solid #e3edf5;vertical-align:top;font-size:.95rem;line-height:1.55}
+.logtab td.d{white-space:nowrap;font-weight:700;color:#1F6BA8;width:1%}
+.logtab td.g{font-weight:700;width:18%}
+.logtab tr:nth-child(even) td{background:#FAFCFE}
+.logtab .log-note{display:block;margin-top:4px;font-size:.86rem;color:#5b7389}
+@media (max-width:760px){.logtab,.logtab tbody,.logtab tr,.logtab td{display:block;width:100%}.logtab thead{display:none}.logtab tr{border-top:1px solid #e3edf5;padding:6px 0}.logtab tr:first-child{border-top:0}.logtab td{border-top:0;padding:4px 14px}.logtab td.d,.logtab td.g{width:100%;white-space:normal}.logtab td[data-l]::before{content:attr(data-l);display:block;font:700 .64rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#7a92a8;margin-bottom:1px}}
+.openlist{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:800px}
+.openlist li{background:#fff;border:2px solid #d9e6f1;border-radius:14px;padding:14px 18px;line-height:1.6}
+.openlist li strong{display:block;margin-bottom:2px}
