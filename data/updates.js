@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-10-30", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
+      title: "What we checked and when",
+      text: "A new page records what we have confirmed on our own screens, what we corrected after checking and what is still open. The Crazy Joe and War Academy guides have been updated to match.",
+      url: "/wos-checks-and-corrections", cta: "See the record" },
+
     { date: "2026-10-30", brand: "wos", featured: true,
       title: "Gift code labels made clearer",
       text: "Every code on the tracker now shows whether it is verified active, reported active, reported expired or expired, so you can see how sure we are. The Labyrinth unlock timing wording has also been tightened.",
