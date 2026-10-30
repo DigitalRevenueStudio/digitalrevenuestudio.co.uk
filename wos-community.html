@@ -49,8 +49,9 @@
 <div><label for="f-type">Feedback type</label><select id="f-type" required><option value="">Select a type...</option><option value="Error or incorrect info">Error or incorrect info</option><option value="Missing content or guide">Missing content or guide</option><option value="Outdated information">Outdated information</option><option value="New guide suggestion">New guide suggestion</option><option value="General feedback">General feedback</option></select></div></div>
 <div><label for="f-page">Which guide or page? (optional)</label><input type="text" id="f-page" placeholder="For example: Bear Hunt, Hero Priority Guide, Gift Code Tracker"></div>
 <div><label for="f-message">Your feedback</label><textarea id="f-message" required placeholder="Describe the error, what it should say, or what you would like to see added..."></textarea></div>
+<div><label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font:400 .92rem/1.5 var(--f-body);color:#25445f;cursor:pointer" for="f-credit"><input type="checkbox" id="f-credit" style="width:auto;margin-top:4px;flex:none"><span>Credit me on the site. If my feedback leads to a change, you may add my name to the credits at the foot of that guide, next to the community reviewers, and to the checks and corrections page, using the name above. Leave this unticked and we will not name you.</span></label></div>
 <div><button class="btn btn-ice-solid" type="submit">Send feedback <span class="arrow">&rarr;</span></button></div>
-<p class="disc">Submitting opens your email app with the message ready to send. We only use your feedback to improve the wiki.</p>
+<p class="disc">Submitting opens your email app with the message ready to send. We only use your feedback to improve the wiki, and we only name you publicly if you tick the credit box.</p>
 </form>
 <div class="cok" id="success-msg">Thanks. Your email is ready to send, and once it arrives we will review it. Most corrections go live within 24 hours.</div></div>
 <div class="panel"><div class="eyebrow">How we handle feedback</div><h2>Every message is read</h2>
@@ -64,7 +65,7 @@
 <script>
 function wosSubmit(e){e.preventDefault();var g=function(i){return document.getElementById(i).value};var type=g('f-type'),msg=g('f-message');if(!type||!msg)return false;
 var sub=encodeURIComponent('WOS Wiki Feedback: '+type);
-var body=encodeURIComponent('Feedback type: '+type+'\nName or username: '+(g('f-name')||'Anonymous')+'\nPage or guide: '+(g('f-page')||'Not specified')+'\n\nFeedback:\n'+msg);
+var body=encodeURIComponent('Feedback type: '+type+'\nName or username: '+(g('f-name')||'Anonymous')+'\nCredit on the site: '+(document.getElementById('f-credit').checked?(g('f-name')?'Yes, I agree to be named as given above':'Yes, but no name given'):'No, please do not name me')+'\nPage or guide: '+(g('f-page')||'Not specified')+'\n\nFeedback:\n'+msg);
 if(typeof window.gtag==='function'){try{window.gtag('event','submit_feedback',{feedback_type:type})}catch(x){}}
 window.location.href='mailto:info@digitalrevenuestudio.co.uk?subject='+sub+'&body='+body;
 document.getElementById('feedback-form').style.display='none';document.getElementById('success-msg').style.display='block';return false;}
