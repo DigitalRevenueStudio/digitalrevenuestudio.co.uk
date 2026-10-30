@@ -104,7 +104,7 @@ window.WOS_GUIDES = [
  },
  {
   "t": "Hero Guide by Generation",
-  "d": "Who to build at Gen 1 through Gen 6+, Gold Shard targets and the 50-0-50 path.",
+  "d": "Every generation from Gen 1 to Gen 18: who to build, star targets for every budget and a guide for each hero.",
   "u": "/wos-guide-hero-generations",
   "s": "Heroes, pets and troops"
  },
