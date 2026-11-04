@@ -189,7 +189,12 @@ window.DRS = {
     { date: "2026-10", brand: "ma", featured: true,
       title: "Where is Maverick? sells outside the UK",
       text: "Every copy had gone to a UK reader until now. The first order from further afield is a small milestone worth marking.",
-      url: "/drs-blog-11-ma-international", cta: "Read the story" }
+      url: "/drs-blog-11-ma-international", cta: "Read the story" },
+
+    { date: "2026-11", brand: "ma", featured: true,
+      title: "Maverick's Big Colouring Adventure is out now",
+      text: "A new colouring book for ages 2 to 6, with 25 pictures, big pages and blank backs so markers never bleed through. A stocking filler for little artists.",
+      url: "/drs-brand-ma#colouring-book", cta: "See the book" }
   ],
 
   /* Evergreen blog picks (no longer shown on the Home page; kept for any page that uses a data-posts list). */
