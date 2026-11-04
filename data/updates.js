@@ -31,6 +31,16 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-11-04", brand: "wos", featured: true,
+      title: "New gift code: WOS1104",
+      text: "5 x 100 Gems, a 3-day frame, 2 x 100 VIP XP and 10 x 5-minute Speedups.",
+      url: "/wos-wiki-gift-code-tracker", cta: "Get the gift codes" },
+
+    { date: "2026-10-31", brand: "wos", featured: true,
+      title: "New gift code: SpookySeason26",
+      text: "1K Gems, 10 x 10 Chief Stamina, 2 x 100 Enhancement XP, 10 x 5-minute Speedups, Design Plans and a Charm Design.",
+      url: "/wos-wiki-gift-code-tracker", cta: "Get the gift codes" },
+
     { date: "2026-10-30", brand: "wos", featured: true, img: "img/digit-clipboard.webp",
       title: "What we checked and when",
       text: "A new page records what we have confirmed on our own screens, what we corrected after checking and what is still open. The Crazy Joe and War Academy guides have been updated to match.",
