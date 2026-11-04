@@ -68,3 +68,8 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /drs-ma-case-study.html /drs-case-study-ma 301
 # The two KDP FAQ pages were merged into one
 /drs-faq-kdp.html /faq-kdp 301
+# Vanity links for the gift code tracker (printed on social graphics and video)
+/drs-wos-wiki/gift-codes /wos-wiki-gift-code-tracker 301
+/drs-wos-wiki/gift-codes/ /wos-wiki-gift-code-tracker 301
+/gift-codes /wos-wiki-gift-code-tracker 301
+/gift-codes/ /wos-wiki-gift-code-tracker 301
