@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-11-09", brand: "wos", featured: true,
+      title: "New gift code: Diwali",
+      text: "1K Gems, 1 Gold Key, 2 Silver Keys, 2 x 100 VIP Points and 5 x 10 Chief Stamina. The code is case sensitive and expires on 9 December 2026.",
+      url: "/wos-wiki-gift-code-tracker", cta: "Get the gift codes" },
+
     { date: "2026-11-04", brand: "wos", featured: true,
       title: "New gift code: WOS1104",
       text: "5 x 100 Gems, a 3-day frame, 2 x 100 VIP XP and 10 x 5-minute Speedups.",
