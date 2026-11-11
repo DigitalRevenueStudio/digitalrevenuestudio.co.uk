@@ -144,8 +144,8 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 # Knowledge Hub articles (11 Nov 2026): blog addresses now use article- names
 /drs-blog-01-tool-stack /article-free-tool-stack 301
 /drs-blog-01-tool-stack.html /article-free-tool-stack 301
-/drs-blog-02-ma-build /article-launching-a-childrens-book-on-kdp 301
-/drs-blog-02-ma-build.html /article-launching-a-childrens-book-on-kdp 301
+/drs-blog-02-ma-build /faq-mavericks-adventures 301
+/drs-blog-02-ma-build.html /faq-mavericks-adventures 301
 /drs-blog-03-wos-build /article-how-we-built-a-gaming-wiki 301
 /drs-blog-03-wos-build.html /article-how-we-built-a-gaming-wiki 301
 /drs-blog-10-wos-pivot /article-how-we-built-a-gaming-wiki 301
@@ -164,9 +164,17 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /drs-blog-09-how-to-sell-digital-products.html /article-how-to-sell-digital-products 301
 /drs-blog-11-ma-international /drs-case-study-ma 301
 /drs-blog-11-ma-international.html /drs-case-study-ma 301
-/drs-blog-12-tlc-launch /article-tlc-book-launch 301
-/drs-blog-12-tlc-launch.html /article-tlc-book-launch 301
-/drs-blog-13-fathom-guides-launch /article-fathom-guides-launch 301
-/drs-blog-13-fathom-guides-launch.html /article-fathom-guides-launch 301
+/drs-blog-12-tlc-launch /faq-tactical-leadership-companion 301
+/drs-blog-12-tlc-launch.html /faq-tactical-leadership-companion 301
+/drs-blog-13-fathom-guides-launch /faq-fathom-guides 301
+/drs-blog-13-fathom-guides-launch.html /faq-fathom-guides 301
 /drs-blog /knowledge-hub 301
 /drs-blog.html /knowledge-hub 301
+
+# Knowledge Hub restructure (Stage 46): legacy launch posts folded into FAQ pages
+/article-tlc-book-launch /faq-tactical-leadership-companion 301
+/article-tlc-book-launch.html /faq-tactical-leadership-companion 301
+/article-launching-a-childrens-book-on-kdp /faq-mavericks-adventures 301
+/article-launching-a-childrens-book-on-kdp.html /faq-mavericks-adventures 301
+/article-fathom-guides-launch /faq-fathom-guides 301
+/article-fathom-guides-launch.html /faq-fathom-guides 301
