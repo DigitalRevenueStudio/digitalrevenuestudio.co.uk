@@ -777,3 +777,9 @@ body.b-ac main .cs-band{border:1px solid rgba(232,103,43,.35)}
 .nbox-foot{margin:14px 2px 0;font-size:.92rem;color:var(--muted)}
 .nbox-foot a{color:var(--g1);font-weight:700}
 @media (max-width:760px){.slide.has-img{display:flex}.slide .pic{display:none}}
+
+/* Knowledge Hub nav label (11 Nov 2026): keep nav items on one line between tablet and wide desktop */
+.nav a.navlink{white-space:nowrap}
+.nav .btn{white-space:nowrap}
+@media (min-width:1001px) and (max-width:1240px){.nav a.navlink{padding:9px 8px;letter-spacing:.06em}}
+@media (min-width:1001px) and (max-width:1120px){.nav a.navlink{padding:9px 5px;font-size:.72rem;letter-spacing:.04em}.nav .btn{padding-left:12px;padding-right:12px}.brand b{font-size:.92rem;letter-spacing:.1em}.brand small{letter-spacing:.2em}}
