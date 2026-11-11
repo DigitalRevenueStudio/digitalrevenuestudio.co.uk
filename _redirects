@@ -39,17 +39,17 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /wos-wiki-guide-svs-prep.html /wos-guide-svs-prep 301
 
 # ── Old DRS blog slugs (Blogger era) → current slugs ───────────
-/drs-blog-1-kdp-blogger.html /drs-blog-01-tool-stack 301
+/drs-blog-1-kdp-blogger.html /article-free-tool-stack 301
 /drs-blog-2-ai-prompts-income.html /drs-prompt-studio 301
-/drs-blog-3-pure-pet-food-review.html /drs-blog-05-pure-pet-food 301
-/drs-blog-4-overview-blogger.html /drs-blog-04-exp-case-study 301
-/drs-blog-5-sender-review-blogger.html /drs-blog-07-sender-review 301
-/drs-blog-6-payhip-review.html /drs-blog-08-payhip-review 301
-/drs-blog-7-council-tax.html /drs-blog 301
+/drs-blog-3-pure-pet-food-review.html /article-pure-pet-food-review 301
+/drs-blog-4-overview-blogger.html /drs-case-study-exp 301
+/drs-blog-5-sender-review-blogger.html /article-sender-review 301
+/drs-blog-6-payhip-review.html /article-payhip-review 301
+/drs-blog-7-council-tax.html /knowledge-hub 301
 
 # ── Missing/renamed pages → best current destination ───────────
 /drs-experiments.html /portfolio 301
-/drs-blog-07-kdp.html /drs-blog 301
+/drs-blog-07-kdp.html /knowledge-hub 301
 
 # ── Old cheatsheet slug ─────────────────────────────────────────
 /wos-svs-cheatsheet.html /wos-svs-prep-cheatsheet 301
@@ -82,10 +82,10 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 # Search Console 404 fixes (11 Nov 2026): old addresses with no redirect
 /wos-blog /wos-news 301
 /drs-ma-case-study /drs-case-study-ma 301
-/drs-blog-04-sender-review.html /drs-blog-07-sender-review 301
-/drs-blog-04-sender-review /drs-blog-07-sender-review 301
-/drs-blog-05-payhip-review.html /drs-blog-08-payhip-review 301
-/drs-blog-05-payhip-review /drs-blog-08-payhip-review 301
+/drs-blog-04-sender-review.html /article-sender-review 301
+/drs-blog-04-sender-review /article-sender-review 301
+/drs-blog-05-payhip-review.html /article-payhip-review 301
+/drs-blog-05-payhip-review /article-payhip-review 301
 /drs-blog-02-ai-prompts-income.html /drs-prompt-studio 301
 /drs-blog-02-ai-prompts-income /drs-prompt-studio 301
 /drs-blog-09-car-finance.html /drs-template-car-finance 301
@@ -128,15 +128,45 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /wos-wiki-guide-snowbusters /wos-guide-snowbusters 301
 /wos-wiki-guide-speedups /wos-guide-speedups 301
 /wos-wiki-guide-svs-prep /wos-guide-svs-prep 301
-/drs-blog-1-kdp-blogger /drs-blog-01-tool-stack 301
+/drs-blog-1-kdp-blogger /article-free-tool-stack 301
 /drs-blog-2-ai-prompts-income /drs-prompt-studio 301
-/drs-blog-3-pure-pet-food-review /drs-blog-05-pure-pet-food 301
-/drs-blog-4-overview-blogger /drs-blog-04-exp-case-study 301
-/drs-blog-5-sender-review-blogger /drs-blog-07-sender-review 301
-/drs-blog-6-payhip-review /drs-blog-08-payhip-review 301
-/drs-blog-7-council-tax /drs-blog 301
+/drs-blog-3-pure-pet-food-review /article-pure-pet-food-review 301
+/drs-blog-4-overview-blogger /drs-case-study-exp 301
+/drs-blog-5-sender-review-blogger /article-sender-review 301
+/drs-blog-6-payhip-review /article-payhip-review 301
+/drs-blog-7-council-tax /knowledge-hub 301
 /drs-experiments /portfolio 301
-/drs-blog-07-kdp /drs-blog 301
+/drs-blog-07-kdp /knowledge-hub 301
 /wos-free-guide-landing /drs-wos-wiki 301
 /wos-guide-about /drs-wos-wiki 301
 /drs-faq-kdp /faq-kdp 301
+
+# Knowledge Hub articles (11 Nov 2026): blog addresses now use article- names
+/drs-blog-01-tool-stack /article-free-tool-stack 301
+/drs-blog-01-tool-stack.html /article-free-tool-stack 301
+/drs-blog-02-ma-build /article-launching-a-childrens-book-on-kdp 301
+/drs-blog-02-ma-build.html /article-launching-a-childrens-book-on-kdp 301
+/drs-blog-03-wos-build /article-how-we-built-a-gaming-wiki 301
+/drs-blog-03-wos-build.html /article-how-we-built-a-gaming-wiki 301
+/drs-blog-10-wos-pivot /article-how-we-built-a-gaming-wiki 301
+/drs-blog-10-wos-pivot.html /article-how-we-built-a-gaming-wiki 301
+/drs-blog-04-exp-case-study /drs-case-study-exp 301
+/drs-blog-04-exp-case-study.html /drs-case-study-exp 301
+/drs-blog-05-pure-pet-food /article-pure-pet-food-review 301
+/drs-blog-05-pure-pet-food.html /article-pure-pet-food-review 301
+/drs-blog-06-kdp /article-amazon-kdp-review 301
+/drs-blog-06-kdp.html /article-amazon-kdp-review 301
+/drs-blog-07-sender-review /article-sender-review 301
+/drs-blog-07-sender-review.html /article-sender-review 301
+/drs-blog-08-payhip-review /article-payhip-review 301
+/drs-blog-08-payhip-review.html /article-payhip-review 301
+/drs-blog-09-how-to-sell-digital-products /article-how-to-sell-digital-products 301
+/drs-blog-09-how-to-sell-digital-products.html /article-how-to-sell-digital-products 301
+/drs-blog-11-ma-international /drs-case-study-ma 301
+/drs-blog-11-ma-international.html /drs-case-study-ma 301
+/drs-blog-12-tlc-launch /article-tlc-book-launch 301
+/drs-blog-12-tlc-launch.html /article-tlc-book-launch 301
+/drs-blog-13-fathom-guides-launch /article-fathom-guides-launch 301
+/drs-blog-13-fathom-guides-launch.html /article-fathom-guides-launch 301
+/drs-blog /knowledge-hub 301
+/drs-blog.html /knowledge-hub 301

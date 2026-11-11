@@ -52,7 +52,7 @@
     if (/^wos-guide-/.test(p)) { return 'WOS guide'; }
     if (/^wos-blog-|^wos-news/.test(p)) { return 'WOS news'; }
     if (/^wos-/.test(p) || p === 'drs-wos-wiki') { return 'WOS wiki'; }
-    if (/^drs-blog/.test(p)) { return 'DRS blog'; }
+    if (/^article-|^knowledge-hub|^drs-blog/.test(p)) { return 'Knowledge Hub'; }
     if (/^drs-case-study|^portfolio|^drs-brand/.test(p)) { return 'Portfolio'; }
     if (/^drs-shop/.test(p)) { return 'Shop'; }
     if (/^faq|^cdm|^drs-cdm/.test(p)) { return 'Tools and FAQ'; }
