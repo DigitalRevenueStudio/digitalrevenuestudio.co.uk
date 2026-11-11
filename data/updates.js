@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-11-11", brand: "fathom", featured: true,
+      title: "Fathom Guides adds Fortnite",
+      text: "Three new Fortnite guides: From First Drop to Victory Royale (£3.99), Building and Editing Fundamentals (£1.99) and a free Treasure Hunters guide to the Pirate Shop token and Sprites.",
+      url: "/drs-brand-fathom", cta: "See the guides" },
+
     { date: "2026-11-09", brand: "wos", featured: true,
       title: "New gift code: Diwali",
       text: "1K Gems, 1 Gold Key, 2 Silver Keys, 2 x 100 VIP Points and 5 x 10 Chief Stamina. The code is case sensitive and expires on 9 December 2026.",
