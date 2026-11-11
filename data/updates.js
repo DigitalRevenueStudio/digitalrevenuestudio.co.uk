@@ -194,7 +194,7 @@ window.DRS = {
     { date: "2026-10", brand: "ac", featured: true,
       title: "Tactical Leadership Companion is published",
       text: "Atker's first book is live in hardback, Kindle and a printable edition, with the branding and delivery built through DRS.",
-      url: "/article-tlc-book-launch", cta: "Read the story" },
+      url: "/faq-tactical-leadership-companion", cta: "Read the book FAQ" },
 
     { date: "2026-10", brand: "ma", featured: true,
       title: "Where is Maverick? sells outside the UK",
