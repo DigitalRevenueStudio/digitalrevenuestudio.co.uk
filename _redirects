@@ -40,7 +40,7 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 
 # ── Old DRS blog slugs (Blogger era) → current slugs ───────────
 /drs-blog-1-kdp-blogger.html /drs-blog-01-tool-stack 301
-/drs-blog-2-ai-prompts-income.html /drs-blog-02-ma-build 301
+/drs-blog-2-ai-prompts-income.html /drs-prompt-studio 301
 /drs-blog-3-pure-pet-food-review.html /drs-blog-05-pure-pet-food 301
 /drs-blog-4-overview-blogger.html /drs-blog-04-exp-case-study 301
 /drs-blog-5-sender-review-blogger.html /drs-blog-07-sender-review 301
@@ -78,3 +78,65 @@ https://digitalrevenuestudio.co.uk/* https://www.digitalrevenuestudio.co.uk/:spl
 /drs-affiliates-petcare /drs-brand-ma#approves 301
 /drs-affiliates-books /drs-brand-ma#approves 301
 /drs-affiliates-health /drs-shop 301
+
+# Search Console 404 fixes (11 Nov 2026): old addresses with no redirect
+/wos-blog /wos-news 301
+/drs-ma-case-study /drs-case-study-ma 301
+/drs-blog-04-sender-review.html /drs-blog-07-sender-review 301
+/drs-blog-04-sender-review /drs-blog-07-sender-review 301
+/drs-blog-05-payhip-review.html /drs-blog-08-payhip-review 301
+/drs-blog-05-payhip-review /drs-blog-08-payhip-review 301
+/drs-blog-02-ai-prompts-income.html /drs-prompt-studio 301
+/drs-blog-02-ai-prompts-income /drs-prompt-studio 301
+/drs-blog-09-car-finance.html /drs-template-car-finance 301
+/drs-blog-09-car-finance /drs-template-car-finance 301
+/drs-blog-10-car-finance-dca.html /drs-template-car-finance 301
+/drs-blog-10-car-finance-dca /drs-template-car-finance 301
+/case-studies.html /portfolio 301
+/case-studies /portfolio 301
+/services.html /drs-services 301
+/services /drs-services 301
+/about.html /drs-about 301
+/about /drs-about 301
+/shop.html /drs-shop 301
+/shop /drs-shop 301
+/signup.html /drs-signup 301
+/signup /drs-signup 301
+# Extensionless versions of the older .html redirects above (Cloudflare matches the exact path only)
+/wos-blog-1-early-mistakes /wos-guide-early-mistakes 301
+/wos-blog-2-f2p-vs-spender /wos-guide-f2p-vs-spender 301
+/wos-blog-3-guide-launch /drs-wos-wiki 301
+/wos-blog-4-bear-hunt /wos-guide-bear-hunt 301
+/wos-blog-5-event-token-redemption-blogger /wos-guide-event-tokens 301
+/wos-blog-6-auto-redemption /wos-guide-auto-redemption 301
+/wos-blog-7-wiki-announcement /wos-guide-wiki-announcement 301
+/wos-blog-8-frostfire-mine /wos-guide-frostfire-mine 301
+/wos-blog-9-svs-prep /wos-guide-svs-prep 301
+/wos-wiki-guide-alliance-tips /wos-guide-alliance-tips 301
+/wos-wiki-guide-bear-hunt /wos-guide-bear-hunt 301
+/wos-wiki-guide-crazy-joe /wos-guide-crazy-joe 301
+/wos-wiki-guide-early-mistakes /wos-guide-early-mistakes 301
+/wos-wiki-guide-event-tokens /wos-guide-event-tokens 301
+/wos-wiki-guide-f2p-vs-spender /wos-guide-f2p-vs-spender 301
+/wos-wiki-guide-first-7-days /wos-guide-first-7-days 301
+/wos-wiki-guide-frostfire-mine /wos-guide-frostfire-mine 301
+/wos-wiki-guide-hall-of-chiefs /wos-guide-hall-of-chiefs 301
+/wos-wiki-guide-hero-priority /wos-guide-hero-priority 301
+/wos-wiki-guide-labyrinth /wos-guide-labyrinth 301
+/wos-wiki-guide-polar-terror /wos-guide-polar-terror 301
+/wos-wiki-guide-resource-management /wos-guide-resource-management 301
+/wos-wiki-guide-snowbusters /wos-guide-snowbusters 301
+/wos-wiki-guide-speedups /wos-guide-speedups 301
+/wos-wiki-guide-svs-prep /wos-guide-svs-prep 301
+/drs-blog-1-kdp-blogger /drs-blog-01-tool-stack 301
+/drs-blog-2-ai-prompts-income /drs-prompt-studio 301
+/drs-blog-3-pure-pet-food-review /drs-blog-05-pure-pet-food 301
+/drs-blog-4-overview-blogger /drs-blog-04-exp-case-study 301
+/drs-blog-5-sender-review-blogger /drs-blog-07-sender-review 301
+/drs-blog-6-payhip-review /drs-blog-08-payhip-review 301
+/drs-blog-7-council-tax /drs-blog 301
+/drs-experiments /portfolio 301
+/drs-blog-07-kdp /drs-blog 301
+/wos-free-guide-landing /drs-wos-wiki 301
+/wos-guide-about /drs-wos-wiki 301
+/drs-faq-kdp /faq-kdp 301
