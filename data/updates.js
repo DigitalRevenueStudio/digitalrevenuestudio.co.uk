@@ -189,12 +189,17 @@ window.DRS = {
     { date: "2026-10", brand: "ac", featured: true,
       title: "Tactical Leadership Companion is published",
       text: "Atker's first book is live in hardback, Kindle and a printable edition, with the branding and delivery built through DRS.",
-      url: "/drs-blog-12-tlc-launch", cta: "Read the story" },
+      url: "/article-tlc-book-launch", cta: "Read the story" },
 
     { date: "2026-10", brand: "ma", featured: true,
       title: "Where is Maverick? sells outside the UK",
-      text: "Every copy had gone to a UK reader until now. The first order from further afield is a small milestone worth marking.",
-      url: "/drs-blog-11-ma-international", cta: "Read the story" },
+      text: "Every copy had gone to a UK reader until October 2026, when the first order came from another Amazon marketplace. One sale, but the first sign the listing can find readers on its own. Book 2 is in development.",
+      url: "/drs-case-study-ma", cta: "See the case study" },
+
+    { date: "2026-03", brand: "die",
+      title: "The Digital Income Experiment goes live",
+      text: "We built the brand, the website, the email sign-up and the first articles for an honest income experiment log: real numbers, including the zeros. Its council tax guide became one of the most useful things we have published.",
+      url: "/drs-template-council-tax", cta: "Read the council tax story" },
 
     { date: "2026-11", brand: "ma", featured: true,
       title: "Maverick's Big Colouring Adventure is out now",
@@ -202,16 +207,16 @@ window.DRS = {
       url: "/drs-brand-ma#colouring-book", cta: "See the book" }
   ],
 
-  /* Evergreen blog picks (no longer shown on the Home page; kept for any page that uses a data-posts list). */
+  /* Evergreen article picks (no longer shown on the Home page; kept for any page that uses a data-posts list). */
   posts: [
     { label: "Studio guide", title: "The free tool stack we use to build digital brands",
       text: "Every tool we use across our brands, all free or freemium, and what each one is for.",
-      url: "/drs-blog-01-tool-stack" },
-    { label: "Case study", title: "How one Reddit post became a 323,000-view gaming wiki",
-      text: "From zero presence to a growing free-to-play wiki, built on free tools by listening to what players asked for.",
-      url: "/drs-blog-03-wos-build" },
+      url: "/article-free-tool-stack" },
+    { label: "Case study", title: "How we built a free gaming wiki from one Reddit comment",
+      text: "The story of the Whiteout Survival wiki and practical lessons for building a gaming wiki of your own.",
+      url: "/article-how-we-built-a-gaming-wiki" },
     { label: "Guide", title: "How to sell digital products online: a step-by-step guide",
       text: "From choosing your product to making your first sale, the process we followed.",
-      url: "/drs-blog-09-how-to-sell-digital-products" }
+      url: "/article-how-to-sell-digital-products" }
   ]
 };

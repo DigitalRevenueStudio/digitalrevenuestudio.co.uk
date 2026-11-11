@@ -59,7 +59,7 @@ window.DRS_LINKS = {
     codes:     "/wos-wiki-gift-code-tracker",
     services:  "/drs-services",
     signup:    "/drs-signup",
-    blog:      "/drs-blog",
+    blog:      "/knowledge-hub",
     portfolio: "/portfolio",
     social: {
       instagram: "https://www.instagram.com/digital.revenuestudio/",
