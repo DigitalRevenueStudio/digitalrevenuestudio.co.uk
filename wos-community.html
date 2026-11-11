@@ -45,11 +45,11 @@
 <section class="s" id="feedback" style="padding-top:0"><div class="wrap"><div class="duo">
 <div class="panel"><div class="eyebrow">Submit a correction or suggestion</div><h2>Tell us what you think</h2><p>Flag an error, suggest a missing topic or send general feedback. Your message goes straight to the wiki team by email, so nothing is stored on this site.</p>
 <form class="cform" id="feedback-form" onsubmit="return wosSubmit(event)">
-<div class="row2"><div><label for="f-name">Your name (optional)</label><input type="text" id="f-name" placeholder="Chief name or Reddit username"></div>
+<div class="row2"><div><label for="f-name">How would you like to be credited? (optional)</label><input type="text" id="f-name" placeholder="For example your chief name, Reddit username or first name"></div>
 <div><label for="f-type">Feedback type</label><select id="f-type" required><option value="">Select a type...</option><option value="Error or incorrect info">Error or incorrect info</option><option value="Missing content or guide">Missing content or guide</option><option value="Outdated information">Outdated information</option><option value="New guide suggestion">New guide suggestion</option><option value="General feedback">General feedback</option></select></div></div>
 <div><label for="f-page">Which guide or page? (optional)</label><input type="text" id="f-page" placeholder="For example: Bear Hunt, Hero Priority Guide, Gift Code Tracker"></div>
 <div><label for="f-message">Your feedback</label><textarea id="f-message" required placeholder="Describe the error, what it should say, or what you would like to see added..."></textarea></div>
-<div><label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font:400 .92rem/1.5 var(--f-body);color:#25445f;cursor:pointer" for="f-credit"><input type="checkbox" id="f-credit" style="width:auto;margin-top:4px;flex:none"><span>Credit me on the site. If my feedback leads to a change, you may add my name to the credits at the foot of that guide, next to the community reviewers, and to the checks and corrections page, using the name above. Leave this unticked and we will not name you.</span></label></div>
+<div><label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font:400 .92rem/1.5 var(--f-body);color:#25445f;cursor:pointer" for="f-credit"><input type="checkbox" id="f-credit" style="width:auto;margin-top:4px;flex:none"><span>Credit me on the site. If my feedback leads to a change, you may add me to the credits at the foot of that guide, next to the community reviewers, and to the checks and corrections page, using the name I chose above (chief name, Reddit username, first name or anything else). Leave this unticked and we will not name you.</span></label></div>
 <div><button class="btn btn-ice-solid" type="submit">Send feedback <span class="arrow">&rarr;</span></button></div>
 <p class="disc">Submitting opens your email app with the message ready to send. We only use your feedback to improve the wiki, and we only name you publicly if you tick the credit box.</p>
 </form>
@@ -65,7 +65,7 @@
 <script>
 function wosSubmit(e){e.preventDefault();var g=function(i){return document.getElementById(i).value};var type=g('f-type'),msg=g('f-message');if(!type||!msg)return false;
 var sub=encodeURIComponent('WOS Wiki Feedback: '+type);
-var body=encodeURIComponent('Feedback type: '+type+'\nName or username: '+(g('f-name')||'Anonymous')+'\nCredit on the site: '+(document.getElementById('f-credit').checked?(g('f-name')?'Yes, I agree to be named as given above':'Yes, but no name given'):'No, please do not name me')+'\nPage or guide: '+(g('f-page')||'Not specified')+'\n\nFeedback:\n'+msg);
+var body=encodeURIComponent('Feedback type: '+type+'\nCredit me as: '+(g('f-name')||'Not given')+'\nCredit on the site: '+(document.getElementById('f-credit').checked?(g('f-name')?'Yes, I agree to be named as given above':'Yes, but no name given'):'No, please do not name me')+'\nPage or guide: '+(g('f-page')||'Not specified')+'\n\nFeedback:\n'+msg);
 if(typeof window.gtag==='function'){try{window.gtag('event','submit_feedback',{feedback_type:type})}catch(x){}}
 window.location.href='mailto:info@digitalrevenuestudio.co.uk?subject='+sub+'&body='+body;
 document.getElementById('feedback-form').style.display='none';document.getElementById('success-msg').style.display='block';return false;}
@@ -79,7 +79,7 @@ document.getElementById('feedback-form').style.display='none';document.getElemen
 <div class="cols">
 <div class="about"><a class="brand" href="index.html"><span class="av"><img src="img/digit-avatar.webp" alt="" width="54" height="54"></span><span><b>DIGITAL REVENUE STUDIO</b><small>IDEAS INTO ACTION</small></span></a>
 <p>A creator and brand studio. Branding, content, social presence, practical tools and AI know-how, for brands that deserve to be found.</p></div>
-<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="drs-blog.html">Knowledge Hub</a><a href="drs-contact.html">Contact</a></div>
+<div class="col"><h4>The Studio</h4><a href="drs-about.html">About</a><a href="drs-services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="drs-shop.html">Shop</a><a href="/knowledge-hub">Knowledge Hub</a><a href="drs-contact.html">Contact</a></div>
 <div class="col"><h4>Brands</h4><a href="drs-case-study-ma.html">Mavericks Adventures</a><a href="drs-case-study-wos.html">Whiteout Survival Wiki</a><a href="drs-case-study-fathom.html">Fathom Guides</a><a href="drs-case-study-ac.html">Atker Consultancy</a><a href="drs-case-study-exp.html">Digital Income Experiment</a></div>
 <div class="col"><h4>Resources</h4><a href="drs-wos-wiki.html">Whiteout Survival Wiki</a><a href="wos-wiki-gift-code-tracker.html">Gift code tracker</a><a href="drs-cdm-tool.html">CDM audit tool</a><a href="drs-signup.html">Follow the studio</a></div>
 </div>
