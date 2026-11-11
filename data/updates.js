@@ -81,6 +81,11 @@ window.DRS = {
       text: "The Experts guide now covers Gareth and Justus with a revised F2P order, the Labyrinth guide adds community feedback and alternative ratios, and the R4 templates gain Foundry and Canyon, Labyrinth, recruitment key and safety messages.",
       url: "/wos-guide-experts", cta: "See the Experts guide" },
 
+    { date: "2026-10-29", brand: "fathom", featured: true,
+      title: "Fathom Guides adds Brawl Stars",
+      text: "A Complete Player Guide (£3.99) updated for the 2026 changes, three add-ons at £1.99 (a trophy roadmap and two Brawler builds guides) and two free guides to get started.",
+      url: "/drs-brand-fathom", cta: "See the guides" },
+
     { date: "2026-10-28", brand: "drs", studio: true, tag: "New free tool", img: "img/digit-shop.webp",
       title: "DRS Prompt Studio Free is live",
       text: "Turn a task, an audience and a tone into a clear, copy-ready prompt for the AI assistant you already use. It runs in your browser, needs no sign-up and nothing is sent anywhere.",
