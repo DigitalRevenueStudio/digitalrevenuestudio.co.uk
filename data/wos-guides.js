@@ -31,6 +31,12 @@ window.WOS_GUIDES = [
   "s": "Beginner guides"
  },
  {
+  "t": "State Transfer: How to Move State",
+  "d": "When transfers open, who can move, how many Transfer Passes you need, when to leave your alliance and how to keep your resources.",
+  "u": "/wos-guide-state-transfer",
+  "s": "Strategy and progression"
+ },
+ {
   "t": "Server Timeline: Approximate Unlocks by State Age",
   "d": "Roughly when hero generations, pets and systems arrive by state age. Ranges, where sources disagree, and how to estimate your own.",
   "u": "/wos-guide-server-timeline",
