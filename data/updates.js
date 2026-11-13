@@ -33,7 +33,7 @@ window.DRS = {
   updates: [
     { date: "2026-11-13", brand: "wos", featured: true,
       title: "New guide: State Transfer",
-      text: "Written from our own transfer: when the event opens, who can move, how many Transfer Passes it costs, when to leave your alliance and how to keep your resources.",
+      text: "A step by step guide: when the event opens, who can move, how many Transfer Passes it costs, when to leave your alliance and how to keep your resources.",
       url: "/wos-guide-state-transfer", cta: "Read the guide" },
 
     { date: "2026-11-11", brand: "fathom", featured: true,
