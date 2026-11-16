@@ -31,6 +31,18 @@ window.WOS_GUIDES = [
   "s": "Beginner guides"
  },
  {
+  "t": "T12 Troops: Exalted Troops Explained",
+  "d": "What Exalted troops are, when Flame Tech unlocks, what the research needs and what T12 troops cost to train and heal.",
+  "u": "/wos-guide-t12-troops",
+  "s": "Heroes, pets and troops"
+ },
+ {
+  "t": "NAP Explained: Non-Aggression Pacts",
+  "d": "What NAP and NAP10 mean, what a Non-Aggression Pact usually covers, kill event exceptions and what to do if someone breaks it.",
+  "u": "/wos-guide-nap",
+  "s": "Strategy and progression"
+ },
+ {
   "t": "State Transfer: How to Move State",
   "d": "When transfers open, who can move, how many Transfer Passes you need, when to leave your alliance and how to keep your resources.",
   "u": "/wos-guide-state-transfer",
@@ -175,8 +187,8 @@ window.WOS_GUIDES = [
   "s": "Economy and rewards"
  },
  {
-  "t": "State vs State Prep",
-  "d": "What scores on each prep day, which speedups count when, what is known about matchmaking and a Day 3 top tip.",
+  "t": "SvS Explained and Prep",
+  "d": "How State vs State works: the four phases, prep win versus castle win, what scores each prep day, speedups, matchmaking and Field Triage.",
   "u": "/wos-guide-svs-prep",
   "s": "Strategy and progression"
  },

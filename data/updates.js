@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-11-15", brand: "wos", featured: true,
+      title: "New guides: T12 troops and NAP",
+      text: "Two new guides for the questions players search most: what T12 Exalted troops need and cost, and what NAP and NAP10 mean. The SvS guide now explains all four phases, and the beginner FAQ answers the end goal of the game.",
+      url: "/wos-guide-t12-troops", cta: "Read the guides" },
+
     { date: "2026-11-13", brand: "wos", featured: true,
       title: "New guide: State Transfer",
       text: "A step by step guide: when the event opens, who can move, how many Transfer Passes it costs, when to leave your alliance and how to keep your resources.",
