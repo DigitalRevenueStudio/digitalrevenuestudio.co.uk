@@ -25,6 +25,26 @@
 .helpbar h3{font-size:1.2rem;font-weight:700;letter-spacing:-.02em;margin:0 0 4px}
 .helpbar p{margin:0;color:var(--muted);max-width:40em}
 </style>
+<style>
+.pane .pbt{display:flex;flex-direction:column;gap:8px;align-self:flex-start}
+.pane .pbt .btn{margin:0;justify-content:center}
+.hr .cta-row.stack{flex-direction:column;align-items:flex-start;gap:12px}
+.hr .cta-row.stack .btn{min-width:290px;justify-content:center;margin:0}
+.btn-codes{background:#8cc3ec;color:#0a1f35}
+.btn-codes:hover{background:#a9d4f3}
+.dowrap .spotart{display:flex;flex-direction:column;align-items:center;gap:6px}
+.dowrap .spotart:before{top:42%}
+.spot{position:relative;z-index:1;display:block;width:min(100%,380px);background:#173d31;color:#f4f1e6;border:2px solid var(--gold);border-radius:20px;padding:22px 24px 20px;text-decoration:none;box-shadow:0 0 0 6px rgba(216,169,58,.14),0 18px 34px rgba(23,61,49,.28);transition:transform .15s ease,box-shadow .15s ease}
+.spot:hover{transform:translateY(-3px);box-shadow:0 0 0 6px rgba(216,169,58,.3),0 22px 40px rgba(23,61,49,.34)}
+.spot .sb{display:inline-block;background:var(--gold);color:#0a1f14;font-weight:800;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.spot .st{display:block;font-family:var(--f-head);font-weight:700;font-size:1.55rem;letter-spacing:-.02em;margin:10px 0 6px;color:#fff}
+.spot .sp{display:block;font-size:.95rem;line-height:1.5;color:rgba(244,241,230,.86)}
+.spot .sl2{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.spot .sl2 span{font-size:.72rem;font-weight:600;color:#e8c77a;border:1px solid rgba(232,199,122,.45);border-radius:999px;padding:3px 9px}
+.spot .sgo{display:inline-flex;gap:8px;align-items:center;margin-top:16px;background:var(--gold);color:#0a1f14;font-family:var(--f-head);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:11px 18px;border-radius:8px}
+.dowrap .spotart img{max-height:330px}
+@media(max-width:960px){.dowrap .spotart{order:0}.dowrap .spotart img{max-height:240px}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,7 +53,7 @@
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
 <nav class="nav" id="nav" aria-label="Main">
 <a class="navlink" href="/" aria-current="page">Home</a><a class="navlink" href="/drs-about">About</a><a class="navlink" href="/drs-services">Services</a><a class="navlink" href="/portfolio">Portfolio</a><a class="navlink" href="/drs-shop">Shop</a><a class="navlink" href="/knowledge-hub">Knowledge Hub</a>
-<a class="btn btn-gold btn-sm" href="/drs-signup" data-link="other.signup">Follow the studio</a>
+<a class="btn btn-gold btn-sm" href="/drs-free-tools" data-link="other.freetools">Free tools</a>
 </nav></div></header>
 <main id="main">
 <div class="hero">
@@ -47,7 +67,7 @@
 <div class="meet" data-tabs>
 <div class="meet-head"><span class="meet-label">Brands we have helped</span><span class="glance"><span><b>5</b>brands supported</span></span></div>
 <div class="tabs" role="tablist" aria-label="Brands"><button class="tab" role="tab" type="button" aria-selected="true" id="t-ma" aria-controls="p-ma"><i class="d-ma"></i><span>Mavericks Adventures</span><small>Children's books</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-wos" aria-controls="p-wos"><i class="d-wos"></i><span>Whiteout Survival Wiki</span><small>Gaming</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-fathom" aria-controls="p-fathom"><i class="d-fathom"></i><span>Fathom Guides</span><small>Game guides</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-ac" aria-controls="p-ac"><i class="d-ac"></i><span>Atker Consultancy</span><small>Construction tools</small></button><button class="tab" role="tab" type="button" aria-selected="false" id="t-die" aria-controls="p-die"><i class="d-die"></i><span>Digital Income Experiment</span><small>Income testing</small></button></div>
-<div class="pane" role="tabpanel" id="p-ma" aria-labelledby="t-ma"><p>A first-time author needed a book that looks and feels like a real brand. Branding, website and launch support got <i>Where is Maverick?</i> live on Amazon.</p><a class="btn btn-gold btn-sm" href="/drs-case-study-ma" data-link="brands.ma.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-wos" aria-labelledby="t-wos" hidden><p>Players had nowhere to find clear beginner guides. We built a free wiki with 25+ guides, a live gift code tracker and tools like the Hero Advisor.</p><a class="btn btn-gold btn-sm" href="/drs-case-study-wos" data-link="brands.wos.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-fathom" aria-labelledby="t-fathom" hidden><p>A new guide brand needed an identity and a way to reach players. We are its branding and content partner, launched October 2026.</p><a class="btn btn-gold btn-sm" href="/drs-case-study-fathom" data-link="brands.fathom.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-ac" aria-labelledby="t-ac" hidden><p>Construction teams needed practical NEC and CDM tools. We built and published them, plus the Tactical Leadership Companion.</p><a class="btn btn-gold btn-sm" href="/drs-case-study-ac" data-link="brands.ac.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div><div class="pane" role="tabpanel" id="p-die" aria-labelledby="t-die" hidden><p>Online income ideas rarely come with honest numbers. We test them in the open and publish the results, zeros included.</p><a class="btn btn-gold btn-sm" href="/drs-case-study-exp" data-link="brands.die.caseStudy">Read case study <span class=arrow>&rarr;</span></a></div>
+<div class="pane" role="tabpanel" id="p-ma" aria-labelledby="t-ma"><p>A first-time author needed a book that looks and feels like a real brand. Branding, website and launch support got <i>Where is Maverick?</i> live on Amazon.</p><div class="pbt"><a class="btn btn-gold btn-sm" href="/drs-case-study-ma" data-link="brands.ma.caseStudy">Read case study <span class=arrow>&rarr;</span></a><a class="btn btn-line-light btn-sm" href="/drs-signup" data-link="other.signup">Follow the studio</a></div></div><div class="pane" role="tabpanel" id="p-wos" aria-labelledby="t-wos" hidden><p>Players had nowhere to find clear beginner guides. We built a free wiki with 25+ guides, a live gift code tracker and tools like the Hero Advisor.</p><div class="pbt"><a class="btn btn-gold btn-sm" href="/drs-case-study-wos" data-link="brands.wos.caseStudy">Read case study <span class=arrow>&rarr;</span></a><a class="btn btn-line-light btn-sm" href="/drs-signup" data-link="other.signup">Follow the studio</a></div></div><div class="pane" role="tabpanel" id="p-fathom" aria-labelledby="t-fathom" hidden><p>A new guide brand needed an identity and a way to reach players. We are its branding and content partner, launched October 2026.</p><div class="pbt"><a class="btn btn-gold btn-sm" href="/drs-case-study-fathom" data-link="brands.fathom.caseStudy">Read case study <span class=arrow>&rarr;</span></a><a class="btn btn-line-light btn-sm" href="/drs-signup" data-link="other.signup">Follow the studio</a></div></div><div class="pane" role="tabpanel" id="p-ac" aria-labelledby="t-ac" hidden><p>Construction teams needed practical NEC and CDM tools. We built and published them, plus the Tactical Leadership Companion.</p><div class="pbt"><a class="btn btn-gold btn-sm" href="/drs-case-study-ac" data-link="brands.ac.caseStudy">Read case study <span class=arrow>&rarr;</span></a><a class="btn btn-line-light btn-sm" href="/drs-signup" data-link="other.signup">Follow the studio</a></div></div><div class="pane" role="tabpanel" id="p-die" aria-labelledby="t-die" hidden><p>Online income ideas rarely come with honest numbers. We test them in the open and publish the results, zeros included.</p><div class="pbt"><a class="btn btn-gold btn-sm" href="/drs-case-study-exp" data-link="brands.die.caseStudy">Read case study <span class=arrow>&rarr;</span></a><a class="btn btn-line-light btn-sm" href="/drs-signup" data-link="other.signup">Follow the studio</a></div></div>
 </div>
 </div>
 <aside class="hr" aria-label="Featured resource">
@@ -58,7 +78,7 @@
 <div class="wstats"><div><b>Free</b><span>Always</span></div><div><b>25+</b><span>Guides live</span></div></div>
 <h2 class="nu">News and updates</h2>
 <ul class="news dark-news" data-news data-brand="wos" data-limit="3" aria-label="Wiki news"></ul>
-<div class="cta-row"><a class="btn btn-gold" href="/drs-wos-wiki" data-link="other.wiki">Explore the WOS Wiki <span class="arrow">&#8599;</span></a><a class="link" href="/wos-wiki-gift-code-tracker" data-link="other.codes">Go to gift codes &rarr;</a></div>
+<div class="cta-row stack"><a class="btn btn-gold" href="/drs-wos-wiki" data-link="other.wiki">Explore the WOS Wiki <span class="arrow">&#8599;</span></a><a class="btn btn-codes" href="/wos-wiki-gift-code-tracker" data-link="other.codes">Free gift codes <span class="arrow">&rarr;</span></a></div>
 <p class="fan">Independent fan resource. Not affiliated with Century Games.</p>
 </aside>
 <img class="explorer" src="img/wos-explorer.webp" alt="" width="400" height="316">
@@ -76,7 +96,7 @@
 <div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><path d="M30 8a10 10 0 0 0-9 13L8 34a4 4 0 0 0 6 6l13-13a10 10 0 0 0 13-9l-6 5-5-1-1-5z"/></svg></div><p class="pb">We need something people can use</p><h3>Practical tools</h3><p>Browser-based checkers, trackers and calculators. No installs and no subscriptions.</p><a class="sl" href="/drs-shop">Browse the shop &rarr;</a></div>
 <div class="skill"><div class="ic"><svg viewBox="0 0 48 48"><rect x="10" y="14" width="28" height="22" rx="6"/><path d="M24 14V7M20 7h8"/><circle cx="19" cy="25" r="2.5"/><circle cx="29" cy="25" r="2.5"/><path d="M5 25h5M38 25h5"/></svg></div><p class="pb">We do not know where AI fits</p><h3>AI understanding</h3><p>Plain-English help using AI sensibly: where it saves time, where it falls over and how to check it.</p><a class="sl" href="/drs-prompt-studio">Try Prompt Studio &rarr;</a></div>
 </div></div>
-<div class="art"><img src="img/digit-services.webp" alt="" width="340" height="424" loading="lazy"></div>
+<div class="art spotart"><a class="spot" href="/drs-prompt-studio-free"><span class="sb">Free tool</span><span class="st">Prompt Studio</span><span class="sp">Better answers from any AI assistant. Tell it the job, the audience and the tone, and get a clear, copy-ready prompt.</span><span class="sl2"><span>No sign-up</span><span>Nothing sent anywhere</span><span>Always free</span></span><span class="sgo">Try it free <span class="arrow">&rarr;</span></span></a><img src="img/digit-services.webp" alt="" width="340" height="424" loading="lazy"></div>
 </div>
 </div></section>
 
