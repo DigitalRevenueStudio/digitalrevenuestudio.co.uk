@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-11-18", brand: "wos", featured: true,
+      title: "New guide: Exploration, plus Gen 5 and 6 hero comparisons",
+      text: "Stuck on an Exploration stage? The new guide covers the class triangle, why only Exploration skills count and what the Explorers Cabin pays, including Steel. The Gen 5 and Gen 6 hero pages now compare each hero with the rest of their generation.",
+      url: "/wos-guide-exploration", cta: "Read the guide" },
+
     { date: "2026-11-18", brand: "drs", studio: true, tag: "Knowledge Hub", img: "img/digit-clipboard.webp",
       title: "Knowledge Hub accuracy check",
       text: "Guides across the Knowledge Hub now show how they were checked and what changed. The car finance guide has a full update on the FCA redress scheme and the legal challenge, and the KDP and Payhip guides have new royalty and fee figures.",

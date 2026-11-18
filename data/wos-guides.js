@@ -163,6 +163,12 @@ window.WOS_GUIDES = [
   "s": "Heroes, pets and troops"
  },
  {
+  "t": "Exploration: Stuck Stages and Class Counters",
+  "d": "Why you get stuck on an Exploration stage, the class triangle, Exploration versus Expedition skills, lineups, idle rewards and Steel.",
+  "u": "/wos-guide-exploration",
+  "s": "Heroes, pets and troops"
+ },
+ {
   "t": "Resource Management",
   "d": "The four resources, coal and the Furnace, offline gathering, which heroes boost each resource and how to protect your stockpile.",
   "u": "/wos-guide-resource-management",
