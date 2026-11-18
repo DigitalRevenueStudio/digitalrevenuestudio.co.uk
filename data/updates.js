@@ -31,6 +31,11 @@ window.DRS = {
   },
 
   updates: [
+    { date: "2026-11-18", brand: "drs", studio: true, tag: "Knowledge Hub", img: "img/digit-clipboard.webp",
+      title: "Knowledge Hub accuracy check",
+      text: "Guides across the Knowledge Hub now show how they were checked and what changed. The car finance guide has a full update on the FCA redress scheme and the legal challenge, and the KDP and Payhip guides have new royalty and fee figures.",
+      url: "/drs-template-car-finance#since", cta: "Read the car finance update" },
+
     { date: "2026-11-15", brand: "wos", featured: true,
       title: "New guides: T12 troops and NAP",
       text: "Two new guides for the questions players search most: what T12 Exalted troops need and cost, and what NAP and NAP10 mean. The SvS guide now explains all four phases, and the beginner FAQ answers the end goal of the game.",
