@@ -10,11 +10,15 @@
     function run() {
       var q = inp.value.trim().toLowerCase();
       if (q.length < 2) { box.classList.remove("on"); box.innerHTML = ""; return; }
-      var words = q.split(/\s+/);
-      var hits = G.filter(function (g) {
-        var hay = (g.t + " " + g.d + " " + g.s).toLowerCase();
-        return words.every(function (w) { return hay.indexOf(w) > -1; });
-      }).slice(0, 8);
+      var words = q.split(/\s+/).map(function (w) {
+        return new RegExp("(^|[^a-z0-9])" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+      });
+      var hits = G.map(function (g, i) {
+        var hay = (g.t + " " + g.d + " " + g.s).toLowerCase(), t = g.t.toLowerCase();
+        if (!words.every(function (re) { return re.test(hay); })) return null;
+        var score = (t.indexOf(q) === 0 ? 4 : 0) + (t.indexOf(q) > -1 ? 3 : 0) + (words.every(function (re) { return re.test(t); }) ? 2 : 0);
+        return { g: g, sc: score, i: i };
+      }).filter(Boolean).sort(function (a, b) { return b.sc - a.sc || a.i - b.i; }).slice(0, 8).map(function (h) { return h.g; });
       box.innerHTML = hits.length ? hits.map(function (g) {
         return '<a href="' + esc(g.u) + '"><b>' + esc(g.t) + '</b><small>' + esc(g.s) + '</small></a>';
       }).join("") : '<div class="none">No guide matches that yet. Tell us what you want to see in the Community Hub.</div>';
